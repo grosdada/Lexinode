@@ -114,6 +114,10 @@ a { color: var(--accent2); }
 .node.dragging { opacity: 0.92; cursor: grabbing; }
 .node.multi { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent), var(--shadow); }
 .canvas .marquee { position: absolute; z-index: 20; pointer-events: none; border: 1px solid var(--accent2); background: color-mix(in srgb, var(--accent2) 14%, transparent); }
+.qb-status { display: grid; gap: 6px; margin: 6px 0; }
+.vram { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; margin: 6px 0 2px; }
+.vram > i { display: block; height: 100%; background: var(--accent2); }
+.vram.low > i { background: var(--accent); }
 .node.compat { border-color: var(--accent2); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent2) 40%, transparent), var(--shadow); }
 .node-head { display: flex; align-items: center; gap: 7px; padding: 8px 8px 7px 10px; background: var(--node-head); border-radius: var(--radius) var(--radius) 0 0; cursor: grab; }
 .node-head .title { font-weight: 600; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

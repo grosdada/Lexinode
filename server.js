@@ -139,6 +139,44 @@ async function listVoices(body) {
   const j = await r.json();
   return (j.voices || []).map((v) => ({ id: v.voice_id, name: v.name, category: v.category || '' })).sort((a, b) => String(a.name).localeCompare(String(b.name)));
 }
+// ---------------------------------------------------------------- suivi des rendus (Workflows Q-Builder → machines ComfyUI), lecture seule
+// Q-Builder (127.0.0.1:8765 par défaut, QBUILDER_URL pour changer) connaît ses machines ; pour celles qui calculent, on lit la file de
+// ComfyUI (GET /queue) afin de nommer les jobs. Aucun envoi, aucune annulation : seulement des GET, et seulement vers le réseau local.
+const qbUrl = () => String(process.env.QBUILDER_URL || 'http://127.0.0.1:8765').replace(/\/$/, '');
+const isLanHost = (h) => h === 'localhost' || /^(127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(h) || h.endsWith('.local');
+async function getJson(url, ms) {
+  const r = await fetch(url, { signal: AbortSignal.timeout(ms) });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+const jobName = (item) => {
+  const g = (item && item[2]) || {};
+  for (const k of Object.keys(g)) { const p = g[k] && g[k].inputs && g[k].inputs.filename_prefix; if (typeof p === 'string') return p.split(/[\\/]/).pop(); }
+  return '';
+};
+async function renderStatus() {
+  let cluster;
+  try { cluster = await getJson(qbUrl() + '/api/cluster-status', 6000); } catch (e) {
+    return { ok: false, qbuilder: qbUrl(), error: `Q-Builder ne répond pas sur ${qbUrl()} (${e.message}). Lancez-le avec le raccourci « Lancer Q-Builder », sur le même PC que ce serveur Lexinode.` };
+  }
+  const nodes = await Promise.all((cluster.nodes || []).map(async (n) => {
+    const out = {
+      name: n.name, url: n.url, auto: n.auto !== false, online: !!n.online, vramTotal: n.vram_total || 0, vramFree: n.vram_free || 0, running: n.running || 0, pending: n.pending || 0, jobs: [],
+      gpu: String(n.gpu || '').replace(/^cuda:\d+\s*/i, '').replace(/\s*:\s*cuda\w*$/i, ''),
+    };
+    if (out.online && (out.running || out.pending)) {
+      try {
+        if (isLanHost(new URL(n.url).hostname)) {
+          const q = await getJson(String(n.url).replace(/\/$/, '') + '/queue', 4000);
+          out.jobs = (q.queue_running || []).map((it) => ({ id: it[1], state: 'running', name: jobName(it) })).concat((q.queue_pending || []).map((it) => ({ id: it[1], state: 'pending', name: jobName(it) })));
+        }
+      } catch (e) { out.jobsError = e.message; }
+    }
+    return out;
+  }));
+  return { ok: true, qbuilder: qbUrl(), at: new Date().toISOString(), nodes };
+}
+
 // « lexinode-voice:<base64 d'un JSON> » dans un champ du corps vidéo (ex. target_audio_url) devient un data URI audio fait des fichiers de voix déjà générés
 function resolveVoiceRefs(payload) {
   const out = Object.assign({}, payload);
@@ -352,6 +390,7 @@ const server = http.createServer(async (req, res) => {
       if (!m || !fs.existsSync(voiceFile(m[1]))) return send(res, 404, { error: 'Voix introuvable' });
       return send(res, 200, fs.readFileSync(voiceFile(m[1])), 'audio/mpeg');
     }
+    if (p === '/api/qbuilder/status' && req.method === 'GET') return send(res, 200, await renderStatus());
     if (p === '/api/lexicons' && req.method === 'GET') return send(res, 200, readLexicons());
     if (p === '/api/topics' && req.method === 'GET') {
       const parts = fs.existsSync(TOPICS) ? fs.readdirSync(TOPICS).filter((f) => f.endsWith('.json')).sort().map((f) => {
@@ -418,4 +457,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs };
+module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs, renderStatus };

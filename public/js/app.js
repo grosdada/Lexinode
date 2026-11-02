@@ -109,7 +109,7 @@
     for (const cat of N.CATS) {
       pal.append(h('div', { class: 'pal-cat' }, cat));
       for (const [type, def] of Object.entries(N.DEFS).filter(([, d]) => d.cat === cat)) {
-        const color = (N.TYPES[def.outputs[0].type] || {}).color;
+        const color = (def.color && def.color({})) || (N.TYPES[def.outputs[0].type] || {}).color;
         const b = h('button', { class: 'pal-item', draggable: 'true', title: def.desc, style: { '--c': color } },
           LX.icon.el(def.ico, color, 'pi-icon'), h('span', { class: 'pi-t' }, def.title));
         b.addEventListener('click', () => {

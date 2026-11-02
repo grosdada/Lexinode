@@ -365,7 +365,7 @@
   };
 
   DEFS.qbuilder = {
-    title: 'Sortie Queue Builder', icon: '', ico: 'cpu', cat: 'Sortie',
+    title: 'Sortie Queue Builder', icon: '', ico: 'cpu', cat: 'Sortie', color: () => '#FF8A00', // orange : se distingue du Générateur vidéo (rose)
     desc: 'Prépare la page HTML de prompts que Workflows Q-Builder charge (« Load prompts HTML ») pour envoyer les films aux machines ComfyUI locales, avec MiniMax H3 (T2V) ou LTX 2.5. Rien n’est lancé depuis Lexinode.',
     inputs: [{ key: 'script', type: ['script'], label: 'script' }, { key: 'voice', type: ['voice'], label: 'voix (facultatif)' }],
     outputs: [{ key: 'out', type: 'video', label: 'lot' }],
