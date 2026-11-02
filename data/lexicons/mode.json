@@ -1,0 +1,426 @@
+{
+  "id": "mode",
+  "nom": "Mode / Luxe",
+  "famille": "metier",
+  "categorie": "Industries créatives",
+  "icone": "👜",
+  "couleur": "#D81B60",
+  "description": "Éléments de langage de la mode et du luxe francophones : vocabulaire de l'atelier (coupe, tombé, silhouette), lexique patrimonial des maisons (héritage, savoir-faire, ADN, icône) et rhétorique des notes de défilé et des dossiers de presse. La fiche couvre aussi les euphémismes commerciaux (valeur plutôt que prix, montée en gamme, retour d'archive) et les critiques du « fashion-speak » et du luxe dit responsable.",
+  "posture": "La maison parle d'elle-même à la troisième personne, depuis l'autorité du temps long, de la main de l'artisan et du regard du directeur artistique. Le ton est allusif, sensoriel et jamais trivial : on suggère la valeur sans la chiffrer, on raconte plutôt qu'on ne vend.",
+  "valeurs": [
+    "héritage et transmission",
+    "savoir-faire artisanal",
+    "rareté et exclusivité",
+    "vision créative du directeur artistique",
+    "intemporalité",
+    "excellence des matières",
+    "désirabilité et émotion",
+    "responsabilité et traçabilité"
+  ],
+  "vocabulaire": [
+    { "terme": "silhouette", "sens": "forme générale dessinée par une tenue, des épaules à l'ourlet", "usage": "La silhouette s'allonge et la taille remonte cette saison." },
+    { "terme": "coupe", "sens": "manière dont une pièce est taillée et construite", "usage": "Une coupe nette, presque architecturale." },
+    { "terme": "tombé", "sens": "façon dont un tissu chute et bouge sur le corps", "usage": "Le crêpe de soie offre un tombé impeccable." },
+    { "terme": "drapé", "sens": "tissu disposé en plis souples, travaillé directement sur le corps ou le buste", "usage": "Un drapé asymétrique vient structurer l'épaule." },
+    { "terme": "coupe en biais", "sens": "tissu taillé en diagonale du droit-fil pour épouser le corps", "usage": "La robe du soir, coupée en biais, glisse sur la silhouette." },
+    { "terme": "volume", "sens": "ampleur donnée à une pièce ou à une partie de la silhouette", "usage": "Les volumes se déplacent vers les manches." },
+    { "terme": "tailoring", "sens": "art du vêtement structuré : tailleur, veste, costume", "usage": "Un tailoring assoupli, sans entoilage." },
+    { "terme": "pièce", "sens": "terme de métier pour un vêtement ou un accessoire (on vend des pièces, pas des produits)", "usage": "Chaque pièce est façonnée dans nos ateliers." },
+    { "terme": "pièce forte", "sens": "élément marquant autour duquel se construit une tenue ou une collection", "usage": "Le manteau cape est la pièce forte de l'hiver." },
+    { "terme": "total look", "sens": "tenue entièrement composée de pièces d'une même maison ou d'un même défilé", "usage": "Elle apparaît en total look de la collection automne." },
+    { "terme": "look", "sens": "chaque tenue présentée en défilé, numérotée dans la note de défilé", "usage": "Le look 1 ouvre le défilé sur un tailleur noir." },
+    { "terme": "collection capsule", "sens": "ligne limitée de pièces vendue sur une courte période, hors collections permanentes (terme créé en français)", "usage": "Une collection capsule de douze pièces célèbre l'anniversaire de la maison." },
+    { "terme": "pré-collection", "sens": "collection intermédiaire livrée avant les deux collections principales de l'année", "usage": "La pré-collection reste en boutique plus longtemps que la collection principale." },
+    { "terme": "croisière", "sens": "collection intermédiaire historiquement destinée aux voyages d'hiver, souvent présentée dans un lieu lointain", "usage": "Le défilé croisière s'est tenu dans un palais méditerranéen." },
+    { "terme": "défilé", "sens": "présentation d'une collection sur podium à la presse, aux acheteurs et aux clients", "usage": "Le défilé a duré à peine douze minutes." },
+    { "terme": "note de défilé", "sens": "texte remis aux invités qui expose l'inspiration et détaille les looks", "usage": "La note de défilé cite un poème et un film des années 1970." },
+    { "terme": "dossier de presse", "sens": "document de référence remis aux journalistes : récit, visuels, crédits, disponibilité", "usage": "Le dossier de presse insiste sur les heures d'atelier." },
+    { "terme": "catalogue de collection", "sens": "équivalent officiel de lookbook : catalogue destiné aux professionnels", "usage": "Le catalogue de collection a été envoyé aux acheteurs." },
+    { "terme": "planche de tendances", "sens": "équivalent officiel de moodboard : support d'inspiration visuel", "usage": "Tout est parti d'une planche de tendances très minérale." },
+    { "terme": "maison", "sens": "terme consacré pour une marque de luxe ou de couture, à la place d'entreprise", "usage": "La maison fête ses cent ans." },
+    { "terme": "directeur artistique", "sens": "créateur qui signe les collections d'une maison", "usage": "Pour sa première collection, la nouvelle directrice artistique revient aux archives." },
+    { "terme": "ADN de la maison", "sens": "ensemble des codes identitaires présentés comme constants", "usage": "Le tweed fait partie de l'ADN de la maison." },
+    { "terme": "codes", "sens": "motifs, formes, couleurs ou matières emblématiques réactivés à chaque saison", "usage": "La collection revisite les codes de la maison." },
+    { "terme": "archives", "sens": "fonds de modèles, croquis et documents historiques d'une maison, source d'inspiration et de légitimité", "usage": "Un imprimé exhumé des archives de 1956." },
+    { "terme": "héritage", "sens": "histoire transmise de génération en génération, mobilisée comme preuve de légitimité", "usage": "Fidèle à son héritage, la maison perpétue un geste." },
+    { "terme": "savoir-faire", "sens": "expertise artisanale propre à un métier, gage d'authenticité", "usage": "Un savoir-faire transmis de main en main." },
+    { "terme": "métiers d'art", "sens": "artisanats d'excellence (brodeurs, plumassiers, bottiers, orfèvres) liés aux maisons", "usage": "La collection rend hommage aux métiers d'art." },
+    { "terme": "atelier", "sens": "lieu de fabrication, invoqué comme preuve de la main de l'artisan", "usage": "Chaque sac est monté à la main dans nos ateliers." },
+    { "terme": "petites mains", "sens": "couturières et artisans des ateliers de couture", "usage": "Les petites mains ont brodé chaque fleur." },
+    { "terme": "icône", "sens": "produit emblématique d'une maison", "usage": "Le sac, icône de la maison, se réinvente en cuir grainé." },
+    { "terme": "intemporel", "sens": "conçu pour durer au-delà des tendances", "usage": "Un manteau intemporel, à transmettre." },
+    { "terme": "rareté", "sens": "exclusivité et part d'inaccessibilité qui fondent la valeur du luxe", "usage": "La rareté se mérite." },
+    { "terme": "désirabilité", "sens": "capacité d'une maison à susciter le désir, indicateur clé du luxe", "usage": "La priorité reste la désirabilité, pas le volume." },
+    { "terme": "aspirationnel", "sens": "client ou produit d'entrée qui fait accéder au rêve de la maison", "usage": "La clientèle aspirationnelle s'est éloignée avec les hausses de prix." },
+    { "terme": "ultraluxe", "sens": "positionnement le plus exclusif, distinct d'un luxe devenu accessible", "usage": "La maison se repositionne sur l'ultraluxe." },
+    { "terme": "quiet luxury", "sens": "luxe discret, sans logo apparent, reconnaissable par les seuls initiés", "usage": "Le quiet luxury mise sur la matière plutôt que sur le logo." },
+    { "terme": "logomania", "sens": "affichage ostentatoire et répété du logo ou du monogramme", "usage": "Retour de la logomania sur les accessoires." },
+    { "terme": "drop", "sens": "mise en vente ponctuelle et limitée d'une série, héritée du streetwear", "usage": "Le drop a été épuisé en quelques minutes." },
+    { "terme": "collaboration", "sens": "collection commune entre deux marques, créateurs ou artistes (co-branding)", "usage": "Une collaboration avec un artiste contemporain." },
+    { "terme": "magasin amiral", "sens": "équivalent officiel de flagship : boutique emblématique d'une maison", "usage": "Le magasin amiral rouvre après travaux." },
+    { "terme": "vu-acheté", "sens": "équivalent officiel de see now buy now : achat immédiat de ce qui est vu en défilé", "usage": "Certaines pièces sont disponibles en vu-acheté." },
+    { "terme": "garde-temps", "sens": "terme du luxe pour une montre", "usage": "Un garde-temps à complication lunaire." },
+    { "terme": "souliers", "sens": "terme du luxe pour les chaussures", "usage": "Des souliers façonnés à la main." },
+    { "terme": "haute couture", "sens": "création sur mesure réalisée à la main dans les ateliers d'une maison, appellation protégée en France", "usage": "Le défilé haute couture a nécessité des milliers d'heures." },
+    { "terme": "prêt-à-porter", "sens": "pièces produites en série selon des tailles standard", "usage": "La collection de prêt-à-porter arrive en boutique en février." },
+    { "terme": "traçabilité", "sens": "capacité à documenter l'origine des matières et les étapes de fabrication", "usage": "La maison garantit la traçabilité de ses cuirs." },
+    { "terme": "surcyclage", "sens": "équivalent français d'upcycling : transformation de matières existantes en nouvelles pièces", "usage": "Une capsule en surcyclage à partir de stocks dormants." }
+  ],
+  "formules": [
+    "Cette saison, la maison revisite ses codes avec une liberté nouvelle.",
+    "Avec {sujet}, la maison renoue avec ses archives.",
+    "Tout part d'une inspiration : {sujet}.",
+    "Fidèle à son héritage, la maison réinterprète {element}.",
+    "La collection dialogue avec {element}, entre mémoire et modernité.",
+    "Le savoir-faire des ateliers se lit dans chaque détail.",
+    "Une silhouette fluide, un tombé impeccable, des matières d'exception.",
+    "Pour {public}, la maison imagine un vestiaire à la fois intemporel et résolument contemporain.",
+    "Concernant {sujet}, la maison préfère parler de transmission plutôt que de tendance.",
+    "Chaque pièce raconte une histoire.",
+    "Le geste de l'artisan reste au cœur de la création.",
+    "Plus qu'une collection, un manifeste : {sujet}.",
+    "Le mot d'ordre de la saison : {terme}.",
+    "Entre {a} et {b}, la directrice artistique tisse un dialogue inattendu.",
+    "Après {evenement}, la maison affirme un retour à l'essentiel.",
+    "La pièce forte de la saison réinvente une icône de la maison.",
+    "Un luxe discret, qui se reconnaît sans se montrer.",
+    "Sur {element}, la maison cultive la rareté plutôt que le volume.",
+    "Une collection capsule en édition limitée, disponible dans une sélection de boutiques.",
+    "La valeur d'une pièce tient au temps qu'elle demande.",
+    "Avec {sujet}, l'intemporel rencontre l'air du temps.",
+    "Un vestiaire pensé pour durer, au-delà des saisons.",
+    "La matière guide la coupe, et non l'inverse.",
+    "Dans {sujet}, tout est affaire de proportions.",
+    "Pour la maison, une évidence s'impose : {conclusion}.",
+    "Une icône ne se démode pas, elle se réinvente.",
+    "Pour {public}, chaque détail compte.",
+    "La maison s'engage pour une création plus responsable, de la matière à l'atelier.",
+    "Le luxe ne se justifie pas, il se transmet.",
+    "Depuis {evenement}, la maison écrit un nouveau chapitre de son histoire."
+  ],
+  "connecteurs": [
+    "Cette saison,",
+    "Fidèle à l'héritage de la maison,",
+    "Dans un dialogue entre passé et présent,",
+    "Du côté des matières,",
+    "Côté silhouette,",
+    "En écho aux archives,",
+    "Pièce après pièce,",
+    "Au cœur de l'atelier,",
+    "Dans un geste de transmission,",
+    "Pour la première fois,",
+    "En filigrane,",
+    "Plus que jamais,"
+  ],
+  "euphemismes": [
+    { "brut": "prix", "edl": "valeur", "commentaire": "Le mot prix est jugé trop vulgaire dans le luxe ; on parle de valeur ou on n'en parle pas." },
+    { "brut": "hausse des prix", "edl": "montée en gamme", "commentaire": "Formule de communication financière et de presse économique ; la stratégie est contestée depuis 2025, avec des clients qui se disent trahis." },
+    { "brut": "entreprise", "edl": "maison", "commentaire": "Terme consacré : on ne parle jamais d'entreprise ni de société." },
+    { "brut": "produit", "edl": "pièce", "commentaire": "On vend des pièces, pas des produits." },
+    { "brut": "réédition d'un ancien modèle", "edl": "pièce iconique revisitée", "commentaire": "La réédition devient un hommage aux archives ; l'adjectif iconique s'applique à presque tout." },
+    { "brut": "copie d'un modèle du passé", "edl": "clin d'œil aux archives", "commentaire": "Typique des notes de défilé." },
+    { "brut": "moins cher", "edl": "porte d'entrée dans l'univers de la maison", "commentaire": "Pour les petits accessoires, la beauté ou les parfums vendus à un prix accessible." },
+    { "brut": "stock volontairement limité", "edl": "édition limitée", "commentaire": "La rareté organisée est présentée comme un privilège." },
+    { "brut": "liste d'attente", "edl": "privilège d'accès", "commentaire": "Le délai devient une marque d'exclusivité : « le temps de l'attente d'un produit rare »." },
+    { "brut": "client très riche", "edl": "client privilégié", "commentaire": "En interne on parle de VIC (very important clients)." },
+    { "brut": "mode éphémère", "edl": "l'air du temps", "commentaire": "Le luxe refuse le mot tendance et revendique l'intemporel tout en suivant l'époque." },
+    { "brut": "vêtement d'occasion", "edl": "pièce de seconde main", "commentaire": "Aussi « vintage » ou « pre-loved » selon le prix et la rareté." },
+    { "brut": "baisse des ventes", "edl": "normalisation du marché", "commentaire": "Formule de communication financière pendant le ralentissement du luxe." },
+    { "brut": "fabriqué en partie à l'étranger", "edl": "conçu à Paris", "commentaire": "La conception est mise en avant quand la fabrication est délocalisée ; pratique régulièrement critiquée." },
+    { "brut": "invendus", "edl": "stocks dormants", "commentaire": "Parfois revalorisés en surcyclage ou en ventes privées." }
+  ],
+  "substitutions": [
+    { "de": "entreprise", "vers": "maison" },
+    { "de": "marque", "vers": "griffe" },
+    { "de": "produit", "vers": "pièce" },
+    { "de": "prix", "vers": "valeur" },
+    { "de": "consommateur", "vers": "client" },
+    { "de": "montre", "vers": "garde-temps" },
+    { "de": "chaussures", "vers": "souliers" },
+    { "de": "bijoux", "vers": "joaillerie" },
+    { "de": "alcool", "vers": "vins et spiritueux" },
+    { "de": "dîner", "vers": "souper" },
+    { "de": "magasin", "vers": "boutique" },
+    { "de": "magasin principal", "vers": "magasin amiral" },
+    { "de": "vêtements", "vers": "vestiaire" },
+    { "de": "forme", "vers": "silhouette" },
+    { "de": "tissu", "vers": "matière" },
+    { "de": "style", "vers": "codes" },
+    { "de": "histoire", "vers": "héritage" },
+    { "de": "nouveauté", "vers": "création" },
+    { "de": "fabriqué", "vers": "façonné" },
+    { "de": "couturières", "vers": "petites mains" },
+    { "de": "tenue", "vers": "look" },
+    { "de": "tendance", "vers": "air du temps" },
+    { "de": "célèbre", "vers": "iconique" },
+    { "de": "désir", "vers": "désirabilité" }
+  ],
+  "cadres": [
+    { "nom": "Héritage et codes", "question": "Quels codes de la maison sont réactivés par {element} ?", "explication": "Lire une création comme la réactivation d'un patrimoine de signes : archives, motifs, formes emblématiques." },
+    { "nom": "Désirabilité contre volume", "question": "Concernant {sujet}, la rareté est-elle préservée ou le volume l'emporte-t-il ?", "explication": "Le luxe arbitre en permanence entre désir, prix et diffusion, au risque de devenir du simple premium." },
+    { "nom": "Matière et geste", "question": "Quelle matière et quel savoir-faire rendent {element} légitime ?", "explication": "La preuve du luxe passe par la main de l'artisan, le temps de fabrication et la noblesse des matières." },
+    { "nom": "Silhouette et proportions", "question": "Quelle silhouette se dessine avec {sujet} ?", "explication": "Lecture formelle du vêtement : lignes, volumes, longueurs, tombé." },
+    { "nom": "Récit et inspiration", "question": "Quelle inspiration, archive, voyage ou œuvre, irrigue {sujet} ?", "explication": "La mode se présente comme un récit : un point de départ culturel justifie chaque collection." },
+    { "nom": "Distinction sociale", "question": "Avec {sujet}, qui se distingue de qui ?", "explication": "Lecture sociologique : le vêtement de mode comme signe de classe, d'initiation et de goût." },
+    { "nom": "Responsabilité et traçabilité", "question": "Que sait-on réellement de l'origine des matières et des conditions de fabrication pour {sujet} ?", "explication": "Grille anti-greenwashing : séparer engagement documenté et vocabulaire vert déclaratif." }
+  ],
+  "structures": [
+    {
+      "nom": "Note de défilé",
+      "description": "Texte remis aux invités d'un défilé : inspiration, matières, silhouette, contrastes, message.",
+      "etapes": [
+        {
+          "titre": "Inspiration",
+          "role": "contexte",
+          "consigne": "Poser le point de départ culturel de la collection (archive, voyage, figure, œuvre, époque) sur un ton évocateur, au présent.",
+          "gabarits": [
+            "Tout commence par une image : {sujet}.",
+            "Depuis {evenement}, la directrice artistique explore une idée fixe.",
+            "Le point de départ de la collection : {element}."
+          ]
+        },
+        {
+          "titre": "Matières et savoir-faire",
+          "role": "faits",
+          "consigne": "Décrire les matières, les techniques d'atelier et les métiers d'art mobilisés, avec un vocabulaire sensoriel et précis.",
+          "gabarits": [
+            "Pour traduire {element}, l'atelier convoque des matières d'exception : crêpe de soie, laine double face, cuir velours.",
+            "Sur {element}, les brodeuses ont travaillé à la main pendant des semaines."
+          ]
+        },
+        {
+          "titre": "Silhouette",
+          "role": "analyse",
+          "consigne": "Analyser les lignes, volumes et proportions, et expliquer comment l'inspiration se traduit dans la forme.",
+          "gabarits": [
+            "Inspirée par {element}, la silhouette s'allonge et les volumes se déplacent.",
+            "Avec {sujet}, l'épaule se fait nette et la taille se marque."
+          ]
+        },
+        {
+          "titre": "Jeu des contrastes",
+          "role": "tension",
+          "consigne": "Mettre en scène une tension créative entre deux pôles (rigueur et fluidité, archive et modernité, jour et nuit).",
+          "gabarits": [
+            "Entre {a} et {b}, la collection joue des contrastes : rigueur et fluidité, mémoire et modernité.",
+            "La collection oscille entre {a} et {b}, sans jamais choisir."
+          ]
+        },
+        {
+          "titre": "Message",
+          "role": "conclusion",
+          "consigne": "Conclure sur le sens de la collection, sa déclaration ou son manifeste, en une ou deux phrases.",
+          "gabarits": [
+            "Au fond, la collection affirme une conviction : {conclusion}.",
+            "{sujet} : une déclaration d'amour à l'artisanat."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Communiqué de maison",
+      "description": "Communiqué ou dossier de presse : héritage, savoir-faire, création, engagement, disponibilité.",
+      "etapes": [
+        {
+          "titre": "Héritage",
+          "role": "contexte",
+          "consigne": "Ancrer l'annonce dans l'histoire de la maison et son mythe fondateur.",
+          "gabarits": [
+            "Depuis {evenement}, la maison cultive un art de vivre singulier.",
+            "Forte d'un héritage unique, la maison revisite {element}."
+          ]
+        },
+        {
+          "titre": "Savoir-faire",
+          "role": "faits",
+          "consigne": "Donner les preuves artisanales : heures de travail, nombre d'artisans, techniques, ateliers.",
+          "gabarits": [
+            "Chaque pièce demande {chiffre} de travail à l'atelier.",
+            "Les artisans de la maison ont façonné {element} selon des gestes transmis de génération en génération."
+          ]
+        },
+        {
+          "titre": "Création",
+          "role": "analyse",
+          "consigne": "Présenter le regard du directeur artistique et la réinterprétation d'une icône ou d'un code.",
+          "gabarits": [
+            "Le directeur artistique réinterprète {element} avec une modernité assumée.",
+            "Avec {sujet}, l'icône se réinvente sans se trahir."
+          ]
+        },
+        {
+          "titre": "Engagement",
+          "role": "decision",
+          "consigne": "Énoncer un engagement (traçabilité, matières, transmission) sans allégation générique non prouvée.",
+          "gabarits": [
+            "La maison s'engage sur {element}, de la matière première à l'atelier.",
+            "Pour {public}, la maison documente l'origine de chacune de ses matières."
+          ]
+        },
+        {
+          "titre": "Disponibilité",
+          "role": "projection",
+          "consigne": "Annoncer la mise à disposition sur un mode feutré et exclusif (sélection de boutiques, édition limitée).",
+          "gabarits": [
+            "Dès {evenement}, la collection sera proposée en édition limitée dans une sélection de boutiques.",
+            "Pour {public}, la collection sera présentée sur rendez-vous dans les salons privés de la maison."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Analyse économique du luxe",
+      "description": "Lecture de presse économique ou de conseil : conjoncture, chiffres, diagnostic désirabilité contre volume, arbitrage, perspectives.",
+      "etapes": [
+        {
+          "titre": "Conjoncture",
+          "role": "contexte",
+          "consigne": "Situer la maison ou le secteur dans le cycle économique du luxe.",
+          "gabarits": [
+            "Depuis {evenement}, le secteur du luxe traverse une phase de normalisation.",
+            "Concernant {sujet}, le contexte reste marqué par le ralentissement de la clientèle aspirationnelle."
+          ]
+        },
+        {
+          "titre": "Chiffres clés",
+          "role": "faits",
+          "consigne": "Donner les indicateurs : croissance organique, marge, prix moyen, base de clients.",
+          "gabarits": [
+            "Sur {element}, les ventes évoluent de {chiffre} à taux de change constants.",
+            "La base de clients a reculé de {chiffre} en trois ans."
+          ]
+        },
+        {
+          "titre": "Diagnostic",
+          "role": "analyse",
+          "consigne": "Expliquer les causes en termes de désirabilité, de valeur perçue et de politique de prix.",
+          "gabarits": [
+            "Sur {element}, la hausse des prix a soutenu la valeur mais fragilisé la clientèle aspirationnelle.",
+            "Avec {sujet}, la désirabilité ne suffit plus à compenser la perte de valeur perçue."
+          ]
+        },
+        {
+          "titre": "Arbitrage",
+          "role": "tension",
+          "consigne": "Formuler le dilemme stratégique : rareté ou volume, création ou prix, ultra-riches ou aspirationnels.",
+          "gabarits": [
+            "Entre {a} et {b}, la maison doit arbitrer : rareté ou volume.",
+            "Tout l'enjeu est de rester désirable sans devenir inaccessible."
+          ]
+        },
+        {
+          "titre": "Perspectives",
+          "role": "projection",
+          "consigne": "Projeter la stratégie de reconquête en termes de création, de prix et de clientèle.",
+          "gabarits": [
+            "La reconquête passera par la création plutôt que par le prix.",
+            "Pour {public}, la maison devra redonner du sens à la valeur."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le luxe parle peu de chiffres en public : il évoque des heures de travail, des pièces numérotées et des éditions limitées plutôt que des volumes ou des prix. Les chiffres financiers (croissance organique, marge, base de clients) restent réservés à la communication financière et à la presse économique.",
+    "unites": [
+      "heures de travail à l'atelier",
+      "pièces numérotées",
+      "looks par défilé",
+      "croissance organique (%)",
+      "marge opérationnelle (%)",
+      "prix moyen (euros)",
+      "millions de clients",
+      "points de vente"
+    ],
+    "formulations": [
+      "Chaque pièce demande {chiffre} de travail à l'atelier.",
+      "Une édition limitée à {chiffre}, numérotée à la main.",
+      "Concernant {sujet}, la croissance organique atteint {chiffre} sur l'exercice.",
+      "Entre {a} et {b}, l'écart de prix moyen atteint {chiffre}.",
+      "Sur {element}, la maison assume la rareté : {chiffre} seulement.",
+      "Le défilé compte {chiffre}, de la silhouette du jour à celle du soir.",
+      "Depuis {evenement}, la clientèle aspirationnelle a reculé de {chiffre}."
+    ]
+  },
+  "metaphores": [
+    "l'ADN de la maison : la marque comme organisme vivant",
+    "le vaisseau amiral : la boutique comme navire de prestige",
+    "les petites mains : l'atelier comme corps vivant",
+    "le vestiaire : la collection comme garde-robe d'un personnage",
+    "la grammaire de la maison : les codes comme une langue",
+    "le dialogue entre passé et présent",
+    "l'écrin : la boutique ou l'emballage qui protège un trésor",
+    "le rêve : le luxe comme accès à un imaginaire",
+    "l'icône : l'objet presque sacré",
+    "la signature : le geste du créateur comme paraphe",
+    "la renaissance d'une maison endormie",
+    "le temps long : patience, maturation, transmission"
+  ],
+  "pieges": [
+    "Fashion-speak : notes de défilé saturées de mots doux et recyclés (éthéré, romantique, onirique) qui disent peu de chose des vêtements.",
+    "Inflation du mot « iconique », appliqué à toute réédition ou à toute pièce un peu connue.",
+    "« ADN » invoqué comme argument d'autorité pour justifier n'importe quel choix créatif ou commercial.",
+    "Héritage embelli ou inventé : storytelling patrimonial sans archives ni preuves.",
+    "Greenwashing du « luxe responsable » : allégations génériques (durable, responsable, écologique) visées par l'ARPP, l'ADEME et la directive européenne EmpCo.",
+    "Hausses de prix maquillées en « montée en gamme », vécues comme une trahison par une partie des clients.",
+    "Quiet luxury : discrétion ostentatoire réservée aux initiés, parodiée en « boring luxury ».",
+    "Anglicismes en cascade (drop, must-have, it-bag) dans un discours qui revendique l'excellence française.",
+    "Euphémisation de la fabrication délocalisée et des conditions de travail dans la chaîne d'approvisionnement."
+  ],
+  "registres": {
+    "institutionnel": "Communiqué de maison au présent, à la troisième personne, saturé d'héritage, de geste et de transmission : « La maison célèbre… », « Fidèle à son héritage… ».",
+    "technique": "Entre studio et atelier : vocabulaire précis de la coupe et de la matière (droit-fil, biais, entoilage, toile, essayage, prototype, fiche technique), du merchandising (réassort, taux d'écoulement) et du calendrier (pré-collection, collection principale).",
+    "vulgarisation": "Presse magazine et réseaux sociaux : tendances, pièces à adopter, conseils de silhouette, ton complice et prescriptif.",
+    "critique": "Ses détracteurs parodient un jargon précieux et creux (« une silhouette éthérée qui dialogue avec l'archive ») et dénoncent l'opacité des prix, l'élitisme et le greenwashing."
+  },
+  "visuel": {
+    "palette": ["#F4EFE6", "#111111", "#C9A96E", "#8C7B6B", "#D81B60"],
+    "motifs": [
+      { "fr": "patron de couture avec lignes de coupe", "en": "sewing pattern pieces with cutting lines" },
+      { "fr": "croquis de mode tracé à l'encre", "en": "fashion illustration ink sketch drawing itself" },
+      { "fr": "buste de couture en silhouette", "en": "dress form silhouette" },
+      { "fr": "tissu drapé ondulant au ralenti", "en": "draped silk fabric flowing in slow motion" },
+      { "fr": "gros plan sur un point de couture à la main", "en": "macro close-up of hand stitching" },
+      { "fr": "podium vide sous les projecteurs", "en": "empty runway under spotlights" },
+      { "fr": "écrin et boîte à ruban", "en": "jewelry case and ribboned gift box" },
+      { "fr": "monogramme en motif répété", "en": "repeating monogram pattern" },
+      { "fr": "nuancier d'échantillons de matières", "en": "fabric swatch book" },
+      { "fr": "photographies d'archives en noir et blanc", "en": "black-and-white archival photographs" },
+      { "fr": "atelier avec tables de coupe et ciseaux", "en": "couture atelier with cutting tables and shears" }
+    ],
+    "pictogrammes": [
+      { "fr": "ciseaux de couture", "en": "tailor's scissors" },
+      { "fr": "aiguille et fil", "en": "needle and thread" },
+      { "fr": "mètre ruban", "en": "tape measure" },
+      { "fr": "buste de couture", "en": "dress form" },
+      { "fr": "cintre", "en": "clothes hanger" },
+      { "fr": "sac à main", "en": "handbag" },
+      { "fr": "flacon de parfum", "en": "perfume bottle" },
+      { "fr": "diamant", "en": "diamond" },
+      { "fr": "escarpin", "en": "high-heel pump" },
+      { "fr": "étiquette de vêtement", "en": "garment label" },
+      { "fr": "dé à coudre", "en": "thimble" }
+    ],
+    "typographie": "Sérif à fort contraste de type Didot ou Bodoni en capitales espacées pour les titres, linéale fine pour les légendes, beaucoup de blanc et une composition centrée.",
+    "style_motion": "Animation lente et élégante : fondus enchaînés, travellings en macro sur les matières, tracés au trait qui dessinent une silhouette, révélations par masque et titres qui apparaissent lettre à lettre ; palette ivoire, noir et or, léger grain argentique.",
+    "style_motion_en": "Slow, elegant luxury motion design: soft crossfades, macro tracking shots over fabric textures, thin line-art strokes drawing a fashion silhouette, mask reveals, letter-by-letter high-contrast serif titles, ivory, black and gold palette, subtle film grain, generous negative space."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel d'un guide de vocabulaire du luxe (Welcome to the Jungle, Marion Paquet, 2017), à propos du mot « entreprise ».", "texte": "« Jamais au grand jamais vous ne parlerez d'entreprise. »" },
+    { "contexte": "Extraits réels d'un entretien de Jean-Noël Kapferer avec Eric Briones (Journal du Luxe, 10 juin 2025) sur la doctrine du prix dans le luxe.", "texte": "« Le prix maintient la distance. » ; « Le luxe ne fait pas de discount. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une note de défilé : inspiration, matière, silhouette, message.", "texte": "« Cette saison, la maison puise dans ses archives des années 1950. Le crêpe de soie et la laine double face dessinent une silhouette allongée, épaule nette, taille marquée. Une collection qui célèbre la transmission du geste. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une communication de hausse tarifaire.", "texte": "« La maison poursuit sa montée en gamme et ajuste ses prix afin de refléter la valeur de ses savoir-faire. »" }
+  ],
+  "sources": [
+    { "titre": "Parlez-vous « luxe » ? Le lexique à connaître absolument dans ce secteur", "auteur": "Marion Paquet, Welcome to the Jungle (2017)", "url": "https://www.welcometothejungle.com/fr/articles/codes-du-luxe-a-connaitre", "apport": "Mots-clés du luxe (héritage, savoir-faire, rareté, icône, ADN) et mots à éviter (prix, entreprise, montre, chaussures)." },
+    { "titre": "Les mots à connaître (et à éviter) pour travailler dans la mode", "auteur": "Marion Paquet, Welcome to the Jungle (2019, mis à jour 2022)", "url": "https://www.welcometothejungle.com/fr/articles/mots-vocabulaire-secteur-mode", "apport": "Vocabulaire professionnel de la mode (collections, capsule, retail, wholesale) et substitution produit vers pièce." },
+    { "titre": "La mode en français, c'est tendance", "auteur": "Ministère de la Culture (2019)", "url": "https://www.culture.gouv.fr/Sites-thematiques/Langue-francaise-et-langues-de-France/Actualites/La-mode-en-francais-c-est-tendance", "apport": "Termes officiels : collection capsule, catalogue de collection, planche de tendances, magasin amiral, vu-acheté." },
+    { "titre": "Langage du luxe et injonctions contradictoires", "auteur": "Jeanne Bordeau, Journal du Luxe (2020)", "url": "https://www.journalduluxe.fr/fr/business/langage-du-luxe-et-injonctions-contradictoires", "apport": "Analyse linguistique : aura identitaire, mythe fondateur, vocabulaire de métier, montée du vocabulaire vert et dissonances." },
+    { "titre": "Mode, sociologie : forme et sens de la mode", "auteur": "Encyclopædia Universalis", "url": "https://www.universalis.fr/encyclopedie/mode-sociologie/3-forme-et-sens-de-la-mode/", "apport": "Présentation du Système de la mode de Barthes : la signification de la mode passe par le langage." },
+    { "titre": "Entretien de Kapferer sur le smart luxury", "auteur": "Eric Briones, Journal du Luxe (2025)", "url": "https://www.journalduluxe.fr/fr/business/jean-noel-kapferer-interview-smart-luxury", "apport": "Doctrine désir, rareté, prix et refus du discount ; critique des hausses excessives." },
+    { "titre": "Luxury sector to revive in 2026 but price hikes leave shoppers betrayed", "auteur": "Reuters, d'après Bain & Company (2025)", "url": "https://cyprus-mail.com/2025/11/20/luxury-sector-to-revive-in-2026-but-price-hikes-leave-shoppers-betrayed", "apport": "Chiffres sur la base de clients du luxe et remise en cause de la montée en gamme." },
+    { "titre": "The Fashion Press Release Has Become the Manifesto", "auteur": "Rachel Tashjian, GQ (2019)", "url": "https://www.yahoo.com/lifestyle/fashion-press-release-become-manifesto-185122070.html", "apport": "Structure et vocabulaire des notes de défilé, critique du fashion-speak, évolution vers le manifeste." },
+    { "titre": "Le quiet luxury ou la tendance du luxe sans logo", "auteur": "Le Temps", "url": "https://www.letemps.ch/articles/le-quiet-luxury-ou-la-tendance-du-luxe-sans-logo", "apport": "Définition et critique du luxe discret." },
+    { "titre": "Recommandation Développement durable v3", "auteur": "ARPP (2020)", "url": "https://www.arpp.org/nous-consulter/regles/regles-de-deontologie/developpement-durable/", "apport": "Encadrement des allégations vertes, applicable au discours du luxe responsable." }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "id": "ecologie",
+  "nom": "Écologie / RSE",
+  "famille": "metier",
+  "categorie": "Environnement",
+  "icone": "🌱",
+  "couleur": "#2E7D32",
+  "description": "Éléments de langage de l'écologie, du climat et de la RSE en contexte francophone : science du climat (GIEC et son langage calibré), comptabilité carbone (bilan carbone, scopes 1-2-3), reporting de durabilité (CSRD, ESRS, taxonomie) et communication environnementale encadrée par le droit anti-greenwashing (loi Climat et résilience, guide ADEME, ARPP, directive européenne EmpCo).",
+  "posture": "Parole d'expertise et d'engagement qui doit prouver ce qu'elle avance : vocabulaire de la trajectoire et de la mesure, incertitudes explicitement qualifiées, et vigilance juridique croissante sur toute allégation environnementale.",
+  "valeurs": [
+    "consensus scientifique",
+    "sobriété",
+    "justice climatique",
+    "transparence et redevabilité",
+    "cohérence avec l'Accord de Paris",
+    "résilience des territoires",
+    "preuve et traçabilité",
+    "responsabilité envers les générations futures"
+  ],
+  "vocabulaire": [
+    { "terme": "transition écologique", "sens": "Passage organisé vers un modèle économique et social sobre en ressources et bas-carbone.", "usage": "La transition écologique concerne tous les secteurs." },
+    { "terme": "transition juste", "sens": "Transition qui répartit équitablement coûts et bénéfices, notamment pour les travailleurs et les ménages modestes.", "usage": "Le plan prévoit un volet de transition juste pour les salariés concernés." },
+    { "terme": "sobriété", "sens": "Réduction volontaire et organisée des consommations d'énergie et de ressources, au-delà de l'efficacité.", "usage": "Le plan de sobriété vise −10 % de consommation d'énergie." },
+    { "terme": "efficacité énergétique", "sens": "Obtenir le même service avec moins d'énergie.", "usage": "Les gains d'efficacité énergétique ne suffiront pas seuls." },
+    { "terme": "décarbonation", "sens": "Réduction des émissions de gaz à effet de serre d'une activité.", "usage": "La décarbonation de l'industrie passe par l'électrification." },
+    { "terme": "neutralité carbone", "sens": "Équilibre, à l'échelle planétaire ou nationale, entre émissions et absorptions anthropiques ; allégation encadrée pour un produit ou une entreprise.", "usage": "La France vise la neutralité carbone en 2050." },
+    { "terme": "zéro émission nette", "sens": "Synonyme de neutralité carbone (net zero), employé dans les engagements d'entreprise.", "usage": "L'objectif de zéro émission nette est fixé à 2050." },
+    { "terme": "trajectoire", "sens": "Chemin chiffré de réduction des émissions dans le temps, avec jalons.", "usage": "Notre trajectoire est compatible avec 1,5 °C." },
+    { "terme": "budget carbone", "sens": "Quantité cumulée de CO2 encore émissible pour limiter le réchauffement à un niveau donné.", "usage": "Le budget carbone compatible avec 1,5 °C s'épuise rapidement." },
+    { "terme": "tCO2e", "sens": "Tonne équivalent CO2 : unité agrégeant les gaz à effet de serre selon leur pouvoir de réchauffement.", "usage": "Nos émissions s'élèvent à 12 000 tCO2e." },
+    { "terme": "empreinte carbone", "sens": "Total des émissions associées à une activité, un produit ou une personne, y compris importées.", "usage": "L'empreinte carbone moyenne d'un Français dépasse 9 tonnes." },
+    { "terme": "bilan carbone", "sens": "Inventaire des émissions de gaz à effet de serre d'une organisation (méthode Bilan Carbone, BEGES réglementaire).", "usage": "Le bilan carbone couvre les trois scopes." },
+    { "terme": "scope 1", "sens": "Émissions directes de l'organisation (combustion, véhicules, procédés).", "usage": "Le scope 1 provient surtout de notre flotte de véhicules." },
+    { "terme": "scope 2", "sens": "Émissions indirectes liées à l'énergie achetée (électricité, chaleur).", "usage": "Le passage à une électricité bas-carbone réduit le scope 2." },
+    { "terme": "scope 3", "sens": "Autres émissions indirectes de la chaîne de valeur (achats, transport, usage des produits, fin de vie).", "usage": "Le scope 3 représente l'essentiel de notre empreinte." },
+    { "terme": "facteur d'émission", "sens": "Coefficient convertissant une donnée d'activité en émissions (Base Empreinte de l'ADEME).", "usage": "Les facteurs d'émission proviennent de la Base Empreinte." },
+    { "terme": "compensation carbone", "sens": "Financement de projets qui réduisent ou absorbent des émissions pour contrebalancer les siennes ; allégations très encadrées.", "usage": "La compensation intervient en dernier recours." },
+    { "terme": "contribution carbone", "sens": "Financement de projets climatiques présenté comme une contribution à la neutralité mondiale, sans revendiquer de neutralité propre.", "usage": "Nous parlons de contribution plutôt que de compensation." },
+    { "terme": "puits de carbone", "sens": "Réservoir naturel ou technologique qui absorbe du CO2 (forêts, sols, océans).", "usage": "Les puits de carbone forestiers s'affaiblissent." },
+    { "terme": "atténuation", "sens": "Actions visant à réduire les émissions ou à renforcer les puits.", "usage": "L'atténuation reste la priorité absolue." },
+    { "terme": "adaptation", "sens": "Ajustement aux effets présents et futurs du changement climatique.", "usage": "Le plan national d'adaptation prépare la France à +4 °C." },
+    { "terme": "résilience", "sens": "Capacité d'un système à absorber un choc et à se réorganiser.", "usage": "Renforcer la résilience des territoires face aux canicules." },
+    { "terme": "vulnérabilité", "sens": "Propension d'un système à subir des dommages face à un aléa.", "usage": "Les populations les plus vulnérables sont les plus exposées." },
+    { "terme": "risques physiques", "sens": "Risques liés aux impacts climatiques (inondations, sécheresses, canicules).", "usage": "Nos sites sont évalués au regard des risques physiques." },
+    { "terme": "risques de transition", "sens": "Risques réglementaires, technologiques ou de marché liés au passage à une économie bas-carbone.", "usage": "Les actifs fossiles sont exposés aux risques de transition." },
+    { "terme": "double matérialité", "sens": "Analyse croisée des impacts de l'entreprise sur l'environnement et la société, et des risques que ces enjeux font peser sur elle.", "usage": "L'analyse de double matérialité structure le rapport de durabilité." },
+    { "terme": "CSRD", "sens": "Directive européenne sur le reporting de durabilité des entreprises, recentrée en 2026 par l'Omnibus I sur les plus grandes entreprises.", "usage": "Le premier rapport CSRD a été audité par un tiers." },
+    { "terme": "ESRS", "sens": "Normes européennes de reporting de durabilité (ESRS E1 pour le climat).", "usage": "Les indicateurs suivent l'ESRS E1." },
+    { "terme": "taxonomie verte", "sens": "Classification européenne des activités économiques considérées comme durables.", "usage": "38 % de notre chiffre d'affaires est aligné sur la taxonomie." },
+    { "terme": "plan de transition", "sens": "Feuille de route chiffrée et budgétée pour aligner l'activité sur une trajectoire climatique.", "usage": "Le plan de transition est approuvé par le conseil d'administration." },
+    { "terme": "objectifs fondés sur la science", "sens": "Objectifs de réduction alignés sur les scénarios climatiques et validés par un tiers (SBTi).", "usage": "Nos objectifs fondés sur la science ont été validés." },
+    { "terme": "analyse de cycle de vie", "sens": "Évaluation multicritère des impacts d'un produit de l'extraction à la fin de vie (ACV).", "usage": "L'analyse de cycle de vie révèle que l'usage domine." },
+    { "terme": "écoconception", "sens": "Conception qui réduit les impacts environnementaux sur tout le cycle de vie.", "usage": "La démarche d'écoconception a réduit la masse de l'emballage." },
+    { "terme": "économie circulaire", "sens": "Modèle qui prolonge l'usage des ressources (réemploi, réparation, recyclage).", "usage": "La loi AGEC accélère l'économie circulaire." },
+    { "terme": "allégation environnementale", "sens": "Message affirmant ou suggérant un bénéfice environnemental, encadré par le Code de la consommation.", "usage": "Toute allégation environnementale doit être justifiée." },
+    { "terme": "écoblanchiment", "sens": "Pratique commerciale trompeuse utilisant des engagements environnementaux fallacieux ou trop limités (greenwashing).", "usage": "Le guide de l'ADEME aide à éviter l'écoblanchiment." },
+    { "terme": "greenhushing", "sens": "Silence stratégique d'une entreprise sur ses engagements, par crainte d'accusations de greenwashing.", "usage": "La peur du contentieux nourrit le greenhushing." },
+    { "terme": "GIEC", "sens": "Groupe d'experts intergouvernemental sur l'évolution du climat, qui évalue la littérature scientifique sans mener de recherche propre.", "usage": "Le GIEC publie ses résumés à l'intention des décideurs." },
+    { "terme": "degré de confiance", "sens": "Qualificatif calibré du GIEC (très faible à très élevé) fondé sur la robustesse des preuves et leur concordance.", "usage": "Cette conclusion est assortie d'un degré de confiance élevé." },
+    { "terme": "très probable", "sens": "Terme calibré du GIEC désignant une probabilité de 90 à 100 %.", "usage": "Il est très probable que la tendance se poursuive." },
+    { "terme": "scénarios SSP", "sens": "Trajectoires socio-économiques partagées utilisées par le GIEC pour projeter le climat futur.", "usage": "Dans le scénario SSP5-8.5, le réchauffement dépasserait 4 °C." },
+    { "terme": "points de bascule", "sens": "Seuils au-delà desquels un système climatique change d'état de manière abrupte et parfois irréversible.", "usage": "La fonte du permafrost pourrait franchir un point de bascule." },
+    { "terme": "limites planétaires", "sens": "Neuf seuils biophysiques dont le dépassement menace la stabilité du système Terre.", "usage": "Six limites planétaires sur neuf sont déjà dépassées." },
+    { "terme": "artificialisation des sols", "sens": "Transformation d'espaces naturels, agricoles ou forestiers en surfaces bâties ou imperméabilisées (objectif ZAN).", "usage": "L'objectif zéro artificialisation nette vise 2050." },
+    { "terme": "bas-carbone", "sens": "Qualifie une énergie, un produit ou une activité à faibles émissions de gaz à effet de serre.", "usage": "La SNBC fixe la stratégie nationale bas-carbone." },
+    { "terme": "éco-anxiété", "sens": "Anxiété liée à la conscience de la crise écologique.", "usage": "L'éco-anxiété touche particulièrement les jeunes." }
+  ],
+  "formules": [
+    "Concernant {sujet}, nous nous inscrivons dans une trajectoire compatible avec l'Accord de Paris.",
+    "Nous avons engagé une démarche de progrès pour {sujet}.",
+    "Chaque tonne de CO2 évitée compte.",
+    "Chaque dixième de degré compte.",
+    "La transition sera juste ou ne sera pas.",
+    "Selon le dernier rapport du GIEC, {conclusion} (degré de confiance élevé).",
+    "{conclusion} : le constat est désormais sans équivoque.",
+    "Éviter, réduire et, seulement en dernier recours, compenser.",
+    "Il ne s'agit pas de compenser, mais de contribuer à la neutralité carbone mondiale.",
+    "Le scope 3 représente l'essentiel de notre empreinte : c'est là que se jouent nos marges de manœuvre.",
+    "Concernant {sujet}, l'analyse de double matérialité a fait ressortir des enjeux prioritaires.",
+    "{element} constitue un enjeu matériel pour l'entreprise comme pour son écosystème.",
+    "Nous visons une réduction de {chiffre} de nos émissions à l'horizon 2030.",
+    "La sobriété n'est pas la privation : c'est consommer mieux et moins.",
+    "L'adaptation n'est plus une option, c'est une nécessité.",
+    "Pour {sujet}, il faut désormais accélérer et changer d'échelle.",
+    "Pour {sujet}, la question n'est plus de savoir s'il faut agir, mais comment.",
+    "Agir pour {sujet}, c'est aussi renforcer la résilience des territoires.",
+    "{evenement} rappelle l'urgence d'agir sur l'adaptation.",
+    "Il faut embarquer {public} dans la transition.",
+    "La transition est une opportunité autant qu'une contrainte.",
+    "Nos objectifs sont fondés sur la science et validés par un tiers indépendant.",
+    "Nous publions nos résultats en toute transparence, y compris là où nous progressons moins vite.",
+    "Ce produit réduit son impact sur une étape précise de son cycle de vie, détaillée sur notre site.",
+    "Les engagements volontaires ne suffisent pas : {conclusion}.",
+    "Concernant {sujet}, le coût de l'inaction dépasse largement celui de l'action.",
+    "Pour {sujet}, les co-bénéfices pour la santé et la biodiversité sont réels.",
+    "Rien ne sert de verdir la communication si les émissions ne baissent pas.",
+    "C'est tout le sens de la notion « {terme} » dans notre plan de transition.",
+    "Nous ne revendiquons aucune neutralité carbone pour {sujet}."
+  ],
+  "connecteurs": [
+    "À l'horizon 2030,",
+    "D'ici 2050,",
+    "Sur l'ensemble de la chaîne de valeur,",
+    "En cohérence avec l'Accord de Paris,",
+    "À l'échelle du territoire,",
+    "Par rapport à l'année de référence,",
+    "Dans une logique de sobriété,",
+    "Au-delà de la conformité réglementaire,",
+    "Selon le GIEC,",
+    "Concrètement,",
+    "En dernier recours,",
+    "À défaut,",
+    "En parallèle,"
+  ],
+  "euphemismes": [
+    { "brut": "polluer", "edl": "émettre", "commentaire": "Le vocabulaire des émissions neutralise la charge morale de la pollution." },
+    { "brut": "continuer à polluer en payant", "edl": "neutraliser nos émissions résiduelles", "commentaire": "Formule critiquée : la compensation ne supprime pas les émissions." },
+    { "brut": "produit polluant", "edl": "produit à impact réduit", "commentaire": "Comparatif sans référence explicite, pointé par le guide anti-greenwashing de l'ADEME." },
+    { "brut": "produit neutre en carbone grâce à la compensation", "edl": "neutre en carbone", "commentaire": "Allégation interdite en publicité sauf conditions strictes (loi Climat et résilience, décret n° 2022-539)." },
+    { "brut": "dérèglement catastrophique", "edl": "changement climatique", "commentaire": "Expression neutre que certains médias remplacent par « dérèglement » ou « crise climatique »." },
+    { "brut": "abandon d'un objectif climatique", "edl": "recalibrage de notre trajectoire", "commentaire": "Langage des révisions d'objectifs, fréquent après les reports réglementaires de 2025-2026." },
+    { "brut": "énergie fossile", "edl": "énergie de transition", "commentaire": "Présentation du gaz comme solution transitoire." },
+    { "brut": "déchets", "edl": "ressources", "commentaire": "Vocabulaire de l'économie circulaire (matières premières secondaires)." },
+    { "brut": "bétonner", "edl": "artificialiser les sols", "commentaire": "Terme technique de l'urbanisme et de l'objectif ZAN." },
+    { "brut": "consommer moins", "edl": "sobriété", "commentaire": "Mot positif qui évite l'idée de privation ou de décroissance." },
+    { "brut": "décroissance", "edl": "post-croissance", "commentaire": "Reformulation pour désamorcer un mot clivant." },
+    { "brut": "efforts minimes", "edl": "démarche de progrès", "commentaire": "Formule qui valorise l'intention plutôt que le résultat." },
+    { "brut": "écologique", "edl": "à impact réduit sur une étape précise", "commentaire": "Les allégations génériques (« écologique », « vert ») sont visées par la directive EmpCo." },
+    { "brut": "pollution plastique", "edl": "fin de vie des emballages", "commentaire": "Lexique de l'éco-conception qui déplace la responsabilité vers la filière." },
+    { "brut": "canicule meurtrière", "edl": "épisode de fortes chaleurs", "commentaire": "Formulation administrative des vigilances météo." },
+    { "brut": "on se tait", "edl": "communication responsable", "commentaire": "Le greenhushing se présente parfois comme de la prudence." }
+  ],
+  "substitutions": [
+    { "de": "pollution", "vers": "émissions" },
+    { "de": "polluer", "vers": "émettre" },
+    { "de": "réduire les émissions", "vers": "décarboner" },
+    { "de": "vert", "vers": "bas-carbone" },
+    { "de": "écologique", "vers": "à impact réduit" },
+    { "de": "déchets", "vers": "ressources" },
+    { "de": "recyclage", "vers": "économie circulaire" },
+    { "de": "changement", "vers": "transition" },
+    { "de": "objectif", "vers": "trajectoire" },
+    { "de": "nature", "vers": "biodiversité" },
+    { "de": "fragilité", "vers": "vulnérabilité" },
+    { "de": "s'adapter", "vers": "renforcer la résilience" },
+    { "de": "fournisseurs", "vers": "chaîne de valeur" },
+    { "de": "gens concernés", "vers": "parties prenantes" },
+    { "de": "rapport", "vers": "reporting de durabilité" },
+    { "de": "important", "vers": "matériel" },
+    { "de": "promesse", "vers": "engagement" },
+    { "de": "compensation", "vers": "contribution" },
+    { "de": "économiser l'énergie", "vers": "faire preuve de sobriété énergétique" },
+    { "de": "bétonnage", "vers": "artificialisation" },
+    { "de": "réchauffement", "vers": "dérèglement climatique" },
+    { "de": "chiffre", "vers": "indicateur" },
+    { "de": "plan", "vers": "feuille de route" }
+  ],
+  "cadres": [
+    { "nom": "Éviter-Réduire-Compenser", "question": "Pour {sujet}, qu'a-t-on évité, qu'a-t-on réduit, et que reste-t-il à compenser ?", "explication": "Séquence hiérarchisée qui place la compensation en dernier recours." },
+    { "nom": "Double matérialité", "question": "Quels impacts produit {sujet} sur l'environnement, et quels risques climatiques pèsent en retour sur l'activité ?", "explication": "Principe central de la CSRD : matérialité d'impact et matérialité financière." },
+    { "nom": "Atténuation ou adaptation", "question": "Pour {sujet}, la priorité est-elle d'atténuer les émissions ou de s'adapter aux impacts devenus inévitables ?", "explication": "Les deux piliers des politiques climatiques." },
+    { "nom": "Périmètre des scopes", "question": "Le périmètre retenu pour {sujet} couvre-t-il les scopes 1, 2 et 3, ou seulement les émissions directes ?", "explication": "Un bilan sans scope 3 omet souvent l'essentiel de l'empreinte." },
+    { "nom": "Trajectoire et budget carbone", "question": "Avec {sujet}, reste-t-on dans un budget carbone compatible avec 1,5 °C ou 2 °C ?", "explication": "Juger un engagement à l'aune de la trajectoire et non de l'intention." },
+    { "nom": "Test anti-greenwashing", "question": "L'allégation portant sur {element} est-elle précise, mesurable, justifiée et proportionnée au bénéfice réel ?", "explication": "Critères issus du guide de l'ADEME et du Code de la consommation." },
+    { "nom": "Transition juste", "question": "Qui gagne et qui perd avec {evenement} ?", "explication": "Lecture distributive des politiques écologiques." },
+    { "nom": "Limites planétaires", "question": "Au-delà du carbone, sur quelles limites planétaires pèse {sujet} ?", "explication": "Éviter la vision tunnel du carbone (eau, biodiversité, sols, pollutions)." }
+  ],
+  "structures": [
+    {
+      "nom": "Résumé à l'intention des décideurs (GIEC)",
+      "description": "Enchaînement des messages clés d'un rapport du GIEC, chaque énoncé étant assorti d'une probabilité ou d'un degré de confiance.",
+      "etapes": [
+        {
+          "titre": "Constat observé",
+          "role": "faits",
+          "consigne": "Énoncer ce qui est observé, avec un qualificatif calibré entre parenthèses.",
+          "gabarits": [
+            "On observe désormais {element} dans la plupart des régions (degré de confiance élevé).",
+            "Par rapport à la période 1850-1900, l'écart atteint {chiffre}."
+          ]
+        },
+        {
+          "titre": "Attribution",
+          "role": "analyse",
+          "consigne": "Relier le phénomène à l'influence humaine, en qualifiant le niveau de certitude.",
+          "gabarits": [
+            "{element} s'explique principalement par l'influence humaine (degré de confiance élevé).",
+            "Concernant {sujet}, la part attribuable aux activités humaines est jugée très probable."
+          ]
+        },
+        {
+          "titre": "Projections selon les scénarios",
+          "role": "projection",
+          "consigne": "Décrire l'évolution selon des scénarios d'émissions, en conditionnel.",
+          "gabarits": [
+            "Dans un scénario d'émissions élevées, {element} s'intensifierait nettement d'ici 2100.",
+            "Chaque incrément de réchauffement aggraverait {element}."
+          ]
+        },
+        {
+          "titre": "Risques et limites de l'adaptation",
+          "role": "tension",
+          "consigne": "Montrer les seuils, les inégalités d'exposition et les limites de l'adaptation.",
+          "gabarits": [
+            "Au-delà de {chiffre} de réchauffement, les limites de l'adaptation seraient atteintes pour {sujet}.",
+            "{a} et {b} ne font pas face aux mêmes risques (degré de confiance moyen)."
+          ]
+        },
+        {
+          "titre": "Options de réponse",
+          "role": "decision",
+          "consigne": "Présenter les leviers d'action disponibles, sans prescrire de politique précise.",
+          "gabarits": [
+            "Des réductions rapides, profondes et soutenues des émissions sont nécessaires pour {sujet}.",
+            "Des options disponibles dès aujourd'hui permettraient de réduire fortement les émissions d'ici 2030."
+          ]
+        },
+        {
+          "titre": "Message clé",
+          "role": "conclusion",
+          "consigne": "Conclure par un énoncé synthétique et calibré.",
+          "gabarits": [
+            "{conclusion} (degré de confiance élevé).",
+            "Les choix faits au cours de cette décennie auront des répercussions pendant des siècles."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Bilan carbone et plan de transition",
+      "description": "Structure d'un rapport de durabilité ou d'un plan climat d'entreprise (logique CSRD, ESRS E1).",
+      "etapes": [
+        {
+          "titre": "Enjeux et périmètre",
+          "role": "contexte",
+          "consigne": "Situer l'enjeu climatique dans l'analyse de double matérialité et préciser le périmètre.",
+          "gabarits": [
+            "Concernant {sujet}, l'analyse de double matérialité a identifié le climat comme enjeu prioritaire.",
+            "Depuis {evenement}, les attentes des parties prenantes se sont renforcées."
+          ]
+        },
+        {
+          "titre": "Résultats du bilan",
+          "role": "faits",
+          "consigne": "Donner les émissions en tCO2e par scope, avec l'année de référence.",
+          "gabarits": [
+            "Pour {sujet}, le bilan carbone fait ressortir {chiffre}, dont l'essentiel en scope 3.",
+            "Les émissions des scopes 1 et 2 représentent {chiffre} de l'empreinte totale."
+          ]
+        },
+        {
+          "titre": "Postes majeurs",
+          "role": "analyse",
+          "consigne": "Identifier les principaux postes d'émissions et les leviers associés.",
+          "gabarits": [
+            "{element} constitue le premier poste d'émissions.",
+            "Les achats et l'usage des produits vendus concentrent l'essentiel des émissions indirectes."
+          ]
+        },
+        {
+          "titre": "Objectifs et leviers",
+          "role": "decision",
+          "consigne": "Fixer des objectifs chiffrés, datés, budgétés et si possible validés par un tiers.",
+          "gabarits": [
+            "Nous nous fixons un objectif de réduction de {chiffre} d'ici 2030 par rapport à l'année de référence.",
+            "Le plan de transition prévoit des leviers chiffrés et budgétés pour {sujet}."
+          ]
+        },
+        {
+          "titre": "Trajectoire",
+          "role": "projection",
+          "consigne": "Décrire la trajectoire jusqu'en 2050 et le traitement des émissions résiduelles, sans revendiquer de neutralité.",
+          "gabarits": [
+            "La trajectoire retenue pour {sujet} est alignée sur un scénario compatible avec 1,5 °C.",
+            "Les émissions résiduelles feront l'objet de contributions à des projets certifiés, sans revendication de neutralité."
+          ]
+        },
+        {
+          "titre": "Engagement de suivi",
+          "role": "conclusion",
+          "consigne": "S'engager à rendre compte des progrès, y compris des écarts.",
+          "gabarits": [
+            "En synthèse, {conclusion}.",
+            "Nous rendrons compte chaque année des progrès réalisés, y compris des écarts."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Plaidoyer pour la transition",
+      "description": "Structure d'une tribune ou d'un discours militant ou institutionnel en faveur de l'action climatique.",
+      "etapes": [
+        {
+          "titre": "Alerte",
+          "role": "contexte",
+          "consigne": "Partir d'un événement récent qui rend le dérèglement tangible.",
+          "gabarits": [
+            "{evenement} nous l'a rappelé : le dérèglement climatique est déjà là.",
+            "Après {evenement}, plus personne ne peut ignorer l'urgence."
+          ]
+        },
+        {
+          "titre": "Preuves",
+          "role": "faits",
+          "consigne": "Mobiliser la science (GIEC) et des chiffres parlants.",
+          "gabarits": [
+            "Selon le GIEC, {conclusion}.",
+            "Chaque année, {sujet} représente {chiffre} d'émissions."
+          ]
+        },
+        {
+          "titre": "Contradictions",
+          "role": "tension",
+          "consigne": "Pointer les incohérences entre discours et actes.",
+          "gabarits": [
+            "Entre {a} et {b}, il faut choisir la cohérence.",
+            "On ne peut pas promettre la neutralité carbone et continuer d'investir dans les énergies fossiles."
+          ]
+        },
+        {
+          "titre": "Appel à l'action",
+          "role": "decision",
+          "consigne": "Formuler des demandes claires et mobilisatrices.",
+          "gabarits": [
+            "Il faut embarquer {public} et changer d'échelle.",
+            "Nous appelons à une planification écologique pour {sujet}."
+          ]
+        },
+        {
+          "titre": "Horizon",
+          "role": "conclusion",
+          "consigne": "Conclure sur le coût de l'inaction et une vision désirable.",
+          "gabarits": [
+            "Le coût de l'inaction sera toujours supérieur au coût de l'action.",
+            "La transition sera juste ou ne sera pas : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le chiffre sert de preuve et de boussole : on raisonne en tonnes équivalent CO2, en trajectoires par rapport à une année de référence et en degrés de réchauffement, avec des incertitudes explicitement qualifiées (probabilités et degrés de confiance du GIEC, fourchettes entre crochets).",
+    "unites": [
+      "tonne équivalent CO2 (tCO2e)",
+      "MtCO2e ou GtCO2e par an",
+      "°C de réchauffement par rapport à 1850-1900",
+      "ppm de CO2 atmosphérique",
+      "% de réduction par rapport à l'année de référence",
+      "kgCO2e par unité produite (intensité carbone)",
+      "kWh et MWh",
+      "probabilité calibrée du GIEC (très probable = 90 à 100 %)",
+      "% du chiffre d'affaires aligné sur la taxonomie"
+    ],
+    "formulations": [
+      "Par rapport à l'année de référence, {sujet} a réduit ses émissions de {chiffre}.",
+      "Pour {sujet}, le bilan carbone atteint {chiffre}, dont la majeure partie en scope 3.",
+      "{a} émet {chiffre}, soit nettement plus que {b}.",
+      "Au rythme actuel, le réchauffement atteindrait {chiffre} d'ici la fin du siècle.",
+      "Pour {sujet}, une hausse de {chiffre} est jugée probable (66 à 100 %).",
+      "L'intensité carbone recule de {chiffre} par unité produite, mais les émissions absolues stagnent.",
+      "Une réduction de {chiffre} d'ici 2030 reste nécessaire pour {sujet}."
+    ]
+  },
+  "metaphores": [
+    "la trajectoire et le cap vers 2050",
+    "le budget carbone qu'on épuise",
+    "la maison qui brûle",
+    "les points de bascule et l'emballement",
+    "le thermostat planétaire",
+    "l'empreinte laissée sur la planète",
+    "le puits de carbone",
+    "la fenêtre d'action qui se referme",
+    "la dette écologique léguée aux générations futures",
+    "le jour du dépassement",
+    "repeindre en vert",
+    "changer d'échelle et passer à la vitesse supérieure"
+  ],
+  "pieges": [
+    "Greenwashing par allégations vagues ou disproportionnées (« écologique », « vert », « respectueux de l'environnement »), désormais sanctionnées.",
+    "Revendication de neutralité carbone pour un produit ou une entreprise grâce à la compensation, interdite en publicité sauf conditions strictes (loi Climat et résilience, décret n° 2022-539).",
+    "Visuels trompeurs : nature, feuilles ou globe vert sans lien avec le bénéfice réel, pointés par le guide de l'ADEME.",
+    "Confusion entre intensité carbone et émissions absolues, ou objectifs qui ignorent le scope 3.",
+    "Inflation d'acronymes (CSRD, ESRS, SBTi, ERC, ZAN, SNBC) qui rend le discours opaque et fait du reporting une fin en soi.",
+    "Promesses lointaines (2050) sans jalons intermédiaires ni budget.",
+    "Greenhushing par peur du contentieux, ou à l'inverse catastrophisme qui nourrit l'éco-anxiété et le fatalisme.",
+    "Mauvaise lecture du langage calibré du GIEC : « probable » signifie 66 à 100 %, pas « peut-être ».",
+    "Euphémisation des renoncements (« recalibrage de trajectoire ») au moment des reports et simplifications réglementaires."
+  ],
+  "registres": {
+    "institutionnel": "Langage de la trajectoire, de la planification et de la conformité (« s'inscrire dans une trajectoire 1,5 °C », « plan de transition », « double matérialité »), prudent et chiffré.",
+    "technique": "Vocabulaire normé de la comptabilité carbone et du reporting (tCO2e, scopes, facteurs d'émission, ESRS E1, taxonomie) et incertitudes calibrées à la manière du GIEC.",
+    "vulgarisation": "Petits gestes, équivalences parlantes (un aller-retour Paris-New York, des kilomètres en voiture) et images fortes (maison qui brûle, jour du dépassement).",
+    "critique": "Moqué comme greenwashing d'entreprise et novlangue de la « transition » qui verdit le statu quo, ou à l'inverse comme écologie punitive et catastrophiste."
+  },
+  "visuel": {
+    "palette": ["#2E7D32", "#81C784", "#0277BD", "#F5F0E1", "#D84315"],
+    "motifs": [
+      { "fr": "bandes de réchauffement du bleu au rouge", "en": "climate warming stripes from blue to red" },
+      { "fr": "globe terrestre qui se réchauffe", "en": "Earth globe heating up" },
+      { "fr": "courbe d'émissions qui s'infléchit vers zéro", "en": "emissions curve bending down to net zero" },
+      { "fr": "éoliennes et panneaux solaires sur des collines", "en": "wind turbines and solar panels on rolling hills" },
+      { "fr": "boucle d'économie circulaire", "en": "circular economy loop diagram" },
+      { "fr": "empreinte de pas remplie de nuages de CO2", "en": "footprint shape filled with CO2 clouds" },
+      { "fr": "thermomètre qui monte", "en": "rising thermometer" },
+      { "fr": "carte des anomalies de température", "en": "temperature anomaly heat map" },
+      { "fr": "forêt absorbant le carbone", "en": "forest absorbing carbon" },
+      { "fr": "glacier qui fond en accéléré", "en": "melting glacier timelapse" },
+      { "fr": "cercles concentriques des scopes 1, 2 et 3", "en": "scope 1-2-3 emissions diagram as concentric rings" },
+      { "fr": "jauge de budget carbone qui se vide", "en": "carbon budget gauge draining" }
+    ],
+    "pictogrammes": [
+      { "fr": "feuille", "en": "leaf" },
+      { "fr": "goutte d'eau", "en": "water drop" },
+      { "fr": "éolienne", "en": "wind turbine" },
+      { "fr": "panneau solaire", "en": "solar panel" },
+      { "fr": "nuage de CO2", "en": "CO2 cloud" },
+      { "fr": "flèches de recyclage", "en": "recycling arrows" },
+      { "fr": "thermomètre", "en": "thermometer" },
+      { "fr": "globe terrestre", "en": "Earth globe" },
+      { "fr": "vélo", "en": "bicycle" },
+      { "fr": "prise électrique", "en": "electric plug" },
+      { "fr": "usine qui fume", "en": "smoking factory" },
+      { "fr": "abeille", "en": "bee" }
+    ],
+    "typographie": "Sans-serif humaniste et arrondie (type Montserrat, Nunito) aux tons naturels, chiffres-clés en grand corps gras, textures de papier recyclé.",
+    "style_motion": "Animation 2D flat aux tons végétaux et océaniques avec un orange d'alerte : courbes d'émissions qui s'infléchissent, bandes de réchauffement, icônes qui se transforment (une usine en éolienne), textures de papier recyclé ; ton sérieux mais porteur de solutions, sans abuser des clichés de nature que l'ADEME juge trompeurs.",
+    "style_motion_en": "Flat 2D motion design in earthy greens, ocean blues and warm alert oranges: emission curves bending toward net zero, climate warming stripes, icons morphing from factory into wind turbine, recycled-paper textures, data-driven infographic pacing, serious yet solution-oriented tone, climate explainer style."
+  },
+  "exemples": [
+    { "contexte": "Formulation typique (illustrative, non citée) dans le style d'un résumé pour décideurs du GIEC, avec qualificatif calibré entre parenthèses.", "texte": "« Les vagues de chaleur deviendront plus fréquentes et plus intenses avec chaque incrément de réchauffement (degré de confiance élevé). »" },
+    { "contexte": "Allégation typique interdite en publicité sans respect des conditions de la loi Climat et résilience et du décret n° 2022-539 ; l'ADEME cite les voyages en avion, les croisières ou les baskets présentés ainsi.", "texte": "« Ce produit est neutre en carbone. »" },
+    { "contexte": "Formulation typique (illustrative) conforme aux recommandations de l'ADEME : bénéfice précis, mesurable, renvoyant à une information détaillée.", "texte": "« Cet emballage contient 50 % de plastique recyclé ; méthode de calcul et détails sur notre site. »" },
+    { "contexte": "Formulation typique (illustrative) d'un rapport de durabilité CSRD (ESRS E1).", "texte": "« Nos émissions de scope 3 représentent 92 % de notre empreinte ; notre plan de transition vise −42 % sur les scopes 1 et 2 d'ici 2030 par rapport à 2022. »" }
+  ],
+  "sources": [
+    { "titre": "New French anti-greenwashing guidelines: dos and don'ts to avoid misleading green claims", "auteur": "Linklaters (Sustainable Futures)", "url": "https://sustainablefutures.linklaters.com/post/102j8cz/new-french-anti-greenwashing-guidelines-dos-and-donts-to-avoid-misleading-gre", "apport": "Synthèse du guide ADEME : termes interdits ou conditionnés, conditions de la neutralité carbone, visuels trompeurs." },
+    { "titre": "Guide anti-greenwashing (2023, mis à jour en 2024)", "auteur": "ADEME", "url": "https://communication-responsable.ademe.fr/sites/default/files/2024-03/20230727_ademe_guide_antigreenwashing_web-vdef-min.pdf", "apport": "Document de référence sur les allégations environnementales (consulté via des synthèses secondaires)." },
+    { "titre": "French energy agency introduces anti-greenwashing guide", "auteur": "pv magazine", "url": "https://www.pv-magazine.com/2024/04/12/french-energy-agency-introduces-anti-greenwashing-guide/", "apport": "Définition de l'écoblanchiment par l'ADEME, chronologie des versions, vigilance sur les réseaux sociaux." },
+    { "titre": "Lutte contre l'éco-blanchiment dans les publicités", "auteur": "Ministère de la Transition écologique", "url": "https://www.ecologie.gouv.fr/politiques-publiques/lutte-contre-leco-blanchiment-publicites", "apport": "Cadre réglementaire de la loi Climat et résilience et du décret sur la neutralité carbone." },
+    { "titre": "Résumé à l'intention des décideurs, AR6 Groupe I (traduction française)", "auteur": "GIEC / IPCC", "url": "https://climat.cned.fr/wp-content/uploads/2023/06/IPCC_AR6_WG1_SPM_French.pdf", "apport": "Échelles calibrées de probabilité et de degré de confiance (via résumé de recherche)." },
+    { "titre": "Quel est précisément le rôle du GIEC ?", "auteur": "Connaissance des énergies", "url": "https://www.connaissancedesenergies.org/questions-et-reponses-energies/quel-est-precisement-le-role-du-giec", "apport": "Processus d'approbation ligne à ligne du résumé pour décideurs." },
+    { "titre": "Tout savoir sur la CSRD", "auteur": "Ministère de l'Économie", "url": "https://www.economie.gouv.fr/entreprises/tout-savoir-sur-la-csrd", "apport": "Périmètre de la CSRD après l'Omnibus I (seuils 1 000 salariés et 450 M€)." },
+    { "titre": "Combating greenwashing: an overview of French law", "auteur": "Morgan Lewis (juin 2026)", "url": "https://www.morganlewis.com/pubs/2026/06/combating-greenwashing-an-overview-of-french-law", "apport": "Jurisprudence 2026 sur l'allégation « neutre en carbone »." },
+    { "titre": "EmpCo : dates d'application", "auteur": "Projet Celsius", "url": "https://projetcelsius.com/en/blog/empco-application-dates/", "apport": "Calendrier de la directive (UE) 2024/825 sur les allégations génériques." },
+    { "titre": "Scope 1, 2, 3 : comprendre les périmètres d'émissions", "auteur": "Selectra Climate", "url": "https://climate.selectra.com/fr/entreprises/bilan-carbone/scope-1-2-3", "apport": "Définitions des scopes du bilan carbone." }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "id": "latour",
+  "nom": "Latour — acteur-réseau",
+  "famille": "sociologie",
+  "categorie": "Sociologie des sciences et techniques",
+  "icone": "🕸️",
+  "couleur": "#00796B",
+  "description": "Grille de lecture inspirée de Bruno Latour (1947-2022), Michel Callon et Madeleine Akrich (théorie de l'acteur-réseau ou sociologie de la traduction) : tout sujet est décrit comme un réseau d'associations entre humains et non-humains, sans présupposer de « société » explicative. Elle suit les acteurs, rouvre les boîtes noires, cartographie les controverses et retrace les traductions et les inscriptions qui font tenir les faits.",
+  "posture": "Anthropologue des sciences et des techniques, empiriste et ironique, qui refuse les grandes causes toutes faites (« la Société », « la Nature ») : il suit les acteurs, décrit les médiations pas à pas et traite symétriquement humains et non-humains, vainqueurs et vaincus des controverses.",
+  "valeurs": [
+    "suivre les acteurs",
+    "description plutôt qu'explication",
+    "symétrie généralisée",
+    "attention aux objets et aux techniques",
+    "cartographie des controverses",
+    "méfiance envers les grands récits",
+    "empirisme de terrain"
+  ],
+  "vocabulaire": [
+    { "terme": "acteur-réseau", "sens": "Entité qui n'existe et n'agit que par le réseau d'associations qui la tient : tout acteur est un réseau, et tout réseau peut agir comme un acteur.", "usage": "Le zoo est un acteur-réseau fait de soigneurs, d'enclos, de registres et de girafes." },
+    { "terme": "actant", "sens": "Toute entité, humaine ou non humaine, qui fait une différence dans le cours d'une action.", "usage": "La caisse enregistreuse est un actant de la vente." },
+    { "terme": "non-humains", "sens": "Objets, animaux, techniques, documents ou microbes reconnus comme participants à part entière des collectifs.", "usage": "Les non-humains ont leur mot à dire dans la réussite de l'élevage." },
+    { "terme": "symétrie généralisée", "sens": "Principe qui impose de décrire dans les mêmes termes humains et non-humains, nature et société, sans faire de l'un l'explication de l'autre.", "usage": "La symétrie généralisée interdit d'expliquer le succès par la seule « vérité » ou le seul « intérêt »." },
+    { "terme": "traduction", "sens": "Ensemble des opérations par lesquelles un acteur se fait porte-parole d'autres, redéfinit leurs intérêts et les lie à son projet.", "usage": "La traduction transforme l'intérêt des éleveurs en programme de conservation." },
+    { "terme": "problématisation", "sens": "Premier moment de la traduction : définir un problème et se rendre indispensable en devenant point de passage obligé.", "usage": "La problématisation pose la question de la survie de l'espèce." },
+    { "terme": "point de passage obligé", "sens": "Lieu ou énoncé par lequel tous les acteurs doivent passer pour atteindre leurs objectifs.", "usage": "Le registre international d'élevage est devenu un point de passage obligé." },
+    { "terme": "intéressement", "sens": "Dispositifs par lesquels on fixe les autres acteurs dans les rôles qu'on leur propose, en les détachant d'autres liens.", "usage": "La remise promotionnelle est un dispositif d'intéressement." },
+    { "terme": "enrôlement", "sens": "Réussite de l'intéressement : attribution et acceptation effective des rôles.", "usage": "L'enrôlement des distributeurs assure la diffusion du produit." },
+    { "terme": "mobilisation", "sens": "Moment où quelques porte-parole parlent au nom de masses, humaines ou non, désormais alignées.", "usage": "La mobilisation des chiffres de vente fait parler des milliers d'acheteurs." },
+    { "terme": "porte-parole", "sens": "Acteur qui parle au nom d'autres (pêcheurs, coquilles, électeurs, données) et dont la représentativité peut être contestée.", "usage": "Le vétérinaire se fait porte-parole du girafon." },
+    { "terme": "dissidence", "sens": "Remise en cause de la traduction lorsque les représentés trahissent leurs porte-parole.", "usage": "La dissidence des consommateurs ruine la stratégie de la marque." },
+    { "terme": "controverse", "sens": "Situation d'incertitude où ni les faits ni les acteurs ne sont stabilisés ; lieu privilégié de l'enquête.", "usage": "La controverse sur l'élevage en captivité mobilise biologistes et militants." },
+    { "terme": "boîte noire", "sens": "Fait ou dispositif stabilisé dont on n'examine plus la fabrication : on n'en voit que les entrées et les sorties.", "usage": "Le code-barres est une boîte noire que plus personne n'ouvre." },
+    { "terme": "inscription", "sens": "Trace (courbe, tableau, carte, chiffre) produite par un instrument, qui transforme une matière en document manipulable.", "usage": "Le relevé des ventes est une inscription." },
+    { "terme": "dispositif d'inscription", "sens": "Appareil qui convertit une substance ou un phénomène en figure ou en chiffre exploitable.", "usage": "L'échographe est un dispositif d'inscription." },
+    { "terme": "mobiles immuables", "sens": "Inscriptions qui voyagent sans se déformer et peuvent être combinées entre elles : cartes, tableaux, formules.", "usage": "Le tableur transforme ventes et naissances en mobiles immuables." },
+    { "terme": "centre de calcul", "sens": "Lieu où s'accumulent et se combinent des inscriptions venues de loin, ce qui permet d'agir à distance.", "usage": "La rédaction du journal devient un centre de calcul improvisé." },
+    { "terme": "action à distance", "sens": "Capacité, rendue possible par les inscriptions, de maîtriser depuis un centre des choses éloignées.", "usage": "Le siège pilote ses boutiques par action à distance." },
+    { "terme": "référence circulante", "sens": "Chaîne de transformations qui relie le terrain au texte scientifique, chaque étape conservant quelque chose de la précédente.", "usage": "La référence circulante va de l'enclos au graphique." },
+    { "terme": "médiateur", "sens": "Entité qui transforme, traduit ou modifie ce qu'elle transporte.", "usage": "L'algorithme de recommandation est un médiateur, non un simple canal." },
+    { "terme": "intermédiaire", "sens": "Entité qui transporte sans transformer ; pour l'acteur-réseau, les vrais intermédiaires sont rares.", "usage": "Ce que l'on prenait pour un intermédiaire se révèle médiateur." },
+    { "terme": "script", "sens": "Scénario d'usage inscrit dans un objet technique par ses concepteurs, qui prescrit des rôles aux utilisateurs (Madeleine Akrich).", "usage": "Le script de la pantoufle chauffante suppose une prise électrique près du canapé." },
+    { "terme": "délégation", "sens": "Transfert d'une action ou d'une compétence d'un humain vers un dispositif technique.", "usage": "Le ralentisseur est une délégation du policier au béton." },
+    { "terme": "association", "sens": "Lien entre entités hétérogènes ; le social n'est pas une substance mais un mouvement d'associations.", "usage": "Chaque association nouvelle modifie le réseau." },
+    { "terme": "collectif", "sens": "Assemblée d'humains et de non-humains qui remplace l'opposition entre nature et société.", "usage": "Le collectif du zoo inclut les girafes comme les visiteurs." },
+    { "terme": "hybrides", "sens": "Entités mêlant nature, technique et politique que la modernité prétend séparer.", "usage": "Le girafon né de programmes d'élevage est un hybride." },
+    { "terme": "purification", "sens": "Opération moderne qui sépare officiellement nature et société, tout en laissant proliférer les hybrides.", "usage": "La purification range l'animal du côté de la nature et le marché du côté de la société." },
+    { "terme": "Constitution moderne", "sens": "Partage implicite entre nature et société qui fonde la modernité selon Nous n'avons jamais été modernes (1991).", "usage": "La Constitution moderne nous empêche de voir les hybrides." },
+    { "terme": "épreuve", "sens": "Test par lequel un acteur mesure la résistance des autres et la solidité de ses alliances.", "usage": "La saison des fêtes est une épreuve pour la chaîne logistique." },
+    { "terme": "alliés", "sens": "Humains et non-humains mobilisés pour renforcer un énoncé ou une innovation.", "usage": "Plus un énoncé a d'alliés, plus il est difficile à contester." },
+    { "terme": "laboratoire", "sens": "Lieu où l'on produit des faits en mobilisant instruments et inscriptions ; levier pour transformer la société.", "usage": "Le laboratoire de Pasteur a déplacé le monde agricole." },
+    { "terme": "construction des faits", "sens": "Processus collectif et matériel par lequel un énoncé devient un fait au terme de controverses.", "usage": "La construction des faits n'enlève rien à leur solidité." },
+    { "terme": "cartographie des controverses", "sens": "Méthode d'enquête qui décrit les acteurs, leurs arguments et leurs liens dans une controverse sociotechnique.", "usage": "La cartographie des controverses rend le débat lisible sans le trancher." },
+    { "terme": "sociologie des associations", "sens": "Projet de « réassembler le social » en suivant les liens plutôt qu'en invoquant une société déjà constituée.", "usage": "La sociologie des associations remplace « le social » par des connexions traçables." },
+    { "terme": "performativité", "sens": "Idée, développée par Michel Callon, que les savoirs économiques contribuent à façonner les marchés qu'ils décrivent.", "usage": "La performativité des modèles de prévision façonne les commandes." },
+    { "terme": "agencement", "sens": "Arrangement hétérogène d'humains, d'objets et de règles qui rend une action possible, par exemple un marché.", "usage": "L'agencement marchand inclut le rayon, l'étiquette et le terminal de paiement." },
+    { "terme": "parlement des choses", "sens": "Image politique d'une assemblée où les non-humains seraient représentés par des porte-parole.", "usage": "Le parlement des choses donnerait une voix au climat." },
+    { "terme": "oligoptique", "sens": "Lieu d'où l'on voit peu mais bien (salle de contrôle, centre de calcul), par opposition au fantasme panoptique de tout voir.", "usage": "La salle de supervision du zoo est un oligoptique." }
+  ],
+  "formules": [
+    "Concernant {sujet}, il ne faut pas partir de la société mais suivre les acteurs.",
+    "{sujet} n'est pas un objet donné : c'est un réseau d'associations qu'il faut retracer.",
+    "Humains et non-humains sont à traiter symétriquement : dans {sujet}, les objets font faire autant qu'ils sont faits.",
+    "Entre {a} et {b}, il n'y a pas d'abîme : seulement une chaîne de médiations qu'il faut décrire.",
+    "Rapprocher {a} et {b} n'a rien d'absurde si l'on suit les inscriptions qui circulent de l'un à l'autre.",
+    "{element} n'existe pour nous qu'à travers des inscriptions : tableaux, courbes, registres, capteurs.",
+    "Qui parle pour {public} ? Tout porte-parole est d'abord un traducteur.",
+    "Il faut rouvrir la boîte noire : ce qui paraît simple résulte d'une multitude d'épreuves.",
+    "Tant que la controverse dure, ni la nature ni la société ne peuvent servir d'arbitre.",
+    "Le point de passage obligé est l'endroit par lequel tous doivent transiter pour obtenir ce qu'ils veulent.",
+    "{evenement} montre que le réseau peut se défaire : les alliés trahissent, les objets résistent.",
+    "Ce que l'on appelle « contexte » n'est qu'un autre réseau, plus long, qu'il faut lui aussi décrire.",
+    "Le terme « {terme} » sert à suivre les associations, non à les expliquer d'avance.",
+    "Il n'y a pas de grand et de petit, seulement des réseaux plus ou moins longs.",
+    "On ne demandera pas si {sujet} relève de la nature ou de la société : on en décrira pas à pas la composition.",
+    "Le social n'est pas une substance, c'est un mouvement d'associations.",
+    "Pour durer, {sujet} doit enrôler des alliés, humains et non humains.",
+    "Chaque traduction est aussi une trahison : le porte-parole transforme ceux qu'il représente.",
+    "Ajoutons un actant de plus au récit, et toute l'explication change.",
+    "Que fait faire l'objet ? Voilà la question qu'on oublie toujours.",
+    "Une bonne description n'a pas besoin d'une explication supplémentaire.",
+    "La cartographie de la controverse aboutit à une conclusion provisoire : {conclusion}.",
+    "Il ne s'agit pas de dévoiler une cause cachée, mais de déplier les médiations visibles.",
+    "Plus le réseau est long et tenu, plus le fait paraît universel.",
+    "Avant d'invoquer le marché, la culture ou le capitalisme, décrivons qui fait quoi, avec quoi.",
+    "Dans {sujet}, l'objet technique n'est pas un simple outil : c'est un médiateur qui redistribue les rôles.",
+    "Un fait n'est solide que par le nombre et la tenue des alliés qui le soutiennent.",
+    "Suivons {element} à la trace, du terrain jusqu'au tableau de bord.",
+    "Il faut se demander qui a refermé la boîte noire, et à quel prix.",
+    "Nous n'avons jamais été modernes : nature et société n'ont jamais cessé de se mélanger.",
+    "Pour qu'un fait voyage, il faut étendre le réseau qui l'a produit."
+  ],
+  "connecteurs": [
+    "Concrètement,",
+    "Pas à pas,",
+    "En suivant les acteurs,",
+    "Autrement dit,",
+    "Plus prosaïquement,",
+    "Symétriquement,",
+    "De proche en proche,",
+    "Pour l'instant,",
+    "En revanche,",
+    "Au passage,",
+    "Ce faisant,",
+    "Bref,"
+  ],
+  "euphemismes": [
+    { "brut": "c'est la société qui veut ça", "edl": "c'est un réseau d'associations qu'il reste à décrire", "commentaire": "Pour l'acteur-réseau, « la société » est ce qu'il faut expliquer, non ce qui explique." },
+    { "brut": "c'est le contexte", "edl": "c'est un autre réseau, plus long, à tracer lui aussi", "commentaire": "Le contexte n'est pas une boîte englobante mais une suite de connexions." },
+    { "brut": "la technique est neutre", "edl": "l'objet est un médiateur qui fait faire et redistribue les rôles", "commentaire": "Script et délégation (Madeleine Akrich, Bruno Latour)." },
+    { "brut": "c'est un fait scientifique établi", "edl": "c'est une boîte noire refermée au terme d'une controverse", "commentaire": "La Science en action : remonter de la science faite à la science en train de se faire." },
+    { "brut": "la vérité a fini par triompher", "edl": "la controverse s'est stabilisée et la nature en est la conséquence, non la cause", "commentaire": "Principe de symétrie : expliquer de la même façon vainqueurs et vaincus." },
+    { "brut": "l'opinion publique", "edl": "un collectif représenté par des porte-parole", "commentaire": "Qui parle au nom de qui, et avec quelle fidélité ?" },
+    { "brut": "le marché", "edl": "un agencement marchand en partie performé par les savoirs économiques", "commentaire": "Travaux de Michel Callon sur la performativité." },
+    { "brut": "les chiffres parlent d'eux-mêmes", "edl": "des inscriptions produites par des instruments et rendues mobiles", "commentaire": "Mobiles immuables et centres de calcul." },
+    { "brut": "le génie de l'inventeur", "edl": "la capacité à enrôler un réseau d'alliés", "commentaire": "Les Microbes : guerre et paix (1984) : Pasteur et le réseau des hygiénistes, des médecins et des intérêts coloniaux." },
+    { "brut": "le pouvoir des puissants", "edl": "l'effet d'associations durables, non leur cause", "commentaire": "Le pouvoir est ce qu'il faut expliquer par la tenue des réseaux." },
+    { "brut": "la modernité a séparé science et politique", "edl": "les hybrides prolifèrent sous la purification officielle", "commentaire": "Nous n'avons jamais été modernes (1991)." },
+    { "brut": "une innovation géniale", "edl": "une traduction réussie, qui a intéressé et enrôlé des utilisateurs", "commentaire": "Sociologie de l'innovation du Centre de sociologie de l'innovation (Mines)." },
+    { "brut": "un objet", "edl": "un actant", "commentaire": "Toute entité qui fait une différence dans l'action." },
+    { "brut": "convaincre", "edl": "intéresser puis enrôler", "commentaire": "Moments de la traduction selon Callon (1986)." },
+    { "brut": "le consensus", "edl": "la fermeture provisoire d'une controverse", "commentaire": "Toute boîte noire peut se rouvrir." },
+    { "brut": "l'usager", "edl": "l'utilisateur prévu par le script de l'objet", "commentaire": "Les concepteurs inscrivent un utilisateur dans l'objet (Akrich)." }
+  ],
+  "substitutions": [
+    { "de": "société", "vers": "collectif" },
+    { "de": "contexte", "vers": "réseau" },
+    { "de": "objet", "vers": "actant" },
+    { "de": "outil", "vers": "médiateur" },
+    { "de": "machine", "vers": "actant non humain" },
+    { "de": "fait établi", "vers": "boîte noire" },
+    { "de": "preuve", "vers": "inscription" },
+    { "de": "donnée", "vers": "inscription" },
+    { "de": "graphique", "vers": "mobile immuable" },
+    { "de": "laboratoire", "vers": "centre de calcul" },
+    { "de": "représentant", "vers": "porte-parole" },
+    { "de": "persuader", "vers": "intéresser" },
+    { "de": "recruter", "vers": "enrôler" },
+    { "de": "partenaire", "vers": "allié" },
+    { "de": "débat", "vers": "controverse" },
+    { "de": "consensus", "vers": "boîte noire refermée" },
+    { "de": "mode d'emploi", "vers": "script" },
+    { "de": "influence", "vers": "traduction" },
+    { "de": "cause", "vers": "association" },
+    { "de": "échelle", "vers": "longueur du réseau" },
+    { "de": "système", "vers": "assemblage" },
+    { "de": "structure", "vers": "réseau stabilisé" },
+    { "de": "acteur", "vers": "actant" },
+    { "de": "explication", "vers": "description" },
+    { "de": "automatisation", "vers": "délégation" },
+    { "de": "marché", "vers": "agencement marchand" },
+    { "de": "test", "vers": "épreuve" }
+  ],
+  "cadres": [
+    { "nom": "Suivre les acteurs", "question": "Qui, et quoi, faut-il suivre pour décrire {sujet} sans présupposer d'explication sociale ?", "explication": "Le chercheur ne sait pas d'avance de quoi le social est fait ; il le découvre en suivant les traces." },
+    { "nom": "Traduction", "question": "Quelles opérations de traduction (problématisation, intéressement, enrôlement, mobilisation) ont façonné {sujet} ?", "explication": "Un projet tient quand des acteurs hétérogènes acceptent les rôles qu'on leur propose." },
+    { "nom": "Non-humains", "question": "Quels non-humains (objets, animaux, documents, machines) agissent dans {sujet}, et que font-ils faire ?", "explication": "Les objets participent à l'action et redistribuent les rôles." },
+    { "nom": "Boîte noire", "question": "Quelle boîte noire faut-il rouvrir pour comprendre {element}, et quelles controverses s'y sont refermées ?", "explication": "Derrière chaque évidence technique ou scientifique se cache une histoire d'épreuves." },
+    { "nom": "Inscriptions", "question": "Quelles inscriptions (courbes, registres, tableaux) rendent {element} visible et transportable ?", "explication": "On n'agit à distance que sur ce qui a été mis sur papier ou à l'écran." },
+    { "nom": "Porte-parole", "question": "Qui parle pour {public}, et avec quelle fidélité ?", "explication": "Toute représentation est une traduction susceptible de trahison." },
+    { "nom": "Controverse", "question": "Où passe la controverse sur {sujet}, et qui a les moyens de la clore ?", "explication": "Les controverses sont le meilleur moment pour observer le social en train de se faire." }
+  ],
+  "structures": [
+    {
+      "nom": "Sociologie de la traduction",
+      "description": "Modèle de l'étude de Michel Callon sur les coquilles Saint-Jacques de la baie de Saint-Brieuc (1986) : problématisation, intéressement, enrôlement, mobilisation, puis dissidence possible.",
+      "etapes": [
+        {
+          "titre": "Problématisation",
+          "role": "contexte",
+          "consigne": "Montrer comment un acteur définit le problème et se rend indispensable comme point de passage obligé.",
+          "gabarits": [
+            "Concernant {sujet}, un acteur commence par définir le problème et par se rendre indispensable.",
+            "Tout part d'une question que quelques-uns parviennent à imposer comme point de passage obligé."
+          ]
+        },
+        {
+          "titre": "Intéressement",
+          "role": "analyse",
+          "consigne": "Décrire les dispositifs qui fixent les autres acteurs, humains et non humains, dans les rôles proposés.",
+          "gabarits": [
+            "Il faut ensuite intéresser les autres acteurs, humains et non humains, en les détachant de leurs liens concurrents.",
+            "Entre {a} et {b}, des dispositifs d'intéressement tissent des liens qui n'allaient pas de soi."
+          ]
+        },
+        {
+          "titre": "Enrôlement",
+          "role": "analyse",
+          "consigne": "Montrer comment les rôles sont effectivement acceptés et tenus.",
+          "gabarits": [
+            "L'enrôlement réussit quand chacun accepte le rôle qu'on lui propose.",
+            "{element} témoigne d'un enrôlement réussi : les rôles sont distribués et tenus."
+          ]
+        },
+        {
+          "titre": "Mobilisation des porte-parole",
+          "role": "faits",
+          "consigne": "Identifier les porte-parole et les inscriptions qui représentent des masses d'entités.",
+          "gabarits": [
+            "Quelques porte-parole parlent désormais au nom de tous : {chiffre} sur un tableau suffisent à représenter des milliers d'entités.",
+            "Qui parle pour {public}, et que deviennent ceux qui ne sont pas représentés ?"
+          ]
+        },
+        {
+          "titre": "Dissidence",
+          "role": "tension",
+          "consigne": "Montrer comment les représentés peuvent trahir et rouvrir la controverse.",
+          "gabarits": [
+            "Mais les représentés peuvent trahir : {evenement} remet en cause toute la chaîne de traduction.",
+            "La controverse se rouvre dès qu'un actant ne se comporte plus comme prévu."
+          ]
+        },
+        {
+          "titre": "Un réseau provisoire",
+          "role": "conclusion",
+          "consigne": "Conclure sur la solidité provisoire du réseau et sur ce qu'il a fallu pour le faire tenir.",
+          "gabarits": [
+            "Au terme de la traduction, le réseau tient, provisoirement : {conclusion}.",
+            "Ce qui semblait une évidence apparaît comme le résultat fragile d'alliances patiemment construites."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Rouvrir une boîte noire",
+      "description": "Modèle de La Science en action (1987) : remonter d'un fait établi à la controverse, suivre inscriptions, alliés et épreuves jusqu'à la fermeture.",
+      "etapes": [
+        {
+          "titre": "Le fait établi",
+          "role": "contexte",
+          "consigne": "Présenter le fait comme une boîte noire et annoncer qu'on va remonter à sa fabrication.",
+          "gabarits": [
+            "Aujourd'hui, {sujet} fonctionne comme une boîte noire : personne ne discute plus la manière dont on l'a établi.",
+            "Remontons le temps jusqu'au moment où {element} était encore controversé."
+          ]
+        },
+        {
+          "titre": "La controverse",
+          "role": "faits",
+          "consigne": "Décrire les énoncés concurrents, les chiffres divergents, les instruments mobilisés.",
+          "gabarits": [
+            "À l'origine, les énoncés s'opposaient et les chiffres divergeaient : {chiffre} contre d'autres estimations.",
+            "Chaque camp mobilisait ses instruments, ses articles et ses alliés."
+          ]
+        },
+        {
+          "titre": "Inscriptions et alliés",
+          "role": "analyse",
+          "consigne": "Montrer comment l'accumulation d'inscriptions et d'alliés renforce un énoncé.",
+          "gabarits": [
+            "L'avantage revient à ceux qui accumulent le plus d'inscriptions et d'alliés solides.",
+            "Entre {a} et {b}, la différence tient à la longueur des réseaux qui les soutiennent."
+          ]
+        },
+        {
+          "titre": "Épreuves de force",
+          "role": "tension",
+          "consigne": "Décrire les contestations comme des épreuves coûteuses (contre-laboratoires, contre-expertises).",
+          "gabarits": [
+            "Chaque contestation est une épreuve : pour contredire, il faut un contre-laboratoire.",
+            "{evenement} a servi d'épreuve décisive, après laquelle la boîte s'est refermée."
+          ]
+        },
+        {
+          "titre": "La fermeture",
+          "role": "conclusion",
+          "consigne": "Conclure sur la fermeture de la boîte noire et sur ce qu'elle rend désormais invisible.",
+          "gabarits": [
+            "La boîte noire se referme ; la nature apparaît comme la conséquence, non la cause, du règlement de la controverse.",
+            "La conclusion, désormais tenue pour acquise, est la suivante : {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Cartographie d'une controverse",
+      "description": "Méthode d'enquête issue de l'enseignement de Bruno Latour : inventorier les actants, tracer les associations, repérer les frictions et les porte-parole, produire une carte lisible.",
+      "etapes": [
+        {
+          "titre": "Inventaire des actants",
+          "role": "faits",
+          "consigne": "Lister toutes les entités engagées, humaines et non humaines, sans tri préalable.",
+          "gabarits": [
+            "Dressons la liste des actants engagés dans {sujet} : personnes, institutions, objets, animaux, documents.",
+            "Le premier relevé fait apparaître {chiffre} entités en jeu, bien plus hétérogènes qu'on ne le pensait."
+          ]
+        },
+        {
+          "titre": "Tracé des associations",
+          "role": "analyse",
+          "consigne": "Relier les actants : appuis, délégations, circulations de documents.",
+          "gabarits": [
+            "Relions-les : qui s'appuie sur quoi, qui parle pour qui, quel document passe de main en main ?",
+            "Entre {a} et {b}, les liens passent par des intermédiaires inattendus : un tableur, un communiqué, un capteur."
+          ]
+        },
+        {
+          "titre": "Points de friction",
+          "role": "tension",
+          "consigne": "Repérer où les associations se disputent et où la controverse se cristallise.",
+          "gabarits": [
+            "La carte révèle les points de friction, là où les associations se disputent.",
+            "{evenement} cristallise le désaccord : chacun y projette sa version du monde."
+          ]
+        },
+        {
+          "titre": "Porte-parole",
+          "role": "analyse",
+          "consigne": "Identifier qui représente chaque position et éprouver cette représentativité.",
+          "gabarits": [
+            "Chaque position a ses porte-parole, dont la représentativité reste à éprouver.",
+            "Pour {public}, la controverse se réduit souvent à quelques voix médiatiques."
+          ]
+        },
+        {
+          "titre": "La carte",
+          "role": "conclusion",
+          "consigne": "Conclure en rendant la controverse lisible, sans prétendre la trancher.",
+          "gabarits": [
+            "La carte ne tranche pas, elle rend la controverse lisible : {conclusion}.",
+            "Décrire {sujet} ainsi, c'est donner à chacun les moyens de s'orienter dans le débat."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Les chiffres sont des inscriptions : le bout d'une chaîne de traductions qui va du terrain au tableau. La grille ne les rejette pas, elle les suit, en décrivant les instruments, les formats et les centres de calcul qui les rendent mobiles, combinables et convaincants.",
+    "unites": [
+      "inscription (courbe, tableau, carte)",
+      "nombre d'actants et de liens dans le réseau",
+      "longueur de la chaîne de traductions",
+      "nombre d'alliés mobilisés (citations, partenaires)",
+      "série produite par un capteur ou un registre"
+    ],
+    "formulations": [
+      "Le chiffre de {chiffre} ne tombe pas du ciel : c'est le bout d'une longue chaîne de traductions, du terrain au tableur.",
+      "Pour que {chiffre} circule entre {a} et {b}, il a fallu des capteurs, des registres, des comptables et des formats communs.",
+      "Le chiffre de {chiffre} est un mobile immuable : il voyage sans se déformer et se combine à d'autres.",
+      "Quiconque conteste {chiffre} doit remonter la chaîne des inscriptions et affronter tous les alliés qui la soutiennent.",
+      "Dans le centre de calcul, {element} et des milliers d'autres traces se retrouvent sur la même feuille.",
+      "Comparer {a} et {b}, c'est d'abord les rendre commensurables : même unité, même grille, même tableau.",
+      "Un chiffre isolé est faible ; adossé à des instruments et à des institutions, il devient un fait."
+    ]
+  },
+  "metaphores": [
+    "le réseau et ses fils",
+    "la boîte noire",
+    "la traduction, qui est aussi trahison",
+    "le porte-parole",
+    "le parlement des choses",
+    "le laboratoire comme levier pour soulever le monde",
+    "les épreuves de force",
+    "la fourmi myope qui suit les traces (ANT)",
+    "la cartographie",
+    "la cascade d'inscriptions",
+    "le Léviathan qu'on apprivoise",
+    "les hybrides qui prolifèrent"
+  ],
+  "pieges": [
+    "Relativisme supposé : décrire la fabrication des faits serait nier leur vérité, ce que Latour récuse.",
+    "Symétrie contestée : attribuer une capacité d'agir aux non-humains a été critiqué par David Bloor (« Anti-Latour », 1999).",
+    "Aplatissement politique : en suivant les associations locales, on risque d'ignorer les asymétries de pouvoir et les forces économiques plus larges.",
+    "Anthropomorphisme : faire « négocier » des coquilles Saint-Jacques ou des girafes au sens littéral.",
+    "Descriptivisme sans fin : la description peut tourner à l'inventaire sans hiérarchie ni conclusion.",
+    "Récit des vainqueurs : les histoires de traduction suivent souvent les porte-parole victorieux et oublient les exclus du réseau.",
+    "Jargon et néologismes (actant, oligoptique, hybrides) qui opacifient l'enquête.",
+    "Confusion entre acteur-réseau et réseau social ou réseau technique.",
+    "Usage du mot « controverse » pour des débats où le consensus scientifique est en réalité établi."
+  ],
+  "registres": {
+    "institutionnel": "Dans les organisations, la grille devient « écosystème », « parties prenantes », « cartographie des acteurs » et « co-construction ».",
+    "technique": "Entre pairs : traduction, intéressement, enrôlement, inscriptions, mobiles immuables, symétrie généralisée et cartographie des controverses.",
+    "vulgarisation": "Pour le grand public : « les objets aussi agissent » et « un fait scientifique est le fruit d'un long travail collectif ».",
+    "critique": "Ses détracteurs raillent une sociologie où les coquilles Saint-Jacques négocient, où tout se vaut et où l'on décrit sans jamais expliquer."
+  },
+  "visuel": {
+    "palette": ["#00796B", "#B2DFDB", "#1B2B2A", "#FF7043", "#F7F7F2"],
+    "motifs": [
+      { "fr": "graphe en réseau mêlant icônes humaines et objets", "en": "network graph mixing human icons and objects" },
+      { "fr": "boîte noire qui s'ouvre sur des engrenages, des personnes et des documents", "en": "black box opening to reveal gears, people and documents" },
+      { "fr": "chaîne de documents : terrain, carnet, tableau, diagramme", "en": "chain of documents: field, notebook, table, diagram" },
+      { "fr": "instruments de laboratoire qui impriment des courbes", "en": "laboratory instruments printing out curves" },
+      { "fr": "carte de controverse avec nœuds et liens colorés", "en": "controversy map with colored nodes and links" },
+      { "fr": "porte-parole au micro devant une foule d'objets", "en": "spokesperson at a microphone facing a crowd of objects" },
+      { "fr": "fils tendus entre des objets hétérogènes", "en": "threads strung between heterogeneous objects" },
+      { "fr": "fourmi qui suit une piste de traces", "en": "ant following a trail of traces" },
+      { "fr": "centre de calcul où convergent des flèches venues du monde entier", "en": "centre of calculation with arrows converging from around the globe" },
+      { "fr": "cascade d'inscriptions de plus en plus simplifiées", "en": "cascade of increasingly simplified inscriptions" }
+    ],
+    "pictogrammes": [
+      { "fr": "nœud de réseau", "en": "network node" },
+      { "fr": "boîte noire", "en": "black box" },
+      { "fr": "microscope", "en": "microscope" },
+      { "fr": "mégaphone", "en": "megaphone" },
+      { "fr": "fourmi", "en": "ant" },
+      { "fr": "carte", "en": "map" },
+      { "fr": "courbe", "en": "line chart" },
+      { "fr": "flèche de traduction", "en": "translation arrow" },
+      { "fr": "maillon de chaîne", "en": "chain link" },
+      { "fr": "capteur", "en": "sensor" }
+    ],
+    "typographie": "Linéale technique à chasse fixe pour les étiquettes de nœuds, avec annotations manuscrites façon carnet de terrain.",
+    "style_motion": "Graphes en réseau qui se déploient nœud par nœud, boîtes noires qui s'ouvrent, documents qui se transforment en courbes puis en cartes, flèches de traduction animées entre humains et objets ; ton curieux, ironique et enquêteur, sur fond blanc cassé.",
+    "style_motion_en": "Network graphs unfolding node by node, black boxes popping open, documents morphing into curves and then maps, animated translation arrows linking humans and objects; curious, ironic investigative tone on an off-white background with teal and coral accents."
+  },
+  "exemples": [
+    { "contexte": "Mot d'ordre méthodologique de Latour (« follow the actors »), cité dans les hommages de la London School of Economics ; traduction française usuelle.", "texte": "« Suivre les acteurs »" },
+    { "contexte": "Titre réel du texte de Michel Callon et Bruno Latour repris dans Sociologie de la traduction. Textes fondateurs (Presses des Mines, 2006), consacré au passage du micro au macro.", "texte": "« Le grand Léviathan s'apprivoise-t-il ? »" },
+    { "contexte": "Formulation illustrative, non citée : comment la grille lirait la comparaison entre ventes de pantoufles irlandaises et naissances de girafons à Melbourne.", "texte": "« Suivons les traces : des ventes enregistrées par des caisses à Dublin, des naissances consignées par des vétérinaires à Melbourne. Rien ne les relie, sauf le journaliste et son tableur, centre de calcul improvisé où deux inscriptions lointaines deviennent comparables. Le rapprochement n'est pas absurde : il est construit, et c'est cette construction qu'il faut décrire. »" },
+    { "contexte": "Formulation illustrative, non citée : lecture typique d'une innovation médicale, dans le sillage des Microbes : guerre et paix (1984).", "texte": "« Le succès du vaccin ne tient pas au seul génie de son inventeur : il a fallu enrôler des laboratoires, des médecins, des hygiénistes, des statistiques et des microbes domestiqués. »" }
+  ],
+  "sources": [
+    { "titre": "Sociologie de la traduction. Textes fondateurs (Presses des Mines, 2006) — table des matières", "auteur": "Madeleine Akrich, Michel Callon, Bruno Latour (OpenEdition Books)", "url": "https://books.openedition.org/pressesmines/1181", "apport": "Concepts clés (traduction, intéressement, script, controverse) et textes fondateurs." },
+    { "titre": "Sociologie de la traduction — Préambule", "auteur": "OpenEdition Books", "url": "https://books.openedition.org/pressesmines/1187", "apport": "Présentation de la sociologie de l'acteur-réseau et du Centre de sociologie de l'innovation." },
+    { "titre": "Tributes to Bruno Latour", "auteur": "London School of Economics", "url": "https://lse.ac.uk/accounting/news/Tributes-to-Bruno-Latour-Centennial-Professor", "apport": "« Follow the actors », action à distance, centres de calcul, mobiles immuables et combinables." },
+    { "titre": "Callon (1986), Some elements of a sociology of translation — notice", "auteur": "BibSonomy", "url": "https://www.bibsonomy.org/bibtex/27efd4f05f5dc3eada54f7d97d009e060/heinzwittenbrink", "apport": "Quatre moments de la traduction : problématisation, intéressement, enrôlement, mobilisation." },
+    { "titre": "Lost (and found) in translation", "auteur": "Revista Sociologias (UFRGS)", "url": "https://seer.ufrgs.br/index.php/sociologias/article/view/131119", "apport": "Référence de la version française de Callon (L'Année sociologique, 1986)." },
+    { "titre": "The Pasteurization of France", "auteur": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Pasteurization_of_France", "apport": "Application à la médecine : Les Microbes : guerre et paix (1984), première version de l'acteur-réseau." },
+    { "titre": "Article sur la rupture entre théorie de l'acteur-réseau et programme fort", "auteur": "Redalyc", "url": "https://www.redalyc.org/pdf/101/10135349008.pdf", "apport": "Controverse Bloor–Latour (1999) sur la symétrie." },
+    { "titre": "Article critique sur la théorie de l'acteur-réseau", "auteur": "Glasnik Etnografskog instituta SANU", "url": "https://www.ei.sanu.ac.rs/index.php/gei/article/download/1173/1080", "apport": "Critique : négligence des forces politiques et économiques plus larges." }
+  ]
+}

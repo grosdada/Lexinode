@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Une collection de mode racontée comme un protocole de soin",
+    "description": "Mixeur mode × médecine, chronologie d’événements, prisme satirique et short en pâte à modeler."
+  },
+  "nodes": [
+    {
+      "id": "s1",
+      "type": "sujet",
+      "x": 40,
+      "y": 40,
+      "data": {
+        "titre": "La collection capsule printemps-été de la maison Lumen",
+        "angle": "Et si l’on présentait une collection comme on annonce un protocole de soin ?",
+        "motscles": "mode, soin, lancement"
+      }
+    },
+    {
+      "id": "n1",
+      "type": "note",
+      "x": 40,
+      "y": 230,
+      "data": {
+        "titre": "Dossier de presse (fictif)",
+        "texte": "La maison Lumen, marque fictive, lance une capsule de douze pièces en lin lavé et coton biologique. Les coupes sont amples, la palette va du sable au bleu hôpital. Le prix est en hausse, les quantités sont limitées.",
+        "source": "Marque fictive"
+      }
+    },
+    {
+      "id": "e1",
+      "type": "evenement",
+      "x": 40,
+      "y": 500,
+      "data": {
+        "titre": "Rupture de stock de la collection précédente",
+        "date": "2026-11",
+        "type": "précédent",
+        "description": "Les pièces phares se sont écoulées en quelques jours.",
+        "impact": 3
+      }
+    },
+    {
+      "id": "e2",
+      "type": "evenement",
+      "x": 320,
+      "y": 560,
+      "data": {
+        "titre": "Défilé de présentation de la capsule",
+        "date": "2027-03",
+        "lieu": "Paris",
+        "type": "déclencheur",
+        "description": "Présentation à la presse et aux acheteurs.",
+        "impact": 4
+      }
+    },
+    {
+      "id": "l1",
+      "type": "lexique",
+      "x": 320,
+      "y": 40,
+      "data": {
+        "lexique": "mode",
+        "registre": "institutionnel",
+        "intensite": 4
+      }
+    },
+    {
+      "id": "l2",
+      "type": "lexique",
+      "x": 320,
+      "y": 200,
+      "data": {
+        "lexique": "medecine",
+        "registre": "technique",
+        "intensite": 4
+      }
+    },
+    {
+      "id": "m1",
+      "type": "mixeur",
+      "x": 600,
+      "y": 120,
+      "data": {
+        "poids": {
+          "mode": 2,
+          "medecine": 1.5
+        },
+        "mode": "fusion"
+      }
+    },
+    {
+      "id": "p1",
+      "type": "prisme",
+      "x": 600,
+      "y": 360,
+      "data": {
+        "lexique": "medecine",
+        "intention": "satiriser",
+        "longueur": "moyen",
+        "seed": 1
+      }
+    },
+    {
+      "id": "r1",
+      "type": "reflexion",
+      "x": 880,
+      "y": 180,
+      "data": {
+        "structure": "auto",
+        "longueur": "moyen",
+        "seed": 1
+      }
+    },
+    {
+      "id": "st",
+      "type": "style",
+      "x": 880,
+      "y": 520,
+      "data": {
+        "style": "clay"
+      }
+    },
+    {
+      "id": "sh",
+      "type": "short",
+      "x": 1170,
+      "y": 280,
+      "data": {
+        "duree": "30",
+        "format": "9:16",
+        "voix": "chaleureuse",
+        "cible": "kling",
+        "langue": "en",
+        "seed": 1
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "l1",
+      "from": "l1",
+      "fromPort": "out",
+      "to": "m1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l2",
+      "from": "l2",
+      "fromPort": "out",
+      "to": "m1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l3",
+      "from": "e1",
+      "fromPort": "out",
+      "to": "e2",
+      "toPort": "precedents"
+    },
+    {
+      "id": "l4",
+      "from": "n1",
+      "fromPort": "out",
+      "to": "p1",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l5",
+      "from": "l2",
+      "fromPort": "out",
+      "to": "p1",
+      "toPort": "lexique"
+    },
+    {
+      "id": "l6",
+      "from": "s1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "sujet"
+    },
+    {
+      "id": "l7",
+      "from": "m1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l8",
+      "from": "n1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l9",
+      "from": "e2",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l10",
+      "from": "p1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l11",
+      "from": "r1",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l12",
+      "from": "st",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "style"
+    },
+    {
+      "id": "l13",
+      "from": "m1",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "lexiques"
+    }
+  ]
+}

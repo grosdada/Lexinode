@@ -1,0 +1,34 @@
+# Pile 100 % open source : Lexinode + Ollama (LLM local) + SearXNG (recherche web)
+#   docker compose up -d
+#   docker compose exec ollama ollama pull qwen3:14b
+#   puis http://localhost:5177  → ⚙ Réglages → fournisseur « Ollama », moteur « IA »
+services:
+  lexinode:
+    build: .
+    ports: ["5177:5177"]
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+      - OLLAMA_MODEL=qwen3:14b
+      - SEARXNG_URL=http://searxng:8080
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ./projects:/app/projects
+      - ./data/custom:/app/data/custom
+    depends_on: [ollama, searxng]
+  ollama:
+    image: ollama/ollama:latest
+    ports: ["11434:11434"]
+    volumes: [ollama:/root/.ollama]
+    # Pour un GPU NVIDIA, décommentez :
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+  searxng:
+    image: searxng/searxng:latest
+    ports: ["8888:8080"]
+    volumes: [./docker/searxng:/etc/searxng]
+volumes:
+  ollama:

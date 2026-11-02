@@ -1,0 +1,422 @@
+{
+  "id": "politique",
+  "nom": "Politique",
+  "famille": "metier",
+  "categorie": "Communication publique",
+  "icone": "🏛️",
+  "couleur": "#D62839",
+  "description": "Fiche des éléments de langage de la communication politique et gouvernementale francophone : messages clés distribués aux porte-parole, langue de bois, euphémismes de réforme et rhétorique de crise. Elle couvre le discours des ministres, des élus et des cabinets, de l'annonce de réforme à la riposte en débat.",
+  "posture": "Parole d'autorité qui engage l'État ou un camp : le locuteur assume une responsabilité collective (« le Gouvernement », « nous »), cherche la cohérence du message plus que la nuance et ne concède rien qui ne soit déjà arbitré.",
+  "valeurs": [
+    "l'intérêt général",
+    "la République et ses valeurs",
+    "la responsabilité",
+    "la justice et l'équité",
+    "l'ordre et la sécurité",
+    "la souveraineté",
+    "le dialogue social",
+    "l'efficacité de l'action publique"
+  ],
+  "vocabulaire": [
+    { "terme": "élément de langage", "sens": "Message préformaté, coordonné en amont pour être répété à l'identique par tous les porte-parole.", "usage": "Le cabinet a fait circuler les éléments de langage avant la matinale." },
+    { "terme": "réforme", "sens": "Changement législatif présenté comme nécessaire et porteur de progrès.", "usage": "Cette réforme est juste, efficace et nécessaire." },
+    { "terme": "pédagogie", "sens": "Effort d'explication des décisions, souvent invoqué quand le soutien manque.", "usage": "Nous devons faire preuve de davantage de pédagogie." },
+    { "terme": "concertation", "sens": "Consultation des partenaires sans obligation d'aboutir à un accord.", "usage": "La concertation se poursuit avec les organisations syndicales." },
+    { "terme": "dialogue social", "sens": "Ensemble des échanges entre l'exécutif, les syndicats et le patronat.", "usage": "Nous croyons au dialogue social." },
+    { "terme": "partenaires sociaux", "sens": "Syndicats de salariés et organisations patronales.", "usage": "Les partenaires sociaux seront reçus à Matignon." },
+    { "terme": "cap", "sens": "Orientation politique maintenue malgré les oppositions.", "usage": "Nous gardons le cap." },
+    { "terme": "feuille de route", "sens": "Programme d'action assigné à un ministre ou à un gouvernement.", "usage": "La feuille de route du ministre a été fixée par le Premier ministre." },
+    { "terme": "chantier", "sens": "Vaste réforme ouverte sur plusieurs mois.", "usage": "Nous ouvrons le chantier de la simplification." },
+    { "terme": "arbitrage", "sens": "Décision tranchée par l'Élysée ou Matignon entre plusieurs options ministérielles.", "usage": "Les arbitrages ne sont pas encore rendus." },
+    { "terme": "accompagnement", "sens": "Mesures de soutien adossées à une réforme pour en amortir les effets.", "usage": "Des mesures d'accompagnement sont prévues pour les plus modestes." },
+    { "terme": "dispositif", "sens": "Mesure administrative ou budgétaire identifiée par un nom.", "usage": "Le dispositif sera prolongé jusqu'à la fin de l'année." },
+    { "terme": "effort partagé", "sens": "Contribution demandée à tous, présentée comme équitable.", "usage": "Le redressement passe par un effort partagé." },
+    { "terme": "justice sociale", "sens": "Valeur de répartition équitable invoquée pour légitimer une mesure.", "usage": "C'est une mesure de justice sociale." },
+    { "terme": "pouvoir d'achat", "sens": "Capacité de consommation des ménages, thème électoral central.", "usage": "La priorité, c'est le pouvoir d'achat des Français." },
+    { "terme": "sérieux budgétaire", "sens": "Discipline de la dépense publique revendiquée.", "usage": "Nous conjuguons protection et sérieux budgétaire." },
+    { "terme": "maîtrise de la dépense", "sens": "Formule désignant les économies et les coupes budgétaires.", "usage": "La maîtrise de la dépense publique reste notre boussole." },
+    { "terme": "trajectoire", "sens": "Évolution programmée d'un indicateur, en particulier le déficit.", "usage": "Nous tenons notre trajectoire de finances publiques." },
+    { "terme": "prélèvements obligatoires", "sens": "Ensemble des impôts et cotisations sociales.", "usage": "Nous ne toucherons pas aux prélèvements obligatoires." },
+    { "terme": "contribution", "sens": "Mot préféré à « impôt » ou « taxe » pour une ponction nouvelle.", "usage": "Une contribution exceptionnelle sera demandée aux plus grandes entreprises." },
+    { "terme": "territoires", "sens": "Désignation englobante de la France hors Paris, valorisant la proximité.", "usage": "Nous serons aux côtés des territoires." },
+    { "terme": "ordre républicain", "sens": "Respect de la loi et de l'autorité de l'État.", "usage": "L'ordre républicain sera rétabli partout." },
+    { "terme": "fermeté", "sens": "Réponse pénale ou policière revendiquée face aux désordres.", "usage": "La réponse de l'État sera d'une fermeté absolue." },
+    { "terme": "valeurs républicaines", "sens": "Liberté, égalité, fraternité, laïcité, invoquées comme socle commun.", "usage": "Ces actes sont contraires aux valeurs républicaines." },
+    { "terme": "transition écologique", "sens": "Politique de décarbonation présentée comme progressive et juste.", "usage": "La transition écologique doit être juste." },
+    { "terme": "souveraineté", "sens": "Capacité nationale ou européenne de décider et de produire.", "usage": "C'est une question de souveraineté industrielle." },
+    { "terme": "résilience", "sens": "Capacité d'un pays ou d'un système à encaisser un choc.", "usage": "Il faut renforcer la résilience de nos chaînes d'approvisionnement." },
+    { "terme": "mobilisation générale", "sens": "Appel à l'engagement de tous face à une crise.", "usage": "Cette crise requiert notre mobilisation générale." },
+    { "terme": "engager la responsabilité du Gouvernement", "sens": "Recours à l'article 49 alinéa 3 de la Constitution pour faire adopter un texte sans vote.", "usage": "La Première ministre a engagé la responsabilité du Gouvernement." },
+    { "terme": "clause de revoyure", "sens": "Rendez-vous prévu pour réévaluer une mesure.", "usage": "Une clause de revoyure est prévue dans six mois." },
+    { "terme": "petite phrase", "sens": "Fragment de discours détaché et repris en boucle par les médias.", "usage": "Sa petite phrase a éclipsé tout le reste du discours." },
+    { "terme": "porte-parole", "sens": "Membre chargé de porter la parole officielle du Gouvernement ou d'un parti.", "usage": "La porte-parole rendra compte du Conseil des ministres." },
+    { "terme": "argumentaire", "sens": "Document listant les arguments et réponses aux objections pour les élus.", "usage": "Les députés ont reçu un argumentaire avant le débat." },
+    { "terme": "séquence", "sens": "Période de communication organisée autour d'un thème.", "usage": "La séquence régalienne s'ouvre lundi." },
+    { "terme": "récit", "sens": "Mise en histoire de l'action politique pour lui donner un sens.", "usage": "Il manque un récit à ce quinquennat." },
+    { "terme": "bilan", "sens": "Résultats revendiqués d'une majorité sortante.", "usage": "Nous défendrons notre bilan." },
+    { "terme": "ligne rouge", "sens": "Limite présentée comme non négociable.", "usage": "L'augmentation des impôts est une ligne rouge." },
+    { "terme": "main tendue", "sens": "Offre de dialogue adressée aux opposants ou aux syndicats.", "usage": "Notre main reste tendue." },
+    { "terme": "quartiers prioritaires", "sens": "Quartiers de la politique de la ville, désignation administrative des quartiers pauvres.", "usage": "Les crédits pour les quartiers prioritaires sont sanctuarisés." },
+    { "terme": "sanctuariser", "sens": "Protéger un budget de toute coupe.", "usage": "Nous sanctuarisons le budget de l'éducation." },
+    { "terme": "statu quo", "sens": "Situation inchangée, présentée comme l'option de l'immobilisme.", "usage": "Le statu quo n'est pas une option." },
+    { "terme": "compatriotes", "sens": "Désignation des citoyens qui valorise l'appartenance nationale.", "usage": "Je pense à nos compatriotes qui souffrent." }
+  ],
+  "formules": [
+    "Il faut être très clair : {conclusion}.",
+    "Je le dis avec gravité : {conclusion}.",
+    "Le Gouvernement prend pleinement la mesure de la situation.",
+    "Nous suivons {sujet} avec la plus grande attention.",
+    "Nous ne laisserons pas {element} sans réponse.",
+    "Le statu quo n'est pas une option.",
+    "Concernant {sujet}, notre cap est clair et nous le tiendrons.",
+    "Sur {sujet}, la main reste tendue à toutes les forces de bonne volonté.",
+    "Toutes les options sont sur la table.",
+    "Nous assumons nos choix : {conclusion}.",
+    "C'est une réforme juste, efficace et nécessaire.",
+    "Les Français attendent des résultats concrets, pas des postures.",
+    "Nous avons entendu les inquiétudes exprimées par {public}.",
+    "Je veux rassurer {public} : {conclusion}.",
+    "La concertation se poursuit avec l'ensemble des partenaires sociaux.",
+    "Personne ne sera laissé au bord du chemin.",
+    "Nous irons jusqu'au bout, avec méthode et détermination.",
+    "Il n'y a aucun tabou sur {sujet}.",
+    "Sur {sujet}, il faut une réponse globale, ferme et humaine.",
+    "Depuis {evenement}, nous n'avons pas cessé d'agir.",
+    "Il faut sortir des postures et regarder la réalité en face.",
+    "Je ne commente pas les rumeurs ; je m'en tiens aux faits.",
+    "La sécurité est la première des libertés.",
+    "Nous ne céderons ni à la facilité ni à la démagogie.",
+    "C'est tout le sens de l'action du Gouvernement.",
+    "En responsabilité, nous avons fait le choix du travail et de l'emploi.",
+    "Le dispositif sera évalué et, si nécessaire, ajusté.",
+    "Concrètement, cela représente {chiffre} pour {public}.",
+    "Entre {a} et {b}, il faut choisir, et nous avons choisi.",
+    "C'est ce que nous appelons « {terme} » : une exigence, pas un slogan.",
+    "Le temps de l'action est venu."
+  ],
+  "connecteurs": [
+    "Soyons clairs :",
+    "Je le dis avec force :",
+    "En responsabilité,",
+    "Dans le même temps,",
+    "Au-delà des postures,",
+    "Concrètement,",
+    "C'est tout le sens de notre action :",
+    "Pour autant,",
+    "Disons-le franchement :",
+    "Contrairement à nos prédécesseurs,",
+    "Au fond,",
+    "Dès lors,",
+    "Et en même temps,",
+    "J'ajoute un point essentiel :"
+  ],
+  "euphemismes": [
+    { "brut": "licenciements collectifs", "edl": "plan de sauvegarde de l'emploi", "commentaire": "Dénomination légale depuis la loi de modernisation sociale du 17 janvier 2002 (art. 93), qui remplace « plan social »." },
+    { "brut": "reculer l'âge de départ à la retraite", "edl": "travailler un peu plus longtemps", "commentaire": "Formule gouvernementale de la réforme des retraites de 2023, centrée sur l'effort plutôt que sur la perte." },
+    { "brut": "hausse d'impôt", "edl": "contribution exceptionnelle", "commentaire": "Le mot « impôt » est évité ; « exceptionnelle » suggère le caractère temporaire." },
+    { "brut": "coupes budgétaires", "edl": "maîtrise de la dépense publique", "commentaire": "Présente la réduction comme une bonne gestion." },
+    { "brut": "austérité", "edl": "sérieux budgétaire", "commentaire": "Valorise la rigueur comme une vertu de gestionnaire." },
+    { "brut": "récession", "edl": "croissance négative", "commentaire": "Oxymore classique des communications économiques." },
+    { "brut": "suppression de postes de fonctionnaires", "edl": "non-remplacement des départs", "commentaire": "Met l'accent sur l'absence d'embauche plutôt que sur la disparition des emplois." },
+    { "brut": "fermeture de services publics locaux", "edl": "réorganisation territoriale", "commentaire": "Courant pour les maternités, tribunaux ou trésoreries." },
+    { "brut": "pauvres", "edl": "ménages modestes", "commentaire": "Catégorie statistique qui adoucit la désignation." },
+    { "brut": "expulsion d'étrangers", "edl": "mesure d'éloignement", "commentaire": "Terme administratif du droit des étrangers." },
+    { "brut": "émeutes", "edl": "violences urbaines", "commentaire": "Catégorie policière qui dépolitise les événements." },
+    { "brut": "grève", "edl": "mouvement social", "commentaire": "Englobant et moins conflictuel." },
+    { "brut": "privatisation", "edl": "ouverture du capital", "commentaire": "Souligne l'apport d'investisseurs plutôt que la perte de contrôle public." },
+    { "brut": "adopter un texte sans vote", "edl": "engager la responsabilité du Gouvernement", "commentaire": "Formulation constitutionnelle de l'article 49.3, utilisée pour éviter « passage en force »." },
+    { "brut": "défaite électorale", "edl": "message des urnes entendu", "commentaire": "Retourne la sanction en signe d'écoute." },
+    { "brut": "volte-face", "edl": "ajustement", "commentaire": "Un recul devient une amélioration technique." },
+    { "brut": "bombardement", "edl": "frappe ciblée", "commentaire": "Reprise du vocabulaire militaire par l'exécutif lors des interventions extérieures." }
+  ],
+  "substitutions": [
+    { "de": "problème", "vers": "enjeu" },
+    { "de": "crise", "vers": "défi" },
+    { "de": "changement", "vers": "transformation" },
+    { "de": "coupes", "vers": "économies" },
+    { "de": "impôt", "vers": "contribution" },
+    { "de": "licenciement", "vers": "plan de sauvegarde de l'emploi" },
+    { "de": "pauvres", "vers": "ménages modestes" },
+    { "de": "consultation", "vers": "concertation" },
+    { "de": "négociation", "vers": "dialogue social" },
+    { "de": "recul", "vers": "ajustement" },
+    { "de": "échec", "vers": "résultat en deçà des attentes" },
+    { "de": "promesse", "vers": "engagement" },
+    { "de": "plan", "vers": "feuille de route" },
+    { "de": "projet", "vers": "chantier" },
+    { "de": "aide", "vers": "accompagnement" },
+    { "de": "mesure", "vers": "dispositif" },
+    { "de": "régions", "vers": "territoires" },
+    { "de": "pays", "vers": "Nation" },
+    { "de": "gens", "vers": "nos compatriotes" },
+    { "de": "grève", "vers": "mouvement social" },
+    { "de": "émeutes", "vers": "violences urbaines" },
+    { "de": "objectif", "vers": "cap" },
+    { "de": "erreur", "vers": "maladresse" },
+    { "de": "expliquer", "vers": "faire de la pédagogie" },
+    { "de": "décision", "vers": "arbitrage" }
+  ],
+  "cadres": [
+    { "nom": "Héritage et responsabilité", "question": "Sur {sujet}, qui porte la responsabilité : la situation héritée ou les décisions récentes ?", "explication": "Le discours attribue les difficultés aux prédécesseurs et les progrès à l'action présente." },
+    { "nom": "Intérêt général contre intérêts particuliers", "question": "Sur {sujet}, quel intérêt général est en jeu, au-delà des corporatismes ?", "explication": "La mesure est légitimée au nom du collectif, les opposants renvoyés à des intérêts catégoriels." },
+    { "nom": "Justice et effort partagé", "question": "Avec {sujet}, qui supporte l'effort, et cet effort est-il équitablement réparti ?", "explication": "Toute réforme est présentée comme juste, avec des exceptions pour les plus exposés." },
+    { "nom": "Coût de l'inaction", "question": "Que coûterait l'immobilisme sur {sujet} ?", "explication": "Le statu quo est dramatisé pour rendre la réforme inévitable." },
+    { "nom": "Ordre et autorité de l'État", "question": "Quelle réponse de fermeté l'État doit-il apporter après {evenement} ?", "explication": "Grille régalienne : sécurité, sanction, rétablissement de l'ordre." },
+    { "nom": "Souveraineté", "question": "Sur {sujet}, comment préserver notre souveraineté nationale et européenne ?", "explication": "L'enjeu est replacé dans la compétition entre puissances." },
+    { "nom": "Preuve par le concret", "question": "Qu'est-ce que les mesures sur {sujet} changent concrètement pour {public} ?", "explication": "Le discours descend du principe au ménage type, au territoire, au cas individuel." },
+    { "nom": "Maîtrise du récit", "question": "Comment imposer un récit sur {evenement} avant l'opposition et les médias ?", "explication": "Grille des communicants : séquence, éléments de langage, porte-parole." }
+  ],
+  "structures": [
+    {
+      "nom": "Discours de réforme",
+      "description": "Enchaînement constat, héritage, choix assumé, mesures, promesse, typique des annonces gouvernementales.",
+      "etapes": [
+        {
+          "titre": "Constat",
+          "role": "contexte",
+          "consigne": "Dresser un état des lieux dramatisé mais factuel, en s'appuyant sur un événement déclencheur ou un chiffre.",
+          "gabarits": [
+            "Regardons la réalité en face : {conclusion}.",
+            "Depuis {evenement}, la situation s'est profondément dégradée.",
+            "Les chiffres sont têtus : {chiffre}."
+          ]
+        },
+        {
+          "titre": "Héritage et responsabilité",
+          "role": "analyse",
+          "consigne": "Imputer l'origine du problème à l'inaction passée et souligner le coût de l'immobilisme.",
+          "gabarits": [
+            "Sur {sujet}, trop longtemps, rien n'a été fait.",
+            "L'inaction a un prix, et ce prix se mesure : {chiffre}.",
+            "Nous n'avons pas créé cette situation, mais nous avons le devoir d'y répondre."
+          ]
+        },
+        {
+          "titre": "Choix assumé",
+          "role": "decision",
+          "consigne": "Annoncer la décision comme un choix de courage et de responsabilité, sans alternative crédible.",
+          "gabarits": [
+            "Nous avons donc fait un choix clair : {conclusion}.",
+            "C'est pourquoi le Gouvernement agit sur {sujet}, avec méthode et détermination.",
+            "Entre {a} et {b}, nous avons choisi l'avenir."
+          ]
+        },
+        {
+          "titre": "Mesures concrètes",
+          "role": "faits",
+          "consigne": "Détailler deux ou trois mesures chiffrées et leur effet sur un public identifié.",
+          "gabarits": [
+            "Concrètement, cela représente {chiffre} pour {public}.",
+            "Premier axe : agir sur {element}.",
+            "Des mesures d'accompagnement sont prévues pour {public}."
+          ]
+        },
+        {
+          "titre": "Promesse",
+          "role": "projection",
+          "consigne": "Projeter un horizon positif et fédérateur, avec une échéance et une valeur.",
+          "gabarits": [
+            "D'ici la fin du quinquennat, notre objectif est simple : {conclusion}.",
+            "Nous le devons à nos enfants : réussir sur {sujet}, c'est préparer la France de demain.",
+            "Ce sera une réforme de justice, d'équilibre et de progrès."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Communication de crise",
+      "description": "Séquence compassion, maîtrise, action, transparence, rassemblement, utilisée après un drame ou une catastrophe.",
+      "etapes": [
+        {
+          "titre": "Compassion",
+          "role": "contexte",
+          "consigne": "Exprimer la solidarité de la Nation envers les victimes avant toute explication.",
+          "gabarits": [
+            "Mes premières pensées vont aux victimes et à leurs proches.",
+            "Après {evenement}, la Nation tout entière est solidaire."
+          ]
+        },
+        {
+          "titre": "Maîtrise",
+          "role": "faits",
+          "consigne": "Montrer que l'État est présent, mobilisé et informé en temps réel.",
+          "gabarits": [
+            "Les services de l'État sont pleinement mobilisés depuis les premières heures.",
+            "Une cellule interministérielle de crise suit {sujet} heure par heure.",
+            "À cette heure, le bilan fait état de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Mesures immédiates",
+          "role": "decision",
+          "consigne": "Annoncer des décisions rapides et une enquête pour établir les responsabilités.",
+          "gabarits": [
+            "J'ai demandé que toute la lumière soit faite après {evenement}.",
+            "Des mesures immédiates sont prises pour protéger {public}."
+          ]
+        },
+        {
+          "titre": "Transparence",
+          "role": "analyse",
+          "consigne": "Promettre une information continue tout en bornant ce qui est connu à ce stade.",
+          "gabarits": [
+            "Nous dirons tout, au fur et à mesure, sur {sujet}.",
+            "À ce stade, {conclusion}."
+          ]
+        },
+        {
+          "titre": "Rassemblement",
+          "role": "conclusion",
+          "consigne": "Appeler à l'unité nationale et au calme, en mobilisant les valeurs communes.",
+          "gabarits": [
+            "C'est unis que nous surmonterons cette épreuve.",
+            "J'appelle {public} à la responsabilité et au calme."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Riposte en débat",
+      "description": "Schéma concession, retournement, renvoi au bilan adverse, réaffirmation, typique des questions au Gouvernement et des débats télévisés.",
+      "etapes": [
+        {
+          "titre": "Concession",
+          "role": "contexte",
+          "consigne": "Reconnaître la légitimité de l'inquiétude pour désamorcer l'attaque.",
+          "gabarits": [
+            "Personne ne conteste la gravité de la situation.",
+            "Je respecte les inquiétudes exprimées par {public}."
+          ]
+        },
+        {
+          "titre": "Retournement",
+          "role": "tension",
+          "consigne": "Déplacer la question vers le terrain où le locuteur est en position de force.",
+          "gabarits": [
+            "Mais la vraie question n'est pas là : {conclusion}.",
+            "Entre {a} et {b}, il n'y a pas de troisième voie."
+          ]
+        },
+        {
+          "titre": "Renvoi au bilan adverse",
+          "role": "analyse",
+          "consigne": "Opposer à l'adversaire son propre bilan ou l'absence de financement de ses propositions.",
+          "gabarits": [
+            "Vous avez eu le pouvoir, et sur {sujet} vous n'avez rien fait.",
+            "Vos propositions sur {sujet} ne sont tout simplement pas financées."
+          ]
+        },
+        {
+          "titre": "Réaffirmation",
+          "role": "conclusion",
+          "consigne": "Clore sur le cap du Gouvernement en une phrase reprenable par les médias.",
+          "gabarits": [
+            "Nous, nous agissons : {conclusion}.",
+            "Notre cap ne changera pas."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le chiffre est un argument d'autorité sélectionné : on retient l'indicateur favorable (chômage au sens du BIT ou demandeurs d'emploi en catégorie A, milliards ou points de PIB), on le compare à l'héritage et on l'arrondit pour la reprise médiatique.",
+    "unites": [
+      "milliards d'euros",
+      "points de PIB",
+      "% de déficit public",
+      "taux de chômage au sens du BIT (Insee)",
+      "demandeurs d'emploi en catégorie A (France Travail)",
+      "emplois créés",
+      "points de croissance",
+      "% d'intentions de vote"
+    ],
+    "formulations": [
+      "Depuis {evenement}, nous comptons {chiffre} de plus : un niveau inédit depuis quinze ans.",
+      "Concernant {sujet}, l'effort représente {chiffre}, soit moins que sous la précédente majorité.",
+      "Entre {a} et {b}, l'écart atteint {chiffre} : les faits nous donnent raison.",
+      "Nous mobilisons {chiffre} pour {public}, un effort sans précédent.",
+      "Selon les derniers chiffres, {conclusion}.",
+      "Derrière ce chiffre de {chiffre}, il y a des vies, des familles, des territoires.",
+      "Notre objectif : repasser sous la barre de {chiffre} d'ici la fin du quinquennat."
+    ]
+  },
+  "metaphores": [
+    "garder le cap, tenir la barre du navire",
+    "ouvrir un chantier",
+    "la boîte à outils des mesures",
+    "le mur de la dette",
+    "la guerre sanitaire, la guerre contre le chômage",
+    "la reconquête républicaine",
+    "le bouclier tarifaire",
+    "le pacte avec la Nation",
+    "la ligne rouge",
+    "le premier de cordée",
+    "le front républicain",
+    "le socle commun"
+  ],
+  "pieges": [
+    "Langue de bois : nominalisations, tournures passives et impersonnelles qui effacent l'agent et les faits vérifiables.",
+    "Répétition mécanique des éléments de langage : les mêmes mots dans la bouche de plusieurs ministres en vingt-quatre heures trahissent la consigne.",
+    "« Pédagogie » infantilisante : promettre d'« expliquer mieux » laisse entendre que le désaccord vient d'une incompréhension.",
+    "Euphémisation perçue comme dissimulation (plan de sauvegarde de l'emploi, contribution, croissance négative).",
+    "Sélection de l'indicateur favorable, au risque d'être démenti par les données de l'Insee ou par le fact-checking.",
+    "La petite phrase qui échappe au contrôle des communicants et éclipse le message construit.",
+    "Métaphore guerrière qui dramatise et rend le débat illégitime.",
+    "Promesses sans calendrier ni chiffrage, rendues invérifiables.",
+    "Disqualification de l'adversaire (immobilisme, démagogie, corporatisme) à la place de l'argument."
+  ],
+  "registres": {
+    "institutionnel": "Phrases nominales, « le Gouvernement » à la troisième personne, valeurs républicaines et vocabulaire de l'engagement (« pleinement mobilisé », « en responsabilité »).",
+    "technique": "Entre conseillers : arbitrages, réunions interministérielles, calage de séquence, éléments de langage, « off », note au cabinet, projet de loi de finances.",
+    "vulgarisation": "« Concrètement, pour vous, qu'est-ce que ça change ? » : ménage type, chiffres ronds, exemples de la vie quotidienne et tutoiement des réseaux sociaux.",
+    "critique": "Ses détracteurs parlent de « langue de bois », de « novlangue », de « blabla technocratique » et moquent les éléments de langage récités en boucle."
+  },
+  "visuel": {
+    "palette": ["#000091", "#E1000F", "#FFFFFF", "#161616", "#ECECFE"],
+    "motifs": [
+      { "fr": "bandeau tricolore et bloc Marianne en signature", "en": "tricolour band with the Marianne state logo as end card" },
+      { "fr": "hémicycle de l'Assemblée nationale en vue plongeante", "en": "top-down view of the French National Assembly hemicycle" },
+      { "fr": "pupitre officiel devant drapeaux français et européen", "en": "official lectern in front of French and EU flags" },
+      { "fr": "carte de France des régions qui se colorent", "en": "map of France with regions filling with color" },
+      { "fr": "graphique en barres qui monte avec chiffre clé", "en": "rising animated bar chart with a key figure" },
+      { "fr": "frise chronologique de la réforme", "en": "timeline of the reform milestones" },
+      { "fr": "carte « ce qui change au 1er janvier »", "en": "\"what changes on January 1st\" info card" },
+      { "fr": "écran partagé pour et contre", "en": "split screen showing pros and cons" },
+      { "fr": "urne transparente et bulletins de vote", "en": "transparent ballot box with voting slips" },
+      { "fr": "jauge budgétaire en euros", "en": "budget gauge in euros" }
+    ],
+    "pictogrammes": [
+      { "fr": "profil de Marianne", "en": "Marianne profile" },
+      { "fr": "urne", "en": "ballot box" },
+      { "fr": "hémicycle", "en": "hemicycle" },
+      { "fr": "poignée de main", "en": "handshake" },
+      { "fr": "mégaphone", "en": "megaphone" },
+      { "fr": "balance de la justice", "en": "scales of justice" },
+      { "fr": "symbole euro", "en": "euro sign" },
+      { "fr": "carte de France", "en": "map of France" },
+      { "fr": "document signé", "en": "signed document" },
+      { "fr": "cocarde tricolore", "en": "tricolour cockade" },
+      { "fr": "maison familiale", "en": "family house" }
+    ],
+    "typographie": "Sans-serif d'État Marianne en gras pour titres et chiffres clés, Spectral pour les citations, beaucoup de blanc et de grands chiffres.",
+    "style_motion": "Motion design sobre et institutionnel : fonds blancs ou bleu France, aplats tricolores, pictogrammes au trait, chiffres qui s'incrémentent, transitions par volets glissés, sous-titres systématiques et signature bloc Marianne en fin de film.",
+    "style_motion_en": "Clean institutional French-government motion design: white or deep blue (#000091) backgrounds, flat tricolour accents, line pictograms, counting-up key figures, sliding panel transitions, burned-in subtitles, ending on the Marianne state logo."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : adresse aux Français d'Emmanuel Macron, 16 mars 2020 (Covid-19), métaphore guerrière de mobilisation.", "texte": "« Nous sommes en guerre, en guerre sanitaire, certes : nous ne luttons ni contre une armée, ni contre une autre Nation. […] Mais l'ennemi est là, invisible, insaisissable, qui progresse. Et cela requiert notre mobilisation générale. »" },
+    { "contexte": "Extrait réel : discours d'Élisabeth Borne présentant la réforme des retraites (janvier 2023), triade de valeurs typique d'un élément de langage.", "texte": "« un projet pour l'équilibre de notre système de retraite ; un projet de justice ; et un projet porteur de progrès social. »" },
+    { "contexte": "Formulation typique et illustrative (non attribuée) d'une note d'éléments de langage diffusée aux porte-parole avant une matinale.", "texte": "« Message clé n° 1 : la réforme est juste. Message clé n° 2 : elle est nécessaire, le statu quo n'est pas une option. Message clé n° 3 : la concertation continue, notre main reste tendue. À éviter : “recul”, “passage en force”. »" }
+  ],
+  "sources": [
+    { "titre": "Éléments de langage", "auteur": "Wikipédia", "url": "https://fr.wikipedia.org/wiki/%C3%89l%C3%A9ments_de_langage", "apport": "Définition, origine (marketing politique des années 1970, présidence Sarkozy, chaînes d'info) et critiques des EDL." },
+    { "titre": "Langue de bois", "auteur": "Wikipédia (d'après Thom, Delporte, Krieg-Planque)", "url": "https://fr.wikipedia.org/wiki/Langue_de_bois", "apport": "Histoire de l'expression et procédés : nominalisation, impersonnel, injonction, abstraction." },
+    { "titre": "Lexique pour temps de grèves et de manifestations", "auteur": "Acrimed", "url": "https://www.acrimed.org/IMG/pdf/Lexique_en_tract_octobre_2010.pdf", "apport": "Décryptage de « réforme », « concertation », « dialogue social », « pédagogie », « ouverture »." },
+    { "titre": "Adresse aux Français du 16 mars 2020", "auteur": "Présidence de la République", "url": "https://www.elysee.fr/emmanuel-macron/2020/03/16/adresse-aux-francais-covid19", "apport": "Exemple réel de rhétorique de crise et de métaphore guerrière." },
+    { "titre": "Discours d'Élisabeth Borne : pour nos retraites, justice, équilibre, progrès", "auteur": "Gouvernement (info.gouv.fr)", "url": "https://www.info.gouv.fr/discours/discours-de-la-premiere-ministre-elisabeth-borne-pour-nos-retraites-justice-equilibre-progres", "apport": "Triade de valeurs et argumentaire de la réforme des retraites 2023." },
+    { "titre": "Plan de sauvegarde de l'emploi", "auteur": "Serge Braudo, Dictionnaire juridique", "url": "https://dictionnaire-juridique.com/definition/plan-de-sauvegarde-de-l-emploi.php", "apport": "Renommage de « plan social » en « plan de sauvegarde de l'emploi » par la loi du 17 janvier 2002." },
+    { "titre": "Chômeurs au sens du BIT et demandeurs d'emploi de catégorie A", "auteur": "Insee", "url": "https://www.insee.fr/fr/statistiques/7456935", "apport": "Écart entre les deux indicateurs du chômage, matière du choix de l'indicateur favorable." },
+    { "titre": "Sondages d'opinion : une législation récemment rénovée", "auteur": "Vie publique", "url": "https://www.vie-publique.fr/eclairage/23927-sondages-dopinion-une-legislation-recemment-renovee", "apport": "Encadrement des sondages, notice et marge d'erreur." },
+    { "titre": "Graphic charter of government communication in France", "auteur": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Graphic_charter_of_government_communication_in_France", "apport": "Bloc Marianne, police Marianne, Spectral, historique de la charte (1999, 2010, 2020)." },
+    { "titre": "Offre d'emploi : chargé de mission discours en cabinet ministériel", "auteur": "Choisir le service public", "url": "https://choisirleservicepublic.gouv.fr/offre-emploi/MINT_BA075ACA-111824/", "apport": "Preuve de l'institutionnalisation de la rédaction d'éléments de langage en cabinet." }
+  ]
+}

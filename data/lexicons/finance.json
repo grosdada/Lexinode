@@ -1,0 +1,435 @@
+{
+  "id": "finance",
+  "nom": "Économie / Finance",
+  "famille": "metier",
+  "categorie": "Économie",
+  "icone": "📈",
+  "couleur": "#F9A825",
+  "description": "Éléments de langage de l'économie et de la finance francophones : banques centrales (BCE, Banque de France), communication financière des sociétés cotées (communiqués de résultats, guidance, indicateurs alternatifs de performance) et commentaires d'analystes et d'économistes de marché. La fiche couvre le jargon chiffré, les euphémismes de la conjoncture et des restructurations, et les structures canoniques du communiqué.",
+  "posture": "Parole d'expert ou d'institution qui cherche d'abord à rassurer et à ancrer les anticipations : prudence calibrée, conditionnel, engagements « dépendants des données ». Les chiffres sont présentés en variations, en points de base et par rapport à une référence (consensus, objectif, cible de 2 %) plutôt qu'en niveaux bruts.",
+  "valeurs": [
+    "stabilité des prix",
+    "crédibilité",
+    "transparence",
+    "prudence",
+    "création de valeur pour l'actionnaire",
+    "discipline financière",
+    "indépendance",
+    "compétitivité"
+  ],
+  "vocabulaire": [
+    { "terme": "croissance organique", "sens": "Variation du chiffre d'affaires hors effets de change et de périmètre (acquisitions, cessions).", "usage": "La croissance organique ressort à 4,2 % sur le semestre." },
+    { "terme": "à périmètre constant", "sens": "Comparaison qui neutralise les acquisitions et cessions intervenues entre deux périodes.", "usage": "À périmètre constant, les ventes progressent de 3 %." },
+    { "terme": "à taux de change constants", "sens": "Comparaison qui neutralise l'effet des variations de devises.", "usage": "À taux de change constants, la hausse atteint 5 %." },
+    { "terme": "EBITDA", "sens": "Résultat avant intérêts, impôts, dépréciations et amortissements ; proche de l'EBE, c'est un indicateur alternatif de performance.", "usage": "L'EBITDA ajusté s'établit à 1,2 milliard d'euros." },
+    { "terme": "marge opérationnelle", "sens": "Résultat opérationnel rapporté au chiffre d'affaires, en pourcentage.", "usage": "La marge opérationnelle gagne 80 points de base." },
+    { "terme": "résultat opérationnel courant", "sens": "Résultat d'exploitation hors éléments jugés non récurrents (ROC).", "usage": "Le résultat opérationnel courant progresse de 6 %." },
+    { "terme": "indicateur alternatif de performance", "sens": "Indicateur financier non défini par les normes comptables (EBITDA, dette nette, free cash-flow), encadré par l'AMF et l'ESMA.", "usage": "Les indicateurs alternatifs de performance sont définis en annexe du communiqué." },
+    { "terme": "éléments non récurrents", "sens": "Charges ou produits exceptionnels exclus des indicateurs dits ajustés.", "usage": "Hors éléments non récurrents, le résultat est stable." },
+    { "terme": "résultat net ajusté", "sens": "Résultat net retraité des éléments non récurrents.", "usage": "Le résultat net ajusté par action progresse de 9 %." },
+    { "terme": "free cash-flow", "sens": "Flux de trésorerie disponible après investissements, mesure de la capacité à financer dividendes et désendettement.", "usage": "Le free cash-flow atteint un niveau record." },
+    { "terme": "levier", "sens": "Ratio dette nette sur EBITDA, mesure de l'endettement.", "usage": "Le levier revient sous 2 fois l'EBITDA." },
+    { "terme": "guidance", "sens": "Objectifs ou prévisions publiés par l'émetteur pour l'exercice en cours.", "usage": "Le groupe relève sa guidance annuelle." },
+    { "terme": "consensus", "sens": "Moyenne des prévisions des analystes qui suivent une valeur ou un indicateur.", "usage": "Le chiffre d'affaires ressort au-dessus du consensus." },
+    { "terme": "avertissement sur résultats", "sens": "Annonce que les résultats seront inférieurs aux objectifs (profit warning).", "usage": "L'avertissement sur résultats a fait chuter le titre." },
+    { "terme": "atterrissage", "sens": "Estimation du résultat de fin d'exercice à partir des données disponibles.", "usage": "L'atterrissage 2026 devrait être conforme aux attentes." },
+    { "terme": "taux directeurs", "sens": "Taux fixés par la banque centrale : facilité de dépôt, opérations principales de refinancement, prêt marginal.", "usage": "La BCE laisse ses taux directeurs inchangés." },
+    { "terme": "point de base", "sens": "Un centième de point de pourcentage (0,01 point).", "usage": "Les taux sont abaissés de 25 points de base." },
+    { "terme": "guidage prospectif", "sens": "Communication d'une banque centrale sur l'orientation future de ses taux (forward guidance).", "usage": "La BCE a introduit le guidage prospectif en 2013." },
+    { "terme": "orientation de la politique monétaire", "sens": "Caractère accommodant, neutre ou restrictif de la politique monétaire.", "usage": "L'orientation reste appropriée à ce stade." },
+    { "terme": "politique accommodante", "sens": "Politique de taux bas et de liquidité abondante destinée à soutenir l'activité.", "usage": "La politique monétaire demeure accommodante." },
+    { "terme": "resserrement monétaire", "sens": "Hausse des taux ou réduction de la liquidité pour freiner l'inflation.", "usage": "Le cycle de resserrement monétaire touche à sa fin." },
+    { "terme": "assouplissement monétaire", "sens": "Baisse des taux ou injection de liquidité.", "usage": "La BCE poursuit son assouplissement monétaire." },
+    { "terme": "dépendance aux données", "sens": "Doctrine selon laquelle chaque décision dépend des données disponibles, sans trajectoire préétablie.", "usage": "Le Conseil reste dépendant des données, réunion par réunion." },
+    { "terme": "inflation sous-jacente", "sens": "Inflation hors composantes volatiles (énergie, alimentation).", "usage": "L'inflation sous-jacente reste persistante." },
+    { "terme": "ancrage des anticipations", "sens": "Stabilité des anticipations d'inflation autour de la cible de la banque centrale.", "usage": "Les anticipations d'inflation restent bien ancrées." },
+    { "terme": "transmission de la politique monétaire", "sens": "Diffusion des décisions de taux aux conditions de crédit et à l'économie réelle.", "usage": "La transmission de la politique monétaire reste forte." },
+    { "terme": "atterrissage en douceur", "sens": "Reflux de l'inflation sans récession (soft landing).", "usage": "Le scénario central reste celui d'un atterrissage en douceur." },
+    { "terme": "récession technique", "sens": "Deux trimestres consécutifs de baisse du PIB.", "usage": "L'économie évite de peu la récession technique." },
+    { "terme": "glissement annuel", "sens": "Variation d'un indicateur sur douze mois.", "usage": "En glissement annuel, les prix augmentent de 2,1 %." },
+    { "terme": "acquis de croissance", "sens": "Croissance annuelle obtenue si le PIB restait stable sur les trimestres restants.", "usage": "L'acquis de croissance atteint 0,6 % à mi-année." },
+    { "terme": "volatilité", "sens": "Amplitude des variations de prix d'un actif sur une période.", "usage": "La volatilité reste élevée sur les marchés actions." },
+    { "terme": "correction", "sens": "Baisse d'un marché, par convention d'au moins 10 % depuis un plus haut.", "usage": "Le marché traverse une correction après un parcours exceptionnel." },
+    { "terme": "marché baissier", "sens": "Baisse durable d'au moins 20 % depuis un plus haut (bear market).", "usage": "L'indice est entré en marché baissier." },
+    { "terme": "aversion au risque", "sens": "Préférence des investisseurs pour les actifs sûrs en période d'incertitude.", "usage": "Le regain d'aversion au risque profite aux obligations souveraines." },
+    { "terme": "spread", "sens": "Écart de rendement entre deux titres, mesure de la prime de risque.", "usage": "Le spread entre la France et l'Allemagne s'est élargi." },
+    { "terme": "valorisation", "sens": "Prix d'un actif rapporté à ses fondamentaux, souvent exprimé en multiple des bénéfices.", "usage": "La valorisation intègre déjà beaucoup de bonnes nouvelles." },
+    { "terme": "effet de base", "sens": "Variation apparente due au niveau de la période de comparaison.", "usage": "Le recul de l'inflation tient en partie à un effet de base." },
+    { "terme": "vents contraires", "sens": "Facteurs défavorables pesant sur l'activité ou les résultats (headwinds).", "usage": "Le groupe fait face à des vents contraires sur ses marchés." },
+    { "terme": "création de valeur", "sens": "Rentabilité supérieure au coût du capital.", "usage": "L'opération est créatrice de valeur dès la deuxième année." },
+    { "terme": "synergies", "sens": "Économies ou revenus supplémentaires attendus d'un rapprochement.", "usage": "Les synergies sont estimées à 300 millions d'euros." },
+    { "terme": "relutif", "sens": "Qui augmente le bénéfice par action (contraire : dilutif).", "usage": "L'acquisition sera relutive dès la première année." },
+    { "terme": "plan de transformation", "sens": "Programme de réorganisation et de réduction des coûts.", "usage": "Le plan de transformation se traduira par des économies durables." },
+    { "terme": "retour aux actionnaires", "sens": "Somme des dividendes et rachats d'actions.", "usage": "Le retour aux actionnaires atteint 50 % du résultat." },
+    { "terme": "stabilité financière", "sens": "Capacité du système financier à absorber les chocs sans crise systémique.", "usage": "La Banque de France publie son évaluation des risques pour la stabilité financière." },
+    { "terme": "colombes et faucons", "sens": "Membres d'un conseil monétaire favorables à des taux bas (colombes) ou à la fermeté (faucons).", "usage": "Les faucons plaident pour une pause prolongée." }
+  ],
+  "formules": [
+    "Le Conseil des gouverneurs ne s'engage pas à l'avance sur une trajectoire de taux particulière.",
+    "Nous restons dépendants des données et nous déciderons réunion par réunion.",
+    "Concernant {sujet}, les risques restent globalement équilibrés.",
+    "Pour {sujet}, les perspectives restent entourées d'incertitudes.",
+    "Le Conseil se tient prêt à ajuster l'ensemble de ses instruments, dans le cadre de son mandat.",
+    "À périmètre et taux de change constants, la croissance organique atteint {chiffre}.",
+    "Hors éléments non récurrents, le résultat opérationnel courant progresse de {chiffre}.",
+    "{element} pèse sur la marge opérationnelle, sans remettre en cause nos objectifs.",
+    "Nous confirmons notre guidance pour l'ensemble de l'exercice.",
+    "Nous relevons nos objectifs annuels concernant {sujet}.",
+    "Dans un environnement de marché difficile, le groupe a fait preuve de résilience.",
+    "Ces résultats solides confirment la pertinence de notre stratégie.",
+    "Le marché a déjà largement intégré {element} dans les cours.",
+    "Les marchés ont salué {evenement}.",
+    "Les investisseurs attendent {evenement} avec une certaine fébrilité.",
+    "Il s'agit d'une correction saine après un parcours exceptionnel.",
+    "Nous restons vigilants face aux risques entourant {sujet}.",
+    "Le scénario central reste celui d'un atterrissage en douceur.",
+    "À court terme, {element} constitue un vent contraire.",
+    "La volatilité devrait rester élevée tant que la visibilité sur {sujet} restera limitée.",
+    "Pour {sujet}, les fondamentaux restent solides.",
+    "Cette opération est relutive dès la première année et créatrice de valeur pour nos actionnaires.",
+    "Nous engageons un plan de transformation afin de renforcer notre compétitivité.",
+    "Nous ajustons notre dispositif pour préserver nos marges malgré {element}.",
+    "En glissement annuel, {sujet} progresse de {chiffre}.",
+    "Le consensus attendait {chiffre} : la publication ressort au-dessus des attentes.",
+    "C'est tout l'enjeu de la notion « {terme} » pour les investisseurs.",
+    "À ce stade, {conclusion}.",
+    "Notre lecture est la suivante : {conclusion}.",
+    "Les performances passées ne préjugent pas des performances futures.",
+    "Ce document ne constitue pas un conseil en investissement."
+  ],
+  "connecteurs": [
+    "Sur le trimestre,",
+    "En données publiées,",
+    "À périmètre constant,",
+    "Hors effets de change,",
+    "En glissement annuel,",
+    "Dans ce contexte,",
+    "Au total,",
+    "En revanche,",
+    "À moyen terme,",
+    "Toutes choses égales par ailleurs,",
+    "Sous réserve de l'évolution de la conjoncture,",
+    "Plus particulièrement,",
+    "Compte tenu des données disponibles,"
+  ],
+  "euphemismes": [
+    { "brut": "récession", "edl": "croissance négative", "commentaire": "Atténuation classique, relevée par les études sur la langue de bois économique." },
+    { "brut": "krach boursier", "edl": "correction", "commentaire": "On parle de « correction saine » pour normaliser une chute des cours." },
+    { "brut": "licenciements collectifs", "edl": "plan de sauvegarde de l'emploi", "commentaire": "Terme juridique français (PSE) qui met en avant la sauvegarde plutôt que les suppressions." },
+    { "brut": "suppressions de postes", "edl": "plan d'optimisation de l'emploi", "commentaire": "Formule relevée dans un communiqué d'ArcelorMittal par la linguiste M. López Díaz (2016)." },
+    { "brut": "fermer des usines", "edl": "rationaliser l'empreinte industrielle", "commentaire": "Vocabulaire des communiqués de restructuration." },
+    { "brut": "les ventes baissent", "edl": "normalisation de la demande", "commentaire": "Présente une baisse comme un retour à la normale." },
+    { "brut": "échec d'une acquisition", "edl": "dépréciation d'écart d'acquisition", "commentaire": "Le goodwill déprécié traduit comptablement une acquisition surpayée." },
+    { "brut": "éviter l'impôt", "edl": "optimisation fiscale", "commentaire": "Expression qui légitime des montages parfois agressifs." },
+    { "brut": "augmenter les prix", "edl": "ajustement tarifaire", "commentaire": "Dans les résultats, on parle aussi d'« effet prix » ou de « politique de prix »." },
+    { "brut": "rater ses objectifs", "edl": "ajuster la guidance", "commentaire": "Une révision à la baisse est présentée comme un simple ajustement." },
+    { "brut": "monter les taux", "edl": "normaliser la politique monétaire", "commentaire": "Le resserrement est présenté comme un retour à la normale." },
+    { "brut": "crise", "edl": "épisode de tensions", "commentaire": "Banques centrales et superviseurs évitent le mot crise." },
+    { "brut": "on ne sait pas", "edl": "manque de visibilité", "commentaire": "Formule rituelle des directions financières en période d'incertitude." },
+    { "brut": "dette", "edl": "levier", "commentaire": "Le mot levier connote la puissance plutôt que la charge." },
+    { "brut": "dirigeant renvoyé", "edl": "départ d'un commun accord", "commentaire": "Formule standard des communiqués de gouvernance." },
+    { "brut": "perte", "edl": "résultat négatif", "commentaire": "Neutralisation comptable du vocabulaire." }
+  ],
+  "substitutions": [
+    { "de": "baisse", "vers": "repli" },
+    { "de": "hausse", "vers": "progression" },
+    { "de": "chute", "vers": "correction" },
+    { "de": "prévision", "vers": "guidance" },
+    { "de": "bénéfice", "vers": "résultat net" },
+    { "de": "dette", "vers": "levier" },
+    { "de": "ventes", "vers": "chiffre d'affaires" },
+    { "de": "économies", "vers": "synergies" },
+    { "de": "dépenses", "vers": "charges" },
+    { "de": "inquiétude", "vers": "aversion au risque" },
+    { "de": "problème", "vers": "vent contraire" },
+    { "de": "crise", "vers": "épisode de tensions" },
+    { "de": "licenciements", "vers": "plan de sauvegarde de l'emploi" },
+    { "de": "hausse des taux", "vers": "resserrement monétaire" },
+    { "de": "baisse des taux", "vers": "assouplissement monétaire" },
+    { "de": "objectif", "vers": "cible" },
+    { "de": "fin d'année", "vers": "atterrissage" },
+    { "de": "rentable", "vers": "créateur de valeur" },
+    { "de": "écart", "vers": "spread" },
+    { "de": "flou", "vers": "manque de visibilité" },
+    { "de": "prix", "vers": "valorisation" },
+    { "de": "argent disponible", "vers": "liquidités" },
+    { "de": "investisseurs", "vers": "les marchés" },
+    { "de": "sur un an", "vers": "en glissement annuel" }
+  ],
+  "cadres": [
+    { "nom": "Décomposition des effets", "question": "Concernant {element}, quelle part relève de l'effet volume, de l'effet prix, de l'effet change ou de l'effet périmètre ?", "explication": "Grille du communiqué de résultats : séparer l'organique des effets mécaniques." },
+    { "nom": "Consensus et surprise", "question": "Où se situe {element} par rapport au consensus des analystes ?", "explication": "Le marché réagit moins au chiffre qu'à l'écart entre le chiffre et ce qui était attendu." },
+    { "nom": "Scénario central et balance des risques", "question": "Quel est le scénario central pour {sujet}, et de quel côté penche la balance des risques ?", "explication": "Raisonnement probabiliste des banques centrales et des économistes." },
+    { "nom": "Anticipations et crédibilité", "question": "Après {evenement}, comment évoluent les anticipations des marchés ?", "explication": "La parole d'une banque centrale agit d'abord sur les anticipations." },
+    { "nom": "Cycle économique", "question": "À quel stade du cycle se trouve {sujet} : expansion, ralentissement, récession ou reprise ?", "explication": "Lecture conjoncturelle par phases du cycle." },
+    { "nom": "Création de valeur", "question": "Avec {sujet}, la rentabilité dépasse-t-elle le coût du capital ?", "explication": "Critère actionnarial de jugement d'une stratégie ou d'une acquisition." },
+    { "nom": "Transmission monétaire", "question": "Par quels canaux les décisions de taux se répercutent-elles sur {sujet} ?", "explication": "Canaux du crédit, des prix d'actifs, du change et des anticipations." }
+  ],
+  "structures": [
+    {
+      "nom": "Communiqué de résultats",
+      "description": "Structure canonique de la publication trimestrielle ou annuelle d'une société cotée.",
+      "etapes": [
+        {
+          "titre": "Faits marquants",
+          "role": "faits",
+          "consigne": "Annoncer d'emblée les chiffres clés de la période, en commençant par le plus favorable, en variation et en organique.",
+          "gabarits": [
+            "Sur la période, {sujet} affiche un chiffre d'affaires de {chiffre}.",
+            "Le groupe publie une croissance organique de {chiffre}, portée par {element}."
+          ]
+        },
+        {
+          "titre": "Contexte de marché",
+          "role": "contexte",
+          "consigne": "Situer la performance dans un environnement présenté comme exigeant, pour valoriser la résilience.",
+          "gabarits": [
+            "Dans un environnement marqué par {evenement}, le groupe a fait preuve de résilience.",
+            "Malgré {element}, l'activité est restée bien orientée."
+          ]
+        },
+        {
+          "titre": "Analyse de la performance",
+          "role": "analyse",
+          "consigne": "Décomposer la variation (volume, prix, change, périmètre) et expliquer la marge, en isolant les éléments non récurrents.",
+          "gabarits": [
+            "À périmètre et taux de change constants, la progression atteint {chiffre}.",
+            "{element} explique l'essentiel de l'évolution de la marge opérationnelle.",
+            "Hors éléments non récurrents, le résultat opérationnel courant progresse de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Perspectives et guidance",
+          "role": "projection",
+          "consigne": "Confirmer, relever ou ajuster les objectifs annuels, avec les précautions d'usage.",
+          "gabarits": [
+            "Le groupe confirme ses objectifs annuels concernant {sujet}.",
+            "Au vu des tendances actuelles, l'atterrissage annuel devrait se situer autour de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Message de la direction",
+          "role": "conclusion",
+          "consigne": "Citation du dirigeant : confiance, cap stratégique, discipline.",
+          "gabarits": [
+            "Ces résultats solides confirment la pertinence de notre stratégie : {conclusion}.",
+            "Nous abordons la suite de l'exercice avec confiance et discipline."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Déclaration de politique monétaire",
+      "description": "Structure du communiqué de décision de la BCE, repris en français par la Banque de France.",
+      "etapes": [
+        {
+          "titre": "Décision",
+          "role": "decision",
+          "consigne": "Énoncer la décision sur les taux directeurs en une phrase, au passé composé et à la voix de l'institution.",
+          "gabarits": [
+            "Le Conseil des gouverneurs a décidé ce jour de laisser inchangés les trois taux d'intérêt directeurs.",
+            "Le Conseil des gouverneurs a décidé d'abaisser ses taux directeurs de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Évaluation de l'inflation",
+          "role": "faits",
+          "consigne": "Situer l'inflation par rapport à la cible de 2 % à moyen terme.",
+          "gabarits": [
+            "L'inflation reste proche de l'objectif de 2 % à moyen terme.",
+            "En glissement annuel, {element} s'établit à {chiffre}."
+          ]
+        },
+        {
+          "titre": "Conjoncture et risques",
+          "role": "analyse",
+          "consigne": "Citer les sources de résilience puis les risques, sans dramatiser.",
+          "gabarits": [
+            "Les perspectives restent incertaines : {element} demeure une source de risque baissier.",
+            "Concernant {sujet}, les risques pesant sur la croissance sont orientés à la baisse."
+          ]
+        },
+        {
+          "titre": "Arbitrage",
+          "role": "tension",
+          "consigne": "Exposer le dilemme entre inflation et activité, sans trancher publiquement.",
+          "gabarits": [
+            "{a} plaide pour la prudence, tandis que {b} justifierait un nouvel assouplissement.",
+            "Entre {a} et {b}, l'arbitrage reste délicat."
+          ]
+        },
+        {
+          "titre": "Orientation future",
+          "role": "projection",
+          "consigne": "Rappeler la fonction de réaction conditionnelle : données, réunion par réunion, aucun engagement préalable.",
+          "gabarits": [
+            "Le Conseil suivra une approche s'appuyant sur les données pour définir, réunion par réunion, l'orientation appropriée.",
+            "Le Conseil se tient prêt à ajuster l'ensemble de ses instruments pour {sujet}, dans le cadre de son mandat."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Note d'analyse de marché",
+      "description": "Raisonnement d'un analyste ou d'un stratégiste, du contexte à la recommandation.",
+      "etapes": [
+        {
+          "titre": "Contexte",
+          "role": "contexte",
+          "consigne": "Poser le régime de marché et l'environnement macroéconomique.",
+          "gabarits": [
+            "Depuis {evenement}, les marchés évoluent dans un régime de volatilité accrue.",
+            "Pour {sujet}, le contexte macroéconomique reste porteur."
+          ]
+        },
+        {
+          "titre": "Données",
+          "role": "faits",
+          "consigne": "Donner les performances et les surprises par rapport au consensus.",
+          "gabarits": [
+            "Sur douze mois glissants, {a} affiche une performance de {chiffre}.",
+            "{element} ressort au-dessus du consensus."
+          ]
+        },
+        {
+          "titre": "Scénarios",
+          "role": "hypothese",
+          "consigne": "Formuler un scénario central et un scénario alternatif.",
+          "gabarits": [
+            "Notre scénario central suppose un atterrissage en douceur pour {sujet}.",
+            "Un scénario alternatif, moins favorable, verrait {element} s'accentuer."
+          ]
+        },
+        {
+          "titre": "Valorisation et comparaison",
+          "role": "analyse",
+          "consigne": "Comparer les actifs et juger ce que les prix intègrent déjà.",
+          "gabarits": [
+            "{a} surperforme {b} depuis le début de l'année.",
+            "La valorisation intègre déjà une bonne partie des bonnes nouvelles concernant {sujet}."
+          ]
+        },
+        {
+          "titre": "Recommandation",
+          "role": "decision",
+          "consigne": "Donner une recommandation codée (surpondérer, neutre, sous-pondérer).",
+          "gabarits": [
+            "Nous relevons notre recommandation à « surpondérer » sur {sujet}.",
+            "Nous restons à « neutre » sur {sujet}, dans l'attente de catalyseurs."
+          ]
+        },
+        {
+          "titre": "Synthèse",
+          "role": "conclusion",
+          "consigne": "Conclure en une phrase, avec la réserve d'usage.",
+          "gabarits": [
+            "En synthèse, {conclusion}.",
+            "Notre lecture est la suivante : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le chiffre est roi mais toujours relativisé : on raisonne en variations (glissement annuel, points de base, effets de change et de périmètre) et par rapport à une référence (consensus, guidance, cible de 2 %), rarement en valeur absolue. Les décimales donnent une impression de précision, même pour des prévisions très incertaines.",
+    "unites": [
+      "% en glissement annuel",
+      "point de base (pb)",
+      "point de pourcentage",
+      "milliards d'euros (Md€)",
+      "multiple de valorisation (x fois les bénéfices)",
+      "ratio dette nette / EBITDA",
+      "% de marge opérationnelle",
+      "variation trimestrielle du PIB en volume",
+      "inflation IPCH (%)"
+    ],
+    "formulations": [
+      "En glissement annuel, {element} s'établit à {chiffre}.",
+      "Pour {sujet}, la marge opérationnelle gagne {chiffre}.",
+      "{a} progresse de {chiffre}, quand {b} recule légèrement.",
+      "Les taux directeurs sont abaissés de {chiffre}.",
+      "Le consensus attendait {chiffre} : la publication ressort légèrement au-dessus.",
+      "Hors effets de change et de périmètre, la croissance atteint {chiffre}.",
+      "Sur l'ensemble de l'exercice, l'atterrissage est attendu autour de {chiffre}."
+    ]
+  },
+  "metaphores": [
+    "l'atterrissage en douceur, ou brutal, de l'économie",
+    "les marchés qui saluent, sanctionnent ou digèrent une annonce",
+    "le pilotage de l'économie avec un tableau de bord",
+    "la surchauffe et le refroidissement de l'activité",
+    "les vents contraires et les vents porteurs",
+    "le trou d'air et la reprise en V, en U ou en W",
+    "la bulle qui gonfle puis éclate",
+    "le bazooka monétaire",
+    "la contagion et le risque systémique",
+    "la locomotive de la croissance",
+    "le robinet du crédit qu'on ouvre ou qu'on ferme",
+    "les colombes et les faucons du conseil monétaire"
+  ],
+  "pieges": [
+    "Langue de bois et euphémisation des restructurations (« plan d'optimisation de l'emploi », « rationalisation »), documentées par la linguistique de l'euphémisme.",
+    "Mise en avant d'indicateurs ajustés (EBITDA, résultat ajusté) au détriment des agrégats comptables, alors que l'AMF interdit de mettre ces indicateurs plus en avant.",
+    "Personnification des « marchés » qui masque des acteurs et des intérêts identifiables.",
+    "Illusion de précision : décimales et points de base appliqués à des prévisions très incertaines.",
+    "Confusion entre pourcentage et point de pourcentage, effets de base non signalés.",
+    "Opacité défensive des banquiers centraux (« Fedspeak ») : chaque mot étant performatif, la prudence confine à l'ésotérisme.",
+    "Anglicismes non expliqués (guidance, soft landing, spread, carry) qui excluent le grand public.",
+    "Biais d'optimisme des prévisions et révisions silencieuses à la baisse.",
+    "Explications causales de façade dans les commentaires de marché (« le CAC 40 recule sur fond de… »)."
+  ],
+  "registres": {
+    "institutionnel": "Phrases longues et pesées, voix de l'institution et nominalisations (« Le Conseil des gouverneurs a décidé ce jour… »), engagements conditionnels et jamais datés.",
+    "technique": "Jargon anglo-français dense (EBITDA, spread, bps, guidance, carry) et raisonnement en variations, scénarios et sensibilités.",
+    "vulgarisation": "Analogies domestiques (le thermostat des taux, le panier de la ménagère, la tirelire) et chiffres arrondis rapportés au quotidien.",
+    "critique": "Dénoncé comme une langue de bois technocratique qui naturalise « les marchés », euphémise les licenciements et sert d'abord les actionnaires."
+  },
+  "visuel": {
+    "palette": ["#0B1F3A", "#F9A825", "#1E88E5", "#2E7D32", "#C62828"],
+    "motifs": [
+      { "fr": "graphique en chandeliers boursiers", "en": "candlestick stock chart" },
+      { "fr": "courbe qui se trace avec une flèche montante", "en": "line chart drawing itself with a rising arrow" },
+      { "fr": "thermomètre de l'inflation", "en": "inflation thermometer gauge" },
+      { "fr": "pièces et billets en euros empilés", "en": "stacked euro coins and banknotes" },
+      { "fr": "tableau de bord à cadrans", "en": "dashboard with dials" },
+      { "fr": "carte de la zone euro", "en": "map of the euro area" },
+      { "fr": "écrans de salle de marchés", "en": "trading floor screens" },
+      { "fr": "bandeau défilant des cours", "en": "scrolling stock ticker" },
+      { "fr": "diagramme en cascade des effets", "en": "waterfall bridge chart" },
+      { "fr": "façade de banque centrale à colonnes", "en": "columned central bank facade" },
+      { "fr": "histogrammes trimestriels qui poussent", "en": "quarterly bar charts growing" }
+    ],
+    "pictogrammes": [
+      { "fr": "symbole euro", "en": "euro sign" },
+      { "fr": "flèche haut et flèche bas", "en": "up and down arrows" },
+      { "fr": "pourcentage", "en": "percent sign" },
+      { "fr": "billet de banque", "en": "banknote" },
+      { "fr": "tirelire", "en": "piggy bank" },
+      { "fr": "graphique en barres", "en": "bar chart" },
+      { "fr": "balance", "en": "scale" },
+      { "fr": "bâtiment à colonnes", "en": "classical bank building" },
+      { "fr": "globe", "en": "globe" },
+      { "fr": "calculatrice", "en": "calculator" },
+      { "fr": "loupe", "en": "magnifying glass" }
+    ],
+    "typographie": "Sans-serif grotesque ou géométrique (type Inter, Roboto) à chiffres tabulaires pour les données, avec un sérif sobre pour les titres institutionnels.",
+    "style_motion": "Motion design épuré sur fond bleu nuit : courbes qui se tracent, compteurs qui défilent, histogrammes qui poussent, code vert et rouge pour hausse et baisse, transitions nettes et rythme posé de communication institutionnelle.",
+    "style_motion_en": "Clean flat 2D motion graphics on a deep navy background with gold accents: line charts drawing themselves, ticking number counters, growing bar charts, green and red up-down color coding, euro coins and candlestick charts, crisp transitions, calm institutional pacing, corporate finance explainer style."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : communiqué de presse de la BCE du 30 octobre 2025, version française diffusée par la Banque de France.", "texte": "« Le Conseil des gouverneurs a décidé ce jour de laisser inchangés les trois taux d'intérêt directeurs de la BCE. L'inflation reste proche de l'objectif de 2 % à moyen terme […]. Le Conseil des gouverneurs ne s'engage pas à l'avance sur une trajectoire de taux particulière. »" },
+    { "contexte": "Extrait réel cité par la linguiste Montserrat López Díaz (La Linguistique, 2016) : euphémisme d'un communiqué d'ArcelorMittal.", "texte": "« Le plan d'optimisation de l'emploi va prendre place via différentes mesures »" },
+    { "contexte": "Formulation typique (illustrative, non citée) d'un communiqué de résultats de société cotée.", "texte": "« Dans un environnement de marché difficile, le groupe affiche une croissance organique de 3,1 %, à périmètre et taux de change constants. Nous confirmons nos objectifs annuels. »" },
+    { "contexte": "Formule-type réglementaire des documents de gestion d'actifs (mention d'avertissement standard).", "texte": "« Les performances passées ne préjugent pas des performances futures. »" }
+  ],
+  "sources": [
+    { "titre": "Communiqué de presse BCE – Décisions de politique monétaire, 30 octobre 2025 (version française)", "auteur": "Banque centrale européenne / Banque de France", "url": "https://www.banque-france.fr/system/files/2025-10/ecb.mp251030.fr_.pdf", "apport": "Formules verbatim : dépendance aux données, réunion par réunion, absence d'engagement préalable, structure du communiqué." },
+    { "titre": "Le pouvoir des mots : émission et réception du discours du banquier central", "auteur": "M. Clévenot, L. Desmedt, M. Llorca (Économie et institutions, n° 22, 2015)", "url": "https://journals.openedition.org/ei/1016", "apport": "Performativité, mots-codes (« vigilance », « accommodant », « modéré »), analyse du ton des éditoriaux BCE, « Fedspeak »." },
+    { "titre": "Forward guidance (guidage prospectif)", "auteur": "Banque de France", "url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/forward-guidance-guidage-prospectif", "apport": "Définition du guidage prospectif et historique à la BCE." },
+    { "titre": "Position AMF DOC-2015-12 – Indicateurs alternatifs de performance", "auteur": "Autorité des marchés financiers", "url": "https://www.amf-france.org/fr/reglementation/doctrine/doc-2015-12", "apport": "Encadrement des IAP (EBITDA, résultat ajusté, dette nette) et de leur présentation." },
+    { "titre": "Q&A on Alternative Performance Measures – Organic growth", "auteur": "ESMA", "url": "https://www.esma.europa.eu/publications-data/questions-answers/1881", "apport": "Décomposition croissance organique / effet change / effet périmètre." },
+    { "titre": "Euphémismes néosémiques au sujet de l'emploi en temps de crise", "auteur": "Montserrat López Díaz (La Linguistique, 2016)", "url": "https://minerva.usc.gal/entities/publication/d9e6f0fb-c02b-40a2-bfb9-4a9ab8f9a8cd", "apport": "Euphémismes de l'emploi, exemple « plan d'optimisation de l'emploi »." },
+    { "titre": "Euphémismes et atténuation du dire dans la presse économique spécialisée", "auteur": "Maria Margherita Mattioda (Synergies Italie, 2009)", "url": "https://gerflint.fr/Base/Italie-special/mattioda.pdf", "apport": "Définition de l'euphémisme économique comme atténuation de sèmes négatifs." },
+    { "titre": "ABC de l'économie – Inflation et déflation", "auteur": "Banque de France", "url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/inflation-et-deflation", "apport": "Registre de vulgarisation institutionnelle (fiches, vidéos, quiz)." }
+  ]
+}

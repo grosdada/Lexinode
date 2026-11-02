@@ -1,0 +1,413 @@
+{
+  "id": "weber",
+  "nom": "Weber — rationalisation & légitimité",
+  "famille": "sociologie",
+  "categorie": "Sociologie compréhensive",
+  "icone": "⚙️",
+  "couleur": "#5D4037",
+  "description": "Grille de lecture inspirée de Max Weber (1864-1920) : tout sujet est compris à partir du sens que les acteurs donnent à leurs conduites, puis rapporté à des idéaux-types (types d'action, types de domination). Elle repère la rationalisation et le désenchantement du monde, les fondements de la légitimité, la bureaucratie et les affinités électives entre éthiques et pratiques économiques.",
+  "posture": "Savant prudent et comparatiste qui sépare jugements de fait et jugements de valeur : il comprend avant d'expliquer, construit des types idéaux, raisonne en chances et en affinités plutôt qu'en lois, et prend au sérieux les conséquences non voulues de l'action.",
+  "valeurs": [
+    "compréhension du sens",
+    "neutralité axiologique",
+    "comparaison historique",
+    "rigueur conceptuelle",
+    "lucidité sur la rationalisation",
+    "éthique de responsabilité",
+    "pluralisme des valeurs"
+  ],
+  "vocabulaire": [
+    { "terme": "sociologie compréhensive", "sens": "Science qui veut comprendre par interprétation l'activité sociale et, par là, en expliquer causalement le déroulement et les effets (Économie et société).", "usage": "La sociologie compréhensive part du sens que les acteurs donnent à leurs actes." },
+    { "terme": "compréhension", "sens": "Saisie du sens que l'acteur attache à sa conduite (Verstehen) ; non une empathie, mais une reconstruction contrôlée, couplée à l'explication causale.", "usage": "La compréhension du geste d'achat passe par les raisons de l'acheteur." },
+    { "terme": "activité sociale", "sens": "Conduite dotée d'un sens subjectif et orientée d'après le comportement d'autrui.", "usage": "Ouvrir un parapluie sous l'averse n'est pas une activité sociale ; saluer, si." },
+    { "terme": "sens visé", "sens": "Signification que l'acteur associe subjectivement à son action.", "usage": "Le sens visé par le visiteur n'est pas celui que lui prête le gestionnaire du zoo." },
+    { "terme": "explication compréhensive", "sens": "Articulation des motifs de l'action et de leurs causes, sans opposition entre comprendre et expliquer.", "usage": "L'explication compréhensive relie les motifs aux régularités observées." },
+    { "terme": "imputation causale", "sens": "Opération qui attribue un effet à certaines causes parmi d'autres, par comparaison avec des cours possibles des événements.", "usage": "L'imputation causale isole le facteur décisif parmi d'autres." },
+    { "terme": "possibilité objective", "sens": "Raisonnement contrefactuel : que se serait-il probablement passé si tel facteur avait manqué ?", "usage": "Sans la réforme, la possibilité objective d'un tel essor aurait été faible." },
+    { "terme": "idéal-type", "sens": "Construction obtenue par accentuation unilatérale d'un ou plusieurs points de vue ; utopie conceptuelle qui sert à mesurer le réel, non à le décrire.", "usage": "L'idéal-type du consommateur calculateur ne se rencontre nulle part à l'état pur." },
+    { "terme": "rapport aux valeurs", "sens": "Sélection de l'objet d'étude en fonction de valeurs qui le rendent significatif, sans jugement de valeur sur lui.", "usage": "Le rapport aux valeurs explique pourquoi on s'intéresse à ce phénomène plutôt qu'à un autre." },
+    { "terme": "neutralité axiologique", "sens": "Exigence de séparer jugements de fait et jugements de valeur dans le travail scientifique (Wertfreiheit) ; la traduction française est discutée.", "usage": "La neutralité axiologique n'interdit pas l'engagement du citoyen." },
+    { "terme": "polythéisme des valeurs", "sens": "Pluralité irréductible des valeurs ultimes, qu'aucune science ne peut hiérarchiser (la « guerre des dieux »).", "usage": "Le polythéisme des valeurs oppose ici rentabilité et protection animale." },
+    { "terme": "activité rationnelle en finalité", "sens": "Action orientée par le calcul des moyens adaptés à des fins et par l'anticipation des conséquences.", "usage": "La gestion des stocks relève d'une activité rationnelle en finalité." },
+    { "terme": "activité rationnelle en valeur", "sens": "Action orientée par la croyance en la valeur intrinsèque d'un comportement, indépendamment de ses conséquences.", "usage": "Le boycott militant est une activité rationnelle en valeur." },
+    { "terme": "activité affectuelle", "sens": "Action déterminée par des émotions et des passions actuelles.", "usage": "L'achat d'impulsion relève de l'activité affectuelle." },
+    { "terme": "activité traditionnelle", "sens": "Action déterminée par une coutume invétérée.", "usage": "Offrir des pantoufles à Noël peut être une activité traditionnelle." },
+    { "terme": "rationalité formelle", "sens": "Calculabilité des procédures (comptabilité, droit codifié), indépendante des contenus.", "usage": "La rationalité formelle du tableur ignore la valeur de ce qu'il compte." },
+    { "terme": "rationalité matérielle", "sens": "Évaluation au regard de valeurs substantielles : justice, besoins, éthique.", "usage": "La rationalité matérielle demande si la règle est juste, pas seulement si elle est appliquée." },
+    { "terme": "rationalisation", "sens": "Processus historique d'extension du calcul, de la prévision et de la maîtrise méthodique à tous les domaines de la vie.", "usage": "La rationalisation gagne la reproduction animale comme la distribution." },
+    { "terme": "désenchantement du monde", "sens": "Élimination progressive des moyens magiques de salut et des explications enchantées ; idée que tout peut, en principe, être maîtrisé par le calcul.", "usage": "Le désenchantement du monde transforme le prodige en protocole." },
+    { "terme": "domination", "sens": "Chance de trouver obéissance à un ordre déterminé auprès d'un groupe donné.", "usage": "La domination se mesure à la régularité de l'obéissance." },
+    { "terme": "légitimité", "sens": "Croyance des dominés dans la validité de l'ordre auquel ils obéissent.", "usage": "Sans croyance en la légitimité, la domination devient coûteuse." },
+    { "terme": "domination traditionnelle", "sens": "Domination fondée sur la croyance au caractère sacré des traditions et des personnes qu'elles désignent.", "usage": "Le patriarche exerce une domination traditionnelle." },
+    { "terme": "domination charismatique", "sens": "Domination fondée sur la reconnaissance de qualités extraordinaires attribuées à une personne.", "usage": "Le fondateur de la marque exerçait une domination charismatique." },
+    { "terme": "domination légale-rationnelle", "sens": "Domination fondée sur la croyance en la légalité de règlements impersonnels et en la compétence de ceux qu'ils désignent.", "usage": "Le directeur du zoo tient son autorité d'une domination légale-rationnelle." },
+    { "terme": "routinisation du charisme", "sens": "Transformation du charisme personnel en institution durable, traditionnelle ou bureaucratique (quotidianisation).", "usage": "La succession du fondateur pose le problème de la routinisation du charisme." },
+    { "terme": "bureaucratie", "sens": "Administration par des fonctionnaires spécialisés, hiérarchisés et rémunérés, agissant selon des règles écrites et des dossiers ; forme la plus pure de la domination légale.", "usage": "La bureaucratie transforme chaque naissance en dossier." },
+    { "terme": "cage d'acier", "sens": "Image de l'ordre économique et bureaucratique rationalisé qui enserre les individus (stahlhartes Gehäuse, aussi traduit « habitacle dur comme l'acier »).", "usage": "La cage d'acier fonctionne même quand plus personne ne croit à son sens." },
+    { "terme": "éthique protestante", "sens": "Éthos issu du calvinisme et des sectes puritaines : conduite méthodique, travail dans un métier, ascèse dans le monde.", "usage": "L'éthique protestante valorise le travail méthodique comme signe d'élection." },
+    { "terme": "esprit du capitalisme", "sens": "Éthos qui fait du gain méthodique et rationnel un devoir, distinct de la simple soif de richesse.", "usage": "L'esprit du capitalisme se reconnaît à la comptabilité, non à l'avidité." },
+    { "terme": "affinité élective", "sens": "Relation de compatibilité et de renforcement mutuel entre une éthique et une pratique, sans causalité mécanique.", "usage": "Il existe une affinité élective entre ascèse et accumulation." },
+    { "terme": "Beruf", "sens": "Mot allemand qui unit vocation et profession : le métier comme tâche assignée.", "usage": "Le Beruf fait du métier un devoir moral." },
+    { "terme": "ascèse intramondaine", "sens": "Discipline de vie méthodique exercée dans le monde (travail, épargne) et non hors du monde.", "usage": "L'ascèse intramondaine remplace le monastère par l'atelier." },
+    { "terme": "prédestination", "sens": "Doctrine calviniste selon laquelle le salut est décidé d'avance, source d'une angoisse que la conduite méthodique apaise.", "usage": "La prédestination pousse à chercher des signes d'élection." },
+    { "terme": "conduite de vie", "sens": "Organisation méthodique et cohérente de l'existence (Lebensführung).", "usage": "Une conduite de vie méthodique se lit dans l'emploi du temps." },
+    { "terme": "éthique de conviction", "sens": "Agir selon ses principes sans considération des conséquences.", "usage": "L'éthique de conviction refuse le compromis." },
+    { "terme": "éthique de responsabilité", "sens": "Agir en répondant des conséquences prévisibles de ses actes.", "usage": "L'éthique de responsabilité impose de peser les effets." },
+    { "terme": "monopole de la violence physique légitime", "sens": "Caractère spécifique de l'État moderne, qui revendique avec succès ce monopole sur un territoire donné.", "usage": "La définition de l'État par le monopole de la violence physique légitime porte sur le moyen, non sur les fins." },
+    { "terme": "classe, groupe de statut, parti", "sens": "Trois dimensions de la distribution du pouvoir : situation économique, honneur social, lutte organisée pour le pouvoir.", "usage": "Le collectionneur gagne en honneur social sans changer de classe." },
+    { "terme": "paradoxe des conséquences", "sens": "Écart entre les intentions des acteurs et les effets historiques de leurs actions.", "usage": "Le paradoxe des conséquences fait naître le profit de l'ascèse." }
+  ],
+  "formules": [
+    "Concernant {sujet}, il faut d'abord comprendre le sens que les acteurs donnent à leur conduite.",
+    "Comprendre n'est pas excuser : c'est reconstruire le sens visé pour mieux expliquer.",
+    "Construisons, à titre heuristique, un idéal-type : il ne décrit pas la réalité, il permet de la mesurer.",
+    "Sous cet angle, {sujet} relève d'une activité rationnelle en finalité.",
+    "Entre {a} et {b}, il existe peut-être une affinité élective plutôt qu'un lien de causalité mécanique.",
+    "Rapprocher {a} et {b} invite à chercher l'éthos commun qui les rend compatibles.",
+    "Il faut se demander au nom de quelle légitimité cet ordre s'impose pour {public}.",
+    "Derrière {element}, on devine le lent travail de la rationalisation : calcul, prévision, procédure.",
+    "{evenement} marque le passage du charisme à la routine administrative.",
+    "Ce qui était magie devient procédure : le désenchantement du monde se lit jusque dans {sujet}.",
+    "Le savant constate ; il ne lui appartient pas de dire ce qui doit être.",
+    "Les conséquences de l'action débordent les intentions de ses auteurs : c'est le paradoxe des conséquences.",
+    "Le terme « {terme} » ne désigne pas une réalité mais un instrument de comparaison.",
+    "La question décisive est celle de la croyance en la légitimité.",
+    "Il n'y a pas ici de loi de l'histoire, seulement des enchaînements singuliers qu'il faut imputer causalement.",
+    "Dans {sujet}, l'autorité repose-t-elle sur la tradition, sur le charisme ou sur la règle impersonnelle ?",
+    "La bureaucratie l'emporte parce qu'elle est techniquement supérieure, non parce qu'elle est aimée.",
+    "Ce qui frappe, dans {sujet}, c'est la méthodicité de la conduite de vie qu'on y observe.",
+    "Il faut distinguer l'éthique de conviction de l'éthique de responsabilité.",
+    "Le calcul a pris la place du miracle.",
+    "Aucune science ne peut trancher la guerre des dieux.",
+    "Rien n'autorise à conclure plus que ceci : {conclusion}.",
+    "À titre d'hypothèse, on peut avancer ceci : {conclusion}.",
+    "Pour {public}, l'ordre administratif paraît naturel : c'est l'effet propre de la domination légale-rationnelle.",
+    "On entre dans la cage d'acier sans l'avoir voulu, par la somme de choix raisonnables.",
+    "Ce n'est pas la soif de gain qui caractérise l'esprit du capitalisme, mais sa discipline méthodique.",
+    "Il faut rapporter {element} à un idéal-type pour en mesurer l'écart.",
+    "Les idées ne mènent pas le monde, mais elles orientent, comme des aiguillages, la voie où s'engagent les intérêts.",
+    "Comparer {a} et {b} oblige à préciser le point de vue sous lequel on les compare.",
+    "Tout dépend du point de vue retenu : un autre idéal-type éclairerait d'autres aspects de la question.",
+    "Le charisme ne dure pas : il se routinise ou il s'éteint."
+  ],
+  "connecteurs": [
+    "Dans cette mesure,",
+    "À titre idéal-typique,",
+    "Sous ce rapport,",
+    "En revanche,",
+    "Du point de vue de la compréhension,",
+    "Sur le plan causal,",
+    "Pour autant,",
+    "Autrement dit,",
+    "Selon toute probabilité,",
+    "Inversement,",
+    "Historiquement,",
+    "Par là,"
+  ],
+  "euphemismes": [
+    { "brut": "le progrès", "edl": "la rationalisation formelle des conduites", "commentaire": "Weber décrit un processus, sans y voir un progrès moral (désenchantement, cage d'acier)." },
+    { "brut": "l'efficacité", "edl": "l'activité rationnelle en finalité et la calculabilité", "commentaire": "Choix des moyens adaptés à une fin, indépendamment de la valeur de la fin." },
+    { "brut": "c'est la procédure", "edl": "c'est la domination légale-rationnelle : on obéit à la règle impersonnelle", "commentaire": "La légitimité repose sur la croyance en la légalité." },
+    { "brut": "c'est un leader né", "edl": "c'est une domination charismatique, reconnue par des disciples et vouée à se routiniser", "commentaire": "Le charisme existe par la reconnaissance qu'on lui accorde." },
+    { "brut": "on a toujours fait comme ça", "edl": "c'est une domination traditionnelle, fondée sur le caractère sacré de la coutume", "commentaire": "Premier des trois types purs de domination légitime." },
+    { "brut": "il n'y a plus de mystère", "edl": "c'est le désenchantement du monde", "commentaire": "Élimination des moyens magiques et idée que tout est, en principe, calculable." },
+    { "brut": "la paperasse", "edl": "la bureaucratie : règles écrites, dossiers, hiérarchie et compétences spécialisées", "commentaire": "Forme la plus pure de la domination légale, techniquement supérieure." },
+    { "brut": "l'amour du travail bien fait", "edl": "une éthique professionnelle héritière du Beruf", "commentaire": "L'Éthique protestante : le métier comme vocation." },
+    { "brut": "être objectif", "edl": "respecter la neutralité axiologique en distinguant jugements de fait et jugements de valeur", "commentaire": "Ce qui n'exclut pas le rapport aux valeurs dans le choix de l'objet." },
+    { "brut": "le pouvoir", "edl": "la domination, chance de trouver obéissance", "commentaire": "Weber distingue la puissance (Macht) de la domination (Herrschaft)." },
+    { "brut": "l'État, c'est la force", "edl": "l'État revendique avec succès le monopole de la violence physique légitime", "commentaire": "Définition par le moyen spécifique, non par les fins." },
+    { "brut": "le réalisme politique", "edl": "l'éthique de responsabilité", "commentaire": "Répondre des conséquences prévisibles de ses actes." },
+    { "brut": "l'intransigeance", "edl": "l'éthique de conviction", "commentaire": "Agir selon ses principes, quelles qu'en soient les suites." },
+    { "brut": "on est piégés par le système", "edl": "on vit dans la cage d'acier d'un ordre rationalisé", "commentaire": "Image finale de L'Éthique protestante." },
+    { "brut": "un cas typique", "edl": "un idéal-type, construit par accentuation unilatérale", "commentaire": "Ni moyenne statistique, ni modèle moral." },
+    { "brut": "l'effet pervers", "edl": "le paradoxe des conséquences", "commentaire": "Des motifs religieux ont produit, sans le vouloir, des effets économiques." }
+  ],
+  "substitutions": [
+    { "de": "progrès", "vers": "rationalisation" },
+    { "de": "efficacité", "vers": "rationalité en finalité" },
+    { "de": "règlement", "vers": "ordre légal-rationnel" },
+    { "de": "administration", "vers": "bureaucratie" },
+    { "de": "chef", "vers": "détenteur de la domination" },
+    { "de": "pouvoir", "vers": "domination" },
+    { "de": "autorité", "vers": "domination légitime" },
+    { "de": "obéissance", "vers": "croyance en la légitimité" },
+    { "de": "star", "vers": "figure charismatique" },
+    { "de": "habitude", "vers": "activité traditionnelle" },
+    { "de": "émotion", "vers": "activité affectuelle" },
+    { "de": "convictions", "vers": "rationalité en valeur" },
+    { "de": "modèle", "vers": "idéal-type" },
+    { "de": "motivation", "vers": "sens visé" },
+    { "de": "vocation", "vers": "Beruf" },
+    { "de": "discipline", "vers": "conduite de vie méthodique" },
+    { "de": "magie", "vers": "moyens magiques de salut" },
+    { "de": "effets pervers", "vers": "paradoxe des conséquences" },
+    { "de": "prestige", "vers": "honneur social" },
+    { "de": "statut", "vers": "groupe de statut" },
+    { "de": "objectivité", "vers": "neutralité axiologique" },
+    { "de": "lien", "vers": "affinité élective" },
+    { "de": "routine", "vers": "routinisation" },
+    { "de": "calcul", "vers": "calculabilité" },
+    { "de": "paperasse", "vers": "dossier bureaucratique" },
+    { "de": "sobriété", "vers": "ascèse intramondaine" },
+    { "de": "gouvernement", "vers": "groupement politique" }
+  ],
+  "cadres": [
+    { "nom": "Compréhension", "question": "Quel sens visé les acteurs engagés dans {sujet} donnent-ils à leur conduite ?", "explication": "Expliquer suppose d'abord de restituer les raisons des acteurs." },
+    { "nom": "Types d'action", "question": "L'activité observée dans {sujet} est-elle rationnelle en finalité, en valeur, affectuelle ou traditionnelle ?", "explication": "Les quatre types purs servent d'étalons pour classer les conduites réelles." },
+    { "nom": "Légitimité", "question": "Sur quelle croyance repose l'obéissance que suscite {sujet} : tradition, charisme ou légalité ?", "explication": "Toute domination durable cherche à éveiller la croyance en sa légitimité." },
+    { "nom": "Rationalisation", "question": "Quelle part de calcul, de prévision et de procédure s'est introduite dans {sujet} ?", "explication": "L'Occident moderne se caractérise par l'extension de la maîtrise calculée." },
+    { "nom": "Éthos et affinités électives", "question": "Quelle éthique de vie, quelles affinités électives rendent {element} pensable et désirable ?", "explication": "Les idées religieuses ou morales orientent les intérêts sans les déterminer mécaniquement." },
+    { "nom": "Paradoxe des conséquences", "question": "Quels effets non voulus a produits {evenement} ?", "explication": "Les résultats historiques échappent souvent aux intentions." },
+    { "nom": "Bureaucratie", "question": "Quelles règles impersonnelles, quels dossiers et quelles compétences encadrent {sujet} ?", "explication": "La domination légale s'exerce par un appareil administratif spécialisé." }
+  ],
+  "structures": [
+    {
+      "nom": "Démarche compréhensive et idéal-typique",
+      "description": "Préciser le point de vue, construire un idéal-type, le confronter au réel, comprendre les écarts par le sens visé, puis imputer causalement.",
+      "etapes": [
+        {
+          "titre": "Point de vue et contexte",
+          "role": "contexte",
+          "consigne": "Préciser le rapport aux valeurs qui rend l'objet significatif et situer historiquement le phénomène.",
+          "gabarits": [
+            "Concernant {sujet}, il faut d'abord préciser le point de vue sous lequel on l'aborde et le contexte historique.",
+            "Tout dépend du rapport aux valeurs qui rend {sujet} digne d'être étudié."
+          ]
+        },
+        {
+          "titre": "Construction de l'idéal-type",
+          "role": "hypothese",
+          "consigne": "Construire un type pur en accentuant quelques traits, et dire ce qu'on devrait observer s'il était réalisé.",
+          "gabarits": [
+            "Construisons un idéal-type en accentuant quelques traits : calcul, méthode, impersonnalité.",
+            "Si {element} relevait d'une activité purement rationnelle en finalité, voici ce que l'on devrait observer."
+          ]
+        },
+        {
+          "titre": "Confrontation au réel",
+          "role": "faits",
+          "consigne": "Mesurer les écarts entre les données observées et le type construit.",
+          "gabarits": [
+            "Les observations ({chiffre}) s'écartent de l'idéal-type sur plusieurs points.",
+            "Pour {a}, la conduite se rapproche du type rationnel ; pour {b}, elle relève davantage de la tradition."
+          ]
+        },
+        {
+          "titre": "Compréhension du sens",
+          "role": "analyse",
+          "consigne": "Rendre les écarts intelligibles en restituant les motifs et les valeurs des acteurs.",
+          "gabarits": [
+            "Ces écarts deviennent intelligibles dès qu'on restitue le sens que les acteurs donnent à leur conduite.",
+            "Ce qui paraît irrationnel vu du dehors obéit, vu du dedans, à une rationalité en valeur."
+          ]
+        },
+        {
+          "titre": "Imputation causale",
+          "role": "conclusion",
+          "consigne": "Conclure prudemment sur quelques causes déterminées, en rappelant le caractère partiel de tout point de vue.",
+          "gabarits": [
+            "Avec la prudence qui s'impose, on peut imputer le phénomène à quelques causes déterminées : {conclusion}.",
+            "L'explication reste partielle : un autre point de vue éclairerait autrement {sujet}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Le modèle de L'Éthique protestante",
+      "description": "Partir d'une régularité statistique, remonter à un éthos, établir une affinité élective, montrer les conséquences non voulues et la cage d'acier.",
+      "etapes": [
+        {
+          "titre": "L'énigme de départ",
+          "role": "faits",
+          "consigne": "Présenter une régularité empirique surprenante qui appelle explication.",
+          "gabarits": [
+            "Une régularité intrigue : {chiffre}, que le hasard ne suffit pas à expliquer.",
+            "{element} se rencontre plus souvent dans certains groupes que dans d'autres : voilà l'énigme de départ."
+          ]
+        },
+        {
+          "titre": "L'éthos",
+          "role": "contexte",
+          "consigne": "Remonter aux croyances, aux angoisses et à la conduite de vie des groupes concernés.",
+          "gabarits": [
+            "Il faut remonter à l'éthique de vie de ces groupes, à leurs croyances et à leurs angoisses.",
+            "Concernant {sujet}, la question est : quelle conduite de vie a rendu ces pratiques désirables ?"
+          ]
+        },
+        {
+          "titre": "L'affinité élective",
+          "role": "analyse",
+          "consigne": "Montrer la compatibilité et le renforcement mutuel entre l'éthos et la pratique étudiée.",
+          "gabarits": [
+            "Entre {a} et {b}, il existe une affinité élective : les deux logiques se renforcent sans se causer mécaniquement.",
+            "La discipline méthodique trouve dans {sujet} un terrain d'expression privilégié."
+          ]
+        },
+        {
+          "titre": "Les conséquences non voulues",
+          "role": "tension",
+          "consigne": "Souligner l'écart entre intentions et résultats historiques.",
+          "gabarits": [
+            "Personne n'a voulu ce résultat : il naît de la somme d'intentions tout autres.",
+            "{evenement} illustre le paradoxe des conséquences : des motifs éthiques ont produit des effets économiques."
+          ]
+        },
+        {
+          "titre": "La cage d'acier",
+          "role": "projection",
+          "consigne": "Projeter la tendance : la mécanique survit à l'éthos qui l'a fait naître.",
+          "gabarits": [
+            "Une fois l'éthos disparu, il reste la mécanique : la cage d'acier fonctionne sans esprit.",
+            "On peut se demander si, dans {sujet}, la routine n'a pas survécu au sens qui la portait."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Analyse de la domination",
+      "description": "Identifier qui commande et qui obéit, le fondement de la légitimité, l'appareil administratif, puis les crises et la routinisation.",
+      "etapes": [
+        {
+          "titre": "Commandement et obéissance",
+          "role": "faits",
+          "consigne": "Décrire la relation de domination observable : ordres, obéissance régulière, sanctions.",
+          "gabarits": [
+            "Dans {sujet}, quelques-uns commandent, beaucoup obéissent : c'est le point de départ.",
+            "On observe une obéissance régulière, sans contrainte visible, et {element} en témoigne."
+          ]
+        },
+        {
+          "titre": "Fondement de la légitimité",
+          "role": "analyse",
+          "consigne": "Identifier le type de croyance qui fonde l'obéissance (tradition, charisme, légalité).",
+          "gabarits": [
+            "Il faut se demander au nom de quoi l'on obéit : tradition, charisme ou légalité ?",
+            "Pour {public}, la règle impersonnelle semble la seule autorité acceptable."
+          ]
+        },
+        {
+          "titre": "L'appareil administratif",
+          "role": "analyse",
+          "consigne": "Décrire l'état-major administratif qui fait exister la domination au quotidien.",
+          "gabarits": [
+            "Toute domination durable a besoin d'un appareil : fonctionnaires, dossiers, procédures.",
+            "{sujet} repose sur un appareil administratif qui fait exister l'ordre au quotidien."
+          ]
+        },
+        {
+          "titre": "Crise et routinisation",
+          "role": "tension",
+          "consigne": "Repérer les épreuves de la légitimité et la transformation du charisme en institution.",
+          "gabarits": [
+            "{evenement} met la légitimité à l'épreuve : le charisme s'use, la tradition se fissure, la règle se discute.",
+            "Le charisme initial se routinise et devient administration."
+          ]
+        },
+        {
+          "titre": "Tendance de long terme",
+          "role": "projection",
+          "consigne": "Projeter prudemment l'évolution, en termes de rationalisation et de bureaucratisation.",
+          "gabarits": [
+            "La tendance de long terme va vers davantage de rationalisation formelle.",
+            "On peut prévoir, sous toutes réserves, l'évolution suivante : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Weber n'est pas hostile à la statistique (L'Éthique protestante part de statistiques sur la répartition confessionnelle des professions), mais une régularité n'est sociologiquement intelligible que si elle est à la fois causalement adéquate et compréhensible quant au sens ; le chiffre lui-même est un produit de la rationalisation.",
+    "unites": [
+      "chance (probabilité qu'un ordre soit obéi)",
+      "répartition confessionnelle par profession",
+      "proportion par groupe de statut",
+      "écart à l'idéal-type",
+      "série historique comparée entre civilisations"
+    ],
+    "formulations": [
+      "Le chiffre de {chiffre} établit une régularité ; il reste à la rendre compréhensible.",
+      "Une corrélation ne devient sociologique que si elle est à la fois causalement adéquate et significative quant au sens.",
+      "Pour {a}, la proportion atteint {chiffre} : l'écart avec {b} appelle une explication par l'éthos plutôt que par le hasard.",
+      "Mesurer, compter, prévoir : {chiffre} est en soi un produit de la rationalisation.",
+      "Derrière {chiffre}, il faut retrouver des conduites dotées de sens.",
+      "La domination se mesure en chances : la probabilité qu'un ordre trouve obéissance.",
+      "Comparer {a} et {b} en chiffres suppose une commune mesure, elle-même fruit d'une histoire de la calculabilité."
+    ]
+  },
+  "metaphores": [
+    "la cage d'acier (habitacle dur comme l'acier)",
+    "le désenchantement : la magie qui se retire du monde",
+    "les idées comme aiguillages qui orientent la voie des intérêts",
+    "la machine bureaucratique et ses rouages",
+    "la guerre des dieux (polythéisme des valeurs)",
+    "le charisme comme grâce",
+    "la routine qui refroidit le charisme",
+    "la vocation (Beruf)",
+    "l'ascète qui sort du cloître pour entrer dans le monde",
+    "la politique comme forage lent de planches dures",
+    "le manteau léger devenu cage"
+  ],
+  "pieges": [
+    "Idéalisme : lire Weber comme opposant les idées aux intérêts, alors qu'il refuse toute causalité unilatérale.",
+    "Thèse de L'Éthique protestante discutée par les historiens (formes de capitalisme antérieures à la Réforme, contre-exemples catholiques).",
+    "Eurocentrisme et fatalisme : la rationalisation occidentale érigée en destin irréversible.",
+    "Confusion de l'idéal-type avec un idéal moral ou avec une moyenne statistique.",
+    "Neutralité axiologique comprise comme indifférence politique, alors que Weber était engagé et que la traduction française est discutée.",
+    "Psychologisation de la compréhension, réduite à de l'empathie, alors qu'elle est couplée à l'explication causale.",
+    "Usage décliniste et galvaudé de la « cage d'acier » ou du « charisme ».",
+    "Typologie de la légitimité qui peine à loger la démocratie.",
+    "Individualisme méthodologique durci, oublieux de la dimension historique et comparative de l'œuvre."
+  ],
+  "registres": {
+    "institutionnel": "Dans le discours administratif, la grille devient éloge de la règle impersonnelle, de la compétence et de la « modernisation ».",
+    "technique": "Entre pairs : idéaux-types, imputation causale, types de domination, affinités électives, rationalité formelle et matérielle.",
+    "vulgarisation": "Pour le grand public : « le monde a perdu sa magie » et « nous sommes enfermés dans une cage de règles ».",
+    "critique": "Ses détracteurs moquent un pessimisme culturel de professeur, qui voit une cage d'acier dans chaque formulaire et un prophète dans chaque dirigeant."
+  },
+  "visuel": {
+    "palette": ["#5D4037", "#D7CCC8", "#3E2723", "#B8860B", "#F3EDE2"],
+    "motifs": [
+      { "fr": "barreaux d'acier qui se referment autour d'un bureau", "en": "steel bars closing in around an office desk" },
+      { "fr": "forêt enchantée qui se change en grille de bureaux", "en": "enchanted forest morphing into a grid of office cubicles" },
+      { "fr": "organigramme pyramidal qui se construit étage par étage", "en": "pyramidal org chart building up level by level" },
+      { "fr": "triangle des trois légitimités : couronne, auréole, code de lois", "en": "triangle of three legitimacies: crown, halo, rulebook" },
+      { "fr": "aiguillage ferroviaire orientant un train", "en": "railway switch redirecting a train" },
+      { "fr": "livre de comptes et horloge sur un pupitre", "en": "account ledger and clock on a desk" },
+      { "fr": "clocher et cheminée d'usine côte à côte", "en": "church steeple next to a factory chimney" },
+      { "fr": "dossiers empilés et tampons administratifs", "en": "stacked files and rubber stamps" },
+      { "fr": "rouages d'une machine administrative", "en": "gears of an administrative machine" },
+      { "fr": "manteau léger qui se transforme en cage", "en": "light cloak turning into a cage" }
+    ],
+    "pictogrammes": [
+      { "fr": "tampon", "en": "rubber stamp" },
+      { "fr": "dossier", "en": "file folder" },
+      { "fr": "horloge", "en": "clock" },
+      { "fr": "engrenage", "en": "gear" },
+      { "fr": "couronne", "en": "crown" },
+      { "fr": "auréole", "en": "halo" },
+      { "fr": "code de lois", "en": "law book" },
+      { "fr": "bible ouverte", "en": "open bible" },
+      { "fr": "barreaux", "en": "bars" },
+      { "fr": "aiguillage", "en": "railway switch" }
+    ],
+    "typographie": "Sérif sobre de type Caslon pour le texte, avec une Fraktur discrète réservée aux termes allemands (Beruf, Entzauberung).",
+    "style_motion": "Esthétique de gravure sur papier sépia : forêts enchantées qui se figent en organigrammes, engrenages, tampons et barreaux qui se referment lentement ; ton mélancolique, posé, comparatiste.",
+    "style_motion_en": "Engraving on sepia paper aesthetic: enchanted forests freezing into org charts, turning gears, rubber stamps and bars slowly closing in; melancholic, measured, comparative tone in brown and brass."
+  },
+  "exemples": [
+    { "contexte": "Définition de l'État (Le Savant et le politique, 1919) dans une traduction reprise par une source pédagogique (Major-Prépa) ; les traductions varient (Freund, Colliot-Thélène).", "texte": "« L'État est cette communauté humaine, qui à l'intérieur d'un territoire déterminé (…) revendique pour elle-même et parvient à imposer le monopole de la violence physique légitime »" },
+    { "contexte": "Formule de Weber (« L'objectivité de la connaissance », 1904) citée en anglais par la Stanford Encyclopedia of Philosophy ; traduction française libre.", "texte": "« un idéal-type est formé par l'accentuation unilatérale d'un ou de plusieurs points de vue »" },
+    { "contexte": "Formulation illustrative, non citée : comment la grille lirait la comparaison entre ventes de pantoufles irlandaises et naissances de girafons à Melbourne.", "texte": "« Sous l'angle de la rationalisation, la vente de pantoufles et la naissance d'un girafon relèvent d'une même logique : chaînes logistiques calculées d'un côté, programmes d'élevage planifiés et registres généalogiques de l'autre. Ce qui était hasard ou prodige devient procédure. »" },
+    { "contexte": "Formulation illustrative, non citée : lecture typique d'une figure politique.", "texte": "« L'autorité de ce dirigeant repose moins sur les règles que sur la reconnaissance de qualités extraordinaires : une domination charismatique, condamnée à se routiniser ou à s'éteindre. »" }
+  ],
+  "sources": [
+    { "titre": "Max Weber", "auteur": "Stanford Encyclopedia of Philosophy", "url": "https://plato.stanford.edu/entries/weber/", "apport": "Idéal-type, rationalisation, désenchantement, cage d'acier, trois types de domination, Wertfreiheit, débats critiques." },
+    { "titre": "Weber Max (1864-1920) — l'œuvre sociologique", "auteur": "Encyclopædia Universalis", "url": "https://www.universalis.fr/encyclopedie/max-weber/4-l-oeuvre-sociologique/", "apport": "Explication compréhensive, articulation des motifs et des causes." },
+    { "titre": "Neutralité axiologique", "auteur": "Encyclopædia Universalis", "url": "https://www.universalis.fr/encyclopedie/neutralite-axiologique/", "apport": "Histoire et ambiguïtés de la traduction française de Wertfreiheit." },
+    { "titre": "Max Weber — fiche de révision", "auteur": "Nomad Éducation", "url": "https://www.nomadeducation.fr/revisions/sociologie-toute-la-bibliotheque-lb14a862/max-weber-cyf2bb65", "apport": "Définition de la sociologie, sens subjectif, comparaison idéal-type / action réelle." },
+    { "titre": "Fiche de culture générale sur l'État et le monopole de la violence légitime (Weber)", "auteur": "Major-Prépa", "url": "https://major-prepa.com/culture-generale/etat-monopole-violence-legitime-weber/", "apport": "Citation de la définition de l'État, définition par le moyen et non par les fins." },
+    { "titre": "Article sur la notion de violence légitime (PDF, 2011)", "auteur": "Cédric Moreau de Bellaing (La Vie des idées)", "url": "https://pop.laviedesidees.fr/IMG/pdf/20110321_violencelegitime.pdf", "apport": "Précision de traduction : « violence légitime » et « contrainte physique légitime »." },
+    { "titre": "The McDonaldization of Society — résumé", "auteur": "University of Missouri–St. Louis", "url": "https://umsl.edu/%7ekeelr/010/mcdonsoc.html", "apport": "Application de la rationalisation wébérienne à la consommation (efficacité, calculabilité, prévisibilité, contrôle)." },
+    { "titre": "Fiche sur le désenchantement du monde chez Weber", "auteur": "Mister Prépa", "url": "https://misterprepa.net/le-desenchantement-du-monde-chez-weber/", "apport": "Désenchantement comme élimination progressive des ressorts magiques." }
+  ]
+}

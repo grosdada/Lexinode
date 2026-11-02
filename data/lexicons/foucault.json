@@ -1,0 +1,433 @@
+{
+  "id": "foucault",
+  "nom": "Foucault — pouvoir & dispositifs",
+  "famille": "sociologie",
+  "categorie": "Histoire critique du pouvoir",
+  "icone": "👁️",
+  "couleur": "#37474F",
+  "description": "Grille de lecture inspirée de Michel Foucault (1926-1984) : tout sujet est lu comme le point d'application de relations de pouvoir indissociables de savoirs. Elle fait la généalogie des évidences, repère les dispositifs, les techniques disciplinaires de surveillance et de normalisation, et la biopolitique qui gouverne la vie des populations.",
+  "posture": "Historien-philosophe du présent qui part d'une évidence actuelle pour en montrer la contingence : il décrit comment le pouvoir s'exerce plutôt que qui le détient, à partir d'archives (règlements, plans, traités), sans dénoncer de complot ni proposer de modèle normatif.",
+  "valeurs": [
+    "historicisation des évidences",
+    "attention aux pratiques plutôt qu'aux intentions",
+    "critique des normes",
+    "travail minutieux sur archives",
+    "méfiance envers les discours de vérité",
+    "attention aux résistances"
+  ],
+  "vocabulaire": [
+    { "terme": "relations de pouvoir", "sens": "Rapports de force mobiles qui s'exercent à partir d'innombrables points ; le pouvoir ne se possède pas, il s'exerce.", "usage": "Les relations de pouvoir traversent la boutique comme l'enclos." },
+    { "terme": "pouvoir-savoir", "sens": "Imbrication des savoirs et des pouvoirs : tout savoir a des effets de pouvoir, toute relation de pouvoir constitue un champ de savoir.", "usage": "Le pouvoir-savoir vétérinaire décide de ce qu'est une naissance réussie." },
+    { "terme": "discours", "sens": "Ensemble d'énoncés réglés qui forment les objets dont ils parlent et définissent qui peut parler, de quoi et comment.", "usage": "Le discours du marketing fabrique la catégorie du « consommateur confort »." },
+    { "terme": "formation discursive", "sens": "Système de règles qui organise la dispersion des énoncés dans un domaine de savoir.", "usage": "La zoologie de conservation forme une formation discursive." },
+    { "terme": "épistémè", "sens": "Configuration de savoir qui, à une époque donnée, définit les conditions de possibilité des connaissances.", "usage": "Chaque épistémè trace autrement la frontière entre l'homme et l'animal." },
+    { "terme": "archéologie", "sens": "Méthode qui décrit les règles, en deçà des consciences, qui définissent ce qui peut être pensé et dit à une époque.", "usage": "L'archéologie du savoir compare des époques sans supposer de progrès." },
+    { "terme": "généalogie", "sens": "Méthode qui montre que nos évidences résultent de développements historiques contingents, de luttes et de hasards, non d'un progrès nécessaire.", "usage": "La généalogie du confort domestique révèle une histoire de l'hygiène." },
+    { "terme": "histoire du présent", "sens": "Projet de faire l'histoire de ce qui nous constitue aujourd'hui pour en montrer la contingence.", "usage": "Faire l'histoire du présent, c'est dénaturaliser l'évidence." },
+    { "terme": "dispositif", "sens": "Ensemble résolument hétérogène (discours, institutions, aménagements architecturaux, lois, mesures administratives, énoncés scientifiques…) et réseau que l'on peut établir entre ces éléments.", "usage": "Le zoo moderne est un dispositif : architecture, règlements, savoirs, discours pédagogiques." },
+    { "terme": "discipline", "sens": "Ensemble de techniques qui quadrillent l'espace, le temps et les gestes pour fabriquer des corps à la fois utiles et dociles.", "usage": "La discipline d'atelier règle chaque geste." },
+    { "terme": "corps dociles", "sens": "Corps rendus manipulables, transformables et productifs par les disciplines.", "usage": "Le soldat moderne est un corps docile, fabriqué par l'exercice." },
+    { "terme": "surveillance hiérarchique", "sens": "Observation organisée où des regards hiérarchisés font remonter l'information.", "usage": "Le contremaître incarne la surveillance hiérarchique." },
+    { "terme": "sanction normalisatrice", "sens": "Pénalité qui vise moins à punir qu'à corriger les écarts par rapport à une norme.", "usage": "Le mauvais point est une sanction normalisatrice." },
+    { "terme": "examen", "sens": "Technique qui combine surveillance et sanction normalisatrice et fait de chaque individu un cas documenté.", "usage": "La visite médicale est un examen au sens foucaldien." },
+    { "terme": "panoptique", "sens": "Modèle architectural de Bentham (tour centrale, cellules en anneau) où l'on est vu sans voir qui regarde ; l'individu finit par se surveiller lui-même.", "usage": "La salle de classe vitrée réactive le principe panoptique." },
+    { "terme": "panoptisme", "sens": "Généralisation du principe panoptique à l'ensemble de la société disciplinaire.", "usage": "Le panoptisme dépasse les murs de la prison." },
+    { "terme": "normalisation", "sens": "Processus par lequel une norme sert à comparer, différencier, hiérarchiser, homogénéiser et exclure.", "usage": "Les courbes de croissance participent à la normalisation de l'enfance." },
+    { "terme": "norme", "sens": "Règle qui s'impose moins par l'interdit que par la mesure de l'écart à une moyenne ou à un idéal de conduite.", "usage": "La norme du « bon poids » ne punit pas, elle classe." },
+    { "terme": "quadrillage", "sens": "Répartition des individus dans l'espace (cellules, rangs, places) qui permet de localiser et de contrôler chacun.", "usage": "Le plan de l'entrepôt opère un quadrillage des postes." },
+    { "terme": "emploi du temps", "sens": "Découpage minutieux du temps qui règle l'activité des corps.", "usage": "L'emploi du temps des soigneurs suit celui des animaux." },
+    { "terme": "pouvoir souverain", "sens": "Pouvoir ancien fondé sur le droit de faire mourir ou de laisser vivre, qui s'exerce par prélèvement.", "usage": "Le supplice public manifestait le pouvoir souverain." },
+    { "terme": "biopouvoir", "sens": "Pouvoir qui prend en charge la vie pour la gérer, l'optimiser et la multiplier.", "usage": "Le biopouvoir s'intéresse aux taux plus qu'aux sujets." },
+    { "terme": "biopolitique", "sens": "Gestion de la population comme ensemble vivant : natalité, mortalité, santé, longévité, hygiène.", "usage": "La politique nataliste est un cas d'école de biopolitique." },
+    { "terme": "anatomo-politique du corps", "sens": "Versant disciplinaire du biopouvoir, centré sur le corps individuel comme machine à rendre performante.", "usage": "Les programmes d'entraînement relèvent de l'anatomo-politique du corps." },
+    { "terme": "population", "sens": "Objet de gouvernement apparu avec la statistique, doté de régularités propres (natalité, morbidité).", "usage": "La population de girafes captives est gérée à l'échelle mondiale." },
+    { "terme": "gouvernementalité", "sens": "Art de gouverner qui « conduit les conduites » par des institutions, des savoirs et des dispositifs de sécurité.", "usage": "La gouvernementalité libérale préfère l'incitation à l'interdiction." },
+    { "terme": "dispositifs de sécurité", "sens": "Techniques qui gèrent des phénomènes aléatoires à l'échelle d'une population : risques, moyennes, seuils acceptables.", "usage": "La gestion des épidémies mobilise des dispositifs de sécurité." },
+    { "terme": "pouvoir pastoral", "sens": "Pouvoir qui veille sur chacun et sur tous, comme le berger sur son troupeau, et qui exige de connaître les consciences.", "usage": "L'accompagnement individualisé prolonge le pouvoir pastoral." },
+    { "terme": "aveu", "sens": "Technique de production de vérité sur soi, de la confession religieuse aux sciences de la sexualité.", "usage": "Le questionnaire de satisfaction est une forme laïque d'aveu." },
+    { "terme": "hypothèse répressive", "sens": "Idée, critiquée par Foucault, selon laquelle la sexualité moderne aurait été surtout réprimée et tue.", "usage": "Contre l'hypothèse répressive, Foucault montre la prolifération des discours." },
+    { "terme": "dispositif de sexualité", "sens": "Ensemble des discours, savoirs et pratiques qui ont fait de la sexualité la vérité profonde des individus.", "usage": "Le dispositif de sexualité incite à parler plutôt qu'à taire." },
+    { "terme": "régime de vérité", "sens": "Procédures qui, dans une société, règlent la production, la circulation et le statut des énoncés tenus pour vrais.", "usage": "Le classement des ventes obéit à un régime de vérité comptable." },
+    { "terme": "assujettissement", "sens": "Double processus par lequel l'individu est soumis et constitué comme sujet.", "usage": "L'assujettissement fait de chacun l'auteur de sa propre surveillance." },
+    { "terme": "techniques de soi", "sens": "Pratiques par lesquelles les individus se transforment eux-mêmes (souci de soi), étudiées par le dernier Foucault.", "usage": "Le journal intime est une technique de soi." },
+    { "terme": "résistance", "sens": "Contre-pouvoir coextensif au pouvoir : là où il y a pouvoir, il y a résistance.", "usage": "La résistance naît au cœur même du dispositif." },
+    { "terme": "regard médical", "sens": "Regard clinique qui objective le corps du malade et le rend lisible comme cas (Naissance de la clinique, 1963).", "usage": "Le regard médical voit la lésion avant la personne." },
+    { "terme": "grand renfermement", "sens": "Internement massif des pauvres, des fous et des oisifs à l'âge classique (Histoire de la folie).", "usage": "Le grand renfermement sépare raison et déraison." },
+    { "terme": "illégalismes", "sens": "Pratiques de transgression que le pouvoir gère de manière différentielle, tolérant les unes et réprimant les autres.", "usage": "La gestion des illégalismes protège certaines fraudes et traque les autres." },
+    { "terme": "microphysique du pouvoir", "sens": "Analyse du pouvoir à l'échelle des gestes, des corps et des règlements plutôt qu'à celle de l'État.", "usage": "La microphysique du pouvoir commence par le règlement intérieur." }
+  ],
+  "formules": [
+    "Concernant {sujet}, la question n'est pas « qui détient le pouvoir ? » mais « comment s'exerce-t-il ? ».",
+    "Le pouvoir ne se possède pas, il s'exerce : dans {sujet}, il circule comme dans un réseau.",
+    "{sujet} n'est pas seulement un objet de savoir : c'est un lieu où savoir et pouvoir se renforcent mutuellement.",
+    "Il faut retracer la généalogie qui a rendu {element} pensable.",
+    "Derrière l'évidence, il y a un dispositif : des discours, des règlements, des architectures, des savoirs.",
+    "Ce qui se présente comme une libération peut être une autre manière de gouverner les conduites.",
+    "La norme ne punit pas : elle compare, différencie, hiérarchise, corrige.",
+    "Être visible en permanence finit par produire des sujets qui se surveillent eux-mêmes.",
+    "Pour {public}, l'injonction prend la forme d'un conseil bienveillant : c'est ainsi que travaille la normalisation.",
+    "Entre {a} et {b}, le point commun n'est pas l'objet, mais le régime de visibilité qui les rend gouvernables.",
+    "Rapprocher {a} et {b}, c'est faire apparaître un même dispositif de mesure et de contrôle.",
+    "{evenement} n'est pas une rupture : c'est une nouvelle économie du pouvoir.",
+    "Il ne s'agit pas de dénoncer un complot, mais de décrire une stratégie sans stratège.",
+    "Là où il y a pouvoir, il y a résistance.",
+    "Le terme « {terme} » ne nomme pas une chose mais un ensemble de pratiques.",
+    "Qui est autorisé à dire le vrai sur {sujet}, et depuis quelle institution ?",
+    "Le corps est ici dressé, mesuré, rendu utile et docile.",
+    "On ne fait pas taire {element} : on l'incite à se dire, à se compter, à s'avouer.",
+    "La population devient un objet de gestion : natalité, morbidité, longévité.",
+    "Faire l'histoire du présent, c'est montrer que ce qui nous paraît nécessaire est en réalité contingent.",
+    "Ce qui compte n'est pas de savoir si l'on dit vrai sur {sujet}, mais selon quel régime de vérité on en parle.",
+    "La surveillance ne se voit plus : elle est devenue architecture, protocole, tableau de bord.",
+    "L'archive conduit à une conclusion qui dérange les évidences : {conclusion}.",
+    "Il faut se demander quels savoirs fondent les normes appliquées dans {sujet}.",
+    "Dans {sujet}, l'examen combine le regard qui surveille et la note qui classe.",
+    "La moyenne, une fois devenue norme, désigne ceux qu'il faudra corriger.",
+    "Le pouvoir n'est pas seulement répressif : il produit des savoirs, des conduites et des sujets.",
+    "La visibilité est un piège : qui se sait vu se conduit comme on l'attend.",
+    "Il faut partir des pratiques, non des intentions déclarées.",
+    "Avec {evenement}, une nouvelle catégorie d'individus devient objet de savoir et de contrôle.",
+    "Chaque règlement minuscule dit quelque chose d'une rationalité de gouvernement."
+  ],
+  "connecteurs": [
+    "Or,",
+    "Paradoxalement,",
+    "À l'inverse,",
+    "Plus profondément,",
+    "Ce faisant,",
+    "Dès lors,",
+    "Autrement dit,",
+    "En ce sens,",
+    "Historiquement,",
+    "Par un renversement,",
+    "Du même coup,",
+    "Loin de là,",
+    "Non sans ironie,"
+  ],
+  "euphemismes": [
+    { "brut": "un simple conseil de santé", "edl": "une technique de normalisation des conduites", "commentaire": "Le pouvoir moderne gouverne par la norme plus que par l'interdit." },
+    { "brut": "le bien-être de la population", "edl": "la biopolitique : la gestion de la vie d'une population", "commentaire": "Pouvoir qui administre, optimise et multiplie la vie (La Volonté de savoir, 1976)." },
+    { "brut": "la transparence", "edl": "un régime de visibilité qui expose les individus au regard", "commentaire": "Le panoptique fait de la visibilité un instrument de pouvoir." },
+    { "brut": "le suivi personnalisé", "edl": "une surveillance continue qui individualise par le dossier", "commentaire": "L'examen fait de chacun un cas documenté (Surveiller et punir)." },
+    { "brut": "une évaluation", "edl": "un examen, qui combine surveillance et sanction normalisatrice", "commentaire": "Il produit à la fois du savoir et du classement." },
+    { "brut": "l'humanisation des peines", "edl": "le passage du supplice à la discipline : punir mieux, non punir moins", "commentaire": "Thèse centrale de Surveiller et punir (1975)." },
+    { "brut": "la libération de la parole", "edl": "une incitation aux discours au sein d'un dispositif de vérité", "commentaire": "Critique de l'hypothèse répressive (La Volonté de savoir)." },
+    { "brut": "la vérité scientifique", "edl": "un régime de vérité indissociable de rapports de pouvoir", "commentaire": "Pouvoir-savoir : on ne sépare pas connaître et gouverner." },
+    { "brut": "un comportement anormal", "edl": "un écart construit par une norme", "commentaire": "L'anormal est le corrélat de la normalisation." },
+    { "brut": "se confier", "edl": "pratiquer l'aveu, technique de production de vérité sur soi", "commentaire": "De la confession à la clinique et aux sciences de la sexualité." },
+    { "brut": "l'aménagement de l'espace", "edl": "un quadrillage disciplinaire", "commentaire": "Localiser les corps pour les surveiller et les rendre utiles." },
+    { "brut": "les horaires", "edl": "l'emploi du temps disciplinaire", "commentaire": "Contrôle de l'activité par le découpage du temps." },
+    { "brut": "la gestion des risques", "edl": "un dispositif de sécurité", "commentaire": "Gérer l'aléatoire à l'échelle d'une population (cours au Collège de France)." },
+    { "brut": "se prendre en main", "edl": "se gouverner soi-même selon les normes attendues : la conduite des conduites", "commentaire": "Gouvernementalité et techniques de soi." },
+    { "brut": "la folie", "edl": "un partage historique entre raison et déraison", "commentaire": "Histoire de la folie à l'âge classique (1961)." },
+    { "brut": "l'avis de l'expert", "edl": "la parole d'un sujet autorisé par un ordre du discours", "commentaire": "Qui a le droit de dire le vrai, et depuis quelle institution ?" },
+    { "brut": "les progrès de la médecine", "edl": "la naissance d'un regard médical qui objective le corps", "commentaire": "Naissance de la clinique (1963)." }
+  ],
+  "substitutions": [
+    { "de": "pouvoir", "vers": "relations de pouvoir" },
+    { "de": "contrôle", "vers": "surveillance" },
+    { "de": "règle", "vers": "norme" },
+    { "de": "évaluation", "vers": "examen" },
+    { "de": "classement", "vers": "sanction normalisatrice" },
+    { "de": "santé publique", "vers": "biopolitique" },
+    { "de": "statistiques", "vers": "savoirs de gouvernement" },
+    { "de": "horaire", "vers": "emploi du temps disciplinaire" },
+    { "de": "aménagement", "vers": "quadrillage" },
+    { "de": "confession", "vers": "aveu" },
+    { "de": "témoignage", "vers": "aveu" },
+    { "de": "vérité", "vers": "régime de vérité" },
+    { "de": "système", "vers": "dispositif" },
+    { "de": "idéologie", "vers": "discours" },
+    { "de": "expert", "vers": "sujet autorisé du discours" },
+    { "de": "anormal", "vers": "écart à la norme" },
+    { "de": "patient", "vers": "cas" },
+    { "de": "prison", "vers": "institution disciplinaire" },
+    { "de": "transparence", "vers": "visibilité" },
+    { "de": "caméra", "vers": "œil panoptique" },
+    { "de": "conseil", "vers": "conduite des conduites" },
+    { "de": "gestion", "vers": "gouvernementalité" },
+    { "de": "obéissance", "vers": "docilité" },
+    { "de": "dossier", "vers": "écriture disciplinaire" },
+    { "de": "risque", "vers": "dispositif de sécurité" },
+    { "de": "progrès", "vers": "nouvelle économie du pouvoir" }
+  ],
+  "cadres": [
+    { "nom": "Pouvoir-savoir", "question": "Quels savoirs se constituent sur {sujet}, et quels pouvoirs rendent-ils possibles ?", "explication": "Connaître et gouverner les humains sont deux opérations inséparables." },
+    { "nom": "Dispositif", "question": "Quels éléments hétérogènes (discours, lieux, règlements, savoirs) composent le dispositif où s'inscrit {sujet} ?", "explication": "Le dispositif est le réseau qui relie des éléments disparates autour d'une fonction stratégique." },
+    { "nom": "Discipline", "question": "Comment, dans {sujet}, les corps sont-ils répartis, surveillés, classés et corrigés ?", "explication": "Les disciplines fabriquent des corps utiles et dociles." },
+    { "nom": "Biopolitique", "question": "Quelle gestion de la vie des populations se joue à travers {element} ?", "explication": "Le pouvoir moderne prend en charge la natalité, la santé et la longévité." },
+    { "nom": "Normalisation", "question": "Quelle norme définit ici le normal et l'anormal, et qui la fixe ?", "explication": "La norme compare et hiérarchise plus qu'elle n'interdit." },
+    { "nom": "Généalogie", "question": "À quelle date, et au terme de quelles luttes, est apparue la manière actuelle de penser {sujet} ?", "explication": "Ce qui paraît nécessaire résulte d'une histoire contingente." },
+    { "nom": "Résistances", "question": "Quelles contre-conduites et quelles résistances apparaissent dans {sujet} ?", "explication": "La résistance n'est jamais extérieure au pouvoir." }
+  ],
+  "structures": [
+    {
+      "nom": "Généalogie : histoire du présent",
+      "description": "Partir d'une évidence actuelle, la confronter aux archives, repérer la discontinuité et le dispositif, montrer les effets sur les sujets et la contingence de l'ensemble.",
+      "etapes": [
+        {
+          "titre": "L'évidence présente",
+          "role": "contexte",
+          "consigne": "Partir de ce qui va de soi aujourd'hui et annoncer qu'on va en faire l'histoire.",
+          "gabarits": [
+            "Concernant {sujet}, partons de ce qui nous paraît aujourd'hui aller de soi.",
+            "Rien ne semble plus naturel que {sujet} ; c'est précisément ce naturel qu'il faut interroger."
+          ]
+        },
+        {
+          "titre": "L'archive",
+          "role": "faits",
+          "consigne": "Mobiliser règlements, plans, traités ou séries chiffrées, en soulignant les catégories qu'ils supposent.",
+          "gabarits": [
+            "Les règlements, les plans et les traités montrent autre chose : {element} y apparaît comme un problème à gérer.",
+            "L'archive livre des chiffres ({chiffre}), mais surtout les catégories qui les ont rendus possibles."
+          ]
+        },
+        {
+          "titre": "La discontinuité",
+          "role": "analyse",
+          "consigne": "Montrer une rupture entre deux régimes de pratiques plutôt qu'un progrès continu.",
+          "gabarits": [
+            "Entre {a} et {b}, il n'y a pas continuité d'un progrès, mais rupture entre deux régimes de pratiques.",
+            "À un moment précis, la manière de penser et de traiter {sujet} change de logique."
+          ]
+        },
+        {
+          "titre": "Le dispositif",
+          "role": "analyse",
+          "consigne": "Décrire le réseau hétérogène (discours, institutions, architectures, règlements) qui soutient la nouvelle pratique.",
+          "gabarits": [
+            "Ce changement s'inscrit dans un dispositif : discours savants, institutions, architectures, règlements.",
+            "{evenement} répond à une urgence et cristallise un nouveau dispositif."
+          ]
+        },
+        {
+          "titre": "Les effets sur les sujets",
+          "role": "tension",
+          "consigne": "Montrer comment le dispositif classe, mesure et constitue des sujets qui intériorisent la norme.",
+          "gabarits": [
+            "Ce dispositif fabrique des sujets : il les classe, les mesure, les incite à se dire.",
+            "Pour {public}, la norme est devenue intérieure ; elle ne contraint plus, elle oriente."
+          ]
+        },
+        {
+          "titre": "La contingence",
+          "role": "conclusion",
+          "consigne": "Conclure sur le caractère historique et donc transformable de ce qui paraissait nécessaire.",
+          "gabarits": [
+            "Ce qui paraissait nécessaire se révèle contingent : {conclusion}.",
+            "Faire la généalogie de ces pratiques, c'est rouvrir la possibilité d'une transformation."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Analyse disciplinaire",
+      "description": "Modèle de Surveiller et punir (1975) : scènes contrastées, techniques de quadrillage, principe panoptique, production d'individus, généralisation à la société.",
+      "etapes": [
+        {
+          "titre": "Deux scènes contrastées",
+          "role": "contexte",
+          "consigne": "Ouvrir sur un contraste entre un ancien et un nouveau régime de pratiques.",
+          "gabarits": [
+            "Deux scènes, à quelques décennies d'écart : d'un côté l'éclat du châtiment, de l'autre l'emploi du temps minutieux.",
+            "Concernant {sujet}, un contraste semblable oppose l'ancien régime de pratiques au nouveau."
+          ]
+        },
+        {
+          "titre": "Les techniques",
+          "role": "faits",
+          "consigne": "Décrire concrètement la répartition des corps, le contrôle du temps, l'enregistrement.",
+          "gabarits": [
+            "On répartit, on chronomètre, on note : dans {sujet}, les corps sont quadrillés.",
+            "Les registres consignent {chiffre} : chaque individu devient un cas."
+          ]
+        },
+        {
+          "titre": "Le principe panoptique",
+          "role": "analyse",
+          "consigne": "Montrer comment la visibilité organisée produit l'autosurveillance.",
+          "gabarits": [
+            "Le principe est panoptique : être vu sans voir qui regarde.",
+            "Entre {a} et {b}, le même schéma se retrouve : une visibilité organisée qui rend la surveillance presque inutile."
+          ]
+        },
+        {
+          "titre": "La production d'individus",
+          "role": "tension",
+          "consigne": "Souligner que la discipline produit plus qu'elle ne réprime.",
+          "gabarits": [
+            "La discipline ne réprime pas seulement : elle fabrique des corps utiles et dociles.",
+            "{element} n'est pas un dérapage du système, mais l'un de ses produits normaux."
+          ]
+        },
+        {
+          "titre": "La généralisation",
+          "role": "projection",
+          "consigne": "Montrer la diffusion du modèle au-delà de l'institution d'origine.",
+          "gabarits": [
+            "Le modèle déborde ses murs : l'école, l'usine, l'hôpital et l'entreprise s'en inspirent.",
+            "On peut prévoir que {sujet} étendra encore ses techniques de mesure et de suivi."
+          ]
+        },
+        {
+          "titre": "Conclusion",
+          "role": "conclusion",
+          "consigne": "Conclure sur la place du sujet étudié dans une société disciplinaire.",
+          "gabarits": [
+            "La conclusion s'impose : {conclusion}.",
+            "Au terme de l'analyse, {sujet} apparaît comme une pièce d'une société disciplinaire."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Lecture biopolitique",
+      "description": "Lire un sujet comme gestion d'une population vivante : mesures, normes de santé, incitation des conduites.",
+      "etapes": [
+        {
+          "titre": "La population comme objet",
+          "role": "contexte",
+          "consigne": "Montrer que l'enjeu porte sur une population et ses régularités plutôt que sur des individus.",
+          "gabarits": [
+            "Concernant {sujet}, l'enjeu n'est pas l'individu mais une population, avec ses taux et ses régularités.",
+            "{evenement} fait d'un ensemble vivant un objet de gouvernement."
+          ]
+        },
+        {
+          "titre": "Les mesures",
+          "role": "faits",
+          "consigne": "Exposer les données (natalité, longévité, morbidité) comme instruments de gestion.",
+          "gabarits": [
+            "On compte, on suit, on projette : {chiffre}.",
+            "Natalité, longévité, morbidité : {element} entre dans la comptabilité de la vie."
+          ]
+        },
+        {
+          "titre": "Les normes du vivant",
+          "role": "analyse",
+          "consigne": "Décrire les seuils, moyennes et risques acceptables qui définissent la bonne gestion.",
+          "gabarits": [
+            "Des seuils, des moyennes et des risques acceptables définissent la bonne gestion du vivant.",
+            "Pour {a} comme pour {b}, la même rationalité gouverne : optimiser la vie d'une population."
+          ]
+        },
+        {
+          "titre": "Gouverner les conduites",
+          "role": "tension",
+          "consigne": "Montrer que l'incitation et le conseil sont des techniques de pouvoir.",
+          "gabarits": [
+            "La biopolitique ne commande pas : elle incite, conseille, encadre.",
+            "Pour {public}, ces normes prennent le visage du bien-être ; elles n'en sont pas moins des techniques de pouvoir."
+          ]
+        },
+        {
+          "titre": "Conclusion",
+          "role": "conclusion",
+          "consigne": "Conclure sur la logique de gestion de la vie qui sous-tend le sujet.",
+          "gabarits": [
+            "Faire vivre, gérer, optimiser : telle est la logique qui sous-tend {sujet}.",
+            "L'analyse débouche sur ce constat : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Les chiffres ne sont pas des reflets neutres mais des instruments de gouvernement : la statistique, l'examen et le dossier font exister des populations et des cas. La grille travaille surtout sur archives et analyse comment la mesure produit la norme.",
+    "unites": [
+      "taux de natalité",
+      "taux de mortalité et de morbidité",
+      "espérance de vie",
+      "moyenne et écart à la norme",
+      "registre et dossier individuel",
+      "seuil de risque acceptable"
+    ],
+    "formulations": [
+      "Le chiffre de {chiffre} n'est pas seulement une mesure : c'est un instrument de gouvernement.",
+      "Compter, c'est déjà normaliser : {chiffre} trace la frontière entre le normal et l'écart.",
+      "Pour {a}, {chiffre} ; pour {b}, une autre valeur : la comparaison elle-même fait exister une population à gérer.",
+      "Natalité, morbidité, longévité : {element} entre dans la grande comptabilité de la vie.",
+      "Derrière {chiffre}, il y a un dossier, un registre, un examen : toute une écriture disciplinaire.",
+      "La moyenne devient norme : {chiffre} sert désormais à repérer ceux qui s'en écartent.",
+      "Qui a produit {chiffre}, avec quelles catégories, et pour gouverner quoi ?"
+    ]
+  },
+  "metaphores": [
+    "le panoptique et sa tour centrale",
+    "l'œil qui voit sans être vu",
+    "la microphysique du pouvoir",
+    "le réseau capillaire du pouvoir",
+    "le dressage des corps",
+    "le quadrillage",
+    "l'archipel carcéral",
+    "l'archéologie et ses strates",
+    "la généalogie",
+    "le berger et son troupeau (pouvoir pastoral)",
+    "la boîte à outils : des concepts à utiliser plutôt qu'à vénérer",
+    "la visibilité comme piège"
+  ],
+  "pieges": [
+    "Confusion normative : la critique du pouvoir ne dit pas au nom de quoi elle critique (Nancy Fraser, 1981 ; Habermas).",
+    "Pouvoir omniprésent : si tout est pouvoir, le concept perd sa capacité à distinguer.",
+    "Place réduite de l'agentivité, que le dernier Foucault réintroduit avec les techniques de soi et la résistance.",
+    "Panoptique passe-partout : plaquer la tour de Bentham sur toute caméra ou toute application sans analyse précise.",
+    "Lecture conspirationniste : confondre « stratégie sans stratège » et complot délibéré.",
+    "Relativisme supposé : réduire la science à un pur effet de pouvoir.",
+    "Généralisations historiques discutées par les historiens (chronologies, choix des sources).",
+    "Inflation du mot « dispositif », employé pour n'importe quel ensemble organisé.",
+    "Esthétique du dévoilement sombre, qui rend invisibles les gains réels de liberté ou de santé."
+  ],
+  "registres": {
+    "institutionnel": "Rarement assumée par les institutions, la grille y affleure sous les mots « évaluation », « prévention » et « bonnes pratiques », qu'elle prend justement pour objet.",
+    "technique": "Entre pairs : dispositifs, régimes de vérité, gouvernementalité, techniques disciplinaires et biopolitiques, généalogie des problématisations.",
+    "vulgarisation": "Pour le grand public : « nous sommes surveillés partout » et « ce qu'on appelle normal a une histoire ».",
+    "critique": "Ses détracteurs raillent un soupçon généralisé où chaque cantine scolaire devient une prison et chaque conseil de santé un dressage."
+  },
+  "visuel": {
+    "palette": ["#37474F", "#B0BEC5", "#121212", "#F2F2F2", "#D4A017"],
+    "motifs": [
+      { "fr": "panoptique : tour centrale et cellules en anneau rétroéclairées", "en": "panopticon: central tower and a backlit ring of cells" },
+      { "fr": "plan d'architecture qui se dessine au trait", "en": "architectural blueprint drawing itself line by line" },
+      { "fr": "emploi du temps quadrillé qui se remplit", "en": "grid timetable filling up" },
+      { "fr": "courbe en cloche dont la moyenne devient une barre de contrôle", "en": "bell curve whose mean turns into a control bar" },
+      { "fr": "dossiers individuels empilés avec photos d'identité", "en": "stacked individual case files with ID photos" },
+      { "fr": "rangées d'élèves, de soldats et d'ouvriers alignés", "en": "aligned rows of pupils, soldiers and workers" },
+      { "fr": "œil stylisé au centre d'un réseau capillaire", "en": "stylised eye at the center of a capillary network" },
+      { "fr": "silhouette entourée de règles graduées", "en": "silhouette surrounded by measuring rulers" },
+      { "fr": "mosaïque d'écrans de vidéosurveillance", "en": "mosaic of CCTV screens" },
+      { "fr": "strates géologiques faites d'archives", "en": "geological strata made of archival papers" }
+    ],
+    "pictogrammes": [
+      { "fr": "œil", "en": "eye" },
+      { "fr": "tour de guet", "en": "watchtower" },
+      { "fr": "dossier", "en": "case file" },
+      { "fr": "règle graduée", "en": "ruler" },
+      { "fr": "chronomètre", "en": "stopwatch" },
+      { "fr": "caméra", "en": "security camera" },
+      { "fr": "stéthoscope", "en": "stethoscope" },
+      { "fr": "registre", "en": "register book" },
+      { "fr": "cadenas", "en": "padlock" },
+      { "fr": "courbe en cloche", "en": "bell curve" }
+    ],
+    "typographie": "Linéale grotesque austère, d'allure administrative, avec cotes d'archives et chiffres en caractères de machine à écrire.",
+    "style_motion": "Plans d'architecture et documents d'archives animés en noir, gris et lumière ambrée : la caméra tourne autour d'une tour panoptique, des cellules s'éclairent une à une, des fiches se remplissent et des courbes se normalisent ; ton froid, précis, presque clinique.",
+    "style_motion_en": "Animated architectural blueprints and archival documents in black, grey and amber light: the camera orbits a panopticon tower, cells light up one by one, index cards fill in and curves normalise; cold, precise, almost clinical tone."
+  },
+  "exemples": [
+    { "contexte": "Formule de La Volonté de savoir (1976), relevée dans plusieurs sources secondaires (Acta fabula ; ouvrage collectif dirigé par Philippe Sabot).", "texte": "« Là où il y a pouvoir, il y a résistance »" },
+    { "contexte": "Fragment de l'entretien de 1977 sur la notion de dispositif, cité par des sources secondaires (encyclopédie, discourseanalysis.net) ; à vérifier dans Dits et écrits.", "texte": "« Le dispositif lui-même, c'est le réseau qu'on peut établir entre ces éléments. »" },
+    { "contexte": "Formulation illustrative, non citée : comment la grille lirait la comparaison entre ventes de pantoufles irlandaises et naissances de girafons à Melbourne.", "texte": "« La naissance du girafon n'est pas qu'un heureux événement : elle s'inscrit dans une biopolitique du vivant captif, avec ses registres de reproduction, ses programmes d'élevage et ses vétérinaires. Les pantoufles relèvent d'une discipline plus douce, celle d'un corps domestique invité au repos réglé. »" },
+    { "contexte": "Formulation illustrative, non citée : lecture typique d'une politique de santé.", "texte": "« Le dépistage généralisé ne se contente pas de soigner : il constitue une population à risque, la mesure, la suit et l'incite à se surveiller elle-même. »" }
+  ],
+  "sources": [
+    { "titre": "Michel Foucault", "auteur": "Stanford Encyclopedia of Philosophy", "url": "https://plato.stanford.edu/entries/foucault/", "apport": "Pouvoir-savoir, discipline, examen, panoptique, biopouvoir, pouvoir productif, archéologie et généalogie, pratiques de soi." },
+    { "titre": "Dispositif", "auteur": "Wikipedia", "url": "https://wikipedia.com/wiki/Dispositif", "apport": "Définition hétérogène du dispositif (entretien de 1977) et débats de traduction." },
+    { "titre": "Article d'Acta fabula citant La Volonté de savoir", "auteur": "Acta fabula", "url": "https://www.fabula.org/revue/document3401.php", "apport": "Attribution de la formule « Là où il y a pouvoir, il y a résistance »." },
+    { "titre": "Ouvrage collectif dirigé par Philippe Sabot (PDF)", "auteur": "Université de Lille", "url": "https://pro.univ-lille.fr/fileadmin/user_upload/pages_pros/philippe_sabot/2089_Sabot__dir._.pdf", "apport": "Résistance coextensive au pouvoir." },
+    { "titre": "La productivité du pouvoir (colloque Marx-Foucault)", "auteur": "Christian Laval", "url": "https://questionmarx.typepad.fr/files/colloque-marx-foucault-christian-laval.docx", "apport": "Pouvoir productif ; résistance ni antérieure ni extérieure au pouvoir." },
+    { "titre": "Foucault–Habermas debate", "auteur": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Foucault%E2%80%93Habermas_debate", "apport": "Critiques normatives (Fraser, Habermas)." },
+    { "titre": "Article de Foucault Studies sur Habermas, Fraser et Foucault", "auteur": "Foucault Studies (Copenhagen Business School)", "url": "https://rauli.cbs.dk/index.php/foucault-studies/article/download/5890/6560/21348", "apport": "Débat sur les fondements normatifs de la critique foucaldienne." },
+    { "titre": "The Birth of the Clinic", "auteur": "Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Birth_of_the_Clinic", "apport": "Application à la médecine : regard médical, PUF 1963." }
+  ]
+}

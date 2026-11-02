@@ -1,0 +1,11 @@
+# SearXNG minimal pour Lexinode : active la sortie JSON utilisée par l'agent chercheur
+use_default_settings: true
+server:
+  secret_key: "changez-moi-par-une-longue-chaine-aleatoire"
+  limiter: false
+  image_proxy: false
+search:
+  safe_search: 0
+  formats:
+    - html
+    - json

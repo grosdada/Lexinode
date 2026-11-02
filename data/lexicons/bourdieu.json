@@ -1,0 +1,404 @@
+{
+  "id": "bourdieu",
+  "nom": "Bourdieu — champ & capital",
+  "famille": "sociologie",
+  "categorie": "Sociologie critique",
+  "icone": "♟️",
+  "couleur": "#AD1457",
+  "description": "Grille de lecture inspirée de Pierre Bourdieu (1930-2002) : tout sujet est replacé dans un espace social et dans des champs où des agents inégalement dotés en capital luttent pour des enjeux spécifiques. Elle dévoile ce que les goûts, les talents et les choix doivent à l'habitus, à la reproduction et à la violence symbolique.",
+  "posture": "Sociologue critique qui parle depuis l'autorité d'une science construite contre le sens commun : il objective, met en relation et dévoile, tout en revendiquant une réflexivité sur sa propre position. Il raisonne en probabilités et en relations, jamais en essences.",
+  "valeurs": [
+    "rupture avec le sens commun",
+    "objectivation",
+    "pensée relationnelle",
+    "réflexivité",
+    "dévoilement des mécanismes de domination",
+    "autonomie de la science sociale"
+  ],
+  "vocabulaire": [
+    { "terme": "champ", "sens": "Microcosme social relativement autonome (art, science, journalisme, mode…) structuré par des rapports de forces entre positions et par un enjeu spécifique.", "usage": "Le champ de la haute couture a ses dominants consacrés et ses prétendants hérétiques." },
+    { "terme": "espace social", "sens": "Espace de positions défini par le volume global de capital et par sa structure (poids relatif du capital économique et du capital culturel).", "usage": "Dans l'espace social, le professeur et le patron d'industrie sont proches par le volume, éloignés par la structure du capital." },
+    { "terme": "capital économique", "sens": "Ensemble des ressources matérielles et financières, convertibles en d'autres espèces de capital.", "usage": "Le capital économique n'achète pas directement la légitimité culturelle." },
+    { "terme": "capital culturel", "sens": "Ressources culturelles sous trois états : incorporé (dispositions), objectivé (biens culturels), institutionnalisé (titres scolaires).", "usage": "La réussite scolaire rentabilise un capital culturel transmis par la famille." },
+    { "terme": "capital social", "sens": "Ressources liées à la possession d'un réseau durable de relations mobilisables.", "usage": "Le carnet d'adresses est un capital social qui ne dit pas son nom." },
+    { "terme": "capital symbolique", "sens": "Toute espèce de capital en tant qu'elle est perçue et reconnue comme légitime : prestige, renommée, honneur.", "usage": "La griffe confère à l'objet un capital symbolique sans en changer la matière." },
+    { "terme": "habitus", "sens": "Système de dispositions durables et transposables, incorporées au fil de la socialisation, qui engendre des pratiques et des représentations ajustées aux conditions de leur production.", "usage": "L'habitus explique que l'on se sente « à sa place » dans certains lieux et pas dans d'autres." },
+    { "terme": "dispositions", "sens": "Manières d'être, de percevoir et d'agir incorporées, qui orientent les pratiques sans calcul conscient.", "usage": "Ces dispositions esthétiques se sont formées bien avant tout choix explicite." },
+    { "terme": "hexis corporelle", "sens": "L'habitus devenu manière de se tenir, de parler, de manger : le social inscrit dans le corps.", "usage": "L'aisance du maintien est une hexis corporelle de classe." },
+    { "terme": "distinction", "sens": "Écart différentiel par lequel une pratique ou un goût signale et légitime une position sociale.", "usage": "Le refus du spectaculaire peut être lui-même une stratégie de distinction." },
+    { "terme": "goût de nécessité", "sens": "Goût ajusté à des conditions d'existence contraintes, qui valorise le substantiel et le fonctionnel.", "usage": "Le goût de nécessité préfère le copieux au raffiné." },
+    { "terme": "goût de liberté", "sens": "Goût des fractions dotées, marqué par la distance à la nécessité et le primat de la forme sur la fonction.", "usage": "Le goût de liberté s'affirme dans la stylisation de l'objet le plus ordinaire." },
+    { "terme": "bonne volonté culturelle", "sens": "Rapport révérencieux mais anxieux des classes moyennes à la culture légitime.", "usage": "La collection d'encyclopédies illustre une bonne volonté culturelle." },
+    { "terme": "légitimité culturelle", "sens": "Hiérarchie des biens et des pratiques reconnue comme supérieure, y compris par ceux qui en sont tenus à l'écart.", "usage": "L'opéra bénéficie d'une légitimité culturelle que le karaoké n'a pas." },
+    { "terme": "violence symbolique", "sens": "Domination qui s'exerce avec la complicité de ceux qui la subissent, parce qu'elle est méconnue comme violence et reconnue comme légitime.", "usage": "Se juger « pas fait pour ça » est un effet de violence symbolique." },
+    { "terme": "méconnaissance", "sens": "Fait de ne pas percevoir l'arbitraire d'une domination, condition même de sa reconnaissance.", "usage": "La méconnaissance de l'arbitraire scolaire fonde l'autorité du verdict." },
+    { "terme": "arbitraire culturel", "sens": "Culture particulière d'un groupe imposée comme culture universelle et légitime.", "usage": "L'école transmet un arbitraire culturel présenté comme la culture tout court." },
+    { "terme": "reproduction", "sens": "Processus par lequel la structure de distribution des capitaux se perpétue d'une génération à l'autre, notamment par l'école.", "usage": "La démocratisation scolaire n'a pas aboli la reproduction." },
+    { "terme": "héritiers", "sens": "Agents dotés dès l'origine du capital culturel que l'institution valorise comme un « don ».", "usage": "Les héritiers jouent sur un terrain qui leur est familier." },
+    { "terme": "idéologie du don", "sens": "Croyance qui convertit un héritage social en aptitude naturelle et légitime ainsi les inégalités.", "usage": "L'idéologie du don transforme le privilège en mérite." },
+    { "terme": "illusio", "sens": "Adhésion au jeu d'un champ et croyance que ses enjeux valent la peine d'être joués.", "usage": "Sans illusio, aucune passion collectionneuse ne serait possible." },
+    { "terme": "doxa", "sens": "Ensemble des présupposés indiscutés qui vont de soi dans un champ ou dans une société.", "usage": "La doxa du milieu tient pour évident ce qui est le produit d'une histoire." },
+    { "terme": "orthodoxie et hérésie", "sens": "Opposition entre la défense de l'ordre établi d'un champ et la subversion portée par les nouveaux entrants.", "usage": "Chaque génération d'avant-garde joue l'hérésie contre l'orthodoxie consacrée." },
+    { "terme": "position et prise de position", "sens": "La place occupée dans un champ et les choix (œuvres, discours, achats) qui l'expriment, reliés par une homologie.", "usage": "Le choix d'un manifeste esthétique est une prise de position qui trahit une position." },
+    { "terme": "homologie", "sens": "Correspondance structurale entre deux espaces : positions sociales et styles de vie, production et consommation.", "usage": "L'homologie entre l'offre et la demande ajuste sans concertation les produits aux publics." },
+    { "terme": "trajectoire", "sens": "Suite des positions occupées par un agent ou un groupe, qui oriente sa perception du présent.", "usage": "Une trajectoire ascendante se lit dans l'hypercorrection." },
+    { "terme": "stratégies de reproduction", "sens": "Pratiques, souvent non calculées, par lesquelles les familles maintiennent ou améliorent leur position.", "usage": "Le choix de l'établissement scolaire est une stratégie de reproduction." },
+    { "terme": "reconversion", "sens": "Transformation d'une espèce de capital en une autre pour conserver sa position.", "usage": "La bourgeoisie d'affaires opère une reconversion vers les grandes écoles." },
+    { "terme": "sens pratique", "sens": "Maîtrise pratique d'un jeu social sans représentation explicite de ses règles.", "usage": "Le sens pratique fait anticiper le coup juste sans y penser." },
+    { "terme": "sens des limites", "sens": "Disposition à s'exclure de ce dont on est déjà exclu ; versant dominé du sens du placement.", "usage": "Le sens des limites fait dire « ce n'est pas pour nous »." },
+    { "terme": "hystérésis", "sens": "Décalage entre un habitus formé dans des conditions passées et des conditions présentes transformées.", "usage": "L'hystérésis de l'habitus explique des stratégies devenues inadaptées." },
+    { "terme": "pouvoir symbolique", "sens": "Pouvoir de construire la réalité en imposant des catégories de perception, reconnu parce que méconnu.", "usage": "Nommer, c'est exercer un pouvoir symbolique." },
+    { "terme": "rite d'institution", "sens": "Acte (diplôme, nomination, consécration) qui institue une différence et la fait exister socialement.", "usage": "La remise du diplôme est un rite d'institution plus qu'un constat." },
+    { "terme": "consécration", "sens": "Reconnaissance accordée par les instances légitimes d'un champ, qui transmue une valeur en évidence.", "usage": "Le prix littéraire opère une consécration." },
+    { "terme": "marché linguistique", "sens": "Espace où les productions langagières reçoivent un prix selon la position de ceux qui parlent.", "usage": "Sur le marché linguistique, l'accent se paie." },
+    { "terme": "profit de distinction", "sens": "Gain symbolique tiré de la rareté d'un bien ou d'une pratique.", "usage": "Le profit de distinction s'effondre quand la pratique se diffuse." },
+    { "terme": "nouveaux entrants", "sens": "Prétendants qui contestent les dominants d'un champ, souvent au nom de l'avant-garde ou d'un retour aux sources.", "usage": "Les nouveaux entrants dénoncent l'académisme des établis." },
+    { "terme": "rupture épistémologique", "sens": "Arrachement aux prénotions du sens commun, première étape de la construction de l'objet sociologique.", "usage": "La rupture épistémologique commence par se méfier des mots du sujet." },
+    { "terme": "réflexivité", "sens": "Retour objectivant du sociologue sur sa propre position et sur les conditions sociales de son regard.", "usage": "La réflexivité oblige à se demander d'où l'on parle." }
+  ],
+  "formules": [
+    "Concernant {sujet}, il faut d'abord rompre avec les évidences du sens commun.",
+    "Loin d'être une affaire de goût personnel, {sujet} engage des dispositions socialement constituées.",
+    "Ce qui se joue dans {sujet}, c'est une lutte pour la définition légitime de ce qui vaut.",
+    "Tout se passe comme si la hiérarchie des goûts redoublait la hiérarchie des positions sociales.",
+    "Il faut replacer {element} dans l'espace des positions qui lui donne son sens.",
+    "Ce que l'on tient pour un don relève le plus souvent d'un capital culturel hérité.",
+    "Entre {a} et {b}, la différence n'est pas de nature : elle tient à la position occupée dans l'espace social.",
+    "Rapprocher {a} et {b} permet de mettre au jour une homologie structurale insoupçonnée.",
+    "Pour {public}, cette hiérarchie va de soi : c'est précisément l'effet de la violence symbolique.",
+    "La consommation, ici, relève moins du besoin que de la distinction.",
+    "Ce qui apparaît comme un choix libre est l'aboutissement probable d'une trajectoire sociale.",
+    "Le terme « {terme} » permet de rompre avec l'illusion d'un individu sans attaches.",
+    "Il faut se demander qui a intérêt à présenter {sujet} comme allant de soi.",
+    "Derrière {element}, il y a des conditions sociales de possibilité qu'il s'agit de reconstruire.",
+    "Les agents engagés dans {sujet} ne sont pas des calculateurs cyniques : ils sont pris au jeu.",
+    "L'objectivation conduit à une conclusion dérangeante : {conclusion}.",
+    "Il n'y a pas de pratique sans intérêt : même dans {sujet}, des profits symboliques sont en jeu.",
+    "C'est dans les relations entre positions, et non dans les propriétés des choses, que réside l'explication.",
+    "Le réel est relationnel.",
+    "La question n'est pas de savoir ce que vaut {sujet}, mais qui a le pouvoir d'en imposer la valeur légitime.",
+    "On aurait tort d'y voir une affaire de mérite individuel.",
+    "Il faut objectiver le point de vue même depuis lequel on observe {sujet}.",
+    "{sujet} fonctionne comme un champ, avec ses dominants, ses prétendants et ses enjeux spécifiques.",
+    "Le goût classe, et classe celui qui classe.",
+    "Ce qui se donne pour naturel est le produit d'une histoire collective oubliée en tant que telle.",
+    "Chacun tend à aimer ce qu'il a de bonnes chances d'obtenir : les espérances s'ajustent aux chances.",
+    "Avec {evenement}, ce sont les capitaux de chacun qui se trouvent soudain redistribués.",
+    "La pratique observée est d'autant plus probable que le capital culturel est élevé.",
+    "Il faut se garder de la double tentation du populisme et du misérabilisme.",
+    "Ce classement des goûts est aussi un classement de ceux qui classent.",
+    "Le sociologue n'invente pas les classements : il en restitue la genèse et les usages."
+  ],
+  "connecteurs": [
+    "Autrement dit,",
+    "En d'autres termes,",
+    "Loin de là,",
+    "Dès lors,",
+    "Plus précisément,",
+    "Par là même,",
+    "Corrélativement,",
+    "Inversement,",
+    "En réalité,",
+    "Paradoxalement,",
+    "Du même coup,",
+    "Ce faisant,",
+    "Bref,"
+  ],
+  "euphemismes": [
+    { "brut": "il a du talent", "edl": "il rentabilise un capital culturel hérité, converti en aptitude « naturelle »", "commentaire": "Idéologie du don : l'école consacre comme don ce que la famille a transmis (Les Héritiers, La Reproduction)." },
+    { "brut": "c'est une question de goût", "edl": "ce sont des dispositions esthétiques socialement situées", "commentaire": "Cœur de La Distinction : les jugements de goût réputés « purs » expriment une position sociale." },
+    { "brut": "elle l'a mérité", "edl": "la sanction scolaire a validé un héritage culturel", "commentaire": "Le mérite est relu comme rentabilisation d'un capital incorporé." },
+    { "brut": "c'est mon choix", "edl": "c'est un ajustement des espérances subjectives aux chances objectives", "commentaire": "Le « choix du nécessaire » : on aime ce que l'on a de bonnes chances d'avoir." },
+    { "brut": "il a une élégance naturelle", "edl": "il manifeste l'aisance des héritiers, une hexis corporelle de classe", "commentaire": "Le naturel est un social oublié, inscrit dans le corps." },
+    { "brut": "c'est vulgaire", "edl": "c'est un goût de nécessité disqualifié par le regard légitime", "commentaire": "Le dégoût du goût des autres est un ressort de la distinction." },
+    { "brut": "c'est une passion désintéressée", "edl": "c'est une illusio : un intérêt au désintéressement propre au champ", "commentaire": "Le désintéressement est lui-même profitable dans les champs culturels." },
+    { "brut": "il a du piston", "edl": "il mobilise un capital social", "commentaire": "Le réseau de relations est une espèce de capital à part entière." },
+    { "brut": "elle a du prestige", "edl": "elle détient un capital symbolique reconnu", "commentaire": "Le prestige n'est rien d'autre qu'un capital perçu comme légitime." },
+    { "brut": "il a une autorité naturelle", "edl": "il exerce un pouvoir symbolique reconnu parce que méconnu", "commentaire": "L'autorité tient à la croyance collective qui la fonde." },
+    { "brut": "ça a toujours été comme ça", "edl": "c'est la doxa : un arbitraire culturel naturalisé", "commentaire": "Ce qui va de soi est le produit d'une histoire oubliée." },
+    { "brut": "c'est une vocation", "edl": "c'est la rencontre ajustée d'un habitus et d'une position", "commentaire": "La vocation est relue comme accord entre dispositions et postes disponibles." },
+    { "brut": "c'est la nouvelle tendance", "edl": "c'est un coup joué par des prétendants contre les établis du champ de la mode", "commentaire": "Cf. Bourdieu et Delsaut, « Le couturier et sa griffe » (1975)." },
+    { "brut": "ce n'est pas pour moi", "edl": "c'est une auto-exclusion, effet du sens des limites", "commentaire": "La domination intériorisée fait renoncer d'avance." },
+    { "brut": "la note est objective", "edl": "le verdict scolaire est un rite d'institution", "commentaire": "Classer, c'est instituer une différence socialement reconnue." },
+    { "brut": "il s'est fait tout seul", "edl": "sa trajectoire ascendante repose sur des reconversions de capitaux", "commentaire": "Le self-made man est relu comme une trajectoire objectivable." }
+  ],
+  "substitutions": [
+    { "de": "talent", "vers": "capital culturel incorporé" },
+    { "de": "don", "vers": "capital culturel hérité" },
+    { "de": "goût", "vers": "dispositions esthétiques" },
+    { "de": "milieu", "vers": "champ" },
+    { "de": "relations", "vers": "capital social" },
+    { "de": "argent", "vers": "capital économique" },
+    { "de": "réputation", "vers": "capital symbolique" },
+    { "de": "diplôme", "vers": "capital culturel institutionnalisé" },
+    { "de": "habitude", "vers": "habitus" },
+    { "de": "manières", "vers": "hexis corporelle" },
+    { "de": "mode", "vers": "stratégie de distinction" },
+    { "de": "choix", "vers": "prise de position" },
+    { "de": "parcours", "vers": "trajectoire" },
+    { "de": "élite", "vers": "fraction dominante de la classe dominante" },
+    { "de": "évidence", "vers": "doxa" },
+    { "de": "motivation", "vers": "illusio" },
+    { "de": "influence", "vers": "pouvoir symbolique" },
+    { "de": "mérite", "vers": "héritage culturel" },
+    { "de": "concurrence", "vers": "lutte de classement" },
+    { "de": "style", "vers": "style de vie" },
+    { "de": "originalité", "vers": "profit de distinction" },
+    { "de": "luxe", "vers": "goût de liberté" },
+    { "de": "simplicité", "vers": "goût de nécessité" },
+    { "de": "transmission", "vers": "reproduction" },
+    { "de": "individus", "vers": "agents" },
+    { "de": "timidité", "vers": "sens des limites" }
+  ],
+  "cadres": [
+    { "nom": "Le champ", "question": "Dans quel champ s'inscrit {sujet}, qui en sont les dominants et les prétendants, et quel est son enjeu spécifique ?", "explication": "Tout univers social relativement autonome se lit comme un espace de luttes entre positions." },
+    { "nom": "Volume et structure du capital", "question": "Quelles espèces de capital sont mobilisées dans {sujet}, et selon quels taux de conversion ?", "explication": "Les agents se distinguent par la quantité et la composition (économique, culturelle, sociale) de leurs ressources." },
+    { "nom": "Habitus", "question": "Quelles dispositions incorporées rendent {element} probable pour certains agents et impensable pour d'autres ?", "explication": "Les pratiques s'expliquent par la rencontre entre un habitus et une situation." },
+    { "nom": "Distinction", "question": "Quel profit de distinction procure {sujet}, et contre qui ce profit s'exerce-t-il ?", "explication": "Une pratique vaut par l'écart qu'elle marque avec d'autres pratiques." },
+    { "nom": "Violence symbolique", "question": "Quels arbitraires sont, dans {sujet}, reconnus comme légitimes parce que méconnus comme arbitraires ?", "explication": "La domination la plus efficace est celle qui obtient le consentement des dominés." },
+    { "nom": "Reproduction", "question": "Quelle part prend {sujet} dans la reproduction des hiérarchies sociales ?", "explication": "Les institutions transmettent les positions en les faisant passer pour des mérites." },
+    { "nom": "Réflexivité", "question": "D'où parle celui qui analyse {sujet}, et quels intérêts engage sa propre position ?", "explication": "L'objectivation doit s'appliquer aussi au regard de l'analyste." }
+  ],
+  "structures": [
+    {
+      "nom": "Rompre, construire, constater",
+      "description": "Schéma didactique de la démarche bourdieusienne, hérité de Bachelard via Le Métier de sociologue (1968) : le fait est conquis contre le sens commun, construit, puis constaté, avant un retour réflexif.",
+      "etapes": [
+        {
+          "titre": "Rupture avec les prénotions",
+          "role": "contexte",
+          "consigne": "Identifier les évidences et les catégories ordinaires qui entourent le sujet (don, goût, mérite, choix) et annoncer qu'on va les mettre en suspens.",
+          "gabarits": [
+            "Concernant {sujet}, le discours ordinaire parle de goût, de talent ou de choix : il faut commencer par suspendre ces évidences.",
+            "Avant d'expliquer {sujet}, il faut rompre avec les mots qui servent ordinairement à en parler."
+          ]
+        },
+        {
+          "titre": "Construction de l'espace des positions",
+          "role": "faits",
+          "consigne": "Exposer les données (qui fait quoi, avec quelles ressources) et situer les agents selon le volume et la structure de leur capital.",
+          "gabarits": [
+            "Les données sur {element} prennent sens dès qu'on les rapporte au volume et à la structure du capital des agents.",
+            "Avec {chiffre}, l'écart observé n'a rien d'aléatoire : il épouse la distribution des capitaux."
+          ]
+        },
+        {
+          "titre": "Mise en relation",
+          "role": "analyse",
+          "consigne": "Établir l'homologie entre l'espace des positions sociales et l'espace des pratiques ou des goûts ; comparer les termes en relation, jamais isolément.",
+          "gabarits": [
+            "Entre {a} et {b}, il faut chercher une homologie de position plutôt qu'une ressemblance de surface.",
+            "Rapprocher {a} et {b} fait apparaître la même opposition entre goût de liberté et goût de nécessité."
+          ]
+        },
+        {
+          "titre": "Dévoilement",
+          "role": "tension",
+          "consigne": "Montrer ce que la pratique doit à la méconnaissance : profits de distinction, violence symbolique, intérêts déniés.",
+          "gabarits": [
+            "Ce qui se présente comme un pur plaisir dans {sujet} procure en réalité un profit de distinction.",
+            "Pour {public}, cette hiérarchie paraît naturelle ; elle repose pourtant sur un arbitraire méconnu comme tel."
+          ]
+        },
+        {
+          "titre": "Retour réflexif",
+          "role": "conclusion",
+          "consigne": "Conclure en termes de probabilités (et non de fatalité) et objectiver aussi le point de vue de l'analyste.",
+          "gabarits": [
+            "L'analyse autorise une conclusion, à condition de la lire en termes de probabilités : {conclusion}.",
+            "Reste à objectiver le regard même qui a permis de construire {sujet} en objet."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Analyse de champ",
+      "description": "Lecture d'un univers social comme espace de positions et de luttes, homologue de l'espace social (modèle des analyses de la mode, du journalisme ou de la littérature).",
+      "etapes": [
+        {
+          "titre": "Délimiter le champ",
+          "role": "contexte",
+          "consigne": "Définir l'univers concerné, son degré d'autonomie, son enjeu propre et son droit d'entrée.",
+          "gabarits": [
+            "{sujet} peut se lire comme un champ relativement autonome, doté de son enjeu propre.",
+            "Délimiter le champ où s'inscrit {sujet}, c'est repérer ce qui y est en jeu et qui y a droit d'entrée."
+          ]
+        },
+        {
+          "titre": "Cartographier les positions",
+          "role": "faits",
+          "consigne": "Décrire la distribution des capitaux spécifiques entre les agents ou institutions du champ.",
+          "gabarits": [
+            "Dans ce champ, les positions se distribuent selon les espèces de capital détenues, comme en témoigne {element}.",
+            "On compte {chiffre} : encore faut-il savoir quelles positions ces chiffres recouvrent."
+          ]
+        },
+        {
+          "titre": "Luttes entre établis et prétendants",
+          "role": "tension",
+          "consigne": "Mettre en scène l'opposition entre orthodoxie et hérésie, entre dominants et nouveaux entrants.",
+          "gabarits": [
+            "{evenement} relance la lutte entre les établis, gardiens de l'orthodoxie, et les nouveaux entrants, porteurs d'hérésie.",
+            "Ce que l'on présente comme une innovation dans {sujet} est aussi un coup joué dans une lutte de positions."
+          ]
+        },
+        {
+          "titre": "Homologie avec l'espace social",
+          "role": "analyse",
+          "consigne": "Montrer que les oppositions internes au champ redoublent, sous une forme euphémisée, celles de l'espace social.",
+          "gabarits": [
+            "Les oppositions internes au champ redoublent, sous une forme euphémisée, celles de l'espace social.",
+            "La rencontre entre {a} et {b} s'explique par l'homologie entre leurs positions respectives."
+          ]
+        },
+        {
+          "titre": "Effets de reproduction",
+          "role": "conclusion",
+          "consigne": "Conclure sur ce que le champ reproduit ou transforme, sans oublier les marges de jeu.",
+          "gabarits": [
+            "Au terme de l'analyse, {sujet} apparaît comme un lieu de reproduction autant que de concurrence.",
+            "La conclusion s'impose, sous bénéfice d'inventaire : {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Critique sociale du jugement de goût",
+      "description": "Modèle de La Distinction (1979) : partir d'une préférence, la corréler aux positions, restituer l'habitus, dévoiler la fonction distinctive.",
+      "etapes": [
+        {
+          "titre": "Constat d'une préférence",
+          "role": "faits",
+          "consigne": "Décrire la pratique ou le goût observé et sa répartition inégale.",
+          "gabarits": [
+            "Les préférences relatives à {sujet} ne se distribuent pas au hasard.",
+            "La pratique concerne {chiffre} : reste à savoir dans quelles fractions de classe."
+          ]
+        },
+        {
+          "titre": "Corrélation avec la position",
+          "role": "analyse",
+          "consigne": "Rapporter le goût au volume et à la structure du capital, en opposant les rapports à la forme et à la fonction.",
+          "gabarits": [
+            "Plus le capital culturel est élevé, plus le rapport à {sujet} privilégie la forme sur la fonction.",
+            "Pour {a}, le confort prime ; pour {b}, la manière : deux goûts, deux distances à la nécessité."
+          ]
+        },
+        {
+          "titre": "Restitution de l'habitus",
+          "role": "hypothese",
+          "consigne": "Proposer l'habitus comme principe générateur reliant conditions d'existence et préférences.",
+          "gabarits": [
+            "On peut faire l'hypothèse que ces goûts sont le produit d'habitus formés dans des conditions d'existence distinctes.",
+            "{element} serait alors moins un choix qu'une disposition incorporée."
+          ]
+        },
+        {
+          "titre": "Dévoilement de la distinction",
+          "role": "conclusion",
+          "consigne": "Montrer la fonction classante du goût et la frontière symbolique qu'il trace.",
+          "gabarits": [
+            "Le goût pour {sujet} classe, et classe celui qui le déclare.",
+            "Ce qui se joue derrière {element}, c'est une frontière symbolique entre les groupes."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Usage intensif mais constructiviste de la statistique : questionnaires et analyse des correspondances servent à construire l'espace social, tandis que les catégories qui produisent les chiffres (nomenclatures, PCS) sont elles-mêmes objectivées.",
+    "unites": [
+      "pourcentage par catégorie socioprofessionnelle",
+      "probabilité d'accès (chances objectives)",
+      "taux de pratique par fraction de classe",
+      "volume et structure du capital",
+      "axes et contributions d'une analyse des correspondances multiples",
+      "écart à l'indépendance"
+    ],
+    "formulations": [
+      "Chez {a}, la pratique concerne {chiffre}, contre une proportion bien moindre chez {b} : l'écart traduit une distance dans l'espace social.",
+      "Avec {chiffre}, l'écart mesure moins une différence de goût qu'une différence de capital culturel.",
+      "Sur le premier axe de l'analyse des correspondances, {a} et {b} occupent des pôles opposés.",
+      "Le chiffre de {chiffre} n'est pas une donnée brute : c'est le produit de catégories qu'il faut elles-mêmes objectiver.",
+      "Les chances objectives ne sont pas réparties au hasard : {chiffre} seulement chez les moins dotés, bien davantage chez les héritiers.",
+      "Rapporter {element} à la structure du capital en change entièrement le sens.",
+      "Une corrélation de cet ordre ({chiffre}) ne prouve rien tant qu'on n'a pas reconstruit l'espace des positions."
+    ]
+  },
+  "metaphores": [
+    "le jeu social et ses cartes en main (le capital comme atout)",
+    "le champ comme champ de forces magnétique",
+    "le marché (linguistique, scolaire, matrimonial)",
+    "la magie sociale et l'alchimie de la consécration",
+    "le corps comme mémoire du social",
+    "le sens du jeu du joueur expérimenté",
+    "la sociologie comme sport de combat (titre du documentaire de Pierre Carles, 2001)",
+    "l'héritage et les héritiers",
+    "la noblesse (noblesse d'État, noblesse culturelle)",
+    "le taux de change entre espèces de capital",
+    "le poisson dans l'eau (habitus ajusté à son monde)"
+  ],
+  "pieges": [
+    "Déterminisme : l'habitus devient une boîte noire qui explique tout d'avance, alors que la grille raisonne en probabilités.",
+    "Postulat d'un habitus cohérent, discuté par Bernard Lahire (L'Homme pluriel, La Culture des individus) : les individus cumulent des dispositions dissonantes.",
+    "Légitimisme : lire les cultures populaires seulement en termes de manque (misérabilisme) ou les célébrer sans recul (populisme), selon la critique de Grignon et Passeron (Le Savant et le populaire, 1989).",
+    "Réduction de toute pratique à une stratégie de distinction, au risque d'un économisme généralisé du symbolique.",
+    "Anachronisme : transposer sans précaution des résultats établis sur la France des années 1960-1970.",
+    "Dévoilement irréfutable : toute dénégation devient une preuve de méconnaissance.",
+    "Circularité : inférer l'habitus des pratiques, puis expliquer les pratiques par l'habitus.",
+    "Jargon et effet d'autorité : l'empilement « champ, capital, habitus » peut tenir lieu de démonstration.",
+    "Usage indifférencié du mot « domination », qui écrase les écarts d'autonomie entre champs."
+  ],
+  "registres": {
+    "institutionnel": "Dans les rapports publics, la grille se dilue en « inégalités de capital culturel » et en « reproduction sociale » à combattre par l'égalité des chances.",
+    "technique": "Entre pairs : espace des positions et des prises de position, volume et structure du capital, homologies et luttes de classement, analyse des correspondances à l'appui.",
+    "vulgarisation": "Pour le grand public : « nos goûts disent d'où nous venons » et « l'école récompense d'abord les héritiers ».",
+    "critique": "Ses détracteurs parodient un soupçon généralisé où tout, même le refus de la distinction, devient stratégie de distinction."
+  },
+  "visuel": {
+    "palette": ["#AD1457", "#F8BBD0", "#263238", "#FFD54F", "#FAF3E0"],
+    "motifs": [
+      { "fr": "plan factoriel à deux axes (volume et structure du capital) avec un nuage de pratiques", "en": "two-axis factorial map of social space with a cloud of lifestyle icons" },
+      { "fr": "champ de forces magnétique avec limaille orientée", "en": "magnetic force field with aligned iron filings" },
+      { "fr": "table de jeu où chaque joueur dispose de piles de jetons inégales", "en": "game table where each player holds unequal stacks of chips" },
+      { "fr": "escalier social avec un ascenseur bloqué", "en": "social staircase with a stalled elevator" },
+      { "fr": "valise de livres transmise d'une génération à l'autre", "en": "suitcase of books handed down from parent to child" },
+      { "fr": "silhouettes aux postures contrastées (hexis corporelle)", "en": "silhouettes with contrasting body postures" },
+      { "fr": "vitrine de boutique de luxe face à un étal de marché", "en": "luxury boutique window facing a street market stall" },
+      { "fr": "diplôme encadré qui se transforme en clé", "en": "framed diploma morphing into a key" },
+      { "fr": "balance de conversion entre pièces de monnaie et livres", "en": "exchange scale converting coins into books" },
+      { "fr": "griffe cousue sur un objet banal qui se met à briller", "en": "designer label stitched onto a plain object that starts to glow" }
+    ],
+    "pictogrammes": [
+      { "fr": "jetons de jeu", "en": "poker chips" },
+      { "fr": "livre", "en": "book" },
+      { "fr": "piano", "en": "piano" },
+      { "fr": "diplôme", "en": "diploma" },
+      { "fr": "verre de vin", "en": "wine glass" },
+      { "fr": "couronne", "en": "crown" },
+      { "fr": "clé", "en": "key" },
+      { "fr": "aimant", "en": "magnet" },
+      { "fr": "flèche de trajectoire", "en": "trajectory arrow" },
+      { "fr": "étiquette de griffe", "en": "designer tag" }
+    ],
+    "typographie": "Sérif d'édition universitaire (type Garamond) pour les concepts, italiques pour les notions, petites capitales pour les axes des diagrammes.",
+    "style_motion": "Diagrammes animés qui se construisent par couches : axes qui se tracent, pratiques qui viennent se placer dans l'espace social, jetons de capital qui se convertissent ; ton sobre et légèrement ironique, fond crème et accents magenta.",
+    "style_motion_en": "Layered animated diagrams: axes drawing themselves, lifestyle icons snapping into a two-axis social space map, capital tokens converting into one another; restrained, slightly ironic academic tone, cream background with magenta accents."
+  },
+  "exemples": [
+    { "contexte": "Citation vérifiée dans une source secondaire : définition de l'habitus (Le Sens pratique, 1980, p. 88), reproduite dans un document HAL de l'Université de Lorraine.", "texte": "« structures structurées prédisposées à fonctionner comme structures structurantes »" },
+    { "contexte": "Formule de La Distinction (1979) relevée dans un support de cours universitaire (fad.umi.ac.ma) ; non vérifiée sur l'édition de Minuit.", "texte": "« Le goût classe, et classe celui qui classe. »" },
+    { "contexte": "Formulation illustrative, non citée : comment la grille lirait une comparaison absurde entre ventes de pantoufles en Irlande et naissances de girafons à Melbourne.", "texte": "« Loin de relever de simples préférences, l'achat de pantoufles et la visite familiale au zoo s'inscrivent dans l'espace des styles de vie : confort domestique et sortie culturelle se distribuent inégalement selon le volume et la structure du capital. »" },
+    { "contexte": "Formulation illustrative, non citée : lecture typique d'un phénomène de mode, dans le prolongement de « Le couturier et sa griffe » (Bourdieu et Delsaut, 1975).", "texte": "« Ce qui se donne pour une tendance spontanée est l'effet d'une lutte entre établis et prétendants du champ de la mode ; la griffe opère une véritable magie sociale. »" }
+  ],
+  "sources": [
+    { "titre": "Document HAL citant la définition de l'habitus (Le Sens pratique, 1980)", "auteur": "Université de Lorraine (HAL)", "url": "https://hal.univ-lorraine.fr/hal-01704080v1/document", "apport": "Définition verbatim de l'habitus et variante « transposables / transformables »." },
+    { "titre": "Outline of a Theory of Practice — Structures and the habitus", "auteur": "Pierre Bourdieu (Cambridge University Press)", "url": "https://resolve.cambridge.org/core/books/outline-of-a-theory-of-practice/structures-and-the-habitus/CE3B114C2E778D86DEBD7A4E020263F4", "apport": "Version anglaise de la définition de l'habitus (structured structures)." },
+    { "titre": "La Distinction. Critique sociale du jugement — fiche de lecture", "auteur": "Vincent Dubois (Encyclopædia Universalis)", "url": "https://www.universalis.fr/encyclopedie/la-distinction-critique-sociale-du-jugement/", "apport": "Jugement de goût, homologie avec les classes, violence symbolique, habitus comme principe générateur." },
+    { "titre": "Sur la télévision — fiche de lecture", "auteur": "Encyclopædia Universalis", "url": "https://www.universalis.fr/encyclopedie/sur-la-television/", "apport": "Application aux médias : champ journalistique, audimat, censure invisible." },
+    { "titre": "Le couturier et sa griffe : contribution à une théorie de la magie (ARSS, 1975)", "auteur": "Pierre Bourdieu et Yvette Delsaut", "url": "https://isidore.science/document/10.3406/arss.1975.2447", "apport": "Application à la mode : orthodoxie/hétérodoxie, magie de la griffe." },
+    { "titre": "Compte rendu de Le Savant et le populaire (Grignon et Passeron, 1989)", "auteur": "Annales. Histoire, Sciences sociales (Cambridge)", "url": "https://www.cambridge.org/core/journals/annales-histoire-sciences-sociales/article/claude-grignon-jeanclaude-passeron-le-savant-et-le-populaire-miserabilisme-et-populisme-en-sociologie-et-en-litterature-paris-gallimardle-seuil-hautes-etudes-1989-264-p/C4EBC158CD86E03DCE8D4B00687FA782", "apport": "Critique du légitimisme : misérabilisme et populisme." },
+    { "titre": "La Culture des individus. Dissonances culturelles et distinction de soi — fiche de lecture", "auteur": "Encyclopædia Universalis (sur Bernard Lahire)", "url": "https://www.universalis.fr/encyclopedie/la-culture-des-individus-dissonances-culturelles-et-distinction-de-soi/", "apport": "Critique de la cohérence de l'habitus : dissonances culturelles." },
+    { "titre": "Support de cours citant « Le goût classe, et classe celui qui classe »", "auteur": "Université Moulay Ismaïl (plateforme FAD)", "url": "https://fad.umi.ac.ma/mod/resource/view.php?id=4984", "apport": "Formule de La Distinction et sa glose (lutte des classements)." }
+  ]
+}

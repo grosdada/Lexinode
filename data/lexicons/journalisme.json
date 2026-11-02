@@ -1,0 +1,419 @@
+{
+  "id": "journalisme",
+  "nom": "Journalisme",
+  "famille": "metier",
+  "categorie": "Médias et information",
+  "icone": "📰",
+  "couleur": "#5C6B73",
+  "description": "Fiche des éléments de langage du journalisme et des médias d'information francophones : dépêche d'agence, pyramide inversée, conditionnel journalistique, formules d'attribution et métonymies institutionnelles. Elle couvre aussi les clichés de traitement dénoncés par la critique des médias.",
+  "posture": "Parole de médiateur qui rapporte plus qu'elle n'affirme : le journaliste attribue chaque information à une source, marque par le conditionnel ce qu'il ne prend pas en charge et hiérarchise du plus important au moins important.",
+  "valeurs": [
+    "la vérification des faits",
+    "l'indépendance",
+    "le pluralisme",
+    "le droit du public à l'information",
+    "la protection des sources",
+    "la réactivité",
+    "l'honnêteté dans la présentation"
+  ],
+  "vocabulaire": [
+    { "terme": "dépêche", "sens": "Texte d'agence de presse diffusé aux rédactions abonnées.", "usage": "La dépêche est tombée à 18 h 02." },
+    { "terme": "alerte", "sens": "Dépêche très brève annonçant un fait majeur en une ligne.", "usage": "L'AFP a envoyé une alerte quelques secondes après l'annonce." },
+    { "terme": "urgent", "sens": "Dépêche courte qui développe une alerte avec les éléments essentiels.", "usage": "Un urgent a suivi avec le premier bilan." },
+    { "terme": "chapeau", "sens": "Résumé de deux ou trois phrases placé sous le titre (aussi écrit « chapô »).", "usage": "Le chapeau doit répondre à qui, quoi, où, quand." },
+    { "terme": "attaque", "sens": "Première phrase du corps de l'article, qui accroche le lecteur et pose l'angle.", "usage": "Soigne ton attaque, c'est elle qui fait lire la suite." },
+    { "terme": "chute", "sens": "Phrase finale qui clôt l'article, parfois en ouvrant une perspective.", "usage": "La chute renvoie au prochain rendez-vous judiciaire." },
+    { "terme": "angle", "sens": "Point de vue précis choisi pour traiter un sujet.", "usage": "Quel est ton angle sur ce dossier ?" },
+    { "terme": "pyramide inversée", "sens": "Structure qui place l'essentiel en tête et les détails décroissants ensuite.", "usage": "Une dépêche suit toujours la pyramide inversée." },
+    { "terme": "5W", "sens": "Questions de base : qui, quoi, où, quand, pourquoi, souvent complétées par comment (QQOQCP).", "usage": "Vérifie que ton lead répond aux 5W." },
+    { "terme": "conditionnel journalistique", "sens": "Emploi du conditionnel pour signaler une information non confirmée que le journaliste ne prend pas en charge.", "usage": "Le ministre aurait présenté sa démission." },
+    { "terme": "selon nos informations", "sens": "Formule signalant une information obtenue en propre par la rédaction.", "usage": "Selon nos informations, le projet sera repoussé." },
+    { "terme": "source", "sens": "Personne ou document à l'origine d'une information.", "usage": "Nous protégeons nos sources." },
+    { "terme": "off", "sens": "Propos tenus sous condition de ne pas être cités nommément.", "usage": "Un conseiller confie, en off, que la décision est prise." },
+    { "terme": "sources concordantes", "sens": "Plusieurs sources indépendantes confirmant la même information.", "usage": "L'information est confirmée de sources concordantes." },
+    { "terme": "embargo", "sens": "Interdiction de publier une information avant une heure fixée.", "usage": "Le rapport est sous embargo jusqu'à minuit." },
+    { "terme": "exclusivité", "sens": "Information publiée en premier par un seul média.", "usage": "C'est une exclusivité de notre rédaction." },
+    { "terme": "brève", "sens": "Article très court, sans titre développé.", "usage": "On passe l'info en brève." },
+    { "terme": "papier", "sens": "Article, dans le jargon des rédactions.", "usage": "Tu me rends ton papier pour 17 heures ?" },
+    { "terme": "marronnier", "sens": "Sujet qui revient chaque année à la même période.", "usage": "Les embouteillages du départ en vacances, c'est le marronnier de juillet." },
+    { "terme": "reportage", "sens": "Récit d'un journaliste présent sur le terrain.", "usage": "Notre envoyé spécial signe un reportage depuis la frontière." },
+    { "terme": "enquête", "sens": "Travail d'investigation long, fondé sur des documents et des témoignages.", "usage": "Notre enquête révèle des failles dans le contrôle." },
+    { "terme": "éditorial", "sens": "Article d'opinion engageant la ligne du journal.", "usage": "L'éditorial du jour appelle à la prudence." },
+    { "terme": "tribune", "sens": "Texte d'opinion signé par une personne extérieure à la rédaction.", "usage": "Cent médecins signent une tribune." },
+    { "terme": "une", "sens": "Première page d'un journal ou ouverture d'un site.", "usage": "L'affaire fait la une de tous les quotidiens." },
+    { "terme": "ouverture", "sens": "Premier sujet d'un journal télévisé ou radio.", "usage": "On ouvre le journal sur la grève." },
+    { "terme": "duplex", "sens": "Liaison en direct avec un journaliste sur place.", "usage": "Nous retrouvons notre correspondant en duplex." },
+    { "terme": "micro-trottoir", "sens": "Recueil rapide de réactions de passants.", "usage": "Un micro-trottoir illustre l'exaspération des usagers." },
+    { "terme": "bandeau", "sens": "Texte incrusté en bas de l'écran sur les chaînes d'information.", "usage": "Le bandeau annonce une alerte attentat." },
+    { "terme": "fact-checking", "sens": "Vérification de l'exactitude d'une déclaration publique.", "usage": "Notre cellule de fact-checking a vérifié ce chiffre." },
+    { "terme": "infox", "sens": "Fausse information diffusée volontairement (terme recommandé pour fake news).", "usage": "Cette infox circule depuis hier sur les réseaux sociaux." },
+    { "terme": "correctif", "sens": "Rectification publiée après une erreur.", "usage": "Nous avons publié un correctif." },
+    { "terme": "conférence de rédaction", "sens": "Réunion où la rédaction choisit et hiérarchise les sujets.", "usage": "On en parle en conférence de rédaction à 10 heures." },
+    { "terme": "hiérarchie de l'information", "sens": "Ordre d'importance donné aux sujets dans un journal.", "usage": "La hiérarchie de l'information a été bousculée par l'attentat." },
+    { "terme": "bouclage", "sens": "Moment où une édition est finalisée avant impression ou diffusion.", "usage": "On est au bouclage, il me faut ton texte maintenant." },
+    { "terme": "décryptage", "sens": "Article ou vidéo qui explique un sujet complexe.", "usage": "Notre décryptage en trois questions." },
+    { "terme": "direct", "sens": "Suivi en temps réel d'un événement (live).", "usage": "Suivez notre direct minute par minute." },
+    { "terme": "droit de réponse", "sens": "Droit légal d'une personne mise en cause de faire publier sa réponse.", "usage": "L'entreprise a exercé son droit de réponse." },
+    { "terme": "communiqué", "sens": "Texte officiel diffusé par une institution ou une entreprise.", "usage": "Dans un communiqué, la préfecture précise le bilan." },
+    { "terme": "bilan provisoire", "sens": "Décompte encore susceptible d'évoluer des victimes d'un événement.", "usage": "Le bilan provisoire fait état de trois blessés." },
+    { "terme": "l'exécutif", "sens": "Métonymie désignant le président et le gouvernement.", "usage": "L'exécutif tente de reprendre la main." },
+    { "terme": "locataire de Matignon", "sens": "Périphrase pour le Premier ministre.", "usage": "Le locataire de Matignon joue sa survie." },
+    { "terme": "place Beauvau", "sens": "Métonymie pour le ministère de l'Intérieur.", "usage": "Place Beauvau, on minimise l'incident." },
+    { "terme": "rubricard", "sens": "Journaliste spécialisé dans une rubrique.", "usage": "Le rubricard justice suit le procès." }
+  ],
+  "formules": [
+    "Selon nos informations, {conclusion}.",
+    "{sujet} : ce que l'on sait à ce stade.",
+    "D'après une source proche du dossier, {conclusion}.",
+    "Contacté, le ministère n'avait pas donné suite à l'heure où nous publions.",
+    "Après {evenement}, les circonstances exactes restent à établir.",
+    "Une enquête a été ouverte pour déterminer les causes du drame.",
+    "Le bilan, encore provisoire, fait état de {chiffre}.",
+    "Sur {sujet}, les versions divergent.",
+    "L'information n'a pas pu être vérifiée de source indépendante.",
+    "Retour sur {evenement}, en cinq dates.",
+    "Décryptage : ce qui se joue derrière {sujet}.",
+    "Il est trop tôt pour tirer des conclusions.",
+    "Interrogé sur {sujet}, le porte-parole a refusé de commenter.",
+    "La rédaction a pu consulter un document interne : {conclusion}.",
+    "Des sources concordantes confirment {element}.",
+    "Le gouvernement envisagerait {element}, selon plusieurs sources.",
+    "{chiffre} : c'est le chiffre du jour.",
+    "Cette information n'a pas été confirmée officiellement à ce stade.",
+    "Dans un communiqué, la préfecture affirme pour sa part : {conclusion}.",
+    "Pour mieux comprendre {sujet}, nous avons interrogé un spécialiste.",
+    "Qui, quoi, où, quand, pourquoi : on fait le point sur {evenement}.",
+    "Rien ne permet d'affirmer, à ce stade, un lien entre {a} et {b}.",
+    "Nous avons sollicité toutes les parties ; elles n'ont pas souhaité réagir.",
+    "Correctif : une version précédente de cet article mentionnait par erreur {element}.",
+    "Sur place, notre envoyé spécial décrit une ville sous le choc.",
+    "Selon la police, le cortège a rassemblé {chiffre} ; bien davantage selon les organisateurs.",
+    "Vrai ou faux : {conclusion} ?",
+    "Nous y reviendrons dans ce journal.",
+    "Affaire à suivre.",
+    "On vous explique tout sur {sujet} en trois questions.",
+    "Ce que l'on appelle « {terme} » mérite ici quelques explications."
+  ],
+  "connecteurs": [
+    "Selon nos informations,",
+    "D'après l'AFP,",
+    "Sur place,",
+    "Dans le détail,",
+    "Contacté,",
+    "Pour l'heure,",
+    "À ce stade,",
+    "Par ailleurs,",
+    "Reste une question :",
+    "En clair,",
+    "Autrement dit,",
+    "Pour rappel,",
+    "De son côté,",
+    "Toujours selon nos informations,",
+    "Selon une source proche du dossier,"
+  ],
+  "euphemismes": [
+    { "brut": "usagers gênés par une grève", "edl": "usagers pris en otage", "commentaire": "Cliché dénoncé par Acrimed : il impute les désagréments aux grévistes plutôt qu'au conflit." },
+    { "brut": "mécontentement social", "edl": "grogne", "commentaire": "Terme animalisant relevé par Acrimed : « l'élite pense, le témoin grogne »." },
+    { "brut": "revendications de salariés", "edl": "malaise", "commentaire": "Vocabulaire médical qui fait de la contestation un symptôme à traiter (Acrimed)." },
+    { "brut": "défense d'acquis sociaux", "edl": "crispation", "commentaire": "Oppose une France « crispée » à une France « moderne » (Acrimed)." },
+    { "brut": "jour de grève des transports", "edl": "jeudi noir", "commentaire": "Dramatisation chromatique relevée par Acrimed, avec « chaos » et « pagaille »." },
+    { "brut": "affrontements", "edl": "échauffourées", "commentaire": "Minimise l'intensité des heurts." },
+    { "brut": "émeutes", "edl": "incidents", "commentaire": "Atténuation fréquente dans les premières dépêches." },
+    { "brut": "personne tuée par un tir policier", "edl": "individu neutralisé", "commentaire": "Reprise telle quelle du vocabulaire des communiqués policiers ou militaires, critiquée comme « journalisme de préfecture »." },
+    { "brut": "mensonge", "edl": "contre-vérité", "commentaire": "Évite d'imputer une intention de tromper." },
+    { "brut": "rumeur", "edl": "information non confirmée", "commentaire": "Permet de publier en se protégeant." },
+    { "brut": "suppressions d'emplois", "edl": "plan social", "commentaire": "Expression courante en presse, plus neutre que « licenciements »." },
+    { "brut": "on ne sait pas", "edl": "les circonstances restent à établir", "commentaire": "Formule d'attente des premières heures d'un fait divers." },
+    { "brut": "pas de réponse", "edl": "n'a pas donné suite à nos sollicitations", "commentaire": "Formule standard qui documente le contradictoire." },
+    { "brut": "spéculation", "edl": "selon plusieurs sources", "commentaire": "L'attribution vague peut masquer une hypothèse non vérifiée." }
+  ],
+  "substitutions": [
+    { "de": "a dit", "vers": "a indiqué" },
+    { "de": "peut-être", "vers": "selon plusieurs sources" },
+    { "de": "important", "vers": "majeur" },
+    { "de": "grand", "vers": "d'ampleur" },
+    { "de": "dispute", "vers": "passe d'armes" },
+    { "de": "débat", "vers": "polémique" },
+    { "de": "début", "vers": "coup d'envoi" },
+    { "de": "fin", "vers": "dénouement" },
+    { "de": "parler", "vers": "s'exprimer" },
+    { "de": "annoncer", "vers": "officialiser" },
+    { "de": "expliquer", "vers": "décrypter" },
+    { "de": "histoire", "vers": "affaire" },
+    { "de": "article", "vers": "papier" },
+    { "de": "nouvelle", "vers": "information" },
+    { "de": "rumeur", "vers": "information non confirmée" },
+    { "de": "mort", "vers": "décès" },
+    { "de": "gouvernement", "vers": "exécutif" },
+    { "de": "président de la république", "vers": "chef de l'État" },
+    { "de": "premier ministre", "vers": "locataire de Matignon" },
+    { "de": "ministère de l'intérieur", "vers": "place Beauvau" },
+    { "de": "ministère de l'économie", "vers": "Bercy" },
+    { "de": "ministère des affaires étrangères", "vers": "Quai d'Orsay" },
+    { "de": "assemblée nationale", "vers": "Palais-Bourbon" },
+    { "de": "sénat", "vers": "Haute Assemblée" },
+    { "de": "réaction", "vers": "levée de boucliers" },
+    { "de": "changement", "vers": "rebondissement" }
+  ],
+  "cadres": [
+    { "nom": "Conflit", "question": "Sur {sujet}, qui s'oppose à qui, et sur quoi précisément ?", "explication": "Le cadre le plus fréquent : l'information est racontée comme un affrontement entre camps." },
+    { "nom": "Intérêt humain", "question": "Qui sont les personnes touchées par {evenement}, et que vivent-elles ?", "explication": "Incarnation par des témoins et des portraits." },
+    { "nom": "Responsabilité", "question": "Après {evenement}, qui est responsable et qui doit rendre des comptes ?", "explication": "Recherche des causes, des fautes et des défaillances." },
+    { "nom": "Conséquences économiques", "question": "Avec {sujet}, quel est le coût réel, et qui paie ?", "explication": "Traduction de l'événement en coûts, gagnants et perdants." },
+    { "nom": "Course de chevaux", "question": "Sur {sujet}, qui gagne et qui perd du terrain ?", "explication": "Lecture stratégique et sondagière de la politique, au détriment du fond." },
+    { "nom": "Nouveauté", "question": "Qu'est-ce qui change concrètement avec {sujet} ?", "explication": "L'information doit apporter du neuf par rapport à la veille." },
+    { "nom": "Vérification", "question": "Que disent les faits vérifiables sur {element} ?", "explication": "Grille du fact-checking : source primaire, donnée officielle, contexte." },
+    { "nom": "Proximité", "question": "Quelles conséquences concrètes pour {public} ?", "explication": "Loi de proximité : géographique, temporelle, affective." }
+  ],
+  "structures": [
+    {
+      "nom": "Pyramide inversée",
+      "description": "Structure de la dépêche et de l'article d'information : l'essentiel d'abord, puis sources, contexte, réactions et suites.",
+      "etapes": [
+        {
+          "titre": "Lead",
+          "role": "faits",
+          "consigne": "Donner en une ou deux phrases l'information principale en répondant aux 5W.",
+          "gabarits": [
+            "Selon nos informations, {conclusion}.",
+            "Nouveau rebondissement dans le dossier : {conclusion}.",
+            "Le bilan, encore provisoire, fait état de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Source et citation",
+          "role": "analyse",
+          "consigne": "Attribuer l'information et citer une déclaration officielle ou un témoin.",
+          "gabarits": [
+            "L'information a été confirmée dans un communiqué officiel.",
+            "« Nous suivons la situation de très près », a déclaré une source gouvernementale.",
+            "Interrogé sur {sujet}, le porte-parole a refusé de commenter."
+          ]
+        },
+        {
+          "titre": "Contexte",
+          "role": "contexte",
+          "consigne": "Rappeler les antécédents utiles à la compréhension.",
+          "gabarits": [
+            "Pour rappel, depuis {evenement}, la tension n'a cessé de monter.",
+            "Ce n'est pas la première fois : avant {evenement}, plusieurs alertes avaient été émises."
+          ]
+        },
+        {
+          "titre": "Réactions",
+          "role": "tension",
+          "consigne": "Exposer les positions contradictoires des acteurs.",
+          "gabarits": [
+            "Du côté de l'opposition, on dénonce {element}.",
+            "Les syndicats, eux, réclament des éclaircissements sur {sujet}."
+          ]
+        },
+        {
+          "titre": "Suites",
+          "role": "projection",
+          "consigne": "Indiquer les prochaines étapes attendues.",
+          "gabarits": [
+            "Une enquête a été ouverte ; ses conclusions sont attendues dans les prochaines semaines.",
+            "Prochaine étape : un vote, attendu après {evenement}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Décryptage",
+      "description": "Format explicatif (article ou vidéo « on vous explique ») : question, contexte, chiffres, points de vue, à retenir.",
+      "etapes": [
+        {
+          "titre": "Question d'entrée",
+          "role": "contexte",
+          "consigne": "Poser la question que se pose le public.",
+          "gabarits": [
+            "Que faut-il comprendre derrière {sujet} ?",
+            "On vous explique tout sur {sujet} en trois questions."
+          ]
+        },
+        {
+          "titre": "Retour en arrière",
+          "role": "contexte",
+          "consigne": "Remonter à l'origine du sujet.",
+          "gabarits": [
+            "Tout commence avec {evenement}.",
+            "Pour bien comprendre, il faut remonter avant {evenement}."
+          ]
+        },
+        {
+          "titre": "Les chiffres",
+          "role": "faits",
+          "consigne": "Donner les ordres de grandeur sourcés.",
+          "gabarits": [
+            "{chiffre} : c'est l'ordre de grandeur à retenir.",
+            "Entre {a} et {b}, l'écart est de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Points de vue",
+          "role": "tension",
+          "consigne": "Présenter les interprétations divergentes des experts et des acteurs.",
+          "gabarits": [
+            "Pour les uns, {conclusion} ; pour les autres, c'est tout l'inverse.",
+            "Les spécialistes interrogés ne s'accordent pas sur {element}."
+          ]
+        },
+        {
+          "titre": "À retenir",
+          "role": "conclusion",
+          "consigne": "Résumer en une phrase claire.",
+          "gabarits": [
+            "En clair : {conclusion}.",
+            "Ce qu'il faut retenir : {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Fact-checking",
+      "description": "Vérification d'une affirmation : énoncé, vérification, nuance, verdict.",
+      "etapes": [
+        {
+          "titre": "L'affirmation",
+          "role": "contexte",
+          "consigne": "Citer précisément l'affirmation et qui la diffuse.",
+          "gabarits": [
+            "L'affirmation circule largement sur les réseaux sociaux : {conclusion}.",
+            "Ce chiffre de {chiffre} a été repris par plusieurs responsables politiques."
+          ]
+        },
+        {
+          "titre": "Vérification",
+          "role": "faits",
+          "consigne": "Confronter l'affirmation aux données primaires.",
+          "gabarits": [
+            "Selon les données officielles, {conclusion}.",
+            "Nous avons comparé {a} et {b} sur la même période."
+          ]
+        },
+        {
+          "titre": "Nuance",
+          "role": "analyse",
+          "consigne": "Expliquer ce que le chiffre montre et ce qu'il omet.",
+          "gabarits": [
+            "Le chiffre n'est pas faux, mais il passe sous silence {element}.",
+            "Tout dépend de l'indicateur retenu : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Verdict",
+          "role": "conclusion",
+          "consigne": "Trancher clairement : vrai, faux, trompeur, invérifiable.",
+          "gabarits": [
+            "Verdict : c'est trompeur.",
+            "En résumé : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le chiffre est toujours attribué (« selon la police », « selon l'Insee », « selon un sondage ») ; les bilans sont dits provisoires, les sondages doivent mentionner la marge d'erreur, et les chiffres contestés sont doublés ou confiés à un comptage indépendant.",
+    "unites": [
+      "manifestants selon la police, selon les organisateurs ou selon le comptage indépendant",
+      "points de sondage et marge d'erreur",
+      "% d'intentions de vote",
+      "morts et blessés (bilan provisoire)",
+      "taux de chômage au sens du BIT (Insee)",
+      "demandeurs d'emploi en catégorie A",
+      "milliards d'euros",
+      "téléspectateurs et part d'audience"
+    ],
+    "formulations": [
+      "Selon un bilan encore provisoire, on dénombre {chiffre}.",
+      "Selon la police, {chiffre} ; selon les organisateurs, beaucoup plus : le décompte reste disputé.",
+      "Selon un sondage publié ce matin, {conclusion}, avec une marge d'erreur de {chiffre}.",
+      "C'est {chiffre} de plus qu'il y a un an.",
+      "Entre {a} et {b}, l'écart se resserre : {chiffre}.",
+      "Un chiffre à prendre avec précaution : {conclusion}.",
+      "Selon l'Insee, {conclusion}."
+    ]
+  },
+  "metaphores": [
+    "le bras de fer",
+    "la poudrière",
+    "le séisme politique",
+    "l'onde de choc",
+    "le feuilleton judiciaire",
+    "la bombe médiatique",
+    "le coup de tonnerre",
+    "la tempête",
+    "le rebondissement",
+    "le marronnier",
+    "la valse des ministres",
+    "le jeudi noir"
+  ],
+  "pieges": [
+    "Abus du conditionnel quand l'information n'est pas vérifiée : le conditionnel devient un paravent au lieu d'une exception justifiée.",
+    "« Journalisme de préfecture » : reprise sans recul des communiqués de police, de préfecture ou d'armée et de leur vocabulaire.",
+    "Effet de cascade : la même dépêche, recopiée par toutes les rédactions, uniformise les angles et les erreurs.",
+    "Vocabulaire qui disqualifie la contestation (grogne, crispation, prise d'otages) et naturalise « la réforme ».",
+    "Dramatisation (chaos, jeudi noir, séisme) au service de l'audience.",
+    "Fausse symétrie : renvoyer dos à dos deux versions inégales en preuves.",
+    "Course de chevaux : commenter les sondages et la tactique plutôt que le fond.",
+    "Micro-trottoir présenté comme représentatif de l'opinion.",
+    "Titres racoleurs qui promettent plus que l'article."
+  ],
+  "registres": {
+    "institutionnel": "Charte déontologique, communiqué de la direction, « la rédaction », formules de correction et de droit de réponse.",
+    "technique": "Entre journalistes : papier, chapô, tomber une dépêche, bouclage, off, sujet de une minute trente, synthé, conférence de rédaction.",
+    "vulgarisation": "« On vous explique », « ce qu'il faut savoir », questions-réponses, formats verticaux sous-titrés pour les réseaux sociaux.",
+    "critique": "Ses détracteurs dénoncent les « chiens de garde », l'« éditocratie », le « journalisme de préfecture » et une « langue automatique » du journalisme officiel."
+  },
+  "visuel": {
+    "palette": ["#0B1F3A", "#D7262B", "#FFFFFF", "#5C6B73", "#F2B705"],
+    "motifs": [
+      { "fr": "bandeau défilant en bas d'écran", "en": "scrolling news ticker at the bottom of the screen" },
+      { "fr": "incrustation « ALERTE INFO » rouge", "en": "red \"BREAKING NEWS\" lower-third banner" },
+      { "fr": "carte avec marqueur de localisation qui zoome", "en": "zooming map with a location pin" },
+      { "fr": "document officiel surligné au marqueur", "en": "official document with highlighted passages" },
+      { "fr": "texte de dépêche tapé à la machine", "en": "wire-story text appearing typewriter-style" },
+      { "fr": "écran partagé en duplex", "en": "split-screen live link with a correspondent" },
+      { "fr": "courbes et histogrammes animés", "en": "animated line charts and bar graphs" },
+      { "fr": "frise chronologique des faits", "en": "timeline of events" },
+      { "fr": "photo d'archive avec lent zoom", "en": "archive photo with slow Ken Burns zoom" },
+      { "fr": "mur d'écrans de salle de rédaction", "en": "newsroom wall of screens" },
+      { "fr": "captures de publications de réseaux sociaux", "en": "social media post screenshots" }
+    ],
+    "pictogrammes": [
+      { "fr": "micro", "en": "microphone" },
+      { "fr": "caméra", "en": "video camera" },
+      { "fr": "journal plié", "en": "folded newspaper" },
+      { "fr": "point d'exclamation d'alerte", "en": "alert exclamation mark" },
+      { "fr": "loupe", "en": "magnifying glass" },
+      { "fr": "coche vrai et croix faux", "en": "true checkmark and false cross" },
+      { "fr": "horloge", "en": "clock" },
+      { "fr": "épingle de carte", "en": "map pin" },
+      { "fr": "guillemets", "en": "quotation marks" },
+      { "fr": "antenne de diffusion", "en": "broadcast antenna" },
+      { "fr": "smartphone", "en": "smartphone" },
+      { "fr": "cadenas de source protégée", "en": "padlock for protected source" }
+    ],
+    "typographie": "Sans-serif condensée et grasse pour titres et bandeaux, capitales pour les alertes, serif de presse pour les citations, sous-titres blancs sur fond sombre.",
+    "style_motion": "Habillage de chaîne d'information au rythme rapide : bandeaux qui glissent, compteurs, zooms sur des documents surlignés, cartes localisées, transitions en souffle et format vertical sous-titré pour les réseaux sociaux.",
+    "style_motion_en": "Fast-paced 24-hour news channel graphics: sliding lower-thirds, red breaking-news banners, counters, zooms on highlighted documents, pinned maps, whoosh transitions, vertical subtitled social video format."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : entrée « Otages » du lexique critique d'Acrimed (2010), qui décrit un cliché de traitement des grèves.", "texte": "« Otages : Synonyme d'“usagers”. Terme particulièrement approprié pour attribuer les désagréments qu'ils subissent non à l'intransigeance du gouvernement, mais à l'obstination des grévistes. »" },
+    { "contexte": "Extrait réel cité par Acrimed : lancement d'un journal télévisé un jour de grève, 13 novembre 2007.", "texte": "« La grève […] s'annonce massive et dure. Dure surtout pour les usagers. »" },
+    { "contexte": "Extrait réel : brève du Monde du 5 mars 2019 reprenant un communiqué d'armée, analysée par le linguiste Michel Casevitz.", "texte": "« selon l'armée, les forces de sécurité ont tiré sur trois “assaillants” dont deux ont été “neutralisés et un troisième légèrement blessé”. »" },
+    { "contexte": "Formulation typique et illustrative (non attribuée) d'une dépêche en pyramide inversée avec conditionnel et attribution.", "texte": "« Le gouvernement envisagerait de reporter la réforme, selon plusieurs sources concordantes. Contacté, Matignon n'avait pas donné suite à l'heure où nous publions. »" }
+  ],
+  "sources": [
+    { "titre": "Lexique pour temps de grèves et de manifestations", "auteur": "Acrimed", "url": "https://www.acrimed.org/IMG/pdf/Lexique_en_tract_octobre_2010.pdf", "apport": "Clichés médiatiques : otages, grogne, malaise, crispation, jeudi noir, micro-trottoir, pédagogie." },
+    { "titre": "Médias et violences policières : aux sources du « journalisme de préfecture »", "auteur": "Frédéric Lemaire et Pauline Perrenot (Acrimed)", "url": "https://www.acrimed.org/Medias-et-violences-policieres-aux-sources-du", "apport": "Dépendance aux sources officielles, effet de cascade, reprise des communiqués." },
+    { "titre": "Structures narratives et congruence cognitive : cas du summary lead et de la pyramide inversée", "auteur": "Bertrand Labasse", "url": "https://cjsdw.journals.publicknowledgeproject.org/index.php/dwr/article/view/18", "apport": "Statut de la pyramide inversée et du lead 5W comme préceptes dominants, et leurs limites." },
+    { "titre": "Le conditionnel journalistique (presse française et espagnole)", "auteur": "Michael Arrigo", "url": "https://gerflint.fr/Base/Baltique15/Arrigo.pdf", "apport": "Le conditionnel comme marque de non-prise en charge de l'information." },
+    { "titre": "Écrire pour informer (fiche CLEMI, premier degré)", "auteur": "CLEMI", "url": "https://francoispapin.github.io/NPEi.lab/pdf2/CLEMI_brochure_EMI_Premier_Degre_2018_Fiches_Intercycles%20_Fiche14.pdf", "apport": "5W, pyramide inversée, angle, chapeau." },
+    { "titre": "Le crash Rio-Paris du 1er juin 2009 (fiche HGGSP)", "auteur": "Académie de Versailles", "url": "https://histoire.ac-versailles.fr/IMG/pdf/20200331_hggsp_2.5_-_le_crash_rio-paris_1er_juin_2009_-_theme4_-_axe2_beillard.pdf", "apport": "Enchaînement des dépêches AFP : alerte, puis urgent." },
+    { "titre": "L'AFP adoptera un système de comptage indépendant pour la manifestation du 22 mars", "auteur": "Ozap", "url": "https://www.ozap.com/actu/l-afp-adoptera-un-systeme-de-comptage-independant-pour-la-manifestation-du-22-mars/553409", "apport": "Comptage Occurrence des manifestants par un collectif de médias depuis mars 2018." },
+    { "titre": "Sondages d'opinion : une législation récemment rénovée", "auteur": "Vie publique", "url": "https://www.vie-publique.fr/eclairage/23927-sondages-dopinion-une-legislation-recemment-renovee", "apport": "Mentions obligatoires des sondages, dont la marge d'erreur." },
+    { "titre": "Chronique étymologique : Retour au sens originel", "auteur": "Michel Casevitz (Les Belles Lettres)", "url": "https://laviedesclassiques.fr/sites/default/files/2019-03/retour_au_sens_originel.pdf", "apport": "Exemple de reprise par la presse du verbe « neutraliser » issu d'un communiqué d'armée." }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "id": "marketing",
+  "nom": "Marketing / Publicité",
+  "famille": "metier",
+  "categorie": "Communication & commerce",
+  "icone": "📣",
+  "couleur": "#FB8C00",
+  "description": "Éléments de langage du marketing et de la publicité en France : outils de cadrage (copy strategy, brief créatif, plateforme de marque), vocabulaire du consommateur (cible, insight, promesse, bénéfice, reason to believe) et jargon de la performance (funnel, KPI, ROI, taux de conversion). La fiche intègre le cadre déontologique et légal des allégations : ARPP, ADEME, loi Climat et résilience, directive européenne contre le greenwashing.",
+  "posture": "L'annonceur et son agence parlent depuis la connaissance du consommateur et la maîtrise des chiffres. Le ton est assertif, orienté action et résultat, riche en anglicismes, et doit rester véridique, loyal et vérifiable au regard des règles de l'ARPP.",
+  "valeurs": [
+    "connaissance du consommateur",
+    "différenciation",
+    "cohérence de marque",
+    "performance mesurable",
+    "créativité",
+    "émergence dans le bruit médiatique",
+    "relation et engagement client",
+    "loyauté et véracité du message"
+  ],
+  "vocabulaire": [
+    { "terme": "cible", "sens": "population visée par une offre ou une campagne", "usage": "La cible principale, ce sont les 25-34 ans urbains." },
+    { "terme": "cœur de cible", "sens": "segment prioritaire de la cible, le plus rentable ou le plus prescripteur", "usage": "Le cœur de cible reste les jeunes parents." },
+    { "terme": "persona", "sens": "portrait fictif et détaillé d'un client type, utilisé pour concevoir messages et parcours", "usage": "Notre persona, c'est Julie, 34 ans, cadre pressée." },
+    { "terme": "insight consommateur", "sens": "perception par le consommateur d'une situation ou d'un problème non résolu, sur laquelle la marque peut s'appuyer", "usage": "L'insight : les parents culpabilisent de manquer de temps." },
+    { "terme": "promesse", "sens": "expression de l'avantage principal que le consommateur retire du produit", "usage": "La promesse doit tenir en une phrase." },
+    { "terme": "bénéfice consommateur", "sens": "avantage concret ou émotionnel répondant à un besoin, au-delà d'un simple attribut produit", "usage": "Le bénéfice consommateur n'est pas la formule, c'est le gain de temps." },
+    { "terme": "reason to believe", "sens": "preuve ou justification qui rend la promesse crédible (RTB, support de la promesse)", "usage": "La reason to believe : une étude clinique sur deux cents personnes." },
+    { "terme": "reason why", "sens": "raison objective qui fonde la promesse ; souvent employé comme synonyme de reason to believe", "usage": "Il nous manque une reason why solide." },
+    { "terme": "positionnement", "sens": "place que la marque ou le produit doit occuper dans l'esprit des consommateurs par rapport aux concurrents", "usage": "Un positionnement premium mais accessible." },
+    { "terme": "copy strategy", "sens": "document qui fixe promesse, preuve, ton et cible d'une campagne, entre annonceur et agence", "usage": "La copy strategy a été validée par le client." },
+    { "terme": "brief créatif", "sens": "document qui transmet aux créatifs le problème, la cible, l'insight et le message clé", "usage": "On reprend le brief créatif avant la réunion de lancement." },
+    { "terme": "plateforme de marque", "sens": "document stratégique réunissant vision, mission, valeurs, promesse et personnalité de la marque", "usage": "La plateforme de marque garantit la cohérence de toutes les prises de parole." },
+    { "terme": "raison d'être", "sens": "principes qu'une société se donne et pour lesquels elle affecte des moyens, inscrits dans ses statuts depuis la loi PACTE (équivalent juridique du brand purpose)", "usage": "La raison d'être a été inscrite dans les statuts." },
+    { "terme": "brand purpose", "sens": "mission sociétale revendiquée par une marque au-delà du profit", "usage": "Le brand purpose doit se prouver par des actes." },
+    { "terme": "territoire de marque", "sens": "univers thématique et émotionnel où la marque est légitime pour s'exprimer", "usage": "Le sport est un territoire de marque naturel pour nous." },
+    { "terme": "ton", "sens": "atmosphère et personnalité que doit transmettre la communication", "usage": "Un ton complice, jamais moralisateur." },
+    { "terme": "concept créatif", "sens": "idée centrale qui traduit la promesse en une forme publicitaire déclinable", "usage": "Le concept tient sur tous les supports." },
+    { "terme": "accroche", "sens": "phrase principale d'une annonce, destinée à capter l'attention", "usage": "L'accroche doit être lisible en trois secondes." },
+    { "terme": "signature", "sens": "phrase courte associée durablement à la marque (baseline)", "usage": "La signature de marque change pour la première fois en dix ans." },
+    { "terme": "allégation", "sens": "affirmation sur une caractéristique d'un produit (claim), soumise à justification", "usage": "Toute allégation doit être vérifiable au moment de la diffusion." },
+    { "terme": "storytelling", "sens": "mise en récit de la marque ou du produit pour créer de l'émotion et de l'adhésion", "usage": "Le storytelling part de l'histoire du fondateur." },
+    { "terme": "brand content", "sens": "contenu éditorial produit par une marque pour informer ou divertir sans vendre frontalement", "usage": "Une série de brand content sur les métiers de l'artisanat." },
+    { "terme": "funnel", "sens": "entonnoir de conversion : notoriété, considération, conversion, fidélisation", "usage": "On perd trop de monde en bas du funnel." },
+    { "terme": "notoriété", "sens": "part du public qui connaît la marque, spontanément ou après aide", "usage": "La notoriété assistée progresse de huit points." },
+    { "terme": "considération", "sens": "étape où le consommateur envisage sérieusement la marque parmi les options d'achat", "usage": "La campagne vise la considération plus que la notoriété." },
+    { "terme": "conversion", "sens": "passage à l'acte attendu : achat, inscription, téléchargement", "usage": "Le parcours mobile freine la conversion." },
+    { "terme": "taux de conversion", "sens": "part des visiteurs ou prospects qui réalisent l'action attendue", "usage": "Le taux de conversion du site est de 2 %." },
+    { "terme": "KPI", "sens": "indicateur clé de performance servant à piloter et évaluer une action", "usage": "On fixe trois KPI maximum par campagne." },
+    { "terme": "ROI", "sens": "retour sur investissement : gain rapporté par rapport au coût engagé", "usage": "Le ROI de l'opération est positif dès le deuxième mois." },
+    { "terme": "ROAS", "sens": "chiffre d'affaires généré par euro de dépense publicitaire", "usage": "Le ROAS des campagnes sociales dépasse celui du display." },
+    { "terme": "part de marché", "sens": "poids d'une marque dans les ventes totales d'une catégorie, en valeur ou en volume", "usage": "La marque gagne un point de part de marché en valeur." },
+    { "terme": "part de voix", "sens": "poids de la marque dans l'ensemble des investissements ou mentions publicitaires de sa catégorie", "usage": "Notre part de voix est inférieure à notre part de marché." },
+    { "terme": "GRP", "sens": "indicateur de pression publicitaire : couverture multipliée par la répétition moyenne", "usage": "La vague télé totalise quatre cents GRP." },
+    { "terme": "taux de clic", "sens": "part des personnes exposées qui cliquent sur une annonce (CTR)", "usage": "Le taux de clic reste faible sur le display." },
+    { "terme": "coût d'acquisition", "sens": "dépense moyenne nécessaire pour gagner un nouveau client (CAC)", "usage": "Le coût d'acquisition a doublé en un an." },
+    { "terme": "taux d'engagement", "sens": "part des personnes qui interagissent avec un contenu (likes, partages, commentaires)", "usage": "Le taux d'engagement de la vidéo dépasse le benchmark." },
+    { "terme": "NPS", "sens": "Net Promoter Score : solde entre promoteurs et détracteurs d'une marque", "usage": "Le NPS gagne douze points après la refonte du service client." },
+    { "terme": "parcours client", "sens": "ensemble des étapes et points de contact entre la découverte et l'après-achat", "usage": "On a cartographié tout le parcours client." },
+    { "terme": "point de contact", "sens": "moment ou canal où le client rencontre la marque (touchpoint)", "usage": "Chaque point de contact doit parler la même langue." },
+    { "terme": "omnicanal", "sens": "stratégie qui articule tous les canaux (magasin, site, application, réseaux) sans rupture", "usage": "Une expérience omnicanale, du mobile au magasin." },
+    { "terme": "activation", "sens": "opération qui déclenche un comportement (essai, achat, participation) auprès de la cible", "usage": "Une activation en point de vente accompagne la campagne." },
+    { "terme": "A/B test", "sens": "comparaison de deux versions d'un message ou d'une page pour retenir la plus performante", "usage": "L'A/B test a départagé les deux accroches." },
+    { "terme": "émergence", "sens": "capacité d'une publicité à se faire remarquer dans l'encombrement publicitaire", "usage": "Le film a une très forte émergence." },
+    { "terme": "post-test", "sens": "mesure de l'efficacité d'une campagne après sa diffusion (mémorisation, attribution, agrément)", "usage": "Le post-test montre une attribution à la marque de 60 %." },
+    { "terme": "marketing d'influence", "sens": "recours à des créateurs de contenu pour promouvoir une marque auprès de leur communauté", "usage": "Le lancement s'appuie sur une campagne de marketing d'influence." },
+    { "terme": "greenwashing", "sens": "communication qui exagère ou invente les qualités écologiques d'un produit ou d'une entreprise", "usage": "L'allégation a été épinglée pour greenwashing." },
+    { "terme": "allégation environnementale", "sens": "affirmation sur un bénéfice écologique, encadrée par l'ARPP, la loi et la directive européenne EmpCo", "usage": "Une allégation environnementale doit être précise et chiffrée." },
+    { "terme": "quick win", "sens": "action rapide à faible coût et à effet visible immédiat", "usage": "Commençons par deux ou trois quick wins." }
+  ],
+  "formules": [
+    "Notre cible, c'est avant tout {public}.",
+    "L'insight est simple : {conclusion}.",
+    "Avec {sujet}, la marque tient une promesse claire.",
+    "Concernant {sujet}, il faut d'abord travailler la notoriété avant de parler conversion.",
+    "Le bénéfice consommateur doit être lisible en trois secondes.",
+    "On ne vend pas un produit, on vend une expérience.",
+    "Sur {element}, nous avons besoin d'une reason to believe solide.",
+    "Il faut que ça émerge.",
+    "Pour {public}, la marque doit être utile avant d'être visible.",
+    "{sujet} : un territoire de marque à préempter.",
+    "On va challenger le brief.",
+    "La marque doit incarner sa raison d'être au quotidien.",
+    "Sur {element}, les KPI parlent d'eux-mêmes.",
+    "Entre {a} et {b}, le positionnement doit être tranché.",
+    "C'est un quick win, mais il faut penser long terme.",
+    "Après {evenement}, la marque doit reprendre la parole avec un message fort.",
+    "On capitalise sur {element} pour activer la communauté.",
+    "Le mot d'ordre de la campagne : {terme}.",
+    "Notre ambition : créer de la préférence de marque.",
+    "Il faut raconter une histoire, pas empiler des arguments.",
+    "Le call-to-action doit être clair, unique et visible.",
+    "On teste, on mesure, on itère.",
+    "Concernant {sujet}, la data est claire : {conclusion}.",
+    "Pour {public}, chaque point de contact compte.",
+    "Il faut remettre le consommateur au centre.",
+    "Sans {element}, la promesse reste purement déclarative.",
+    "Avec {sujet}, on coche toutes les étapes du funnel.",
+    "Ce produit contribue à réduire notre impact, preuves chiffrées à l'appui.",
+    "Le concept est fort, il faut maintenant le décliner sur tous les canaux.",
+    "Depuis {evenement}, les attentes des consommateurs ont changé.",
+    "On ne parle pas à tout le monde : on parle à {public}."
+  ],
+  "connecteurs": [
+    "Concrètement,",
+    "Côté cible,",
+    "En termes de KPI,",
+    "Sur le plan de la marque,",
+    "En synthèse,",
+    "À date,",
+    "In fine,",
+    "Dans une logique omnicanale,",
+    "Côté activation,",
+    "Le key learning :",
+    "En parallèle,",
+    "L'enjeu :",
+    "Pour aller plus loin,"
+  ],
+  "euphemismes": [
+    { "brut": "publicité", "edl": "contenu de marque", "commentaire": "Le brand content brouille la frontière entre information et réclame." },
+    { "brut": "hausse de prix", "edl": "premiumisation", "commentaire": "Présentée comme une montée en qualité de l'offre." },
+    { "brut": "moins de produit pour le même prix", "edl": "nouveau format", "commentaire": "La réduflation (shrinkflation) est rarement nommée par les marques." },
+    { "brut": "baisse des ventes", "edl": "ralentissement de la dynamique", "commentaire": "Langage des bilans et des comités de direction." },
+    { "brut": "collecte de données personnelles", "edl": "personnalisation de l'expérience", "commentaire": "Le ciblage est présenté comme un service rendu au client." },
+    { "brut": "campagne ratée", "edl": "apprentissage", "commentaire": "Culture du test and learn : l'échec devient un key learning." },
+    { "brut": "clients", "edl": "communauté", "commentaire": "Sur les réseaux sociaux, la clientèle devient une communauté de fans." },
+    { "brut": "manipuler", "edl": "accompagner le consommateur dans sa décision", "commentaire": "Le nudge et le design persuasif sont présentés comme de l'aide." },
+    { "brut": "démarchage", "edl": "prise de parole CRM", "commentaire": "Les relances par courriel ou SMS sont rebaptisées animation de la relation client." },
+    { "brut": "produit polluant", "edl": "produit plus responsable", "commentaire": "Comparatif sans référent ; l'ARPP impose de préciser et de chiffrer, et à défaut de relativiser avec « contribue à »." },
+    { "brut": "publicité d'influenceur", "edl": "partenariat", "commentaire": "En France, la loi de 2023 sur l'influence commerciale impose pourtant une mention explicite « publicité » ou « collaboration commerciale »." },
+    { "brut": "copier la concurrence", "edl": "s'inspirer des best practices", "commentaire": "Le benchmark légitime l'imitation." },
+    { "brut": "petit budget", "edl": "dispositif agile", "commentaire": "Langage d'agence pour une campagne à moyens réduits." },
+    { "brut": "client mécontent", "edl": "client à réenchanter", "commentaire": "Dans le NPS, on parle de détracteurs." },
+    { "brut": "slogan", "edl": "signature de marque", "commentaire": "Le mot slogan est jugé daté en agence." }
+  ],
+  "substitutions": [
+    { "de": "clients visés", "vers": "cible" },
+    { "de": "public", "vers": "audience" },
+    { "de": "idée", "vers": "concept" },
+    { "de": "slogan", "vers": "signature" },
+    { "de": "message", "vers": "prise de parole" },
+    { "de": "avantage", "vers": "bénéfice consommateur" },
+    { "de": "preuve", "vers": "reason to believe" },
+    { "de": "image", "vers": "territoire de marque" },
+    { "de": "histoire", "vers": "storytelling" },
+    { "de": "objectif", "vers": "KPI" },
+    { "de": "résultat", "vers": "performance" },
+    { "de": "lancer", "vers": "activer" },
+    { "de": "vente", "vers": "conversion" },
+    { "de": "réputation", "vers": "image de marque" },
+    { "de": "affiche", "vers": "visuel" },
+    { "de": "acheteur", "vers": "shopper" },
+    { "de": "besoin", "vers": "insight" },
+    { "de": "budget publicitaire", "vers": "investissement média" },
+    { "de": "problème", "vers": "enjeu" },
+    { "de": "client fidèle", "vers": "ambassadeur" },
+    { "de": "parcours", "vers": "parcours client" },
+    { "de": "rentabilité", "vers": "ROI" },
+    { "de": "se faire remarquer", "vers": "émerger" },
+    { "de": "concurrents", "vers": "benchmark concurrentiel" }
+  ],
+  "cadres": [
+    { "nom": "Funnel", "question": "Où se situe {sujet} dans le funnel : notoriété, considération, conversion ou fidélisation ?", "explication": "Chaque action est rangée selon l'étape du parcours qu'elle doit faire progresser." },
+    { "nom": "Insight, promesse, preuve", "question": "Quel insight rend {element} pertinent, et quelle preuve le rend crédible ?", "explication": "Le triptyque de la copy strategy : un besoin réel, un bénéfice formulé, une justification." },
+    { "nom": "Mix marketing", "question": "Concernant {sujet}, que disent le produit, le prix, la distribution et la communication ?", "explication": "La grille des 4P vérifie la cohérence de l'offre." },
+    { "nom": "Positionnement concurrentiel", "question": "Entre {a} et {b}, quelle place occuper dans l'esprit du consommateur ?", "explication": "On se définit par différenciation, sur une carte perceptuelle face aux concurrents." },
+    { "nom": "Cible et persona", "question": "Pour {public}, quel besoin, quel frein et quel moment de vie ?", "explication": "On part du consommateur, de ses motivations et de ses irritants, et non du produit." },
+    { "nom": "Conformité des allégations", "question": "L'allégation portant sur {element} est-elle véridique, proportionnée, claire et vérifiable ?", "explication": "Grille ARPP et ADEME : véracité, proportionnalité, clarté, loyauté, preuves accessibles." },
+    { "nom": "Retour sur investissement", "question": "Pour {sujet}, quel coût, quel retour et quel ROI ?", "explication": "Toute dépense est évaluée par sa contribution mesurable au chiffre d'affaires ou à la valeur de marque." }
+  ],
+  "structures": [
+    {
+      "nom": "Copy strategy",
+      "description": "Document de cadrage d'une campagne publicitaire : fait principal, problème, promesse, preuve, ton.",
+      "etapes": [
+        {
+          "titre": "Fait principal",
+          "role": "contexte",
+          "consigne": "Exposer le contexte de marché ou de comportement qui justifie la campagne.",
+          "gabarits": [
+            "Le fait principal : {element}.",
+            "Depuis {evenement}, le comportement de la cible a changé."
+          ]
+        },
+        {
+          "titre": "Problème à résoudre",
+          "role": "tension",
+          "consigne": "Formuler de façon précise et réaliste le problème que la communication doit résoudre.",
+          "gabarits": [
+            "Le problème à résoudre : {conclusion}.",
+            "Entre {a} et {b}, la marque peine à se différencier."
+          ]
+        },
+        {
+          "titre": "Promesse",
+          "role": "decision",
+          "consigne": "Énoncer en une phrase l'avantage principal que le consommateur retire du produit.",
+          "gabarits": [
+            "La promesse tient en une phrase : {conclusion}.",
+            "Pour {public}, la marque promet un bénéfice concret et immédiat."
+          ]
+        },
+        {
+          "titre": "Preuve",
+          "role": "faits",
+          "consigne": "Apporter la reason to believe : étude, résultat, ingrédient, label, témoignage, chiffre sourcé.",
+          "gabarits": [
+            "La reason to believe : {element}.",
+            "La preuve par les chiffres : {chiffre}."
+          ]
+        },
+        {
+          "titre": "Ton et cible",
+          "role": "projection",
+          "consigne": "Définir le ton, l'ambiance et la cible de communication de la future création.",
+          "gabarits": [
+            "Le ton sera chaleureux, complice et résolument positif.",
+            "Pour {public}, un ton direct, sans jargon."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Brief créatif",
+      "description": "Brief transmis aux équipes créatives : contexte, cible et insight, message clé, dispositif, mesure.",
+      "etapes": [
+        {
+          "titre": "Contexte et enjeu",
+          "role": "contexte",
+          "consigne": "Résumer la situation de la marque et l'enjeu de la prise de parole.",
+          "gabarits": [
+            "Concernant {sujet}, l'enjeu est clair : {conclusion}.",
+            "Après {evenement}, la marque doit reprendre la parole."
+          ]
+        },
+        {
+          "titre": "Cible et insight",
+          "role": "analyse",
+          "consigne": "Décrire la cible et formuler l'insight qui ouvrira la création.",
+          "gabarits": [
+            "Notre cible : {public}.",
+            "L'insight : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Message clé",
+          "role": "decision",
+          "consigne": "Fixer un message unique et prioritaire, et ce que la cible doit penser, ressentir ou faire.",
+          "gabarits": [
+            "Un seul message à retenir : {element}.",
+            "Le mot-clé de la campagne : {terme}."
+          ]
+        },
+        {
+          "titre": "Dispositif",
+          "role": "projection",
+          "consigne": "Esquisser les canaux, formats et activations du plan de communication.",
+          "gabarits": [
+            "Le dispositif s'appuiera sur un film, des déclinaisons sociales et une activation en point de vente.",
+            "Pour {public}, le parcours commence sur mobile et se conclut en magasin."
+          ]
+        },
+        {
+          "titre": "Mesure",
+          "role": "faits",
+          "consigne": "Définir les KPI et les objectifs chiffrés qui permettront d'évaluer la campagne.",
+          "gabarits": [
+            "Le KPI principal : {chiffre}.",
+            "Objectif de notoriété assistée : {chiffre} à l'issue de la vague."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Cas de campagne",
+      "description": "Bilan de campagne ou dossier de prix publicitaire : challenge, idée, exécution, résultats, apprentissages.",
+      "etapes": [
+        {
+          "titre": "Le challenge",
+          "role": "contexte",
+          "consigne": "Présenter la difficulté de départ de la marque de façon dramatisée.",
+          "gabarits": [
+            "Le challenge : faire exister {sujet} face à des concurrents installés.",
+            "Avant {evenement}, la marque souffrait d'un déficit de notoriété."
+          ]
+        },
+        {
+          "titre": "L'idée",
+          "role": "decision",
+          "consigne": "Énoncer l'idée créative et l'insight sur lequel elle repose.",
+          "gabarits": [
+            "L'idée : transformer {element} en conversation nationale.",
+            "Le concept repose sur un insight fort : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Résultats",
+          "role": "faits",
+          "consigne": "Aligner les résultats chiffrés (portée, engagement, ventes, notoriété) de façon spectaculaire mais vérifiable.",
+          "gabarits": [
+            "Résultat : {chiffre}, bien au-delà des objectifs.",
+            "Entre {a} et {b}, l'écart de performance atteint {chiffre}."
+          ]
+        },
+        {
+          "titre": "Lecture des KPI",
+          "role": "analyse",
+          "consigne": "Interpréter les indicateurs et les rapporter aux benchmarks du secteur.",
+          "gabarits": [
+            "Sur {element}, la campagne a surperformé le benchmark du secteur.",
+            "La lecture des KPI est sans ambiguïté : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Apprentissages",
+          "role": "conclusion",
+          "consigne": "Tirer les enseignements (key learnings) réutilisables pour les prochaines campagnes.",
+          "gabarits": [
+            "Le key learning : {conclusion}.",
+            "Pour {public}, la marque est désormais une évidence."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le marketing vit par et pour la mesure : chaque objectif devient un KPI, chaque campagne un tableau de bord. Les chiffres servent autant à piloter qu'à convaincre, au risque des indicateurs de vanité et des pourcentages sans base de comparaison, alors que l'ARPP exige des réductions d'impact chiffrées et sourcées.",
+    "unites": [
+      "taux de conversion (%)",
+      "part de marché en valeur ou en volume (%)",
+      "ROI et ROAS",
+      "taux de clic (%)",
+      "coût pour mille (euros)",
+      "coût d'acquisition client (euros)",
+      "notoriété spontanée et assistée (%)",
+      "GRP",
+      "taux d'engagement (%)",
+      "Net Promoter Score",
+      "panier moyen (euros)"
+    ],
+    "formulations": [
+      "Le taux de conversion atteint {chiffre} pour {a}, quand {b} plafonne plus bas.",
+      "Concernant {sujet}, la part de marché progresse de {chiffre} en valeur.",
+      "Chaque euro investi sur {element} a rapporté {chiffre}.",
+      "Après {evenement}, la notoriété assistée gagne {chiffre}.",
+      "Avec {chiffre}, la campagne dépasse ses objectifs de couverture.",
+      "Le coût d'acquisition descend à {chiffre} sur {element}.",
+      "Pour {public}, le taux d'engagement atteint {chiffre}, au-dessus du benchmark."
+    ]
+  },
+  "metaphores": [
+    "l'entonnoir : le funnel où l'on perd des prospects à chaque étape",
+    "la cible : le consommateur comme point à atteindre",
+    "la campagne : vocabulaire militaire de l'offensive publicitaire",
+    "la force de frappe médiatique",
+    "la conquête d'un territoire de marque",
+    "l'ADN de la marque",
+    "l'écosystème de marque",
+    "le parcours client comme voyage",
+    "la marque-personne, dotée d'une personnalité et de valeurs",
+    "la viralité : le bouche-à-oreille comme contagion",
+    "l'émergence : sortir du bruit",
+    "les leviers à activer"
+  ],
+  "pieges": [
+    "Greenwashing : allégations globales (écologique, vert, responsable, durable) sans preuve, contraires à la recommandation ARPP et visées par la directive européenne EmpCo, applicable depuis le 27 septembre 2026 (transposition française encore en cours à l'été 2026).",
+    "Purpose-washing : raison d'être déclarative, sans moyens ni actes qui la prouvent.",
+    "Novlangue franglaise d'agence (« on va checker les learnings du test and learn ») qui masque la pauvreté de l'idée.",
+    "Indicateurs de vanité : vues, likes et impressions présentés comme des résultats business.",
+    "Pourcentages sans base de comparaison (« jusqu'à moins 70 % », « deux fois plus efficace ») et promesses survendues.",
+    "Cibles réduites à des stéréotypes (« ménagère de moins de 50 ans », « CSP+ urbains connectés »).",
+    "Confusion entre corrélation et causalité dans l'attribution des ventes à une campagne.",
+    "Publicité déguisée : influence commerciale ou contenu sponsorisé non signalé comme tel.",
+    "Visuels trompeurs : nature, éoliennes ou forêts sans rapport avec l'impact réel du produit."
+  ],
+  "registres": {
+    "institutionnel": "Rapport ou communiqué d'annonceur : vocabulaire de la raison d'être, de l'engagement et de la transformation, chiffres arrondis et ton positif.",
+    "technique": "En agence ou entre marketeurs : franglais assumé (brief, insight, RTB, funnel, KPI, ROAS, retargeting), acronymes, slides et tableaux de bord.",
+    "vulgarisation": "Pour le grand public : promesses simples, tutoiement fréquent, appels à l'action, humour et complicité, sans jargon.",
+    "critique": "Ses détracteurs parodient la novlangue des agences (« on va challenger l'insight pour driver la conversion ») et dénoncent manipulation, surconsommation, greenwashing et purpose-washing."
+  },
+  "visuel": {
+    "palette": ["#FB8C00", "#1E1E2F", "#FFFFFF", "#00BFA6", "#FFD54F"],
+    "motifs": [
+      { "fr": "entonnoir de conversion qui se remplit", "en": "animated conversion funnel filling up" },
+      { "fr": "courbes de croissance ascendantes", "en": "rising growth curves" },
+      { "fr": "tableau de bord de KPI avec widgets", "en": "KPI dashboard with animated widgets" },
+      { "fr": "cible concentrique touchée par une flèche", "en": "concentric target hit by an arrow" },
+      { "fr": "fiche persona en carte d'identité", "en": "persona profile card" },
+      { "fr": "parcours client en ligne pointillée", "en": "dotted-line customer journey map" },
+      { "fr": "bulles de notifications sociales", "en": "social media notification bubbles popping" },
+      { "fr": "panneau d'affichage urbain", "en": "urban billboard" },
+      { "fr": "écran de smartphone avec fil social", "en": "smartphone screen with scrolling social feed" },
+      { "fr": "diagramme circulaire de parts de marché", "en": "market share pie chart" },
+      { "fr": "mégaphone émettant des ondes", "en": "megaphone emitting sound waves" }
+    ],
+    "pictogrammes": [
+      { "fr": "mégaphone", "en": "megaphone" },
+      { "fr": "cible", "en": "target" },
+      { "fr": "ampoule", "en": "light bulb" },
+      { "fr": "entonnoir", "en": "funnel" },
+      { "fr": "cœur de like", "en": "heart like icon" },
+      { "fr": "chariot de courses", "en": "shopping cart" },
+      { "fr": "graphique en hausse", "en": "upward trending chart" },
+      { "fr": "loupe", "en": "magnifying glass" },
+      { "fr": "silhouette d'utilisateur", "en": "user silhouette" },
+      { "fr": "curseur de clic", "en": "click cursor" },
+      { "fr": "étiquette de prix", "en": "price tag" },
+      { "fr": "bulle de dialogue", "en": "speech bubble" }
+    ],
+    "typographie": "Linéale géométrique grasse (type Montserrat ou Poppins) pour les titres, chiffres clés en très grand corps, hiérarchie marquée et accroches courtes.",
+    "style_motion": "Motion design 2D en aplat, dynamique et coloré : icônes qui rebondissent, compteurs qui défilent, entonnoirs et graphiques qui se construisent, transitions rapides et rythmées, typographie cinétique sur fond clair.",
+    "style_motion_en": "Upbeat flat 2D motion graphics: bouncy icons, rolling number counters, funnels and charts building up, snappy rhythmic transitions, kinetic bold geometric sans-serif typography, bright orange, navy and teal palette on clean white backgrounds."
+  },
+  "exemples": [
+    { "contexte": "Règle déontologique réelle : Recommandation ARPP « Développement durable » v3, chapitre « Impacts éco-citoyens » (en vigueur depuis août 2020).", "texte": "« La représentation d'un véhicule à moteur sur un espace naturel est interdite. »" },
+    { "contexte": "Définition pédagogique réelle du positionnement dans une copy strategy (OpenClassrooms, cours « Élaborez votre campagne publicitaire »).", "texte": "« la place que doit occuper la marque ou le produit dans l'esprit de vos consommateurs »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une réunion de brief en agence.", "texte": "« L'insight, c'est que les parents n'ont plus le temps le soir. Notre promesse : un repas équilibré prêt en dix minutes. La reason to believe : des recettes validées par des nutritionnistes. On vise plus de notoriété assistée et un taux de conversion qui décolle sur le digital. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une allégation environnementale relativisée et chiffrée selon les exigences de l'ARPP.", "texte": "« Ce flacon contribue à réduire nos déchets plastiques : il contient 50 % de plastique recyclé. »" }
+  ],
+  "sources": [
+    { "titre": "Élaborez la création publicitaire (cours Élaborez votre campagne publicitaire)", "auteur": "OpenClassrooms", "url": "https://openclassrooms.com/fr/courses/6068011-elaborez-votre-campagne-publicitaire/6420456-elaborez-la-creation-publicitaire", "apport": "Structure de la copy strategy : fait principal, positionnement, problème, objectifs, promesse, preuve, ton, cibles." },
+    { "titre": "Recommandation Développement durable v3", "auteur": "ARPP (2020)", "url": "https://www.arpp.org/nous-consulter/regles/regles-de-deontologie/developpement-durable/", "apport": "Neuf chapitres de règles sur les allégations vertes : véracité, proportionnalité, clarté, loyauté, labels, vocabulaire, visuels." },
+    { "titre": "New French anti-greenwashing guidelines: dos and don'ts", "auteur": "Linklaters (2024), synthèse du guide ADEME", "url": "https://sustainablefutures.linklaters.com/post/102j8cz/new-french-anti-greenwashing-guidelines-dos-and-donts-to-avoid-misleading-gre", "apport": "Pratiques de greenwashing recensées par l'ADEME et interdictions de la loi Climat (neutre en carbone, biodégradable)." },
+    { "titre": "Bilan Publicité et environnement 2022", "auteur": "ARPP et ADEME", "url": "https://www.arpp.org/wp-content/uploads/2023/06/Bilan-ARPP-ADEME-Publicite-et-environnement-2022.pdf", "apport": "Chiffres de conformité des publicités utilisant un argument écologique." },
+    { "titre": "Allégations environnementales et labels : les nouvelles obligations applicables en septembre 2026", "auteur": "Option Finance", "url": "https://www.optionfinance.fr/entreprise-expertise/allegations-environnementales-et-labels-de-developpement-durable-les-nouvelles-obligations-applicables-en-septembre-2026.html", "apport": "Directive EmpCo : interdiction des allégations génériques non étayées à partir du 27 septembre 2026." },
+    { "titre": "Greenwashing : l'encadrement des allégations environnementales se fait attendre", "auteur": "UFC-Que Choisir (2026)", "url": "https://www.quechoisir.org/actualite-greenwashing-l-encadrement-des-allegations-environnementales-se-fait-attendre-n177194/", "apport": "État de la transposition française de la directive EmpCo à l'été 2026." },
+    { "titre": "Plateforme de marque : définition, bonnes pratiques et exemples", "auteur": "Blog du Modérateur", "url": "https://www.blogdumoderateur.com/plateforme-de-marque-definition-bonnes-pratiques-exemples/", "apport": "Composantes de la plateforme de marque (vision, mission, valeurs, promesse)." },
+    { "titre": "Un nouveau véhicule juridique : la société à mission", "auteur": "Actu-Juridique", "url": "https://www.actu-juridique.fr/affaires/un-nouveau-vehicule-juridique-la-societe-a-mission/", "apport": "Raison d'être et société à mission depuis la loi PACTE." },
+    { "titre": "À la recherche de l'insight perdu", "auteur": "Dékuple, The Media Leader", "url": "https://fr.themedialeader.com/?p=61197", "apport": "Définition de l'insight consommateur et origine de la planification stratégique." }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Table ronde : la semaine de quatre jours",
+    "description": "Politique, médecine et management débattent ; le décodeur mesure la langue de bois ; un short « tableau blanc » en sort."
+  },
+  "nodes": [
+    {
+      "id": "s1",
+      "type": "sujet",
+      "x": 40,
+      "y": 60,
+      "data": {
+        "titre": "La semaine de quatre jours",
+        "angle": "Faut-il généraliser la semaine de quatre jours ?",
+        "motscles": "travail, santé, productivité"
+      }
+    },
+    {
+      "id": "l1",
+      "type": "lexique",
+      "x": 40,
+      "y": 260,
+      "data": {
+        "lexique": "politique",
+        "registre": "institutionnel",
+        "intensite": 4
+      }
+    },
+    {
+      "id": "l2",
+      "type": "lexique",
+      "x": 40,
+      "y": 420,
+      "data": {
+        "lexique": "medecine",
+        "registre": "vulgarisation",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "l3",
+      "type": "lexique",
+      "x": 40,
+      "y": 580,
+      "data": {
+        "lexique": "management",
+        "registre": "institutionnel",
+        "intensite": 5
+      }
+    },
+    {
+      "id": "n1",
+      "type": "note",
+      "x": 340,
+      "y": 600,
+      "data": {
+        "titre": "Contexte",
+        "texte": "Plusieurs entreprises et administrations expérimentent une semaine de travail condensée ou réduite. Les retours portent sur le bien-être, l’organisation et la productivité.",
+        "source": ""
+      }
+    },
+    {
+      "id": "dbt",
+      "type": "debat",
+      "x": 360,
+      "y": 220,
+      "data": {
+        "format": "contradictoire",
+        "tours": 2,
+        "moderateur": true,
+        "seed": 1
+      }
+    },
+    {
+      "id": "dec",
+      "type": "decodeur",
+      "x": 680,
+      "y": 80,
+      "data": {
+        "cible": "tous"
+      }
+    },
+    {
+      "id": "ag",
+      "type": "agent",
+      "x": 680,
+      "y": 380,
+      "data": {
+        "role": "vulgarisateur",
+        "seed": 1
+      }
+    },
+    {
+      "id": "st",
+      "type": "style",
+      "x": 680,
+      "y": 600,
+      "data": {
+        "style": "whiteboard"
+      }
+    },
+    {
+      "id": "sh",
+      "type": "short",
+      "x": 980,
+      "y": 300,
+      "data": {
+        "duree": "60",
+        "format": "9:16",
+        "voix": "posée",
+        "cible": "generique",
+        "langue": "en",
+        "seed": 1
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "l1",
+      "from": "s1",
+      "fromPort": "out",
+      "to": "dbt",
+      "toPort": "sujet"
+    },
+    {
+      "id": "l2",
+      "from": "l1",
+      "fromPort": "out",
+      "to": "dbt",
+      "toPort": "voix"
+    },
+    {
+      "id": "l3",
+      "from": "l2",
+      "fromPort": "out",
+      "to": "dbt",
+      "toPort": "voix"
+    },
+    {
+      "id": "l4",
+      "from": "l3",
+      "fromPort": "out",
+      "to": "dbt",
+      "toPort": "voix"
+    },
+    {
+      "id": "l5",
+      "from": "n1",
+      "fromPort": "out",
+      "to": "dbt",
+      "toPort": "elements"
+    },
+    {
+      "id": "l6",
+      "from": "dbt",
+      "fromPort": "out",
+      "to": "dec",
+      "toPort": "texte"
+    },
+    {
+      "id": "l7",
+      "from": "dbt",
+      "fromPort": "out",
+      "to": "ag",
+      "toPort": "entree"
+    },
+    {
+      "id": "l8",
+      "from": "dbt",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l9",
+      "from": "st",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "style"
+    },
+    {
+      "id": "l10",
+      "from": "l1",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l11",
+      "from": "l2",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l12",
+      "from": "l3",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "lexiques"
+    }
+  ]
+}

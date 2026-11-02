@@ -1,0 +1,435 @@
+{
+  "id": "audiovisuel",
+  "nom": "Audiovisuel",
+  "famille": "metier",
+  "categorie": "Médias & création",
+  "icone": "🎬",
+  "couleur": "#8E24AA",
+  "description": "Éléments de langage de la production audiovisuelle francophone : cinéma, télévision, plateformes de streaming, documentaire et vidéo en ligne (shorts verticaux, films institutionnels et pédagogiques animés). La fiche mêle le lexique de la dramaturgie (objectif, obstacle, enjeu, arc), celui du tournage et du montage (plan, raccord, rythme) et celui de la diffusion mesurée (audience, part d'audience, rétention).",
+  "posture": "On parle depuis l'atelier d'écriture et la salle de montage : un auteur, un réalisateur ou un producteur qui raconte une histoire pour capter puis retenir l'attention d'un public, et qui justifie chaque choix par l'émotion produite et par les chiffres d'audience.",
+  "valeurs": [
+    "l'émotion du spectateur",
+    "la clarté du récit",
+    "le rythme",
+    "le point de vue d'auteur",
+    "la vraisemblance",
+    "l'audience et la rétention",
+    "la faisabilité de production",
+    "la bonne fin du projet"
+  ],
+  "vocabulaire": [
+    { "terme": "logline", "sens": "Résumé du film ou de la série en une seule phrase : un protagoniste, un objectif, un obstacle.", "usage": "Avant le synopsis, on veut une logline qui tienne en une ligne." },
+    { "terme": "pitch", "sens": "Résumé très bref de l'histoire, en une phrase ou un petit paragraphe, qui met en avant le concept unique du projet.", "usage": "Le pitch doit donner envie au diffuseur en trente secondes." },
+    { "terme": "synopsis", "sens": "Résumé condensé du scénario, sans dialogues, destiné aux producteurs (d'une demi-page à quelques pages).", "usage": "Envoie-moi le synopsis avant la réunion de développement." },
+    { "terme": "traitement", "sens": "Synopsis développé (10 à 40 pages), sans dialogues, qui précède le séquencier.", "usage": "Le traitement montre que l'histoire tient sur la longueur." },
+    { "terme": "séquencier", "sens": "Description des scènes dans l'ordre, sans les dialogues.", "usage": "Au séquencier, on voit tout de suite que l'acte II s'essouffle." },
+    { "terme": "continuité dialoguée", "sens": "Version du scénario avec séquences et dialogues, numérotée V1, V2… jusqu'à la version définitive.", "usage": "On attaque la V3 de la continuité dialoguée." },
+    { "terme": "note d'intention", "sens": "Texte où l'auteur ou le réalisateur expose son point de vue, ses partis pris et ses choix de mise en scène.", "usage": "La commission lit d'abord la note d'intention." },
+    { "terme": "protagoniste", "sens": "Personnage principal, celui dont on raconte l'histoire.", "usage": "Le protagoniste doit être actif, pas spectateur de sa propre histoire." },
+    { "terme": "objectif", "sens": "Ce que veut le protagoniste ; le but qui organise tout le récit.", "usage": "Quel est l'objectif du personnage dans cette scène ?" },
+    { "terme": "obstacle", "sens": "Ce qui rend incertaine l'atteinte de l'objectif ; il peut être externe ou interne.", "usage": "L'obstacle interne est souvent le plus fort." },
+    { "terme": "conflit", "sens": "Opposition entre l'objectif et les obstacles ; moteur dramatique du récit.", "usage": "Sans conflit, la scène est morte." },
+    { "terme": "enjeu", "sens": "Ce que le personnage peut gagner ou perdre ; ce qui donne au spectateur une raison de s'intéresser.", "usage": "L'enjeu n'est pas assez fort pour tenir quatre-vingt-dix minutes." },
+    { "terme": "arc narratif", "sens": "Transformation d'un personnage ou d'une intrigue entre le début et la fin du récit.", "usage": "Son arc va de la peur à l'engagement." },
+    { "terme": "arche narrative", "sens": "Intrigues principales qui structurent une série sur une saison ou plus.", "usage": "Le showrunner fixe les arches narratives de la saison." },
+    { "terme": "incident déclencheur", "sens": "Événement qui rompt l'équilibre initial, lance l'histoire et fixe l'objectif.", "usage": "L'incident déclencheur arrive trop tard, page vingt." },
+    { "terme": "climax", "sens": "Point culminant du troisième acte, confrontation décisive qui amène la résolution.", "usage": "Tout le film doit converger vers le climax." },
+    { "terme": "ironie dramatique", "sens": "Situation où le spectateur sait quelque chose qu'un personnage ignore, source d'anticipation.", "usage": "On joue l'ironie dramatique : le public sait que la bombe est sous la table." },
+    { "terme": "préparation-paiement", "sens": "Technique qui consiste à planter une information en amont pour la faire payer plus tard (setup / payoff).", "usage": "Le pistolet du premier acte doit payer au troisième." },
+    { "terme": "cliffhanger", "sens": "Fin ouverte, à un point crucial de l'intrigue, qui crée une forte attente de la suite.", "usage": "Chaque épisode se termine sur un cliffhanger." },
+    { "terme": "rebondissement", "sens": "Retournement de situation qui relance l'action et l'intérêt.", "usage": "Il manque un rebondissement au milieu de l'acte II." },
+    { "terme": "bible", "sens": "Document de référence d'une série (univers, personnages, ton, arches), littéraire ou graphique.", "usage": "Les nouveaux scénaristes doivent connaître la bible par cœur." },
+    { "terme": "showrunner", "sens": "Patron créatif d'une série, de l'écriture à la réalisation, garant de la bonne fabrication de la saison.", "usage": "Le showrunner valide chaque version des épisodes." },
+    { "terme": "pilote", "sens": "Premier épisode d'une série, qui installe personnages, univers et promesse.", "usage": "La chaîne commandera la saison si le pilote convainc." },
+    { "terme": "plan", "sens": "Portion de film enregistrée en continu entre deux coupes.", "usage": "On ajoute un plan serré sur ses mains." },
+    { "terme": "plan-séquence", "sens": "Scène entière filmée en un seul plan, sans coupe.", "usage": "L'ouverture est un plan-séquence de quatre minutes." },
+    { "terme": "champ-contrechamp", "sens": "Alternance de deux plans de directions opposées, typique des scènes de dialogue.", "usage": "Le dialogue est découpé en champ-contrechamp classique." },
+    { "terme": "raccord", "sens": "Continuité entre deux plans (regard, mouvement, objet, lumière) qui rend la coupe invisible.", "usage": "On coupe sur le geste pour faire un raccord mouvement." },
+    { "terme": "faux raccord", "sens": "Rupture involontaire de continuité entre deux plans.", "usage": "Le verre est plein puis vide : faux raccord." },
+    { "terme": "valeur de plan", "sens": "Taille du cadre par rapport au sujet : plan large, plan moyen, plan rapproché, gros plan.", "usage": "On change de valeur de plan pour marquer l'émotion." },
+    { "terme": "découpage", "sens": "Répartition d'une scène en plans avant le tournage.", "usage": "Le découpage technique est prêt pour la préparation." },
+    { "terme": "storyboard", "sens": "Suite de vignettes dessinées qui visualise le découpage, avec le texte de la voix off sous chaque case.", "usage": "Le client valide le storyboard avant l'animation." },
+    { "terme": "montage", "sens": "Assemblage des plans qui fabrique le sens et le rythme du film.", "usage": "Le film s'est réécrit au montage." },
+    { "terme": "rythme", "sens": "Sensation de vitesse produite par la durée des plans, des scènes et l'enchaînement des informations.", "usage": "Ça manque de rythme, on resserre." },
+    { "terme": "ellipse", "sens": "Saut temporel qui supprime ce que le spectateur peut reconstituer seul.", "usage": "Une ellipse et on passe directement au procès." },
+    { "terme": "voix off", "sens": "Commentaire dit par une voix hors champ ; en vidéo explicative, environ 150 mots par minute.", "usage": "La voix off donne le tempo de l'animation." },
+    { "terme": "plan de coupe", "sens": "Image d'illustration (B-roll) montée sur une interview ou une voix off.", "usage": "Il nous faut des plans de coupe pour couvrir la coupe dans l'interview." },
+    { "terme": "hook", "sens": "Accroche des toutes premières secondes conçue pour arrêter le défilement sur les réseaux.", "usage": "Si le hook ne marche pas en trois secondes, la vidéo est perdue." },
+    { "terme": "rétention", "sens": "Part des spectateurs encore présents à un instant donné de la vidéo.", "usage": "La courbe de rétention décroche à la huitième seconde." },
+    { "terme": "taux de complétion", "sens": "Part des spectateurs qui regardent la vidéo jusqu'au bout ; signal fort pour les algorithmes.", "usage": "Un short de vingt-cinq secondes a un meilleur taux de complétion." },
+    { "terme": "format", "sens": "Concept reproductible d'émission ou de vidéo (durée, ton, mécanique, habillage).", "usage": "On ne vend pas un sujet, on vend un format." },
+    { "terme": "case", "sens": "Créneau horaire de diffusion attribué à un programme dans la grille.", "usage": "La série hérite de la case du mardi." },
+    { "terme": "prime time", "sens": "Tranche de soirée la plus regardée, où se jouent les grandes audiences.", "usage": "Le documentaire est programmé en prime time." },
+    { "terme": "part d'audience", "sens": "Selon Médiamétrie, part que représente la durée d'écoute d'une chaîne dans la durée d'écoute totale de la télévision ; aussi dite part de marché.", "usage": "Le programme fait 21 % de part d'audience." },
+    { "terme": "Médiamat", "sens": "Mesure de référence de l'audience télévisée en France par Médiamétrie (4 ans et plus, tous écrans, live, différé, replay).", "usage": "On attend les chiffres Médiamat de 9 heures." },
+    { "terme": "replay", "sens": "Visionnage d'un programme après sa diffusion, intégré à l'audience « jour de vision ».", "usage": "La série gagne un tiers de son public en replay." },
+    { "terme": "motion design", "sens": "Animation graphique de formes, textes, pictogrammes et données, en 2D ou 3D.", "usage": "Le film institutionnel sera entièrement en motion design." },
+    { "terme": "typographie cinétique", "sens": "Texte animé à l'écran, calé sur le rythme de la voix ou de la musique.", "usage": "Les mots-clés apparaissent en typographie cinétique." },
+    { "terme": "format vertical 9:16", "sens": "Cadre vertical plein écran mobile (1080 × 1920) des shorts, reels et TikTok.", "usage": "On décline le film en 9:16 pour les réseaux." },
+    { "terme": "développement", "sens": "Phase d'écriture et de recherche de financement avant la production.", "usage": "Le projet est en développement depuis deux ans." }
+  ],
+  "formules": [
+    "Concernant {sujet}, la vraie question est : quel est l'enjeu pour le spectateur ?",
+    "Sur {sujet}, il nous manque encore un enjeu clair.",
+    "On a un sujet, il nous faut maintenant une histoire.",
+    "En une phrase, quelle est la logline ?",
+    "Il faut que le spectateur comprenne {element} sans qu'on le lui explique.",
+    "Montre, ne dis pas : il faut faire passer {element} par l'image.",
+    "Il faut accrocher dès les trois premières secondes, sinon on perd {public}.",
+    "Avec {sujet}, on tient un vrai personnage, reste à trouver son arc.",
+    "C'est là qu'intervient ce que le métier appelle « {terme} ».",
+    "Ça manque de rythme, on peut resserrer au montage.",
+    "On coupe dans le gras : tout ce qui ne sert pas l'enjeu saute.",
+    "Le projet est toujours en développement, on attend le retour des diffuseurs.",
+    "On est sur une écriture très incarnée, au plus près des personnages.",
+    "Le montage doit faire monter la tension jusqu'au point culminant : {evenement}.",
+    "Il faut un retournement avant {evenement}, sinon le deuxième acte s'essouffle.",
+    "On termine sur un cliffhanger : il faut que {public} ait envie de voir la suite.",
+    "Visuellement, on traitera {sujet} en motion design épuré.",
+    "Ce plan ne raccorde pas avec le précédent, on refait une prise.",
+    "La voix off doit laisser respirer l'image.",
+    "On ne vend pas un sujet aux diffuseurs, on vend un format.",
+    "On a rassemblé {chiffre} en prime time, c'est une belle performance pour la case.",
+    "La courbe de rétention décroche juste après {evenement}, il faut retravailler ce passage.",
+    "Le payoff se prépare : il faut planter {element} dès l'ouverture.",
+    "On reste au plus près du réel, sans commentaire surplombant.",
+    "Le sujet est fort, mais où est le point de vue ?",
+    "Pour {public}, on simplifie : une idée par plan, une information par écran.",
+    "La promesse du titre doit être tenue avant la fin de la vidéo.",
+    "C'est un film qui va trouver son public sur la durée.",
+    "Le programme a su fidéliser {public} malgré une concurrence très forte.",
+    "Bref, {conclusion}, et c'est exactement ce que le film doit faire ressentir.",
+    "Tout est dans le sous-texte : on ne nomme jamais frontalement {element}."
+  ],
+  "connecteurs": [
+    "Dès l'ouverture,",
+    "Au premier acte,",
+    "Au milieu du deuxième acte,",
+    "Plan suivant :",
+    "En contrechamp,",
+    "Au montage,",
+    "En voix off,",
+    "Coupe franche :",
+    "Pendant ce temps,",
+    "Retour au présent :",
+    "Quelques secondes plus tard,",
+    "Dans les trois premières secondes,",
+    "En fin d'épisode,"
+  ],
+  "euphemismes": [
+    { "brut": "le projet est bloqué ou abandonné", "edl": "le projet est en développement", "commentaire": "Formule de producteur pour un projet qui stagne faute de financement ou de diffuseur (formulation typique, non sourcée)." },
+    { "brut": "le film a fait un flop", "edl": "le film n'a pas trouvé son public", "commentaire": "Classique des lendemains de sortie en salle ; reporte l'échec sur la rencontre avec le public." },
+    { "brut": "l'émission est supprimée", "edl": "l'émission ne sera pas reconduite à la rentrée", "commentaire": "Langage des grilles de programmes des chaînes." },
+    { "brut": "la série est annulée", "edl": "la série n'est pas renouvelée pour une nouvelle saison", "commentaire": "Annonces des chaînes et plateformes de streaming." },
+    { "brut": "c'est ennuyeux", "edl": "il y a des longueurs, ça manque de rythme", "commentaire": "Retour de visionnage entre professionnels." },
+    { "brut": "le scénario est raté", "edl": "le scénario a besoin d'une nouvelle version", "commentaire": "Notes de lecture et commissions de développement." },
+    { "brut": "on a coupé la scène de l'acteur", "edl": "la scène n'a pas survécu au montage", "commentaire": "Justification auprès des comédiens et en promotion." },
+    { "brut": "on renvoie le réalisateur", "edl": "le réalisateur a quitté le projet pour divergences artistiques", "commentaire": "Communiqué de production après un conflit." },
+    { "brut": "c'est de la publicité", "edl": "c'est du contenu de marque (brand content)", "commentaire": "Vidéos financées par une marque, présentées comme éditoriales." },
+    { "brut": "film de propagande d'entreprise", "edl": "film institutionnel", "commentaire": "Vidéo de commande d'une organisation sur elle-même." },
+    { "brut": "l'audience s'effondre", "edl": "l'audience connaît un léger tassement", "commentaire": "Communiqués de chaînes ; on parle aussi d'érosion." },
+    { "brut": "un titre racoleur", "edl": "un packaging optimisé", "commentaire": "Jargon des créateurs vidéo sur les titres et miniatures accrocheurs (clickbait)." },
+    { "brut": "un tournage sans moyens", "edl": "un tournage léger, en équipe réduite", "commentaire": "Documentaire et web ; transforme la contrainte budgétaire en choix artistique." },
+    { "brut": "film difficile d'accès", "edl": "film exigeant", "commentaire": "Critique et promotion du cinéma d'auteur." },
+    { "brut": "programmé tard le soir faute de mieux", "edl": "programmé en deuxième partie de soirée", "commentaire": "Grille des chaînes ; case moins exposée." }
+  ],
+  "substitutions": [
+    { "de": "résumé", "vers": "synopsis" },
+    { "de": "idée", "vers": "concept" },
+    { "de": "histoire", "vers": "récit" },
+    { "de": "but", "vers": "objectif dramatique" },
+    { "de": "problème", "vers": "obstacle" },
+    { "de": "conséquence", "vers": "enjeu" },
+    { "de": "début", "vers": "ouverture" },
+    { "de": "fin", "vers": "dénouement" },
+    { "de": "moment fort", "vers": "climax" },
+    { "de": "surprise", "vers": "rebondissement" },
+    { "de": "premier épisode", "vers": "pilote" },
+    { "de": "image", "vers": "plan" },
+    { "de": "coupure", "vers": "coupe" },
+    { "de": "continuité", "vers": "raccord" },
+    { "de": "téléspectateurs", "vers": "audience" },
+    { "de": "soirée", "vers": "prime time" },
+    { "de": "rattrapage", "vers": "replay" },
+    { "de": "accroche", "vers": "hook" },
+    { "de": "commentaire", "vers": "voix off" },
+    { "de": "illustration", "vers": "plan de coupe" },
+    { "de": "graphique animé", "vers": "motion design" },
+    { "de": "émission", "vers": "programme" },
+    { "de": "brouillon", "vers": "première version" },
+    { "de": "personnage principal", "vers": "protagoniste" },
+    { "de": "méchant", "vers": "antagoniste" },
+    { "de": "évolution du personnage", "vers": "arc" }
+  ],
+  "cadres": [
+    { "nom": "Objectif, obstacle, conflit", "question": "Dans {sujet}, qui veut quoi, et qu'est-ce qui l'en empêche ?", "explication": "Grille dramaturgique de base : sans objectif ni obstacle, il n'y a pas de récit." },
+    { "nom": "Enjeu", "question": "Qu'est-ce qu'on gagne ou qu'on perd avec {element} ?", "explication": "Le spectateur ne s'intéresse qu'à ce qui peut basculer dans un sens ou dans l'autre." },
+    { "nom": "Point de vue", "question": "Depuis quel regard raconte-t-on {sujet} ?", "explication": "Le point de vue distingue un film d'auteur d'un simple sujet." },
+    { "nom": "Accroche et rétention", "question": "Qu'est-ce qui, dans les trois premières secondes, retiendra {public} ?", "explication": "Lecture propre aux plateformes : la vidéo se juge à sa courbe de rétention." },
+    { "nom": "Format et case", "question": "Quel format, quelle durée et quelle case de diffusion pour {sujet} ?", "explication": "Grille du diffuseur : un programme n'existe que dans une grille ou un fil." },
+    { "nom": "Montrer plutôt que dire", "question": "Comment montrer {element} plutôt que l'expliquer ?", "explication": "Principe d'écriture visuelle : l'image porte l'information avant le texte." },
+    { "nom": "Préparation-paiement", "question": "Quelle information faut-il planter en amont pour que la révélation finale sur {sujet} fonctionne ?", "explication": "Toute chute réussie a été préparée sans que le spectateur s'en aperçoive." }
+  ],
+  "structures": [
+    {
+      "nom": "Structure en trois actes",
+      "description": "Récit classique hérité d'Aristote : exposition, confrontation, résolution, rythmé par l'incident déclencheur et le climax.",
+      "etapes": [
+        {
+          "titre": "Exposition (acte I)",
+          "role": "contexte",
+          "consigne": "Présenter le monde, le protagoniste et la situation initiale, avant que l'équilibre ne se rompe.",
+          "gabarits": [
+            "Au départ, il y a {sujet}, un monde qui semble tenir en équilibre.",
+            "Tout commence avant {evenement}, dans une situation que chacun croit stable."
+          ]
+        },
+        {
+          "titre": "Incident déclencheur",
+          "role": "faits",
+          "consigne": "Introduire l'événement qui rompt l'équilibre et fixe l'objectif du protagoniste.",
+          "gabarits": [
+            "Et puis survient {evenement}, et plus rien ne sera comme avant.",
+            "Un fait vient tout changer : {element}."
+          ]
+        },
+        {
+          "titre": "Confrontation (acte II)",
+          "role": "tension",
+          "consigne": "Faire monter les obstacles et le conflit jusqu'au point de non-retour, en augmentant l'enjeu.",
+          "gabarits": [
+            "Mais rien n'est simple : entre {a} et {b}, le conflit s'installe.",
+            "Chaque tentative se heurte à un nouvel obstacle, et il y a désormais {chiffre} en jeu."
+          ]
+        },
+        {
+          "titre": "Climax",
+          "role": "decision",
+          "consigne": "Amener la confrontation décisive où le protagoniste doit faire un choix irréversible.",
+          "gabarits": [
+            "Vient le moment de vérité : il faut trancher sur {sujet}.",
+            "Tout se joue maintenant, et le choix porte sur {element}."
+          ]
+        },
+        {
+          "titre": "Résolution (acte III)",
+          "role": "conclusion",
+          "consigne": "Montrer le nouvel équilibre et ce que le récit a transformé chez le personnage et dans son monde.",
+          "gabarits": [
+            "Au bout du compte, {conclusion}.",
+            "Le monde a changé : {conclusion}, et rien ne sera plus comme avant."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Short vertical : hook, setup, payoff",
+      "description": "Structure d'une vidéo courte en 9:16 de 15 à 60 secondes, pensée pour la rétention et la complétion.",
+      "etapes": [
+        {
+          "titre": "Hook (0 à 3 secondes)",
+          "role": "tension",
+          "consigne": "Arrêter le défilement en moins de trois secondes : promesse forte, résultat montré d'abord, chiffre choc ou question intrigante. Jamais de logo ni de salutation.",
+          "gabarits": [
+            "Et si tout ce qu'on croit savoir sur {sujet} était faux ?",
+            "Ce chiffre va vous surprendre : {chiffre}.",
+            "Personne n'en parle, et pourtant tout part de là : {element}."
+          ]
+        },
+        {
+          "titre": "Setup (contexte express)",
+          "role": "contexte",
+          "consigne": "Poser en une ou deux phrases le contexte minimal nécessaire, au rythme d'environ 2,5 mots par seconde.",
+          "gabarits": [
+            "Pour comprendre, il faut revenir sur {evenement}.",
+            "Le contexte en dix secondes : {sujet}, c'est d'abord une histoire de chiffres."
+          ]
+        },
+        {
+          "titre": "Preuves rapides",
+          "role": "faits",
+          "consigne": "Enchaîner deux ou trois faits visuels, un par plan, avec sous-titres animés mot à mot.",
+          "gabarits": [
+            "Premier indice : {element}.",
+            "Et les chiffres le confirment : {chiffre}.",
+            "Mettez côte à côte {a} et {b} : la ressemblance saute aux yeux."
+          ]
+        },
+        {
+          "titre": "Payoff (révélation)",
+          "role": "conclusion",
+          "consigne": "Tenir la promesse du hook avec la réponse ou la révélation, sans délayer : terminer dans les secondes qui suivent.",
+          "gabarits": [
+            "La réponse : {conclusion}.",
+            "Voilà pourquoi {conclusion}."
+          ]
+        },
+        {
+          "titre": "Relance",
+          "role": "projection",
+          "consigne": "Clore très vite par une question, une boucle vers l'image d'ouverture ou l'annonce de la vidéo suivante.",
+          "gabarits": [
+            "La suite dans la prochaine vidéo, avec {evenement}.",
+            "Et vous, vous l'auriez deviné ?"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Film explicatif ou institutionnel animé",
+      "description": "Film pédagogique ou institutionnel en motion design de 60 à 120 secondes, porté par une voix off d'environ 150 mots par minute.",
+      "etapes": [
+        {
+          "titre": "Le constat",
+          "role": "contexte",
+          "consigne": "Partir d'une situation du quotidien que le public reconnaît immédiatement, avec un personnage stylisé.",
+          "gabarits": [
+            "Chaque jour, des millions de personnes vivent avec {sujet} sans y penser.",
+            "Vous ne le voyez pas, mais tout autour de vous, il y a {sujet}."
+          ]
+        },
+        {
+          "titre": "Le chiffre-clé",
+          "role": "faits",
+          "consigne": "Donner un seul chiffre fort, animé en grand au centre de l'écran.",
+          "gabarits": [
+            "Un chiffre pour comprendre : {chiffre}.",
+            "En France, on parle aujourd'hui de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Le mécanisme",
+          "role": "analyse",
+          "consigne": "Expliquer pas à pas, une idée par écran, avec pictogrammes, flèches et infographies.",
+          "gabarits": [
+            "Concrètement, comment ça marche ? Le point de départ, c'est {element}.",
+            "Étape par étape : d'abord {element}, puis {evenement}."
+          ]
+        },
+        {
+          "titre": "La réponse",
+          "role": "decision",
+          "consigne": "Présenter la solution, le dispositif ou l'action proposée par l'institution, sans jargon.",
+          "gabarits": [
+            "C'est pourquoi un nouveau dispositif accompagne désormais {public}.",
+            "La solution : agir simplement sur {element}."
+          ]
+        },
+        {
+          "titre": "Bénéfice et appel à l'action",
+          "role": "projection",
+          "consigne": "Conclure sur le bénéfice concret et une action simple, puis signer avec le logo.",
+          "gabarits": [
+            "Résultat : {conclusion}.",
+            "Pour en savoir plus, rendez-vous sur le site, et partagez cette vidéo avec {public}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le métier vit au rythme des audiences : Médiamétrie pour la télévision (part d'audience, couverture, audience jour de vision incluant replay et différé), les tableaux de bord des plateformes pour le web (vues, rétention, taux de complétion). On commente rarement un chiffre seul : on parle de performance de case, de leader sur une cible et de progression par rapport à la moyenne.",
+    "unites": [
+      "téléspectateurs (audience moyenne)",
+      "part d'audience (%)",
+      "couverture hebdomadaire (individus de 4 ans et plus)",
+      "durée d'écoute par individu (minutes par jour)",
+      "entrées en salle",
+      "vues",
+      "taux de rétention à 3 secondes (%)",
+      "taux de complétion (%)",
+      "durée moyenne de visionnage (secondes)",
+      "budget de production (millions d'euros)"
+    ],
+    "formulations": [
+      "Le programme a réuni {chiffre} en prime time, en tête des audiences de la soirée.",
+      "Avec {chiffre} de part d'audience, la case est largement au-dessus de sa moyenne.",
+      "Sur la cible commerciale, la performance atteint {chiffre}, un record pour la chaîne.",
+      "La rétention tombe à {chiffre} juste après {evenement} : c'est là que l'on perd le public.",
+      "En replay et en différé, le programme gagne encore {chiffre}.",
+      "Face à la concurrence, l'écart est net : {chiffre} pour {a}, bien moins pour {b}.",
+      "Le film a dépassé {chiffre} en salle dès sa première semaine d'exploitation.",
+      "Le taux de complétion atteint {chiffre}, signe que le hook fonctionne."
+    ]
+  },
+  "metaphores": [
+    "le rythme comme une respiration du film",
+    "le montage comme troisième écriture, après le scénario et le tournage",
+    "accrocher le spectateur comme on ferre un poisson (le hook)",
+    "tenir le spectateur en haleine",
+    "le scénario comme une architecture ou une colonne vertébrale",
+    "planter une graine pour la récolter plus tard (préparation-paiement)",
+    "la bible comme fondation de la série",
+    "la case de diffusion comme une vitrine",
+    "la guerre des audiences",
+    "la courbe de rétention comme un électrocardiogramme",
+    "faire décoller une série",
+    "le public comme juge souverain"
+  ],
+  "pieges": [
+    "Plaquer le jargon d'atelier (enjeu, arc, payoff) sur des sujets qui ne sont pas des récits, au risque de dramatiser artificiellement.",
+    "Tyrannie de la rétention : hooks racoleurs, promesses non tenues et clickbait pour satisfaire l'algorithme.",
+    "Formatage : toutes les vidéos se ressemblent, même accroche, même musique, mêmes sous-titres animés.",
+    "Euphémismes de producteur (« en développement », « n'a pas trouvé son public ») qui masquent un échec ou un blocage.",
+    "Lecture biaisée des audiences : choisir la cible, la période ou l'indicateur (4 ans et plus, cible commerciale, replay) le plus flatteur.",
+    "Film institutionnel publicitaire déguisé en pédagogie, avec une voix off en langue de bois.",
+    "Simplification excessive des vidéos explicatives : une idée par écran peut caricaturer un sujet complexe.",
+    "Surenchère de motion design au détriment du propos : effets gratuits, saturation visuelle, texte illisible.",
+    "Dramatisation abusive du documentaire par la musique et le montage, qui tord le réel."
+  ],
+  "registres": {
+    "institutionnel": "Communiqué de chaîne ou de producteur : « leader sur la cible », « belle performance », « le public a répondu présent », chiffres Médiamétrie à l'appui.",
+    "technique": "Entre professionnels : jargon de plateau et de salle de montage (« on refait une prise », « faux raccord », « on resserre », « ça ne paie pas »).",
+    "vulgarisation": "Pour le grand public : on parle d'histoire, de héros, de suspense, de rebondissements et de scènes cultes, sans termes techniques.",
+    "critique": "Les détracteurs dénoncent le formatage, le racolage des titres, la dictature de l'Audimat et les films qui « n'ont pas trouvé leur public »."
+  },
+  "visuel": {
+    "palette": ["#8E24AA", "#1A1A2E", "#F5C518", "#E53935", "#F4F1EA"],
+    "motifs": [
+      { "fr": "clap de cinéma qui se referme", "en": "film clapperboard snapping shut" },
+      { "fr": "bande de pellicule qui défile", "en": "scrolling film strip" },
+      { "fr": "timeline de montage avec pistes vidéo et audio", "en": "video editing timeline with stacked tracks" },
+      { "fr": "cadre de viseur avec repères de cadrage", "en": "camera viewfinder frame with crop marks" },
+      { "fr": "courbe de rétention animée qui monte puis décroche", "en": "animated audience retention curve rising then dropping" },
+      { "fr": "écran de smartphone vertical 9:16", "en": "vertical 9:16 smartphone screen" },
+      { "fr": "planche de storyboard en vignettes", "en": "storyboard sheet with sketched panels" },
+      { "fr": "faisceau de projecteur dans une salle obscure", "en": "projector light beam in a dark cinema" },
+      { "fr": "compte à rebours d'amorce de film", "en": "film leader countdown" },
+      { "fr": "sous-titres animés mot à mot", "en": "word-by-word animated captions" },
+      { "fr": "courbe dramatique des trois actes", "en": "three-act story arc curve" }
+    ],
+    "pictogrammes": [
+      { "fr": "caméra", "en": "film camera" },
+      { "fr": "clap", "en": "clapperboard" },
+      { "fr": "micro", "en": "microphone" },
+      { "fr": "bouton lecture", "en": "play button" },
+      { "fr": "ciseaux de montage", "en": "editing scissors" },
+      { "fr": "projecteur", "en": "spotlight" },
+      { "fr": "téléviseur", "en": "television set" },
+      { "fr": "smartphone vertical", "en": "vertical smartphone" },
+      { "fr": "bobine de film", "en": "film reel" },
+      { "fr": "casque audio", "en": "headphones" },
+      { "fr": "œil", "en": "eye" }
+    ],
+    "typographie": "Titrage condensé en capitales à fort contraste pour les cartons, et sans-serif grasse pour les sous-titres animés mot à mot des shorts, centrés dans la zone de sécurité.",
+    "style_motion": "Motion design 2D cinématographique : coupes franches et raccords mouvement, typographie cinétique calée sur la voix off (environ 2,5 mots par seconde), motifs de pellicule et de clap, cadrage vertical 9:16 pour les shorts avec une accroche visuelle dès la première seconde.",
+    "style_motion_en": "Cinematic 2D motion design, hard cuts and match-on-action transitions, kinetic typography synced to a voice-over at about 2.5 words per second, film-strip and clapperboard motifs, deep violet, dark navy and spotlight-yellow palette, vertical 9:16 framing with a strong visual hook in the very first second."
+  },
+  "exemples": [
+    { "contexte": "Définition officielle reproduite dans le communiqué Médiamat Hebdo de Médiamétrie (semaine 34, 24 août 2026)", "texte": "« Part d'audience (PDA) : part que représente la durée d'écoute d'une chaîne dans la durée d'écoute totale du média télévision sur un jour moyen. »" },
+    { "contexte": "Article du CNC présentant le métier de showrunner (30 juin 2022) : deux extraits", "texte": "« Élaboration des arches narratives, direction d'écriture, direction artistique, collaboration avec le réalisateur » ; « le showrunner intervient à – presque – tous les niveaux de production d'une série. »" },
+    { "contexte": "Formulation typique (illustrative, non attribuée) d'un hook de short vertical pédagogique", "texte": "« Ce chiffre va vous surprendre. Restez jusqu'à la fin : la réponse risque de vous étonner. »" },
+    { "contexte": "Formulation typique (illustrative, non attribuée) d'un producteur à propos d'un projet bloqué", "texte": "« Le projet est toujours en développement, on attend le retour des diffuseurs. »" }
+  ],
+  "sources": [
+    { "titre": "Médiamat Hebdo, semaine 34 (17-23 août 2026)", "auteur": "Médiamétrie", "url": "https://www.mediametrie.fr/system/files/2026-08/2026%2008%2024_Mediamat%20Hebdo_S34.pdf", "apport": "Définitions officielles : audience jour de vision, couverture hebdomadaire, part d'audience ; description du Médiamat et de ses panels." },
+    { "titre": "Décryptage : comment sont calculées les audiences télévisées ?", "auteur": "CNC", "url": "https://www.cnc.fr/series-tv/actualites/decryptage--comment-sont-calculees-les-audiences-televisees_865870", "apport": "Audimètre, panel, part d'audience dite part de marché, live, différé et replay, mesure hors domicile, public-cible." },
+    { "titre": "Qu'est-ce qu'un showrunner ?", "auteur": "CNC", "url": "https://www.cnc.fr/series-tv/actualites/questce-quun-showrunner_1105196", "apport": "Définition du showrunner et des arches narratives d'une série." },
+    { "titre": "Lexique de dramaturgie et de scénario (d'après architecriture.wordpress.com)", "auteur": "La Plateforme", "url": "https://www.laplateforme.net/app/uploads/lexique.pdf", "apport": "Définitions : enjeu, conflit, ironie dramatique, incident déclencheur, pitch, synopsis, traitement, séquencier, cliffhanger, préparation-paiement." },
+    { "titre": "La Dramaturgie (table des matières)", "auteur": "Yves Lavandier", "url": "https://urn.ub.unibe.ch/urn:ch:slsp:ubba:2390701140:ihv:pdf", "apport": "Mécanismes fondamentaux : conflit et émotion, protagoniste et objectif, obstacles, ironie dramatique." },
+    { "titre": "Comment écrire un script de vidéo explicative", "auteur": "Leadde", "url": "https://leadde.ai/fr/blog/write-explainer-video-script", "apport": "Débit de voix off (150 à 180 mots par minute ; 150 mots pour 60 secondes)." },
+    { "titre": "Ratio et taille des YouTube Shorts : le guide 2026", "auteur": "vidIQ", "url": "https://vidiq.com/fr/blog/post/youtube-shorts-video-verticale-taille/", "apport": "Format vertical 9:16 en 1080 × 1920 pixels." },
+    { "titre": "The Ideal YouTube Shorts Length & Format for Retention", "auteur": "Opus Pro", "url": "https://www.opus.pro/blog/ideal-youtube-shorts-length-format-retention", "apport": "Importance du taux de complétion, durées de 20 à 40 secondes, payoff rapide (source commerciale)." },
+    { "titre": "Comment créer des vidéos pour les réseaux sociaux", "auteur": "Vivideo", "url": "https://vivideo.ai/fr/guides/comment-creer-des-videos-pour-les-reseaux-sociaux", "apport": "Ouvrir sur le résultat ou une promesse forte, zones de sécurité de l'interface (source commerciale)." }
+  ]
+}

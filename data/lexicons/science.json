@@ -1,0 +1,436 @@
+{
+  "id": "science",
+  "nom": "Science / Recherche",
+  "famille": "metier",
+  "categorie": "Recherche",
+  "icone": "🔬",
+  "couleur": "#00897B",
+  "description": "Éléments de langage de la recherche scientifique et de la communication scientifique en français : article au format IMRaD, modalisation (« nos résultats suggèrent », « à notre connaissance »), statistiques, évaluation par les pairs, intégrité scientifique et parole publique des chercheurs. La fiche couvre aussi les dérives de survente des résultats et la confusion entre corrélation et causalité.",
+  "posture": "Le chercheur parle au nom des données et de la méthode, rarement en son nom propre : il modalise ses affirmations, expose les limites de son travail et sépare ce qui est établi de ce qui reste une hypothèse.",
+  "valeurs": [
+    "rigueur méthodologique",
+    "reproductibilité",
+    "évaluation par les pairs",
+    "intégrité scientifique",
+    "transparence des données et des liens d'intérêts",
+    "prudence épistémique",
+    "réfutabilité",
+    "science ouverte"
+  ],
+  "vocabulaire": [
+    { "terme": "hypothèse", "sens": "Proposition provisoire que l'étude cherche à mettre à l'épreuve.", "usage": "Notre hypothèse n'a pas été confirmée par les données." },
+    { "terme": "hypothèse nulle", "sens": "Hypothèse d'absence d'effet ou de différence, que le test statistique cherche à rejeter.", "usage": "L'hypothèse nulle ne peut pas être rejetée au seuil de 5 %." },
+    { "terme": "protocole", "sens": "Description détaillée et préalable de la manière dont l'étude sera conduite.", "usage": "Le protocole a été enregistré avant le début de l'essai." },
+    { "terme": "échantillon", "sens": "Sous-ensemble de la population effectivement étudié.", "usage": "L'échantillon comprend 1 200 participants." },
+    { "terme": "groupe témoin", "sens": "Groupe de comparaison qui ne reçoit pas l'intervention étudiée.", "usage": "Le groupe témoin a reçu un placebo." },
+    { "terme": "essai contrôlé randomisé", "sens": "Étude où les participants sont répartis au hasard entre intervention et groupe témoin.", "usage": "Seul un essai contrôlé randomisé permettra de trancher." },
+    { "terme": "double aveugle", "sens": "Ni les participants ni les investigateurs ne savent qui reçoit l'intervention.", "usage": "L'essai a été conduit en double aveugle." },
+    { "terme": "cohorte", "sens": "Groupe de personnes suivies dans le temps pour observer la survenue d'événements.", "usage": "La cohorte a été suivie pendant dix ans." },
+    { "terme": "étude observationnelle", "sens": "Étude qui observe sans intervenir, et ne permet donc pas à elle seule de conclure à une causalité.", "usage": "Il s'agit d'une étude observationnelle, à interpréter avec prudence." },
+    { "terme": "biais", "sens": "Erreur systématique qui fausse les résultats dans une direction donnée.", "usage": "Un biais de sélection ne peut pas être exclu." },
+    { "terme": "facteur de confusion", "sens": "Variable liée à la fois à l'exposition et au résultat, qui peut créer une fausse association.", "usage": "L'analyse a été ajustée sur les principaux facteurs de confusion." },
+    { "terme": "corrélation", "sens": "Association statistique entre deux variables, sans préjuger d'un lien de cause à effet.", "usage": "La corrélation observée reste modeste." },
+    { "terme": "causalité", "sens": "Relation dans laquelle une variable produit un effet sur une autre.", "usage": "Ces données ne permettent pas d'établir une causalité." },
+    { "terme": "significativité statistique", "sens": "Probabilité faible que le résultat observé soit dû au seul hasard, au regard d'un seuil fixé à l'avance.", "usage": "La différence atteint la significativité statistique." },
+    { "terme": "p-value", "sens": "Probabilité d'observer un résultat au moins aussi extrême si l'hypothèse nulle était vraie.", "usage": "La p-value est inférieure à 0,05." },
+    { "terme": "intervalle de confiance", "sens": "Fourchette de valeurs compatibles avec les données, généralement à 95 %.", "usage": "L'intervalle de confiance à 95 % est large." },
+    { "terme": "taille d'effet", "sens": "Ampleur de la différence ou de l'association, indépendamment de sa significativité.", "usage": "La taille d'effet est faible malgré un résultat significatif." },
+    { "terme": "puissance statistique", "sens": "Probabilité de détecter un effet s'il existe réellement ; dépend surtout de la taille de l'échantillon.", "usage": "L'étude manque de puissance statistique." },
+    { "terme": "méta-analyse", "sens": "Synthèse statistique des résultats de plusieurs études comparables.", "usage": "Une méta-analyse de 35 études nuance ces conclusions." },
+    { "terme": "revue systématique", "sens": "Recensement exhaustif et méthodique des études sur une question donnée.", "usage": "La revue systématique ne retrouve aucun effet protecteur." },
+    { "terme": "état de l'art", "sens": "Synthèse des connaissances disponibles sur une question au moment de l'étude.", "usage": "L'introduction dresse l'état de l'art." },
+    { "terme": "évaluation par les pairs", "sens": "Relecture critique d'un manuscrit par d'autres spécialistes avant publication.", "usage": "L'article a été accepté après évaluation par les pairs." },
+    { "terme": "prépublication", "sens": "Version d'un article diffusée avant l'évaluation par les pairs (preprint).", "usage": "Ces résultats ne sont pour l'instant disponibles qu'en prépublication." },
+    { "terme": "reproductibilité", "sens": "Possibilité d'obtenir les mêmes résultats à partir des mêmes données et méthodes.", "usage": "La reproductibilité des résultats est au cœur de la démarche." },
+    { "terme": "réplication", "sens": "Nouvelle étude, souvent indépendante, qui tente de retrouver un résultat publié.", "usage": "La réplication a échoué sur un échantillon plus large." },
+    { "terme": "consensus scientifique", "sens": "Position partagée par la grande majorité des spécialistes, fondée sur un ensemble convergent de preuves.", "usage": "Le consensus scientifique sur le réchauffement climatique est solide." },
+    { "terme": "niveau de preuve", "sens": "Solidité d'un résultat selon le type d'étude qui le soutient.", "usage": "Le niveau de preuve reste faible faute d'essais randomisés." },
+    { "terme": "modèle", "sens": "Représentation simplifiée, souvent mathématique, d'un phénomène.", "usage": "Le modèle prévoit une hausse de deux degrés." },
+    { "terme": "jeu de données", "sens": "Ensemble structuré de données utilisé pour une analyse.", "usage": "Le jeu de données a été déposé dans une archive ouverte." },
+    { "terme": "résultat négatif", "sens": "Absence d'effet ou de différence mise en évidence ; souvent moins publié.", "usage": "Publier un résultat négatif évite des recherches redondantes." },
+    { "terme": "limites de l'étude", "sens": "Section de la discussion qui expose les faiblesses méthodologiques du travail.", "usage": "Les limites de l'étude sont détaillées dans la discussion." },
+    { "terme": "perspectives", "sens": "Pistes de recherche ouvertes par les résultats.", "usage": "Ce travail ouvre des perspectives thérapeutiques." },
+    { "terme": "liens d'intérêts", "sens": "Relations (financières, professionnelles) susceptibles d'influencer le jugement d'un auteur.", "usage": "Les auteurs déclarent n'avoir aucun lien d'intérêts." },
+    { "terme": "intégrité scientifique", "sens": "Ensemble des règles garantissant l'honnêteté et la rigueur de la recherche.", "usage": "Une enquête pour manquement à l'intégrité scientifique a été ouverte." },
+    { "terme": "rétractation", "sens": "Retrait officiel d'un article publié, pour erreur grave ou fraude.", "usage": "La revue a prononcé la rétractation de l'article." },
+    { "terme": "survente", "sens": "Présentation exagérément favorable d'un résultat (spin) dans un résumé ou un communiqué.", "usage": "Le communiqué relève de la survente." },
+    { "terme": "réfutabilité", "sens": "Caractère d'une théorie qui peut être contredite par une observation.", "usage": "Une hypothèse non réfutable sort du champ scientifique." },
+    { "terme": "science ouverte", "sens": "Mouvement visant le libre accès aux publications, aux données et aux codes.", "usage": "Le projet s'inscrit dans une démarche de science ouverte." },
+    { "terme": "controverse scientifique", "sens": "Débat entre spécialistes sur l'interprétation de données ou la validité d'une théorie.", "usage": "Il existe une controverse scientifique légitime sur ce point." },
+    { "terme": "sérendipité", "sens": "Découverte inattendue faite en cherchant autre chose.", "usage": "La pénicilline est un cas célèbre de sérendipité." },
+    { "terme": "facteur d'impact", "sens": "Indicateur bibliométrique du nombre moyen de citations des articles d'une revue.", "usage": "Le facteur d'impact ne mesure pas la qualité d'un article." },
+    { "terme": "ordre de grandeur", "sens": "Valeur approximative à une puissance de dix près, utile pour situer un chiffre.", "usage": "Retenons surtout l'ordre de grandeur." }
+  ],
+  "formules": [
+    "Nos résultats suggèrent un lien entre {a} et {b}, sans permettre de conclure à une relation de cause à effet.",
+    "À notre connaissance, aucune étude n'avait encore examiné {element}.",
+    "Ces données préliminaires doivent être confirmées sur un échantillon plus large.",
+    "D'autres travaux seront nécessaires pour préciser {element}.",
+    "Corrélation n'est pas causalité.",
+    "Concernant {sujet}, l'état de l'art reste lacunaire.",
+    "Cette étude présente plusieurs limites qu'il convient de souligner.",
+    "Un rôle joué par {element} paraît plausible, mais reste à quantifier.",
+    "Ces résultats sont compatibles avec l'hypothèse selon laquelle {conclusion}.",
+    "Les résultats doivent être interprétés avec prudence, compte tenu de la taille de l'échantillon.",
+    "L'effet observé est statistiquement significatif, mais sa portée pratique reste modeste.",
+    "En l'état des données, il est impossible d'exclure {element}.",
+    "Sur {sujet}, le consensus scientifique repose sur un large faisceau de preuves convergentes.",
+    "Ce travail ouvre des perspectives prometteuses pour {public}.",
+    "Ces conclusions restent à répliquer par des équipes indépendantes.",
+    "Il convient de distinguer ce qui est établi de ce qui relève encore de l'hypothèse.",
+    "Les auteurs déclarent n'avoir aucun lien d'intérêts en rapport avec cet article.",
+    "Depuis {evenement}, la littérature sur {sujet} s'est considérablement enrichie.",
+    "Toutes choses égales par ailleurs, l'écart entre {a} et {b} persiste.",
+    "Ces travaux n'ont pas encore été évalués par les pairs.",
+    "Le terme « {terme} » doit ici être entendu au sens strict.",
+    "Nous ne pouvons pas exclure un biais de sélection.",
+    "La science avance par hypothèses, essais, erreurs et corrections.",
+    "Ce résultat ne remet pas en cause le modèle : il le précise.",
+    "En l'état actuel des connaissances, {conclusion}.",
+    "Ce que l'étude ne dit pas compte autant que ce qu'elle dit.",
+    "Les données ont été rendues publiques afin de permettre leur vérification.",
+    "Pour {public}, il faut rappeler que ce résultat repose sur une seule étude.",
+    "Une méta-analyse récente nuance fortement les conclusions antérieures sur {sujet}.",
+    "L'hypothèse nulle ne peut pas être rejetée.",
+    "Le mécanisme sous-jacent reste à élucider."
+  ],
+  "connecteurs": [
+    "En revanche,",
+    "Toutefois,",
+    "De plus,",
+    "Par conséquent,",
+    "À l'inverse,",
+    "En outre,",
+    "Néanmoins,",
+    "Toutes choses égales par ailleurs,",
+    "Dans l'ensemble,",
+    "À notre connaissance,",
+    "En d'autres termes,",
+    "Au vu de ces résultats,",
+    "À ce stade,"
+  ],
+  "euphemismes": [
+    { "brut": "on ne sait pas", "edl": "les données disponibles ne permettent pas de conclure", "commentaire": "Aveu d'ignorance formulé comme un constat méthodologique." },
+    { "brut": "l'expérience a échoué", "edl": "les résultats ne sont pas concluants", "commentaire": "Formule de rapport d'activité ou de demande de prolongation de financement." },
+    { "brut": "ça ne marche pas", "edl": "aucun effet statistiquement significatif n'a été mis en évidence", "commentaire": "Tournure prudente : l'absence de preuve n'est pas la preuve de l'absence." },
+    { "brut": "notre étude est trop petite", "edl": "l'étude manque de puissance statistique", "commentaire": "Classique de la section « limites »." },
+    { "brut": "notre petite étude bricolée", "edl": "une étude pilote exploratoire", "commentaire": "Valorise un travail préliminaire sur un faible effectif." },
+    { "brut": "c'est faux", "edl": "ces résultats n'ont pas pu être répliqués", "commentaire": "Manière polie de contester un résultat publié par des collègues." },
+    { "brut": "on a fouillé les données jusqu'à trouver quelque chose", "edl": "des analyses exploratoires post hoc ont été conduites", "commentaire": "Peut masquer une pêche aux résultats (p-hacking)." },
+    { "brut": "on a eu de la chance", "edl": "un résultat inattendu (sérendipité)", "commentaire": "Valorise le hasard comme découverte." },
+    { "brut": "l'article a été retiré pour fraude", "edl": "rétractation pour manquement à l'intégrité scientifique", "commentaire": "Vocabulaire des revues et des offices d'intégrité." },
+    { "brut": "l'industrie nous paie", "edl": "liens d'intérêts déclarés", "commentaire": "Mention obligatoire en fin d'article, souvent en petits caractères." },
+    { "brut": "on n'a pas tout lu", "edl": "à notre connaissance", "commentaire": "Précaution rituelle avant de revendiquer une nouveauté." },
+    { "brut": "notre hypothèse était fausse", "edl": "l'hypothèse n'a pas été confirmée", "commentaire": "Formulation neutre d'un résultat négatif." },
+    { "brut": "on exagère pour être repris", "edl": "une avancée majeure, des résultats prometteurs", "commentaire": "Lexique de communiqué de presse souvent dénoncé comme survente." },
+    { "brut": "on n'a pas eu l'argent", "edl": "le projet n'a pas été retenu", "commentaire": "Langage des appels à projets." },
+    { "brut": "les résultats nous contredisent", "edl": "ces résultats divergents devront être explorés", "commentaire": "Renvoie la difficulté à des travaux futurs." },
+    { "brut": "on ne sait pas comment ça marche", "edl": "le mécanisme sous-jacent reste à élucider", "commentaire": "Reconnaît une boîte noire tout en promettant une suite." }
+  ],
+  "substitutions": [
+    { "de": "prouver", "vers": "démontrer" },
+    { "de": "montrer", "vers": "suggérer" },
+    { "de": "lien", "vers": "association" },
+    { "de": "cause", "vers": "déterminant" },
+    { "de": "idée", "vers": "hypothèse" },
+    { "de": "théorie", "vers": "hypothèse de travail" },
+    { "de": "test", "vers": "protocole expérimental" },
+    { "de": "groupe", "vers": "échantillon" },
+    { "de": "erreur", "vers": "biais" },
+    { "de": "sûr", "vers": "robuste" },
+    { "de": "vérifier", "vers": "répliquer" },
+    { "de": "découverte", "vers": "résultat" },
+    { "de": "chiffres", "vers": "données" },
+    { "de": "en gros", "vers": "en moyenne" },
+    { "de": "peut-être", "vers": "probablement" },
+    { "de": "article", "vers": "publication" },
+    { "de": "avis", "vers": "expertise" },
+    { "de": "expliquer", "vers": "modéliser" },
+    { "de": "comparer", "vers": "contrôler" },
+    { "de": "à peu près", "vers": "de l'ordre de" },
+    { "de": "problème", "vers": "limite" },
+    { "de": "ce qu'on sait", "vers": "l'état de l'art" }
+  ],
+  "cadres": [
+    { "nom": "Corrélation ou causalité", "question": "Le lien observé entre {a} et {b} relève-t-il d'une simple corrélation ou d'une causalité ?", "explication": "Une association statistique ne dit rien du sens de la relation ni d'une éventuelle cause commune." },
+    { "nom": "Niveau de preuve", "question": "Quel type d'étude soutient ce que l'on affirme concernant {sujet} ?", "explication": "Un essai randomisé ou une méta-analyse ne pèse pas autant qu'une étude observationnelle ou un avis d'expert." },
+    { "nom": "Biais et facteurs de confusion", "question": "Quel facteur caché pourrait expliquer {element} ?", "explication": "Avant d'interpréter, on cherche les variables tierces et les erreurs systématiques." },
+    { "nom": "Réfutabilité", "question": "Quelle observation pourrait réfuter l'hypothèse avancée pour {element} ?", "explication": "Une affirmation scientifique doit pouvoir être mise en défaut par l'expérience." },
+    { "nom": "Reproductibilité", "question": "Le résultat obtenu sur {sujet} a-t-il été répliqué par des équipes indépendantes ?", "explication": "Un résultat isolé reste fragile tant qu'il n'a pas été retrouvé ailleurs." },
+    { "nom": "Taille d'effet", "question": "Au-delà de la p-value, quelle est l'ampleur réelle de l'effet concernant {element} ?", "explication": "Un effet peut être statistiquement significatif et pratiquement négligeable." },
+    { "nom": "Consensus et controverse", "question": "Sur {sujet}, où se situe le consensus scientifique, et qu'est-ce qui fait encore débat ?", "explication": "Distinguer les acquis solides des controverses légitimes évite le faux équilibre médiatique." }
+  ],
+  "structures": [
+    {
+      "nom": "Article IMRaD",
+      "description": "Plan canonique de l'article scientifique : Introduction, Méthodes, Résultats et Discussion, avec limites et perspectives.",
+      "etapes": [
+        {
+          "titre": "Introduction et état de l'art",
+          "role": "contexte",
+          "consigne": "Situer la question dans la littérature, du général au particulier, et montrer la lacune que l'étude vient combler.",
+          "gabarits": [
+            "Concernant {sujet}, la littérature reste partagée.",
+            "Depuis {evenement}, la question suscite un intérêt croissant.",
+            "À notre connaissance, aucune étude n'a examiné {element} de manière systématique."
+          ]
+        },
+        {
+          "titre": "Objectif et hypothèse",
+          "role": "hypothese",
+          "consigne": "Énoncer l'objectif principal et l'hypothèse testée, de façon précise et réfutable.",
+          "gabarits": [
+            "Nous avons fait l'hypothèse d'un lien entre {a} et {b}.",
+            "L'objectif de ce travail était d'évaluer {element}."
+          ]
+        },
+        {
+          "titre": "Méthodes",
+          "role": "faits",
+          "consigne": "Décrire la population, le protocole et les analyses statistiques avec assez de détails pour permettre la réplication.",
+          "gabarits": [
+            "L'étude a inclus {chiffre} dans une cohorte prospective.",
+            "Les analyses ont été ajustées sur les principaux facteurs de confusion.",
+            "Un groupe témoin a permis de comparer {a} et {b}."
+          ]
+        },
+        {
+          "titre": "Résultats",
+          "role": "analyse",
+          "consigne": "Présenter les résultats chiffrés, avec intervalles de confiance, sans les interpréter encore.",
+          "gabarits": [
+            "Nous observons une association significative entre {a} et {b}.",
+            "L'effet mesuré s'établit à {chiffre}, avec un intervalle de confiance à 95 %.",
+            "Aucune différence significative n'a été mise en évidence concernant {element}."
+          ]
+        },
+        {
+          "titre": "Discussion et limites",
+          "role": "tension",
+          "consigne": "Comparer aux travaux antérieurs, proposer des interprétations et exposer honnêtement les limites.",
+          "gabarits": [
+            "Ces résultats doivent être interprétés à la lumière de plusieurs limites.",
+            "Un biais de sélection ne peut être exclu, notamment pour {public}.",
+            "Nos résultats concordent avec les travaux antérieurs, mais divergent concernant {element}."
+          ]
+        },
+        {
+          "titre": "Conclusion et perspectives",
+          "role": "conclusion",
+          "consigne": "Résumer l'apport principal sans le survendre et indiquer les recherches à mener.",
+          "gabarits": [
+            "En conclusion, {conclusion}.",
+            "D'autres études seront nécessaires pour confirmer ces résultats concernant {sujet}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Démarche hypothético-déductive",
+      "description": "Raisonnement expérimental : de l'observation à l'hypothèse, puis au test, à la confrontation et à la réplication.",
+      "etapes": [
+        {
+          "titre": "Observation",
+          "role": "faits",
+          "consigne": "Décrire le phénomène observé, sans l'expliquer.",
+          "gabarits": [
+            "Depuis {evenement}, on observe {element}.",
+            "Les mesures font apparaître un écart de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Hypothèse",
+          "role": "hypothese",
+          "consigne": "Proposer une explication testable et préciser ce qu'elle prédit.",
+          "gabarits": [
+            "Une hypothèse plausible relie {a} et {b}.",
+            "Si l'hypothèse est juste, on devrait observer {element}."
+          ]
+        },
+        {
+          "titre": "Test",
+          "role": "analyse",
+          "consigne": "Décrire l'expérience ou l'analyse qui met l'hypothèse à l'épreuve et en livrer le résultat.",
+          "gabarits": [
+            "L'expérience compare {a} et {b} dans des conditions contrôlées.",
+            "Le test aboutit à une différence de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Confrontation",
+          "role": "tension",
+          "consigne": "Examiner ce qui contredit ou fragilise l'hypothèse : biais, explications alternatives, résultats divergents.",
+          "gabarits": [
+            "Une explication alternative ne peut être écartée : {element}.",
+            "Ce résultat contredit en partie les travaux antérieurs sur {sujet}."
+          ]
+        },
+        {
+          "titre": "Réplication",
+          "role": "projection",
+          "consigne": "Indiquer comment le résultat doit être répliqué et généralisé avant d'être tenu pour acquis.",
+          "gabarits": [
+            "Ce résultat devra être répliqué par des équipes indépendantes.",
+            "Une étude plus large, incluant {public}, permettrait de généraliser ces conclusions."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Communiqué de vulgarisation",
+      "description": "Schéma d'un communiqué ou d'une vidéo de médiation scientifique honnête : accroche, savoir antérieur, apport, limites, suite.",
+      "etapes": [
+        {
+          "titre": "Accroche",
+          "role": "contexte",
+          "consigne": "Partir d'une question concrète que se pose le public.",
+          "gabarits": [
+            "Et si notre regard sur {sujet} était en train de changer ?",
+            "Pour {public}, la question n'a rien d'abstrait."
+          ]
+        },
+        {
+          "titre": "Ce que l'on savait",
+          "role": "faits",
+          "consigne": "Résumer en deux phrases l'état des connaissances avant l'étude.",
+          "gabarits": [
+            "Jusqu'ici, les travaux sur {sujet} restaient contradictoires.",
+            "Depuis {evenement}, les chercheurs soupçonnaient un lien entre {a} et {b}."
+          ]
+        },
+        {
+          "titre": "Ce que l'étude apporte",
+          "role": "analyse",
+          "consigne": "Présenter le résultat principal avec un ordre de grandeur et la méthode en une phrase.",
+          "gabarits": [
+            "Une équipe de chercheurs a mis en évidence {element}.",
+            "Sur {chiffre}, l'effet observé reste modeste mais net."
+          ]
+        },
+        {
+          "titre": "Ce qu'elle ne dit pas",
+          "role": "tension",
+          "consigne": "Expliciter les limites : type d'étude, population, causalité non établie, résultat préliminaire.",
+          "gabarits": [
+            "Attention : cette étude montre une association, pas une relation de cause à effet.",
+            "Ces travaux, menés chez l'animal, ne permettent pas encore de conclure chez l'humain."
+          ]
+        },
+        {
+          "titre": "Et maintenant ?",
+          "role": "projection",
+          "consigne": "Indiquer les prochaines étapes de la recherche et ce que le public peut retenir.",
+          "gabarits": [
+            "Les chercheurs prévoient désormais de tester {element} à plus grande échelle.",
+            "En attendant, {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Un chiffre n'a de sens qu'accompagné de son incertitude : taille d'échantillon, intervalle de confiance, p-value et taille d'effet. Une communication honnête sépare significativité statistique et importance pratique, et préfère les valeurs absolues aux pourcentages relatifs spectaculaires.",
+    "unites": [
+      "taille d'échantillon (n)",
+      "p-value (seuil p < 0,05)",
+      "intervalle de confiance à 95 %",
+      "taille d'effet (d de Cohen)",
+      "rapport de cotes (odds ratio)",
+      "rapport de risques instantanés (hazard ratio)",
+      "coefficient de corrélation (r)",
+      "écart-type",
+      "puissance statistique (souvent 80 %)",
+      "marge d'erreur",
+      "ordre de grandeur"
+    ],
+    "formulations": [
+      "L'étude porte sur {chiffre}, ce qui limite la portée des conclusions.",
+      "L'association entre {a} et {b} est significative (p < 0,05), avec un effet estimé à {chiffre}.",
+      "L'intervalle de confiance à 95 % reste large autour d'une estimation de {chiffre}.",
+      "En valeur absolue, la différence n'est que de {chiffre}.",
+      "Pour {a}, la moyenne atteint {chiffre}, contre une valeur plus faible pour {b}, après ajustement sur les facteurs de confusion.",
+      "Avec {chiffre}, l'étude dispose d'une puissance suffisante pour détecter un effet modeste.",
+      "Depuis {evenement}, l'indicateur a progressé de {chiffre}, une tendance qui reste à confirmer."
+    ]
+  },
+  "metaphores": [
+    "apporter sa pierre à l'édifice",
+    "se tenir sur les épaules des géants",
+    "la boîte noire",
+    "séparer le signal du bruit",
+    "publier ou périr (« publish or perish »)",
+    "repousser la frontière de la connaissance",
+    "les pièces du puzzle",
+    "le chaînon manquant",
+    "la percée scientifique",
+    "le faisceau de preuves convergentes",
+    "la tour d'ivoire"
+  ],
+  "pieges": [
+    "Survente (spin) : présenter un résultat non significatif ou préliminaire comme une avancée majeure ; 40 % des communiqués universitaires contiendraient des conseils excessifs.",
+    "Liens de causalité exagérés à partir de simples corrélations, relevés dans un tiers des communiqués de presse.",
+    "Extrapolation abusive de l'animal ou de la cellule à l'humain.",
+    "Culte de la p-value : le seuil de 0,05 érigé en frontière entre vrai et faux, au détriment de la taille d'effet.",
+    "Modalisation excessive qui rend le propos insaisissable, version savante de la langue de bois.",
+    "Jargon et anglicismes (« paper », « preprint », « data ») qui excluent le public.",
+    "Argument d'autorité (« des scientifiques affirment ») sans référence ni niveau de preuve.",
+    "Expertise hors champ : s'exprimer publiquement en dehors de son domaine de compétence.",
+    "Faux équilibre médiatique qui met sur le même plan un consensus et un avis isolé."
+  ],
+  "registres": {
+    "institutionnel": "Communiqués d'organismes de recherche : « une équipe de chercheurs a mis en évidence », ton factuel, prudence affichée et mention des partenaires et financeurs.",
+    "technique": "Article IMRaD en style impersonnel ou en « nous » de modestie, modalisateurs (« suggère », « semble »), statistiques complètes et références systématiques.",
+    "vulgarisation": "Récit de découverte, questions-réponses, analogies du quotidien et rappel explicite de ce que l'étude ne dit pas.",
+    "critique": "On lui reproche la tour d'ivoire, les études « qui disent tout et son contraire » et les communiqués qui annoncent une révolution chaque semaine."
+  },
+  "visuel": {
+    "palette": ["#00897B", "#0D1B2A", "#FFFFFF", "#FFB300", "#B0BEC5"],
+    "motifs": [
+      { "fr": "vue au microscope qui s'anime", "en": "animated microscope view" },
+      { "fr": "graphique à points avec barres d'erreur qui se construit", "en": "scatter plot with error bars building up" },
+      { "fr": "double hélice d'ADN en rotation", "en": "rotating DNA double helix" },
+      { "fr": "molécule en 3D", "en": "3D molecular model" },
+      { "fr": "réseau de nœuds interconnectés", "en": "network of interconnected nodes" },
+      { "fr": "tableau noir couvert d'équations", "en": "blackboard covered with equations" },
+      { "fr": "paillasse de laboratoire avec verrerie", "en": "lab bench with glassware" },
+      { "fr": "zoom continu du cosmos jusqu'à l'atome", "en": "continuous zoom from cosmos to atom" },
+      { "fr": "arbre phylogénétique qui se ramifie", "en": "branching phylogenetic tree" },
+      { "fr": "carte de chaleur de données", "en": "data heatmap" },
+      { "fr": "Terre vue de l'espace", "en": "Earth seen from space" }
+    ],
+    "pictogrammes": [
+      { "fr": "microscope", "en": "microscope" },
+      { "fr": "erlenmeyer", "en": "Erlenmeyer flask" },
+      { "fr": "atome", "en": "atom" },
+      { "fr": "ADN", "en": "DNA strand" },
+      { "fr": "loupe", "en": "magnifying glass" },
+      { "fr": "ampoule (idée)", "en": "light bulb (idea)" },
+      { "fr": "graphique à barres", "en": "bar chart" },
+      { "fr": "télescope", "en": "telescope" },
+      { "fr": "éprouvette", "en": "test tube" },
+      { "fr": "engrenages", "en": "gears" },
+      { "fr": "article scientifique", "en": "research paper document" },
+      { "fr": "cerveau", "en": "brain" }
+    ],
+    "typographie": "Sans empattement géométrique et neutre (type Inter ou IBM Plex Sans), chiffres tabulaires pour les données et annotations manuscrites façon tableau noir pour les explications.",
+    "style_motion": "Motion design pédagogique centré sur les données : fonds bleu nuit ou blancs, graphiques qui se construisent point par point avec leurs barres d'erreur, zooms de l'échelle macroscopique à la molécule, schémas annotés et icônes au trait fin. Ton calme et curieux, qui montre aussi l'incertitude.",
+    "style_motion_en": "Educational data-driven motion graphics: deep navy or clean white backgrounds, charts building point by point with visible error bars, seamless zooms from macro scale down to molecules, annotated diagrams and thin-line icons, teal and amber accents, calm and curious pacing that shows uncertainty."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : Charte de la parole publique de l'Inserm (juillet 2023), question à se poser avant toute interview.", "texte": "« Que pourrait-on me reprocher de n'avoir pas dit ? Quels sont mes biais potentiels sur ce sujet ? »" },
+    { "contexte": "Extrait réel : résumé en français d'une revue Cochrane (Akl et al., 2011), exemple de conclusion modalisée par « probablement ».", "texte": "« Les fréquences naturelles sont probablement mieux comprises que les pourcentages […] »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une section « Limites » d'article.", "texte": "« Notre étude présente plusieurs limites. Premièrement, la taille de l'échantillon limite la puissance statistique. Deuxièmement, son caractère observationnel ne permet pas d'établir de lien de causalité. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'un communiqué de vulgarisation prudent.", "texte": "« Ces travaux, menés chez la souris, ouvrent une piste intéressante, mais ne permettent pas encore de conclure chez l'humain. »" }
+  ],
+  "sources": [
+    { "titre": "Charte de la parole publique de l'Inserm", "auteur": "Inserm, juillet 2023", "url": "https://pro.inserm.fr/wp-content/uploads/2023/09/Charte-de-la-parole-publique-de-lInserm.pdf", "apport": "Règles de prise de parole des chercheurs : parler dans son champ, distinguer expertise et opinion, déclarer ses liens d'intérêts." },
+    { "titre": "Étude de la modalité épistémique dans un corpus d'articles de recherche en français", "auteur": "A. J. Liddicoat, revue LSP & Professional Communication, 2005", "url": "https://rauli.cbs.dk/index.php/LSP/article/view/2054", "apport": "Modalisation par pouvoir, devoir, sembler et paraître ; niveaux de certitude intermédiaires dans les articles français." },
+    { "titre": "Modal markers as potential sources of interpretation bias in translated medical abstracts", "auteur": "Archive ouverte HAL", "url": "https://hal-univ-paris.archives-ouvertes.fr/hal-01496862", "apport": "Différences de modalisation entre résumés médicaux français et anglais." },
+    { "titre": "Les chercheurs accusés d'embellir les résultats de leurs études", "auteur": "Pourquoi Docteur, d'après une étude publiée dans le BMJ (2014)", "url": "https://www.pourquoidocteur.fr/Articles/Question-d-actu/9056-Les-chercheurs-accuses-d-embellir-les-resultats-de-leurs-etudes", "apport": "Chiffres sur la survente dans les communiqués : conseils excessifs, causalité exagérée, extrapolation animal-humain." },
+    { "titre": "Claims of causality in health news: a randomised trial", "auteur": "Essai randomisé en accès libre sur PubMed Central", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6521363/", "apport": "Aligner les affirmations causales sur le type de preuve et ajouter des mises en garde." },
+    { "titre": "Utilisation d'autres formats statistiques pour la présentation des informations de santé", "auteur": "Akl et al., Cochrane, 2011", "url": "https://www.cochrane.org/fr/CD006776/COMMUN_utilisation-dautres-formats-statistiques-pour-la-presentation-des-informations-de-sante", "apport": "Risque relatif contre risque absolu, fréquences naturelles, exemple de conclusion modalisée." },
+    { "titre": "Support de cours sur la structure IMRaD", "auteur": "Université Claude Bernard Lyon 1", "url": "https://moodle.univ-lyon1.fr/mod/resource/view.php?id=396720", "apport": "Contenu de chaque section IMRaD, place des limites, style en entonnoir." },
+    { "titre": "Guide en 7 étapes pour détecter les fausses découvertes scientifiques", "auteur": "Africa Check", "url": "https://africacheck.org/fr/fact-checks/guides/guide-7-etapes-pour-detecter-les-fausses-decouvertes-scientifiques", "apport": "Grille de lecture journalistique : lien n'est pas cause." },
+    { "titre": "Niveau de preuve et gradation des recommandations de bonne pratique", "auteur": "Haute Autorité de Santé, 2013", "url": "https://www.has-sante.fr/upload/docs/application/pdf/2013-06/etat_des_lieux_niveau_preuve_gradation.pdf", "apport": "Hiérarchie des niveaux de preuve." }
+  ]
+}

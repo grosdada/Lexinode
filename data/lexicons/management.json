@@ -1,0 +1,439 @@
+{
+  "id": "management",
+  "nom": "Management / Corporate",
+  "famille": "metier",
+  "categorie": "Entreprise & organisation",
+  "icone": "💼",
+  "couleur": "#546E7A",
+  "description": "Éléments de langage du management et du conseil dans les grandes organisations francophones : la « novlangue managériale » faite d'anglicismes, d'acronymes, de vocabulaire du mouvement et de la performance, d'euphémismes sociaux et de structures de présentation héritées du conseil (pyramide de Minto, SCQA, slides à puces).",
+  "posture": "On parle depuis la position du manager, de la direction ou du consultant : un discours positif, rationnel et tourné vers l'action, qui minimise la dimension de pouvoir (« on accompagne », « on embarque ») et présente les décisions comme à la fois inéluctables et bienveillantes.",
+  "valeurs": [
+    "la performance",
+    "l'efficacité",
+    "l'agilité",
+    "la transformation",
+    "l'engagement des collaborateurs",
+    "la bienveillance",
+    "la création de valeur",
+    "l'alignement"
+  ],
+  "vocabulaire": [
+    { "terme": "synergie", "sens": "Gain attendu de la mise en commun de deux équipes, activités ou entreprises ; souvent synonyme de réduction des doublons.", "usage": "La fusion devrait dégager d'importantes synergies." },
+    { "terme": "levier", "sens": "Moyen d'action sur lequel on appuie pour obtenir un résultat.", "usage": "La formation est un levier de performance." },
+    { "terme": "embarquer les équipes", "sens": "Obtenir l'adhésion des salariés à un projet décidé en amont.", "usage": "Il faut embarquer les équipes avant le lancement." },
+    { "terme": "monter en compétence", "sens": "Acquérir de nouvelles compétences, souvent pour s'adapter à un changement imposé.", "usage": "L'équipe doit monter en compétence sur l'outil." },
+    { "terme": "quick win", "sens": "Gain rapide et visible, obtenu à faible coût, pour montrer que le projet avance.", "usage": "On commence par deux ou trois quick wins." },
+    { "terme": "bienveillance", "sens": "Attitude attentionnée revendiquée par le management, parfois invoquée pour adoucir une décision.", "usage": "On fait ce retour en toute bienveillance." },
+    { "terme": "agilité", "sens": "Capacité revendiquée à s'adapter vite ; à l'origine, méthodes de développement logiciel itératives.", "usage": "La nouvelle organisation doit nous donner plus d'agilité." },
+    { "terme": "challenger", "sens": "Mettre à l'épreuve, questionner ou pousser quelqu'un à faire mieux.", "usage": "Je vais challenger ton chiffrage." },
+    { "terme": "revenir vers", "sens": "Recontacter plus tard ; calque de « I'll get back to you », souvent une manière de différer une réponse.", "usage": "On revient vers vous dès que possible." },
+    { "terme": "collaborateur", "sens": "Salarié, désigné de manière à gommer le lien de subordination.", "usage": "Nos collaborateurs sont notre première richesse." },
+    { "terme": "N+1", "sens": "Supérieur hiérarchique direct ; la numérotation suggère des positions interchangeables.", "usage": "Vois ça avec ton N+1." },
+    { "terme": "codir", "sens": "Comité de direction ; le comex est le comité exécutif.", "usage": "Le sujet passe en codir jeudi." },
+    { "terme": "feuille de route", "sens": "Plan d'action daté qui fixe les étapes d'un projet ou d'une transformation.", "usage": "La feuille de route sera présentée à la rentrée." },
+    { "terme": "KPI", "sens": "Indicateur clé de performance suivi dans les tableaux de bord.", "usage": "Quels sont les KPI de ce projet ?" },
+    { "terme": "OKR", "sens": "Objectifs et résultats clés : méthode de fixation d'objectifs ambitieux et mesurables.", "usage": "On fixe les OKR du trimestre." },
+    { "terme": "process", "sens": "Procédure ou enchaînement formalisé d'étapes de travail.", "usage": "Il faut respecter le process de validation." },
+    { "terme": "périmètre", "sens": "Champ de responsabilité d'une personne, d'une équipe ou d'un projet.", "usage": "Ce n'est pas dans mon périmètre." },
+    { "terme": "porter un sujet", "sens": "En être responsable et le faire avancer (ownership).", "usage": "Qui porte le sujet côté métier ?" },
+    { "terme": "deadline", "sens": "Date limite de remise d'un travail.", "usage": "La deadline est vendredi." },
+    { "terme": "ASAP", "sens": "Dès que possible (as soon as possible) ; marque l'urgence.", "usage": "J'ai besoin du support ASAP." },
+    { "terme": "FYI", "sens": "Pour information (for your information) ; aucune action attendue.", "usage": "FYI, le client a validé." },
+    { "terme": "best practices", "sens": "Bonnes pratiques identifiées ailleurs et présentées comme modèles.", "usage": "On s'inspire des best practices du secteur." },
+    { "terme": "benchmark", "sens": "Comparaison avec des concurrents ou des références pour se situer.", "usage": "Le benchmark montre qu'on est en retard." },
+    { "terme": "transformation", "sens": "Changement d'ampleur de l'organisation, souvent numérique ou structurel.", "usage": "Nous sommes engagés dans une transformation profonde." },
+    { "terme": "conduite du changement", "sens": "Démarche visant à faire accepter une réorganisation ou un nouvel outil.", "usage": "Un cabinet nous accompagne sur la conduite du changement." },
+    { "terme": "réorganisation", "sens": "Modification de la structure de l'entreprise ; terme qui accompagne souvent des suppressions de postes.", "usage": "La réorganisation sera présentée aux instances représentatives." },
+    { "terme": "plan de sauvegarde de l'emploi", "sens": "Dispositif encadrant un licenciement collectif ; appelé « plan social » jusqu'à la loi de modernisation sociale de 2002.", "usage": "Un PSE est en cours de négociation." },
+    { "terme": "accompagnement", "sens": "Ensemble des mesures (formation, reclassement, soutien) qui entourent un changement imposé.", "usage": "Chaque salarié concerné bénéficiera d'un accompagnement." },
+    { "terme": "mobilité", "sens": "Changement de poste ou de lieu de travail, volontaire ou contraint.", "usage": "Des mobilités internes seront proposées." },
+    { "terme": "talents", "sens": "Salariés considérés comme ressources à attirer, développer et retenir.", "usage": "Notre priorité : fidéliser nos talents." },
+    { "terme": "feedback", "sens": "Retour, souvent évaluatif, sur un travail ou un comportement.", "usage": "Je te fais un petit feedback." },
+    { "terme": "one-to-one", "sens": "Entretien individuel régulier entre un manager et un membre de son équipe.", "usage": "On en parle en one-to-one." },
+    { "terme": "séminaire", "sens": "Réunion hors du lieu de travail pour fédérer et réfléchir à la stratégie (offsite).", "usage": "Le séminaire de rentrée aura lieu à Deauville." },
+    { "terme": "force de proposition", "sens": "Qualité attendue d'un salarié qui propose des solutions plutôt que de soulever des problèmes.", "usage": "J'attends de toi que tu sois force de proposition." },
+    { "terme": "zone de confort", "sens": "Situation habituelle dont le salarié est invité à sortir pour progresser.", "usage": "Ce poste va te faire sortir de ta zone de confort." },
+    { "terme": "valeur ajoutée", "sens": "Contribution propre d'une personne ou d'une activité au résultat.", "usage": "Quelle est ta valeur ajoutée sur ce dossier ?" },
+    { "terme": "livrable", "sens": "Production attendue et identifiée à l'issue d'une étape (document, outil, présentation).", "usage": "Le livrable est attendu fin de semaine." },
+    { "terme": "pilotage", "sens": "Suivi et orientation d'une activité à l'aide d'indicateurs.", "usage": "On met en place un comité de pilotage." },
+    { "terme": "reporting", "sens": "Remontée régulière d'informations chiffrées vers la hiérarchie.", "usage": "Le reporting mensuel part demain." },
+    { "terme": "arbitrage", "sens": "Décision prise par la hiérarchie entre plusieurs options ou demandes concurrentes.", "usage": "C'est en attente d'arbitrage." },
+    { "terme": "alignement", "sens": "Accord de tous sur les objectifs et les priorités.", "usage": "Il faut s'assurer de l'alignement du codir." },
+    { "terme": "parties prenantes", "sens": "Ensemble des acteurs concernés par une décision (stakeholders).", "usage": "On a consulté toutes les parties prenantes." },
+    { "terme": "deep dive", "sens": "Analyse approfondie d'un sujet précis.", "usage": "On fait un deep dive sur les coûts logistiques." },
+    { "terme": "être dans la boucle", "sens": "Être tenu informé, mis en copie des échanges.", "usage": "Mets-moi dans la boucle." },
+    { "terme": "prendre le lead", "sens": "Prendre la direction d'un sujet ou d'une réunion.", "usage": "Tu prends le lead sur ce dossier ?" },
+    { "terme": "c'est dans le pipe", "sens": "C'est prévu, en cours de traitement ; souvent sans date.", "usage": "Ton augmentation ? C'est dans le pipe." },
+    { "terme": "différentiel", "sens": "Écart entre résultats et objectifs, formulé sans connotation d'échec.", "usage": "Il y a un différentiel par rapport aux objectifs." },
+    { "terme": "qualité de vie au travail", "sens": "Démarche visant les conditions de travail et le bien-être des salariés (QVT, QVCT).", "usage": "Un plan QVT a été lancé." },
+    { "terme": "raison d'être", "sens": "Mission d'intérêt général que l'entreprise affiche au-delà du profit.", "usage": "Notre raison d'être guide chacune de nos décisions." }
+  ],
+  "formules": [
+    "On revient vers vous très rapidement.",
+    "Il faut embarquer les équipes sur {sujet}.",
+    "Concernant {sujet}, l'enjeu est d'aligner l'ensemble des parties prenantes.",
+    "On va challenger {element} avec les équipes.",
+    "Il y a là un vrai levier de création de valeur.",
+    "Dans un contexte de transformation, on doit absolument prioriser {sujet}.",
+    "On identifie quelques quick wins avant de lancer le chantier de fond.",
+    "L'idée, c'est de créer des synergies entre {a} et {b}.",
+    "Je te mets dans la boucle.",
+    "On fait un point la semaine prochaine pour voir où on en est.",
+    "Il faut qu'on monte en compétence sur {sujet}.",
+    "Je compte sur toi pour porter le sujet.",
+    "Sois force de proposition.",
+    "On est dans une démarche d'amélioration continue.",
+    "Ce n'est pas un problème, c'est une opportunité.",
+    "On a besoin que chacun sorte de sa zone de confort.",
+    "La réorganisation vise à gagner en agilité et en lisibilité.",
+    "Cette décision n'a pas été facile, mais elle est nécessaire pour assurer la pérennité de l'entreprise.",
+    "Nous accompagnerons chacun des collaborateurs concernés avec la plus grande attention.",
+    "On va mettre en place un plan d'action avec des jalons clairs.",
+    "Le sujet est en cours d'arbitrage au niveau du comex.",
+    "Je propose qu'on prenne ce point en offline.",
+    "Il faut qu'on soit tous alignés sur {element} avant {evenement}.",
+    "C'est challengeant, mais l'équipe a toutes les cartes en main.",
+    "Les KPI montrent que {conclusion}.",
+    "On capitalise sur {element} pour aller plus loin.",
+    "Dans une logique de bienveillance, je te fais un feedback constructif.",
+    "Merci pour ce partage, c'est très inspirant.",
+    "Il s'agit d'un projet structurant, pensé pour {public}.",
+    "Restons focus sur l'essentiel : la création de valeur.",
+    "C'est dans le pipe, on avance.",
+    "Il faut redonner du sens au travail, et {sujet} en est l'occasion."
+  ],
+  "connecteurs": [
+    "Dans un contexte de transformation,",
+    "À date,",
+    "En synthèse,",
+    "Pour aller plus loin,",
+    "Concrètement,",
+    "En termes de prochaines étapes,",
+    "Dans cette logique,",
+    "Par ailleurs,",
+    "En parallèle,",
+    "À ce stade,",
+    "Pour rappel,",
+    "Au global,",
+    "In fine,"
+  ],
+  "euphemismes": [
+    { "brut": "plan de licenciement collectif", "edl": "plan de sauvegarde de l'emploi (PSE)", "commentaire": "Le « plan social » a été renommé par la loi de modernisation sociale du 17 janvier 2002 ; pour Nacime Chellig (Welcome to the Jungle), cela « réduit la portée rugueuse du licenciement »." },
+    { "brut": "licencier", "edl": "se séparer de collaborateurs", "commentaire": "Communiqués de direction et presse économique." },
+    { "brut": "supprimer des postes", "edl": "optimiser les effectifs", "commentaire": "Langage financier et de conseil en restructuration." },
+    { "brut": "pousser les salariés vers la sortie", "edl": "plan de départs volontaires", "commentaire": "Départs présentés comme un choix individuel ; aussi « rupture conventionnelle collective »." },
+    { "brut": "restructuration avec suppressions de postes", "edl": "réorganisation", "commentaire": "Souvent associée à « projet de transformation »." },
+    { "brut": "muter de force", "edl": "accompagner la mobilité", "commentaire": "Selon Agnès Vandevelde-Rougale (Politis, 2019), un moyen « d'adoucir la conception que l'on se fait de la finalité de cet acte »." },
+    { "brut": "mettre au placard", "edl": "repositionner sur un nouveau périmètre", "commentaire": "Pratique nommée quiet-cutting dans la presse RH anglophone, rapprochée de la mise au placard." },
+    { "brut": "tu as raté ton année", "edl": "il y a un différentiel par rapport aux objectifs", "commentaire": "Exemple cité par les éditions Tissot (2024)." },
+    { "brut": "difficile, voire impossible", "edl": "challengeant", "commentaire": "Anglicisme qui transforme la difficulté en défi stimulant." },
+    { "brut": "un problème", "edl": "un point d'attention", "commentaire": "Comptes rendus et comités de pilotage ; on dit aussi « un sujet »." },
+    { "brut": "une surcharge de travail", "edl": "une période de forte mobilisation", "commentaire": "Communication interne en période de rush." },
+    { "brut": "les employés", "edl": "les ressources", "commentaire": "Vocabulaire de planification ; « ressources humaines » en est la version institutionnalisée." },
+    { "brut": "le gel des salaires", "edl": "la modération salariale", "commentaire": "Négociations annuelles obligatoires." },
+    { "brut": "une critique", "edl": "un feedback constructif", "commentaire": "Entretiens d'évaluation et one-to-one." },
+    { "brut": "non", "edl": "on revient vers vous", "commentaire": "Expression jugée la plus agaçante au bureau dans un sondage Preply/Censuswide de 2026 ; souvent un évitement du refus." },
+    { "brut": "fermer une usine", "edl": "rationaliser l'empreinte industrielle", "commentaire": "Communication financière des groupes industriels." },
+    { "brut": "démission forcée", "edl": "départ négocié", "commentaire": "Annonces de départs de cadres dirigeants." }
+  ],
+  "substitutions": [
+    { "de": "problème", "vers": "point d'attention" },
+    { "de": "réunion", "vers": "point" },
+    { "de": "employé", "vers": "collaborateur" },
+    { "de": "chef", "vers": "manager" },
+    { "de": "supérieur", "vers": "N+1" },
+    { "de": "plan", "vers": "feuille de route" },
+    { "de": "méthode", "vers": "process" },
+    { "de": "travail rendu", "vers": "livrable" },
+    { "de": "difficile", "vers": "challengeant" },
+    { "de": "critiquer", "vers": "challenger" },
+    { "de": "apprendre", "vers": "monter en compétence" },
+    { "de": "convaincre", "vers": "embarquer" },
+    { "de": "moyen", "vers": "levier" },
+    { "de": "résultat rapide", "vers": "quick win" },
+    { "de": "rappeler", "vers": "revenir vers" },
+    { "de": "responsabilité", "vers": "périmètre" },
+    { "de": "changement", "vers": "transformation" },
+    { "de": "décision", "vers": "arbitrage" },
+    { "de": "comparer", "vers": "benchmarker" },
+    { "de": "avis", "vers": "feedback" },
+    { "de": "urgent", "vers": "ASAP" },
+    { "de": "mesure", "vers": "indicateur" },
+    { "de": "s'occuper de", "vers": "porter" },
+    { "de": "date limite", "vers": "deadline" },
+    { "de": "licenciement", "vers": "réorganisation" },
+    { "de": "écart", "vers": "différentiel" }
+  ],
+  "cadres": [
+    { "nom": "SWOT", "question": "Quelles forces, faiblesses, opportunités et menaces pour {sujet} ?", "explication": "Matrice d'analyse stratégique classique des écoles de commerce et du conseil." },
+    { "nom": "Conduite du changement", "question": "Comment embarquer {public} et lever les résistances que suscite {element} ?", "explication": "Grille de l'acceptation : le changement est acquis, reste à le faire accepter." },
+    { "nom": "Pyramide de Minto", "question": "Quelle est la recommandation principale sur {sujet}, et quels trois arguments la soutiennent ?", "explication": "Le message clé d'abord, puis les arguments regroupés, puis les données." },
+    { "nom": "SCQA", "question": "Quelle situation, quelle complication et quelle question soulève {evenement} ?", "explication": "Introduction type du conseil : Situation, Complication, Question, Réponse." },
+    { "nom": "Quick wins et chantiers de fond", "question": "Qu'est-ce qui peut être gagné vite sur {sujet}, et qu'est-ce qui relève d'un chantier de fond ?", "explication": "Priorisation par l'effort et l'impact, pour montrer des résultats rapides." },
+    { "nom": "Pilotage par les indicateurs", "question": "Quel indicateur permettra de suivre {element}, et avec quelle cible ?", "explication": "Ce qui ne se mesure pas ne se pilote pas : tout objectif doit avoir son KPI." },
+    { "nom": "Lecture critique de la novlangue", "question": "Que masque le vocabulaire choisi pour décrire {evenement} ?", "explication": "Grille sociologique (Vandevelde-Rougale, Le Goff) : repérer l'euphémisation du pouvoir." }
+  ],
+  "structures": [
+    {
+      "nom": "Note de direction : contexte, enjeux, plan d'action, prochaines étapes",
+      "description": "Plan canonique du mémo ou de la présentation interne, qui pose un contexte présenté comme non discutable avant de dérouler l'action.",
+      "etapes": [
+        {
+          "titre": "Contexte",
+          "role": "contexte",
+          "consigne": "Rappeler la situation et ce qui a changé dans l'environnement de l'entreprise.",
+          "gabarits": [
+            "Dans un contexte marqué par {evenement}, l'entreprise doit adapter son organisation.",
+            "Pour rappel, la direction suit de près {sujet} depuis plusieurs mois."
+          ]
+        },
+        {
+          "titre": "Enjeux",
+          "role": "analyse",
+          "consigne": "Formuler les enjeux business, humains et financiers, chiffres à l'appui.",
+          "gabarits": [
+            "L'enjeu est double : préserver notre compétitivité et accompagner {public}.",
+            "Les indicateurs sont clairs : {element}."
+          ]
+        },
+        {
+          "titre": "Points d'attention",
+          "role": "tension",
+          "consigne": "Signaler les risques et les écarts sans dramatiser.",
+          "gabarits": [
+            "Point d'attention : {element} pourrait freiner la dynamique.",
+            "On observe un différentiel entre {a} et {b} qu'il nous faut adresser."
+          ]
+        },
+        {
+          "titre": "Plan d'action",
+          "role": "decision",
+          "consigne": "Présenter les actions retenues, structurées en axes avec des jalons et des responsables.",
+          "gabarits": [
+            "Nous proposons un plan d'action en trois axes, avec des jalons clairs.",
+            "Première priorité : sécuriser {sujet} à court terme."
+          ]
+        },
+        {
+          "titre": "Prochaines étapes",
+          "role": "projection",
+          "consigne": "Donner le calendrier et le prochain rendez-vous de suivi.",
+          "gabarits": [
+            "Prochaine étape : un point d'avancement avant {evenement}.",
+            "Nous reviendrons vers vous très prochainement avec un calendrier détaillé."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Pyramide de Minto (SCQA)",
+      "description": "Méthode de structuration issue du conseil : situation, complication, question, puis la réponse d'abord, soutenue par des arguments regroupés et des données.",
+      "etapes": [
+        {
+          "titre": "Situation",
+          "role": "contexte",
+          "consigne": "Décrire l'état des choses que l'auditoire connaît déjà et accepte.",
+          "gabarits": [
+            "Aujourd'hui, le modèle est bien établi pour {sujet}.",
+            "Tout le monde s'accorde sur un point : {element}."
+          ]
+        },
+        {
+          "titre": "Complication",
+          "role": "tension",
+          "consigne": "Introduire le changement ou le problème qui rend la situation intenable.",
+          "gabarits": [
+            "Or, {evenement} remet ce modèle en question.",
+            "Mais un fait nouveau change la donne : {element}."
+          ]
+        },
+        {
+          "titre": "Question",
+          "role": "hypothese",
+          "consigne": "Formuler la question que la complication pose au décideur.",
+          "gabarits": [
+            "La question est donc : comment adapter notre approche sur {sujet} ?",
+            "Faut-il privilégier {a} ou {b} ?"
+          ]
+        },
+        {
+          "titre": "Réponse (recommandation)",
+          "role": "decision",
+          "consigne": "Donner la recommandation dès le début, en une phrase, avant tout argument.",
+          "gabarits": [
+            "Notre recommandation : {conclusion}.",
+            "En synthèse, nous recommandons d'agir dès maintenant sur {element}."
+          ]
+        },
+        {
+          "titre": "Arguments et données",
+          "role": "analyse",
+          "consigne": "Soutenir la recommandation par trois arguments regroupés, chacun appuyé par des données.",
+          "gabarits": [
+            "Trois arguments soutiennent cette recommandation, à commencer par un potentiel de {chiffre} d'économies.",
+            "Le benchmark le confirme : {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Annonce de réorganisation",
+      "description": "Communication interne typique d'une restructuration : contexte de marché, constat, décision présentée comme difficile mais nécessaire, accompagnement, vision.",
+      "etapes": [
+        {
+          "titre": "Contexte de marché",
+          "role": "contexte",
+          "consigne": "Attribuer la décision à l'environnement extérieur plutôt qu'à des choix internes.",
+          "gabarits": [
+            "Notre secteur traverse une période de profonde transformation, accélérée par {evenement}.",
+            "Dans un environnement de plus en plus exigeant, nous devons évoluer."
+          ]
+        },
+        {
+          "titre": "Constat",
+          "role": "faits",
+          "consigne": "Présenter les chiffres qui justifient la décision, en termes d'écarts.",
+          "gabarits": [
+            "Les résultats font apparaître un différentiel de {chiffre} par rapport à nos objectifs.",
+            "Nous avons pris le temps d'analyser en profondeur {sujet}."
+          ]
+        },
+        {
+          "titre": "Décision",
+          "role": "decision",
+          "consigne": "Annoncer la décision comme difficile mais nécessaire, sans nommer les licenciements.",
+          "gabarits": [
+            "Nous avons donc pris la décision, difficile mais nécessaire, de recentrer nos activités sur {sujet}.",
+            "Ce projet pourrait concerner {chiffre}, dans le strict respect du dialogue social."
+          ]
+        },
+        {
+          "titre": "Accompagnement",
+          "role": "projection",
+          "consigne": "Insister sur les mesures d'accompagnement et la bienveillance de la démarche.",
+          "gabarits": [
+            "Chaque collaborateur concerné bénéficiera d'un accompagnement personnalisé.",
+            "Des mesures d'accompagnement ambitieuses seront proposées à l'ensemble des personnes concernées."
+          ]
+        },
+        {
+          "titre": "Vision",
+          "role": "conclusion",
+          "consigne": "Clore sur un horizon positif et collectif.",
+          "gabarits": [
+            "Cette transformation nous permettra de sortir plus forts et plus agiles.",
+            "Ensemble, nous construirons l'entreprise de demain : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Les chiffres servent à piloter et à justifier : tableaux de bord, KPI et OKR déclinés en cascade, reporting mensuel. On parle d'écarts (« différentiel »), de trajectoire et de retour sur investissement ; la mesure tend à devenir l'objectif lui-même.",
+    "unites": [
+      "KPI",
+      "OKR",
+      "retour sur investissement (ROI, %)",
+      "marge opérationnelle et EBITDA",
+      "équivalents temps plein (ETP)",
+      "jours-homme",
+      "taux d'engagement (%)",
+      "eNPS",
+      "taux de turnover (%)",
+      "taux d'absentéisme (%)",
+      "économies (millions d'euros)"
+    ],
+    "formulations": [
+      "Le KPI principal affiche {chiffre}, en ligne avec la trajectoire.",
+      "Nous constatons un différentiel de {chiffre} par rapport au budget.",
+      "Le projet devrait générer {chiffre} d'économies sur trois ans.",
+      "Entre {a} et {b}, le benchmark fait apparaître un écart de {chiffre}.",
+      "Le taux d'engagement atteint {chiffre} depuis {evenement}.",
+      "L'objectif est d'atteindre {chiffre} d'ici la fin de l'exercice.",
+      "La réorganisation concerne {chiffre} sur l'ensemble du périmètre."
+    ]
+  },
+  "metaphores": [
+    "le navire et le cap à tenir",
+    "embarquer tout le monde à bord",
+    "le levier",
+    "la feuille de route",
+    "le pilotage et le tableau de bord, comme dans un cockpit",
+    "les chantiers à ouvrir",
+    "l'ADN de l'entreprise",
+    "la boîte à outils",
+    "les silos à décloisonner",
+    "la zone de confort dont il faut sortir",
+    "le vocabulaire guerrier : task force, cible, conquête, bataille",
+    "le mouvement permanent : transformation, trajectoire, accélération"
+  ],
+  "pieges": [
+    "Novlangue managériale (Vandevelde-Rougale) : un langage intériorisé qui réduit l'autonomie du locuteur et peut contraindre la pensée.",
+    "Euphémisation du pouvoir : le discours de pouvoir demeure mais il est minimisé (« accompagnement de la mobilité », « réorganisation »).",
+    "Empathie de façade : souligner l'inéluctabilité d'une réorganisation tout en manifestant de l'empathie peut enfermer la pensée.",
+    "Langue de bois et formules creuses (synergie, valeur ajoutée, création de valeur) qui ne disent rien de concret.",
+    "Anglicismes et acronymes (ASAP, FYI, N+1, codir) qui servent de marqueurs d'appartenance et d'exclusion.",
+    "« Barbarie douce » (Le Goff) : rhétorique de l'autonomie et de la transparence qui masque des contraintes accrues.",
+    "Habillage de tâches vides de sens, ce que David Graeber appelle les « bullshit jobs ».",
+    "Évitement des conflits : « on revient vers toi » plutôt qu'un refus clair.",
+    "Tyrannie des indicateurs : piloter le chiffre plutôt que le travail réel.",
+    "Contamination : le vocabulaire gestionnaire (objectifs, compétences, gouvernance agile) gagne l'école, l'hôpital et l'université."
+  ],
+  "registres": {
+    "institutionnel": "Communiqué de direction : « projet de transformation », « dialogue social », « accompagnement personnalisé », « pérennité de l'entreprise ».",
+    "technique": "Entre managers et consultants : franglais et acronymes (« on fait un deep dive », « les quick wins », « les KPI du troisième trimestre », « on aligne le codir »).",
+    "vulgarisation": "Pour le grand public : « l'entreprise réorganise ses services », « des suppressions de postes sont envisagées ».",
+    "critique": "Les détracteurs parlent de « novlangue managériale », de « langue de bois », de « jargon corpo » et de « barbarie douce »."
+  },
+  "visuel": {
+    "palette": ["#546E7A", "#263238", "#ECEFF1", "#1E88E5", "#FFB300"],
+    "motifs": [
+      { "fr": "organigramme qui se réorganise", "en": "org chart rearranging itself" },
+      { "fr": "slide à puces de présentation", "en": "bullet-point presentation slide" },
+      { "fr": "pyramide de Minto", "en": "Minto pyramid diagram" },
+      { "fr": "matrice deux par deux de cabinet de conseil", "en": "two-by-two consulting matrix" },
+      { "fr": "tableau de bord de KPI avec jauges", "en": "KPI dashboard with gauges" },
+      { "fr": "feuille de route en jalons", "en": "milestone roadmap timeline" },
+      { "fr": "flèches convergentes", "en": "converging arrows" },
+      { "fr": "silhouettes autour d'une table de réunion", "en": "people silhouettes around a meeting table" },
+      { "fr": "engrenages imbriqués", "en": "interlocking gears" },
+      { "fr": "escalier de montée en compétence", "en": "skill-growth staircase" },
+      { "fr": "pièces de puzzle qui s'assemblent", "en": "puzzle pieces fitting together" }
+    ],
+    "pictogrammes": [
+      { "fr": "mallette", "en": "briefcase" },
+      { "fr": "poignée de main", "en": "handshake" },
+      { "fr": "cible", "en": "target" },
+      { "fr": "engrenage", "en": "gear" },
+      { "fr": "graphique en barres", "en": "bar chart" },
+      { "fr": "calendrier", "en": "calendar" },
+      { "fr": "flèche montante", "en": "upward arrow" },
+      { "fr": "ampoule", "en": "light bulb" },
+      { "fr": "bulle de dialogue", "en": "speech bubble" },
+      { "fr": "jauge", "en": "gauge" },
+      { "fr": "boussole", "en": "compass" },
+      { "fr": "groupe de personnes", "en": "group of people" }
+    ],
+    "typographie": "Sans-serif neutre et lisible (type Arial, Helvetica ou Calibri), titres rédigés comme des phrases-messages à la manière des slides de conseil, puces et chiffres-clés mis en exergue.",
+    "style_motion": "Motion design flat corporate, propre et rassurant : organigrammes, pictogrammes et graphiques qui s'assemblent en douceur, personnages stylisés sans visage, transitions fluides, palette bleu-gris avec un accent ambre et musique d'ambiance positive.",
+    "style_motion_en": "Clean flat corporate motion design with a reassuring tone, org charts, icons and charts assembling smoothly, faceless stylized office characters, slow fluid transitions, blue-grey and slate palette with a single amber accent, neutral sans-serif bullet-point typography, upbeat stock corporate soundtrack."
+  },
+  "exemples": [
+    { "contexte": "Changement de terminologie juridique : l'article 93 de la loi de modernisation sociale du 17 janvier 2002 a renommé le « plan social »", "texte": "« Plan de sauvegarde de l'emploi »" },
+    { "contexte": "Expression relevée dans des notes internes de France Télécom, citée lors de l'entretien de Politis avec Agnès Vandevelde-Rougale (2019)", "texte": "« Dynamique de rupture »" },
+    { "contexte": "Expression jugée la plus agaçante au bureau par 15,59 % des 1 500 Français interrogés (sondage Preply/Censuswide, rapporté par Sud Radio le 19 mai 2026)", "texte": "« On revient vers toi »" },
+    { "contexte": "Formulation typique (illustrative, non attribuée) d'un mail d'annonce de réorganisation", "texte": "« Dans un contexte de marché exigeant, nous avons pris la décision difficile mais nécessaire de faire évoluer notre organisation. Chaque collaborateur concerné bénéficiera d'un accompagnement personnalisé. »" }
+  ],
+  "sources": [
+    { "titre": "« Le langage procède à une euphémisation du discours de pouvoir au sein des entreprises »", "auteur": "Politis, entretien avec Agnès Vandevelde-Rougale (2019)", "url": "https://www.politis.fr/articles/2019/07/le-langage-procede-a-une-euphemisation-du-discours-de-pouvoir-au-sein-des-entreprises-40690/", "apport": "Euphémisation du pouvoir, vocabulaire du mouvement, intériorisation, différence avec la novlangue d'Orwell." },
+    { "titre": "Mots & illusions : quand la langue du management nous gouverne", "auteur": "Université Paris Cité, présentation de l'ouvrage d'Agnès Vandevelde-Rougale", "url": "https://u-paris.fr/universite-ouverte/mots-et-illusions-quand-la-langue-du-management-nous-gouverne/", "apport": "Extension du vocabulaire managérial à l'école, l'hôpital et l'université." },
+    { "titre": "La novlangue managériale", "auteur": "JobTeaser", "url": "https://www.jobteaser.com/fr/advices/la-novlangue-manageriale", "apport": "Marqueurs : tutoiement, néologismes, acronymes, N+1." },
+    { "titre": "La barbarie douce (fiche et critiques)", "auteur": "Critiques libres, à propos de Jean-Pierre Le Goff", "url": "https://www.critiqueslibres.com/livre/36295-la-barbarie-douce-la-modernisation-aveugle-des-entreprises-et-de-l-ecole-le-goff-jean-pierre", "apport": "Rhétorique de l'autonomie et de la transparence, langage pseudo-savant des consultants." },
+    { "titre": "Performer, être en synergie, travailler en mode projet, FYI : le jargon corpo", "auteur": "Valérie Macquet, Éditions Tissot (2024)", "url": "https://www.editions-tissot.fr/actualite/droit-du-travail/performer-etre-en-synergie-travailler-en-mode-projet-fyi-comprendre-le-poids-le-role-et-les-subtilites-du-jargon-corpo", "apport": "Fonctions du jargon, exemples (PSE, différentiel, ASAP, FYI, codir, N+1)." },
+    { "titre": "Quiet-cutting, quiet-firing, pleasanteeism… Toujours des mots, les mêmes maux ?", "auteur": "Kévin Corbel et Thomas Decamps, Welcome to the Jungle (2023)", "url": "https://www.welcometothejungle.com/fr/articles/quiet-cutting-quiet-firing-pleasanteeism-mots-entreprise", "apport": "Euphémismes RH récents, citations de Nacime Chellig et Marie Rebeyrolle." },
+    { "titre": "ASAP, prendre le lead, dans la boucle : ces expressions qui agacent les Français au boulot", "auteur": "Sud Radio (2026)", "url": "https://www.sudradio.fr/societe/asap-prendre-le-lead-dans-la-boucle-ces-expressions-qui-agacent-les-francais-au-boulot", "apport": "Sondage Preply/Censuswide : « On revient vers toi », « C'est dans le pipe », « sortir de sa zone de confort »." },
+    { "titre": "Définition du plan de sauvegarde de l'emploi", "auteur": "Dictionnaire juridique (Serge Braudo)", "url": "https://dictionnaire-juridique.com/definition/plan-de-sauvegarde-de-l-emploi.php", "apport": "Renommage du plan social en PSE par la loi du 17 janvier 2002." },
+    { "titre": "Business paper using the Minto approach", "auteur": "Monash University", "url": "https://www.monash.edu/student-academic-success/excel-at-writing/annotated-assessment-samples/business-and-economics/business-paper-using-the-minto-approach", "apport": "Structure pyramidale du raisonnement de conseil." },
+    { "titre": "Les emplois inutiles (recension de Bullshit Jobs)", "auteur": "La Vie des idées", "url": "https://laviedesidees.fr/Les-emplois-inutiles", "apport": "Critique des emplois perçus comme inutiles et de leur habillage langagier." }
+  ]
+}

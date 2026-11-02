@@ -1,0 +1,427 @@
+{
+  "id": "sport",
+  "nom": "Sport",
+  "famille": "metier",
+  "categorie": "Sport & médias",
+  "icone": "⚽",
+  "couleur": "#7CB342",
+  "description": "Éléments de langage du sport francophone, centrés sur le football mais transposables à la plupart des disciplines. La fiche couvre les formules d'interview et de conférence de presse issues du media training (« match après match », « prendre les trois points », « on respecte chaque adversaire »), le vocabulaire du commentaire et de l'analyse (dynamique, mental, bloc, xG), les euphémismes de la défaite et de la blessure, et le rapport aux statistiques et aux chronos.",
+  "posture": "Le sportif parle au nom du groupe et du staff, à chaud mais sous contrôle : humilité affichée, respect de l'adversaire et de l'arbitre, refus de la polémique. Le commentateur alterne l'émotion du direct, l'expertise technique et la lecture statistique.",
+  "valeurs": [
+    "le collectif et le groupe",
+    "le travail et l'abnégation",
+    "l'humilité",
+    "le respect de l'adversaire et de l'arbitre",
+    "le mental et la résilience",
+    "la performance mesurable",
+    "le dépassement de soi",
+    "l'attachement au club et aux supporters"
+  ],
+  "vocabulaire": [
+    { "terme": "dynamique", "sens": "série de résultats et état de confiance d'une équipe à un moment donné", "usage": "On est dans une bonne dynamique, il faut la prolonger." },
+    { "terme": "mental", "sens": "force psychologique, capacité à résister à la pression et à réagir", "usage": "Cette victoire, on la doit au mental." },
+    { "terme": "se projeter", "sens": "envisager les échéances futures, souvent pour s'y refuser publiquement", "usage": "On ne se projette pas sur la finale." },
+    { "terme": "match après match", "sens": "formule de prudence : se concentrer sur la prochaine échéance sans anticiper", "usage": "On avance match après match." },
+    { "terme": "prendre les trois points", "sens": "gagner un match de championnat ; formule rituelle d'après-match", "usage": "L'important, c'était de prendre les trois points." },
+    { "terme": "remontada", "sens": "retour spectaculaire au score après un retard jugé insurmontable (de l'espagnol « remontée »)", "usage": "Le stade attend une remontada." },
+    { "terme": "contre-performance", "sens": "résultat nettement inférieur aux attentes, défaite surprise", "usage": "C'est une contre-performance qu'il faudra analyser." },
+    { "terme": "en délicatesse", "sens": "légèrement blessé ou gêné physiquement (« en délicatesse avec sa cuisse »)", "usage": "Le capitaine est en délicatesse avec son genou." },
+    { "terme": "groupe", "sens": "l'effectif et le staff présentés comme une entité soudée", "usage": "Le groupe vit bien." },
+    { "terme": "vestiaire", "sens": "le collectif des joueurs, son ambiance et sa hiérarchie interne", "usage": "L'entraîneur a encore le vestiaire avec lui." },
+    { "terme": "staff", "sens": "ensemble de l'encadrement technique, médical et athlétique", "usage": "Le staff gère la charge de travail." },
+    { "terme": "projet de jeu", "sens": "ensemble des principes collectifs voulus par l'entraîneur", "usage": "On reste fidèles à notre projet de jeu." },
+    { "terme": "plan de jeu", "sens": "stratégie prévue pour un match précis", "usage": "Le plan de jeu a été parfaitement respecté." },
+    { "terme": "animation offensive", "sens": "organisation des mouvements et combinaisons en phase d'attaque", "usage": "L'animation offensive manque de variété." },
+    { "terme": "bloc bas", "sens": "défense regroupée près de son propre but", "usage": "Face à un bloc bas, il faut de la patience." },
+    { "terme": "bloc haut", "sens": "équipe qui défend loin de son but pour récupérer vite le ballon", "usage": "Le bloc haut a étouffé la relance adverse." },
+    { "terme": "pressing", "sens": "pression collective exercée sur le porteur du ballon pour le récupérer", "usage": "Le pressing a été intense pendant vingt minutes." },
+    { "terme": "transition", "sens": "moment de bascule entre défense et attaque (ou l'inverse) après un changement de possession", "usage": "On a été punis sur une transition." },
+    { "terme": "intensité", "sens": "niveau d'engagement physique et de rythme", "usage": "Il a manqué de l'intensité dans les duels." },
+    { "terme": "densité", "sens": "nombre de joueurs dans une zone, ou solidité athlétique d'une équipe", "usage": "Il y avait beaucoup de densité au milieu." },
+    { "terme": "réalisme", "sens": "efficacité à convertir ses occasions en buts", "usage": "On a manqué de réalisme devant le but." },
+    { "terme": "déchet technique", "sens": "pertes de balle et gestes ratés", "usage": "Trop de déchet technique en première période." },
+    { "terme": "temps fort", "sens": "période de domination dans un match", "usage": "On n'a pas su concrétiser nos temps forts." },
+    { "terme": "temps faible", "sens": "période où l'équipe subit", "usage": "Il faut savoir gérer les temps faibles." },
+    { "terme": "money time", "sens": "fin de match ou de compétition où tout se décide", "usage": "Il a encore été décisif dans le money time." },
+    { "terme": "match piège", "sens": "rencontre a priori facile mais risquée", "usage": "On savait que c'était un match piège." },
+    { "terme": "faire le dos rond", "sens": "subir en restant solide en attendant que l'orage passe", "usage": "On a fait le dos rond en fin de match." },
+    { "terme": "gestion", "sens": "maîtrise du rythme, du score ou de l'effort, parfois synonyme d'anti-jeu", "usage": "Une fin de match tout en gestion." },
+    { "terme": "rotation", "sens": "changement des joueurs alignés pour gérer la fatigue", "usage": "Avec trois matchs en une semaine, la rotation s'impose." },
+    { "terme": "état d'esprit", "sens": "attitude collective, solidarité, envie", "usage": "Je retiens l'état d'esprit." },
+    { "terme": "expected goals", "sens": "xG : probabilité, entre 0 et 1, qu'un tir devienne un but, calculée sur des centaines de milliers de tirs", "usage": "On a produit deux expected goals sans marquer." },
+    { "terme": "xGOT", "sens": "expected goals on target : qualité d'un tir cadré selon l'endroit où il arrive dans le but", "usage": "Le gardien a stoppé des tirs à fort xGOT." },
+    { "terme": "possession", "sens": "part du temps de jeu où une équipe a le ballon", "usage": "Soixante pour cent de possession, mais peu d'occasions." },
+    { "terme": "duels gagnés", "sens": "proportion des confrontations individuelles remportées", "usage": "On a perdu la bataille des duels." },
+    { "terme": "temps de jeu", "sens": "minutes jouées par un joueur, enjeu de concurrence", "usage": "Il réclame plus de temps de jeu." },
+    { "terme": "coaching", "sens": "choix de l'entraîneur pendant le match, en particulier les remplacements", "usage": "Le coaching a été gagnant." },
+    { "terme": "finisseur", "sens": "remplaçant entré en fin de match pour faire la différence", "usage": "Il assume son rôle de finisseur." },
+    { "terme": "faute tactique", "sens": "faute volontaire pour casser une contre-attaque", "usage": "Le carton jaune pour faute tactique est logique." },
+    { "terme": "VAR", "sens": "assistance vidéo à l'arbitrage", "usage": "La VAR a annulé le but pour un hors-jeu millimétré." },
+    { "terme": "chrono", "sens": "temps réalisé dans une épreuve mesurée", "usage": "Le chrono est excellent pour un début de saison." },
+    { "terme": "record personnel", "sens": "meilleure performance de la carrière d'un athlète", "usage": "Elle bat son record personnel de six centièmes." },
+    { "terme": "minima", "sens": "performance minimale exigée pour être sélectionné", "usage": "Il a réussi les minima pour les championnats d'Europe." },
+    { "terme": "charge d'entraînement", "sens": "volume et intensité du travail physique, suivis par données GPS", "usage": "On a baissé la charge d'entraînement avant le match." },
+    { "terme": "préparation invisible", "sens": "sommeil, nutrition, récupération, tout ce qui se fait hors des séances", "usage": "La préparation invisible fait la différence au haut niveau." },
+    { "terme": "bête noire", "sens": "adversaire contre lequel on perd régulièrement", "usage": "Ce club reste notre bête noire." },
+    { "terme": "série d'invincibilité", "sens": "suite de matchs consécutifs sans défaite", "usage": "La série s'arrête à quinze matchs." }
+  ],
+  "formules": [
+    "On prend match après match.",
+    "L'important, c'était de prendre les trois points.",
+    "On ne va pas s'enflammer.",
+    "On reste concentrés sur nous-mêmes.",
+    "Le groupe vit bien.",
+    "On respecte chaque adversaire.",
+    "On se concentre sur ce qu'on peut contrôler.",
+    "Il faut rester humbles et continuer à travailler.",
+    "C'est le football, il faut l'accepter.",
+    "On n'a pas su concrétiser nos temps forts.",
+    "Ça s'est joué sur des détails.",
+    "Il faudra vite se remobiliser.",
+    "On ne se projette pas encore sur {evenement}.",
+    "Concernant {sujet}, je ne vais pas polémiquer.",
+    "Sur {element}, l'arbitre a pris sa décision, il faut la respecter.",
+    "Avec {sujet}, on a vu un vrai état d'esprit.",
+    "Il y a du positif à retenir, notamment {element}.",
+    "Après {evenement}, on a su réagir ensemble.",
+    "Entre {a} et {b}, le match s'est joué dans l'intensité.",
+    "On avait un plan de jeu, on l'a respecté.",
+    "Pour {public}, on va tout donner.",
+    "La dynamique est bonne, il faut la prolonger.",
+    "Le mot d'ordre : {terme}.",
+    "C'est une contre-performance, on doit l'analyser à froid.",
+    "Il reste {chiffre} à jouer, rien n'est fait.",
+    "On savait que ce serait un match piège.",
+    "Le constat est simple : {conclusion}.",
+    "On a manqué de réalisme devant le but.",
+    "Il faut garder les pieds sur terre.",
+    "Rien n'est encore fait concernant {sujet}.",
+    "Bravo aux supporters, ils nous ont portés jusqu'au bout."
+  ],
+  "connecteurs": [
+    "Dans l'ensemble,",
+    "Sur l'ensemble du match,",
+    "En première période,",
+    "Au retour des vestiaires,",
+    "Dans le money time,",
+    "Statistiquement,",
+    "Au niveau du contenu,",
+    "Tactiquement,",
+    "Mentalement,",
+    "Sur le plan athlétique,",
+    "Pour la suite,",
+    "À chaud,",
+    "Avec du recul,"
+  ],
+  "euphemismes": [
+    { "brut": "défaite humiliante", "edl": "contre-performance", "commentaire": "Terme de presse et de communiqué qui dédramatise un échec net." },
+    { "brut": "blessé", "edl": "en délicatesse", "commentaire": "On dit « en délicatesse avec sa cuisse », « touché », « un pépin physique »." },
+    { "brut": "fatigué", "edl": "en manque de fraîcheur", "commentaire": "Aussi « des jambes lourdes », très fréquent en fin de saison." },
+    { "brut": "conflit dans le vestiaire", "edl": "discussions entre hommes", "commentaire": "En conférence de presse, la réponse type reste « le groupe vit bien »." },
+    { "brut": "entraîneur licencié", "edl": "séparation d'un commun accord", "commentaire": "Formule de communiqué de club ; la presse parle d'entraîneur « sur la sellette » avant." },
+    { "brut": "joueur écarté", "edl": "gestion du temps de jeu", "commentaire": "Aussi « mis au repos » ou « choix tactique »." },
+    { "brut": "l'arbitre s'est trompé", "edl": "décision discutable", "commentaire": "Pour éviter la sanction disciplinaire, on parle aussi de « manque de réussite »." },
+    { "brut": "mal jouer", "edl": "manquer de justesse", "commentaire": "Aussi « un match sans », « un jour sans »." },
+    { "brut": "match ennuyeux", "edl": "match fermé", "commentaire": "Aussi « match tactique » ou « match d'échecs »." },
+    { "brut": "gagner du temps", "edl": "gérer", "commentaire": "L'anti-jeu en fin de match devient « de la gestion » ou « de l'expérience »." },
+    { "brut": "faute volontaire", "edl": "faute tactique", "commentaire": "Parfois même « faute intelligente » chez les consultants." },
+    { "brut": "contrôle antidopage positif", "edl": "résultat d'analyse anormal", "commentaire": "Terminologie officielle des agences antidopage." },
+    { "brut": "joueur vieillissant", "edl": "joueur d'expérience", "commentaire": "Aussi « un cadre », « un taulier »." },
+    { "brut": "transfert pour l'argent", "edl": "nouveau challenge", "commentaire": "Communiqué de départ type : « un nouveau projet sportif »." },
+    { "brut": "défaite", "edl": "revers", "commentaire": "Aussi « faux pas » ou « accroc » chez les favoris." },
+    { "brut": "remplaçant", "edl": "finisseur", "commentaire": "Valorisation du rôle de joker entré en cours de jeu." }
+  ],
+  "substitutions": [
+    { "de": "équipe", "vers": "groupe" },
+    { "de": "entraîneur", "vers": "coach" },
+    { "de": "encadrement", "vers": "staff" },
+    { "de": "gagner", "vers": "prendre les trois points" },
+    { "de": "perdre", "vers": "laisser filer des points" },
+    { "de": "erreurs", "vers": "déchet technique" },
+    { "de": "énergie", "vers": "intensité" },
+    { "de": "motivation", "vers": "état d'esprit" },
+    { "de": "forme", "vers": "dynamique" },
+    { "de": "moral", "vers": "mental" },
+    { "de": "stratégie", "vers": "projet de jeu" },
+    { "de": "défense", "vers": "bloc" },
+    { "de": "attaque", "vers": "animation offensive" },
+    { "de": "fatigue", "vers": "manque de fraîcheur" },
+    { "de": "blessure", "vers": "pépin physique" },
+    { "de": "remplacements", "vers": "coaching" },
+    { "de": "occasion", "vers": "situation" },
+    { "de": "efficacité", "vers": "réalisme" },
+    { "de": "objectif", "vers": "ambition" },
+    { "de": "défaite", "vers": "revers" },
+    { "de": "temps", "vers": "chrono" },
+    { "de": "match difficile", "vers": "match piège" },
+    { "de": "fin de match", "vers": "money time" },
+    { "de": "retour au score", "vers": "remontada" }
+  ],
+  "cadres": [
+    { "nom": "Collectif contre individu", "question": "Concernant {sujet}, la performance relève-t-elle du collectif ou d'un exploit individuel ?", "explication": "Le discours sportif valorise le groupe, même quand le commentaire célèbre la star." },
+    { "nom": "Dynamique et mental", "question": "Quelle dynamique, positive ou négative, explique {element} ?", "explication": "Les résultats sont lus comme des séries portées par la confiance ou minées par le doute." },
+    { "nom": "Lecture tactique", "question": "Quel plan de jeu et quels ajustements expliquent {element} ?", "explication": "Grille du consultant : blocs, pressing, transitions, coaching." },
+    { "nom": "Statistiques contre ressenti", "question": "Les statistiques (xG, possession, chronos) confirment-elles l'impression laissée par {evenement} ?", "explication": "Les données avancées objectivent ou contredisent le récit émotionnel du match." },
+    { "nom": "Détails, réussite et arbitrage", "question": "Sur {element}, qu'est-ce qui relève des détails, de la réussite ou de l'arbitrage ?", "explication": "Grille d'excuse ou d'explication : le résultat tient à peu de chose." },
+    { "nom": "Projection et calendrier", "question": "Après {evenement}, quel objectif réaliste pour la suite de la saison ?", "explication": "On relativise l'enjeu immédiat et on remet le résultat dans la course longue du championnat." },
+    { "nom": "Intérêts institutionnels", "question": "Quels intérêts, club, fédération, diffuseur ou sponsor, pèsent sur {sujet} ?", "explication": "Lecture critique : le sport comme industrie médiatique et économique." }
+  ],
+  "structures": [
+    {
+      "nom": "Interview d'après-match",
+      "description": "Réponse type en bord de terrain ou en zone mixte : ressenti, lecture du match, tournant, hommage au collectif, projection prudente.",
+      "etapes": [
+        {
+          "titre": "Ressenti à chaud",
+          "role": "contexte",
+          "consigne": "Exprimer une émotion contenue et rappeler la difficulté attendue du match.",
+          "gabarits": [
+            "On s'attendait à un match difficile, et ça l'a été.",
+            "Après {evenement}, on avait à cœur de réagir."
+          ]
+        },
+        {
+          "titre": "Lecture du match",
+          "role": "faits",
+          "consigne": "Résumer le déroulé en temps forts et temps faibles, sans accabler personne.",
+          "gabarits": [
+            "On a bien démarré, puis on a subi un temps faible avant de revenir.",
+            "Sur {element}, on a manqué de réalisme."
+          ]
+        },
+        {
+          "titre": "Tournant",
+          "role": "analyse",
+          "consigne": "Identifier le moment clé ou les détails qui ont fait la différence.",
+          "gabarits": [
+            "Le match bascule sur {element}.",
+            "Entre {a} et {b}, la différence s'est faite sur les détails."
+          ]
+        },
+        {
+          "titre": "Hommage au collectif",
+          "role": "conclusion",
+          "consigne": "Mettre en avant le groupe, l'état d'esprit et les supporters plutôt qu'un individu.",
+          "gabarits": [
+            "Je retiens surtout l'état d'esprit du groupe.",
+            "Pour {public}, on voulait offrir cette victoire."
+          ]
+        },
+        {
+          "titre": "Projection prudente",
+          "role": "projection",
+          "consigne": "Refuser de s'enflammer et ramener l'attention sur la prochaine échéance.",
+          "gabarits": [
+            "On ne se projette pas, on prend match après match.",
+            "Il faudra vite récupérer avant {evenement}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Conférence de presse d'avant-match",
+      "description": "Prise de parole de l'entraîneur avant une rencontre : état du groupe, infirmerie, adversaire, enjeu, plan.",
+      "etapes": [
+        {
+          "titre": "État du groupe",
+          "role": "contexte",
+          "consigne": "Rassurer sur l'ambiance et la préparation, sans rien dévoiler.",
+          "gabarits": [
+            "Le groupe vit bien et travaille sérieusement.",
+            "Depuis {evenement}, on a eu le temps de bien récupérer."
+          ]
+        },
+        {
+          "titre": "Infirmerie et effectif",
+          "role": "faits",
+          "consigne": "Donner des nouvelles des blessés de façon floue et euphémisée.",
+          "gabarits": [
+            "Concernant {sujet}, on fera un point demain après l'entraînement.",
+            "Deux joueurs sont en délicatesse, on décidera au dernier moment."
+          ]
+        },
+        {
+          "titre": "Adversaire",
+          "role": "analyse",
+          "consigne": "Louer l'adversaire pour se protéger et valoriser une éventuelle victoire.",
+          "gabarits": [
+            "On respecte chaque adversaire, et celui-ci a beaucoup de qualités.",
+            "Avec {a}, on affronte une équipe dense, très bien organisée."
+          ]
+        },
+        {
+          "titre": "Enjeu",
+          "role": "tension",
+          "consigne": "Reconnaître l'importance du match tout en relativisant la pression.",
+          "gabarits": [
+            "C'est un match important, mais ce n'est pas une finale.",
+            "Entre {a} et {b}, il n'y a pas de petit match."
+          ]
+        },
+        {
+          "titre": "Plan",
+          "role": "decision",
+          "consigne": "Annoncer une intention de jeu générale sans révéler la composition.",
+          "gabarits": [
+            "On a un plan de jeu, on va s'y tenir.",
+            "Le mot d'ordre sera simple : {terme}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Analyse de la performance",
+      "description": "Commentaire de consultant ou article d'analyse : contexte, statistiques, lecture tactique, hypothèse, verdict.",
+      "etapes": [
+        {
+          "titre": "Contexte",
+          "role": "contexte",
+          "consigne": "Situer la rencontre ou la performance dans la saison, la série en cours et le classement.",
+          "gabarits": [
+            "Avant {evenement}, la dynamique était clairement défavorable.",
+            "Concernant {sujet}, la pression était maximale."
+          ]
+        },
+        {
+          "titre": "Statistiques",
+          "role": "faits",
+          "consigne": "Citer les données clés (score, xG, possession, duels, chronos) avec leur unité.",
+          "gabarits": [
+            "Au coup de sifflet final, le compteur d'expected goals affiche {chiffre} pour {a}.",
+            "Sur l'ensemble du match, {a} domine la possession avec {chiffre}."
+          ]
+        },
+        {
+          "titre": "Lecture tactique",
+          "role": "analyse",
+          "consigne": "Expliquer les choix tactiques, le rapport de forces et les ajustements en cours de match.",
+          "gabarits": [
+            "Avec un bloc bas compact, {b} a longtemps neutralisé l'animation offensive adverse.",
+            "Le coaching a renversé la tendance après {evenement}."
+          ]
+        },
+        {
+          "titre": "Hypothèse",
+          "role": "hypothese",
+          "consigne": "Envisager ce que le résultat implique pour la suite, au conditionnel.",
+          "gabarits": [
+            "Si {element} se confirme, la course au titre est relancée.",
+            "Avec {sujet}, une nouvelle hiérarchie pourrait se dessiner."
+          ]
+        },
+        {
+          "titre": "Verdict",
+          "role": "conclusion",
+          "consigne": "Trancher en une phrase forte, entre émotion et objectivation.",
+          "gabarits": [
+            "Le verdict est sans appel : {conclusion}.",
+            "Une victoire de caractère, qui en dit long sur le mental du groupe."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le sport est saturé de chiffres : score, classement, chronos, statistiques avancées. Les acteurs les relativisent en interview, tandis que commentateurs et analystes les mobilisent pour objectiver la performance ; les xG sont devenus la nouvelle référence du football, pertinente sur des cumuls de matchs plus que sur un tir isolé.",
+    "unites": [
+      "points au classement",
+      "buts et expected goals (xG, xGOT)",
+      "possession (%)",
+      "duels gagnés (%)",
+      "distance parcourue (km)",
+      "vitesse de pointe (km/h)",
+      "chronos (minutes, secondes, centièmes)",
+      "temps de jeu (minutes)",
+      "série d'invincibilité (matchs)"
+    ],
+    "formulations": [
+      "Avec {chiffre}, {a} surperforme nettement ses expected goals.",
+      "Entre {a} et {b}, l'écart au classement n'est plus que de {chiffre}.",
+      "Le chrono tombe : {chiffre}, nouveau record personnel.",
+      "Sur {element}, le compteur affiche {chiffre}.",
+      "Il reste {chiffre} à disputer, et tout reste possible.",
+      "Après {evenement}, la série s'arrête à {chiffre} sans défaite.",
+      "La possession penche vers {a} avec {chiffre}, mais {b} se montre plus réaliste."
+    ]
+  },
+  "metaphores": [
+    "la guerre : monter au front, la bataille du milieu, l'artillerie lourde",
+    "la machine : le rouleau compresseur",
+    "la forteresse : le stade imprenable",
+    "la famille : le groupe, le vestiaire",
+    "le navire dans la tempête : garder le cap",
+    "les échecs : le match tactique, la partie d'échecs",
+    "la résurrection : la remontada",
+    "la montagne à gravir",
+    "le cœur et les tripes : l'engagement physique",
+    "la bête noire",
+    "la finale avant l'heure"
+  ],
+  "pieges": [
+    "Langue de bois du vestiaire : formules creuses et interchangeables issues du media training ; lors de la dernière Coupe du monde, un indice de clichés (xC) est passé en moyenne de 28 en phase de groupes à 46 autour de la finale.",
+    "Rituel sans contenu : « match après match », « prendre les trois points » répétés même là où ils n'ont pas de sens.",
+    "Euphémisation systématique des blessures, des conflits internes et des licenciements.",
+    "Vocabulaire guerrier et viriliste qui banalise la violence et la domination.",
+    "Sur-interprétation des statistiques avancées sur un seul match, alors que les xG prennent sens sur des cumuls.",
+    "Récit héroïque qui occulte l'argent, le dopage ou les inégalités entre clubs.",
+    "Commentaire chauvin et partial lors des compétitions internationales.",
+    "Mépris de classe envers la parole des footballeurs, moquée pour ses fautes de langue."
+  ],
+  "registres": {
+    "institutionnel": "Fédérations, ligues et clubs : communiqués lisses sur les valeurs du sport, le projet, l'engagement et la séparation d'un commun accord.",
+    "technique": "Entre staffs et analystes : charge d'entraînement, données GPS, blocs, pressing, transitions, xG, découpage vidéo.",
+    "vulgarisation": "Commentaire télé et radio : émotion du direct, superlatifs, exclamations et images fortes (« il envoie une frappe lumineuse »).",
+    "critique": "Ses détracteurs moquent la langue de bois des interviews formatées, les clichés des consultants et les maladresses de langue, recensées en recueils de perles."
+  },
+  "visuel": {
+    "palette": ["#7CB342", "#0D1B2A", "#FFFFFF", "#FFC107", "#E53935"],
+    "motifs": [
+      { "fr": "terrain vu du dessus avec lignes tactiques", "en": "top-down football pitch with tactical lines" },
+      { "fr": "flèches de déplacement des joueurs", "en": "animated player movement arrows" },
+      { "fr": "tableau d'affichage du score", "en": "stadium scoreboard" },
+      { "fr": "chronomètre numérique géant", "en": "giant digital stopwatch" },
+      { "fr": "podium avec médailles", "en": "podium with medals" },
+      { "fr": "carte de chaleur sur le terrain", "en": "heatmap overlay on the pitch" },
+      { "fr": "tableau noir tactique à la craie", "en": "chalkboard tactics drawing" },
+      { "fr": "couloirs de piste d'athlétisme en perspective", "en": "athletics track lanes in perspective" },
+      { "fr": "trophée sous une pluie de confettis", "en": "trophy under falling confetti" },
+      { "fr": "barres de statistiques en duel", "en": "head-to-head stat bars" },
+      { "fr": "tribunes de supporters", "en": "packed stadium stands" },
+      { "fr": "frappe de balle au ralenti", "en": "slow-motion ball strike" }
+    ],
+    "pictogrammes": [
+      { "fr": "ballon de football", "en": "soccer ball" },
+      { "fr": "sifflet", "en": "whistle" },
+      { "fr": "chronomètre", "en": "stopwatch" },
+      { "fr": "trophée", "en": "trophy" },
+      { "fr": "médaille", "en": "medal" },
+      { "fr": "maillot", "en": "jersey" },
+      { "fr": "cage de but", "en": "goal net" },
+      { "fr": "carton jaune", "en": "yellow card" },
+      { "fr": "drapeau de corner", "en": "corner flag" },
+      { "fr": "chaussure à crampons", "en": "football boot" },
+      { "fr": "haltère", "en": "dumbbell" },
+      { "fr": "podium", "en": "podium" }
+    ],
+    "typographie": "Linéale condensée très grasse en capitales italiques, chiffres façon tableau d'affichage, effets de vitesse et contrastes forts.",
+    "style_motion": "Habillage sportif énergique : transitions en balayage diagonal, lignes de vitesse et flashs, compteurs de statistiques qui s'animent, flèches tactiques à la craie sur un terrain vu du dessus, ralentis et zooms percutants.",
+    "style_motion_en": "High-energy sports broadcast motion graphics: diagonal wipe transitions, speed lines and flashes, animated stat counters and head-to-head bars, chalk tactical arrows over a top-down pitch, punchy slow motion and zooms, bold condensed italic typography, grass green, navy and yellow palette."
+  },
+  "exemples": [
+    { "contexte": "Formules réelles relevées par une analyse de 394 conférences de presse de la dernière Coupe du monde (Journal du Net, Robert Gerstmann, juillet 2026), présentées comme les plus utilisées.", "texte": "« Nous respectons chaque adversaire. » ; « Nous nous concentrons sur ce que nous pouvons contrôler. »" },
+    { "contexte": "Anecdote réelle (joueur non nommé) rapportée par Sébastien Beaufort dans « 300 perles de foot cultissimes » (Tut-tut, 2018), qui y voit le « leitmotiv quasi litanique » de la victoire à trois points.", "texte": "« Ce soir, l'important c'était de prendre les trois points ! — Euh, c'était un match amical. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une interview d'après-match en zone mixte.", "texte": "« On savait que ce serait un match piège. On a été un peu en difficulté en première période, mais le groupe a montré un bel état d'esprit. On prend les trois points, c'est l'essentiel, et on ne s'enflamme pas : match après match. »" },
+    { "contexte": "Définition pédagogique réelle des expected goals (Ligue1.com, tutoriel Stats Perform, août 2024).", "texte": "« Les xG mesurent la qualité d'un tir »" }
+  ],
+  "sources": [
+    { "titre": "Ce que les clichés des sélectionneurs de football nous apprennent sur la communication de crise et le leadership", "auteur": "Robert Gerstmann, Journal du Net (2026)", "url": "https://www.journaldunet.com/martech/1553011-ce-que-les-cliches-des-selectionneurs-de-football-nous-apprennent-sur-la-communication-de-crise-et-le-leadership/", "apport": "Mesure des clichés en conférence de presse (indice xC), formules les plus fréquentes, fonctions des conférences d'avant et d'après-match." },
+    { "titre": "300 perles de foot cultissimes (extrait)", "auteur": "Sébastien Beaufort, Tut-tut / Leduc.s (2018)", "url": "https://editionsleduc.com/extract/4609", "apport": "Le réflexe « prendre les trois points » vu par un spécialiste du media training." },
+    { "titre": "Le meilleur tutoriel pour comprendre les expected goals", "auteur": "Stats Perform, Ligue1.com (2024)", "url": "https://ligue1.com/fr/articles/l1_article_497-le-meilleur-tutoriel-pour-comprendre-les-expected-goals", "apport": "Définition et exemples chiffrés des xG, xGOT et buts évités." },
+    { "titre": "Formulaic language and repetition in post-match football interviews", "auteur": "Journal of Applied Linguistics and Professional Practice", "url": "https://journal.equinoxpub.com/JALPP/article/view/13586", "apport": "L'interview d'après-match comme rituel médiatique formulaire, collaboratif et consensuel." },
+    { "titre": "Word! The Language Column (clichés du football et media training)", "auteur": "Goethe-Institut", "url": "https://www.goethe.de/ins/in/en/m/kul/lak/glc/-/24311392.html", "apport": "Lien entre media training et stock de formules toutes faites." },
+    { "titre": "Pourquoi juge-t-on trop vite la manière de parler des footballeurs ?", "auteur": "Podcast Carnets de bord du media trainer", "url": "https://podcast.ausha.co/carnets-de-bord-du-media-trainer/pourquoi-juge-t-on-trop-vite-la-maniere-de-parler-des-footballeurs", "apport": "Critique du discours jugé insipide des footballeurs et de la sévérité de ce jugement." },
+    { "titre": "Football doesn't make us stupid: young French players challenge stereotypes", "auteur": "Euronews (2026)", "url": "https://www.euronews.com/my-europe/2026/06/02/football-doesnt-make-us-stupid-young-french-players-challenge-stereotypes-at-speaking-cont", "apport": "Formation à la prise de parole dans les centres de formation français." },
+    { "titre": "Définition de remontada", "auteur": "La langue française", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/remontada", "apport": "Définition et étymologie de « remontada »." },
+    { "titre": "Les émotions dans les commentaires sportifs en direct de la Coupe du monde de football", "auteur": "Gerardo Acerenza, Université de Trente", "url": "https://iris.unitn.it/handle/11572/33973", "apport": "Le commentaire sportif français comme discours émotionnel du direct." }
+  ]
+}

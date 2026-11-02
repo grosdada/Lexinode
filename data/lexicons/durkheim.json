@@ -1,0 +1,401 @@
+{
+  "id": "durkheim",
+  "nom": "Durkheim — faits sociaux",
+  "famille": "sociologie",
+  "categorie": "Sociologie classique (holisme)",
+  "icone": "🏛️",
+  "couleur": "#455A64",
+  "description": "Grille de lecture inspirée d'Émile Durkheim (1858-1917), fondateur de la sociologie universitaire française : tout sujet est traité comme un fait social, extérieur et contraignant, que l'on explique par d'autres faits sociaux. Elle mesure des taux, évalue l'intégration et la régulation des groupes (anomie), les formes de solidarité et la part du sacré dans la vie collective.",
+  "posture": "Savant positif et rationaliste qui parle au nom de la science des faits sociaux : il écarte les prénotions, définit son objet par des caractères extérieurs et raisonne sur des régularités collectives plutôt que sur des intentions individuelles.",
+  "valeurs": [
+    "objectivité scientifique",
+    "primat du collectif",
+    "méthode comparative",
+    "rigueur des définitions préalables",
+    "cohésion sociale",
+    "morale laïque",
+    "rationalisme"
+  ],
+  "vocabulaire": [
+    { "terme": "fait social", "sens": "Toute manière de faire, fixée ou non, susceptible d'exercer sur l'individu une contrainte extérieure, ou générale dans une société donnée tout en ayant une existence propre (Les Règles de la méthode sociologique, 1895).", "usage": "Le taux de natalité est un fait social, non une addition de décisions privées." },
+    { "terme": "traiter les faits sociaux comme des choses", "sens": "Règle fondamentale de la méthode : aborder les faits sociaux du dehors, comme si l'on ignorait ce qu'ils sont ; une « attitude mentale » plus qu'une thèse sur leur nature.", "usage": "Traiter la mode comme une chose, c'est l'observer sans se fier à ce qu'en disent ses adeptes." },
+    { "terme": "prénotions", "sens": "Représentations ordinaires formées hors de la science, qu'il faut écarter systématiquement.", "usage": "L'idée que l'achat est un caprice est une prénotion." },
+    { "terme": "contrainte sociale", "sens": "Pression que les manières collectives d'agir et de penser exercent sur l'individu, perceptible surtout quand on y résiste.", "usage": "La contrainte sociale se fait sentir dès que l'on s'écarte de l'usage." },
+    { "terme": "extériorité", "sens": "Caractère des faits sociaux qui préexistent aux individus et leur survivent.", "usage": "La langue illustre l'extériorité des faits sociaux." },
+    { "terme": "institution", "sens": "Toutes les croyances et tous les modes de conduite institués par la collectivité ; la sociologie est « la science des institutions, de leur genèse et de leur fonctionnement ».", "usage": "Le marché de Noël est une institution au sens durkheimien." },
+    { "terme": "conscience collective", "sens": "Ensemble des croyances et des sentiments communs à la moyenne des membres d'une société, formant un système qui a sa vie propre.", "usage": "L'indignation générale traduit une conscience collective heurtée." },
+    { "terme": "représentations collectives", "sens": "Manières dont le groupe se pense lui-même et pense le monde : catégories, symboles, mythes.", "usage": "L'image du zoo protecteur est une représentation collective." },
+    { "terme": "solidarité mécanique", "sens": "Cohésion par similitude, propre aux sociétés peu différenciées où la conscience collective recouvre largement les consciences individuelles.", "usage": "Le village traditionnel repose sur une solidarité mécanique." },
+    { "terme": "solidarité organique", "sens": "Cohésion par complémentarité des fonctions, produite par la division du travail social.", "usage": "La chaîne logistique mondiale illustre une solidarité organique." },
+    { "terme": "division du travail social", "sens": "Spécialisation croissante des fonctions, source d'interdépendance et d'une forme nouvelle de solidarité.", "usage": "La division du travail social relie le fabricant irlandais au vendeur australien." },
+    { "terme": "droit répressif", "sens": "Droit qui punit (droit pénal), indice d'une solidarité mécanique.", "usage": "La prédominance du droit répressif signale une forte conscience commune." },
+    { "terme": "droit restitutif", "sens": "Droit qui remet les choses en l'état (civil, commercial), indice d'une solidarité organique.", "usage": "Le contrat commercial relève du droit restitutif." },
+    { "terme": "densité morale", "sens": "Intensité des relations et des échanges entre individus, moteur de la division du travail.", "usage": "La croissance urbaine accroît la densité morale." },
+    { "terme": "anomie", "sens": "Dérèglement des normes qui ne parviennent plus à borner les désirs ni à régler les conduites.", "usage": "La frénésie d'achats sans fin est un symptôme d'anomie." },
+    { "terme": "intégration", "sens": "Degré d'attachement des individus à un groupe et de partage de croyances et de pratiques communes.", "usage": "Un groupe faiblement intégré laisse l'individu livré à lui-même." },
+    { "terme": "régulation", "sens": "Degré auquel le groupe encadre et limite les aspirations des individus.", "usage": "La régulation fixe ce qu'il est raisonnable d'espérer." },
+    { "terme": "suicide égoïste", "sens": "Type de suicide lié à un défaut d'intégration du groupe.", "usage": "Le suicide égoïste croît quand les liens familiaux et religieux se relâchent." },
+    { "terme": "suicide altruiste", "sens": "Type de suicide lié à un excès d'intégration, où l'individu s'efface devant le groupe.", "usage": "Le suicide altruiste caractérise des groupes très intégrés." },
+    { "terme": "suicide anomique", "sens": "Type de suicide lié à un défaut de régulation, notamment lors de crises ou de brusques changements.", "usage": "Les crises économiques accroissent le suicide anomique." },
+    { "terme": "suicide fataliste", "sens": "Type de suicide lié à un excès de régulation, à une discipline oppressive.", "usage": "Le suicide fataliste reste une catégorie marginale chez Durkheim." },
+    { "terme": "taux social", "sens": "Fréquence d'un phénomène rapportée à la population, stable dans une société donnée et révélatrice de forces collectives.", "usage": "Le taux social, non le cas, est l'objet du sociologue." },
+    { "terme": "courants sociaux", "sens": "Tendances collectives qui traversent les individus avec une intensité propre à chaque société.", "usage": "Un courant d'enthousiasme collectif traverse la ville." },
+    { "terme": "normal et pathologique", "sens": "Un fait est normal pour un type social quand il se produit dans la moyenne des sociétés de cette espèce, à la phase correspondante de leur évolution.", "usage": "Un certain taux de déviance est normal ; son emballement est pathologique." },
+    { "terme": "normalité du crime", "sens": "Thèse selon laquelle le crime est normal parce qu'une société qui en serait exempte est impossible.", "usage": "La normalité du crime n'en fait pas une chose souhaitable." },
+    { "terme": "fonction", "sens": "Correspondance entre un fait social et les besoins généraux de l'organisme social, à distinguer de sa cause.", "usage": "La fonction d'une fête n'explique pas pourquoi elle est apparue." },
+    { "terme": "explication causale", "sens": "Recherche de la cause déterminante d'un fait social parmi les faits sociaux antécédents.", "usage": "L'explication causale remonte aux transformations du milieu social." },
+    { "terme": "variations concomitantes", "sens": "Méthode comparative qui rapproche les variations de deux phénomènes ; « l'instrument par excellence » de la sociologie.", "usage": "Les variations concomitantes ne valent que sur des séries comparables." },
+    { "terme": "milieu social interne", "sens": "Ensemble des éléments d'une société, dont le volume et la densité expliquent l'évolution collective.", "usage": "Le milieu social interne est le moteur de l'évolution collective." },
+    { "terme": "sacré", "sens": "Ce qui est séparé et protégé par des interdits, objet de respect, souvent symbole du groupe.", "usage": "Le maillot du club est sacré pour ses supporters." },
+    { "terme": "profane", "sens": "Ce qui est ordinaire et doit rester à distance du sacré.", "usage": "Toucher la relique avec des mains profanes est interdit." },
+    { "terme": "rite", "sens": "Règle de conduite prescrivant comment se comporter envers les choses sacrées.", "usage": "Le lâcher de ballons est devenu un rite." },
+    { "terme": "effervescence collective", "sens": "État d'exaltation produit par le rassemblement, qui ravive le sentiment d'appartenance et engendre du sacré.", "usage": "La victoire en finale provoque une effervescence collective." },
+    { "terme": "totémisme", "sens": "Système religieux étudié en Australie, où un emblème (le totem) figure à la fois le divin et le clan.", "usage": "La mascotte fonctionne comme un totem moderne." },
+    { "terme": "communauté morale", "sens": "Groupe que forment ceux qui adhèrent à un même système de croyances et de pratiques relatives au sacré (l'« Église » au sens de Durkheim).", "usage": "Les fans constituent une communauté morale." },
+    { "terme": "individualisme moral", "sens": "Culte de la personne humaine propre aux sociétés modernes, lui-même produit social.", "usage": "Les droits de l'homme relèvent de l'individualisme moral." },
+    { "terme": "socialisation", "sens": "Processus par lequel la société forme les individus ; l'éducation en est la forme méthodique, appliquée à la jeune génération.", "usage": "La socialisation scolaire inculque des règles avant qu'on les discute." },
+    { "terme": "morphologie sociale", "sens": "Étude du substrat matériel des sociétés : volume, densité et répartition de la population.", "usage": "La morphologie sociale éclaire la concentration des commerces." }
+  ],
+  "formules": [
+    "Concernant {sujet}, il faut d'abord écarter les prénotions.",
+    "Il faut traiter {sujet} comme une chose, c'est-à-dire l'étudier du dehors, comme si l'on en ignorait tout.",
+    "Un fait social ne s'explique que par un autre fait social.",
+    "Pour expliquer {element}, il faut chercher du côté des faits sociaux antécédents, non des états de conscience individuels.",
+    "Ce qui paraît relever du choix individuel obéit à des régularités collectives.",
+    "La stabilité des taux d'une année sur l'autre est la marque d'une force collective.",
+    "Entre {a} et {b}, la variation concomitante mérite d'être examinée avant toute interprétation.",
+    "Rapprocher {a} et {b} n'a de sens que si l'on compare des taux, et non des cas isolés.",
+    "Il faut se demander quelle fonction remplit {sujet} pour la cohésion du groupe.",
+    "{evenement} révèle un état d'anomie : les règles ne parviennent plus à borner les désirs.",
+    "Normal ne veut pas dire souhaitable : un fait est normal dès lors qu'il est général dans un type social donné.",
+    "Le crime lui-même est normal, puisqu'une société qui en serait exempte est impossible.",
+    "Derrière l'individu qui consomme, il y a la société qui l'a formé.",
+    "Pour {public}, ces pratiques semblent aller de soi : c'est précisément le signe de leur caractère contraignant.",
+    "Dans {sujet}, quelque chose de sacré se laisse deviner : des choses mises à part et protégées par des interdits.",
+    "Les rassemblements suscités par {element} produisent une effervescence collective qui ravive le sentiment d'appartenance.",
+    "La société est autre chose que la somme de ses membres.",
+    "Le terme « {terme} » permet de nommer ce que les individus éprouvent sans pouvoir le formuler.",
+    "L'enquête statistique conduit à une conclusion qui dépasse les cas individuels : {conclusion}.",
+    "À travers {sujet}, c'est le groupe qui se célèbre lui-même.",
+    "Loin d'être un caprice, {sujet} obéit à des courants collectifs.",
+    "Là où il y a division du travail, il y a interdépendance, donc solidarité organique.",
+    "Quand le cadre moral se dérègle, les aspirations deviennent infinies et l'insatisfaction chronique.",
+    "La contrainte sociale ne se sent jamais mieux que lorsqu'on tente de s'y soustraire.",
+    "Il faut définir l'objet par ses caractères extérieurs avant d'en chercher la cause.",
+    "La cause et la fonction sont deux questions distinctes, qu'il faut traiter séparément.",
+    "Ce n'est pas la psychologie des individus qui explique {sujet}, mais l'état du milieu social.",
+    "Le groupe est-il trop ou pas assez intégré ? Toute l'explication est là.",
+    "Pour {a} comme pour {b}, la question est la même : quel lien rattache les individus au groupe ?",
+    "L'éducation n'est rien d'autre qu'une socialisation méthodique de la jeune génération.",
+    "Les faits moraux sont des faits comme les autres : ils se constatent, se mesurent et se comparent."
+  ],
+  "connecteurs": [
+    "Avant tout,",
+    "Or,",
+    "Par conséquent,",
+    "En conséquence,",
+    "En d'autres termes,",
+    "Inversement,",
+    "De même,",
+    "Toutes choses égales d'ailleurs,",
+    "Comparativement,",
+    "Pour cette raison,",
+    "Ainsi,",
+    "Dès lors,"
+  ],
+  "euphemismes": [
+    { "brut": "c'est un choix personnel", "edl": "c'est un fait social qui exprime un courant collectif mesurable par un taux", "commentaire": "Le Suicide (1897) montre que l'acte le plus intime obéit à des régularités sociales." },
+    { "brut": "c'est la mode", "edl": "c'est un courant social qui s'impose aux individus de l'extérieur", "commentaire": "La mode est une manière de faire collective, extérieure et contraignante." },
+    { "brut": "c'est la tradition", "edl": "ce sont des manières de faire instituées par la collectivité", "commentaire": "Les institutions sont les croyances et conduites instituées par la collectivité (Règles, préface)." },
+    { "brut": "les bonnes mœurs", "edl": "la conscience collective", "commentaire": "Croyances et sentiments communs à la moyenne des membres d'une société." },
+    { "brut": "le mal-être de chacun", "edl": "un défaut d'intégration du groupe", "commentaire": "Le suicide égoïste croît quand les liens collectifs se relâchent." },
+    { "brut": "on n'en a jamais assez", "edl": "un dérèglement anomique des désirs", "commentaire": "Sans régulation, les aspirations deviennent illimitées." },
+    { "brut": "une crise de société", "edl": "un état d'anomie", "commentaire": "Les règles ne parviennent plus à encadrer les conduites." },
+    { "brut": "le sens du sacrifice", "edl": "un excès d'intégration", "commentaire": "L'individu s'efface devant le groupe (suicide altruiste)." },
+    { "brut": "un scandale criminel", "edl": "un fait normal qui réaffirme, par la sanction, les sentiments collectifs", "commentaire": "Le crime est normal, car une société qui en serait exempte est impossible (Règles)." },
+    { "brut": "l'interdépendance économique", "edl": "la solidarité organique née de la division du travail", "commentaire": "De la division du travail social (1893)." },
+    { "brut": "l'esprit de clocher", "edl": "une solidarité mécanique par similitude", "commentaire": "Cohésion fondée sur la ressemblance des membres." },
+    { "brut": "une grande fête", "edl": "un rite qui produit de l'effervescence collective", "commentaire": "Les Formes élémentaires de la vie religieuse (1912)." },
+    { "brut": "un objet culte", "edl": "une chose sacrée, séparée et protégée par des interdits", "commentaire": "Le sacré n'est pas forcément surnaturel : un drapeau peut l'être." },
+    { "brut": "punir le coupable", "edl": "réaffirmer la conscience collective offensée", "commentaire": "Le droit répressif protège les sentiments communs." },
+    { "brut": "l'éducation des enfants", "edl": "la socialisation méthodique de la jeune génération", "commentaire": "Éducation et sociologie : l'éducation comme fait social." },
+    { "brut": "une simple coïncidence de chiffres", "edl": "une corrélation à éprouver par la méthode des variations concomitantes", "commentaire": "Règles, ch. VI : la méthode comparative est l'instrument par excellence." }
+  ],
+  "substitutions": [
+    { "de": "choix", "vers": "fait social" },
+    { "de": "habitude", "vers": "manière de faire instituée" },
+    { "de": "coutume", "vers": "institution" },
+    { "de": "mode", "vers": "courant social" },
+    { "de": "crise", "vers": "anomie" },
+    { "de": "solitude", "vers": "défaut d'intégration" },
+    { "de": "règles", "vers": "normes collectives" },
+    { "de": "opinion", "vers": "représentation collective" },
+    { "de": "morale", "vers": "conscience collective" },
+    { "de": "fête", "vers": "effervescence collective" },
+    { "de": "cérémonie", "vers": "rite" },
+    { "de": "religion", "vers": "système de croyances relatives au sacré" },
+    { "de": "mascotte", "vers": "totem" },
+    { "de": "lien", "vers": "solidarité" },
+    { "de": "spécialisation", "vers": "division du travail social" },
+    { "de": "punition", "vers": "sanction répressive" },
+    { "de": "désordre", "vers": "dérèglement anomique" },
+    { "de": "fréquence", "vers": "taux social" },
+    { "de": "anomalie", "vers": "fait pathologique" },
+    { "de": "corrélation", "vers": "variation concomitante" },
+    { "de": "environnement", "vers": "milieu social interne" },
+    { "de": "éducation", "vers": "socialisation méthodique" },
+    { "de": "envie", "vers": "désir illimité" },
+    { "de": "drapeau", "vers": "emblème sacré" },
+    { "de": "idée reçue", "vers": "prénotion" },
+    { "de": "pression", "vers": "contrainte sociale" },
+    { "de": "cohésion", "vers": "intégration" }
+  ],
+  "cadres": [
+    { "nom": "Fait social", "question": "Quelles manières de faire, extérieures et contraignantes, se cristallisent dans {sujet} ?", "explication": "Tout phénomène collectif s'impose aux individus et existe indépendamment de ses manifestations singulières." },
+    { "nom": "Intégration", "question": "Le groupe concerné par {element} est-il trop ou pas assez intégré ?", "explication": "L'attachement au groupe protège ou expose les individus." },
+    { "nom": "Régulation et anomie", "question": "Peut-on lire dans {evenement} un dérèglement des normes qui bornent les désirs ?", "explication": "Les crises et les changements brusques défont la régulation des aspirations." },
+    { "nom": "Formes de solidarité", "question": "Quel type de solidarité, mécanique ou organique, relie les personnes engagées dans {sujet} ?", "explication": "La cohésion naît de la ressemblance ou de la complémentarité." },
+    { "nom": "Normal et pathologique", "question": "Faut-il tenir {element} pour un fait normal ou pathologique dans ce type de société ?", "explication": "Est normal ce qui est général pour un type social à une phase donnée." },
+    { "nom": "Sacré et profane", "question": "Qu'est-ce qui, dans {sujet}, est mis à part, protégé par des interdits, et rassemble une communauté morale ?", "explication": "Le sacré est la forme sous laquelle le groupe se représente sa propre force." },
+    { "nom": "Cause et fonction", "question": "Quelle fonction sociale remplit {sujet}, indépendamment des intentions de ceux qui y participent ?", "explication": "La fonction se distingue de la cause et des fins conscientes des acteurs." }
+  ],
+  "structures": [
+    {
+      "nom": "Méthode des Règles",
+      "description": "Démarche des Règles de la méthode sociologique (1895) : définir, écarter les prénotions, observer des régularités, comparer, expliquer par un fait social antécédent.",
+      "etapes": [
+        {
+          "titre": "Définition préalable",
+          "role": "contexte",
+          "consigne": "Définir l'objet par des caractères extérieurs observables et écarter explicitement les prénotions.",
+          "gabarits": [
+            "Concernant {sujet}, les idées reçues abondent : il faut les écarter systématiquement.",
+            "Définissons d'abord {sujet} par ses caractères extérieurs, observables par tous."
+          ]
+        },
+        {
+          "titre": "Observation des régularités",
+          "role": "faits",
+          "consigne": "Présenter les données sous forme de taux ou de séries et souligner leur stabilité.",
+          "gabarits": [
+            "Les données révèlent une régularité frappante : {chiffre}, d'une période à l'autre.",
+            "{element} se répète avec une constance que le hasard des choix individuels ne saurait expliquer."
+          ]
+        },
+        {
+          "titre": "Variations concomitantes",
+          "role": "analyse",
+          "consigne": "Comparer les séries entre groupes ou milieux et vérifier si elles varient ensemble, en contrôlant les causes communes.",
+          "gabarits": [
+            "Entre {a} et {b}, il faut vérifier si les variations sont concomitantes, et dans quels milieux.",
+            "Lorsque {element} augmente, l'intégration du groupe diminue-t-elle ? Voilà ce qu'il faut établir."
+          ]
+        },
+        {
+          "titre": "Réfutation des explications individuelles",
+          "role": "tension",
+          "consigne": "Écarter une à une les explications psychologiques, biologiques ou climatiques.",
+          "gabarits": [
+            "On invoquera la psychologie, le climat ou l'imitation ; aucune de ces causes ne résiste à la comparaison.",
+            "Ramener {sujet} à des motifs individuels, c'est en manquer la dimension proprement sociale."
+          ]
+        },
+        {
+          "titre": "Explication sociologique",
+          "role": "conclusion",
+          "consigne": "Conclure sur une cause sociale antécédente et, séparément, sur la fonction du fait.",
+          "gabarits": [
+            "La cause doit être cherchée parmi les faits sociaux antécédents : {conclusion}.",
+            "Reste à distinguer, dans le cas présent, la cause efficiente et la fonction sociale."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Le modèle du Suicide",
+      "description": "Démarche du Suicide (1897) : partir de l'acte le plus individuel pour montrer, par les statistiques, l'existence de causes sociales (intégration, régulation).",
+      "etapes": [
+        {
+          "titre": "L'acte le plus individuel",
+          "role": "contexte",
+          "consigne": "Partir d'un phénomène qui semble purement privé pour annoncer qu'on va en montrer la dimension collective.",
+          "gabarits": [
+            "Rien ne paraît plus individuel que {sujet} ; c'est précisément pourquoi il faut en faire un objet sociologique.",
+            "Avant d'expliquer {evenement}, rappelons qu'un acte singulier peut cacher un taux collectif."
+          ]
+        },
+        {
+          "titre": "Les séries statistiques",
+          "role": "faits",
+          "consigne": "Exposer les taux par pays, groupes ou périodes et leur stabilité.",
+          "gabarits": [
+            "Les statistiques donnent {chiffre}, chiffre remarquablement stable d'une année sur l'autre.",
+            "Chaque société présente, pour {element}, un taux qui lui est propre."
+          ]
+        },
+        {
+          "titre": "Élimination des facteurs extra-sociaux",
+          "role": "tension",
+          "consigne": "Montrer que les causes naturelles ou psychologiques n'expliquent pas les écarts entre groupes.",
+          "gabarits": [
+            "Ni la folie, ni l'hérédité, ni le climat ne rendent compte de ces écarts.",
+            "Expliquer la différence entre {a} et {b} par des facteurs naturels conduit à une impasse."
+          ]
+        },
+        {
+          "titre": "Intégration et régulation",
+          "role": "analyse",
+          "consigne": "Ranger les écarts selon le degré d'intégration et de régulation des groupes.",
+          "gabarits": [
+            "Les écarts suivent le degré d'intégration et de régulation des groupes.",
+            "Trop ou trop peu d'intégration, trop ou trop peu de régulation : {element} se range dans l'une de ces configurations."
+          ]
+        },
+        {
+          "titre": "Le courant collectif",
+          "role": "conclusion",
+          "consigne": "Conclure sur l'existence d'une force collective extérieure aux individus.",
+          "gabarits": [
+            "Il existe donc un courant collectif, extérieur aux individus, qui explique la régularité observée : {conclusion}.",
+            "Le taux observé exprime un état de la société, non une somme de drames privés."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Lecture religieuse du social",
+      "description": "Démarche des Formes élémentaires de la vie religieuse (1912) : repérer le sacré, les rites et l'effervescence, pour montrer que le groupe se célèbre lui-même.",
+      "etapes": [
+        {
+          "titre": "Repérer le sacré",
+          "role": "faits",
+          "consigne": "Identifier les choses mises à part, protégées par des interdits, dans le sujet traité.",
+          "gabarits": [
+            "Dans {sujet}, certaines choses sont mises à part, protégées, intouchables : voilà le sacré.",
+            "{element} fait l'objet d'interdits et de précautions qui l'isolent du profane."
+          ]
+        },
+        {
+          "titre": "Les rites",
+          "role": "analyse",
+          "consigne": "Décrire les conduites réglées envers ces choses : gestes répétés, calendriers, célébrations.",
+          "gabarits": [
+            "Les rites règlent la conduite envers ces choses sacrées : gestes répétés, calendriers, célébrations.",
+            "Entre {a} et {b}, le point commun pourrait être rituel : on s'y rassemble, on y célèbre, on y communie."
+          ]
+        },
+        {
+          "titre": "L'effervescence",
+          "role": "analyse",
+          "consigne": "Montrer comment le rassemblement produit une exaltation qui renforce l'appartenance.",
+          "gabarits": [
+            "{evenement} provoque une effervescence collective où chacun se sent emporté par plus grand que lui.",
+            "Dans ces moments, le groupe prend conscience de lui-même."
+          ]
+        },
+        {
+          "titre": "La société se célèbre",
+          "role": "conclusion",
+          "consigne": "Conclure que le sacré exprime la force du groupe et sa cohésion.",
+          "gabarits": [
+            "En célébrant {sujet}, le groupe se célèbre lui-même.",
+            "Le sacré apparaît ainsi comme la forme sous laquelle la société se représente sa propre force : {conclusion}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Recours méthodique à la statistique, conçue comme le moyen d'atteindre des faits sociaux indépendants des cas individuels : on raisonne sur des taux comparés entre groupes et sur des variations concomitantes, dans le prolongement du Suicide (1897).",
+    "unites": [
+      "taux pour un million d'habitants",
+      "taux pour 100 000 habitants",
+      "coefficient de préservation",
+      "série chronologique annuelle",
+      "écart entre groupes (confession, état matrimonial, âge)",
+      "carte par département ou par pays"
+    ],
+    "formulations": [
+      "Le taux observé, {chiffre}, est d'une remarquable stabilité : c'est le signe d'une cause sociale.",
+      "Pour {a}, le taux atteint {chiffre} : il faut le rapporter à la population exposée avant tout commentaire.",
+      "L'écart entre {a} et {b} varie de façon concomitante avec le degré d'intégration des groupes.",
+      "Le chiffre brut ({chiffre}) ne dit rien tant qu'on ne le convertit pas en taux comparable.",
+      "La régularité des séries compte davantage que la valeur isolée de {chiffre}.",
+      "Le coefficient de préservation mesure ce que l'appartenance à un groupe retranche du risque : ici, {chiffre}.",
+      "Une corrélation entre {a} et {b} ne vaut que si elle se retrouve dans plusieurs milieux sociaux comparables."
+    ]
+  },
+  "metaphores": [
+    "le corps social et ses organes",
+    "la santé et la maladie de la société (normal et pathologique)",
+    "les courants sociaux qui traversent les individus",
+    "la vie sociale plus ou moins cristallisée",
+    "le ciment et les liens de la solidarité",
+    "l'effervescence, bouillonnement d'où naît le sacré",
+    "le totem et le drapeau",
+    "le mal de l'infini des désirs sans bornes",
+    "la société comme réalité sui generis",
+    "la contrainte comme une force qui ne se sent qu'en y résistant"
+  ],
+  "pieges": [
+    "Holisme excessif : l'individu disparaît derrière les « courants » collectifs, au risque de réifier la société.",
+    "Fonctionnalisme : expliquer un fait par son utilité pour la cohésion, alors que Durkheim exige de distinguer cause et fonction.",
+    "Organicisme : les analogies biologiques (corps social, santé, pathologie) naturalisent l'ordre social.",
+    "Normativisme : le couple normal/pathologique glisse vite vers un jugement moral ou conservateur.",
+    "Confiance excessive dans les statistiques officielles, qui sont elles-mêmes des constructions sociales (enregistrement, déclaration).",
+    "Erreur écologique : inférer des comportements individuels à partir de taux agrégés par groupes.",
+    "Évolutionnisme et ethnocentrisme : les sociétés dites « primitives » servent de forme élémentaire, sur la foi de données de seconde main.",
+    "Sous-estimation des conflits et des rapports de domination au profit de la cohésion.",
+    "Contresens sur « traiter les faits sociaux comme des choses » : il s'agit d'une attitude mentale de méthode, non d'une thèse chosiste."
+  ],
+  "registres": {
+    "institutionnel": "Dans le discours public, la grille se traduit en « cohésion sociale », « lien social » et « vivre-ensemble » à restaurer.",
+    "technique": "Entre pairs : taux standardisés, variations concomitantes, typologie intégration/régulation, distinction entre cause et fonction.",
+    "vulgarisation": "Pour le grand public : « même nos gestes les plus intimes ont des causes sociales ».",
+    "critique": "Ses détracteurs raillent une société transformée en grand organisme moralisateur, où l'individu n'est plus qu'un point dans une statistique."
+  },
+  "visuel": {
+    "palette": ["#455A64", "#CFD8DC", "#1C1C1C", "#B23A3A", "#F5F1E8"],
+    "motifs": [
+      { "fr": "courbe de taux presque plate sur cinquante ans", "en": "nearly flat rate curve spanning fifty years" },
+      { "fr": "carte choroplèthe de l'Europe du XIXe siècle", "en": "19th-century choropleth map of Europe" },
+      { "fr": "grille deux par deux croisant intégration et régulation", "en": "two-by-two grid crossing integration and regulation" },
+      { "fr": "corps humain dont les organes sont des métiers", "en": "human body whose organs are trades" },
+      { "fr": "foule en cercle autour d'un emblème", "en": "crowd gathered in a circle around an emblem" },
+      { "fr": "fils tendus entre des individus et un centre commun", "en": "threads stretched between individuals and a common hub" },
+      { "fr": "tableaux statistiques à l'encre sur papier jauni", "en": "ink statistical tables on yellowed paper" },
+      { "fr": "ligne de partage entre espace sacré et espace profane", "en": "boundary line between sacred and profane spaces" },
+      { "fr": "engrenage de métiers interdépendants", "en": "interlocking gears of interdependent trades" },
+      { "fr": "silhouette traversée par des flèches de courants collectifs", "en": "silhouette crossed by arrows of collective currents" }
+    ],
+    "pictogrammes": [
+      { "fr": "drapeau", "en": "flag" },
+      { "fr": "totem", "en": "totem pole" },
+      { "fr": "registre", "en": "ledger" },
+      { "fr": "courbe", "en": "line chart" },
+      { "fr": "balance de justice", "en": "scales of justice" },
+      { "fr": "engrenage", "en": "gear" },
+      { "fr": "cercle de personnes", "en": "circle of people" },
+      { "fr": "flamme", "en": "flame" },
+      { "fr": "loupe", "en": "magnifying glass" },
+      { "fr": "carte", "en": "map" }
+    ],
+    "typographie": "Didone de style Troisième République, chiffres elzéviriens pour les tableaux et titres en capitales espacées.",
+    "style_motion": "Esthétique de bulletin statistique de la fin du XIXe siècle : tableaux à l'encre qui s'animent, courbes qui se tracent, cartes qui se colorent par départements, foules stylisées autour d'un emblème ; ton grave, didactique, républicain.",
+    "style_motion_en": "Late-19th-century statistical bulletin aesthetic: ink tables coming alive, rate curves drawing themselves, maps filling in region by region, stylised crowds gathering around an emblem; grave, didactic tone in slate grey and muted red."
+  },
+  "exemples": [
+    { "contexte": "Citation vérifiée : Les Règles de la méthode sociologique (1895), ouverture du chapitre II, texte intégral (édition Hurlus).", "texte": "« La première règle et la plus fondamentale est de considérer les faits sociaux comme des choses. »" },
+    { "contexte": "Citation vérifiée : définition du fait social, fin du chapitre I des Règles (édition Hurlus).", "texte": "« Est fait social toute manière de faire, fixée ou non, susceptible d'exercer sur l'individu une contrainte extérieure »" },
+    { "contexte": "Citation vérifiée : règle relative à l'explication des faits sociaux (Règles, chapitre V, édition Hurlus).", "texte": "« La cause déterminante d'un fait social doit être cherchée parmi les faits sociaux antécédents, et non parmi les états de la conscience individuelle. »" },
+    { "contexte": "Formulation illustrative, non citée : comment la grille lirait la comparaison entre ventes de pantoufles en Irlande et naissances de girafons à Melbourne.", "texte": "« Traitons les deux séries comme des choses : convertissons ventes et naissances en taux, suivons leurs variations d'une année sur l'autre et vérifions si elles varient de façon concomitante dans plusieurs milieux. À défaut, le rapprochement n'est qu'une coïncidence, non un fait social. »" }
+  ],
+  "sources": [
+    { "titre": "Les Règles de la méthode sociologique (1895), texte intégral", "auteur": "Émile Durkheim (édition Hurlus)", "url": "https://hurlus.fr/durkheim1895_regles-methode-sociologique/durkheim1895_regles-methode-sociologique_a5.pdf", "apport": "Citations vérifiées : fait social, règle fondamentale, prénotions, attitude mentale, institution, cause, normal/pathologique, variations concomitantes." },
+    { "titre": "Les Règles de la méthode sociologique — fiche de lecture", "auteur": "Encyclopædia Universalis", "url": "https://www.universalis.fr/encyclopedie/les-regles-de-la-methode-sociologique/", "apport": "Structure de l'ouvrage et portée de la règle « comme des choses »." },
+    { "titre": "Suicide (sociologie)", "auteur": "Encyclopædia Universalis", "url": "https://www.universalis.fr/encyclopedie/suicide-sociologie/", "apport": "Intégration et régulation comme causes sociales du suicide." },
+    { "titre": "Suicide : l'évolution séculaire d'un fait social (Économie et Statistique, n° 168, 1984)", "auteur": "Christian Baudelot et Roger Establet", "url": "https://ideas.repec.org/a/prs/ecstat/estat_0336-1454_1984_num_168_1_4884.html", "apport": "Prolongement des régularités durkheimiennes sur données françaises (protection familiale, écarts par sexe et âge, passage du suicide urbain au suicide rural)." },
+    { "titre": "Cours du Collège de France (2021) citant la définition durkheimienne de la religion", "auteur": "Vinciane Pirenne-Delforge", "url": "https://www.college-de-france.fr/media/vinciane-pirenne-delforge/UPL5180220250171301080_Pirenne_Cours_3_2021_Fevr_18.pdf", "apport": "Définition de la religion par le sacré (Formes élémentaires, 1912) et rôle des rites." },
+    { "titre": "Article des Archives de sciences sociales des religions sur la définition du sacré", "auteur": "Archives de sciences sociales des religions (OpenEdition)", "url": "https://journals.openedition.org/assr/24473", "apport": "Critique : le sacré comme modalité qui n'épuise pas la religion." }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "id": "education",
+  "nom": "Éducation / Pédagogie",
+  "famille": "metier",
+  "categorie": "Enseignement et formation",
+  "icone": "🎓",
+  "couleur": "#00ACC1",
+  "description": "Éléments de langage de l'éducation et de la pédagogie francophones : institution scolaire (ministère, Éduscol, programmes, socle commun, livret scolaire unique), pratiques de classe et didactique (séquences, différenciation, évaluation) et ingénierie de formation des adultes (ADDIE, e-learning, objectifs pédagogiques).",
+  "posture": "Parole d'accompagnement qui se veut bienveillante et positive : on décrit des progrès et des acquis « en cours » plutôt que des échecs, au nom de l'institution (programmes, socle) ou des sciences de l'apprentissage, avec un souci constant d'inclusion.",
+  "valeurs": [
+    "réussite de tous les élèves",
+    "bienveillance et exigence",
+    "inclusion",
+    "égalité des chances",
+    "laïcité",
+    "autonomie de l'apprenant",
+    "évaluation au service des apprentissages",
+    "émancipation par les savoirs"
+  ],
+  "vocabulaire": [
+    { "terme": "compétence", "sens": "Capacité à mobiliser connaissances, capacités et attitudes pour agir dans une situation.", "usage": "Cette tâche mobilise la compétence « raisonner »." },
+    { "terme": "socle commun de connaissances, de compétences et de culture", "sens": "Ce que tout élève doit maîtriser à la fin de la scolarité obligatoire, en cinq domaines.", "usage": "La maîtrise du socle est évaluée en fin de cycle." },
+    { "terme": "cycle", "sens": "Période pluriannuelle d'apprentissage (cycle 1 maternelle, cycle 2 CP-CE2, cycle 3 CM1-6e, cycle 4 5e-3e).", "usage": "Les attendus sont fixés en fin de cycle 3." },
+    { "terme": "attendus de fin d'année", "sens": "Ce que l'élève doit savoir et savoir faire à la fin d'un niveau, selon les programmes.", "usage": "Les attendus de fin de CM1 sont publiés sur Éduscol." },
+    { "terme": "repères de progression", "sens": "Jalons indicatifs pour organiser les apprentissages dans l'année ou le cycle.", "usage": "Les repères de progression aident à construire la programmation." },
+    { "terme": "objectif d'apprentissage", "sens": "Ce que l'élève doit avoir appris, formulé avec un verbe d'action observable.", "usage": "Les objectifs d'apprentissage sont affichés au tableau." },
+    { "terme": "séquence pédagogique", "sens": "Ensemble organisé de séances visant un ou plusieurs objectifs.", "usage": "La séquence compte six séances et une évaluation finale." },
+    { "terme": "séance", "sens": "Unité de cours d'une séquence, avec objectif, déroulé et trace écrite.", "usage": "La séance commence par un rappel collectif." },
+    { "terme": "situation-problème", "sens": "Situation d'apprentissage qui place l'élève face à un obstacle à franchir.", "usage": "La séance s'ouvre sur une situation-problème." },
+    { "terme": "tâche complexe", "sens": "Activité mobilisant plusieurs ressources et compétences dans un contexte réaliste.", "usage": "La tâche complexe porte sur l'organisation d'une sortie." },
+    { "terme": "consigne", "sens": "Énoncé qui indique à l'élève ce qu'il doit faire.", "usage": "Relisez la consigne avant de commencer." },
+    { "terme": "prérequis", "sens": "Connaissances nécessaires avant d'aborder un nouvel apprentissage.", "usage": "Les prérequis sont vérifiés en début de séquence." },
+    { "terme": "différenciation pédagogique", "sens": "Adaptation des contenus, supports, rythmes ou modalités aux besoins des élèves.", "usage": "La différenciation passe par des supports à trois niveaux." },
+    { "terme": "remédiation", "sens": "Reprise ciblée d'un apprentissage non acquis, par une autre approche.", "usage": "Une remédiation est prévue pour les élèves concernés." },
+    { "terme": "étayage", "sens": "Aide temporaire apportée par l'adulte pour permettre à l'élève de réussir, puis retirée.", "usage": "L'étayage diminue au fil de la séquence." },
+    { "terme": "évaluation diagnostique", "sens": "Évaluation initiale qui repère les acquis et besoins avant un apprentissage.", "usage": "L'évaluation diagnostique révèle des représentations erronées." },
+    { "terme": "évaluation formative", "sens": "Évaluation pendant l'apprentissage, destinée à réguler et à informer l'élève, sans visée de sanction.", "usage": "Le quiz sert d'évaluation formative." },
+    { "terme": "évaluation sommative", "sens": "Évaluation-bilan à la fin d'une séquence ou d'une période.", "usage": "L'évaluation sommative compte dans la moyenne." },
+    { "terme": "évaluation certificative", "sens": "Évaluation qui délivre un diplôme ou une certification.", "usage": "Le DNB est une évaluation certificative." },
+    { "terme": "critères de réussite", "sens": "Indicateurs explicites permettant de savoir si la tâche est réussie.", "usage": "Les critères de réussite sont co-construits avec la classe." },
+    { "terme": "auto-évaluation", "sens": "Évaluation par l'élève de ses propres acquis.", "usage": "La grille d'auto-évaluation développe la métacognition." },
+    { "terme": "positionnement", "sens": "Situation de l'élève sur une échelle d'objectifs ou de maîtrise, dans le livret scolaire.", "usage": "Le positionnement indique « objectifs partiellement atteints »." },
+    { "terme": "livret scolaire unique", "sens": "Outil numérique de suivi des acquis du CP à la 3e (LSU), avec bilans périodiques et de fin de cycle.", "usage": "Les familles consultent le livret scolaire unique en ligne." },
+    { "terme": "bilan périodique", "sens": "Bilan trimestriel ou semestriel des acquis, avec appréciations et positionnements.", "usage": "Le bilan périodique est remis à la fin du trimestre." },
+    { "terme": "maîtrise fragile", "sens": "Deuxième niveau de l'échelle du socle : acquis qui doivent encore être étayés.", "usage": "La compétence est évaluée en maîtrise fragile." },
+    { "terme": "conseil de classe", "sens": "Instance trimestrielle qui examine les résultats et propose orientation ou accompagnement.", "usage": "Le conseil de classe a adressé ses encouragements." },
+    { "terme": "appréciation", "sens": "Commentaire écrit de l'enseignant sur le travail et les progrès de l'élève.", "usage": "L'appréciation générale souligne des progrès." },
+    { "terme": "élève à besoins éducatifs particuliers", "sens": "Élève dont la situation (handicap, troubles, maladie, allophonie, précocité…) appelle des adaptations (EBEP).", "usage": "Les élèves à besoins éducatifs particuliers bénéficient d'aménagements." },
+    { "terme": "école inclusive", "sens": "Politique visant la scolarisation de tous les élèves, notamment en situation de handicap, en milieu ordinaire.", "usage": "L'école inclusive mobilise AESH et enseignants spécialisés." },
+    { "terme": "PAP", "sens": "Plan d'accompagnement personnalisé, pour des troubles des apprentissages (à côté du PPS, du PPRE et du PAI).", "usage": "Un PAP prévoit un tiers-temps et des supports adaptés." },
+    { "terme": "AESH", "sens": "Accompagnant d'élèves en situation de handicap.", "usage": "L'AESH accompagne l'élève douze heures par semaine." },
+    { "terme": "décrochage scolaire", "sens": "Processus de désengagement pouvant aboutir à une sortie sans diplôme.", "usage": "Un dispositif de prévention du décrochage est mis en place." },
+    { "terme": "pédagogie active", "sens": "Pédagogie qui met l'élève en activité (projets, manipulations, coopération).", "usage": "La pédagogie active favorise l'engagement." },
+    { "terme": "classe inversée", "sens": "Découverte des contenus en autonomie, puis exercices et échanges en classe.", "usage": "La vidéo est vue à la maison dans une logique de classe inversée." },
+    { "terme": "apprenant", "sens": "Personne en situation d'apprentissage ; terme générique de la formation, parfois moqué à l'école.", "usage": "L'apprenant est acteur de sa formation." },
+    { "terme": "transposition didactique", "sens": "Transformation du savoir savant en savoir enseigné (Chevallard).", "usage": "La transposition didactique simplifie sans trahir." },
+    { "terme": "contrat didactique", "sens": "Attentes implicites réciproques entre l'enseignant et les élèves sur le savoir (Brousseau).", "usage": "L'élève répond selon le contrat didactique plutôt que selon le sens." },
+    { "terme": "zone proximale de développement", "sens": "Écart entre ce que l'élève réussit seul et ce qu'il réussit avec aide (Vygotski).", "usage": "La tâche se situe dans la zone proximale de développement." },
+    { "terme": "métacognition", "sens": "Réflexion de l'apprenant sur ses propres processus d'apprentissage.", "usage": "La métacognition aide l'élève à choisir sa stratégie." },
+    { "terme": "taxonomie de Bloom", "sens": "Hiérarchie des niveaux cognitifs : se souvenir, comprendre, appliquer, analyser, évaluer, créer.", "usage": "Les verbes d'action sont choisis selon la taxonomie de Bloom." },
+    { "terme": "alignement pédagogique", "sens": "Cohérence entre objectifs, activités et évaluations.", "usage": "L'alignement pédagogique garantit qu'on évalue ce qu'on a enseigné." },
+    { "terme": "ingénierie pédagogique", "sens": "Démarche méthodique de conception d'un dispositif de formation.", "usage": "L'ingénierie pédagogique précède toute production de contenu." },
+    { "terme": "ADDIE", "sens": "Modèle d'ingénierie en cinq phases : analyse, conception, développement, implémentation, évaluation.", "usage": "Le projet e-learning suit le modèle ADDIE." },
+    { "terme": "scénarisation", "sens": "Organisation du parcours d'apprentissage et rédaction du storyboard d'un module.", "usage": "La scénarisation alterne apports, mises en situation et quiz." },
+    { "terme": "micro-learning", "sens": "Contenus courts et granularisés, consommables en quelques minutes.", "usage": "Le parcours est découpé en capsules de micro-learning." },
+    { "terme": "formation mixte", "sens": "Dispositif combinant présentiel et distanciel (blended learning).", "usage": "La formation mixte associe classe virtuelle et atelier présentiel." },
+    { "terme": "taux de complétion", "sens": "Part des inscrits qui terminent un module en ligne.", "usage": "Le taux de complétion atteint 78 %." },
+    { "terme": "modèle de Kirkpatrick", "sens": "Évaluation d'une formation à quatre niveaux : réaction, apprentissage, comportement, résultats.", "usage": "Le modèle de Kirkpatrick dépasse la seule satisfaction." }
+  ],
+  "formules": [
+    "Il s'agit de placer l'élève au cœur des apprentissages.",
+    "Concernant {sujet}, l'objectif est de rendre les élèves acteurs de leurs apprentissages.",
+    "Les acquis sont en cours de consolidation.",
+    "Les attendus ne sont pas encore maîtrisés, mais les progrès sont réels.",
+    "Des efforts sont à poursuivre.",
+    "Peut mieux faire.",
+    "Bon trimestre : l'investissement est réel et régulier.",
+    "Le travail fourni reste insuffisant au regard des capacités.",
+    "Ensemble satisfaisant, à poursuivre.",
+    "La participation orale gagnerait à être plus régulière.",
+    "À l'issue de la séance, l'apprenant sera capable d'analyser {element}.",
+    "L'objectif de cette séquence est de faire comprendre {element} par la manipulation et l'expérimentation.",
+    "Partons de ce que les élèves savent déjà sur {sujet}.",
+    "Que remarquez-vous concernant {sujet} ?",
+    "Pour {sujet}, une différenciation des supports permettra à chacun de progresser à son rythme.",
+    "L'erreur est une étape normale de l'apprentissage.",
+    "Il convient de mettre en place une remédiation ciblée pour {public}.",
+    "L'évaluation est au service des apprentissages, et non une sanction.",
+    "Pour {sujet}, les critères de réussite sont explicités en amont.",
+    "Ce module permet à chaque apprenant de développer ses compétences sur {sujet}.",
+    "En fin de formation, les participants seront en mesure de présenter {element} en autonomie.",
+    "Chacun avance à son rythme, avec des retours personnalisés.",
+    "Cette activité mobilise plusieurs compétences du socle commun.",
+    "Faire réussir tous les élèves, c'est d'abord leur donner confiance.",
+    "Concernant {sujet}, les évaluations nationales montrent des fragilités persistantes.",
+    "La mise en activité des élèves favorise l'ancrage durable des connaissances.",
+    "Explicitons ensemble ce que nous avons appris : {conclusion}.",
+    "Retenons l'essentiel : {conclusion}.",
+    "Il ne s'agit pas de trier, mais de faire progresser {public}.",
+    "La notion « {terme} » sera réinvestie dans la séquence suivante.",
+    "Pour {public}, l'enjeu est de donner du sens aux apprentissages."
+  ],
+  "connecteurs": [
+    "Dans un premier temps,",
+    "En amont de la séance,",
+    "À l'issue de la séquence,",
+    "En fin de cycle,",
+    "Au regard des attendus,",
+    "Dans une logique de différenciation,",
+    "Pour aller plus loin,",
+    "En prolongement,",
+    "Concrètement, en classe,",
+    "Du point de vue didactique,",
+    "En d'autres termes,",
+    "Au fil de l'année,",
+    "Pour conclure,"
+  ],
+  "euphemismes": [
+    { "brut": "échoue", "edl": "ne réussit pas encore", "commentaire": "Logique d'évaluation positive de l'école maternelle : l'adverbe « encore » promet un progrès." },
+    { "brut": "n'a pas appris", "edl": "objectifs non atteints", "commentaire": "Positionnement réglementaire du livret scolaire unique à l'école élémentaire." },
+    { "brut": "a à moitié compris", "edl": "objectifs partiellement atteints", "commentaire": "Deuxième position de l'échelle du LSU (non atteints, partiellement atteints, atteints, dépassés)." },
+    { "brut": "très faible", "edl": "maîtrise insuffisante", "commentaire": "Premier échelon de l'échelle du socle commun en fin de cycle." },
+    { "brut": "pas acquis", "edl": "en cours d'acquisition", "commentaire": "Formule courante des grilles de compétences." },
+    { "brut": "mauvais élève", "edl": "élève en difficulté", "commentaire": "Déplace le jugement de la personne vers la situation." },
+    { "brut": "paresseux", "edl": "manque d'investissement", "commentaire": "Appréciation de bulletin qui évite l'attaque personnelle." },
+    { "brut": "bavard et perturbateur", "edl": "doit canaliser son énergie", "commentaire": "Formule rituelle des appréciations de comportement." },
+    { "brut": "redoubler", "edl": "être maintenu", "commentaire": "Terme administratif du redoublement." },
+    { "brut": "élève handicapé ou en grande difficulté", "edl": "élève à besoins éducatifs particuliers", "commentaire": "Catégorie inclusive (EBEP) qui regroupe des situations très diverses." },
+    { "brut": "quartier pauvre", "edl": "éducation prioritaire", "commentaire": "Les réseaux REP et REP+ désignent les territoires socialement défavorisés." },
+    { "brut": "punition", "edl": "mesure de responsabilisation", "commentaire": "Sanction disciplinaire réglementaire à visée éducative." },
+    { "brut": "groupes de niveau", "edl": "groupes de besoins", "commentaire": "Débat de 2024 sur l'organisation du collège : le changement de nom a été lu comme un euphémisme." },
+    { "brut": "contrôle", "edl": "évaluation", "commentaire": "Le vocabulaire institutionnel évite la connotation de surveillance." },
+    { "brut": "formation obligatoire", "edl": "parcours de montée en compétences", "commentaire": "Langage de la formation professionnelle et des ressources humaines." },
+    { "brut": "notes en baisse", "edl": "résultats fragiles", "commentaire": "Atténuation fréquente dans les bulletins." }
+  ],
+  "substitutions": [
+    { "de": "élève", "vers": "apprenant" },
+    { "de": "cours", "vers": "séquence" },
+    { "de": "leçon", "vers": "séance" },
+    { "de": "exercice", "vers": "activité" },
+    { "de": "contrôle", "vers": "évaluation sommative" },
+    { "de": "note", "vers": "positionnement" },
+    { "de": "faute", "vers": "erreur" },
+    { "de": "aide", "vers": "étayage" },
+    { "de": "rattrapage", "vers": "remédiation" },
+    { "de": "programme", "vers": "attendus" },
+    { "de": "savoir-faire", "vers": "compétence" },
+    { "de": "professeur", "vers": "enseignant" },
+    { "de": "formateur", "vers": "facilitateur" },
+    { "de": "apprendre", "vers": "s'approprier" },
+    { "de": "but", "vers": "objectif pédagogique" },
+    { "de": "difficulté", "vers": "besoin" },
+    { "de": "niveau", "vers": "degré de maîtrise" },
+    { "de": "travail de groupe", "vers": "travail collaboratif" },
+    { "de": "résultats", "vers": "acquis" },
+    { "de": "formation en ligne", "vers": "parcours e-learning" },
+    { "de": "bulletin", "vers": "bilan périodique" },
+    { "de": "redoubler", "vers": "être maintenu" },
+    { "de": "obstacle", "vers": "point de vigilance" },
+    { "de": "résumé", "vers": "trace écrite" }
+  ],
+  "cadres": [
+    { "nom": "Taxonomie de Bloom", "question": "À quel niveau cognitif se situe l'activité sur {sujet} : se souvenir, comprendre, appliquer, analyser, évaluer ou créer ?", "explication": "Hiérarchiser les objectifs et choisir des verbes d'action observables." },
+    { "nom": "Alignement pédagogique", "question": "Les objectifs, les activités et l'évaluation portant sur {sujet} sont-ils alignés ?", "explication": "On n'évalue que ce qui a été enseigné et entraîné." },
+    { "nom": "Diagnostique, formative, sommative", "question": "Pour {sujet}, que faut-il évaluer avant, pendant et après l'apprentissage ?", "explication": "Les trois fonctions de l'évaluation." },
+    { "nom": "Différenciation", "question": "Comment adapter contenus, supports et rythmes aux besoins de chacun pour {sujet} ?", "explication": "Répondre à l'hétérogénéité sans renoncer aux objectifs communs." },
+    { "nom": "Représentations et obstacles", "question": "Quelles représentations initiales les apprenants ont-ils sur {sujet}, et quels obstacles cela crée-t-il ?", "explication": "Approche didactique : partir des conceptions des élèves." },
+    { "nom": "Objectifs SMART", "question": "L'objectif fixé pour {sujet} est-il spécifique, mesurable, atteignable, réaliste et temporellement défini ?", "explication": "Grille courante en formation professionnelle." },
+    { "nom": "Modèle de Kirkpatrick", "question": "Après {evenement}, qu'en est-il de la satisfaction, des apprentissages, des comportements et des résultats ?", "explication": "Évaluer une formation au-delà de la satisfaction immédiate." },
+    { "nom": "Triangle pédagogique", "question": "Dans {sujet}, quelle relation est privilégiée : enseigner, former ou apprendre ?", "explication": "Modèle de Jean Houssaye liant savoir, enseignant et élève." }
+  ],
+  "structures": [
+    {
+      "nom": "Séquence pédagogique",
+      "description": "Structure d'une fiche de préparation de séquence, de la situation de départ à la remédiation.",
+      "etapes": [
+        {
+          "titre": "Situation de départ et prérequis",
+          "role": "contexte",
+          "consigne": "Partir de ce que les élèves savent déjà et d'une situation concrète qui suscite une question.",
+          "gabarits": [
+            "Pour {sujet}, les élèves disposent déjà de quelques prérequis à réactiver.",
+            "Partons d'une situation concrète : {evenement}."
+          ]
+        },
+        {
+          "titre": "Objectifs d'apprentissage",
+          "role": "decision",
+          "consigne": "Formuler les objectifs avec des verbes d'action observables.",
+          "gabarits": [
+            "À l'issue de la séquence, l'élève sera capable d'expliquer {element}.",
+            "Compétence visée : comprendre et décrire {sujet}."
+          ]
+        },
+        {
+          "titre": "Découverte et recherche",
+          "role": "faits",
+          "consigne": "Mettre les élèves en activité sur des documents, des données ou une manipulation.",
+          "gabarits": [
+            "Observons {element} à l'aide de documents et de données.",
+            "Les élèves relèvent un premier chiffre : {chiffre}."
+          ]
+        },
+        {
+          "titre": "Mise en commun",
+          "role": "analyse",
+          "consigne": "Confronter les propositions, comparer et débattre.",
+          "gabarits": [
+            "Comparons {a} et {b} : quelles ressemblances, quelles différences ?",
+            "Les propositions divergent : {a} ou {b} ? Débattons-en."
+          ]
+        },
+        {
+          "titre": "Institutionnalisation",
+          "role": "conclusion",
+          "consigne": "Formaliser le savoir dans une trace écrite courte.",
+          "gabarits": [
+            "Retenons l'essentiel : {conclusion}.",
+            "Dans le cahier, on note : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Évaluation et remédiation",
+          "role": "projection",
+          "consigne": "Prévoir une évaluation formative puis des remédiations ciblées.",
+          "gabarits": [
+            "Une évaluation formative vérifiera ce qui est compris sur {sujet}.",
+            "Pour {public}, une remédiation ciblée sera proposée."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Appréciation de bilan périodique",
+      "description": "Structure d'une appréciation de bulletin : constat, analyse, point de vigilance, encouragement.",
+      "etapes": [
+        {
+          "titre": "Constat",
+          "role": "faits",
+          "consigne": "Situer l'élève par rapport aux objectifs, avec le vocabulaire du positionnement.",
+          "gabarits": [
+            "Les objectifs d'apprentissage sont partiellement atteints concernant {sujet}.",
+            "Les résultats sont en progrès, avec une moyenne de {chiffre}."
+          ]
+        },
+        {
+          "titre": "Analyse",
+          "role": "analyse",
+          "consigne": "Nommer les points forts puis les fragilités, sans jugement de la personne.",
+          "gabarits": [
+            "Le travail est sérieux, mais la méthode reste à consolider concernant {sujet}.",
+            "Des fragilités persistent concernant {sujet}."
+          ]
+        },
+        {
+          "titre": "Point de vigilance",
+          "role": "tension",
+          "consigne": "Opposer un acquis et un axe de progrès.",
+          "gabarits": [
+            "{a} progresse, mais {b} demande encore des efforts.",
+            "Entre {a} et {b}, l'écart reste à réduire."
+          ]
+        },
+        {
+          "titre": "Perspectives",
+          "role": "projection",
+          "consigne": "Fixer un axe de travail pour la période suivante.",
+          "gabarits": [
+            "Il faut poursuivre les efforts engagés, notamment sur {sujet}.",
+            "Un trimestre encourageant : la dynamique doit se confirmer pour {sujet}."
+          ]
+        },
+        {
+          "titre": "Bilan",
+          "role": "conclusion",
+          "consigne": "Conclure par une formule d'encouragement.",
+          "gabarits": [
+            "Ensemble satisfaisant : continuez ainsi.",
+            "Bilan : {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Ingénierie de formation (ADDIE)",
+      "description": "Démarche de conception d'un dispositif de formation ou d'un module e-learning en cinq phases.",
+      "etapes": [
+        {
+          "titre": "Analyse des besoins",
+          "role": "contexte",
+          "consigne": "Analyser la demande, le public, les enjeux, les ressources et les contraintes.",
+          "gabarits": [
+            "Après {evenement}, il faut analyser ce que {public} doit savoir faire.",
+            "Pour {sujet}, l'écart entre compétences actuelles et compétences attendues est à objectiver."
+          ]
+        },
+        {
+          "titre": "Conception",
+          "role": "decision",
+          "consigne": "Fixer objectifs, scénario et stratégie pédagogique avant toute production.",
+          "gabarits": [
+            "Les objectifs pédagogiques pour {sujet} sont formulés avec des verbes d'action observables.",
+            "Le scénario pédagogique alterne apports, mises en situation et quiz."
+          ]
+        },
+        {
+          "titre": "Développement",
+          "role": "faits",
+          "consigne": "Produire les contenus à partir du storyboard.",
+          "gabarits": [
+            "Le module comprend {chiffre} de contenus interactifs.",
+            "Les contenus sur {sujet} sont granularisés en capsules courtes."
+          ]
+        },
+        {
+          "titre": "Mise en œuvre",
+          "role": "projection",
+          "consigne": "Déployer le dispositif et accompagner le changement.",
+          "gabarits": [
+            "Le parcours est ouvert pour {public} sur la plateforme, en format mixte.",
+            "Les managers relaient le dispositif pour {sujet}."
+          ]
+        },
+        {
+          "titre": "Évaluation",
+          "role": "analyse",
+          "consigne": "Mesurer satisfaction, acquis, transfert en situation de travail et résultats.",
+          "gabarits": [
+            "Le taux de complétion atteint {chiffre} et la satisfaction est élevée.",
+            "Au-delà de la satisfaction, l'impact sur les pratiques concernant {sujet} reste à mesurer."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Rapport ambivalent : la note et la moyenne restent centrales pour les familles et l'institution, mais le discours pédagogique officiel privilégie le positionnement par compétences ; à l'échelle du système, on manie scores standardisés (PISA, évaluations nationales) et taux de réussite.",
+    "unites": [
+      "note sur 20 et moyenne trimestrielle",
+      "positionnement sur quatre niveaux (non atteints, partiellement atteints, atteints, dépassés)",
+      "niveaux de maîtrise du socle (insuffisante, fragile, satisfaisante, très bonne)",
+      "points du diplôme national du brevet",
+      "score PISA comparé à la moyenne de l'OCDE",
+      "taux de réussite aux examens (%)",
+      "taux de complétion d'un module e-learning (%)",
+      "durée de formation en heures ou en minutes"
+    ],
+    "formulations": [
+      "Pour {sujet}, la moyenne de la classe s'établit à {chiffre}.",
+      "{a} obtient {chiffre}, quand {b} recule.",
+      "Concernant {sujet}, une part de {chiffre} des élèves n'atteint pas encore les attendus.",
+      "Le taux de réussite progresse de {chiffre} sur un an.",
+      "Le taux de complétion du parcours atteint {chiffre}.",
+      "Entre {a} et {b}, l'écart de performance reste marqué.",
+      "Au regard des évaluations nationales, {conclusion}."
+    ]
+  },
+  "metaphores": [
+    "le parcours de l'élève ou de l'apprenant",
+    "la construction des savoirs sur des fondations et un socle",
+    "l'étayage comme échafaudage",
+    "la boîte à outils de l'enseignant",
+    "la remédiation comme soin",
+    "le décrochage",
+    "l'ascenseur social en panne",
+    "les paliers et la progression",
+    "l'ancrage des connaissances",
+    "semer pour faire grandir",
+    "le tremplin vers la réussite",
+    "l'élève acteur et non spectateur"
+  ],
+  "pieges": [
+    "Jargon pédagogique (« apprenant », « tâche complexe », « situation d'apprentissage ») raillé comme « pédagogisme » et opaque pour les familles.",
+    "Euphémisation des difficultés (« en cours d'acquisition », « ne réussit pas encore ») qui peut brouiller l'information donnée aux familles.",
+    "Appréciations stéréotypées (« peut mieux faire », « des efforts à poursuivre ») peu informatives.",
+    "Opposition caricaturale entre « pédagogues » et « républicains » qui fige le débat sur l'école.",
+    "Fétichisme de la note et de la moyenne, ou à l'inverse grilles de compétences surchargées et illisibles.",
+    "Neuromythes (styles d'apprentissage visuel ou auditif, cerveau utilisé à 10 %) repris dans certaines formations.",
+    "E-learning évalué au taux de complétion et à la satisfaction plutôt qu'à l'impact réel sur les pratiques.",
+    "Inflation d'acronymes (EBEP, PAP, PPS, PPRE, AESH, LSU, DNB, REP+).",
+    "Lecture abusive des classements PISA, réduits à un rang sans contexte."
+  ],
+  "registres": {
+    "institutionnel": "Langue des programmes et des circulaires : nominalisations, infinitifs d'objectifs (« développer », « consolider »), lexique de la réussite et de l'inclusion.",
+    "technique": "Vocabulaire de la didactique et des sciences de l'éducation (transposition didactique, contrat didactique, étayage, alignement pédagogique) ou de l'ingénierie de formation (ADDIE, granularisation, LMS).",
+    "vulgarisation": "Langage simple et rassurant pour les familles et les élèves : « on apprend en se trompant », « chacun à son rythme », « bravo pour tes progrès ».",
+    "critique": "Raillé comme « pédagogisme » jargonnant et laxiste, ou dénoncé à l'inverse comme langue de bois managériale de la « réussite pour tous »."
+  },
+  "visuel": {
+    "palette": ["#00ACC1", "#FFCA28", "#FF7043", "#3949AB", "#FAFAFA"],
+    "motifs": [
+      { "fr": "tableau noir avec craie animée", "en": "chalkboard with animated chalk writing" },
+      { "fr": "cahier à grands carreaux Seyès", "en": "French Seyès ruled notebook page" },
+      { "fr": "ampoule qui s'allume", "en": "lightbulb switching on" },
+      { "fr": "escalier de progression", "en": "progress staircase" },
+      { "fr": "pyramide de Bloom", "en": "Bloom's taxonomy pyramid" },
+      { "fr": "carte mentale qui se déploie", "en": "mind map unfolding" },
+      { "fr": "personnages diversifiés en classe", "en": "diverse flat characters in a classroom" },
+      { "fr": "écran de module e-learning avec barre de progression", "en": "e-learning screen with progress bar" },
+      { "fr": "engrenages dans un cerveau", "en": "gears inside a brain" },
+      { "fr": "main qui dessine sur tableau blanc", "en": "hand drawing on a whiteboard" },
+      { "fr": "badges et coches de validation", "en": "achievement badges and check marks" },
+      { "fr": "livre ouvert d'où s'échappent des idées", "en": "open book releasing ideas" }
+    ],
+    "pictogrammes": [
+      { "fr": "crayon", "en": "pencil" },
+      { "fr": "livre", "en": "book" },
+      { "fr": "toque de diplômé", "en": "graduation cap" },
+      { "fr": "ampoule", "en": "lightbulb" },
+      { "fr": "cerveau", "en": "brain" },
+      { "fr": "coche de validation", "en": "check mark" },
+      { "fr": "cartable", "en": "school bag" },
+      { "fr": "tableau", "en": "blackboard" },
+      { "fr": "bulle de dialogue", "en": "speech bubble" },
+      { "fr": "étoile", "en": "star" },
+      { "fr": "règle", "en": "ruler" },
+      { "fr": "ordinateur portable", "en": "laptop" }
+    ],
+    "typographie": "Sans-serif arrondie et très lisible (type Nunito, Poppins), écriture cursive scolaire pour les titres, contrastes élevés et attention à l'accessibilité (polices adaptées aux élèves dyslexiques).",
+    "style_motion": "Animation 2D colorée et chaleureuse, souvent en tableau blanc avec main qui dessine : notions construites étape par étape, icônes qui apparaissent avec rebond, personnages bienveillants, capsules courtes conclues par un récapitulatif.",
+    "style_motion_en": "Bright, friendly flat 2D educational animation, often whiteboard style with a drawing hand: concepts built step by step, bouncy pop-in icons, diverse friendly characters in a classroom, chalkboard and notebook textures, short micro-learning chapters ending with a recap card, e-learning explainer style."
+  },
+  "exemples": [
+    { "contexte": "Formulation réglementaire réelle : positionnement du livret scolaire unique à l'école élémentaire (Éduscol).", "texte": "« Objectifs d'apprentissage : non atteints, partiellement atteints, atteints, dépassés. »" },
+    { "contexte": "Formulation réglementaire réelle : échelle de maîtrise du socle commun dans les bilans de fin de cycle.", "texte": "« Maîtrise insuffisante, maîtrise fragile, maîtrise satisfaisante, très bonne maîtrise. »" },
+    { "contexte": "Appréciation typique (illustrative, non citée) de bulletin scolaire.", "texte": "« Trimestre encourageant. Des progrès réels à l'écrit ; la participation orale gagnerait à être plus régulière. Les efforts doivent être poursuivis. »" },
+    { "contexte": "Objectif pédagogique typique (illustratif) d'un module e-learning conçu selon le modèle ADDIE.", "texte": "« À l'issue de ce module de 20 minutes, vous serez capable d'identifier les trois étapes du processus et savoir les appliquer à un cas concret. »" }
+  ],
+  "sources": [
+    { "titre": "École élémentaire : mise en œuvre du livret scolaire dans le 1er degré", "auteur": "Éduscol, ministère de l'Éducation nationale", "url": "https://eduscol.education.gouv.fr/5244/ecole-elementaire-mise-en-oeuvre-du-livret-scolaire-dans-le-1er-degre", "apport": "Positionnement sur quatre niveaux d'objectifs d'apprentissage." },
+    { "titre": "Collège : les bilans", "auteur": "Éduscol", "url": "https://eduscol.education.gouv.fr/5247/college-les-bilans", "apport": "Formes du positionnement au collège (note, échelle à quatre niveaux)." },
+    { "titre": "Le livret scolaire unique du CP à la troisième", "auteur": "Ministère de l'Éducation nationale", "url": "https://www.education.gouv.fr/livret-scolaire", "apport": "Présentation institutionnelle du LSU aux familles." },
+    { "titre": "Bulletin officiel n° 3 du 21 janvier 2016 (livret scolaire)", "auteur": "Ministère de l'Éducation nationale", "url": "https://www.education.gouv.fr/bo/16/Hebdo3/MENE1531424A.htm", "apport": "Échelle de référence à quatre échelons pour la maîtrise du socle commun." },
+    { "titre": "Suivi et évaluation des apprentissages des élèves à l'école maternelle", "auteur": "Éduscol", "url": "https://eduscol.education.gouv.fr/4671/suivi-et-evaluation-des-apprentissages-des-eleves-l-ecole-maternelle", "apport": "Carnet de suivi, synthèse des acquis et évaluation positive." },
+    { "titre": "Pédagogisme : définition", "auteur": "La langue française (dictionnaire)", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/pedagogisme", "apport": "Sens neutre et usage polémique du terme." },
+    { "titre": "Compte rendu d'ouvrage sur le débat pédagogues / républicains", "auteur": "site de Philippe Meirieu", "url": "https://meirieu.com/COMPTE-RENDUS_OUVRAGES/cr_fracko_rochex.pdf", "apport": "Usage péjoratif de « pédagogistes » et caricature du débat sur l'école." },
+    { "titre": "Le modèle ADDIE", "auteur": "Certiforma", "url": "https://certiforma.fr/modele-addie/", "apport": "Phases et vocabulaire de l'ingénierie pédagogique." },
+    { "titre": "Introduction à l'ingénierie pédagogique", "auteur": "Josianne Basque (TÉLUQ)", "url": "https://ted6313v3.teluq.ca/files/2014/04/19_TED6313_Texte_Intro_IP.pdf", "apport": "Cadre académique francophone de l'ingénierie pédagogique." }
+  ]
+}

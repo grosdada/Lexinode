@@ -1,0 +1,419 @@
+{
+  "id": "goffman",
+  "nom": "Goffman — scène & interactions",
+  "famille": "sociologie",
+  "categorie": "Microsociologie interactionniste",
+  "icone": "🎭",
+  "couleur": "#7B1FA2",
+  "description": "Grille de lecture inspirée d'Erving Goffman (1922-1982) : tout sujet est observé comme une suite de situations de face-à-face, de mises en scène et de rituels où chacun soigne sa face et celle des autres. Elle distingue scène et coulisses, repère les cadres qui donnent sens à l'expérience et analyse stigmates et institutions totales.",
+  "posture": "Observateur ethnographe, minutieux et pince-sans-rire, qui décrit ce que les gens font en situation plutôt que ce qu'ils disent faire. Il parle depuis le détail et le terrain, sans prétendre livrer une théorie générale de la société.",
+  "valeurs": [
+    "attention au détail",
+    "description fine des situations",
+    "observation directe",
+    "ironie distanciée",
+    "comparaison d'exemples hétérogènes",
+    "respect de l'ordre de l'interaction"
+  ],
+  "vocabulaire": [
+    { "terme": "présentation de soi", "sens": "Ensemble des pratiques par lesquelles un individu contrôle l'impression qu'il produit sur autrui en situation.", "usage": "La présentation de soi commence bien avant que l'on ouvre la bouche." },
+    { "terme": "représentation", "sens": "Activité déployée devant un public pendant une période donnée pour influencer l'impression produite (performance).", "usage": "La visite guidée est une représentation rodée." },
+    { "terme": "définition de la situation", "sens": "Accord pratique, souvent tacite, des participants sur « ce qui se passe » et sur la place de chacun.", "usage": "Un éclat de rire déplacé menace la définition de la situation." },
+    { "terme": "façade", "sens": "Équipement expressif standardisé (décor, apparence, manière) mobilisé pendant la représentation.", "usage": "L'uniforme fait partie de la façade de l'institution." },
+    { "terme": "décor", "sens": "Partie fixe de la façade : lieu, mobilier et accessoires qui servent de toile de fond.", "usage": "Le comptoir en bois clair est un décor qui promet l'authenticité." },
+    { "terme": "région antérieure", "sens": "Lieu où se déroule la représentation devant le public : la scène.", "usage": "Dans la région antérieure, le personnel sourit." },
+    { "terme": "région postérieure", "sens": "Coulisses où l'on prépare la représentation, où l'on se relâche et où l'on peut contredire l'impression donnée.", "usage": "La salle de pause est la région postérieure du magasin." },
+    { "terme": "équipe", "sens": "Ensemble de personnes qui coopèrent pour soutenir une même définition de la situation et partagent des secrets.", "usage": "Les serveurs forment une équipe solidaire face aux clients." },
+    { "terme": "public", "sens": "Ceux devant qui la représentation est donnée et qui contribuent, par leur tact, à son maintien.", "usage": "Le public fait souvent semblant de ne pas voir les ratés." },
+    { "terme": "rôle", "sens": "Modèle d'action préétabli joué au cours d'une représentation et rejouable devant d'autres publics.", "usage": "Le rôle de vendeur s'apprend sur le tas." },
+    { "terme": "distance au rôle", "sens": "Manière de signaler que l'on n'est pas entièrement identifié au rôle que l'on joue.", "usage": "La plaisanterie du chirurgien est une distance au rôle." },
+    { "terme": "idéalisation", "sens": "Tendance à offrir une version conforme aux valeurs officielles en masquant ce qui s'en écarte.", "usage": "La brochure pratique une idéalisation du métier." },
+    { "terme": "maîtrise des impressions", "sens": "Techniques de contrôle de l'information transmise à autrui pour soutenir une représentation (impression management).", "usage": "La maîtrise des impressions passe par ce que l'on tait." },
+    { "terme": "acteur sincère et acteur cynique", "sens": "Distinction entre celui qui croit à sa propre représentation et celui qui la joue sans y croire.", "usage": "Le même vendeur peut être sincère le matin et cynique le soir." },
+    { "terme": "face", "sens": "Valeur sociale positive qu'une personne revendique à travers la ligne d'action que les autres lui attribuent au cours d'un contact.", "usage": "Refuser une invitation sans faire perdre la face à l'hôte est tout un art." },
+    { "terme": "figuration", "sens": "Travail (face-work) par lequel chacun s'emploie à préserver sa face et celle des autres.", "usage": "Le compliment de circonstance relève de la figuration." },
+    { "terme": "ligne d'action", "sens": "Ensemble des actes verbaux et non verbaux par lesquels on exprime son point de vue sur la situation et sur les participants.", "usage": "Changer de ligne d'action en cours de route coûte cher." },
+    { "terme": "perdre la face", "sens": "Ne plus pouvoir soutenir la valeur que l'on revendiquait devant les autres.", "usage": "Le démenti public fait perdre la face au porte-parole." },
+    { "terme": "rites d'interaction", "sens": "Petites cérémonies quotidiennes (salutations, excuses, compliments) qui honorent le caractère sacré de la personne.", "usage": "La poignée de main est un rite d'interaction." },
+    { "terme": "déférence et tenue", "sens": "Composantes rituelles : l'hommage rendu à autrui (déférence) et la manière de se présenter soi-même (tenue).", "usage": "Le vouvoiement marque la déférence ; le costume, la tenue." },
+    { "terme": "échange réparateur", "sens": "Séquence (offense, excuse ou justification, acceptation) qui rétablit l'ordre après un incident.", "usage": "« Pardon » – « Je vous en prie » : l'échange réparateur est bouclé." },
+    { "terme": "ordre de l'interaction", "sens": "Domaine propre des situations de coprésence, régi par des règles relativement autonomes.", "usage": "La file d'attente obéit à l'ordre de l'interaction." },
+    { "terme": "inattention civile", "sens": "Fait de montrer qu'on a vu autrui tout en retirant aussitôt son attention, pour ne pas le traiter en objet de curiosité.", "usage": "Dans le métro, l'inattention civile est la règle." },
+    { "terme": "territoires du moi", "sens": "Espaces et possessions (place, réserve, tour de parole) sur lesquels un individu revendique un droit.", "usage": "Le sac posé sur le siège voisin délimite un territoire du moi." },
+    { "terme": "cadre", "sens": "Principe d'organisation de l'expérience qui permet de répondre à la question « que se passe-t-il ici ? ».", "usage": "Le même geste change de sens selon le cadre." },
+    { "terme": "cadre primaire", "sens": "Schème d'interprétation qui donne sens à une scène sans renvoyer à une interprétation antérieure.", "usage": "Dans le cadre primaire, une bagarre est une bagarre." },
+    { "terme": "modalisation", "sens": "Transformation d'une activité déjà dotée de sens en autre chose : jeu, répétition, citation, cérémonie.", "usage": "La reconstitution historique est une modalisation de la bataille." },
+    { "terme": "fabrication", "sens": "Organisation délibérée d'une activité pour induire autrui en erreur sur ce qui se passe.", "usage": "La caméra cachée repose sur une fabrication." },
+    { "terme": "rupture de cadre", "sens": "Moment où la définition de la situation s'effondre et où les participants ne savent plus quel cadre appliquer.", "usage": "Le fou rire de l'acteur provoque une rupture de cadre." },
+    { "terme": "stigmate", "sens": "Attribut qui jette un discrédit profond ; plus exactement, relation entre un attribut et un stéréotype.", "usage": "Le casier judiciaire fonctionne comme un stigmate." },
+    { "terme": "discrédité et discréditable", "sens": "Situation de celui dont la différence est connue ou visible, et de celui dont la différence peut encore être cachée.", "usage": "Le discréditable vit dans la crainte d'être découvert." },
+    { "terme": "identité sociale virtuelle", "sens": "Attributs que l'on prête à quelqu'un d'après les apparences ; l'écart avec l'identité sociale réelle fonde le stigmate.", "usage": "L'identité sociale virtuelle se forme dès le premier regard." },
+    { "terme": "contrôle de l'information", "sens": "Gestion de ce que l'on montre et de ce que l'on cache d'un attribut discréditable.", "usage": "Le contrôle de l'information épuise ceux qui ont quelque chose à taire." },
+    { "terme": "initiés", "sens": "Personnes « normales » qui, connaissant de près le stigmate, sont admises dans l'intimité des stigmatisés.", "usage": "Les soignants deviennent des initiés." },
+    { "terme": "institution totale", "sens": "Lieu de résidence et de travail où des individus coupés du monde extérieur mènent une vie recluse, formellement administrée.", "usage": "La caserne, le couvent et l'hôpital psychiatrique sont des institutions totales." },
+    { "terme": "mortification du moi", "sens": "Processus par lequel l'institution totale dépouille le reclus de ses supports identitaires antérieurs.", "usage": "La confiscation des effets personnels ouvre la mortification du moi." },
+    { "terme": "carrière morale", "sens": "Suite des transformations de l'image de soi au fil d'un parcours institutionnel ou stigmatisé.", "usage": "L'admission marque une étape de la carrière morale du patient." },
+    { "terme": "adaptations secondaires", "sens": "Arrangements par lesquels les reclus obtiennent des satisfactions interdites ou détournent les règles sans les contester ouvertement.", "usage": "Le petit trafic de cigarettes est une adaptation secondaire." },
+    { "terme": "ritualisation", "sens": "Mise en forme stylisée de comportements qui rend lisibles des rapports sociaux, par exemple la subordination dans la publicité.", "usage": "La tête inclinée du mannequin relève d'une ritualisation." }
+  ],
+  "formules": [
+    "Concernant {sujet}, la première question est simple : que se passe-t-il ici ?",
+    "{sujet} se donne d'abord à voir comme une représentation, avec sa scène, ses coulisses et son public.",
+    "Ce qui se joue dans {sujet}, c'est la préservation de la face de chacun des participants.",
+    "Il faut distinguer ce qui se montre en façade de ce qui se prépare en coulisses.",
+    "Pour {public}, la représentation doit paraître spontanée ; tout l'art consiste à effacer le travail qu'elle exige.",
+    "Entre {a} et {b}, la ressemblance tient moins aux choses qu'aux mises en scène qui les entourent.",
+    "{element} ressemble fort à un incident de représentation : un détail malencontreux qui menace la définition de la situation.",
+    "Chacun s'emploie alors à réparer l'incident, comme si rien ne s'était passé.",
+    "Le cadre a changé : ce qui était sérieux est désormais joué, cité, mis entre guillemets.",
+    "{evenement} fonctionne comme une rupture de cadre : soudain, la mise en scène devient visible.",
+    "La présentation de soi suppose une équipe, et toute équipe partage des secrets.",
+    "Rien n'est plus codifié que la décontraction.",
+    "Un stigmate désigne moins un attribut qu'une relation entre un attribut et un stéréotype.",
+    "Le terme « {terme} » permet de décrire ce que les acteurs font sans jamais le dire.",
+    "Dans l'ordre de l'interaction, {sujet} obéit à des règles aussi strictes qu'invisibles.",
+    "Pour sauver la face, il arrive que l'on feigne de n'avoir rien vu.",
+    "La distance au rôle est encore une manière de jouer le rôle.",
+    "La scène est minuscule, mais les enjeux de réputation y sont considérables.",
+    "L'observation conduit à une conclusion modeste mais précise : {conclusion}.",
+    "En coulisses, {sujet} se prépare tout autrement que sur scène.",
+    "Il ne s'agit pas des individus et de leur psychologie, mais des situations et de leurs exigences.",
+    "Tout repose sur la coopération tacite du public, qui accepte de jouer le jeu.",
+    "Le décor parle autant que les acteurs : comptoirs, uniformes et éclairages font partie de la façade.",
+    "Ce que l'on prend pour la personnalité n'est souvent qu'une face soigneusement entretenue.",
+    "Une gaffe suffit à faire vaciller toute la représentation.",
+    "Tout se joue dans les détails : un regard trop appuyé, un silence trop long, un geste hors cadre.",
+    "Dans {sujet}, chacun tient son rôle, et le public tient le sien.",
+    "Il faut se demander ce que {sujet} permet de montrer et ce qu'il faut, en retour, dissimuler.",
+    "La politesse n'est pas un supplément d'âme : c'est l'infrastructure de l'interaction.",
+    "Avec {evenement}, ce sont les coulisses qui passent soudain sur le devant de la scène.",
+    "Le monde n'est pas tout à fait une scène, mais il est rarement facile de dire en quoi il n'en est pas une."
+  ],
+  "connecteurs": [
+    "En situation,",
+    "Sur scène,",
+    "En coulisses,",
+    "Du point de vue du public,",
+    "Autrement dit,",
+    "Pour sauver la face,",
+    "Dans ce cadre,",
+    "À l'inverse,",
+    "Plus subtilement,",
+    "Par un léger glissement de cadre,",
+    "Au fond,",
+    "Ce faisant,"
+  ],
+  "euphemismes": [
+    { "brut": "il est naturel", "edl": "il maîtrise sa façade au point d'effacer le travail de mise en scène", "commentaire": "Le naturel est une performance réussie (La Présentation de soi)." },
+    { "brut": "elle est sincère", "edl": "elle croit à sa propre représentation", "commentaire": "Goffman distingue l'acteur sincère de l'acteur cynique, sans les opposer moralement." },
+    { "brut": "la politesse", "edl": "les rites d'interaction et le travail de figuration", "commentaire": "Les civilités protègent le caractère sacré de la personne (Les Rites d'interaction)." },
+    { "brut": "un moment gênant", "edl": "un embarras qui menace la face et la définition de la situation", "commentaire": "La gêne signale une interaction en danger." },
+    { "brut": "faire comme si de rien n'était", "edl": "faire preuve de tact pour sauver la face d'autrui", "commentaire": "Le public coopère au maintien de la représentation." },
+    { "brut": "une tare", "edl": "un stigmate, relation entre un attribut et un stéréotype", "commentaire": "Ce n'est pas l'attribut qui discrédite, c'est le regard des « normaux » (Stigmate)." },
+    { "brut": "cacher quelque chose", "edl": "contrôler l'information sur un attribut discréditable", "commentaire": "Distinction entre discrédité et discréditable." },
+    { "brut": "sa personnalité", "edl": "la face qu'il revendique et les rôles qu'il endosse", "commentaire": "Le soi est relu comme produit de la scène plus que comme sa cause." },
+    { "brut": "l'envers du décor", "edl": "la région postérieure", "commentaire": "Les coulisses permettent ce que la scène interdit." },
+    { "brut": "l'image de marque", "edl": "la façade : décor, apparence et manière", "commentaire": "Équipement expressif standardisé d'une représentation." },
+    { "brut": "une gaffe", "edl": "un impair qui rompt la représentation", "commentaire": "Incident qui oblige l'équipe à réparer." },
+    { "brut": "c'était pour rire", "edl": "c'était une modalisation : l'activité a été transposée dans un cadre ludique", "commentaire": "Les Cadres de l'expérience : le même geste change de sens selon le cadre." },
+    { "brut": "une arnaque", "edl": "une fabrication : un cadre construit pour induire en erreur", "commentaire": "La fabrication suppose des initiés et des dupes." },
+    { "brut": "un établissement d'accueil", "edl": "une institution totale, selon son degré de clôture", "commentaire": "Asiles : coupure du monde extérieur, vie recluse et formellement administrée." },
+    { "brut": "se débrouiller avec le règlement", "edl": "pratiquer des adaptations secondaires", "commentaire": "Les reclus aménagent l'institution sans la contester ouvertement." },
+    { "brut": "s'excuser", "edl": "engager un échange réparateur", "commentaire": "Séquence rituelle qui rétablit l'ordre après une offense." },
+    { "brut": "ignorer les passants", "edl": "pratiquer l'inattention civile", "commentaire": "Regarder puis détourner le regard : une marque de respect en public." }
+  ],
+  "substitutions": [
+    { "de": "comportement", "vers": "conduite en situation" },
+    { "de": "apparence", "vers": "façade personnelle" },
+    { "de": "image", "vers": "face" },
+    { "de": "réputation", "vers": "face" },
+    { "de": "politesse", "vers": "rite d'interaction" },
+    { "de": "coulisses", "vers": "région postérieure" },
+    { "de": "scène", "vers": "région antérieure" },
+    { "de": "collègues", "vers": "équipe" },
+    { "de": "gêne", "vers": "embarras" },
+    { "de": "honte", "vers": "perte de face" },
+    { "de": "excuse", "vers": "échange réparateur" },
+    { "de": "défaut", "vers": "stigmate" },
+    { "de": "secret", "vers": "information discréditable" },
+    { "de": "contexte", "vers": "cadre" },
+    { "de": "malentendu", "vers": "erreur de cadrage" },
+    { "de": "ironie", "vers": "modalisation" },
+    { "de": "tromperie", "vers": "fabrication" },
+    { "de": "rencontre", "vers": "interaction en face-à-face" },
+    { "de": "personnage", "vers": "rôle" },
+    { "de": "attitude", "vers": "tenue" },
+    { "de": "respect", "vers": "déférence" },
+    { "de": "marginal", "vers": "stigmatisé" },
+    { "de": "spectateurs", "vers": "public" },
+    { "de": "routine", "vers": "rituel" },
+    { "de": "décoration", "vers": "décor" },
+    { "de": "uniforme", "vers": "façade standardisée" }
+  ],
+  "cadres": [
+    { "nom": "Dramaturgie", "question": "Quelle représentation se donne dans {sujet}, devant quel public et avec quelle façade ?", "explication": "La vie sociale se lit comme une suite de représentations destinées à produire des impressions." },
+    { "nom": "Scène et coulisses", "question": "Qu'est-ce qui, dans {sujet}, relève de la scène, et qu'est-ce qui reste soigneusement en coulisses ?", "explication": "Toute représentation suppose une région où l'on se prépare et se relâche à l'abri du public." },
+    { "nom": "Face et figuration", "question": "Quelles faces sont menacées par {element}, et quels rituels permettent leur réparation ?", "explication": "Préserver la face est la condition de toute interaction." },
+    { "nom": "Analyse de cadre", "question": "Dans quel cadre faut-il comprendre {evenement} : sérieux, ludique, ironique ou fabriqué ?", "explication": "Le sens d'une scène dépend du cadre qui l'organise et de ses transformations." },
+    { "nom": "Stigmate", "question": "Quel attribut devient un stigmate dans {sujet}, et comment l'information est-elle gérée ?", "explication": "Le discrédit naît d'un écart entre identité attendue et identité réelle." },
+    { "nom": "Institution totale", "question": "Quelles routines, dans {sujet}, encadrent toute la vie des personnes et remodèlent leur identité ?", "explication": "Certaines organisations prennent en charge l'existence entière de leurs membres." },
+    { "nom": "Ordre de l'interaction", "question": "Quelles règles tacites de coprésence rendent {element} possible ou embarrassant ?", "explication": "Les situations de face-à-face ont leur ordre propre, fait de micro-règles." }
+  ],
+  "structures": [
+    {
+      "nom": "Analyse dramaturgique",
+      "description": "Modèle de La Mise en scène de la vie quotidienne : décrire la représentation, séparer scène et coulisses, repérer l'incident et sa réparation.",
+      "etapes": [
+        {
+          "titre": "Planter le décor",
+          "role": "contexte",
+          "consigne": "Décrire le lieu, les accessoires, les acteurs et le public avant toute interprétation.",
+          "gabarits": [
+            "Concernant {sujet}, commençons par le décor : un lieu, des accessoires, une scène et un public.",
+            "Toute représentation suppose un décor ; dans {sujet}, il dit déjà beaucoup de ce qui va se jouer."
+          ]
+        },
+        {
+          "titre": "Décrire la représentation",
+          "role": "faits",
+          "consigne": "Exposer ce qui est montré au public, y compris les chiffres et documents brandis comme accessoires.",
+          "gabarits": [
+            "Sur scène, {element} est présenté selon un script précis, que les acteurs connaissent sans l'avoir appris.",
+            "Les chiffres eux-mêmes ({chiffre}) font partie de la représentation : ils sont exhibés comme des accessoires de sérieux."
+          ]
+        },
+        {
+          "titre": "Scène et coulisses",
+          "role": "analyse",
+          "consigne": "Opposer ce qui se montre à ce qui se prépare ; comparer les termes selon leur place dans la mise en scène.",
+          "gabarits": [
+            "En coulisses, le ton change : ce qui était célébré sur scène devient affaire de logistique et de plaisanteries d'équipe.",
+            "Entre {a} et {b}, la frontière décisive passe entre ce qui se montre et ce qui se prépare."
+          ]
+        },
+        {
+          "titre": "L'incident",
+          "role": "tension",
+          "consigne": "Repérer le moment où la représentation vacille : gaffe, fuite, rupture de cadre, menace sur la face.",
+          "gabarits": [
+            "{evenement} vient perturber la représentation et menace la face de toute l'équipe.",
+            "Un détail suffit à faire vaciller la définition de la situation, et {element} en offre un exemple."
+          ]
+        },
+        {
+          "titre": "La réparation",
+          "role": "analyse",
+          "consigne": "Montrer les rituels par lesquels acteurs et public rétablissent l'ordre.",
+          "gabarits": [
+            "Chacun s'emploie alors à réparer : excuses, plaisanteries, inattention polie.",
+            "Le public lui-même coopère et fait comme s'il n'avait rien vu."
+          ]
+        },
+        {
+          "titre": "Retour à l'ordre de l'interaction",
+          "role": "conclusion",
+          "consigne": "Conclure sur la fragilité et la robustesse de l'ordre de l'interaction.",
+          "gabarits": [
+            "L'ordre de l'interaction se rétablit, et l'on peut conclure : {conclusion}.",
+            "Au fond, {sujet} montre que la vie sociale tient à la coopération fragile de ceux qui jouent ensemble."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Analyse de cadre",
+      "description": "Modèle des Cadres de l'expérience (1974) : partir de la question « que se passe-t-il ici ? », identifier le cadre primaire, ses modalisations et ses ruptures.",
+      "etapes": [
+        {
+          "titre": "Que se passe-t-il ici ?",
+          "role": "contexte",
+          "consigne": "Poser la question de départ et suspendre l'interprétation évidente.",
+          "gabarits": [
+            "Face à {sujet}, la question de départ est : que se passe-t-il ici ?",
+            "Avant toute interprétation, il faut savoir dans quel cadre les participants comprennent {evenement}."
+          ]
+        },
+        {
+          "titre": "Le cadre primaire",
+          "role": "faits",
+          "consigne": "Décrire l'interprétation ordinaire, immédiate, de la scène.",
+          "gabarits": [
+            "Dans le cadre primaire, {element} se comprend sans détour : un fait, une transaction, une naissance.",
+            "Les participants appliquent spontanément un schème d'interprétation familier."
+          ]
+        },
+        {
+          "titre": "Modalisations et fabrications",
+          "role": "analyse",
+          "consigne": "Montrer comment la même activité est rejouée, commentée, mise en spectacle ou truquée.",
+          "gabarits": [
+            "Mais la même activité peut être modalisée : rejouée, commentée, mise en spectacle.",
+            "Rapprocher {a} et {b} relève déjà d'une modalisation : deux faits ordinaires basculent dans le cadre de l'insolite."
+          ]
+        },
+        {
+          "titre": "Rupture de cadre",
+          "role": "tension",
+          "consigne": "Identifier le moment où les conventions deviennent visibles faute de cadre partagé.",
+          "gabarits": [
+            "Quand le cadre se brise, personne ne sait plus quel ton adopter.",
+            "{evenement} provoque une rupture de cadre qui rend visibles des conventions jusque-là tacites."
+          ]
+        },
+        {
+          "titre": "Conclusion cadrée",
+          "role": "conclusion",
+          "consigne": "Conclure en nommant le cadre pertinent et ce qu'il fait voir.",
+          "gabarits": [
+            "Le cadre une fois identifié, la conclusion s'éclaire : {conclusion}.",
+            "Comprendre {sujet}, c'est d'abord identifier le cadre qui donne sens à la scène."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Stigmate et carrière morale",
+      "description": "Modèle de Stigmate (1963) et d'Asiles (1961) : de l'attribut au regard des « normaux », puis à la gestion de l'information et à la transformation de soi.",
+      "etapes": [
+        {
+          "titre": "L'attribut",
+          "role": "faits",
+          "consigne": "Décrire l'attribut ou la situation qui devient source de discrédit.",
+          "gabarits": [
+            "Dans {sujet}, un attribut banal devient soudain une marque de discrédit.",
+            "Ce n'est pas l'attribut qui stigmatise, c'est le regard que portent sur lui les « normaux »."
+          ]
+        },
+        {
+          "titre": "L'écart d'identité",
+          "role": "analyse",
+          "consigne": "Analyser l'écart entre identité attendue et identité réelle et ses effets sur les interactions.",
+          "gabarits": [
+            "Entre l'identité attendue et l'identité réelle, l'écart produit le stigmate.",
+            "Pour {public}, cet écart appelle méfiance, pitié ou curiosité."
+          ]
+        },
+        {
+          "titre": "Gestion de l'information",
+          "role": "hypothese",
+          "consigne": "Formuler une hypothèse sur les stratégies de dissimulation, de couverture ou de revendication.",
+          "gabarits": [
+            "Tant que la différence reste invisible, la personne est seulement discréditable : tout l'enjeu est de contrôler l'information.",
+            "On peut faire l'hypothèse que {element} relève d'une stratégie de dissimulation ou, au contraire, de revendication."
+          ]
+        },
+        {
+          "titre": "Carrière morale",
+          "role": "projection",
+          "consigne": "Décrire l'évolution de l'image de soi au fil des épreuves et des institutions traversées.",
+          "gabarits": [
+            "Au fil du temps se dessine une carrière morale : l'image de soi se transforme au contact de l'institution.",
+            "{evenement} marque une étape de cette carrière morale."
+          ]
+        },
+        {
+          "titre": "Le stigmate comme rapport social",
+          "role": "conclusion",
+          "consigne": "Conclure que le stigmate est une relation et révèle les normes d'identité partagées.",
+          "gabarits": [
+            "Le stigmate apparaît ainsi comme un rapport social, non comme une propriété : {conclusion}.",
+            "Au terme de l'analyse, {sujet} révèle les normes d'identité que chacun s'efforce de respecter."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Grille ethnographique et descriptive : Goffman travaille par observation directe et par catalogues d'exemples ; les chiffres y comptent peu, sinon comme accessoires de la représentation que les acteurs se donnent.",
+    "unites": [
+      "nombre de situations observées",
+      "durée des échanges",
+      "fréquence d'un rituel (salutations, excuses)",
+      "nombre d'images d'un corpus publicitaire",
+      "part du temps passé sur scène et en coulisses"
+    ],
+    "formulations": [
+      "Le chiffre de {chiffre} ne dit rien en lui-même : dès qu'on l'affiche, il devient un accessoire de la représentation.",
+      "Afficher {chiffre}, c'est déjà soigner une façade de sérieux pour {public}.",
+      "Avec {chiffre}, {a} et {b} se présentent sous leur meilleur jour ; reste à savoir ce que cachent les coulisses.",
+      "Derrière {chiffre}, il y a des scènes concrètes : des guichets, des comptoirs, des enclos, des regards échangés.",
+      "Plutôt que d'aligner des pourcentages, l'analyse s'attache aux situations où {element} se joue.",
+      "Un seul incident bien décrit en apprend parfois davantage que {chiffre}."
+    ]
+  },
+  "metaphores": [
+    "le théâtre : scène, coulisses, décor, rôles et public",
+    "le masque",
+    "la face que l'on perd ou que l'on sauve",
+    "le cadre qui délimite ce qui compte dans l'image",
+    "le moi comme objet sacré entouré de rites",
+    "la partie stratégique entre joueurs qui s'observent",
+    "la carrière morale",
+    "l'équipe qui partage des secrets",
+    "la cérémonie",
+    "l'escroc qui doit « calmer » sa victime",
+    "les murs de l'institution totale"
+  ],
+  "pieges": [
+    "Cynisme supposé : réduire les acteurs à des manipulateurs d'impressions, alors que Goffman distingue acteur sincère et acteur cynique.",
+    "Microsociologie qui néglige les structures : Goffman décrit davantage la différenciation que la domination, même si le pouvoir n'est pas absent de son œuvre.",
+    "Théâtralisation abusive : prendre la métaphore pour la réalité, comme si tout n'était que jeu.",
+    "Méthode impressionniste : exemples tirés de manuels de savoir-vivre, de romans ou d'anecdotes, sans échantillonnage systématique.",
+    "Ancrage culturel : une classe moyenne anglo-américaine des années 1950-1970 érigée en modèle universel.",
+    "Usage galvaudé du mot « stigmate », réduit à un synonyme de discrimination.",
+    "Extension excessive de l'institution totale à toute organisation contraignante, alors que le concept reste polysémique.",
+    "Difficulté à penser le changement social et l'histoire longue."
+  ],
+  "registres": {
+    "institutionnel": "Dans la communication des organisations, la grille devient « gestion de l'image », « expérience client » et « posture professionnelle ».",
+    "technique": "Entre pairs : définition de la situation, travail de figuration, modalisations et ruptures de cadre, carrière morale du stigmatisé.",
+    "vulgarisation": "Pour le grand public : « nous jouons tous un rôle » et « chacun cherche à ne pas perdre la face ».",
+    "critique": "Ses détracteurs y voient une sociologie brillante mais anecdotique, qui fait de la société un vaste théâtre sans metteur en scène ni rapports de pouvoir."
+  },
+  "visuel": {
+    "palette": ["#7B1FA2", "#E1BEE7", "#212121", "#FFB300", "#F5F5F5"],
+    "motifs": [
+      { "fr": "scène de théâtre en coupe avec un rideau séparant scène et coulisses", "en": "theater cross-section with a curtain separating stage and backstage" },
+      { "fr": "masques posés sur une table de loge", "en": "masks laid on a dressing-room table" },
+      { "fr": "cadres photo emboîtés figurant les modalisations", "en": "nested picture frames representing reframings" },
+      { "fr": "visage dont la face se fissure puis se recolle", "en": "face cracking and then mending itself" },
+      { "fr": "porte battante marquée « réservé au personnel »", "en": "swinging door marked staff only" },
+      { "fr": "projecteur qui suit un personnage", "en": "spotlight following a character" },
+      { "fr": "murs d'institution avec horloge et emploi du temps", "en": "institutional walls with a clock and a timetable" },
+      { "fr": "regards croisés en pointillés entre des passants", "en": "dotted gaze lines between passersby" },
+      { "fr": "vitrine éclairée et arrière-boutique sombre", "en": "lit shopfront next to a dim back room" },
+      { "fr": "publicité décomposée en postures ritualisées", "en": "advertisement broken down into ritualised poses" }
+    ],
+    "pictogrammes": [
+      { "fr": "masque de théâtre", "en": "theater mask" },
+      { "fr": "rideau", "en": "stage curtain" },
+      { "fr": "projecteur", "en": "spotlight" },
+      { "fr": "miroir de loge", "en": "dressing-room mirror" },
+      { "fr": "porte battante", "en": "swinging door" },
+      { "fr": "badge d'uniforme", "en": "uniform badge" },
+      { "fr": "bulle de dialogue", "en": "speech bubble" },
+      { "fr": "cadre photo", "en": "picture frame" },
+      { "fr": "poignée de main", "en": "handshake" },
+      { "fr": "trousseau de clés", "en": "key ring" }
+    ],
+    "typographie": "Linéale élégante pour le texte courant et lettrage d'affiche de théâtre (didone contrastée) pour les titres de « scènes ».",
+    "style_motion": "Mise en scène en coupe façon maquette de théâtre : rideau qui s'ouvre, projecteurs, travellings latéraux de la scène aux coulisses, personnages en papier découpé qui changent de masque ; ton observateur et pince-sans-rire.",
+    "style_motion_en": "Cutaway theater-maquette staging: curtain opening, spotlights, lateral tracking shots from stage to backstage, paper-cut characters swapping masks; observant, deadpan tone with violet and amber lighting."
+  },
+  "exemples": [
+    { "contexte": "Fragment de la définition de la face (Les Rites d'interaction), relevé dans des supports de cours ; formulation à vérifier sur l'édition française (Minuit).", "texte": "« la valeur sociale positive qu'une personne revendique effectivement »" },
+    { "contexte": "Formulation illustrative, non citée : comment la grille lirait la comparaison entre ventes de pantoufles irlandaises et naissances de girafons à Melbourne.", "texte": "« La pantoufle appartient aux coulisses : c'est l'accessoire du relâchement domestique, loin de toute représentation. Le girafon, lui, naît sous les projecteurs : le zoo met en scène la naissance pour un public qui joue, à son tour, son rôle de visiteur attendri. »" },
+    { "contexte": "Formulation illustrative, non citée : lecture typique d'un service hospitalier.", "texte": "« Devant les patients, l'équipe soignante maintient une façade de maîtrise ; en salle de pause, la région postérieure autorise l'humour et la fatigue que la scène interdit. »" },
+    { "contexte": "Formulation illustrative, non citée : lecture d'une publicité de mode dans le sillage de Gender Advertisements (1979).", "texte": "« La pose du mannequin, tête inclinée et regard absent, relève d'une ritualisation de la subordination plus que d'un simple choix esthétique. »" }
+  ],
+  "sources": [
+    { "titre": "The Presentation of Self in Everyday Life", "auteur": "Wikipedia (EN)", "url": "https://en.wikipedia.org/wiki/The_Presentation_of_Self_in_Everyday_Life", "apport": "Métaphore dramaturgique, région antérieure, définition de la performance." },
+    { "titre": "Erving Goffman — fiche de révision (Licence 3)", "auteur": "Nomad Éducation", "url": "https://www.nomadeducation.fr/revisions/licence-sociologie-3e-annee-lb346a55/erving-goffman-cy71ce92", "apport": "Institution totale : traits (coupure, prise en charge, bureaucratie, temporalité) et exemples." },
+    { "titre": "Erving Goffman — fiche (bibliothèque de sociologie)", "auteur": "Nomad Éducation", "url": "https://www.nomadeducation.fr/revisions/sociologie-toute-la-bibliotheque-lb14a862/erving-goffman-cy1b6994", "apport": "Face, figuration, cadres primaires et défaillances de cadrage." },
+    { "titre": "The total institution: the ambiguities and potential of a living concept", "auteur": "HAL-SHS", "url": "https://hal.archives-ouvertes.fr/halshs-04449072", "apport": "Polysémie et limites du concept d'institution totale." },
+    { "titre": "Gender Advertisements (1979)", "auteur": "Erving Goffman", "url": "https://is.muni.cz/el/fss/jaro2023/GLCb1006/um/GOFFMAN_Gender_Advertisements.pdf?kod=C3705", "apport": "Ritualisation de la subordination, analyse de la publicité." },
+    { "titre": "Goffman and the relations of power in the daily life", "auteur": "Revista Brasileira de Ciências Sociais (SciELO)", "url": "https://www.scielo.br/j/rbcsoc/a/GSnnXYtjYwVXYpLLkDWRW4w/abstract/?lang=en", "apport": "Place du pouvoir chez Goffman, nuance de la critique « microsociologique »." },
+    { "titre": "Article sur la face et la figuration", "auteur": "Revue Émulations (UCLouvain)", "url": "https://ojs.uclouvain.be/index.php/emulations/article/download/6193/4833", "apport": "Stratégies de figuration, respect de sa face et de celle des autres." },
+    { "titre": "Les Cadres de l'expérience (éditions de Minuit, coll. Le Sens commun)", "auteur": "La Procure (notice éditeur)", "url": "https://www.laprocure.com/product/302668/goffman-erving-les-cadres-de-l-experience", "apport": "Référence de l'édition française de Frame Analysis." }
+  ]
+}

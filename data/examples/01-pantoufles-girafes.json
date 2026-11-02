@@ -1,0 +1,417 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Pantoufles irlandaises × girafons de Melbourne",
+    "description": "Une comparaison absurde, chiffrée, passée au prisme de la médecine et de Bourdieu, puis racontée en langage politico-mode et transformée en short animé."
+  },
+  "nodes": [
+    {
+      "id": "s1",
+      "type": "sujet",
+      "x": 40,
+      "y": 40,
+      "data": {
+        "titre": "Les ventes de pantoufles en Irlande dans les années 80",
+        "angle": "Que peut-on apprendre en comparant deux phénomènes qui n’ont rien à voir ?",
+        "motscles": "pantoufles, Irlande, girafes, Melbourne, corrélation"
+      }
+    },
+    {
+      "id": "b1",
+      "type": "brief",
+      "x": 40,
+      "y": 250,
+      "data": {
+        "public": "le grand public",
+        "objectif": "expliquer",
+        "ton": "ironique",
+        "mode": "plausible",
+        "contraintes": "Rappeler que les chiffres sont fictifs."
+      }
+    },
+    {
+      "id": "e1",
+      "type": "evenement",
+      "x": 40,
+      "y": 520,
+      "data": {
+        "titre": "Grande vague de froid et chutes de neige",
+        "date": "1982-01",
+        "lieu": "Irlande",
+        "type": "précédent",
+        "description": "Épisode neigeux marquant de l’hiver 1982 (à vérifier avant diffusion).",
+        "impact": 3
+      }
+    },
+    {
+      "id": "e2",
+      "type": "evenement",
+      "x": 320,
+      "y": 600,
+      "data": {
+        "titre": "Naissance très médiatisée d’un girafon au zoo",
+        "date": "1985-03",
+        "lieu": "Melbourne",
+        "type": "déclencheur",
+        "description": "Événement fictif inventé pour la démonstration.",
+        "impact": 4
+      }
+    },
+    {
+      "id": "d1",
+      "type": "donnee",
+      "x": 320,
+      "y": 20,
+      "data": {
+        "question": "Combien de pantoufles ont été vendues en Irlande dans les années 80 ?",
+        "libelle": "pantoufles vendues en Irlande",
+        "mode": "saisie",
+        "unite": "paires",
+        "periode": "1980–1989",
+        "lieu": "Irlande",
+        "serie": "1980: 1180000\n1981: 1215000\n1982: 1390000\n1983: 1240000\n1984: 1205000\n1985: 1310000\n1986: 1260000\n1987: 1235000\n1988: 1330000\n1989: 1290000",
+        "source": "Valeurs fictives de démonstration — passez en « Recherche par agent » avec un moteur IA pour de vraies données",
+        "fiabilite": "fictif"
+      }
+    },
+    {
+      "id": "d2",
+      "type": "donnee",
+      "x": 320,
+      "y": 330,
+      "data": {
+        "question": "Combien de girafons sont nés au zoo de Melbourne dans les années 80 ?",
+        "libelle": "girafons nés au zoo de Melbourne",
+        "mode": "saisie",
+        "unite": "naissances",
+        "periode": "1980–1989",
+        "lieu": "Melbourne",
+        "serie": "1980: 1\n1981: 1\n1982: 3\n1983: 1\n1984: 1\n1985: 2\n1986: 2\n1987: 1\n1988: 2\n1989: 2",
+        "source": "Valeurs fictives de démonstration",
+        "fiabilite": "fictif"
+      }
+    },
+    {
+      "id": "c1",
+      "type": "comparaison",
+      "x": 620,
+      "y": 170,
+      "data": {
+        "question": "Qu’est-ce que ces deux séries racontent ensemble ?",
+        "mode": "absurde",
+        "agregation": "somme",
+        "seed": 1
+      }
+    },
+    {
+      "id": "l1",
+      "type": "lexique",
+      "x": 620,
+      "y": 470,
+      "data": {
+        "lexique": "medecine",
+        "registre": "institutionnel",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "l2",
+      "type": "lexique",
+      "x": 620,
+      "y": 640,
+      "data": {
+        "lexique": "bourdieu",
+        "registre": "critique",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "p1",
+      "type": "prisme",
+      "x": 920,
+      "y": 60,
+      "data": {
+        "lexique": "medecine",
+        "intention": "traduire",
+        "longueur": "moyen",
+        "seed": 1
+      }
+    },
+    {
+      "id": "p2",
+      "type": "prisme",
+      "x": 920,
+      "y": 330,
+      "data": {
+        "lexique": "bourdieu",
+        "intention": "critiquer",
+        "longueur": "moyen",
+        "seed": 1
+      }
+    },
+    {
+      "id": "l3",
+      "type": "lexique",
+      "x": 920,
+      "y": 610,
+      "data": {
+        "lexique": "politique",
+        "registre": "institutionnel",
+        "intensite": 4
+      }
+    },
+    {
+      "id": "l4",
+      "type": "lexique",
+      "x": 920,
+      "y": 770,
+      "data": {
+        "lexique": "mode",
+        "registre": "institutionnel",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "m1",
+      "type": "mixeur",
+      "x": 1200,
+      "y": 650,
+      "data": {
+        "poids": {
+          "politique": 2,
+          "mode": 1
+        },
+        "mode": "fusion"
+      }
+    },
+    {
+      "id": "r1",
+      "type": "reflexion",
+      "x": 1220,
+      "y": 240,
+      "data": {
+        "structure": "auto",
+        "longueur": "moyen",
+        "seed": 1
+      }
+    },
+    {
+      "id": "a1",
+      "type": "agent",
+      "x": 1520,
+      "y": 40,
+      "data": {
+        "role": "contradicteur",
+        "seed": 1
+      }
+    },
+    {
+      "id": "st1",
+      "type": "style",
+      "x": 1520,
+      "y": 640,
+      "data": {
+        "style": "motion_flat",
+        "palette": "#0B3C5D, #328CC1, #D9B310, #F2F2F2, #1D2731",
+        "typo": "sans-serif géométrique, chiffres en gras"
+      }
+    },
+    {
+      "id": "sh1",
+      "type": "short",
+      "x": 1820,
+      "y": 330,
+      "data": {
+        "duree": "45",
+        "format": "9:16",
+        "voix": "ironique",
+        "cible": "seedance25",
+        "langue": "en",
+        "seed": 1
+      }
+    },
+    {
+      "id": "gen1",
+      "type": "generateur",
+      "x": 2120,
+      "y": 360,
+      "data": {
+        "modele": "seedance25",
+        "segment": "15",
+        "voix": "native",
+        "passerelle": "fal",
+        "resolution": "720"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "l1",
+      "from": "e1",
+      "fromPort": "out",
+      "to": "e2",
+      "toPort": "precedents"
+    },
+    {
+      "id": "l2",
+      "from": "s1",
+      "fromPort": "out",
+      "to": "d1",
+      "toPort": "contexte"
+    },
+    {
+      "id": "l3",
+      "from": "d1",
+      "fromPort": "out",
+      "to": "c1",
+      "toPort": "a"
+    },
+    {
+      "id": "l4",
+      "from": "d2",
+      "fromPort": "out",
+      "to": "c1",
+      "toPort": "b"
+    },
+    {
+      "id": "l5",
+      "from": "c1",
+      "fromPort": "out",
+      "to": "p1",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l6",
+      "from": "l1",
+      "fromPort": "out",
+      "to": "p1",
+      "toPort": "lexique"
+    },
+    {
+      "id": "l7",
+      "from": "c1",
+      "fromPort": "out",
+      "to": "p2",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l8",
+      "from": "l2",
+      "fromPort": "out",
+      "to": "p2",
+      "toPort": "lexique"
+    },
+    {
+      "id": "l9",
+      "from": "l3",
+      "fromPort": "out",
+      "to": "m1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l10",
+      "from": "l4",
+      "fromPort": "out",
+      "to": "m1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l11",
+      "from": "s1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "sujet"
+    },
+    {
+      "id": "l12",
+      "from": "m1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l13",
+      "from": "b1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "brief"
+    },
+    {
+      "id": "l14",
+      "from": "e2",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l15",
+      "from": "d1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l16",
+      "from": "c1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l17",
+      "from": "p1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l18",
+      "from": "p2",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l19",
+      "from": "r1",
+      "fromPort": "out",
+      "to": "a1",
+      "toPort": "entree"
+    },
+    {
+      "id": "l20",
+      "from": "r1",
+      "fromPort": "out",
+      "to": "sh1",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l21",
+      "from": "st1",
+      "fromPort": "out",
+      "to": "sh1",
+      "toPort": "style"
+    },
+    {
+      "id": "l22",
+      "from": "m1",
+      "fromPort": "out",
+      "to": "sh1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l23",
+      "from": "b1",
+      "fromPort": "out",
+      "to": "sh1",
+      "toPort": "brief"
+    },
+    {
+      "id": "l24",
+      "from": "sh1",
+      "fromPort": "out",
+      "to": "gen1",
+      "toPort": "script"
+    }
+  ]
+}

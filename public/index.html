@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lexinode</title>
+  <meta name="description" content="Atelier nodal d'éléments de langage : raisonnements multi-métiers, comparaisons, agents IA et shorts animés.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffb703' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='5.5' cy='7' r='2.5'/%3E%3Ccircle cx='18.5' cy='6' r='2.5'/%3E%3Ccircle cx='14' cy='18' r='2.5'/%3E%3Cpath d='M8 7c4 0 6-1 8-1M7.5 8.8C10 12 11 15.5 11.6 16.8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="btn-palette" class="btn ghost only-mobile" title="Palette" data-ico="menu"></button>
+    <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="5.5" cy="7" r="2.5"/><circle cx="18.5" cy="6" r="2.5"/><circle cx="14" cy="18" r="2.5"/><path d="M8 7c4 0 6-1 8-1M7.5 8.8C10 12 11 15.5 11.6 16.8"/></svg></span><b>LEXINODE</b><span id="mode-badge" class="badge"></span></div>
+    <input id="title" class="title-input" value="Sans titre" aria-label="Titre du projet">
+    <div class="tb-group">
+      <button id="btn-new" class="btn ghost" title="Nouveau projet" data-ico="plus"><span class="t"> Nouveau</span></button>
+      <button id="btn-open" class="btn ghost" title="Exemples et projets" data-ico="folder"><span class="t"> Ouvrir</span></button>
+      <button id="btn-save" class="btn ghost" title="Enregistrer (Ctrl+S)" data-ico="save"></button>
+      <button id="btn-export" class="btn ghost hide-sm" title="Exporter le graphe (.json)" data-ico="download"> JSON</button>
+      <button id="btn-dossier" class="btn ghost hide-sm" title="Exporter tous les résultats en Markdown" data-ico="doc"> Dossier</button>
+    </div>
+    <div class="tb-group">
+      <button id="btn-undo" class="btn ghost hide-sm" title="Annuler (Ctrl+Z)" data-ico="undo"></button>
+      <button id="btn-redo" class="btn ghost hide-sm" title="Rétablir (Ctrl+Y)" data-ico="redo"></button>
+    </div>
+    <div class="spacer"></div>
+    <div id="engine-toggle" class="seg" title="Moteur de raisonnement"></div>
+    <button id="btn-run" class="btn primary" title="Exécuter tout le graphe (Ctrl+Entrée)" data-ico="play"><span class="t"> Tout exécuter</span></button>
+    <button id="btn-lex" class="btn ghost" title="Bibliothèque d'éléments de langage" data-ico="book"> <span id="lex-count" class="hide-sm"></span></button>
+    <button id="btn-settings" class="btn ghost" title="Réglages, clés API, agents" data-ico="settings"></button>
+    <button id="btn-help" class="btn ghost" title="Aide" data-ico="help"></button>
+    <button id="btn-insp" class="btn ghost only-mobile" title="Inspecteur" data-ico="info"></button>
+  </header>
+
+  <main class="layout">
+    <aside id="palette" class="palette" aria-label="Palette de nodes"></aside>
+    <section class="center">
+      <div id="canvas" class="canvas" tabindex="0" aria-label="Canvas nodal"></div>
+      <div class="zoombar">
+        <button id="btn-zout" class="btn ghost" title="Zoom arrière" data-ico="minus"></button>
+        <button id="btn-fit" class="btn ghost" title="Tout voir" data-ico="fit"></button>
+        <button id="btn-zin" class="btn ghost" title="Zoom avant" data-ico="plus"></button>
+      </div>
+      <div class="logdrawer">
+        <div class="log-head">
+          <button id="log-toggle" class="btn ghost sm" data-ico="robot"> Journal des agents · <span id="log-count">0</span></button>
+          <button id="btn-clearlog" class="btn ghost sm">vider</button>
+        </div>
+        <div id="log-list" class="log-list"></div>
+      </div>
+    </section>
+    <aside id="inspector" class="inspector" aria-label="Inspecteur"></aside>
+  </main>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/providers.js"></script>
+  <script src="js/lexicons.js"></script>
+  <script src="js/nodes.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/local-engine.js"></script>
+  <script src="js/topics.js"></script>
+  <script src="js/correlation.js"></script>
+  <script src="js/short.js"></script>
+  <script src="js/video-models.js"></script>
+  <script src="js/animatic.js"></script>
+  <script src="js/ai-engine.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

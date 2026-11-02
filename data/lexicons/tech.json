@@ -1,0 +1,456 @@
+{
+  "id": "tech",
+  "nom": "Tech / Startup",
+  "famille": "metier",
+  "categorie": "Économie & innovation",
+  "icone": "🚀",
+  "couleur": "#3949AB",
+  "description": "Éléments de langage de l'écosystème tech et startup francophone : French Tech, incubateurs, fonds de capital-risque, éditeurs SaaS. Un français truffé d'anglicismes, centré sur le produit, la croissance et la levée de fonds, avec ses rituels (pitch deck, demo day, annonce de levée) et ses critiques (start-up nation, solutionnisme technologique, coolitude).",
+  "posture": "On parle comme un fondateur face à des investisseurs ou à des recrues : optimiste, orienté solution et croissance, métriques de traction à l'appui, en présentant chaque difficulté comme une étape d'apprentissage (« on itère », « on pivote »).",
+  "valeurs": [
+    "l'innovation",
+    "la croissance et le passage à l'échelle",
+    "l'impact",
+    "la vitesse d'exécution",
+    "l'agilité",
+    "l'obsession client",
+    "la prise de risque",
+    "la décision fondée sur la data"
+  ],
+  "vocabulaire": [
+    { "terme": "startup", "sens": "Jeune entreprise innovante à fort potentiel de croissance, souvent financée par du capital-risque ; terme officiellement recommandé en France : « jeune pousse ».", "usage": "On est une startup de vingt personnes, en pleine accélération." },
+    { "terme": "jeune pousse", "sens": "Équivalent français recommandé de « start-up » depuis 2001 par la Commission d'enrichissement de la langue française.", "usage": "La région soutient ses jeunes pousses du numérique." },
+    { "terme": "scale-up", "sens": "Startup sortie de la phase d'amorçage, en forte croissance, qui structure son passage à l'échelle.", "usage": "On n'est plus une startup, on est une scale-up." },
+    { "terme": "licorne", "sens": "Startup non cotée valorisée plus d'un milliard de dollars.", "usage": "L'objectif affiché : faire émerger de nouvelles licornes françaises." },
+    { "terme": "French Tech", "sens": "Label et mission publique qui fédère et promeut l'écosystème des startups françaises.", "usage": "On fait partie de la délégation French Tech au salon." },
+    { "terme": "scaler", "sens": "Passer à l'échelle : faire croître l'activité sans que les coûts croissent au même rythme.", "usage": "Le modèle est prêt à scaler." },
+    { "terme": "disruptif", "sens": "Se dit d'une innovation qui bouleverse un marché établi et ses acteurs historiques.", "usage": "On a un positionnement très disruptif sur l'assurance." },
+    { "terme": "product-market fit", "sens": "Adéquation entre un produit et un marché qui le demande vraiment (souvent abrégé PMF).", "usage": "Tant qu'on n'a pas le product-market fit, on ne recrute pas de commerciaux." },
+    { "terme": "MVP", "sens": "Produit minimum viable : version la plus simple permettant de tester une hypothèse auprès de vrais utilisateurs.", "usage": "On a sorti un MVP en six semaines." },
+    { "terme": "itérer", "sens": "Améliorer le produit par cycles courts : construire, mesurer, apprendre, recommencer.", "usage": "On itère chaque semaine à partir des retours utilisateurs." },
+    { "terme": "pivoter", "sens": "Changer de cible, de produit ou de modèle économique en gardant l'équipe et les acquis.", "usage": "La startup a dû pivoter vers le B2B." },
+    { "terme": "North Star metric", "sens": "Indicateur unique censé résumer la valeur créée pour les clients et guider toute l'équipe.", "usage": "Notre North Star metric, ce sont les commandes hebdomadaires." },
+    { "terme": "roadmap", "sens": "Feuille de route produit : liste priorisée et datée des fonctionnalités et chantiers à venir.", "usage": "C'est prévu dans la roadmap du deuxième semestre." },
+    { "terme": "levée de fonds", "sens": "Opération par laquelle l'entreprise obtient de l'argent d'investisseurs en échange d'une part de son capital.", "usage": "On prépare une levée de fonds pour la rentrée." },
+    { "terme": "tour de table", "sens": "Ensemble des investisseurs qui participent à une levée ; chaque tour correspond à un stade de la startup.", "usage": "Le tour de table est mené par un fonds parisien." },
+    { "terme": "amorçage (seed)", "sens": "Premier tour de financement significatif, destiné à valider le produit et le marché.", "usage": "On vient de boucler notre seed." },
+    { "terme": "série A", "sens": "Tour de financement qui suit l'amorçage, pour accélérer une croissance déjà prouvée ; puis séries B, C…", "usage": "La série A servira à structurer l'équipe commerciale." },
+    { "terme": "valorisation", "sens": "Valeur attribuée à l'entreprise lors d'une levée, qui fixe le prix des parts cédées.", "usage": "La valorisation a doublé en un an." },
+    { "terme": "dilution", "sens": "Baisse du pourcentage de capital détenu par les fondateurs à chaque levée.", "usage": "On accepte un peu de dilution pour aller plus vite." },
+    { "terme": "business angel", "sens": "Particulier qui investit son propre argent au tout début d'une startup et l'accompagne.", "usage": "Nos premiers business angels sont d'anciens fondateurs." },
+    { "terme": "VC", "sens": "Fonds de capital-risque (venture capital) qui investit dans des startups à fort potentiel.", "usage": "On a rencontré une trentaine de VC avant de signer." },
+    { "terme": "term sheet", "sens": "Lettre d'intention qui résume les conditions d'un investissement avant les actes définitifs.", "usage": "On a reçu deux term sheets cette semaine." },
+    { "terme": "due diligence", "sens": "Audit approfondi de l'entreprise par l'investisseur avant de finaliser l'opération.", "usage": "La due diligence prend encore trois semaines." },
+    { "terme": "exit", "sens": "Sortie des investisseurs et fondateurs par revente ou introduction en Bourse.", "usage": "Les fonds attendent une exit d'ici sept ans." },
+    { "terme": "burn rate", "sens": "Montant de trésorerie consommé chaque mois (brut, ou net des revenus).", "usage": "Le burn rate a explosé avec les recrutements." },
+    { "terme": "runway", "sens": "Nombre de mois pendant lesquels l'entreprise peut fonctionner avant d'épuiser sa trésorerie.", "usage": "Il nous reste douze mois de runway." },
+    { "terme": "MRR", "sens": "Revenu récurrent mensuel (monthly recurring revenue) d'une entreprise par abonnement.", "usage": "Le MRR a passé la barre des cent mille euros." },
+    { "terme": "ARR", "sens": "Revenu récurrent annualisé (annual recurring revenue), soit MRR × 12.", "usage": "On vise dix millions d'ARR l'an prochain." },
+    { "terme": "churn", "sens": "Taux d'attrition : part des clients ou du revenu récurrent perdus sur une période.", "usage": "Le churn mensuel est tombé sous les 2 %." },
+    { "terme": "CAC", "sens": "Coût d'acquisition client : dépenses marketing et commerciales divisées par le nombre de nouveaux clients.", "usage": "Le CAC grimpe dès qu'on sort de notre niche." },
+    { "terme": "LTV", "sens": "Valeur vie client (lifetime value) : revenu total attendu d'un client sur la durée de la relation.", "usage": "Le ratio LTV sur CAC rassure les investisseurs." },
+    { "terme": "traction", "sens": "Preuves concrètes que le produit prend : clients, revenus, croissance, rétention.", "usage": "Sans traction, pas de série A." },
+    { "terme": "go-to-market", "sens": "Stratégie de mise sur le marché : cible, canaux, prix, organisation commerciale.", "usage": "Notre go-to-market passe par les grands comptes." },
+    { "terme": "growth hacking", "sens": "Techniques d'acquisition rapides et peu coûteuses, fondées sur l'expérimentation.", "usage": "On a recruté un growth hacker pour le lancement." },
+    { "terme": "SaaS", "sens": "Logiciel vendu sur abonnement et utilisé en ligne (software as a service).", "usage": "On édite un SaaS pour les cabinets comptables." },
+    { "terme": "B2B / B2C", "sens": "Vente aux entreprises (business to business) ou aux particuliers (business to consumer).", "usage": "On a commencé en B2C avant de basculer en B2B." },
+    { "terme": "onboarding", "sens": "Parcours d'accueil d'un nouvel utilisateur ou d'un nouveau salarié.", "usage": "On a refait tout l'onboarding de l'appli." },
+    { "terme": "feature", "sens": "Fonctionnalité d'un produit numérique.", "usage": "Cette feature est très demandée par les clients." },
+    { "terme": "backlog", "sens": "Liste priorisée des tâches et fonctionnalités en attente de développement.", "usage": "C'est dans le backlog, mais pas prioritaire." },
+    { "terme": "sprint", "sens": "Cycle de développement court (une à quatre semaines) des méthodes agiles.", "usage": "On livre ça au prochain sprint." },
+    { "terme": "pitch deck", "sens": "Présentation d'une dizaine de diapositives destinée aux investisseurs : problème, solution, marché, traction, équipe, demande.", "usage": "Envoie-moi ton pitch deck, je le fais circuler." },
+    { "terme": "demo day", "sens": "Journée où les startups d'un incubateur ou d'un accélérateur pitchent devant des investisseurs.", "usage": "On passe en troisième au demo day." },
+    { "terme": "incubateur", "sens": "Structure qui héberge et accompagne des startups en création ; l'accélérateur intervient plus tard, sur un temps court.", "usage": "On a été incubés deux ans à Station F." },
+    { "terme": "bootstrapper", "sens": "Développer l'entreprise sur fonds propres et revenus, sans lever de capital-risque.", "usage": "On a bootstrappé jusqu'au premier million de revenus." },
+    { "terme": "early adopters", "sens": "Premiers utilisateurs, prêts à tester un produit imparfait.", "usage": "Nos early adopters nous ont aidés à corriger le tir." },
+    { "terme": "freemium", "sens": "Modèle où l'usage de base est gratuit et les fonctions avancées payantes.", "usage": "Le freemium nous apporte l'essentiel de nos leads." },
+    { "terme": "POC", "sens": "Preuve de concept : démonstration limitée qu'une solution fonctionne techniquement chez un client.", "usage": "On lance un POC avec un grand groupe." },
+    { "terme": "hypercroissance", "sens": "Croissance très rapide, typiquement un doublement ou un triplement annuel.", "usage": "On recrute pour accompagner notre hypercroissance." },
+    { "terme": "deeptech", "sens": "Startup fondée sur une rupture scientifique ou technologique issue de la recherche.", "usage": "Les deeptech ont des cycles de développement plus longs." },
+    { "terme": "prêt d'amorçage", "sens": "Prêt public (Bpifrance) qui prépare ou complète une levée d'amorçage, sans garantie personnelle du dirigeant.", "usage": "On a complété la seed avec un prêt d'amorçage." }
+  ],
+  "formules": [
+    "On est convaincus qu'il y a un énorme marché à prendre avec {sujet}.",
+    "Notre mission : réinventer {sujet}.",
+    "On veut devenir le leader européen sur {sujet}.",
+    "On vient disrupter {sujet}, un secteur qui n'a pas bougé depuis vingt ans.",
+    "Le problème est simple : {element}, et personne ne l'adresse vraiment.",
+    "On a construit une plateforme pensée pour {public}.",
+    "On a trouvé notre product-market fit, il est temps de scaler.",
+    "On a une traction très forte : {chiffre} de MRR, en croissance mois après mois.",
+    "On itère vite, on teste, on apprend.",
+    "On a pivoté : le marché nous a montré que la vraie opportunité était ailleurs.",
+    "On lève pour accélérer : produit, recrutement et expansion internationale.",
+    "On est ravis d'annoncer notre levée de {chiffre} pour accélérer notre croissance.",
+    "Ce tour de table nous permet de passer à l'échelle.",
+    "C'est un vrai game changer pour {public}.",
+    "On a une roadmap très ambitieuse pour les douze prochains mois.",
+    "C'est dans la roadmap.",
+    "Fail fast, learn fast : l'échec fait partie du process.",
+    "On construit le produit avec et pour {public}.",
+    "Notre North Star metric, c'est l'engagement hebdomadaire.",
+    "La data nous dit que {conclusion}.",
+    "On est une équipe de passionnés qui veut avoir un vrai impact.",
+    "Le timing est parfait : avec {evenement}, le marché est enfin mûr.",
+    "Le marché adressable est estimé à {chiffre}.",
+    "On reste frugaux et focus sur l'essentiel.",
+    "C'est encore early, mais les premiers signaux sont très encourageants.",
+    "On ouvre un nouveau chapitre de notre histoire.",
+    "L'IA va transformer en profondeur {sujet}.",
+    "On se positionne à l'intersection entre {a} et {b}.",
+    "On n'est pas une startup de plus : on construit l'infrastructure de demain pour {sujet}.",
+    "On a une culture très ownership : chacun est responsable de son périmètre.",
+    "On cible {public}, un segment encore très mal servi.",
+    "C'est le moment de passer en mode scale : la phase d'exploration est terminée."
+  ],
+  "connecteurs": [
+    "Concrètement,",
+    "Côté produit,",
+    "Côté business,",
+    "En termes de traction,",
+    "À date,",
+    "Next step :",
+    "Spoiler :",
+    "Long story short,",
+    "Pour scaler,",
+    "Côté data,",
+    "En parallèle,",
+    "À terme,",
+    "Le take-away :"
+  ],
+  "euphemismes": [
+    { "brut": "licencier une partie de l'équipe", "edl": "ajuster la taille de l'équipe", "commentaire": "Annonces de restructuration de startups après une levée ratée ; on dit aussi « réduire la voilure »." },
+    { "brut": "le produit a échoué", "edl": "on a pivoté", "commentaire": "Le pivot recadre un échec en apprentissage stratégique." },
+    { "brut": "fermer l'entreprise", "edl": "mettre fin à l'aventure", "commentaire": "Posts LinkedIn de fondateurs ; souvent accompagné de « décision difficile »." },
+    { "brut": "l'entreprise perd de l'argent", "edl": "on privilégie la croissance à la rentabilité", "commentaire": "Justification classique des pertes en phase d'hypercroissance." },
+    { "brut": "on n'a presque plus d'argent", "edl": "notre runway est un peu court", "commentaire": "Discussion avec les investisseurs avant une levée d'urgence." },
+    { "brut": "on abandonne cette fonctionnalité", "edl": "ajustement de la roadmap", "commentaire": "Communication produit ; on dit aussi « dépriorisé »." },
+    { "brut": "un bug", "edl": "un comportement inattendu", "commentaire": "Notes de version et support client ; parfois « known issue »." },
+    { "brut": "un produit inachevé", "edl": "une version bêta / un MVP", "commentaire": "Le lancement imparfait est présenté comme une méthode." },
+    { "brut": "un stage mal payé et surchargé", "edl": "une opportunité unique de grandir dans une boîte en hypercroissance", "commentaire": "Offres d'emploi ; critiqué par Mathilde Ramadier sous le nom de « coolitude »." },
+    { "brut": "des horaires à rallonge", "edl": "une culture de l'intensité", "commentaire": "Culture d'entreprise revendiquée ; on parle aussi de « mode startup »." },
+    { "brut": "racheté par un concurrent", "edl": "rejoindre un groupe pour accélérer", "commentaire": "Annonces d'acquisition ; « acqui-hire » quand seule l'équipe intéresse l'acheteur." },
+    { "brut": "une levée à valorisation en baisse", "edl": "une levée dans un contexte de marché exigeant", "commentaire": "Le « down round » est rarement nommé publiquement." },
+    { "brut": "le fondateur est poussé dehors", "edl": "une transition de leadership", "commentaire": "Communiqué lors du remplacement d'un CEO par les investisseurs." },
+    { "brut": "une hausse de prix", "edl": "une nouvelle offre tarifaire plus adaptée à vos usages", "commentaire": "Mails aux clients d'un SaaS." },
+    { "brut": "collecter massivement les données des utilisateurs", "edl": "personnaliser l'expérience", "commentaire": "Politiques de confidentialité et argumentaires produit." },
+    { "brut": "copier un modèle existant", "edl": "être « le Uber de » son secteur", "commentaire": "Trope de pitch qui remplace l'analyse du modèle économique." }
+  ],
+  "substitutions": [
+    { "de": "entreprise", "vers": "startup" },
+    { "de": "grandir", "vers": "scaler" },
+    { "de": "changer de stratégie", "vers": "pivoter" },
+    { "de": "recommencer", "vers": "itérer" },
+    { "de": "prototype", "vers": "MVP" },
+    { "de": "planning", "vers": "roadmap" },
+    { "de": "clients", "vers": "users" },
+    { "de": "fonction", "vers": "feature" },
+    { "de": "liste de tâches", "vers": "backlog" },
+    { "de": "réunion", "vers": "sync" },
+    { "de": "succès", "vers": "traction" },
+    { "de": "dépenses mensuelles", "vers": "burn rate" },
+    { "de": "trésorerie restante", "vers": "runway" },
+    { "de": "chiffre d'affaires mensuel", "vers": "MRR" },
+    { "de": "perte de clients", "vers": "churn" },
+    { "de": "investisseurs", "vers": "VC" },
+    { "de": "financement", "vers": "levée de fonds" },
+    { "de": "révolutionnaire", "vers": "disruptif" },
+    { "de": "employés", "vers": "talents" },
+    { "de": "patron", "vers": "CEO" },
+    { "de": "difficulté du client", "vers": "pain point" },
+    { "de": "accueil", "vers": "onboarding" },
+    { "de": "stratégie commerciale", "vers": "go-to-market" },
+    { "de": "marché potentiel", "vers": "TAM" },
+    { "de": "tableau de bord", "vers": "dashboard" },
+    { "de": "objectif principal", "vers": "North Star metric" }
+  ],
+  "cadres": [
+    { "nom": "Problème-solution", "question": "Quel pain point, précisément, la solution résout-elle pour {public} ?", "explication": "Tout pitch commence par un problème unique, concret et chiffré." },
+    { "nom": "Product-market fit", "question": "Les utilisateurs seraient-ils vraiment déçus si l'offre centrée sur {sujet} disparaissait demain ?", "explication": "Test d'adéquation : le marché tire-t-il le produit, ou faut-il le pousser ?" },
+    { "nom": "Scalabilité", "question": "Peut-on passer de cent à un million d'utilisateurs avec {sujet} sans exploser les coûts ?", "explication": "Un modèle scalable découple la croissance du chiffre d'affaires de celle des coûts." },
+    { "nom": "Unit economics", "question": "Avec {element}, le coût d'acquisition reste-t-il inférieur à la valeur vie client ?", "explication": "Lecture investisseur : chaque client doit rapporter plus qu'il ne coûte à acquérir." },
+    { "nom": "Why now", "question": "Pourquoi maintenant ? Qu'est-ce que {evenement} a changé pour rendre l'opportunité possible ?", "explication": "Le bon timing justifie qu'une idée ancienne devienne enfin finançable." },
+    { "nom": "Disruption", "question": "Quels acteurs installés risquent d'être bousculés par {element} ?", "explication": "Grille de la rupture : qui perd sa rente quand le nouveau modèle s'impose ?" },
+    { "nom": "Critique du solutionnisme", "question": "Le problème posé par {sujet} relève-t-il vraiment d'une solution technologique ?", "explication": "Garde-fou inspiré de Morozov : ne pas proposer une appli pour un problème social mal posé." }
+  ],
+  "structures": [
+    {
+      "nom": "Pitch deck",
+      "description": "Déroulé type d'une présentation à des investisseurs en une dizaine de slides : problème, solution, marché, traction, équipe, demande.",
+      "etapes": [
+        {
+          "titre": "Problème",
+          "role": "contexte",
+          "consigne": "Exposer un seul problème concret, chiffré si possible, vécu par une cible identifiable.",
+          "gabarits": [
+            "Aujourd'hui, un problème pèse sur {public} : {element}.",
+            "Le constat est simple : {sujet} reste un marché inefficace et opaque."
+          ]
+        },
+        {
+          "titre": "Solution",
+          "role": "hypothese",
+          "consigne": "Présenter la solution en une phrase, puis montrer le produit en action.",
+          "gabarits": [
+            "Notre solution tient en une phrase : automatiser tout ce qui bloque aujourd'hui dans {sujet}.",
+            "Imaginez un outil qui transforme {element} en avantage compétitif."
+          ]
+        },
+        {
+          "titre": "Marché et timing",
+          "role": "analyse",
+          "consigne": "Dimensionner le marché (TAM, SAM, SOM) et expliquer pourquoi c'est le bon moment.",
+          "gabarits": [
+            "Le marché adressable représente {chiffre}, et il croît chaque année.",
+            "Pourquoi maintenant ? Parce que {evenement} a rebattu les cartes."
+          ]
+        },
+        {
+          "titre": "Traction",
+          "role": "faits",
+          "consigne": "Prouver que ça marche : clients, revenus récurrents, croissance, rétention.",
+          "gabarits": [
+            "À date, on compte {chiffre}, avec une croissance mois après mois.",
+            "Les premiers clients le confirment : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Équipe",
+          "role": "analyse",
+          "consigne": "Montrer pourquoi cette équipe est la mieux placée pour gagner sur ce marché.",
+          "gabarits": [
+            "Pourquoi nous ? Parce qu'on a vécu le problème de l'intérieur, sur {sujet}.",
+            "L'équipe réunit les trois compétences clés : produit, tech et business."
+          ]
+        },
+        {
+          "titre": "La demande (ask)",
+          "role": "decision",
+          "consigne": "Annoncer le montant recherché, l'utilisation des fonds et l'ambition à trois ans.",
+          "gabarits": [
+            "On lève {chiffre} pour accélérer sur trois axes : produit, recrutement, international.",
+            "Avec ce tour de table, l'objectif est clair : devenir le leader européen sur {sujet} d'ici trois ans."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Boucle lean startup (construire, mesurer, apprendre)",
+      "description": "Démarche itérative : hypothèse, MVP, mesure, apprentissage, puis décision de persévérer, pivoter ou passer à l'échelle.",
+      "etapes": [
+        {
+          "titre": "Hypothèse",
+          "role": "hypothese",
+          "consigne": "Formuler une hypothèse testable sur le problème, la cible et la disposition à payer.",
+          "gabarits": [
+            "Notre hypothèse : il existe une vraie demande chez {public} pour régler {element}.",
+            "On part du principe que {conclusion}."
+          ]
+        },
+        {
+          "titre": "MVP et test",
+          "role": "faits",
+          "consigne": "Construire la version minimale et la confronter rapidement au marché réel.",
+          "gabarits": [
+            "On a sorti un MVP en quelques semaines pour tester {sujet} en conditions réelles.",
+            "Premiers résultats après un mois : {chiffre}."
+          ]
+        },
+        {
+          "titre": "Mesure et apprentissage",
+          "role": "analyse",
+          "consigne": "Lire les métriques sans complaisance et en tirer un enseignement clair.",
+          "gabarits": [
+            "La data montre un écart net entre {a} et {b}.",
+            "Ce qu'on apprend : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Point de friction",
+          "role": "tension",
+          "consigne": "Nommer ce qui ne marche pas, sans l'enjoliver.",
+          "gabarits": [
+            "Le churn reste élevé depuis {evenement}, c'est le signal qu'il faut écouter.",
+            "Ce qui coince : {element}."
+          ]
+        },
+        {
+          "titre": "Pivoter ou persévérer",
+          "role": "decision",
+          "consigne": "Trancher : persévérer en itérant, ou pivoter vers une autre cible ou un autre modèle.",
+          "gabarits": [
+            "On a décidé de pivoter : on se recentre sur {sujet}.",
+            "On persévère, mais on itère sur {element}."
+          ]
+        },
+        {
+          "titre": "Passage à l'échelle",
+          "role": "projection",
+          "consigne": "Projeter la croissance une fois l'adéquation produit-marché trouvée.",
+          "gabarits": [
+            "Prochaine étape : passer à l'échelle, avec un objectif de {chiffre} d'ici un an.",
+            "À terme, {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Annonce de levée de fonds",
+      "description": "Format rituel du communiqué ou du post LinkedIn : montant, investisseurs, mission, traction, usage des fonds, recrutement.",
+      "etapes": [
+        {
+          "titre": "L'annonce",
+          "role": "faits",
+          "consigne": "Donner d'emblée le montant, le stade du tour et le fonds qui le mène.",
+          "gabarits": [
+            "Nous sommes très fiers d'annoncer notre levée de {chiffre}, menée par un fonds de premier plan.",
+            "Une étape majeure pour nous : un tour de table de {chiffre} pour accélérer."
+          ]
+        },
+        {
+          "titre": "La mission",
+          "role": "contexte",
+          "consigne": "Rappeler la conviction fondatrice et le problème de départ.",
+          "gabarits": [
+            "Depuis notre création, une conviction nous anime : on peut faire beaucoup mieux sur {sujet}.",
+            "Tout est parti d'un constat simple : {element}."
+          ]
+        },
+        {
+          "titre": "La traction",
+          "role": "analyse",
+          "consigne": "Montrer le chemin parcouru avec deux ou trois métriques flatteuses.",
+          "gabarits": [
+            "En dix-huit mois, nous avons conquis {chiffre}.",
+            "Cette confiance récompense le travail de toute l'équipe et l'engagement de nos clients."
+          ]
+        },
+        {
+          "titre": "L'usage des fonds",
+          "role": "decision",
+          "consigne": "Dire à quoi servira l'argent : produit, IA, international, recrutement.",
+          "gabarits": [
+            "Ces fonds nous permettront d'accélérer sur le produit, l'IA et l'international.",
+            "Priorité : mieux servir {public}, en France puis en Europe."
+          ]
+        },
+        {
+          "titre": "Vision et recrutement",
+          "role": "projection",
+          "consigne": "Clore sur l'ambition et l'appel aux candidatures.",
+          "gabarits": [
+            "Et ce n'est que le début : nous recrutons {chiffre} d'ici la fin de l'année.",
+            "Notre ambition : devenir la référence européenne sur {sujet}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Les chiffres racontent une histoire de croissance : on met en avant les métriques qui montrent la dynamique (croissance mensuelle, ARR, montant levé, valorisation) et on les nomme en anglais (MRR, CAC, LTV, burn). La levée de fonds est souvent présentée comme un succès en soi, indépendamment de la rentabilité.",
+    "unites": [
+      "MRR et ARR (euros)",
+      "croissance mensuelle (% MoM)",
+      "churn (%)",
+      "CAC (euros)",
+      "LTV (euros)",
+      "ratio LTV/CAC",
+      "burn rate (euros par mois)",
+      "runway (mois)",
+      "valorisation (millions ou milliards d'euros)",
+      "montant levé (millions d'euros)",
+      "utilisateurs actifs mensuels (MAU)",
+      "NPS"
+    ],
+    "formulations": [
+      "On affiche {chiffre} d'ARR, avec une croissance à trois chiffres sur un an.",
+      "Avec un burn de {chiffre} par mois, on a un runway confortable jusqu'à la prochaine levée.",
+      "Notre ratio LTV/CAC atteint {chiffre}, un niveau que les investisseurs jugent très sain.",
+      "Le churn est tombé à {chiffre} depuis {evenement}.",
+      "On est passés de zéro à {chiffre} en dix-huit mois.",
+      "Entre {a} et {b}, l'écart de croissance est net : {chiffre}.",
+      "La valorisation atteint {chiffre}, ce qui nous place sur la trajectoire d'une licorne.",
+      "Chez {public}, la rétention à trois mois atteint {chiffre}."
+    ]
+  },
+  "metaphores": [
+    "la fusée qui décolle (to the moon)",
+    "la licorne, créature rare et fabuleuse",
+    "la piste d'envol (runway)",
+    "brûler du cash (burn)",
+    "la courbe en crosse de hockey",
+    "le sprint et le marathon",
+    "l'écosystème, la jeune pousse, l'incubateur, la pépinière",
+    "la traction, comme l'adhérence d'un moteur",
+    "le moonshot",
+    "l'ADN de la boîte",
+    "surfer sur la vague de l'IA",
+    "la ruée vers l'or"
+  ],
+  "pieges": [
+    "Franglais opaque (scaler, adresser, process, focus) qui exclut ceux qui ne maîtrisent pas les codes du milieu.",
+    "Hype : la levée de fonds célébrée comme une réussite en soi, sans rapport avec la rentabilité ou l'utilité du produit.",
+    "Solutionnisme technologique (Morozov) : présenter une application comme réponse à des problèmes sociaux mal posés.",
+    "Vanity metrics : mettre en avant téléchargements ou inscrits plutôt que revenus et rétention.",
+    "Coolitude (Ramadier) : baby-foot, tutoiement et « mission » qui masquent précarité et surcharge de travail.",
+    "« Start-up nation » : formule devenue moqueuse, analysée comme un signifiant vide par la recherche en gestion.",
+    "Le pivot permanent comme alibi de l'absence de stratégie.",
+    "Euphémisation des échecs et des licenciements (« nouveau chapitre », « ajuster la taille de l'équipe »).",
+    "Comparaisons de pitch (« le Uber de », « l'Airbnb de ») qui remplacent l'analyse du modèle économique."
+  ],
+  "registres": {
+    "institutionnel": "Communiqué French Tech ou Bpifrance : « innovation », « souveraineté numérique », « hypercroissance », « champions de demain », montants de levées record.",
+    "technique": "Entre fondateurs et investisseurs : franglais dense (« on a un bon PMF », « le payback du CAC est à neuf mois », « on ferme la seed »).",
+    "vulgarisation": "Pour le grand public : « une jeune entreprise innovante », « une appli qui simplifie la vie », « un nouveau service en ligne ».",
+    "critique": "Les détracteurs moquent la « start-up nation », le baratin des pitchs, la coolitude de façade et le solutionnisme technologique."
+  },
+  "visuel": {
+    "palette": ["#3949AB", "#00E5FF", "#7C4DFF", "#0F172A", "#F5F7FA"],
+    "motifs": [
+      { "fr": "courbe de croissance en crosse de hockey", "en": "hockey-stick growth curve" },
+      { "fr": "fusée qui décolle", "en": "rocket launching" },
+      { "fr": "interfaces d'application flottantes en isométrique", "en": "floating isometric app interfaces" },
+      { "fr": "réseau de nœuds connectés", "en": "network of glowing connected nodes" },
+      { "fr": "tableau de bord de KPI animé", "en": "animated KPI dashboard" },
+      { "fr": "slide de pitch deck", "en": "pitch deck slide" },
+      { "fr": "licorne stylisée", "en": "stylized unicorn" },
+      { "fr": "dégradé néon sur fond sombre", "en": "neon gradient on a dark background" },
+      { "fr": "lignes de code qui défilent", "en": "scrolling lines of code" },
+      { "fr": "post-it sur un tableau kanban", "en": "sticky notes on a kanban board" },
+      { "fr": "serveurs et nuage informatique", "en": "cloud servers" }
+    ],
+    "pictogrammes": [
+      { "fr": "fusée", "en": "rocket" },
+      { "fr": "ampoule", "en": "light bulb" },
+      { "fr": "engrenage", "en": "gear" },
+      { "fr": "graphique en hausse", "en": "rising chart" },
+      { "fr": "puce électronique", "en": "microchip" },
+      { "fr": "nuage", "en": "cloud" },
+      { "fr": "smartphone", "en": "smartphone" },
+      { "fr": "cible", "en": "target" },
+      { "fr": "éclair", "en": "lightning bolt" },
+      { "fr": "cadenas", "en": "padlock" },
+      { "fr": "robot", "en": "robot" }
+    ],
+    "typographie": "Sans-serif géométrique (type Inter ou Poppins) en graisses fortes, chiffres-clés surdimensionnés, accents néon et micro-textes en police monospace pour évoquer le code.",
+    "style_motion": "Motion design isométrique et flat : interfaces d'application qui flottent et s'assemblent, courbes de croissance qui montent en flèche, dégradés néon sur fond sombre, transitions rapides en glissé et énergie optimiste.",
+    "style_motion_en": "Isometric and flat motion design, floating app interfaces assembling themselves, hockey-stick growth curves shooting up, neon cyan and electric violet gradients on a dark navy background, fast slide transitions, bold geometric sans-serif typography with monospace accents, upbeat optimistic startup energy."
+  },
+  "exemples": [
+    { "contexte": "Formulation typique (illustrative, non attribuée) d'un post LinkedIn d'annonce de levée de fonds", "texte": "« Nous sommes très fiers d'annoncer notre levée de fonds pour accélérer notre croissance en Europe… et ce n'est que le début ! On recrute ! »" },
+    { "contexte": "Formulation typique (illustrative, non attribuée) d'une slide de pitch deck", "texte": "« Le problème : un marché fragmenté et opaque. Notre solution : une plateforme SaaS qui digitalise tout le parcours. Traction : x3 en un an. »" },
+    { "contexte": "Formulation typique (illustrative, non attribuée) d'un fondateur annonçant des licenciements", "texte": "« Nous avons pris la décision difficile d'ajuster la taille de l'équipe pour atteindre la rentabilité. C'est un nouveau chapitre qui s'ouvre. »" }
+  ],
+  "sources": [
+    { "titre": "Fiche terminologique « jeune pousse »", "auteur": "Office québécois de la langue française", "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8874269/jeune-pousse", "apport": "Équivalent recommandé de start-up en France depuis 2001 et position de l'OQLF sur l'emprunt." },
+    { "titre": "Qu'est-ce qu'une levée de fonds ?", "auteur": "Selectra (d'après Bpifrance Création)", "url": "https://selectra.info/finance/guides/banque-pro/levee-fonds-startup", "apport": "Définition de la levée de fonds et des tours de table." },
+    { "titre": "Prêt d'amorçage de Bpifrance", "auteur": "Bpifrance Création", "url": "https://bpifrance-creation.fr/encyclopedie/financements/lemprunt/pret-damorcage-bpifrance-fonds-europeen-dinvestissement", "apport": "Vocabulaire du financement public de l'amorçage." },
+    { "titre": "Structure du pitch deck : ce que les investisseurs veulent voir", "auteur": "Slidebean", "url": "https://slidebean.com/fr/blog/pitch-deck-structure", "apport": "Ordre type des slides : problème, solution, marché, traction, équipe, demande." },
+    { "titre": "Pitch deck : fiche pratique", "auteur": "Legalstart", "url": "https://www.legalstart.fr/fiches-pratiques/aides-creation-entreprise/pitch-deck/", "apport": "Conventions francophones du pitch deck." },
+    { "titre": "Burn rate (glossaire)", "auteur": "First Round Review", "url": "https://review.firstround.com/glossary/burn-rate.md", "apport": "Définitions des métriques burn rate et runway." },
+    { "titre": "‘Start-Up Nation’: The Making and Performativity of an Empty Signifier", "auteur": "Champenois, Saurier et Béliard (M@n@gement, 2025)", "url": "https://library.kab.ac.ug/Record/doaj-art-c33ef6cc64a144ebacb8f724515d5d25/Description", "apport": "Analyse de « start-up nation » comme expression polysémique, ambiguë et moqueuse." },
+    { "titre": "Compte rendu de « Pour tout résoudre, cliquez ici » (Morozov)", "auteur": "OpenEdition Journals (revue DMS)", "url": "https://journals.openedition.org/dms/963", "apport": "Notion de solutionnisme technologique." },
+    { "titre": "How I survived the coolitude of startups (recension du livre de Mathilde Ramadier)", "auteur": "Startup-book", "url": "https://www.startup-book.com/2017/05/02/how-i-survived-the-coolitude-of-startups-by-mathilde-ramadier", "apport": "Critique de la novlangue et de la coolitude des start-ups." },
+    { "titre": "Non, la France ne doit pas devenir une start-up", "auteur": "FrenchWeb", "url": "https://www.frenchweb.fr/non-la-france-ne-doit-pas-devenir-une-start-up/296445", "apport": "Critique de la « politique du pivot permanent »." }
+  ]
+}

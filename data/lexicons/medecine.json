@@ -1,0 +1,439 @@
+{
+  "id": "medecine",
+  "nom": "Médecine",
+  "famille": "metier",
+  "categorie": "Santé",
+  "icone": "🩺",
+  "couleur": "#1E88E5",
+  "description": "Éléments de langage de la médecine et de la communication en santé en France : consultation et démarche clinique, annonce d'un diagnostic, transmissions entre soignants, recommandations de la HAS et communication de crise sanitaire (Covid-19). La fiche rassemble le vocabulaire clinique, les euphémismes de l'annonce et de la sécurité des soins, et la manière de présenter des risques chiffrés.",
+  "posture": "Un soignant ou une autorité sanitaire parle depuis un savoir clinique et des recommandations fondées sur le niveau de preuve. La parole se veut graduée, rassurante et prudente : ni alarmiste, ni porteuse de promesses.",
+  "valeurs": [
+    "primum non nocere (d'abord ne pas nuire)",
+    "balance bénéfice-risque",
+    "médecine fondée sur les preuves",
+    "consentement libre et éclairé",
+    "secret médical",
+    "décision médicale partagée",
+    "sécurité des soins",
+    "prévention et santé publique"
+  ],
+  "vocabulaire": [
+    { "terme": "anamnèse", "sens": "Recueil, auprès du patient ou de ses proches, de l'histoire de la maladie et de ses antécédents.", "usage": "L'anamnèse retrouve une douleur thoracique apparue au repos." },
+    { "terme": "motif de consultation", "sens": "Raison pour laquelle le patient vient consulter.", "usage": "Le motif de consultation est une toux persistante depuis trois semaines." },
+    { "terme": "antécédents", "sens": "Maladies, interventions et traitements passés du patient ou de sa famille.", "usage": "Pas d'antécédent notable en dehors d'une hypertension traitée." },
+    { "terme": "examen clinique", "sens": "Examen physique du patient : inspection, palpation, percussion, auscultation.", "usage": "L'examen clinique est sans particularité." },
+    { "terme": "symptôme", "sens": "Manifestation ressentie et rapportée par le patient.", "usage": "Le patient décrit des symptômes digestifs depuis une semaine." },
+    { "terme": "signe clinique", "sens": "Anomalie constatée objectivement par le soignant lors de l'examen.", "usage": "On note un signe de déshydratation à l'examen." },
+    { "terme": "diagnostic différentiel", "sens": "Ensemble des diagnostics alternatifs qu'il faut éliminer avant de conclure.", "usage": "Le diagnostic différentiel inclut une embolie pulmonaire." },
+    { "terme": "examens complémentaires", "sens": "Analyses biologiques, imagerie ou explorations demandées pour confirmer ou infirmer une hypothèse.", "usage": "Des examens complémentaires sont nécessaires avant toute décision." },
+    { "terme": "bilan", "sens": "Ensemble d'examens permettant de faire le point sur l'état du patient.", "usage": "Un bilan biologique complet a été prescrit." },
+    { "terme": "prise en charge", "sens": "Ensemble des soins, décisions et démarches organisés autour d'un patient.", "usage": "La prise en charge se poursuit désormais en ambulatoire." },
+    { "terme": "parcours de soins", "sens": "Enchaînement coordonné des consultations, examens et traitements d'un patient.", "usage": "Le médecin traitant coordonne le parcours de soins." },
+    { "terme": "pronostic", "sens": "Évolution prévisible d'une maladie.", "usage": "Le pronostic est réservé à ce stade." },
+    { "terme": "pronostic vital engagé", "sens": "Risque de décès à court terme.", "usage": "Son pronostic vital n'est plus engagé." },
+    { "terme": "balance bénéfice-risque", "sens": "Comparaison des bénéfices attendus d'un traitement avec ses risques.", "usage": "La balance bénéfice-risque reste favorable chez ce patient." },
+    { "terme": "effet indésirable", "sens": "Réaction nocive et non recherchée à un médicament.", "usage": "Tout effet indésirable doit être déclaré à la pharmacovigilance." },
+    { "terme": "événement indésirable associé aux soins", "sens": "Événement défavorable lié aux soins plutôt qu'à l'évolution de la maladie (EIAS).", "usage": "L'équipe a analysé l'événement indésirable associé aux soins en revue de morbi-mortalité." },
+    { "terme": "événement indésirable grave associé aux soins", "sens": "EIAS inattendu entraînant décès, mise en jeu du pronostic vital ou déficit fonctionnel permanent probable (EIGS).", "usage": "L'établissement a déclaré un EIGS à l'agence régionale de santé." },
+    { "terme": "iatrogénie", "sens": "Effet néfaste provoqué par un traitement ou un acte médical.", "usage": "Chez la personne âgée, la iatrogénie médicamenteuse est fréquente." },
+    { "terme": "comorbidité", "sens": "Maladie associée à la pathologie principale.", "usage": "Ses comorbidités rendent l'intervention plus risquée." },
+    { "terme": "facteur de risque", "sens": "Caractéristique qui augmente la probabilité de survenue d'une maladie.", "usage": "Le tabac est le principal facteur de risque identifié." },
+    { "terme": "dépistage", "sens": "Recherche d'une maladie chez des personnes qui n'en ont pas encore les symptômes.", "usage": "Le dépistage organisé concerne les femmes de 50 à 74 ans." },
+    { "terme": "prévalence", "sens": "Proportion de personnes atteintes d'une maladie à un moment donné.", "usage": "La prévalence du diabète augmente avec l'âge." },
+    { "terme": "incidence", "sens": "Nombre de nouveaux cas survenus pendant une période donnée.", "usage": "L'incidence est exprimée pour 100 000 habitants." },
+    { "terme": "létalité", "sens": "Proportion de décès parmi les personnes atteintes d'une maladie.", "usage": "La létalité ne doit pas être confondue avec la mortalité." },
+    { "terme": "mortalité", "sens": "Nombre de décès rapporté à l'ensemble d'une population.", "usage": "La mortalité cardiovasculaire recule depuis vingt ans." },
+    { "terme": "sensibilité", "sens": "Capacité d'un test à détecter correctement les personnes malades.", "usage": "Ce test rapide a une sensibilité insuffisante chez les asymptomatiques." },
+    { "terme": "spécificité", "sens": "Capacité d'un test à classer correctement les personnes non malades.", "usage": "Une bonne spécificité limite les faux positifs." },
+    { "terme": "faux positif", "sens": "Résultat positif chez une personne qui n'est pas malade.", "usage": "Un faux positif peut entraîner des examens inutiles." },
+    { "terme": "évolution favorable", "sens": "Amélioration de l'état du patient au fil du temps.", "usage": "L'évolution est favorable sous traitement." },
+    { "terme": "rémission", "sens": "Disparition, totale ou partielle, des signes d'une maladie.", "usage": "La patiente est en rémission complète depuis deux ans." },
+    { "terme": "récidive", "sens": "Réapparition de la maladie après une période de rémission.", "usage": "Une surveillance régulière permet de détecter une récidive." },
+    { "terme": "soins palliatifs", "sens": "Soins visant le confort et la qualité de vie lorsque la guérison n'est plus l'objectif.", "usage": "Une équipe mobile de soins palliatifs a été sollicitée." },
+    { "terme": "limitation et arrêt des thérapeutiques", "sens": "Décision collégiale de ne pas entreprendre ou d'arrêter des traitements jugés déraisonnables (LAT).", "usage": "Une procédure de limitation et arrêt des thérapeutiques a été discutée avec la famille." },
+    { "terme": "obstination déraisonnable", "sens": "Poursuite de traitements inutiles, disproportionnés ou n'ayant d'autre effet que le maintien artificiel de la vie.", "usage": "La loi interdit l'obstination déraisonnable." },
+    { "terme": "consentement éclairé", "sens": "Accord du patient donné après une information loyale, claire et appropriée.", "usage": "Le consentement éclairé a été recueilli avant l'intervention." },
+    { "terme": "dispositif d'annonce", "sens": "Organisation en plusieurs temps de l'annonce d'un diagnostic grave, notamment en cancérologie.", "usage": "Le dispositif d'annonce prévoit un temps d'accompagnement soignant." },
+    { "terme": "décision médicale partagée", "sens": "Décision construite par le soignant et le patient après échange d'informations et délibération.", "usage": "Le choix du traitement relève d'une décision médicale partagée." },
+    { "terme": "recommandation de bonne pratique", "sens": "Texte de référence (souvent HAS) guidant les professionnels selon l'état des connaissances.", "usage": "La recommandation de bonne pratique a été actualisée en 2024." },
+    { "terme": "niveau de preuve", "sens": "Solidité scientifique d'une donnée, du grade A (preuve établie) au grade C, ou accord d'experts.", "usage": "Cette recommandation repose sur un faible niveau de preuve." },
+    { "terme": "accord d'experts", "sens": "Recommandation fondée sur le consensus d'un groupe de travail en l'absence de preuve publiée.", "usage": "Faute d'essai randomisé, la HAS a retenu un accord d'experts." },
+    { "terme": "observance", "sens": "Degré de respect du traitement prescrit par le patient.", "usage": "La mauvaise observance explique l'échec du traitement." },
+    { "terme": "SAED", "sens": "Outil de transmission orale entre soignants : Situation, Antécédents, Évaluation, Demande (adaptation du SBAR).", "usage": "L'infirmière a appelé l'interne en suivant la grille SAED." },
+    { "terme": "gestes barrières", "sens": "Comportements individuels limitant la transmission d'une infection (lavage des mains, masque, aération).", "usage": "Le respect des gestes barrières reste la première protection." },
+    { "terme": "foyer épidémique", "sens": "Regroupement de cas autour d'un même lieu ou événement (équivalent recommandé de « cluster »).", "usage": "Un foyer épidémique a été identifié dans un établissement scolaire." },
+    { "terme": "plan blanc", "sens": "Dispositif de crise permettant à un hôpital de mobiliser des moyens exceptionnels.", "usage": "L'hôpital a déclenché son plan blanc face à l'afflux de patients." }
+  ],
+  "formules": [
+    "Il n'y a pas lieu de s'inquiéter outre mesure, mais une surveillance s'impose.",
+    "Concernant {sujet}, la balance bénéfice-risque reste favorable à ce stade.",
+    "Les données disponibles sur {sujet} ne permettent pas, en l'état, de conclure.",
+    "Nous allons faire le point ensemble sur {sujet}.",
+    "Avant d'aller plus loin, pouvez-vous me dire ce que vous savez déjà sur {sujet} ?",
+    "Les résultats ne sont pas ceux que nous espérions.",
+    "La situation est sérieuse, mais nous avons des solutions à vous proposer.",
+    "Le pronostic vital n'est pas engagé à ce stade.",
+    "Une surveillance rapprochée est préconisée pour {public}.",
+    "Il est recommandé de consulter sans délai en cas d'aggravation des symptômes.",
+    "Par précaution, des examens complémentaires seront réalisés pour écarter {element}.",
+    "Le lien entre {a} et {b} n'est pas établi à ce jour.",
+    "Pour {public}, le respect des gestes barrières reste la meilleure protection.",
+    "La prise en charge sera adaptée en fonction de l'évolution.",
+    "Depuis {evenement}, la situation sanitaire fait l'objet d'une surveillance renforcée.",
+    "Aucun signal de sécurité n'a été identifié concernant {sujet}.",
+    "La situation est maîtrisée, mais la vigilance reste de mise.",
+    "Il convient de rester prudent dans l'interprétation des données sur {sujet}.",
+    "Un événement indésirable grave associé aux soins a été déclaré et fait l'objet d'une analyse approfondie.",
+    "Toutes les mesures ont été prises pour assurer la continuité des soins.",
+    "Chez {public}, un dépistage précoce améliore nettement le pronostic.",
+    "Le terme « {terme} » mérite d'être expliqué simplement au patient.",
+    "Nous ne sommes pas en mesure, aujourd'hui, de vous donner une réponse définitive.",
+    "Vous n'êtes pas seul : une équipe pluridisciplinaire va vous accompagner.",
+    "La décision sera prise ensemble, en tenant compte de vos souhaits.",
+    "Les autorités sanitaires appellent {public} à la plus grande vigilance.",
+    "Après {evenement}, une cellule de crise a été activée et un numéro dédié mis en place.",
+    "Le risque est faible, mais il n'est pas nul.",
+    "En l'état actuel des connaissances, {conclusion}.",
+    "Qu'avez-vous retenu de ce que nous venons de nous dire ?",
+    "Il n'existe pas, à ce jour, de traitement validé contre {element}."
+  ],
+  "connecteurs": [
+    "Sur le plan clinique,",
+    "À ce stade,",
+    "En l'état actuel des connaissances,",
+    "Par mesure de précaution,",
+    "Au total,",
+    "Dans ce contexte,",
+    "Sur le plan biologique,",
+    "Dans l'immédiat,",
+    "À distance,",
+    "En pratique,",
+    "Par ailleurs,",
+    "Sous réserve de l'évolution,",
+    "Le cas échéant,"
+  ],
+  "euphemismes": [
+    { "brut": "mourir", "edl": "décéder", "commentaire": "Verbe standard des comptes rendus, des certificats et des annonces aux familles." },
+    { "brut": "la mort du patient", "edl": "une issue fatale (ou défavorable)", "commentaire": "Formule des dossiers et des communiqués hospitaliers, qui évite le mot « mort »." },
+    { "brut": "erreur médicale", "edl": "événement indésirable associé aux soins", "commentaire": "Vocabulaire de la sécurité des soins (HAS) : il vise l'analyse des causes plutôt que la recherche d'un coupable, mais atténue aussi la faute." },
+    { "brut": "erreur qui a tué ou gravement blessé un patient", "edl": "événement indésirable grave associé aux soins (EIGS)", "commentaire": "Catégorie réglementaire (décret de 2016) : décès, pronostic vital engagé ou déficit permanent probable." },
+    { "brut": "accident causé par l'hôpital", "edl": "dommage associé aux soins", "commentaire": "Intitulé du guide HAS de 2011 sur l'annonce au patient d'un incident survenu pendant la prise en charge." },
+    { "brut": "cancer", "edl": "tumeur, lésion, masse", "commentaire": "Mots gradués de l'annonce ; la HAS invite à réfléchir à cette graduation sans retarder la compréhension." },
+    { "brut": "il va bientôt mourir", "edl": "le pronostic est réservé", "commentaire": "Formule de prudence employée face aux familles ou dans les bulletins de santé." },
+    { "brut": "on ne peut plus le guérir", "edl": "passer à une prise en charge palliative", "commentaire": "Déplace l'accent de la guérison vers le confort et la qualité de vie." },
+    { "brut": "débrancher le patient", "edl": "limitation et arrêt des thérapeutiques", "commentaire": "Terme de réanimation encadré par la loi sur la fin de vie, avec décision collégiale." },
+    { "brut": "ça va faire mal", "edl": "vous allez sentir une petite gêne", "commentaire": "Minimisation courante au moment d'un geste ; souvent critiquée comme paternaliste." },
+    { "brut": "le traitement ne marche plus", "edl": "échappement thérapeutique", "commentaire": "Langage d'oncologie et d'infectiologie pour une maladie qui progresse malgré le traitement." },
+    { "brut": "la maladie revient", "edl": "récidive, reprise évolutive", "commentaire": "Vocabulaire du suivi en cancérologie." },
+    { "brut": "l'hôpital est débordé", "edl": "l'hôpital est en tension", "commentaire": "Euphémisme de crise qui évite les mots « saturation » ou « débordement »." },
+    { "brut": "trier les malades", "edl": "prioriser l'accès aux soins", "commentaire": "Langage de la régulation en situation de crise sanitaire." },
+    { "brut": "fou", "edl": "personne vivant avec un trouble psychique", "commentaire": "Formulation qui lutte contre la stigmatisation, recommandée dans la communication publique." },
+    { "brut": "confinement", "edl": "mesures de freinage", "commentaire": "Expression de la communication gouvernementale pendant la Covid-19 pour désigner les restrictions." },
+    { "brut": "l'épidémie flambe", "edl": "la circulation virale est active", "commentaire": "Formule des bulletins épidémiologiques, qui évite la dramatisation." }
+  ],
+  "substitutions": [
+    { "de": "problème", "vers": "complication" },
+    { "de": "maladie", "vers": "pathologie" },
+    { "de": "malade", "vers": "patient" },
+    { "de": "mort", "vers": "décès" },
+    { "de": "mal de tête", "vers": "céphalées" },
+    { "de": "essoufflement", "vers": "dyspnée" },
+    { "de": "fatigue", "vers": "asthénie" },
+    { "de": "démangeaison", "vers": "prurit" },
+    { "de": "gonflement", "vers": "œdème" },
+    { "de": "saignement", "vers": "hémorragie" },
+    { "de": "cause", "vers": "étiologie" },
+    { "de": "tension", "vers": "pression artérielle" },
+    { "de": "prise de sang", "vers": "bilan biologique" },
+    { "de": "radio", "vers": "imagerie" },
+    { "de": "soigner", "vers": "prendre en charge" },
+    { "de": "traitement", "vers": "prise en charge thérapeutique" },
+    { "de": "médicament", "vers": "spécialité" },
+    { "de": "effet secondaire", "vers": "effet indésirable" },
+    { "de": "rechute", "vers": "récidive" },
+    { "de": "grave", "vers": "sévère" },
+    { "de": "piqûre", "vers": "injection" },
+    { "de": "surveiller", "vers": "monitorer" },
+    { "de": "lien", "vers": "association" },
+    { "de": "épidémie locale", "vers": "foyer épidémique" }
+  ],
+  "cadres": [
+    { "nom": "Facteurs de risque", "question": "Quels facteurs de risque peut-on identifier pour {element} ?", "explication": "On cherche les caractéristiques (âge, tabac, exposition…) qui augmentent la probabilité d'un événement, sans en faire des causes certaines." },
+    { "nom": "Balance bénéfice-risque", "question": "Pour {sujet}, les bénéfices attendus l'emportent-ils sur les risques ?", "explication": "Toute décision médicale ou sanitaire se justifie par la comparaison de ce qu'elle apporte et de ce qu'elle fait courir." },
+    { "nom": "Niveau de preuve", "question": "Sur quel niveau de preuve repose ce que l'on affirme concernant {sujet} ?", "explication": "On distingue preuve établie (grade A), présomption (B), faible niveau de preuve (C) et simple accord d'experts." },
+    { "nom": "Diagnostic différentiel", "question": "Quelles autres explications faut-il éliminer avant de retenir {element} ?", "explication": "Le raisonnement clinique procède par élimination des hypothèses concurrentes, en commençant par les plus graves." },
+    { "nom": "Niveaux de prévention", "question": "Sur {sujet}, faut-il agir avant l'apparition de la maladie, au stade précoce ou pour en limiter les séquelles ?", "explication": "Prévention primaire, secondaire (dépistage) et tertiaire structurent la réponse de santé publique." },
+    { "nom": "Iatrogénie", "question": "Les soins eux-mêmes ont-ils pu jouer un rôle dans {element} ?", "explication": "Avant d'accuser la maladie, on vérifie si un traitement ou un acte n'a pas causé le problème." },
+    { "nom": "Population à risque", "question": "Pour {public}, quel parcours de soins et quels messages de prévention sont les plus adaptés ?", "explication": "La santé publique cible les groupes les plus exposés et adapte ses messages à leur niveau de littératie en santé." }
+  ],
+  "structures": [
+    {
+      "nom": "Démarche clinique",
+      "description": "Raisonnement médical de la consultation, de l'histoire du patient jusqu'au suivi.",
+      "etapes": [
+        {
+          "titre": "Anamnèse",
+          "role": "contexte",
+          "consigne": "Présenter le motif de consultation, l'histoire de la maladie et les antécédents utiles, de manière factuelle et chronologique.",
+          "gabarits": [
+            "Le motif de consultation porte sur {sujet}.",
+            "L'anamnèse retrouve une évolution progressive des symptômes depuis {evenement}.",
+            "Dans les antécédents, on retient {element}."
+          ]
+        },
+        {
+          "titre": "Examen clinique",
+          "role": "faits",
+          "consigne": "Décrire les constatations objectives (signes, constantes) sans les interpréter encore.",
+          "gabarits": [
+            "L'examen clinique objective {element}.",
+            "Les constantes relevées indiquent {chiffre}.",
+            "Le reste de l'examen est sans particularité."
+          ]
+        },
+        {
+          "titre": "Hypothèses diagnostiques",
+          "role": "hypothese",
+          "consigne": "Formuler l'hypothèse principale et le diagnostic différentiel, en hiérarchisant par probabilité et par gravité.",
+          "gabarits": [
+            "Le tableau évoque en premier lieu {element}.",
+            "Le diagnostic différentiel comprend {a} et {b}.",
+            "Il convient d'éliminer {element} avant toute conclusion."
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "role": "analyse",
+          "consigne": "Justifier les examens demandés et interpréter leurs résultats au regard des hypothèses.",
+          "gabarits": [
+            "Un bilan complémentaire est demandé pour confirmer ou infirmer {element}.",
+            "Les examens montrent un écart notable entre {a} et {b}.",
+            "Le résultat, soit {chiffre}, oriente le diagnostic."
+          ]
+        },
+        {
+          "titre": "Prise en charge",
+          "role": "decision",
+          "consigne": "Énoncer la conduite à tenir, en la justifiant par la balance bénéfice-risque et en associant le patient à la décision.",
+          "gabarits": [
+            "Compte tenu de la balance bénéfice-risque, l'équipe propose {element}.",
+            "Pour {public}, une prise en charge pluridisciplinaire est indiquée.",
+            "La décision a été prise en concertation avec le patient et ses proches."
+          ]
+        },
+        {
+          "titre": "Suivi",
+          "role": "projection",
+          "consigne": "Prévoir la réévaluation, les signes d'alerte et les prochaines étapes.",
+          "gabarits": [
+            "Une réévaluation est programmée après {evenement}.",
+            "Le patient est invité à reconsulter en cas d'aggravation des symptômes.",
+            "Au total, {conclusion}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Transmission SAED",
+      "description": "Grille de communication orale entre soignants (Situation, Antécédents, Évaluation, Demande), adaptation française du SBAR promue par la HAS.",
+      "etapes": [
+        {
+          "titre": "Situation",
+          "role": "faits",
+          "consigne": "Dire qui appelle, pour quel patient et quel problème actuel, en une ou deux phrases.",
+          "gabarits": [
+            "Je vous appelle concernant {sujet} : la situation s'est dégradée depuis {evenement}.",
+            "Situation actuelle : {element}."
+          ]
+        },
+        {
+          "titre": "Antécédents",
+          "role": "contexte",
+          "consigne": "Donner uniquement les antécédents et le contexte utiles à la décision (motif d'admission, traitements, allergies).",
+          "gabarits": [
+            "Antécédents utiles : {element}.",
+            "Le patient a été admis après {evenement}."
+          ]
+        },
+        {
+          "titre": "Évaluation",
+          "role": "analyse",
+          "consigne": "Exprimer sa propre évaluation clinique de la situation, y compris son inquiétude.",
+          "gabarits": [
+            "Les constantes relevées indiquent {chiffre}, ce qui m'inquiète.",
+            "Mon évaluation est la suivante : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Demande",
+          "role": "decision",
+          "consigne": "Formuler une demande claire, avec un délai, et faire reformuler la conduite à tenir.",
+          "gabarits": [
+            "Je vous demande de venir évaluer le patient dans les plus brefs délais.",
+            "Pouvez-vous me confirmer la conduite à tenir concernant {element} ?"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Annonce d'une mauvaise nouvelle",
+      "description": "Consultation d'annonce en plusieurs temps, inspirée des recommandations de la HAS : préparer, avertir, annoncer, accueillir l'émotion, proposer un plan.",
+      "etapes": [
+        {
+          "titre": "S'enquérir de ce que sait le patient",
+          "role": "contexte",
+          "consigne": "Rappeler la raison de la rencontre et demander au patient ce qu'il sait et ce qu'il souhaite savoir aujourd'hui.",
+          "gabarits": [
+            "Avant tout, que savez-vous déjà sur {sujet} ?",
+            "Pouvez-vous me dire ce que l'on vous a expliqué depuis {evenement} ?"
+          ]
+        },
+        {
+          "titre": "Avertir",
+          "role": "tension",
+          "consigne": "Prévenir qu'une nouvelle difficile arrive, pour laisser au patient le temps de s'y préparer.",
+          "gabarits": [
+            "J'ai les résultats des examens, et ils ne sont pas aussi bons que nous l'espérions.",
+            "Ce que j'ai à vous dire concernant {sujet} est difficile à entendre."
+          ]
+        },
+        {
+          "titre": "Annoncer",
+          "role": "faits",
+          "consigne": "Nommer le diagnostic avec des mots clairs et gradués, sans jargon, puis marquer un silence.",
+          "gabarits": [
+            "Les examens montrent {element}.",
+            "Le diagnostic retenu est le suivant : {element}."
+          ]
+        },
+        {
+          "titre": "Accueillir l'émotion",
+          "role": "analyse",
+          "consigne": "Laisser s'exprimer l'émotion, reformuler, vérifier ce qui a été entendu et compris.",
+          "gabarits": [
+            "Je comprends que ce soit un choc ; prenons le temps qu'il faut.",
+            "Qu'est-ce qui vous préoccupe le plus, à cet instant ?",
+            "Qu'avez-vous retenu de ce que je viens de vous dire ?"
+          ]
+        },
+        {
+          "titre": "Proposer un plan",
+          "role": "projection",
+          "consigne": "Présenter les prochaines étapes, le soutien disponible et un nouveau rendez-vous.",
+          "gabarits": [
+            "Voici ce que nous vous proposons pour la suite : {element}.",
+            "Nous nous reverrons rapidement pour refaire le point sur {sujet}.",
+            "Vous pourrez revenir vers nous avec toutes vos questions, y compris les plus simples."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "La médecine raisonne en probabilités et en populations : incidence, prévalence, risques relatifs et absolus, intervalles de confiance. En communication, on recommande les fréquences naturelles (« 1 personne sur 100 ») et le risque absolu, car le risque relatif, plus spectaculaire, persuade davantage sans mieux informer.",
+    "unites": [
+      "incidence pour 100 000 habitants",
+      "prévalence en pourcentage",
+      "taux de létalité",
+      "taux de mortalité pour 100 000 habitants",
+      "risque relatif",
+      "risque absolu",
+      "nombre de sujets à traiter (NST)",
+      "sensibilité et spécificité d'un test",
+      "survie à 5 ans",
+      "intervalle de confiance à 95 %",
+      "taux de positivité des tests",
+      "taux de reproduction (R)"
+    ],
+    "formulations": [
+      "Pour {a}, l'incidence atteint {chiffre}, un niveau nettement supérieur à celui observé pour {b}.",
+      "Le risque relatif double, mais en valeur absolue, l'augmentation n'est que de {chiffre}.",
+      "La prévalence est estimée à {chiffre}, avec un intervalle de confiance à 95 % encore large.",
+      "Il faudrait traiter {chiffre} pour éviter un seul événement.",
+      "Depuis {evenement}, le nombre de cas a atteint {chiffre} sur sept jours glissants.",
+      "Chez {public}, la survie à cinq ans dépasse désormais {chiffre}.",
+      "Malgré une différence de {chiffre}, l'écart entre {a} et {b} n'est pas statistiquement significatif.",
+      "Concrètement, cela concerne {chiffre}, soit une fréquence faible à l'échelle de la population."
+    ]
+  },
+  "metaphores": [
+    "la guerre contre le virus (« nous sommes en guerre »)",
+    "le combat contre la maladie",
+    "l'arsenal thérapeutique",
+    "les soignants en première ligne, au front",
+    "la vague épidémique",
+    "aplatir la courbe",
+    "la santé comme silence des organes",
+    "le bouclier vaccinal",
+    "la bombe à retardement des facteurs de risque",
+    "le parcours de soins comme chemin balisé",
+    "le corps comme machine à réparer"
+  ],
+  "pieges": [
+    "Jargon non expliqué (« dyspnée », « asthénie », sigles) qui exclut le patient, alors que la HAS demande des mots clairs et appropriés.",
+    "Euphémismes excessifs (« petite lésion », « tache ») qui retardent la compréhension et peuvent miner la confiance.",
+    "Paternalisme : décider « pour le bien » du patient sans décision partagée ni information loyale.",
+    "Annonce brutale, dans un couloir ou par téléphone, sans préparation ni suivi.",
+    "Mise en avant du seul risque relatif, plus persuasif mais trompeur sans le risque absolu.",
+    "Confusion entre corrélation et causalité dans les messages de prévention.",
+    "Langue de bois de crise (« la situation est maîtrisée », « hôpital en tension ») qui masque la saturation réelle.",
+    "Métaphore guerrière qui culpabilise les malades (« il a perdu son combat ») et militarise la santé publique.",
+    "Anglicismes et sigles opaques (cluster, EIGS, LAT) dans la communication grand public."
+  ],
+  "registres": {
+    "institutionnel": "Phrases impersonnelles et prudentes (« il est recommandé », « les autorités sanitaires appellent à »), chiffres arrondis et appel à la responsabilité collective.",
+    "technique": "Abréviations, nominalisations et termes savants (« dyspnée stade III », « pas de syndrome méningé »), transmissions SAED et comptes rendus télégraphiques.",
+    "vulgarisation": "Mots simples, comparaisons du quotidien et fréquences naturelles (« 1 personne sur 1 000 »), sur un ton bienveillant et rassurant.",
+    "critique": "Ses détracteurs dénoncent le jargon qui infantilise, le « ça ne va pas faire mal » paternaliste et la langue de bois sanitaire du « tout est sous contrôle »."
+  },
+  "visuel": {
+    "palette": ["#1E88E5", "#26A69A", "#FFFFFF", "#ECEFF1", "#E53935"],
+    "motifs": [
+      { "fr": "schéma anatomique en coupe", "en": "anatomical cross-section diagram" },
+      { "fr": "tracé d'électrocardiogramme qui défile", "en": "scrolling ECG heartbeat line" },
+      { "fr": "particules virales en suspension", "en": "floating virus particles" },
+      { "fr": "courbe épidémique qui se dessine", "en": "epidemic curve drawing itself" },
+      { "fr": "carte de France en dégradé de couleurs (carte de chaleur)", "en": "map of France as a color-graded heatmap" },
+      { "fr": "cellules et globules vus au microscope", "en": "cells and blood corpuscles under a microscope" },
+      { "fr": "mains qui se lavent avec de la mousse", "en": "hands washing with soap foam" },
+      { "fr": "silhouettes de patients et de soignants en flat design", "en": "flat-design silhouettes of patients and caregivers" },
+      { "fr": "couloir d'hôpital lumineux", "en": "bright hospital corridor" },
+      { "fr": "grille de pictogrammes « 1 personne sur 100 »", "en": "icon array showing 1 person in 100" }
+    ],
+    "pictogrammes": [
+      { "fr": "stéthoscope", "en": "stethoscope" },
+      { "fr": "croix médicale", "en": "medical cross" },
+      { "fr": "seringue", "en": "syringe" },
+      { "fr": "gélule", "en": "capsule pill" },
+      { "fr": "cœur avec battement", "en": "heart with pulse line" },
+      { "fr": "thermomètre", "en": "thermometer" },
+      { "fr": "masque chirurgical", "en": "surgical mask" },
+      { "fr": "virus", "en": "virus" },
+      { "fr": "lit d'hôpital", "en": "hospital bed" },
+      { "fr": "bouclier", "en": "shield" },
+      { "fr": "téléphone d'urgence", "en": "emergency phone" },
+      { "fr": "calendrier de rendez-vous", "en": "appointment calendar" }
+    ],
+    "typographie": "Sans empattement arrondie et très lisible (type Marianne, Inter ou Source Sans), gros chiffres pour les statistiques, contrastes élevés et sous-titres systématiques.",
+    "style_motion": "Motion design 2D en flat design, propre et rassurant : fonds blancs ou bleu pâle, pictogrammes au trait arrondi, schémas anatomiques simplifiés et courbes qui se dessinent. Rythme posé, transitions douces, messages compréhensibles par l'image seule, avec sous-titres et versions accessibles (langue des signes, audiodescription).",
+    "style_motion_en": "Clean, reassuring 2D flat-design motion graphics: white or pale blue backgrounds, rounded line icons, simplified anatomical diagrams and self-drawing epidemic curves, clinical blue and teal palette with a single red alert accent, calm pacing, soft transitions, burned-in subtitles."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : synthèse HAS 2008 « Annoncer une mauvaise nouvelle », reprise en annexe du guide HAS de 2014 ; questions que le médecin se pose en fin de consultation.", "texte": "« Lui ai-je laissé la possibilité de poser toutes ses questions ? Suis-je en mesure de savoir ce qu'il a compris ? Qu'a-t-il retenu de la consultation ? »" },
+    { "contexte": "Extrait réel : définition réglementaire de l'EIGS (art. R. 1413-67 du Code de la santé publique, décret du 25 novembre 2016), reprise par la HAS ; exemple de requalification technique de l'« erreur médicale ».", "texte": "« […] un événement inattendu au regard de l'état de santé et de la pathologie de la personne et dont les conséquences sont le décès, la mise en jeu du pronostic vital, la survenue probable d'un déficit fonctionnel permanent […] »" },
+    { "contexte": "Extrait réel : allocution présidentielle du 16 mars 2020 sur la Covid-19, emblème de la métaphore guerrière en communication de crise sanitaire.", "texte": "« Nous sommes en guerre. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'une ouverture de consultation d'annonce conforme aux recommandations.", "texte": "« Les résultats de la biopsie ne sont pas ceux que nous espérions. Avant de vous expliquer, pouvez-vous me dire ce que vous savez déjà ? »" }
+  ],
+  "sources": [
+    { "titre": "Annonce et accompagnement du diagnostic d'un patient ayant une maladie chronique (guide parcours de soins)", "auteur": "Haute Autorité de Santé, février 2014", "url": "https://has-sante.fr/upload/docs/application/pdf/2014-03/guide_annonce_diagnostic_web.pdf", "apport": "Les trois temps de l'annonce, la consigne de mots clairs et gradués, la synthèse 2008 « Annoncer une mauvaise nouvelle » et les questions de fin de consultation." },
+    { "titre": "Annonce d'un dommage associé aux soins", "auteur": "Haute Autorité de Santé (2011, mis à jour 2026)", "url": "https://has-sante.fr/jcms/c_953138/fr/annonce-d-un-dommage-associe-aux-soins", "apport": "Le vocabulaire de l'événement indésirable et du dommage associé aux soins, ainsi que le cadrage de l'annonce comme acte de transparence." },
+    { "titre": "Déclarer les événements indésirables graves associés aux soins (EIGS)", "auteur": "Haute Autorité de Santé", "url": "https://has-sante.fr/jcms/c_2787338/fr/declarer-les-evenements-indesirables-graves-associes-aux-soins-eigs", "apport": "Définition réglementaire de l'EIGS et critères de gravité." },
+    { "titre": "Saed : un guide pour faciliter la communication entre professionnels de santé", "auteur": "Haute Autorité de Santé, 2014", "url": "https://has-sante.fr/jcms/c_1776178/fr/saed-un-guide-pour-faciliter-la-communication-entre-professionnels-de-sante", "apport": "Structure de transmission Situation, Antécédents, Évaluation, Demande." },
+    { "titre": "Niveau de preuve et gradation des recommandations de bonne pratique : état des lieux", "auteur": "Haute Autorité de Santé, 2013", "url": "https://www.has-sante.fr/upload/docs/application/pdf/2013-06/etat_des_lieux_niveau_preuve_gradation.pdf", "apport": "Grades A, B, C et accord d'experts." },
+    { "titre": "Utilisation d'autres formats statistiques pour la présentation des informations de santé", "auteur": "Akl et al., Cochrane, 2011", "url": "https://www.cochrane.org/fr/CD006776/COMMUN_utilisation-dautres-formats-statistiques-pour-la-presentation-des-informations-de-sante", "apport": "Fréquences naturelles mieux comprises ; risque relatif plus persuasif que le risque absolu." },
+    { "titre": "Coronavirus : les mots pour le dire", "auteur": "Ministère de la Culture, Délégation générale à la langue française", "url": "https://www.culture.gouv.fr/actualites/Coronavirus-les-mots-pour-le-dire", "apport": "Équivalents français des termes de la pandémie (« foyer » pour « cluster »)." },
+    { "titre": "Analyse de l'allocution présidentielle du 16 mars 2020", "auteur": "L'ADN", "url": "https://www.ladn.eu/?p=496892", "apport": "Rhétorique de la « guerre sanitaire » et audience de l'allocution." },
+    { "titre": "Des vidéos universelles d'information santé", "auteur": "Santé publique France, 2016", "url": "https://www.santepubliquefrance.fr/index.php/les-actualites/des-videos-universelles-dinformation-sante", "apport": "Codes des vidéos animées de santé publique : messages par l'image, sous-titres, langue des signes, audiodescription." },
+    { "titre": "Patient et professionnels de santé : décider ensemble", "auteur": "Haute Autorité de Santé, 2013", "url": "https://www.has-sante.fr/jcms/c_1671523/", "apport": "Cadre de la décision médicale partagée, contrepoint au paternalisme médical." }
+  ]
+}

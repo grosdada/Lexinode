@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Glaces, noyades et dés pipés",
+    "description": "Un topic tiré au hasard, une corrélation chiffrée (Pearson, Spearman, tendance, décalage) et des hypothèses de liens, lues par la science et Durkheim."
+  },
+  "nodes": [
+    {
+      "id": "h1",
+      "type": "hasard",
+      "x": 40,
+      "y": 60,
+      "data": {
+        "mode": "paire",
+        "source": "banque",
+        "categorie": "toutes",
+        "folie": "toutes",
+        "tirage": {
+          "a": {
+            "t": "les ventes de glaces à Marseille",
+            "a": "Quel lien entre les ventes de glaces à Marseille et le nombre de noyades en Méditerranée ?",
+            "c": "paire",
+            "f": 2
+          },
+          "b": {
+            "t": "le nombre de noyades en Méditerranée",
+            "a": "Quel lien entre le nombre de noyades en Méditerranée et les ventes de glaces à Marseille ?",
+            "c": "paire",
+            "f": 2
+          },
+          "pourquoi": "Cas d’école de variable cachée : la chaleur estivale fait monter les deux."
+        }
+      }
+    },
+    {
+      "id": "d1",
+      "type": "donnee",
+      "x": 380,
+      "y": 20,
+      "data": {
+        "question": "Combien de glaces sont vendues chaque mois à Marseille ?",
+        "libelle": "glaces vendues à Marseille",
+        "mode": "saisie",
+        "unite": "milliers de cornets",
+        "periode": "mois 1 à 12",
+        "serie": "1: 40\n2: 46\n3: 70\n4: 120\n5: 210\n6: 340\n7: 455\n8: 430\n9: 260\n10: 130\n11: 60\n12: 55",
+        "source": "Valeurs fictives de démonstration",
+        "fiabilite": "fictif"
+      }
+    },
+    {
+      "id": "d2",
+      "type": "donnee",
+      "x": 380,
+      "y": 300,
+      "data": {
+        "question": "Combien de noyades chaque mois sur le littoral méditerranéen ?",
+        "libelle": "noyades en Méditerranée",
+        "mode": "saisie",
+        "unite": "noyades",
+        "periode": "mois 1 à 12",
+        "serie": "1: 3\n2: 2\n3: 4\n4: 7\n5: 15\n6: 29\n7: 41\n8: 44\n9: 18\n10: 8\n11: 4\n12: 3",
+        "source": "Valeurs fictives de démonstration",
+        "fiabilite": "fictif"
+      }
+    },
+    {
+      "id": "l1",
+      "type": "lexique",
+      "x": 380,
+      "y": 560,
+      "data": {
+        "lexique": "science",
+        "registre": "vulgarisation",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "l2",
+      "type": "lexique",
+      "x": 380,
+      "y": 720,
+      "data": {
+        "lexique": "durkheim",
+        "registre": "institutionnel",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "c1",
+      "type": "correlation",
+      "x": 700,
+      "y": 120,
+      "data": {
+        "question": "Les glaces font-elles couler les nageurs ?",
+        "methode": "auto",
+        "decalage": 3,
+        "hypotheses": 4,
+        "seed": 1
+      }
+    },
+    {
+      "id": "c2",
+      "type": "correlation",
+      "x": 700,
+      "y": 520,
+      "data": {
+        "methode": "hypotheses",
+        "hypotheses": 5,
+        "seed": 1
+      }
+    },
+    {
+      "id": "l3",
+      "type": "lexique",
+      "x": 1000,
+      "y": 560,
+      "data": {
+        "lexique": "journalisme",
+        "registre": "vulgarisation",
+        "intensite": 3
+      }
+    },
+    {
+      "id": "r1",
+      "type": "reflexion",
+      "x": 1020,
+      "y": 220,
+      "data": {
+        "structure": "auto",
+        "longueur": "moyen",
+        "seed": 1
+      }
+    },
+    {
+      "id": "st",
+      "type": "style",
+      "x": 1020,
+      "y": 760,
+      "data": {
+        "style": "dataviz"
+      }
+    },
+    {
+      "id": "sh",
+      "type": "short",
+      "x": 1320,
+      "y": 320,
+      "data": {
+        "duree": "30",
+        "format": "9:16",
+        "voix": "dynamique",
+        "cible": "h3",
+        "langue": "en",
+        "seed": 1
+      }
+    },
+    {
+      "id": "gen",
+      "type": "generateur",
+      "x": 1620,
+      "y": 340,
+      "data": {
+        "modele": "h3",
+        "segment": "15",
+        "voix": "native",
+        "passerelle": "fal",
+        "resolution": "auto"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "l1",
+      "from": "h1",
+      "fromPort": "out",
+      "to": "d1",
+      "toPort": "contexte"
+    },
+    {
+      "id": "l2",
+      "from": "h1",
+      "fromPort": "outB",
+      "to": "d2",
+      "toPort": "contexte"
+    },
+    {
+      "id": "l3",
+      "from": "d1",
+      "fromPort": "out",
+      "to": "c1",
+      "toPort": "a"
+    },
+    {
+      "id": "l4",
+      "from": "d2",
+      "fromPort": "out",
+      "to": "c1",
+      "toPort": "b"
+    },
+    {
+      "id": "l5",
+      "from": "l1",
+      "fromPort": "out",
+      "to": "c1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l6",
+      "from": "h1",
+      "fromPort": "out",
+      "to": "c2",
+      "toPort": "a"
+    },
+    {
+      "id": "l7",
+      "from": "h1",
+      "fromPort": "outB",
+      "to": "c2",
+      "toPort": "b"
+    },
+    {
+      "id": "l8",
+      "from": "l2",
+      "fromPort": "out",
+      "to": "c2",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l9",
+      "from": "h1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "sujet"
+    },
+    {
+      "id": "l10",
+      "from": "l3",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l11",
+      "from": "c1",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l12",
+      "from": "c2",
+      "fromPort": "out",
+      "to": "r1",
+      "toPort": "elements"
+    },
+    {
+      "id": "l13",
+      "from": "r1",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "contenu"
+    },
+    {
+      "id": "l14",
+      "from": "st",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "style"
+    },
+    {
+      "id": "l15",
+      "from": "l3",
+      "fromPort": "out",
+      "to": "sh",
+      "toPort": "lexiques"
+    },
+    {
+      "id": "l16",
+      "from": "sh",
+      "fromPort": "out",
+      "to": "gen",
+      "toPort": "script"
+    }
+  ]
+}

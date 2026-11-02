@@ -1,0 +1,413 @@
+{
+  "id": "defense",
+  "nom": "Défense / Militaire",
+  "famille": "metier",
+  "categorie": "Défense et sécurité",
+  "icone": "🎖️",
+  "couleur": "#556B2F",
+  "description": "Fiche des éléments de langage de la communication militaire et de défense francophone : comptes rendus d'état-major, communiqués du ministère des Armées, doctrine et vocabulaire opérationnel. Elle couvre les euphémismes de la violence armée, la rhétorique de démenti en cas de mise en cause et le raisonnement tactique.",
+  "posture": "Parole d'institution hiérarchisée et sobre : l'état-major ou le ministère rend compte d'actions conduites « dans le cadre » d'un mandat, met en avant la légalité et la maîtrise de la force, et retient l'information au nom de la sécurité des opérations.",
+  "valeurs": [
+    "la mission",
+    "la protection de la Nation et des Français",
+    "la légalité et le droit des conflits armés",
+    "la maîtrise de la force",
+    "la discipline et la chaîne de commandement",
+    "la fraternité d'armes",
+    "l'autonomie stratégique",
+    "le sacrifice et l'honneur"
+  ],
+  "vocabulaire": [
+    { "terme": "théâtre d'opérations", "sens": "Zone géographique où se déroule une campagne militaire.", "usage": "Nos forces restent engagées sur le théâtre sahélien." },
+    { "terme": "OPEX", "sens": "Opération extérieure conduite hors du territoire national.", "usage": "Il part pour sa troisième OPEX." },
+    { "terme": "opération intérieure", "sens": "Engagement des armées sur le territoire national, comme Sentinelle.", "usage": "Sentinelle est une opération intérieure permanente." },
+    { "terme": "neutraliser", "sens": "Mettre hors d'état d'agir un adversaire ou un matériel, sans préciser s'il est tué, blessé ou capturé.", "usage": "Une quinzaine de terroristes ont été neutralisés." },
+    { "terme": "frappe", "sens": "Tir aérien, de missile ou d'artillerie contre un objectif.", "usage": "Les Rafale ont conduit une frappe cette semaine." },
+    { "terme": "objectif", "sens": "Cible militaire désignée : position, matériel, infrastructure ou groupe.", "usage": "Les objectifs visés étaient exclusivement militaires." },
+    { "terme": "sortie aérienne", "sens": "Mission d'un aéronef, du décollage à l'atterrissage.", "usage": "Les aéronefs ont réalisé seize sorties aériennes." },
+    { "terme": "groupe armé terroriste", "sens": "Catégorie employée pour désigner l'adversaire dans les opérations antiterroristes (GAT).", "usage": "La frappe a ciblé un groupe armé terroriste identifié comme tel." },
+    { "terme": "mise hors de combat", "sens": "Fait de rendre un combattant inapte à poursuivre le combat.", "usage": "Plusieurs combattants ont été mis hors de combat." },
+    { "terme": "dommages collatéraux", "sens": "Pertes civiles ou destructions non visées causées par une action militaire.", "usage": "Aucun dommage collatéral n'a été constaté." },
+    { "terme": "règles d'engagement", "sens": "Directives fixant quand et comment la force peut être employée (ROE).", "usage": "L'action a respecté les règles d'engagement." },
+    { "terme": "droit des conflits armés", "sens": "Droit international humanitaire encadrant la conduite des hostilités.", "usage": "La frappe est encadrée par le droit des conflits armés." },
+    { "terme": "processus de ciblage", "sens": "Procédure de validation d'un objectif avant une frappe.", "usage": "Le processus de ciblage a été scrupuleusement appliqué." },
+    { "terme": "effet majeur", "sens": "Résultat décisif à obtenir pour remplir la mission.", "usage": "L'effet majeur est d'interdire le franchissement du fleuve." },
+    { "terme": "idée de manœuvre", "sens": "Conception générale de l'action retenue par le chef.", "usage": "L'idée de manœuvre repose sur la surprise." },
+    { "terme": "élongation", "sens": "Distance considérable entre les bases et la zone d'action.", "usage": "L'élongation complique la logistique." },
+    { "terme": "appui", "sens": "Soutien feu, logistique ou renseignement apporté à une force.", "usage": "Nous intervenons en appui des forces partenaires." },
+    { "terme": "partenariat de combat", "sens": "Accompagnement d'une armée partenaire au combat.", "usage": "Le partenariat de combat a été renforcé." },
+    { "terme": "réarticulation", "sens": "Réorganisation ou réduction d'un dispositif déployé.", "usage": "La réarticulation du dispositif s'achèvera à l'été." },
+    { "terme": "désengagement", "sens": "Retrait progressif de forces d'une zone.", "usage": "Le désengagement se fait en bon ordre." },
+    { "terme": "posture", "sens": "Niveau de préparation et de déploiement adopté face à une menace.", "usage": "La posture de protection a été rehaussée." },
+    { "terme": "dissuasion", "sens": "Stratégie visant à empêcher l'agression par la menace de représailles, notamment nucléaires.", "usage": "La dissuasion reste la clé de voûte de notre défense." },
+    { "terme": "menace", "sens": "Danger identifié, caractérisé par une intention et une capacité.", "usage": "La menace terroriste demeure élevée." },
+    { "terme": "haute intensité", "sens": "Conflit majeur entre armées étatiques, avec pertes et consommation de munitions élevées.", "usage": "Nos armées se préparent au retour de la haute intensité." },
+    { "terme": "guerre hybride", "sens": "Combinaison d'actions militaires, cyber, informationnelles et économiques sous le seuil de la guerre ouverte.", "usage": "Nous faisons face à une stratégie hybride." },
+    { "terme": "lutte informatique d'influence", "sens": "Opérations militaires dans le champ informationnel pour détecter, caractériser et contrer les attaques (L2I).", "usage": "La doctrine de lutte informatique d'influence a été rendue publique en 2021." },
+    { "terme": "champ informationnel", "sens": "Espace des perceptions et de l'information considéré comme milieu de confrontation.", "usage": "La bataille se joue aussi dans le champ informationnel." },
+    { "terme": "renseignement", "sens": "Information recueillie et exploitée pour la décision.", "usage": "Le renseignement a permis de localiser le chef du groupe." },
+    { "terme": "mort pour la France", "sens": "Mention officielle attribuée aux militaires tombés en service.", "usage": "Le sergent est mort pour la France." },
+    { "terme": "hommage national", "sens": "Cérémonie officielle en l'honneur de militaires tués.", "usage": "Un hommage national sera rendu aux Invalides." },
+    { "terme": "point de situation", "sens": "Communication périodique sur l'état des opérations.", "usage": "L'état-major publie un point de situation hebdomadaire." },
+    { "terme": "compte rendu", "sens": "Rapport transmis à l'échelon supérieur après une action.", "usage": "Compte rendu dès l'atteinte de l'objectif." },
+    { "terme": "chef d'état-major des armées", "sens": "Plus haut responsable militaire, conseiller du président de la République (CEMA).", "usage": "Le CEMA a été entendu par la commission de la Défense." },
+    { "terme": "chaîne de commandement", "sens": "Hiérarchie par laquelle transitent ordres et comptes rendus.", "usage": "La décision a remonté toute la chaîne de commandement." },
+    { "terme": "autonomie stratégique", "sens": "Capacité à décider et agir seul, sans dépendre d'alliés.", "usage": "L'autonomie stratégique européenne est un objectif." },
+    { "terme": "loi de programmation militaire", "sens": "Loi pluriannuelle fixant les moyens des armées (LPM).", "usage": "La LPM prévoit une hausse des crédits." },
+    { "terme": "économie de guerre", "sens": "Mobilisation de l'industrie pour produire plus vite des armements.", "usage": "Nous entrons dans une économie de guerre." },
+    { "terme": "capacités", "sens": "Ensemble des moyens humains et matériels disponibles pour une fonction.", "usage": "Nous comblons nos lacunes capacitaires." },
+    { "terme": "interopérabilité", "sens": "Capacité à opérer avec les forces alliées.", "usage": "L'exercice vise à renforcer l'interopérabilité avec l'OTAN." },
+    { "terme": "montée en puissance", "sens": "Accroissement progressif d'un dispositif ou d'une capacité.", "usage": "La montée en puissance de la réserve se poursuit." },
+    { "terme": "RETEX", "sens": "Retour d'expérience tiré d'une opération.", "usage": "Le RETEX de l'opération est en cours." },
+    { "terme": "nation hôte", "sens": "État sur le territoire duquel stationnent des forces étrangères.", "usage": "Nous agissons à la demande de la nation hôte." }
+  ],
+  "formules": [
+    "L'opération a permis de neutraliser {chiffre}.",
+    "La frappe a ciblé un groupe armé terroriste identifié comme tel.",
+    "Cette action a été conduite dans le strict respect du droit international humanitaire.",
+    "Aucun dommage collatéral n'est à déplorer à ce stade.",
+    "Les objectifs visés étaient exclusivement militaires.",
+    "La situation est sous contrôle.",
+    "Nos forces restent pleinement engagées sur le théâtre.",
+    "L'opération s'est déroulée conformément aux règles d'engagement.",
+    "Le ministère maintient fermement sa version des faits.",
+    "Le ministère émet de nombreuses réserves quant à la méthodologie retenue.",
+    "Les allégations visant l'action de la force sont non fondées.",
+    "Il est mort pour la France dans l'accomplissement de sa mission.",
+    "Pour la sécurité de nos soldats, nous ne commentons pas les opérations en cours.",
+    "L'effet recherché a été atteint.",
+    "Nous restons vigilants et prêts à intervenir.",
+    "Avec {element}, l'adversaire cherche à tester notre détermination.",
+    "La France assume pleinement ses responsabilités aux côtés de ses partenaires.",
+    "La riposte sera proportionnée et au moment que nous choisirons.",
+    "Un bilan précis sera communiqué ultérieurement.",
+    "Le renseignement a permis d'identifier {element}.",
+    "Nous dénonçons une manœuvre informationnelle visant à discréditer nos forces.",
+    "Depuis {evenement}, la posture de protection a été rehaussée.",
+    "Toutes les précautions ont été prises pour épargner la population civile.",
+    "Les militaires engagés ont fait preuve d'un grand professionnalisme.",
+    "Entre {a} et {b}, le rapport de forces évolue.",
+    "La menace demeure élevée concernant {sujet}.",
+    "Il faut gagner la guerre avant la guerre.",
+    "La mission continue.",
+    "Sur {sujet}, nos armées sont prêtes à faire face à un engagement de haute intensité.",
+    "C'est ce que la doctrine appelle « {terme} » : un effet, pas une fin en soi."
+  ],
+  "connecteurs": [
+    "Au bilan,",
+    "À l'issue de l'opération,",
+    "Cette semaine,",
+    "Sur le théâtre,",
+    "En appui de nos partenaires,",
+    "Dans le cadre de l'opération,",
+    "Conformément aux règles d'engagement,",
+    "À ce stade,",
+    "En coordination avec la coalition,",
+    "Dans la nuit,",
+    "Sur décision du président de la République,",
+    "En conséquence,",
+    "Dans un premier temps,",
+    "Dans un second temps,"
+  ],
+  "euphemismes": [
+    { "brut": "tuer", "edl": "neutraliser", "commentaire": "Verbe des communiqués d'état-major et de Barkhane ; laisse entendre le résultat sans préciser s'il s'agit de morts, de blessés ou de prisonniers." },
+    { "brut": "civils tués", "edl": "dommages collatéraux", "commentaire": "Formule issue du vocabulaire du ciblage américain ; les morts deviennent des « dommages »." },
+    { "brut": "bombardement", "edl": "frappe chirurgicale", "commentaire": "Image de précision médicale popularisée pendant la guerre du Golfe (1991) et le mythe de la « guerre propre »." },
+    { "brut": "tirs sur ses propres troupes", "edl": "tirs amis", "commentaire": "Euphémisme recensé par les guides de rédaction officiels." },
+    { "brut": "retrait", "edl": "réarticulation du dispositif", "commentaire": "Présente une réduction ou un départ comme une réorganisation maîtrisée." },
+    { "brut": "défaite ou départ forcé", "edl": "désengagement en bon ordre", "commentaire": "Met l'accent sur la manière plutôt que sur l'issue." },
+    { "brut": "guerre", "edl": "opération", "commentaire": "Les engagements extérieurs sont nommés « opérations » (Serval, Barkhane, Chammal) ; à l'extrême, « opération militaire spéciale » côté russe." },
+    { "brut": "ennemis tués", "edl": "combattants mis hors de combat", "commentaire": "Comptabilité qui agrège tués, blessés et capturés." },
+    { "brut": "destruction de véhicules", "edl": "neutralisation de véhicules", "commentaire": "« L'emploi de 4 obus Bonus a permis la neutralisation de 8 véhicules blindés » (compte rendu Chammal, 2018)." },
+    { "brut": "bavure", "edl": "frappe contre un groupe armé identifié comme tel", "commentaire": "Rhétorique de démenti du communiqué du 30 mars 2021 sur la frappe de Bounti, contestée par un rapport de l'ONU." },
+    { "brut": "propagande", "edl": "influence", "commentaire": "Les actions dans le champ informationnel sont désignées comme lutte informatique d'influence ou communication opérationnelle." },
+    { "brut": "cible humaine", "edl": "objectif", "commentaire": "Dépersonnalise la personne visée." },
+    { "brut": "soldat tué", "edl": "soldat tombé", "commentaire": "Registre de l'honneur et du sacrifice, avec la mention « mort pour la France »." },
+    { "brut": "vente d'armes", "edl": "exportations de défense", "commentaire": "Vocabulaire industriel et diplomatique du partenariat stratégique." },
+    { "brut": "pertes civiles inconnues", "edl": "aucune victime civile recensée à ce stade", "commentaire": "Formule qui dépend de ce que l'institution a choisi de vérifier." }
+  ],
+  "substitutions": [
+    { "de": "tuer", "vers": "neutraliser" },
+    { "de": "bombarder", "vers": "frapper" },
+    { "de": "cible", "vers": "objectif" },
+    { "de": "zone de guerre", "vers": "théâtre d'opérations" },
+    { "de": "guerre", "vers": "opération" },
+    { "de": "ennemi", "vers": "adversaire" },
+    { "de": "terroristes", "vers": "groupe armé terroriste" },
+    { "de": "retrait", "vers": "désengagement" },
+    { "de": "propagande", "vers": "influence" },
+    { "de": "espionnage", "vers": "renseignement" },
+    { "de": "but", "vers": "effet majeur" },
+    { "de": "plan", "vers": "idée de manœuvre" },
+    { "de": "danger", "vers": "menace" },
+    { "de": "aide", "vers": "appui" },
+    { "de": "distance", "vers": "élongation" },
+    { "de": "bilan", "vers": "compte rendu" },
+    { "de": "vol", "vers": "sortie aérienne" },
+    { "de": "avion", "vers": "aéronef" },
+    { "de": "erreur", "vers": "incident" },
+    { "de": "moyens", "vers": "capacités" },
+    { "de": "pays d'accueil", "vers": "nation hôte" },
+    { "de": "leçons", "vers": "retour d'expérience" },
+    { "de": "renforcement", "vers": "montée en puissance" }
+  ],
+  "cadres": [
+    { "nom": "Menace", "question": "Quelle menace représente {element}, et à quelle échéance ?", "explication": "Toute situation est lue en termes d'intention et de capacité adverses." },
+    { "nom": "Rapport de forces", "question": "Entre {a} et {b}, quel est le rapport de forces réel ?", "explication": "Comparaison des effectifs, matériels, moral et soutiens." },
+    { "nom": "Effet majeur", "question": "Quel effet faut-il obtenir sur {sujet} pour remplir la mission ?", "explication": "Le raisonnement part du résultat décisif à atteindre." },
+    { "nom": "Légitimité juridique", "question": "Sur quel fondement juridique repose l'action envisagée après {evenement} ?", "explication": "Mandat, légitime défense, demande de la nation hôte, droit des conflits armés." },
+    { "nom": "Proportionnalité", "question": "La réponse envisagée sur {sujet} est-elle nécessaire, proportionnée et discriminante ?", "explication": "Grille du droit international humanitaire appliquée au ciblage." },
+    { "nom": "Guerre informationnelle", "question": "Quel récit l'adversaire cherche-t-il à imposer sur {evenement} ?", "explication": "L'information est un champ de confrontation à part entière." },
+    { "nom": "Escalade", "question": "Avec {element}, quel est le risque d'escalade ?", "explication": "Lecture en termes de seuils, de signaux et de dissuasion." },
+    { "nom": "Capacités", "question": "De quels moyens disposons-nous réellement pour {sujet} ?", "explication": "Écart entre ambitions stratégiques et capacités disponibles." }
+  ],
+  "structures": [
+    {
+      "nom": "Communiqué d'état-major",
+      "description": "Point de situation ou communiqué d'opération : cadre, action, bilan, conformité au droit, suite.",
+      "etapes": [
+        {
+          "titre": "Cadre de l'opération",
+          "role": "contexte",
+          "consigne": "Situer l'action dans une opération nommée, un mandat et une période.",
+          "gabarits": [
+            "Dans le cadre de l'opération en cours, les forces françaises ont été engagées après {evenement}.",
+            "Cette semaine, les aéronefs de la coalition ont réalisé {chiffre}."
+          ]
+        },
+        {
+          "titre": "Action",
+          "role": "faits",
+          "consigne": "Décrire l'action de façon factuelle et impersonnelle, sans détail tactique sensible.",
+          "gabarits": [
+            "Une frappe a visé un groupe armé terroriste identifié comme tel.",
+            "Le renseignement a permis de localiser {element}."
+          ]
+        },
+        {
+          "titre": "Bilan",
+          "role": "analyse",
+          "consigne": "Donner un bilan chiffré, souvent approximatif ou cumulé, et l'absence de pertes amies.",
+          "gabarits": [
+            "Au bilan, l'action a permis de neutraliser {chiffre}.",
+            "Aucune perte n'est à déplorer dans les rangs français."
+          ]
+        },
+        {
+          "titre": "Conformité",
+          "role": "conclusion",
+          "consigne": "Affirmer le respect du droit et des règles d'engagement.",
+          "gabarits": [
+            "L'opération a été conduite dans le strict respect du droit des conflits armés.",
+            "Toutes les précautions ont été prises pour éviter les dommages collatéraux."
+          ]
+        },
+        {
+          "titre": "Suite",
+          "role": "projection",
+          "consigne": "Indiquer la poursuite de l'engagement et la coopération avec les partenaires.",
+          "gabarits": [
+            "Les opérations se poursuivent, en coordination avec nos partenaires.",
+            "La force reste mobilisée sur {sujet}."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Méthode de raisonnement tactique",
+      "description": "Démarche d'ordre d'opération : situation, mission, effet majeur, idée de manœuvre, exécution.",
+      "etapes": [
+        {
+          "titre": "Situation",
+          "role": "contexte",
+          "consigne": "Décrire le terrain, l'ennemi et les forces amies.",
+          "gabarits": [
+            "Situation : depuis {evenement}, l'adversaire a renforcé ses positions.",
+            "Entre {a} et {b}, le rapport de forces reste incertain."
+          ]
+        },
+        {
+          "titre": "Mission",
+          "role": "decision",
+          "consigne": "Énoncer la mission reçue en une phrase à l'infinitif.",
+          "gabarits": [
+            "Mission : sécuriser {sujet} dans les délais impartis.",
+            "La mission reçue est claire : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Effet majeur",
+          "role": "analyse",
+          "consigne": "Identifier le résultat décisif sans lequel la mission échoue.",
+          "gabarits": [
+            "Effet majeur : interdire {element} à l'adversaire avant la nuit.",
+            "Tout repose sur un effet majeur : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Idée de manœuvre",
+          "role": "hypothese",
+          "consigne": "Présenter la manœuvre retenue et l'hypothèse ennemie la plus dangereuse.",
+          "gabarits": [
+            "Dans un premier temps, fixer l'adversaire ; dans un second temps, le déborder.",
+            "Hypothèse la plus dangereuse : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Exécution",
+          "role": "projection",
+          "consigne": "Fixer la conduite, les échéances et les comptes rendus attendus.",
+          "gabarits": [
+            "Les unités seront engagées par bonds successifs, avec un point de situation toutes les heures.",
+            "Compte rendu dès l'atteinte de l'objectif."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Riposte informationnelle",
+      "description": "Démenti institutionnel face à une mise en cause : réaffirmation, contestation de la méthode, cadre légal, fermeté.",
+      "etapes": [
+        {
+          "titre": "Réaffirmation",
+          "role": "faits",
+          "consigne": "Réaffirmer la version officielle sans concession.",
+          "gabarits": [
+            "Le ministère maintient avec constance et réaffirme avec force : {conclusion}.",
+            "La frappe visait exclusivement un objectif militaire."
+          ]
+        },
+        {
+          "titre": "Contestation de la méthode",
+          "role": "analyse",
+          "consigne": "Mettre en doute la méthodologie et les sources de l'accusation.",
+          "gabarits": [
+            "Le rapport oppose des témoignages non vérifiables à des faits établis.",
+            "Le ministère émet de nombreuses réserves concernant {element}."
+          ]
+        },
+        {
+          "titre": "Cadre légal",
+          "role": "contexte",
+          "consigne": "Rappeler le cadre juridique et le processus de ciblage.",
+          "gabarits": [
+            "L'action de nos forces est encadrée par les exigences du droit international humanitaire.",
+            "Le processus de ciblage a été scrupuleusement respecté."
+          ]
+        },
+        {
+          "titre": "Fermeté",
+          "role": "conclusion",
+          "consigne": "Clore en défendant l'honneur des forces.",
+          "gabarits": [
+            "Les allégations portées sur l'action de la force sont non fondées.",
+            "Nous ne laisserons pas {element} ternir l'honneur de nos soldats."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Chiffres cumulés et souvent approximatifs (« une quinzaine », « plus de 600 neutralisés depuis 2015 »), précis pour les moyens engagés et les pertes amies, silencieux ou différés pour les pertes adverses et civiles ; les budgets se disent en milliards de LPM ou en pourcentage du PIB.",
+    "unites": [
+      "frappes",
+      "sorties aériennes",
+      "objectifs neutralisés",
+      "terroristes neutralisés",
+      "militaires déployés",
+      "milliards d'euros de loi de programmation militaire",
+      "% du PIB consacré à la défense",
+      "jours de munitions disponibles"
+    ],
+    "formulations": [
+      "Au bilan, l'opération a permis de neutraliser {chiffre}.",
+      "Depuis le début de l'opération, nos aéronefs ont effectué {chiffre}.",
+      "Le dispositif compte désormais {chiffre}, en appui de nos partenaires.",
+      "La loi de programmation militaire prévoit {chiffre} pour {sujet}.",
+      "Entre {a} et {b}, le rapport de forces s'établit à {chiffre}.",
+      "Aucune victime civile n'a été recensée à ce stade.",
+      "Un bilan plus précis sera communiqué après évaluation des dommages."
+    ]
+  },
+  "metaphores": [
+    "le théâtre des opérations",
+    "la ligne de front",
+    "le bouclier et l'épée",
+    "le brouillard de la guerre",
+    "la frappe chirurgicale",
+    "le centre de gravité",
+    "la montée aux extrêmes",
+    "l'économie de guerre",
+    "le réarmement",
+    "l'arc de crise",
+    "la guerre des récits",
+    "la tête de pont"
+  ],
+  "pieges": [
+    "Euphémisation de la mort (neutraliser, dommages collatéraux, mis hors de combat) qui rend les bilans illisibles pour le public.",
+    "Mythe de la « guerre propre » et du « zéro mort », démenti a posteriori comme après la guerre du Golfe.",
+    "Opacité des bilans adverses et civils, alors que les moyens engagés et les pertes amies sont détaillés.",
+    "Comptabilité cumulée invérifiable (« plus de 600 neutralisés depuis 2015 »).",
+    "Jargon et sigles (OPEX, GAT, ROE, RETEX, LPM) qui excluent le non-initié.",
+    "Rhétorique de dénégation face aux enquêtes indépendantes, qui fragilise la crédibilité quand les faits sont contestés.",
+    "Militarisation du discours civil : la métaphore guerrière transposée à la santé, à l'économie ou au maintien de l'ordre.",
+    "Confusion entre information du public et influence dans le champ informationnel.",
+    "Secret opérationnel utilisé comme fin de non-recevoir."
+  ],
+  "registres": {
+    "institutionnel": "Communiqué d'état-major sobre et impersonnel : opération nommée, « au bilan », chiffres arrondis, respect du droit, hommage aux soldats.",
+    "technique": "Entre militaires : sigles, méthode de raisonnement tactique, ami et ennemi, effet majeur, compte rendu, RETEX, élongation.",
+    "vulgarisation": "« Nos soldats protègent les Français » : portraits de militaires, récits de mission, matériels spectaculaires et pédagogie de la dissuasion.",
+    "critique": "Ses détracteurs parlent de « novlangue militaire », de « guerre propre », de bavures maquillées en « frappes ciblées » et de « comptabilité macabre »."
+  },
+  "visuel": {
+    "palette": ["#556B2F", "#1B2A41", "#C2B280", "#6E7B85", "#F2F2F2"],
+    "motifs": [
+      { "fr": "carte tactique avec symboles militaires normalisés", "en": "tactical map with standard NATO military symbols" },
+      { "fr": "flèches de manœuvre animées sur la carte", "en": "animated maneuver arrows on the map" },
+      { "fr": "vue thermique de drone avec réticule", "en": "thermal drone feed with targeting reticle" },
+      { "fr": "imagerie satellite en zoom progressif", "en": "progressive zoom on satellite imagery" },
+      { "fr": "avion de chasse en contre-jour au décollage", "en": "fighter jet backlit at takeoff" },
+      { "fr": "cocarde tricolore sur un fuselage", "en": "French tricolour roundel on a fuselage" },
+      { "fr": "prise d'armes et drapeau au vent", "en": "military ceremony with flag in the wind" },
+      { "fr": "sable soulevé au ralenti par un hélicoptère", "en": "slow-motion sand blown by a helicopter" },
+      { "fr": "écran radar à balayage", "en": "sweeping radar screen" },
+      { "fr": "organigramme de chaîne de commandement", "en": "chain-of-command org chart" },
+      { "fr": "globe avec théâtres d'opérations surlignés", "en": "globe with highlighted theaters of operations" },
+      { "fr": "interface tête haute avec données", "en": "head-up display overlay with data" }
+    ],
+    "pictogrammes": [
+      { "fr": "bouclier", "en": "shield" },
+      { "fr": "réticule de visée", "en": "crosshair" },
+      { "fr": "étoiles de grade", "en": "rank stars" },
+      { "fr": "cocarde", "en": "roundel" },
+      { "fr": "avion de chasse", "en": "fighter jet" },
+      { "fr": "navire de guerre", "en": "warship" },
+      { "fr": "char", "en": "tank" },
+      { "fr": "parachute", "en": "parachute" },
+      { "fr": "radar", "en": "radar" },
+      { "fr": "drone", "en": "drone" },
+      { "fr": "casque de combat", "en": "combat helmet" },
+      { "fr": "boussole", "en": "compass" }
+    ],
+    "typographie": "Sans-serif géométrique condensée en capitales espacées, accents de lettrage au pochoir pour les titres et chiffres en chasse fixe façon affichage tête haute.",
+    "style_motion": "Montage solennel et nerveux : matériels en contre-jour et au ralenti, surimpressions de type affichage tête haute ou caméra thermique, cartes tactiques aux flèches animées, palette désaturée olive, sable et marine, musique épique et clôture sur insigne et devise.",
+    "style_motion_en": "Solemn yet punchy military recruitment-style edit: backlit slow-motion hardware, HUD and thermal-camera overlays, tactical maps with animated arrows, desaturated olive, sand and navy palette, epic score, ending on a unit insignia and motto."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : communiqué du ministère des Armées du 30 mars 2021 répondant au rapport de la MINUSMA sur la frappe de Bounti (Mali), cité par l'AFP.", "texte": "« une frappe aérienne ciblant un groupe armé terroriste identifié comme tel » ; « de nombreuses réserves quant à la méthodologie retenue » ; « les allégations portées sur l'action de la force et sur son intégrité sont non fondées »." },
+    { "contexte": "Extrait réel : compte rendu hebdomadaire de l'opération Chammal (semaine du 28 novembre au 4 décembre 2018), reproduit par Airwars.", "texte": "« Les Rafale français ont conduit 1 frappe cette semaine sur des combattants de Daech. » ; « Au bilan, l'emploi de 4 obus Bonus a permis la neutralisation de 8 véhicules blindés. »" },
+    { "contexte": "Formulation typique et illustrative (non attribuée) d'un communiqué annonçant la mort d'un militaire en opération.", "texte": "« C'est avec une profonde tristesse que le ministère annonce la mort d'un militaire, tombé lors d'une opération de reconnaissance. Il est mort pour la France dans l'accomplissement de sa mission. »" }
+  ],
+  "sources": [
+    { "titre": "Chronique étymologique : Retour au sens originel", "auteur": "Michel Casevitz (Les Belles Lettres)", "url": "https://laviedesclassiques.fr/sites/default/files/2019-03/retour_au_sens_originel.pdf", "apport": "Analyse de « neutraliser » comme euphémisme de « tuer » dans un communiqué d'armée repris par la presse." },
+    { "titre": "Euphémisme (Clés de la rédaction)", "auteur": "Gouvernement du Canada, Portail linguistique", "url": "https://nos-langues.canada.ca/fr/cles-de-la-redaction/euphemisme", "apport": "Euphémismes militaires recensés : dommages collatéraux, frappe ciblée ou chirurgicale, tirs amis." },
+    { "titre": "French Military Strike Report, 28 nov.–4 déc. 2018", "auteur": "Airwars", "url": "https://airwars.org/civilian-casualties/cs1864-december-4-2018/", "apport": "Formulations exactes des comptes rendus Chammal : frappes, sorties, objectifs neutralisés, « au bilan »." },
+    { "titre": "La France réfute toute bavure au Mali et émet des « réserves » sur le rapport de l'ONU", "auteur": "AFP / La Libre Belgique", "url": "https://www.lalibre.be/international/afrique/2021/03/30/la-france-refute-toute-bavure-au-mali-et-emet-des-reserves-sur-le-rapport-de-lonu-7KSIYZ76ANG7PJTJOZJLLRLKDM/", "apport": "Rhétorique de démenti du ministère des Armées sur la frappe de Bounti." },
+    { "titre": "Sahel : plus de 600 terroristes neutralisés par l'armée française depuis 2015", "auteur": "Le360 Afrique", "url": "https://afrique.le360.ma/mali/societe/2019/02/28/25278-sahel-plus-de-600-terroristes-neutralises-par-larmee-francaise-depuis-2015-25278", "apport": "Exemple de bilan cumulé exprimé en « neutralisés »." },
+    { "titre": "Doctrine militaire de lutte informatique d'influence", "auteur": "Aeromorning", "url": "https://aeromorning.com/doctrine-militaire-de-lutte-informatique-dinfluence/", "apport": "Présentation de la doctrine L2I (2021) et de sa définition officielle." },
+    { "titre": "Opération Daguet (Golfe), dossier pédagogique", "auteur": "Ministère des Armées", "url": "https://archives.defense.gouv.fr/content/download/229374/2556663/file/Op%C3%A9ration%20Daguet%20(Golfe).pdf", "apport": "Idéal de guerre « zéro mort » et images sans morts pendant la guerre du Golfe." },
+    { "titre": "La presse française et la première guerre du Golfe", "auteur": "Marc Hecker (Ifri)", "url": "https://www.ifri.org/fr/livres/la-presse-francaise-et-la-premiere-guerre-du-golfe", "apport": "Consensus médiatique et dénonciation tardive du mythe de la « guerre propre »." },
+    { "titre": "Échange entre le CEMA et la commission de la Défense sur l'opération menée à Bounti", "auteur": "Assemblée nationale", "url": "https://www2.assemblee-nationale.fr/15/commissions-permanentes/commission-de-la-defense/secretariat/communiques-de-presse/echange-entre-le-chef-d-etat-major-des-armees-le-general-d-armee-francois-lecointre-et-le-bureau-de-la-commission-de-la-defense-sur-l-operation-menee-a-bounti-mali-le-3-janvier-2021", "apport": "Contrôle parlementaire de la communication militaire après une mise en cause." }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "id": "droit",
+  "nom": "Droit / Justice",
+  "famille": "metier",
+  "categorie": "Justice",
+  "icone": "⚖️",
+  "couleur": "#6D4C41",
+  "description": "Éléments de langage du droit et de la justice en France : syllogisme juridique et qualification des faits, rédaction des jugements et arrêts (style direct depuis 2019, motivation enrichie), conclusions et plaidoiries d'avocats, adages latins et vocabulaire du Palais. La fiche couvre aussi les euphémismes procéduraux et la critique d'un langage réputé opaque pour les justiciables.",
+  "posture": "Le juriste parle au nom de la règle : il vise le texte, qualifie les faits et en tire une conséquence présentée comme nécessaire, sur un ton impersonnel et assertif. L'avocat, lui, plaide une thèse en échelonnant demandes principales et subsidiaires.",
+  "valeurs": [
+    "légalité et primauté de la règle de droit",
+    "sécurité juridique",
+    "présomption d'innocence",
+    "principe du contradictoire et droits de la défense",
+    "impartialité du juge",
+    "obligation de motiver les décisions",
+    "égalité devant la loi",
+    "proportionnalité"
+  ],
+  "vocabulaire": [
+    { "terme": "en l'espèce", "sens": "Dans le cas concret soumis au juge, par opposition à la règle générale.", "usage": "En l'espèce, le contrat n'avait pas été signé." },
+    { "terme": "qualification juridique", "sens": "Opération qui rattache un fait à une catégorie juridique dont découle un régime.", "usage": "La qualification juridique des faits commande la peine encourue." },
+    { "terme": "syllogisme juridique", "sens": "Raisonnement en trois temps : règle (majeure), faits qualifiés (mineure), conclusion.", "usage": "Le jugement est construit comme un syllogisme juridique." },
+    { "terme": "majeure", "sens": "Règle de droit applicable, première prémisse du syllogisme.", "usage": "La majeure est fournie par l'article 1240 du code civil." },
+    { "terme": "mineure", "sens": "Exposé des faits qualifiés, confrontés à la règle.", "usage": "La mineure établit que le dommage résulte bien d'une faute." },
+    { "terme": "moyen", "sens": "Argument juridique invoqué au soutien d'une prétention, notamment d'un pourvoi.", "usage": "Le moyen n'est pas fondé." },
+    { "terme": "pourvoi en cassation", "sens": "Recours devant la Cour de cassation, qui juge le droit et non les faits.", "usage": "La société a formé un pourvoi en cassation." },
+    { "terme": "arrêt attaqué", "sens": "Décision contestée devant la juridiction supérieure.", "usage": "Selon l'arrêt attaqué, le salarié a été licencié en 2021." },
+    { "terme": "visa", "sens": "Mention des textes ou principes sur lesquels se fonde la décision (« Vu l'article… »).", "usage": "La cassation est prononcée au visa de l'article 1240 du code civil." },
+    { "terme": "chapeau", "sens": "Énoncé abstrait de la règle placé en tête de la réponse de la Cour.", "usage": "Le chapeau rappelle le principe avant de l'appliquer." },
+    { "terme": "motivation", "sens": "Exposé des raisons de fait et de droit qui justifient une décision.", "usage": "Le défaut de motivation entraîne la cassation." },
+    { "terme": "motivation enrichie", "sens": "Motivation développée, réservée aux arrêts importants, qui explicite sources, méthode d'interprétation et solutions écartées.", "usage": "Le revirement est rendu en motivation enrichie." },
+    { "terme": "style direct", "sens": "Rédaction en paragraphes numérotés et phrases autonomes, qui a remplacé les « attendu que » et les « considérant que ».", "usage": "Depuis 2019, les arrêts sont rédigés en style direct." },
+    { "terme": "dispositif", "sens": "Partie finale de la décision qui tranche le litige, introduite par « PAR CES MOTIFS ».", "usage": "Seul le dispositif a l'autorité de la chose jugée." },
+    { "terme": "casser et annuler", "sens": "Pour la Cour de cassation, anéantir la décision attaquée.", "usage": "La Cour casse et annule l'arrêt en toutes ses dispositions." },
+    { "terme": "renvoi", "sens": "Transmission de l'affaire à une autre juridiction pour qu'elle soit rejugée.", "usage": "L'affaire est renvoyée devant la cour d'appel de Lyon." },
+    { "terme": "juges du fond", "sens": "Juridictions de première instance et d'appel, qui apprécient les faits.", "usage": "Les juges du fond ont souverainement apprécié les preuves." },
+    { "terme": "appréciation souveraine", "sens": "Pouvoir des juges du fond d'apprécier les faits, que la Cour de cassation ne contrôle pas.", "usage": "Le montant du préjudice relève de l'appréciation souveraine des juges du fond." },
+    { "terme": "manque de base légale", "sens": "Motivation insuffisante pour permettre de vérifier que la loi a été correctement appliquée.", "usage": "La cour d'appel a privé sa décision de base légale." },
+    { "terme": "violation de la loi", "sens": "Mauvaise application ou interprétation d'une règle de droit par le juge.", "usage": "En statuant ainsi, la cour d'appel a violé le texte susvisé." },
+    { "terme": "revirement de jurisprudence", "sens": "Abandon par une juridiction d'une solution qu'elle retenait jusqu'alors.", "usage": "Cet arrêt opère un revirement de jurisprudence." },
+    { "terme": "jurisprudence constante", "sens": "Solution réaffirmée de manière stable par les juridictions.", "usage": "Selon une jurisprudence constante, la preuve est libre en matière commerciale." },
+    { "terme": "débouter", "sens": "Rejeter les demandes d'une partie.", "usage": "Le tribunal déboute le demandeur de l'ensemble de ses demandes." },
+    { "terme": "faire droit", "sens": "Accueillir une demande.", "usage": "La cour fait droit à la demande d'indemnisation." },
+    { "terme": "demandeur", "sens": "Partie qui engage l'action en justice.", "usage": "Il appartient au demandeur de prouver ses allégations." },
+    { "terme": "défendeur", "sens": "Partie contre laquelle l'action est engagée.", "usage": "Le défendeur conteste la compétence du tribunal." },
+    { "terme": "prévenu", "sens": "Personne poursuivie devant un tribunal correctionnel ou de police.", "usage": "Le prévenu a comparu libre." },
+    { "terme": "mis en examen", "sens": "Personne contre laquelle existent des indices graves ou concordants, dans une information judiciaire.", "usage": "Il a été mis en examen pour escroquerie." },
+    { "terme": "partie civile", "sens": "Victime qui demande réparation dans le cadre d'un procès pénal.", "usage": "Trois personnes se sont constituées parties civiles." },
+    { "terme": "préjudice", "sens": "Dommage subi, qui ouvre droit à réparation.", "usage": "Le préjudice moral est évalué à 5 000 euros." },
+    { "terme": "dommages et intérêts", "sens": "Somme d'argent allouée pour réparer un préjudice.", "usage": "La société est condamnée à verser des dommages et intérêts." },
+    { "terme": "lien de causalité", "sens": "Relation entre la faute (ou le fait) et le dommage, condition de la responsabilité.", "usage": "Le lien de causalité entre la chute et le défaut d'entretien est établi." },
+    { "terme": "faisceau d'indices", "sens": "Ensemble d'éléments convergents qui, pris ensemble, emportent la conviction du juge.", "usage": "Un faisceau d'indices caractérise la relation de travail." },
+    { "terme": "charge de la preuve", "sens": "Obligation pour une partie de prouver ce qu'elle allègue.", "usage": "La charge de la preuve pèse sur le demandeur." },
+    { "terme": "prescription", "sens": "Extinction d'une action en justice par l'écoulement d'un délai.", "usage": "L'action est prescrite depuis 2020." },
+    { "terme": "ordre public", "sens": "Ensemble de règles impératives auxquelles les parties ne peuvent déroger.", "usage": "Ces dispositions sont d'ordre public." },
+    { "terme": "principe du contradictoire", "sens": "Droit de chaque partie de connaître et discuter les arguments et pièces de l'autre.", "usage": "Le juge doit faire respecter le principe du contradictoire." },
+    { "terme": "conclusions", "sens": "Écritures dans lesquelles l'avocat expose les prétentions et moyens de son client.", "usage": "Les conclusions ont été déposées hors délai." },
+    { "terme": "à titre subsidiaire", "sens": "Demande présentée pour le cas où la demande principale serait rejetée.", "usage": "À titre subsidiaire, il sollicite une réduction de la peine." },
+    { "terme": "contrôle de proportionnalité", "sens": "Vérification qu'une atteinte à un droit fondamental est nécessaire et mesurée au regard du but poursuivi.", "usage": "La Cour exerce un contrôle de proportionnalité." },
+    { "terme": "contrôle de conventionnalité", "sens": "Vérification de la conformité d'une loi aux traités internationaux, notamment la Convention européenne des droits de l'homme.", "usage": "Le juge a écarté la loi après un contrôle de conventionnalité." },
+    { "terme": "in dubio pro reo", "sens": "Adage latin : le doute profite à l'accusé.", "usage": "En application de l'adage in dubio pro reo, le prévenu est relaxé." },
+    { "terme": "non bis in idem", "sens": "Adage latin : nul ne peut être poursuivi ou puni deux fois pour les mêmes faits.", "usage": "La règle non bis in idem s'oppose à de nouvelles poursuites." },
+    { "terme": "nul n'est censé ignorer la loi", "sens": "Adage selon lequel nul ne peut invoquer son ignorance de la loi pour y échapper.", "usage": "Nul n'est censé ignorer la loi, rappelle le tribunal." },
+    { "terme": "susvisé", "sens": "Mentionné plus haut dans le texte, en particulier au visa.", "usage": "La cour d'appel a violé le texte susvisé." }
+  ],
+  "formules": [
+    "En l'espèce, au vu des pièces versées aux débats, {conclusion}.",
+    "Aux termes du texte applicable, {conclusion}.",
+    "Il n'y a pas lieu de statuer sur {element}.",
+    "Les juges du fond ont souverainement apprécié {element}.",
+    "Le moyen n'est pas fondé.",
+    "En statuant ainsi, la cour d'appel a violé le texte susvisé.",
+    "Dès lors, la demande concernant {element} ne saurait prospérer.",
+    "Il convient de rappeler les termes du débat concernant {sujet}.",
+    "Sous réserve de l'appréciation souveraine des juges du fond, {conclusion}.",
+    "Mon client conteste formellement {element}.",
+    "À titre principal, il est demandé au tribunal de constater la nullité de la procédure.",
+    "À titre subsidiaire, et pour le cas où le tribunal ne ferait pas droit à cette demande, il conviendra de réduire le montant des dommages et intérêts.",
+    "Le doute doit profiter à l'accusé.",
+    "Nul n'est censé ignorer la loi.",
+    "La présomption d'innocence doit être pleinement respectée.",
+    "Les faits reprochés ne sont pas constitutifs d'une infraction pénale.",
+    "Il appartient au demandeur de rapporter la preuve de ses allégations.",
+    "Un faisceau d'indices graves, précis et concordants permet de retenir {element}.",
+    "Reste à déterminer la qualification juridique applicable pour {element}.",
+    "Depuis {evenement}, la jurisprudence est constante sur ce point.",
+    "Ces dispositions sont d'ordre public.",
+    "Le terme « {terme} » doit être entendu au sens juridique strict.",
+    "La décision est susceptible d'appel dans un délai d'un mois à compter de sa notification.",
+    "Mon client se réserve le droit d'agir concernant {element}.",
+    "Il n'appartient pas au juge de se substituer au législateur.",
+    "Pour {public}, cette décision pourrait faire jurisprudence.",
+    "La justice suivra son cours.",
+    "Je n'ai pas d'autre observation : je m'en rapporte à la sagesse du tribunal.",
+    "Le préjudice causé par {evenement} doit être intégralement réparé.",
+    "Le lien de causalité entre {a} et {b} n'est pas démontré.",
+    "PAR CES MOTIFS, la Cour rejette le pourvoi.",
+    "Nous ne ferons aucun commentaire sur une procédure en cours."
+  ],
+  "connecteurs": [
+    "En l'espèce,",
+    "Or,",
+    "Dès lors,",
+    "Par conséquent,",
+    "En effet,",
+    "Partant,",
+    "Au surplus,",
+    "En tout état de cause,",
+    "À titre principal,",
+    "À titre subsidiaire,",
+    "Cela étant,",
+    "En conséquence,",
+    "Sur ce,"
+  ],
+  "euphemismes": [
+    { "brut": "prison", "edl": "peine privative de liberté", "commentaire": "Terme du code pénal et des jugements ; dans les médias on parle aussi d'« incarcération »." },
+    { "brut": "prisonnier", "edl": "personne détenue", "commentaire": "Formulation de l'administration pénitentiaire, qui met la personne avant son statut." },
+    { "brut": "suspect", "edl": "personne mise en cause", "commentaire": "Langage policier et judiciaire qui préserve la présomption d'innocence." },
+    { "brut": "le coupable (avant jugement)", "edl": "l'auteur présumé", "commentaire": "Formule imposée par la présomption d'innocence, notamment dans la presse." },
+    { "brut": "perdre son procès", "edl": "être débouté de ses demandes", "commentaire": "Vocabulaire du dispositif des jugements civils." },
+    { "brut": "la Cour donne tort aux juges d'appel", "edl": "la Cour casse et annule l'arrêt", "commentaire": "On dit aussi que la décision « encourt la censure »." },
+    { "brut": "le juge a mal raisonné", "edl": "la décision manque de base légale", "commentaire": "Grief technique de cassation pour motivation insuffisante." },
+    { "brut": "licenciements massifs", "edl": "plan de sauvegarde de l'emploi", "commentaire": "Dénomination légale d'un plan qui organise des suppressions de postes." },
+    { "brut": "faillite", "edl": "procédure collective (redressement ou liquidation judiciaire)", "commentaire": "Vocabulaire du droit des entreprises en difficulté." },
+    { "brut": "expulser un locataire", "edl": "ordonner la libération des lieux", "commentaire": "Formule de dispositif en matière de bail." },
+    { "brut": "expulser un étranger", "edl": "prononcer une mesure d'éloignement", "commentaire": "Terme générique du droit des étrangers." },
+    { "brut": "plaider coupable", "edl": "comparution sur reconnaissance préalable de culpabilité", "commentaire": "Procédure dite CRPC ; l'expression anglo-saxonne n'a pas cours en droit." },
+    { "brut": "mensonges de l'adversaire", "edl": "allégations non étayées", "commentaire": "Langage des conclusions d'avocat, qui disqualifie sans accuser." },
+    { "brut": "tuer", "edl": "donner volontairement la mort", "commentaire": "Définition légale du meurtre dans le code pénal." },
+    { "brut": "voler", "edl": "soustraire frauduleusement la chose d'autrui", "commentaire": "Reprise de la définition légale du vol (code pénal, art. 311-1)." },
+    { "brut": "le mort (dans une succession)", "edl": "le défunt, le de cujus", "commentaire": "Vocabulaire notarial et successoral." },
+    { "brut": "ne pas s'opposer à la demande", "edl": "s'en rapporter à justice", "commentaire": "Formule d'audience par laquelle une partie laisse le juge apprécier." },
+    { "brut": "payer l'autre partie", "edl": "être condamné à verser une indemnité", "commentaire": "Langage du dispositif ; « à titre de dommages et intérêts »." }
+  ],
+  "substitutions": [
+    { "de": "cas", "vers": "espèce" },
+    { "de": "règle", "vers": "disposition" },
+    { "de": "loi", "vers": "texte" },
+    { "de": "preuve", "vers": "pièce" },
+    { "de": "argument", "vers": "moyen" },
+    { "de": "raison", "vers": "motif" },
+    { "de": "verdict", "vers": "décision" },
+    { "de": "dommage", "vers": "préjudice" },
+    { "de": "dédommagement", "vers": "réparation" },
+    { "de": "victime", "vers": "partie civile" },
+    { "de": "contrat", "vers": "convention" },
+    { "de": "annuler", "vers": "prononcer la nullité" },
+    { "de": "donner raison", "vers": "faire droit" },
+    { "de": "refuser", "vers": "rejeter" },
+    { "de": "tribunal", "vers": "juridiction" },
+    { "de": "payer", "vers": "s'acquitter" },
+    { "de": "interdire", "vers": "prohiber" },
+    { "de": "obliger", "vers": "enjoindre" },
+    { "de": "héritier", "vers": "ayant droit" },
+    { "de": "vendre", "vers": "céder" },
+    { "de": "louer", "vers": "donner à bail" },
+    { "de": "prouver", "vers": "rapporter la preuve" },
+    { "de": "montrer", "vers": "établir" },
+    { "de": "dossier", "vers": "procédure" },
+    { "de": "avocat", "vers": "conseil" },
+    { "de": "malgré", "vers": "nonobstant" }
+  ],
+  "cadres": [
+    { "nom": "Qualification juridique", "question": "Dans quelle catégorie juridique faut-il ranger {element}, et quel régime en découle ?", "explication": "Nommer juridiquement un fait détermine la règle applicable et ses conséquences." },
+    { "nom": "Règle applicable", "question": "Quelle règle de droit gouverne {sujet} ?", "explication": "Le raisonnement part toujours d'un texte, d'un principe ou d'une jurisprudence, avant les faits." },
+    { "nom": "Charge de la preuve", "question": "Qui doit rapporter la preuve concernant {element}, et par quels moyens ?", "explication": "Celui qui allègue doit prouver ; la répartition de la preuve décide souvent du procès." },
+    { "nom": "Faisceau d'indices", "question": "Les indices réunis concernant {element} sont-ils graves, précis et concordants ?", "explication": "Le juge forme sa conviction par la convergence d'éléments qui, isolés, ne suffiraient pas." },
+    { "nom": "Responsabilité", "question": "Une faute, un préjudice et un lien de causalité sont-ils établis pour {evenement} ?", "explication": "Ces trois conditions cumulatives fondent la responsabilité civile." },
+    { "nom": "Proportionnalité", "question": "La mesure envisagée pour {sujet} est-elle nécessaire, adaptée et proportionnée au but poursuivi ?", "explication": "Toute atteinte à un droit fondamental doit être justifiée et mesurée." },
+    { "nom": "Hiérarchie des normes", "question": "Pour {sujet}, la règle appliquée est-elle conforme à la Constitution et aux engagements internationaux ?", "explication": "Une norme inférieure doit respecter les normes supérieures ; le juge peut écarter une loi contraire à un traité." }
+  ],
+  "structures": [
+    {
+      "nom": "Syllogisme juridique",
+      "description": "Raisonnement de base du juriste : des faits au problème de droit, puis de la règle (majeure) aux faits qualifiés (mineure) et à la conclusion.",
+      "etapes": [
+        {
+          "titre": "Exposé des faits",
+          "role": "contexte",
+          "consigne": "Présenter sobrement les faits utiles et la qualité des parties, sans les qualifier encore.",
+          "gabarits": [
+            "Les faits sont les suivants : {element}.",
+            "Depuis {evenement}, un différend oppose les parties concernant {sujet}."
+          ]
+        },
+        {
+          "titre": "Problème de droit",
+          "role": "tension",
+          "consigne": "Formuler la question juridique abstraite que posent les faits.",
+          "gabarits": [
+            "Le litige soulève une question : quelle qualification retenir pour {element} ?",
+            "Il s'agit de déterminer quelle règle s'applique à la situation née après {evenement}."
+          ]
+        },
+        {
+          "titre": "Majeure : la règle de droit",
+          "role": "analyse",
+          "consigne": "Énoncer la règle applicable (texte, principe, jurisprudence) en citant sa source.",
+          "gabarits": [
+            "Selon le texte applicable, {conclusion}.",
+            "Une jurisprudence constante pose le principe suivant : {conclusion}.",
+            "Aux termes du code civil, toute faute qui cause un dommage à autrui oblige son auteur à le réparer."
+          ]
+        },
+        {
+          "titre": "Mineure : qualification des faits",
+          "role": "faits",
+          "consigne": "Confronter les faits à la règle et les qualifier juridiquement, en commençant par « en l'espèce ».",
+          "gabarits": [
+            "Or, en l'espèce, les pièces du dossier établissent {element}.",
+            "Les éléments du dossier permettent de qualifier {element} au sens du texte."
+          ]
+        },
+        {
+          "titre": "Conclusion",
+          "role": "conclusion",
+          "consigne": "Tirer la conséquence juridique qui découle nécessairement de la règle appliquée aux faits.",
+          "gabarits": [
+            "Dès lors, {conclusion}.",
+            "Par conséquent, la demande concernant {sujet} doit être accueillie."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Arrêt de cassation en style direct",
+      "description": "Structure des arrêts de la Cour de cassation depuis le 1er octobre 2019 : faits et procédure, énoncé du moyen, réponse de la Cour, portée, dispositif.",
+      "etapes": [
+        {
+          "titre": "Faits et procédure",
+          "role": "contexte",
+          "consigne": "Rapporter les faits tels que constatés par la juridiction dont la décision est attaquée, en ouvrant par « Selon l'arrêt attaqué ».",
+          "gabarits": [
+            "Selon l'arrêt attaqué, un litige est né après {evenement}.",
+            "Selon l'arrêt attaqué, les parties s'opposent concernant {sujet}."
+          ]
+        },
+        {
+          "titre": "Énoncé du moyen",
+          "role": "tension",
+          "consigne": "Reprendre le grief du demandeur au pourvoi, tel qu'il est formulé dans son mémoire.",
+          "gabarits": [
+            "Le demandeur fait grief à l'arrêt de rejeter sa demande concernant {element}.",
+            "Le moyen reproche à l'arrêt d'avoir méconnu les règles applicables pour {sujet}."
+          ]
+        },
+        {
+          "titre": "Réponse de la Cour : visa et chapeau",
+          "role": "analyse",
+          "consigne": "Viser le texte applicable, énoncer la règle dans un chapeau abstrait, puis citer les motifs de l'arrêt attaqué.",
+          "gabarits": [
+            "Selon ce texte, {conclusion}.",
+            "Pour rejeter la demande, l'arrêt retient ceci : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Application",
+          "role": "decision",
+          "consigne": "Dire si les juges du fond ont correctement appliqué la règle, en reprenant les formules de censure ou de rejet.",
+          "gabarits": [
+            "En statuant ainsi, alors qu'elle avait constaté {element}, la cour d'appel a violé le texte susvisé.",
+            "En se déterminant ainsi, la cour d'appel n'a pas donné de base légale à sa décision.",
+            "Le moyen n'est donc pas fondé."
+          ]
+        },
+        {
+          "titre": "Portée et conséquences",
+          "role": "projection",
+          "consigne": "Le cas échéant, préciser la portée de la solution et l'étendue de la cassation.",
+          "gabarits": [
+            "La cassation est limitée aux dispositions concernant {element}.",
+            "Cette solution, qui opère un revirement, s'appliquera aux instances en cours pour {public}."
+          ]
+        },
+        {
+          "titre": "Dispositif",
+          "role": "conclusion",
+          "consigne": "Trancher le pourvoi en une formule introduite par « PAR CES MOTIFS ».",
+          "gabarits": [
+            "PAR CES MOTIFS, la Cour casse et annule l'arrêt attaqué en toutes ses dispositions.",
+            "PAR CES MOTIFS, la Cour rejette le pourvoi."
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Conclusions et plaidoirie d'avocat",
+      "description": "Argumentation de l'avocat : rappel orienté des faits, discussion en droit, réfutation adverse, demandes principales et subsidiaires.",
+      "etapes": [
+        {
+          "titre": "Rappel des faits",
+          "role": "contexte",
+          "consigne": "Raconter les faits de manière favorable au client, en s'appuyant sur les pièces.",
+          "gabarits": [
+            "Les faits, tels qu'ils ressortent des pièces versées aux débats, sont simples : {element}.",
+            "Tout commence avec {evenement}."
+          ]
+        },
+        {
+          "titre": "Discussion en droit",
+          "role": "analyse",
+          "consigne": "Exposer la règle et la jurisprudence qui fondent la thèse défendue.",
+          "gabarits": [
+            "En droit, la règle est claire concernant {sujet}.",
+            "La jurisprudence de la Cour de cassation est constante : {conclusion}."
+          ]
+        },
+        {
+          "titre": "Réfutation",
+          "role": "tension",
+          "consigne": "Démonter point par point l'argumentation de la partie adverse.",
+          "gabarits": [
+            "La partie adverse soutient une thèse qui ne résiste pas à l'examen des pièces.",
+            "Contrairement à ce que prétend la partie adverse, {conclusion}."
+          ]
+        },
+        {
+          "titre": "Demandes principales et subsidiaires",
+          "role": "decision",
+          "consigne": "Échelonner les demandes, de la plus ambitieuse à la solution de repli.",
+          "gabarits": [
+            "À titre principal, il est demandé au tribunal d'écarter {element}.",
+            "À titre subsidiaire, il conviendra à tout le moins de ramener la condamnation à {chiffre}."
+          ]
+        },
+        {
+          "titre": "Par ces motifs",
+          "role": "conclusion",
+          "consigne": "Récapituler les demandes dans la formule finale adressée à la juridiction.",
+          "gabarits": [
+            "Par ces motifs, plaise au tribunal de débouter la partie adverse de l'ensemble de ses demandes.",
+            "Par ces motifs, et sous toutes réserves, mon client sollicite {element}."
+          ]
+        }
+      ]
+    }
+  ],
+  "rapport_aux_chiffres": {
+    "posture": "Le droit manie peu les statistiques mais beaucoup les nombres normatifs : numéros d'articles, délais, seuils, quantum des peines et montants. Le chiffre y vaut règle (un délai expiré éteint l'action) plutôt que mesure, et l'évaluation chiffrée d'un préjudice relève de l'appréciation souveraine des juges du fond.",
+    "unites": [
+      "numéro d'article (art. L. 1234-5 du code du travail)",
+      "délai de prescription en années",
+      "délai de recours (un mois, deux mois)",
+      "montant des dommages et intérêts en euros",
+      "quantum de la peine (années d'emprisonnement)",
+      "amende en euros",
+      "taux de déficit fonctionnel permanent (%)",
+      "taux de l'intérêt légal",
+      "seuils d'effectif ou de montant",
+      "numéro de pourvoi (n° 19-81.929)"
+    ],
+    "formulations": [
+      "La cour d'appel a condamné la société à verser {chiffre} à titre de dommages et intérêts.",
+      "Les faits sont punis de {chiffre} d'emprisonnement et d'une amende.",
+      "Engagée plus de {chiffre} après {evenement}, l'action est prescrite.",
+      "Le préjudice est évalué à {chiffre}, sous réserve de l'appréciation souveraine des juges du fond.",
+      "Pour {a}, l'indemnité s'élève à {chiffre}, contre un montant nettement inférieur pour {b}.",
+      "Le délai de recours est de {chiffre} à compter de la notification de la décision.",
+      "La demande est limitée à {chiffre}, outre les intérêts au taux légal."
+    ]
+  },
+  "metaphores": [
+    "la balance de la justice",
+    "le glaive et la balance",
+    "le juge, bouche de la loi",
+    "l'arsenal juridique",
+    "le vide juridique",
+    "la pyramide des normes",
+    "le temple de Thémis",
+    "la ligne jurisprudentielle que trace la Cour",
+    "la bataille judiciaire",
+    "le couperet de la prescription",
+    "l'épée de Damoclès d'une condamnation"
+  ],
+  "pieges": [
+    "Langage du Palais opaque : formules elliptiques, latinismes et archaïsmes (« susvisé », « nonobstant », « de cujus ») qui excluent les justiciables.",
+    "Phrase unique interminable des anciens arrêts en « attendu que », illisible hors des initiés, abandonnée en 2019.",
+    "Faux amis : des mots courants prennent un sens juridique précis et différent (faute, acte, meuble, délai).",
+    "Confusions médiatiques entre « accusé », « prévenu » et « mis en examen », ou « verdict » employé pour un jugement correctionnel.",
+    "Vocabulaire qui présuppose la culpabilité et porte atteinte à la présomption d'innocence.",
+    "Neutralité de façade : le style impersonnel masque les choix d'interprétation du juge, ce que la motivation enrichie cherche à corriger.",
+    "Effets de manche et pathos de plaidoirie qui remplacent l'argument par l'émotion.",
+    "Imagerie importée des séries américaines (marteau du juge, « Votre Honneur », « Objection ! ») étrangère aux audiences françaises.",
+    "Juridisme qui réduit une question morale ou sociale à sa seule légalité (« c'est légal, donc c'est juste »)."
+  ],
+  "registres": {
+    "institutionnel": "Communiqués de juridictions et du ministère : ton neutre et pédagogique, rappel de la présomption d'innocence et des voies de recours, « la justice suivra son cours ».",
+    "technique": "Arrêts et conclusions : visas, chapeaux, « en l'espèce », « il résulte de », « aux termes de », numéros d'articles et de pourvois, style impersonnel et assertif.",
+    "vulgarisation": "Questions-réponses (« que risque-t-il ? »), lexiques des mots de la justice, schémas des juridictions et des étapes d'une procédure.",
+    "critique": "Ses détracteurs moquent le jargon du Palais, les adages latins et les phrases à rallonge qui rendent la justice incompréhensible pour ceux qu'elle juge."
+  },
+  "visuel": {
+    "palette": ["#6D4C41", "#1A237E", "#F5F0E6", "#C9A227", "#37474F"],
+    "motifs": [
+      { "fr": "façade à colonnes d'un palais de justice", "en": "columned courthouse facade" },
+      { "fr": "salle d'audience boisée avec estrade", "en": "wood-paneled courtroom with raised bench" },
+      { "fr": "robes noires d'avocats à rabat blanc", "en": "black lawyer robes with white bands" },
+      { "fr": "codes reliés empilés", "en": "stack of bound legal codes" },
+      { "fr": "article de loi qui se surligne ligne à ligne", "en": "statute text highlighting line by line" },
+      { "fr": "frise chronologique d'une procédure", "en": "procedural timeline" },
+      { "fr": "pyramide des normes", "en": "hierarchy-of-norms pyramid" },
+      { "fr": "organigramme des juridictions", "en": "court system organizational chart" },
+      { "fr": "parchemin et sceau de cire", "en": "parchment with wax seal" },
+      { "fr": "Marianne en filigrane", "en": "Marianne watermark" },
+      { "fr": "statue de la justice aux yeux bandés", "en": "blindfolded Lady Justice statue" }
+    ],
+    "pictogrammes": [
+      { "fr": "balance", "en": "scales of justice" },
+      { "fr": "glaive", "en": "sword" },
+      { "fr": "livre de loi", "en": "law book" },
+      { "fr": "colonne antique", "en": "classical column" },
+      { "fr": "Marianne", "en": "Marianne profile" },
+      { "fr": "toque et robe d'avocat", "en": "lawyer cap and gown" },
+      { "fr": "menottes", "en": "handcuffs" },
+      { "fr": "barreaux de prison", "en": "prison bars" },
+      { "fr": "contrat signé", "en": "signed contract" },
+      { "fr": "tampon officiel", "en": "official stamp" },
+      { "fr": "bulle de parole", "en": "speech bubble" },
+      { "fr": "sablier (délais)", "en": "hourglass (deadlines)" }
+    ],
+    "typographie": "Serif classique et institutionnelle (type Garamond ou Spectral) pour les titres et les citations de textes, associée à une sans empattement sobre (type Marianne) pour les explications ; numéros d'articles mis en exergue.",
+    "style_motion": "Motion design sobre et solennel : fonds crème ou bleu nuit, textes d'articles qui se surlignent, frises chronologiques et pyramides de normes, pictogrammes au trait (balance, glaive, codes). Rythme posé, transitions en glissé, et pas de marteau de juge, absent des audiences françaises.",
+    "style_motion_en": "Sober, solemn institutional motion graphics: cream parchment or deep navy backgrounds, statute text highlighting line by line, procedural timelines and hierarchy-of-norms pyramids, line icons of scales, sword and law books, brown, navy and muted gold palette, steady pacing with smooth slide transitions, no gavel since French courts do not use one."
+  },
+  "exemples": [
+    { "contexte": "Extrait réel : Patrick Matet, conseiller honoraire à la Cour de cassation (AHJUCAF, 2022), décrivant l'ancien mode de rédaction en « attendu que ».", "texte": "« Les arrêts étaient construits sous la forme d'une phrase unique qui ne comportait qu'un seul point placé à la fin de la dernière ligne de la décision. »" },
+    { "contexte": "Formule réelle : juridiction administrative, vade-mecum du Conseil d'État diffusé le 10 décembre 2018 et appliqué depuis le 1er janvier 2019 ; elle remplace les « considérant que » en tête de chaque paragraphe.", "texte": "« Considérant ce qui suit : »" },
+    { "contexte": "Extrait réel : code pénal, article 311-1, exemple de requalification d'un mot courant en catégorie juridique.", "texte": "« Le vol est la soustraction frauduleuse de la chose d'autrui. »" },
+    { "contexte": "Formulation typique, illustrative et non attribuée, d'un arrêt de cassation en style direct (paragraphes numérotés, visa, chapeau, censure).", "texte": "« Vu l'article 1240 du code civil : 5. Selon ce texte, tout fait quelconque de l'homme, qui cause à autrui un dommage, oblige celui par la faute duquel il est arrivé à le réparer. […] 8. En statuant ainsi, la cour d'appel a violé le texte susvisé. »" }
+  ],
+  "sources": [
+    { "titre": "La réforme de la rédaction des arrêts en France et la motivation enrichie", "auteur": "Patrick Matet, conseiller honoraire à la Cour de cassation, AHJUCAF, 2022", "url": "https://www.ahjucaf.org/sites/default/files/2022-12/France%20-%20P.%20Matet%20-%20Motivation%20des%20arr%C3%AAts.pdf", "apport": "Fin de la phrase unique en « attendu que », structure en trois parties, visa et chapeau, critères et statistiques de la motivation enrichie." },
+    { "titre": "Juridiction administrative : nouveaux modes de rédaction des décisions", "auteur": "Conseil d'État, 10 décembre 2018", "url": "https://www.conseil-etat.fr/site/actualites/juridiction-administrative-nouveaux-modes-de-redaction-des-decisions", "apport": "Abandon des « considérant que », formule « considérant ce qui suit », style direct au 1er janvier 2019." },
+    { "titre": "Commentaire sur l'abandon des « considérant » et des « attendu » (Deumier, 2019)", "auteur": "Deumier, document hébergé sur etudes.cjfa.eu", "url": "https://etudes.cjfa.eu/wp-content/uploads/sites/7/2019/11/Deumier-2019.pdf", "apport": "Analyse de la suppression des considérants et de ses effets sur l'explicitation des liens logiques." },
+    { "titre": "Repose en paix, cher considérant : le Conseil d'État t'enterre officiellement", "auteur": "Landot & associés (blog)", "url": "https://blog.landot-avocats.net/2018/12/10/repose-en-paix-cher-considerant-le-conseil-detat-tenterre-officiellement/", "apport": "Regard d'avocats sur la fin des considérants." },
+    { "titre": "Article sur le changement du mode de rédaction des arrêts de la Cour de cassation", "auteur": "Legisocial, 20 mai 2019", "url": "https://www.legisocial.fr/actualites-sociales/3202-mode-redaction-arrets-cour-cassation-change.html", "apport": "Calendrier de la réforme (1er octobre 2019) et motivation développée des décisions importantes." },
+    { "titre": "Méthodologie du cas pratique", "auteur": "Université Paris 1 Panthéon-Sorbonne", "url": "https://cours.univ-paris1.fr/pluginfile.php/1855700/mod_resource/content/0/M%C3%A9thodo%20cas%20pratique.pdf", "apport": "Syllogisme juridique (majeure, mineure, conclusion) et qualification des faits." },
+    { "titre": "Question écrite sur la simplification du langage juridique", "auteur": "Assemblée nationale (XIIe législature)", "url": "https://www.assemblee-nationale.fr/dyn/12/questions/QANR5L12QE2149.pdf", "apport": "Position du garde des Sceaux en faveur de la simplification et existence d'un guide et d'un lexique." },
+    { "titre": "Dossier : le langage juridique clair", "auteur": "Village de la Justice", "url": "https://www.village-justice.com/articles/dossier-langage-juridique-clair", "apport": "Critique du jargon d'initiés et démarches de langage clair." },
+    { "titre": "Audiences filmées : la Cour de cassation ouvre grand la porte de ses audiences", "auteur": "Dalloz actualité, éditorial du 21 avril 2023", "url": "https://www.bulco.univ-littoral.fr/wp-content/uploads/2023/04/dalloz_actualite_-_editorial_audiences_filmees__la_cour_de_cassation_ouvre_grand_la_porte_de_ses_audiences_-_2023-04-21.pdf", "apport": "Pédagogie judiciaire par communiqué et capsule vidéo explicative." }
+  ]
+}
