@@ -28,10 +28,8 @@ for (const d of ['public', 'data/lexicons', 'data/topics', 'data/examples']) fs.
 const nodeDir = path.join(BUILD, 'node');
 fs.mkdirSync(nodeDir);
 fs.copyFileSync(process.execPath, path.join(nodeDir, 'node.exe'));
-for (const l of ['LICENSE', 'LICENSE.txt']) {
-  const p = path.join(path.dirname(process.execPath), l);
-  if (fs.existsSync(p)) fs.copyFileSync(p, path.join(nodeDir, 'LICENSE-node.txt'));
-}
+// licence de Node (MIT et licences tierces) : à distribuer avec node.exe. Fichier tiré du dépôt nodejs/node, même version.
+fs.copyFileSync(path.join(__dirname, 'LICENSE-node.txt'), path.join(nodeDir, 'LICENSE-node.txt'));
 
 // 2. icône et lanceur
 const ico = path.join(BUILD, 'lexinode.ico');
