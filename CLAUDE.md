@@ -9,6 +9,7 @@ Tu reprends un projet construit dans une autre session Claude Code, qui n'a pas 
 - Lexinode est un atelier nodal : on relie des blocs (sujet, données, éléments de langage métiers, corrélations…), un moteur produit une réflexion, puis un short animé, puis des générations vidéo via fal.ai.
 - **Zéro dépendance npm** : Node ≥ 18 suffit (`node server.js`, port 5177). Le `Dockerfile` utilise `node:22-alpine`.
 - Fichiers clés : `server.js` (serveur et proxy des API), `public/js/` (interface), `data/lexicons/` (21 fiches), `data/topics/` (banque de topics), `.env.example`, `docker-compose.yml`, `README.md` (doc complète).
+- Version PC : `desktop/` construit `Lexinode-Setup-<version>.exe` (voir README, « Version Windows »). `LEXINODE_HOME` range les données de l'utilisateur hors du dossier de l'appli.
 - Tests sans navigateur : `node scripts/selftest.js` doit afficher 5 lignes ✓.
 
 ## Ce que tu dois demander à l'utilisateur (et rien de plus)

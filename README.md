@@ -141,6 +141,22 @@ Le **journal des agents**, en bas de l'écran, affiche chaque appel : rôle, fou
 
 ---
 
+## Version Windows (Setup.exe)
+
+Le dossier `desktop/` construit un installateur Windows d'environ 23 Mo : Node embarqué, raccourcis, désinstallation, installation par utilisateur sans droits d'administrateur.
+
+```bash
+cd desktop
+npm install       # télécharge le compilateur Inno Setup (dépendance de build, dans desktop/node_modules)
+node build.js     # → desktop/dist/Lexinode-Setup-<version>.exe
+```
+
+- `Lexinode.exe` (lanceur compilé avec le `csc` de Windows) démarre le serveur sur 127.0.0.1 (premier port libre à partir de 5177), ouvre Edge ou Chrome en fenêtre d'application avec un profil à part, puis arrête le serveur à la fermeture de la fenêtre. Si le lanceur disparaît brutalement, le serveur s'arrête seul.
+- Les données de l'utilisateur vivent dans `%APPDATA%\Lexinode` (variable `LEXINODE_HOME`) : projets, lexiques personnels, coffre de clés chiffré, et un `.env` avec la clé maîtresse générée au premier lancement. Désinstaller ne supprime pas ces données.
+- Pas de mot de passe : le serveur n'écoute que sur ce PC.
+- L'exécutable n'est pas signé : SmartScreen affiche un avertissement (« Informations complémentaires », puis « Exécuter quand même »).
+- Tests : `node scripts/test-home.js` (mode `LEXINODE_HOME`).
+
 ## Une seule clé : fal.ai
 
 Avec seulement `FAL_KEY` dans `.env` :

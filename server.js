@@ -17,19 +17,24 @@ const path = require('path');
 const { URL } = require('url');
 
 const ROOT = __dirname;
-loadEnv(path.join(ROOT, '.env'));
+// Mode « PC » : LEXINODE_HOME = dossier de données de l'utilisateur (ex. %APPDATA%\Lexinode). Projets, lexiques perso,
+// coffre et .env y vivent ; le dossier d'installation reste en lecture seule. Sans cette variable (VPS, Docker, dépôt),
+// tout reste relatif au dossier de l'appli.
+const HOME = process.env.LEXINODE_HOME ? path.resolve(process.env.LEXINODE_HOME) : '';
+if (HOME) ensureHome(HOME);
+loadEnv(path.join(HOME || ROOT, '.env'));
 const P = require('./public/js/providers.js');
 
 const PORT = Number(process.env.PORT || 5177);
 const HOST = process.env.HOST || '127.0.0.1';
 const PUBLIC = path.join(ROOT, 'public');
-const LEX_DIRS = [path.join(ROOT, 'data', 'lexicons'), path.join(ROOT, 'data', 'custom')];
-const PROJECTS = path.join(ROOT, 'projects');
+const LEX_DIRS = [path.join(ROOT, 'data', 'lexicons'), HOME ? path.join(HOME, 'custom') : path.join(ROOT, 'data', 'custom')];
+const PROJECTS = HOME ? path.join(HOME, 'projects') : path.join(ROOT, 'projects');
 const EXAMPLES = path.join(ROOT, 'data', 'examples');
 const TOPICS = path.join(ROOT, 'data', 'topics');
 // Coffre chiffré des clés saisies dans Réglages (actif seulement si LEXINODE_MASTER_KEY est défini)
 const VAULT = require('./vault.js').create({
-  file: process.env.LEXINODE_VAULT_FILE || path.join(ROOT, 'data', 'vault', 'secrets.json'),
+  file: process.env.LEXINODE_VAULT_FILE || (HOME ? path.join(HOME, 'vault', 'secrets.json') : path.join(ROOT, 'data', 'vault', 'secrets.json')),
   master: process.env.LEXINODE_MASTER_KEY,
 });
 
@@ -67,6 +72,15 @@ const ENV_MODEL = {
   compatible: () => process.env.COMPAT_MODEL,
   fal: () => process.env.FAL_LLM_MODEL,
 };
+
+// Premier lancement en mode PC : crée le dossier de données et un .env avec une clé maîtresse aléatoire pour le coffre
+function ensureHome(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+  const env = path.join(dir, '.env');
+  if (fs.existsSync(env)) return;
+  const key = require('crypto').randomBytes(32).toString('hex');
+  fs.writeFileSync(env, `# Données de cette installation de Lexinode.\n# LEXINODE_MASTER_KEY chiffre le coffre de clés : ne la changez pas, ne la partagez pas.\nLEXINODE_MASTER_KEY=${key}\n`, { mode: 0o600 });
+}
 
 function loadEnv(file) {
   if (!fs.existsSync(file)) return;
@@ -304,6 +318,9 @@ if (require.main === module) {
       console.log(`  · ${info.label.padEnd(62)} ${state}`);
     }
     console.log(`  · Recherche : Wikipédia${ENV_BASE.searxng() ? ' · SearXNG' : ''}${keyFor('tavily') ? ' · Tavily' : ''}${keyFor('brave') ? ' · Brave' : ''}\n`);
+    // Lancé par Lexinode.exe : on s'arrête quand le lanceur disparaît (fermeture brutale comprise), sans laisser de serveur orphelin
+    const parent = Number(process.env.LEXINODE_PARENT_PID);
+    if (parent) setInterval(() => { try { process.kill(parent, 0); } catch (e) { if (e.code === 'ESRCH') process.exit(0); } }, 3000).unref();
   });
 }
 

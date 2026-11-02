@@ -1,0 +1,11 @@
+{
+  "name": "lexinode-desktop",
+  "private": true,
+  "description": "Construit l'installateur Windows de Lexinode (Setup.exe). Voir build.js.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "innosetup-compiler": "^6.3.1"
+  }
+}

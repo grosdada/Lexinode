@@ -4,3 +4,6 @@ projects/*.json
 data/custom/*.json
 dist/
 data/vault/
+desktop/node_modules/
+desktop/build/
+desktop/dist/
