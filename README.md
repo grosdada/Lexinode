@@ -121,6 +121,7 @@ Basculez **Local / IA** dans la barre du haut. Chaque node peut aussi forcer son
 | Claude (Anthropic) | `ANTHROPIC_API_KEY`, modèle par défaut `claude-opus-5-5` | oui (outil `web_search`) |
 | OpenAI (GPT / Codex) | `OPENAI_API_KEY`, API Responses, modèle à saisir (ex. `gpt-5`, un modèle Codex de votre compte) | oui (outil `web_search`) |
 | Google Gemini | `GEMINI_API_KEY` | oui (Google Search grounding) |
+| DeepSeek | `DEEPSEEK_API_KEY`, `DEEPSEEK_MODEL` (par défaut `deepseek-flash`, à vérifier sur votre compte) | non : passe par SearXNG ou Wikipédia |
 | Ollama | `OLLAMA_URL`, `OLLAMA_MODEL` | non : passe par SearXNG ou Wikipédia |
 | Compatible OpenAI | `COMPAT_BASE_URL`, `COMPAT_MODEL`, `COMPAT_API_KEY` | non : passe par SearXNG ou Wikipédia |
 

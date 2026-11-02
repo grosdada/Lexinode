@@ -123,8 +123,8 @@
   };
 
   M.h3 = {
-    id: 'h3', nom: 'MiniMax H3 (Hailuo 3.0)', maxDuree: 15, minDuree: 4, promptMax: 7000, maxShots: 7,
-    ratios: ['16:9', '9:16', '1:1', '4:3', '3:4', '21:9'], resolutions: ['2K'], defResolution: '2K',
+    id: 'h3', nom: 'MiniMax H3 (classique)', maxDuree: 15, minDuree: 5, promptMax: 7000, maxShots: 7,
+    ratios: ['16:9', '9:16', '1:1', '4:3', '3:4', '21:9'], resolutions: ['2K', '768P', '480P'], defResolution: '2K',
     regles: [
       'Blocs séparés par des lignes vides : (références), style, un bloc par plan, audio, réglages.',
       'Plan : « Shot N — X seconds. Camera: objectif, support, mouvement. Une seule action visible. »',
@@ -132,10 +132,10 @@
       'Varier objectif, support et mouvement d’un plan à l’autre.',
       'Bloc audio obligatoire, interdiction en premier (sinon le modèle ajoute une musique).',
       'Pas de timecodes, pas de champ de prompt négatif (les interdits vont dans les blocs).',
-      'Durée 4 à 15 s par génération, 2K, 24 i/s, audio stéréo natif ; ratio obligatoire en texte seul (pas « adaptive »).',
+      'Durée 5 à 15 s par génération (entier), 2K, 24 i/s, audio stéréo natif ; ratio obligatoire en texte seul (pas « adaptive »). Via fal : prompt de 50 000 caractères au maximum.',
     ],
-    falId: 'minimax/hailuo-03/text-to-video', prix: null,
-    falTemplate: '{"prompt": "{prompt}", "duration": {duration}, "aspect_ratio": "{ratio}"}',
+    falId: 'minimax/h3/text-to-video', prix: { '480p': 0.05, '768p': 0.06, '2k': 0.13, '4k': 0.16 },
+    falTemplate: '{"prompt": "{prompt}", "prompt_expansion_mode": "disabled", "duration": {duration}, "aspect_ratio": "{ratio}", "resolution": "{RESOLUTION}"}',
     compose(seg, ctx) {
       const B = [];
       B.push(`Style: ${clean(ctx.styleEn)}, an institutional animated explainer built from flat graphic elements. Palette ${ctx.palette.join(', ')}. ${clean(ctx.typo || 'Geometric sans-serif typography')}. Global rule: every shot stays in the same graphic world and palette, the only text on screen is the captions written below.`);
@@ -149,13 +149,22 @@
       if (ctx.voMode === 'native' && vo) B.push(`Audio, native stereo: an off-screen French narrator, ${voice} voice, says: "${q(vo)}" Music: ${clean(ctx.musicEn)}, entering softly under the voice. Soft interface sounds on each graphic appearance, timed to the cuts.`);
       else B.push(`Audio, native stereo: NO VOICE, no dialogue at any point. Music: ${clean(ctx.musicEn)}, entering from the first shot. Soft interface sounds on each graphic appearance, timed to the cuts.`);
       if (seg.mention) B.push(`The last shot ends on the caption "${q(seg.mention)}".`);
-      B.push(`Settings: ${ctx.ratio}, 2K, ${seg.duree} seconds.`);
+      B.push(`Settings: ${ctx.ratio}, ${ctx.resolution}, ${seg.duree} seconds.`);
       return B.join('\n\n');
     },
     directPayload(seg, prompt, ctx) {
       return { model: 'MiniMax-H3', content: [{ type: 'text', text: prompt }], resolution: '2K', duration: seg.duree, ratio: ctx.ratio };
     },
   };
+
+  // H3 Max (fal : minimax/h3-max/text-to-video) : même écriture de prompt que H3, jusqu'à 1080p, prompt jusqu'à 50 000 caractères
+  M.h3max = Object.assign({}, M.h3, {
+    id: 'h3max', nom: 'MiniMax H3 Max', minDuree: 4,
+    resolutions: ['1080P', '768P', '480P'], defResolution: '1080P',
+    regles: M.h3.regles.slice(0, -1).concat('Durée 4 à 15 s par génération, jusqu’à 1080p (affiné depuis un 768p natif), 24 i/s, audio stéréo natif ; ratio obligatoire en texte seul (pas « adaptive »). Via fal : prompt de 50 000 caractères au maximum, expansion de prompt désactivée.'),
+    falId: 'minimax/h3-max/text-to-video', prix: { '480p': 0.05, '768p': 0.08, '1080p': 0.16 },
+    directPayload: null,
+  });
 
   // ------------------------------------------------------------------ découpage du script en segments
   function segment(script, modele, cible) {
@@ -195,7 +204,7 @@
     });
   }
 
-  const RES = { wan30: { 1080: '1080P', 720: '720P', 480: '480P' }, seedance25: { 1080: '1080p', 720: '720p', 480: '480p' }, h3: {} };
+  const RES = { wan30: { 1080: '1080P', 720: '720P', 480: '480P' }, seedance25: { 1080: '1080p', 720: '720p', 480: '480p' }, h3: { 1080: '2K', 720: '768P', 480: '480P' }, h3max: { 1080: '1080P', 720: '768P', 480: '480P' } };
   function context(node, script) {
     const d = node.data;
     const st = LX.STYLES[script.style] || LX.STYLES.motion_flat;

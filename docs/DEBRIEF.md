@@ -46,9 +46,9 @@ Avec seulement `FAL_KEY` :
 - **Vidéo** : identifiants préremplis dans `public/js/video-models.js` (`falId`) :
   - `alibaba/wan-3.0/text-to-video` (vérifié sur fal) ;
   - `bytedance/seedance-2.5/text-to-video` (vérifié) ;
-  - `minimax/hailuo-03/text-to-video` (**déduit d'un lien, non confirmé**).
+  - `minimax/h3-max/text-to-video` (H3 Max, défaut) et `minimax/h3/text-to-video` (H3 classique) : schémas OpenAPI de fal lus le 02/11 (prompt ≤ 50 000 caractères, durée 5 à 15 s, 1080P max pour Max, 4K pour le classique) ; prix lus sur les pages fal ; jamais appelés pour de vrai. `minimax/hailuo-03/…` (2000 caractères, 2K seul) abandonné.
 - **Agents texte** : fournisseur `fal` = `https://fal.run/openrouter/router/openai/v1`, en-tête `Authorization: Key …`, modèle par défaut `google/gemini-2.5-flash`. L'appli bascule seule sur ce fournisseur si c'est la seule clé configurée.
-- Tarifs publics notés en novembre 2026 : Wan 3.0 0,05 / 0,10 / 0,20 $/s (480p / 720p / 1080p) ; Seedance 2.5 ≈ 0,22 / 0,47 / 1,16 $/s ; H3 non publié.
+- Tarifs publics notés en novembre 2026 : Wan 3.0 0,05 / 0,10 / 0,20 $/s (480p / 720p / 1080p) ; Seedance 2.5 ≈ 0,22 / 0,47 / 1,16 $/s ; H3 Max 0,05 / 0,08 / 0,16 $/s (480p / 768p / 1080p, tarif standard dès le 16/11, promo avant) ; H3 classique 0,13 $/s en 2K (pages fal, 02/11).
 
 ## 5. Ce qui N'A PAS été vérifié (à traiter en premier sur le VPS)
 
@@ -56,7 +56,7 @@ Avec seulement `FAL_KEY` :
 2. **Corps des requêtes fal** : les paramètres viennent des pages fal consultées. Ils sont modifiables sans toucher au code, dans Réglages → Génération vidéo (`falTemplate`). Points d'attention :
    - Seedance : `duration` est une **chaîne** (`"15"`), `aspect_ratio`, `resolution` en minuscules, `generate_audio` ;
    - Wan : `duration` entier, paramètre audio nommé `audio`, `aspect_ratio` accepte `adaptive` ;
-   - H3 : noms de paramètres non confirmés (`duration`, `aspect_ratio` supposés).
+   - H3 / H3 Max : paramètres lus dans le schéma OpenAPI de fal (`duration` entier, `aspect_ratio`, `resolution` en majuscules : gabarit `{RESOLUTION}`), mais jamais testés en vrai.
 3. **Agents texte via fal/OpenRouter** : testé contre un faux serveur seulement. Si le modèle par défaut est refusé, en choisir un autre dans Réglages.
 4. **Seedance 2.5 et dialogue en français** : non confirmé. L'appli prévient et propose « voix off ajoutée au montage ».
 5. **Pas d'API directe Seedance** (signature BytePlus non implémentée) : uniquement via fal.

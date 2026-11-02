@@ -112,6 +112,9 @@ a { color: var(--accent2); }
 .node::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 3px; border-radius: var(--radius) var(--radius) 0 0; background: var(--accent); }
 .node.selected { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent), var(--shadow); }
 .node.dragging { opacity: 0.92; cursor: grabbing; }
+.node.multi { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent), var(--shadow); }
+.canvas .marquee { position: absolute; z-index: 20; pointer-events: none; border: 1px solid var(--accent2); background: color-mix(in srgb, var(--accent2) 14%, transparent); }
+.node.compat { border-color: var(--accent2); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent2) 40%, transparent), var(--shadow); }
 .node-head { display: flex; align-items: center; gap: 7px; padding: 8px 8px 7px 10px; background: var(--node-head); border-radius: var(--radius) var(--radius) 0 0; cursor: grab; }
 .node-head .title { font-weight: 600; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .node-head .state { width: 9px; height: 9px; border-radius: 50%; background: var(--line2); }
@@ -132,6 +135,10 @@ a { color: var(--accent2); }
 .port.in { padding-left: 0; }
 .port.out { padding-right: 0; }
 .port .dot { width: 13px; height: 13px; border-radius: 50%; border: 2px solid; background: var(--node); flex: none; cursor: crosshair; }
+/* zone de prise élargie (≈ 14 px d'écran vers l'extérieur, quel que soit le zoom) : les points mesurent 6 px quand on dézoome */
+.port::after { content: ""; position: absolute; top: -2px; bottom: -2px; width: calc(24px / var(--zoom, 1)); }
+.port.out::after { right: calc(-16px / var(--zoom, 1)); }
+.port.in::after { left: calc(-16px / var(--zoom, 1)); }
 .port.in .dot { margin-left: -7px; }
 .port.out .dot { margin-right: -7px; }
 .port.in.connected .dot { background: currentColor; }
@@ -182,6 +189,11 @@ body.show-log .log-list { display: block; }
 .field input[type="text"], .field input[type="password"], .field input[type="number"], .field select, .field textarea, .form .row input[type="number"] {
   width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 7px; padding: 7px 9px; }
 .field textarea { resize: vertical; min-height: 54px; }
+.engine-menu { position: fixed; z-index: 60; width: 300px; max-width: calc(100vw - 16px); background: var(--panel); border: 1px solid var(--line2); border-radius: 10px; padding: 10px 12px 8px; box-shadow: 0 12px 32px rgba(0, 0, 0, .5); }
+.engine-menu .field { display: block; margin-bottom: 9px; }
+.engine-menu .field select { width: 100%; }
+.field .key-row { display: flex; gap: 6px; align-items: center; }
+.field .key-row input { flex: 1; min-width: 0; }
 .range { display: flex; align-items: center; gap: 8px; }
 .range input { flex: 1; accent-color: var(--accent); }
 .range-v { min-width: 24px; text-align: right; font-family: var(--mono); }

@@ -30,6 +30,11 @@
       defaultModel: 'google/gemini-2.5-flash', defaultBase: 'https://fal.run/openrouter/router/openai/v1',
       models: ['google/gemini-2.5-flash', 'openai/gpt-5-mini', 'anthropic/claude-sonnet-4.5'],
     },
+    deepseek: {
+      label: 'DeepSeek', needsKey: true, search: false,
+      defaultModel: 'deepseek-flash', defaultBase: 'https://api.deepseek.com',
+      models: ['deepseek-flash', 'deepseek-v4-pro'],
+    },
     ollama: {
       label: 'Ollama (local, open source)', needsKey: false, search: false,
       defaultModel: 'qwen3:14b', defaultBase: 'http://127.0.0.1:11434',
@@ -196,7 +201,7 @@
       return { text: text, sources: [], model: model, provider: provider, usage: { input_tokens: j.prompt_eval_count, output_tokens: j.eval_count } };
     }
 
-    if (provider === 'compatible' || provider === 'fal') {
+    if (provider === 'compatible' || provider === 'fal' || provider === 'deepseek') {
       const base = String((provider === 'compatible' && p.baseUrl) || info.defaultBase).replace(/\/$/, '');
       const body = { model: model, messages: [{ role: 'system', content: system }].concat(messages), max_tokens: maxTokens };
       if (p.json && p.compatJsonMode !== false) body.response_format = { type: 'json_object' };

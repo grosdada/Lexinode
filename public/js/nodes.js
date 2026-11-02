@@ -321,7 +321,7 @@
         { key: 'voix', label: 'Voix off', type: 'select', def: 'posée', options: opt(['posée', 'dynamique', 'chaleureuse', 'solennelle', 'ironique']) },
         { key: 'cible', label: 'Modèle vidéo visé', type: 'select', def: 'generique', options: opt([
           { v: 'generique', l: 'Générique' }, { v: 'veo', l: 'Google Veo' }, { v: 'kling', l: 'Kling' }, { v: 'seedance', l: 'Seedance' },
-          { v: 'wan30', l: 'Wan 3.0' }, { v: 'seedance25', l: 'Seedance 2.5' }, { v: 'h3', l: 'MiniMax H3' },
+          { v: 'wan30', l: 'Wan 3.0' }, { v: 'seedance25', l: 'Seedance 2.5' }, { v: 'h3max', l: 'MiniMax H3 Max' }, { v: 'h3', l: 'MiniMax H3 classique' },
           { v: 'runway', l: 'Runway' }, { v: 'sora', l: 'Sora' }, { v: 'opensource', l: 'Open source (Wan 2.2 / LTX / Hunyuan)' },
         ]) },
         { key: 'langue', label: 'Langue des prompts', type: 'select', def: 'en', options: opt([{ v: 'en', l: 'Anglais (recommandé)' }, { v: 'fr', l: 'Français' }]) },
@@ -338,10 +338,11 @@
     inputs: [{ key: 'script', type: ['script'], label: 'script' }],
     outputs: [{ key: 'out', type: 'video', label: 'vidéos' }],
     fields: [
-      { key: 'modele', label: 'Modèle vidéo', type: 'select', def: 'seedance25', options: opt([
+      { key: 'modele', label: 'Modèle vidéo', type: 'select', def: 'h3max', options: opt([
+        { v: 'h3max', l: 'MiniMax H3 Max · jusqu’à 1080p, 15 s par génération' },
         { v: 'seedance25', l: 'Seedance 2.5 (ByteDance) · jusqu’à 30 s par génération' },
         { v: 'wan30', l: 'Wan 3.0 (Alibaba) · jusqu’à 30 s par génération' },
-        { v: 'h3', l: 'MiniMax H3 (Hailuo 3.0) · jusqu’à 15 s par génération' },
+        { v: 'h3', l: 'MiniMax H3 classique · 2K, 15 s par génération' },
       ]) },
       { key: 'segment', label: 'Découper en segments de', type: 'select', def: '15', options: opt([{ v: '15', l: '15 secondes' }, { v: '30', l: '30 secondes' }]) },
       { key: 'voix', label: 'Voix off', type: 'select', def: 'native', options: opt([

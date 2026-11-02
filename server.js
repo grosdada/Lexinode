@@ -27,12 +27,18 @@ const LEX_DIRS = [path.join(ROOT, 'data', 'lexicons'), path.join(ROOT, 'data', '
 const PROJECTS = path.join(ROOT, 'projects');
 const EXAMPLES = path.join(ROOT, 'data', 'examples');
 const TOPICS = path.join(ROOT, 'data', 'topics');
+// Coffre chiffré des clés saisies dans Réglages (actif seulement si LEXINODE_MASTER_KEY est défini)
+const VAULT = require('./vault.js').create({
+  file: process.env.LEXINODE_VAULT_FILE || path.join(ROOT, 'data', 'vault', 'secrets.json'),
+  master: process.env.LEXINODE_MASTER_KEY,
+});
 
 // Clés et URL lues dans .env (l'interface peut aussi fournir les siennes)
 const ENV_KEYS = {
   anthropic: () => process.env.ANTHROPIC_API_KEY,
   openai: () => process.env.OPENAI_API_KEY,
   gemini: () => process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY,
+  deepseek: () => process.env.DEEPSEEK_API_KEY,
   ollama: () => '',
   compatible: () => process.env.COMPAT_API_KEY || '',
   tavily: () => process.env.TAVILY_API_KEY,
@@ -41,6 +47,12 @@ const ENV_KEYS = {
   dashscope: () => process.env.DASHSCOPE_API_KEY,
   brave: () => process.env.BRAVE_API_KEY,
 };
+// Ordre de résolution côté serveur : clé envoyée par le navigateur, puis coffre, puis .env
+const keyFor = (id) => VAULT.get(id) || (ENV_KEYS[id] && ENV_KEYS[id]());
+// Une clé du serveur (coffre ou .env) ne part que vers l'adresse prévue : une URL envoyée par le navigateur n'est suivie
+// que si la clé vient aussi du navigateur, ou s'il n'y a aucune clé à protéger (Ollama, serveur local sans clé).
+// Sans cette règle, quiconque a le mot de passe de l'appli pourrait faire envoyer la clé du coffre à son propre serveur.
+const trustedBase = (ownKey, key, clientBase, serverBase) => ((ownKey || !key) ? (clientBase || serverBase) : serverBase);
 const ENV_BASE = {
   ollama: () => process.env.OLLAMA_URL,
   compatible: () => process.env.COMPAT_BASE_URL,
@@ -50,6 +62,7 @@ const ENV_MODEL = {
   anthropic: () => process.env.ANTHROPIC_MODEL,
   openai: () => process.env.OPENAI_MODEL,
   gemini: () => process.env.GEMINI_MODEL,
+  deepseek: () => process.env.DEEPSEEK_MODEL,
   ollama: () => process.env.OLLAMA_MODEL,
   compatible: () => process.env.COMPAT_MODEL,
   fal: () => process.env.FAL_LLM_MODEL,
@@ -100,11 +113,12 @@ const safeName = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/
 
 async function llm(body) {
   const prov = body.provider || 'anthropic';
-  const keys = body.keys || {};
+  const own = (body.keys || {})[prov];
+  const key = own || keyFor(prov);
   return P.callLLM({
     ...body,
-    key: keys[prov] || (ENV_KEYS[prov] && ENV_KEYS[prov]()),
-    baseUrl: body.baseUrl || (ENV_BASE[prov] && ENV_BASE[prov]()),
+    key,
+    baseUrl: trustedBase(own, key, body.baseUrl, ENV_BASE[prov] && ENV_BASE[prov]()),
     model: body.model || (ENV_MODEL[prov] && ENV_MODEL[prov]()),
     fallbacks: process.env.ANTHROPIC_FALLBACKS !== 'off',
     ollamaCtx: process.env.OLLAMA_NUM_CTX,
@@ -117,8 +131,8 @@ async function search(body) {
   const base = body.baseUrls || {};
   const has = {
     searxng: base.searxng || ENV_BASE.searxng(),
-    tavily: keys.tavily || ENV_KEYS.tavily(),
-    brave: keys.brave || ENV_KEYS.brave(),
+    tavily: keys.tavily || keyFor('tavily'),
+    brave: keys.brave || keyFor('brave'),
   };
   const order = !body.provider || body.provider === 'auto'
     ? ['searxng', 'tavily', 'brave'].filter((k) => has[k]).concat('wikipedia')
@@ -193,16 +207,23 @@ const server = http.createServer(async (req, res) => {
       for (const [id, info] of Object.entries(P.INFO)) {
         providers[id] = {
           label: info.label,
-          configured: id === 'ollama' ? true : id === 'compatible' ? !!ENV_BASE.compatible() : !!(ENV_KEYS[id] && ENV_KEYS[id]()),
+          configured: id === 'ollama' ? true : id === 'compatible' ? !!ENV_BASE.compatible() : !!keyFor(id),
           defaultModel: (ENV_MODEL[id] && ENV_MODEL[id]()) || info.defaultModel,
           baseUrl: ENV_BASE[id] ? ENV_BASE[id]() || info.defaultBase : undefined,
         };
       }
-      const video = { fal: !!ENV_KEYS.fal(), minimax: !!ENV_KEYS.minimax(), dashscope: !!ENV_KEYS.dashscope() };
+      const video = { fal: !!keyFor('fal'), minimax: !!keyFor('minimax'), dashscope: !!keyFor('dashscope') };
       const searchStatus = {
-        wikipedia: true, searxng: !!ENV_BASE.searxng(), tavily: !!ENV_KEYS.tavily(), brave: !!ENV_KEYS.brave(),
+        wikipedia: true, searxng: !!ENV_BASE.searxng(), tavily: !!keyFor('tavily'), brave: !!keyFor('brave'),
       };
-      return send(res, 200, { ok: true, server: true, version: '1.1.0', providers, search: searchStatus, video });
+      return send(res, 200, { ok: true, server: true, version: '1.1.0', providers, search: searchStatus, video, vault: VAULT.status() });
+    }
+    // Coffre : écriture seulement (les valeurs ne sont jamais renvoyées). L'en-tête JSON exigé bloque les envois
+    // inter-sites « simples » (un navigateur y joindrait le mot de passe déjà saisi).
+    if (p === '/api/vault' && req.method === 'POST') {
+      if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'Content-Type application/json requis' });
+      if (!VAULT.enabled) return send(res, 503, { error: 'Coffre désactivé : définissez LEXINODE_MASTER_KEY dans .env (openssl rand -hex 32) puis relancez le serveur.', vault: VAULT.status() });
+      try { return send(res, 200, VAULT.update(await readBody(req, 64 * 1024))); } catch (e) { return send(res, 400, { error: e.message, vault: VAULT.status() }); }
     }
     if (p === '/api/ollama/models' && req.method === 'GET') {
       const base = (url.searchParams.get('base') || ENV_BASE.ollama() || P.INFO.ollama.defaultBase).replace(/\/$/, '');
@@ -218,9 +239,10 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/search' && req.method === 'POST') return send(res, 200, await search(await readBody(req)));
     if ((p === '/api/video/submit' || p === '/api/video/status') && req.method === 'POST') {
       const body = await readBody(req);
-      const key = (body.keys || {})[body.provider] || (ENV_KEYS[body.provider] && ENV_KEYS[body.provider]());
+      const own = (body.keys || {})[body.provider];
+      const key = own || keyFor(body.provider);
       const fn = p.endsWith('submit') ? P.videoSubmit : P.videoStatus;
-      return send(res, 200, await fn(Object.assign({}, body, { key })));
+      return send(res, 200, await fn(Object.assign({}, body, { key, baseUrl: trustedBase(own, key, body.baseUrl, undefined) })));
     }
     if (p === '/api/lexicons' && req.method === 'GET') return send(res, 200, readLexicons());
     if (p === '/api/topics' && req.method === 'GET') {
@@ -272,14 +294,17 @@ if (require.main === module) {
     const lex = readLexicons();
     console.log(`\n  LEXINODE  ▸  http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
     console.log(`  ${lex.length} lexique(s) chargé(s)\n`);
+    const v = VAULT.status();
+    console.log(`  · Coffre de clés : ${v.locked ? 'ILLISIBLE — ' + v.error : v.enabled ? `actif (${v.keys.length} clé(s) enregistrée(s))` : v.error ? 'désactivé — ' + v.error : 'désactivé (définir LEXINODE_MASTER_KEY dans .env pour l’activer)'}\n`);
+    const origin = (id) => (VAULT.get(id) ? 'coffre' : '.env');
     for (const [id, info] of Object.entries(P.INFO)) {
-      const state = id === 'fal' ? (ENV_KEYS.fal() ? 'clé ✓ (FAL_KEY)' : 'pas de clé') : id === 'ollama' ? `local · ${ENV_BASE.ollama() || info.defaultBase}`
+      const state = id === 'fal' ? (keyFor('fal') ? `clé ✓ (${origin('fal')})` : 'pas de clé') : id === 'ollama' ? `local · ${ENV_BASE.ollama() || info.defaultBase}`
         : id === 'compatible' ? (ENV_BASE.compatible() ? `local · ${ENV_BASE.compatible()}` : 'non configuré')
-          : (ENV_KEYS[id] && ENV_KEYS[id]()) ? 'clé ✓' : 'pas de clé (.env ou Réglages)';
+          : keyFor(id) ? `clé ✓ (${origin(id)})` : 'pas de clé (.env ou Réglages)';
       console.log(`  · ${info.label.padEnd(62)} ${state}`);
     }
-    console.log(`  · Recherche : Wikipédia${ENV_BASE.searxng() ? ' · SearXNG' : ''}${ENV_KEYS.tavily() ? ' · Tavily' : ''}${ENV_KEYS.brave() ? ' · Brave' : ''}\n`);
+    console.log(`  · Recherche : Wikipédia${ENV_BASE.searxng() ? ' · SearXNG' : ''}${keyFor('tavily') ? ' · Tavily' : ''}${keyFor('brave') ? ' · Brave' : ''}\n`);
   });
 }
 
-module.exports = { server, readLexicons, llm, search };
+module.exports = { server, readLexicons, llm, search, trustedBase };

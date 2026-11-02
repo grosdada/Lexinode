@@ -15,6 +15,35 @@
   const saveSettings = () => U.store.set('settings', LX.settings);
   LX.api = { server: false, status: null };
 
+  // Coffre du serveur : les clés y sont chiffrées et ne reviennent jamais dans le navigateur
+  const VAULT_IDS = ['anthropic', 'openai', 'gemini', 'deepseek', 'compatible', 'tavily', 'brave', 'fal', 'minimax', 'dashscope'];
+  const vaultOn = () => { const v = LX.api.server && LX.api.status && LX.api.status.vault; return !!(v && v.enabled && !v.locked); };
+  async function refreshStatus() {
+    try { const r = await fetch('api/status'); if (r.ok) LX.api.status = await r.json(); } catch (e) { /* statut inchangé */ }
+  }
+  async function vaultCall(payload) {
+    const r = await fetch('api/vault', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'Erreur serveur');
+    await refreshStatus();
+    return j;
+  }
+  // Clés saisies dans ce navigateur avant l'activation du coffre : déplacées dans le coffre, puis effacées ici
+  async function migrateKeysToVault() {
+    if (!vaultOn()) return;
+    const s = LX.settings;
+    const set = {};
+    for (const k of VAULT_IDS) if (typeof (s.keys || {})[k] === 'string' && s.keys[k].trim()) set[k] = s.keys[k].trim();
+    const ids = Object.keys(set);
+    if (!ids.length) return;
+    try {
+      await vaultCall({ set });
+      ids.forEach((k) => { delete s.keys[k]; });
+      saveSettings();
+      toast(`${ids.length} clé(s) déplacée(s) dans le coffre chiffré du serveur et effacée(s) de ce navigateur.`);
+    } catch (e) { toast('Coffre indisponible, clés laissées dans ce navigateur : ' + e.message, 'warn'); }
+  }
+
   let ed;
   let currentTab = 'params';
   let logEntries = [];
@@ -379,7 +408,7 @@
       const tpl = ((s.falTemplates || {})[o.modele] || P.falTemplate).trim();
       let payload;
       try {
-        const filled = tpl.replace(/"\{prompt\}"/g, () => JSON.stringify(seg.prompt)).replace(/\{duration\}/g, seg.duree).replace(/\{ratio\}/g, o.ratio).replace(/\{resolution\}/g, String(o.resolution).toLowerCase()).replace(/\{seed\}/g, seed);
+        const filled = tpl.replace(/"\{prompt\}"/g, () => JSON.stringify(seg.prompt)).replace(/\{duration\}/g, seg.duree).replace(/\{ratio\}/g, o.ratio).replace(/\{resolution\}/g, String(o.resolution).toLowerCase()).replace(/\{RESOLUTION\}/g, String(o.resolution).toUpperCase()).replace(/\{seed\}/g, seed);
         payload = JSON.parse(filled);
       } catch (e) { throw new Error('Modèle de requête fal.ai invalide (Réglages → Génération vidéo) : ' + e.message); }
       if (seed && payload.seed === undefined) payload.seed = seed;
@@ -388,7 +417,7 @@
     const ctx = { ratio: o.ratio, resolution: o.resolution, seed };
     if (o.modele === 'h3') return { provider: 'minimax', payload: P.directPayload(seg, seg.prompt, ctx) };
     if (o.modele === 'wan30') return { provider: 'dashscope', payload: P.directPayload(seg, seg.prompt, ctx) };
-    throw new Error('Seedance 2.5 n’a pas d’API directe intégrée (signature BytePlus) : choisissez la passerelle fal.ai.');
+    throw new Error(`${P.nom} n’a pas d’API directe intégrée : choisissez la passerelle fal.ai.`);
   }
   function generateVideo(nodeId, key) {
     const node = ed.node(nodeId);
@@ -609,14 +638,51 @@
       h('div', { class: 'small muted' }, 'Les modèles sont modifiables : saisissez l’identifiant exact disponible sur votre compte (les suggestions ne sont qu’indicatives).'));
 
     // clés
-    const keyRow = (k, label) => {
-      const inp = h('input', { type: 'password', value: (s.keys || {})[k] || '', placeholder: srv && srv.providers && srv.providers[k] && srv.providers[k].configured ? 'défini dans .env ✓' : 'non défini', autocomplete: 'off' });
-      inp.addEventListener('input', () => { s.keys = s.keys || {}; s.keys[k] = inp.value.trim(); saveSettings(); });
-      return h('label', { class: 'field' }, h('span', { class: 'fl' }, label), inp);
+    // Champ de clé. Avec le coffre : la valeur part chiffrée au serveur et le champ reste vide.
+    // Sans coffre : la valeur est gardée dans ce navigateur (et envoyée au serveur à chaque appel).
+    const secretRow = (k, label, inEnv) => {
+      if (!vaultOn()) {
+        const inp = h('input', { type: 'password', value: (s.keys || {})[k] || '', placeholder: inEnv() ? 'défini dans .env ✓' : 'non défini', autocomplete: 'off' });
+        inp.addEventListener('input', () => { s.keys = s.keys || {}; s.keys[k] = inp.value.trim(); saveSettings(); });
+        return h('label', { class: 'field' }, h('span', { class: 'fl' }, label), inp);
+      }
+      const inp = h('input', { type: 'password', value: '', autocomplete: 'off' });
+      const rm = h('button', { class: 'btn sm', type: 'button' }, 'Retirer');
+      const paint = () => {
+        const inVault = ((LX.api.status.vault || {}).keys || []).includes(k);
+        inp.placeholder = inVault ? '✓ enregistrée, chiffrée — saisir pour remplacer' : inEnv() ? 'défini dans .env ✓' : 'non défini';
+        rm.style.display = inVault ? '' : 'none';
+      };
+      let busy = false;
+      const commit = async () => {
+        const v = inp.value.trim();
+        if (!v || busy) return;
+        busy = true;
+        try { await vaultCall({ set: { [k]: v } }); inp.value = ''; toast('Clé enregistrée, chiffrée sur le serveur.'); } catch (e) { toast(e.message, 'warn'); }
+        busy = false;
+        paint();
+      };
+      inp.addEventListener('change', commit);
+      inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); commit(); } });
+      inp.addEventListener('paste', () => setTimeout(commit, 60));
+      rm.addEventListener('click', async (e) => {
+        e.preventDefault();
+        try { await vaultCall({ remove: [k] }); toast('Clé retirée du coffre.'); } catch (er) { toast(er.message, 'warn'); }
+        paint();
+      });
+      paint();
+      return h('label', { class: 'field' }, h('span', { class: 'fl' }, label), h('span', { class: 'key-row' }, inp, rm));
     };
+    const provEnv = (k) => () => !!(LX.api.status && LX.api.status.providers && LX.api.status.providers[k] && LX.api.status.providers[k].configured);
+    const keyRow = (k, label) => secretRow(k, label, provEnv(k));
+    const vs = LX.api.status && LX.api.status.vault;
+    const keyHelp = vaultOn() ? 'Coffre actif : une clé saisie ici est chiffrée (AES-256-GCM) sur le serveur de cette installation et ne revient jamais dans le navigateur. Elle reste propre à cette installation.'
+      : vs && vs.error ? 'Coffre indisponible : ' + vs.error + ' En attendant, une clé saisie ici est gardée dans ce navigateur.'
+        : LX.api.server ? 'Serveur détecté, coffre désactivé : définissez LEXINODE_MASTER_KEY dans .env pour enregistrer les clés chiffrées sur le serveur. En attendant, une clé saisie ici est gardée en clair dans ce navigateur et envoyée au serveur ; le plus sûr reste le fichier .env.'
+          : 'Mode autonome (sans serveur) : les clés restent dans ce navigateur et les appels partent directement vers les fournisseurs.';
     body.append(h('h3', {}, 'Clés API'),
-      h('div', { class: 'small muted' }, LX.api.server ? 'Serveur local détecté : le plus sûr est de mettre les clés dans le fichier .env. Une clé saisie ici est gardée dans ce navigateur et envoyée au serveur local uniquement.' : 'Mode autonome (sans serveur) : les clés restent dans ce navigateur et les appels partent directement vers les fournisseurs.'),
-      h('div', { class: 'grid2' }, keyRow('anthropic', 'Anthropic (Claude)'), keyRow('openai', 'OpenAI (GPT / Codex)'), keyRow('gemini', 'Google Gemini'), keyRow('compatible', 'Serveur compatible OpenAI (si clé)'), keyRow('tavily', 'Tavily (recherche)'), keyRow('brave', 'Brave Search (recherche)')));
+      h('div', { class: 'small muted' }, keyHelp),
+      h('div', { class: 'grid2' }, keyRow('anthropic', 'Anthropic (Claude)'), keyRow('openai', 'OpenAI (GPT / Codex)'), keyRow('gemini', 'Google Gemini'), keyRow('deepseek', 'DeepSeek'), keyRow('compatible', 'Serveur compatible OpenAI (si clé)'), keyRow('tavily', 'Tavily (recherche)'), keyRow('brave', 'Brave Search (recherche)')));
 
     // URL locales
     const urlRow = (k, label, ph) => {
@@ -672,11 +738,7 @@
         h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Agents IA en parallèle'), conc)));
 
     // génération vidéo
-    const vidKey = (k, label) => {
-      const inp = h('input', { type: 'password', value: (s.keys || {})[k] || '', placeholder: srv && srv.video && srv.video[k] ? 'défini dans .env ✓' : 'non défini', autocomplete: 'off' });
-      inp.addEventListener('input', () => { s.keys = s.keys || {}; s.keys[k] = inp.value.trim(); saveSettings(); });
-      return h('label', { class: 'field' }, h('span', { class: 'fl' }, label), inp);
-    };
+    const vidKey = (k, label) => secretRow(k, label, () => !!(LX.api.status && LX.api.status.video && LX.api.status.video[k]));
     const vidBox = h('div', {});
     for (const [id, P] of Object.entries(LX.VIDEO_MODELS)) {
       const ep = h('input', { type: 'text', value: (s.falModels || {})[id] || '', placeholder: P.falId ? 'par défaut : ' + P.falId : 'identifiant fal.ai du modèle' });
@@ -685,7 +747,7 @@
       tpl.value = (s.falTemplates || {})[id] || P.falTemplate;
       tpl.addEventListener('input', () => { s.falTemplates = s.falTemplates || {}; s.falTemplates[id] = tpl.value; saveSettings(); });
       vidBox.append(h('div', { class: 'vid-model' }, h('b', {}, P.nom), h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Identifiant du modèle sur fal.ai'), ep),
-        h('details', {}, h('summary', {}, 'Corps de la requête fal.ai (JSON, avec {prompt}, {duration}, {ratio}, {resolution}, {seed})'), tpl)));
+        h('details', {}, h('summary', {}, 'Corps de la requête fal.ai (JSON, avec {prompt}, {duration}, {ratio}, {resolution} en minuscules, {RESOLUTION} en majuscules, {seed})'), tpl)));
     }
     body.append(h('h3', {}, 'Génération vidéo'),
       h('div', { class: 'small muted' }, 'Avec une clé fal.ai, rien d’autre à régler : les identifiants des trois modèles sont préremplis (laissez les champs vides). Ne les modifiez que si fal change de version.'),
@@ -801,26 +863,80 @@
       h('ul', { class: 'small' },
         h('li', {}, 'Double-clic sur le canvas : ajouter un node · Clic droit : menu'),
         h('li', {}, 'Tirer un fil depuis une sortie vers le vide : ajouter un node déjà branché'),
-        h('li', {}, 'Glisser depuis une entrée branchée : débrancher / rebrancher'),
+        h('li', {}, 'Glisser depuis une entrée branchée : débrancher / rebrancher · depuis une entrée libre : brancher sur un node compatible'),
+        h('li', {}, 'Glisser sur le fond : sélectionner plusieurs nodes (Maj : ajouter) · Clic molette ou Alt + glisser : déplacer la vue'),
         h('li', {}, 'Suppr : supprimer la sélection · Ctrl+D : dupliquer · Ctrl+Z / Ctrl+Y : annuler / rétablir'),
-        h('li', {}, 'Ctrl+Entrée : tout exécuter · Ctrl+S : enregistrer · Molette : zoom · Glisser le fond : déplacer')),
+        h('li', {}, 'Ctrl+Entrée : tout exécuter · Ctrl+S : enregistrer · Molette : zoom')),
       h('h3', {}, 'Rapport au réel'),
       h('p', { class: 'small' }, 'Chaque donnée porte un statut (sourcé, saisi, estimé, fictif, inconnu) qui se propage jusqu’à la réflexion (indice de fiabilité) et au short (mention obligatoire « estimation » ou « fictif »). Les comparaisons rappellent qu’une corrélation n’est pas une causalité.'));
     modal('Aide', body, { wide: true });
   }
 
   // ------------------------------------------------------------------ barre d'outils
+  // Menu du moteur IA : fournisseur + modèle. Il lit et écrit LX.settings.provider / model, comme « Moteur IA par défaut »
+  // dans Réglages : les deux restent donc synchronisés.
+  let engineMenu = null;
+  function closeEngineMenu() {
+    if (!engineMenu) return;
+    engineMenu.el.remove();
+    document.removeEventListener('mousedown', engineMenu.onDown, true);
+    document.removeEventListener('keydown', engineMenu.onKey);
+    engineMenu = null;
+  }
+  function openEngineMenu(anchor) {
+    closeEngineMenu();
+    const s = LX.settings;
+    const INFO = LX.providers.INFO;
+    const st = (LX.api.status && LX.api.status.providers) || {};
+    const hasKey = (k) => k === 'ollama' || k === 'compatible' || !!(s.keys || {})[k] || !!(st[k] && st[k].configured);
+    const pSel = h('select', {}, Object.entries(INFO).map(([k, info]) => h('option', { value: k, selected: s.provider === k }, info.label + (hasKey(k) ? '' : ' — pas de clé'))));
+    const mSel = h('select', {});
+    const fillModels = () => {
+      const info = INFO[s.provider] || {};
+      const list = (info.models || []).slice();
+      if (s.model && !list.includes(s.model)) list.unshift(s.model);
+      mSel.innerHTML = '';
+      mSel.append(h('option', { value: '', selected: !s.model }, 'Modèle par défaut' + (info.defaultModel ? ' (' + info.defaultModel + ')' : '')));
+      list.forEach((m) => mSel.append(h('option', { value: m, selected: s.model === m }, m)));
+    };
+    fillModels();
+    pSel.addEventListener('change', () => { s.provider = pSel.value; s.model = ''; saveSettings(); fillModels(); renderEngineToggle(); });
+    mSel.addEventListener('change', () => { s.model = mSel.value; saveSettings(); renderEngineToggle(); });
+    const el = h('div', { class: 'engine-menu' },
+      h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Fournisseur'), pSel),
+      h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Modèle'), mSel),
+      h('div', { class: 'small muted' }, 'Même réglage que « Moteur IA par défaut » dans Réglages, où l’on peut aussi saisir un autre identifiant de modèle.'));
+    document.body.append(el);
+    const r = anchor.getBoundingClientRect();
+    el.style.top = (r.bottom + 6) + 'px';
+    el.style.right = Math.max(8, window.innerWidth - r.right) + 'px';
+    const onDown = (e) => { if (!el.contains(e.target) && !e.target.closest('#engine-toggle')) closeEngineMenu(); };
+    const onKey = (e) => { if (e.key === 'Escape') closeEngineMenu(); };
+    document.addEventListener('mousedown', onDown, true);
+    document.addEventListener('keydown', onKey);
+    engineMenu = { el, onDown, onKey };
+  }
+
   function renderEngineToggle() {
     const box = $('#engine-toggle');
     box.innerHTML = '';
-    const mk = (v, l) => h('button', { class: LX.settings.engine === v ? 'on' : '', onclick: () => { LX.settings.engine = v; saveSettings(); renderEngineToggle(); for (const n of ed.graph.nodes) if (!LX.engine.LOCAL_ONLY.includes(n.type)) ed.markStale(n.id); renderInspector(); } }, l);
+    const mk = (v, l, tip) => h('button', {
+      class: LX.settings.engine === v ? 'on' : '',
+      title: tip || '',
+      onclick: (e) => {
+        if (v === 'ia' && LX.settings.engine === 'ia') { if (engineMenu) closeEngineMenu(); else openEngineMenu(e.currentTarget); return; }
+        closeEngineMenu();
+        LX.settings.engine = v; saveSettings(); renderEngineToggle(); for (const n of ed.graph.nodes) if (!LX.engine.LOCAL_ONLY.includes(n.type)) ed.markStale(n.id); renderInspector();
+      },
+    }, l);
     const p = LX.providers.INFO[LX.settings.provider];
     if (window.LEXINODE_DEMO) {
       LX.settings.engine = 'local';
       box.append(mk('local', h('span', {}, LX.icon.el('cpu'), h('span', { class: 't' }, ' Local'))), h('button', { onclick: () => demoInfo() }, LX.icon.el('sparkle'), h('span', { class: 't' }, ' IA')));
       return;
     }
-    box.append(mk('local', h('span', {}, LX.icon.el('cpu'), h('span', { class: 't' }, ' Local'))), mk('ia', h('span', {}, LX.icon.el('sparkle'), h('span', { class: 't' }, ' IA' + (LX.settings.engine === 'ia' && p ? ' · ' + p.label.split(' ')[0] : '')))));
+    box.append(mk('local', h('span', {}, LX.icon.el('cpu'), h('span', { class: 't' }, ' Local'))), mk('ia', h('span', {}, LX.icon.el('sparkle'), h('span', { class: 't' }, ' IA' + (LX.settings.engine === 'ia' && p ? ' · ' + p.label.split(' ')[0] + ' ▾' : ''))),
+      LX.settings.engine === 'ia' && p ? `${p.label} · ${LX.settings.model || p.defaultModel} — cliquez pour changer de fournisseur ou de modèle` : 'Moteur IA'));
   }
 
   function bindToolbar() {
@@ -858,7 +974,7 @@
       else if (e.key === 'Delete' || e.key === 'Backspace') {
         if (!ed.selected) return;
         e.preventDefault();
-        if (ed.selected.kind === 'node') ed.removeNode(ed.selected.id); else ed.removeLink(ed.selected.id);
+        if (ed.selected.kind === 'node') { if (ed.multi.size > 1) ed.removeNodes([...ed.multi]); else ed.removeNode(ed.selected.id); } else ed.removeLink(ed.selected.id);
       } else if (e.key === 'Escape') { ed.hideMenu(); ed.select(null); }
     });
     // glisser-déposer depuis la palette
@@ -881,6 +997,7 @@
         if (r.ok) { LX.api.status = await r.json(); LX.api.server = true; }
       } catch (e) { /* mode autonome */ }
     }
+    await migrateKeysToVault();
     await LX.lex.load();
     await LX.topics.load();
     U.$$('[data-ico]').forEach((el) => el.prepend(LX.icon.el(el.dataset.ico)));

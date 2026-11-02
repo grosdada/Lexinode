@@ -3,3 +3,4 @@ node_modules/
 projects/*.json
 data/custom/*.json
 dist/
+data/vault/

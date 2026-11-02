@@ -236,11 +236,11 @@
       "x": 2120,
       "y": 360,
       "data": {
-        "modele": "seedance25",
+        "modele": "h3max",
         "segment": "15",
         "voix": "native",
         "passerelle": "fal",
-        "resolution": "720"
+        "resolution": "auto"
       }
     }
   ],

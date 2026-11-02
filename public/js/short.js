@@ -140,6 +140,7 @@
       case 'wan30':
         video = `${U.cap(styleTxt)}. ${U.cap(desc)}.${motifs.length ? ' With ' + motifs.join(', ') + '.' : ''} The camera ${scene.camera}, about ${scene.duree} seconds. ${onScreen ? onScreen + '.' : ''} Light is even and graphic, every surface clean and unbranded. Palette ${pal}.`;
         break;
+      case 'h3max':
       case 'h3':
         video = `Shot ${scene.n} — ${scene.duree} seconds. Camera: ${scene.camera}. ${U.cap(desc)}.${onScreen ? ' ' + onScreen + '.' : ''}\n\nStyle: ${styleTxt}, palette ${pal}.\n\nAudio, native stereo: ${st.music_en}, soft interface sounds timed to the cut.\n\nSettings: ${fmt}, 2K, ${Math.max(4, scene.duree)} seconds.`;
         break;

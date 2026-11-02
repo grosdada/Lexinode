@@ -30,6 +30,7 @@
     // ------------------------------------------------------------------ vue
     function applyView() {
       world.style.transform = `translate(${ed.view.x}px, ${ed.view.y}px) scale(${ed.view.k})`;
+      world.style.setProperty('--zoom', ed.view.k); // sert à garder des zones de prise des ports lisibles quand on dézoome
       container.style.backgroundPosition = `${ed.view.x}px ${ed.view.y}px`;
       container.style.backgroundSize = `${24 * ed.view.k}px ${24 * ed.view.k}px`;
       if (opts.onView) opts.onView(ed.view);
@@ -103,6 +104,7 @@
       for (const n of graph.nodes) if (n.out) ed.status[n.id] = { state: 'done' };
       ed.undoStack = []; ed.redoStack = []; lastSnap = serial();
       ed.selected = null;
+      ed.multi = new Set();
       renderAll();
       requestAnimationFrame(() => { ed.fit(); drawLinks(); });
     };
@@ -123,6 +125,18 @@
       if (ed.selected && ed.selected.id === id) ed.select(null);
       ed.markStale(null);
       drawLinks();
+      ed.snapshot();
+    };
+    // Suppression d'une sélection multiple (un seul pas d'annulation)
+    ed.removeNodes = (ids) => {
+      const set = new Set(ids);
+      ed.graph.nodes = ed.graph.nodes.filter((n) => !set.has(n.id));
+      ed.graph.links = ed.graph.links.filter((l) => !set.has(l.from) && !set.has(l.to));
+      for (const id of set) { if (nodeEls[id]) { nodeEls[id].remove(); delete nodeEls[id]; } delete ed.status[id]; }
+      ed.select(null);
+      ed.markStale(null);
+      drawLinks();
+      refreshPorts();
       ed.snapshot();
     };
     ed.duplicate = (id) => {
@@ -245,6 +259,7 @@
       el.dataset.state = st.state;
       U.$('.state', el).title = st.msg || st.state;
       el.classList.toggle('selected', !!(ed.selected && ed.selected.kind === 'node' && ed.selected.id === id));
+      el.classList.toggle('multi', ed.multi.size > 1 && ed.multi.has(id));
     };
     ed.setStatus = (id, state, msg) => {
       ed.status[id] = { state, msg };
@@ -307,8 +322,12 @@
     ed.drawLinks = drawLinks;
 
     // ------------------------------------------------------------------ sélection
+    // ed.selected = node ou lien affiché dans l'inspecteur ; ed.multi = tous les nodes sélectionnés (toujours le node actif inclus)
+    ed.multi = new Set();
     ed.select = (sel) => {
       ed.selected = sel;
+      if (!sel || sel.kind !== 'node') ed.multi = new Set();
+      else if (!ed.multi.has(sel.id)) ed.multi = new Set([sel.id]);
       for (const n of ed.graph.nodes) ed.refreshNode(n.id);
       drawLinks();
       if (opts.onSelect) opts.onSelect(sel && sel.kind === 'node' ? ed.node(sel.id) : null, sel);
@@ -319,6 +338,14 @@
     container.addEventListener('pointerdown', (e) => {
       if (e.button === 2) return;
       hideMenu();
+      if (e.button === 1 || (e.button === 0 && e.altKey)) {
+        // clic molette, ou Alt + clic gauche : déplacer la vue (même au-dessus d'un node)
+        e.preventDefault();
+        drag = { kind: 'pan', sx: e.clientX, sy: e.clientY, vx: ed.view.x, vy: ed.view.y };
+        container.setPointerCapture(e.pointerId);
+        container.classList.add('panning');
+        return;
+      }
       const portDot = e.target.closest('.port');
       const nodeEl = e.target.closest('.node');
       const linkEl = e.target.closest('[data-link]');
@@ -355,6 +382,15 @@
           highlightTargets(drag.from, drag.fromPort);
           return;
         }
+        // port libre : on tire un fil vers un node compatible. Un simple clic ne fait que sélectionner le node, comme avant.
+        e.preventDefault();
+        const nid = portDot.dataset.node;
+        if (!(ed.selected && ed.selected.id === nid)) ed.select({ kind: 'node', id: nid });
+        drag = { kind: 'wire-in', to: nid, toPort: portDot.dataset.port, start: portPos(nid, 'in', portDot.dataset.port), sx: e.clientX, sy: e.clientY };
+        container.setPointerCapture(e.pointerId);
+        container.classList.add('wiring');
+        highlightSources(nid, drag.toPort);
+        return;
       }
       if (linkEl) {
         ed.select({ kind: 'link', id: linkEl.dataset.link });
@@ -362,12 +398,30 @@
       }
       if (nodeEl) {
         const n = ed.node(nodeEl.dataset.id);
+        if (e.shiftKey && !e.target.closest('input,textarea,select,a')) {
+          // Maj + clic : ajouter ce node à la sélection, ou l'en retirer
+          if (ed.multi.has(n.id) && ed.multi.size > 1) { ed.multi.delete(n.id); ed.select({ kind: 'node', id: [...ed.multi][ed.multi.size - 1] }); }
+          else { ed.multi.add(n.id); ed.select({ kind: 'node', id: n.id }); }
+          return;
+        }
         if (!(ed.selected && ed.selected.id === n.id)) ed.select({ kind: 'node', id: n.id });
         if (e.target.closest('input,textarea,select,a')) return;
         const p = toWorld(e.clientX, e.clientY);
-        drag = { kind: 'node', id: n.id, dx: p.x - n.x, dy: p.y - n.y, moved: false };
+        const group = ed.multi.size > 1 && ed.multi.has(n.id) ? [...ed.multi].map((id) => { const m = ed.node(id); return { id, dx: p.x - m.x, dy: p.y - m.y }; }) : null;
+        drag = { kind: 'node', id: n.id, dx: p.x - n.x, dy: p.y - n.y, moved: false, group };
         container.setPointerCapture(e.pointerId);
         nodeEl.classList.add('dragging');
+        return;
+      }
+      if (e.pointerType !== 'touch') {
+        // glisser sur le fond : rectangle de sélection (Maj : l'ajouter à la sélection actuelle)
+        const base = e.shiftKey ? new Set(ed.multi) : new Set();
+        if (!e.shiftKey) ed.select(null);
+        const box = U.h('div', { class: 'marquee' });
+        box.style.display = 'none';
+        container.append(box);
+        drag = { kind: 'marquee', sx: e.clientX, sy: e.clientY, base, box, hits: [] };
+        container.setPointerCapture(e.pointerId);
         return;
       }
       ed.select(null);
@@ -375,6 +429,7 @@
       container.setPointerCapture(e.pointerId);
       container.classList.add('panning');
     });
+    container.addEventListener('mousedown', (e) => { if (e.button === 1) e.preventDefault(); }); // pas de défilement automatique du navigateur
     container.addEventListener('pointermove', (e) => {
       if (!drag) return;
       if (drag.kind === 'pan') {
@@ -382,19 +437,35 @@
         ed.view.y = drag.vy + e.clientY - drag.sy;
         applyView();
       } else if (drag.kind === 'node') {
-        const n = ed.node(drag.id);
         const p = toWorld(e.clientX, e.clientY);
-        n.x = Math.round(p.x - drag.dx); n.y = Math.round(p.y - drag.dy);
+        for (const m of drag.group || [{ id: drag.id, dx: drag.dx, dy: drag.dy }]) {
+          const n = ed.node(m.id);
+          n.x = Math.round(p.x - m.dx); n.y = Math.round(p.y - m.dy);
+          nodeEls[n.id].style.left = n.x + 'px';
+          nodeEls[n.id].style.top = n.y + 'px';
+        }
         drag.moved = true;
-        nodeEls[n.id].style.left = n.x + 'px';
-        nodeEls[n.id].style.top = n.y + 'px';
         drawLinks();
+      } else if (drag.kind === 'marquee') {
+        const x0 = Math.min(drag.sx, e.clientX), y0 = Math.min(drag.sy, e.clientY), x1 = Math.max(drag.sx, e.clientX), y1 = Math.max(drag.sy, e.clientY);
+        if (x1 - x0 < 4 && y1 - y0 < 4 && drag.box.style.display === 'none') return; // simple clic
+        const cr = container.getBoundingClientRect();
+        Object.assign(drag.box.style, { display: '', left: (x0 - cr.left) + 'px', top: (y0 - cr.top) + 'px', width: (x1 - x0) + 'px', height: (y1 - y0) + 'px' });
+        drag.hits = ed.graph.nodes.filter((n) => { const r = nodeEls[n.id].getBoundingClientRect(); return r.right >= x0 && r.left <= x1 && r.bottom >= y0 && r.top <= y1; }).map((n) => n.id);
+        for (const n of ed.graph.nodes) nodeEls[n.id].classList.toggle('multi', drag.base.has(n.id) || drag.hits.includes(n.id));
       } else if (drag.kind === 'wire') {
         const p = toWorld(e.clientX, e.clientY);
         dragPath.setAttribute('d', curve(drag.start, p));
-        dragPath.style.display = '';
+        dragPath.style.display = 'block'; // '' laisserait la règle CSS « display: none » : le fil tiré resterait invisible
         const src = ed.node(drag.from);
         dragPath.setAttribute('stroke', (N.TYPES[ed.outputType(src, drag.fromPort)] || {}).color || '#fff');
+      } else if (drag.kind === 'wire-in') {
+        if (Math.hypot(e.clientX - drag.sx, e.clientY - drag.sy) < 4) return; // simple clic : rien à dessiner
+        const p = toWorld(e.clientX, e.clientY);
+        dragPath.setAttribute('d', curve(p, drag.start));
+        dragPath.style.display = 'block';
+        const inp = N.DEFS[ed.node(drag.to).type].inputs.find((i) => i.key === drag.toPort);
+        dragPath.setAttribute('stroke', (N.TYPES[[].concat(inp.type)[0]] || {}).color || '#fff');
       }
     });
     container.addEventListener('pointerup', (e) => {
@@ -403,18 +474,40 @@
       drag = null;
       container.classList.remove('panning', 'wiring');
       U.$$('.port.target', world).forEach((x) => x.classList.remove('target'));
+      U.$$('.node.compat', world).forEach((x) => x.classList.remove('compat'));
       dragPath.style.display = 'none';
-      if (d.kind === 'node') {
+      if (d.kind === 'marquee') {
+        d.box.remove();
+        const ids = [...new Set([...d.base, ...d.hits])];
+        if (ids.length) { ed.multi = new Set(ids); ed.select({ kind: 'node', id: ids[ids.length - 1] }); }
+        else for (const n of ed.graph.nodes) nodeEls[n.id].classList.remove('multi');
+        return;
+      }
+      if (d.kind === 'wire-in') {
+        // fil tiré depuis une entrée libre : se branche sur la première sortie compatible du node visé ; sinon rien
+        if (Math.hypot(e.clientX - d.sx, e.clientY - d.sy) < 4) return;
+        const target = document.elementFromPoint(e.clientX, e.clientY);
+        const outPort = target && target.closest('.port.out');
+        const nodeEl = target && target.closest('.node');
+        if (outPort && ed.canConnect(outPort.dataset.node, outPort.dataset.port, d.to, d.toPort)) ed.connect(outPort.dataset.node, outPort.dataset.port, d.to, d.toPort);
+        else if (nodeEl && nodeEl.dataset.id !== d.to) {
+          // (aussi quand on lâche sur une sortie incompatible d'un node qui en a une autre compatible)
+          const n = ed.node(nodeEl.dataset.id);
+          const out = N.DEFS[n.type].outputs.find((o) => ed.canConnect(n.id, o.key, d.to, d.toPort));
+          if (out) ed.connect(n.id, out.key, d.to, d.toPort);
+        }
+      } else if (d.kind === 'node') {
         nodeEls[d.id] && nodeEls[d.id].classList.remove('dragging');
         if (d.moved) ed.snapshot();
+        else if (d.group) { ed.multi = new Set([d.id]); ed.select({ kind: 'node', id: d.id }); } // simple clic dans un groupe : on ne garde que ce node
       } else if (d.kind === 'wire') {
         const target = document.elementFromPoint(e.clientX, e.clientY);
         const port = target && target.closest('.port.in');
         const nodeEl = target && target.closest('.node');
-        if (port) {
-          if (!ed.connect(d.from, d.fromPort, port.dataset.node, port.dataset.port) && d.detached) ed.snapshot();
+        if (port && ed.canConnect(d.from, d.fromPort, port.dataset.node, port.dataset.port)) {
+          ed.connect(d.from, d.fromPort, port.dataset.node, port.dataset.port);
         } else if (nodeEl && nodeEl.dataset.id !== d.from) {
-          // lâché sur un node : premier port compatible libre (ou multiple)
+          // lâché sur un node (ou sur un de ses ports incompatibles) : premier port compatible libre (ou multiple)
           const n = ed.node(nodeEl.dataset.id);
           const type = ed.outputType(ed.node(d.from), d.fromPort);
           const ins = N.DEFS[n.type].inputs.filter((i) => N.accepts(i, type));
@@ -449,9 +542,20 @@
       showMenu(e.clientX, e.clientY, toWorld(e.clientX, e.clientY));
     });
 
+    // Pendant un tirage de fil : met en évidence les ports compatibles et les nodes qui en ont au moins un
+    function markCompat(el) {
+      el.classList.add('target');
+      const ne = el.closest('.node');
+      if (ne) ne.classList.add('compat');
+    }
     function highlightTargets(fromId, fromPort) {
       for (const el of U.$$('.port.in', world)) {
-        if (ed.canConnect(fromId, fromPort, el.dataset.node, el.dataset.port)) el.classList.add('target');
+        if (ed.canConnect(fromId, fromPort, el.dataset.node, el.dataset.port)) markCompat(el);
+      }
+    }
+    function highlightSources(toId, toPort) {
+      for (const el of U.$$('.port.out', world)) {
+        if (ed.canConnect(el.dataset.node, el.dataset.port, toId, toPort)) markCompat(el);
       }
     }
 

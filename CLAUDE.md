@@ -92,7 +92,7 @@ Puis, dans le navigateur, avec l'utilisateur :
 - Les identifiants fal préremplis viennent des pages de fal, consultées en novembre 2026 :
   - Seedance 2.5 : `bytedance/seedance-2.5/text-to-video` (vérifié) ;
   - Wan 3.0 : `alibaba/wan-3.0/text-to-video` (vérifié) ;
-  - MiniMax H3 : `minimax/hailuo-03/text-to-video` (**déduit d'un lien, non confirmé**).
+  - MiniMax H3 : `minimax/h3/text-to-video` (classique) et `minimax/h3-max/text-to-video` (**H3 Max, modèle par défaut du Générateur vidéo**). Schémas OpenAPI de fal lus le 02/11 : prompt jusqu'à 50 000 caractères, durée 5 à 15 s, résolutions 480P/768P/2K/4K (classique) et 480P/768P/1080P (Max, `prompt_expansion_mode` obligatoire, réglé sur `disabled`) ; prix lus sur les pages fal ; **jamais appelés pour de vrai**. L'ancien identifiant `minimax/hailuo-03/…` (prompt limité à 2000 caractères, 2K seul) n'est plus utilisé.
 - En cas d'erreur 404 ou 422, corrige l'identifiant ou le corps JSON dans **Réglages → Génération vidéo**, sans toucher au code. Le code correspondant est dans `public/js/video-models.js` (`falId`, `falTemplate`).
 - Le dialogue en français n'est pas confirmé sur Seedance 2.5. L'appli prévient l'utilisateur et propose « voix ajoutée au montage ».
 

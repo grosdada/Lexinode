@@ -31,9 +31,12 @@ setenv() { # setenv CLE valeur : remplace la ligne (même commentée) ou l'ajout
 getenv() { grep -E "^${1}=" .env | head -1 | cut -d= -f2-; }
 
 if [ -z "$(getenv FAL_KEY)" ]; then
-  read -r -s -p "Collez votre clé fal.ai (rien ne s'affiche) : " FALK; echo
-  [ -n "$FALK" ] || { echo "Clé fal vide : abandon."; exit 1; }
-  setenv FAL_KEY "$FALK"
+  read -r -s -p "Clé fal.ai (rien ne s'affiche ; Entrée pour la saisir plus tard dans Réglages) : " FALK; echo
+  [ -z "$FALK" ] || setenv FAL_KEY "$FALK"
+fi
+if [ -z "$(getenv LEXINODE_MASTER_KEY)" ]; then
+  setenv LEXINODE_MASTER_KEY "$(openssl rand -hex 32)"
+  echo "Clé maîtresse du coffre générée dans .env : sauvegardez ce fichier, sans elle le coffre est illisible."
 fi
 if [ -z "$(getenv LEXINODE_PASSWORD)" ]; then
   PASS="$(openssl rand -base64 18 | tr -d '/+=' | head -c 20)"
@@ -44,12 +47,12 @@ fi
 setenv HOST "0.0.0.0"
 
 say "3/5 Construction et lancement (Lexinode seul, sans Ollama ni SearXNG)"
-mkdir -p projects data/custom
+mkdir -p projects data/custom data/vault
 docker build -t lexinode .
 docker rm -f lexinode >/dev/null 2>&1 || true
 if [ -n "$DOMAIN" ]; then PUBLISH="127.0.0.1:5177:5177"; else PUBLISH="5177:5177"; fi
 docker run -d --name lexinode --restart unless-stopped --env-file .env \
-  -p "$PUBLISH" -v "$DIR/projects:/app/projects" -v "$DIR/data/custom:/app/data/custom" lexinode
+  -p "$PUBLISH" -v "$DIR/projects:/app/projects" -v "$DIR/data/custom:/app/data/custom" -v "$DIR/data/vault:/app/data/vault" lexinode
 
 say "4/5 HTTPS"
 if [ -n "$DOMAIN" ]; then
