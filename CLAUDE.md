@@ -2,6 +2,8 @@
 
 Tu reprends un projet construit dans une autre session Claude Code, qui n'a pas eu accès au VPS de l'utilisateur. Ta mission : **installer Lexinode sur son VPS, accessible en ligne et protégé**, avec **une seule clé API : fal.ai**. L'utilisateur parle français, préfère un ton factuel et amical, et a un **budget limité** : va droit au but, pas de sous-agents ni d'exploration inutile.
 
+> **Raccourci :** `sudo bash scripts/install-vps.sh [domaine]` fait les étapes 2 à 6 ci-dessous. Lis aussi `docs/DEBRIEF.md` (état complet, pièges, ce qui n'est pas vérifié). Si le script échoue, suis la procédure manuelle.
+
 ## Le projet en bref
 
 - Lexinode est un atelier nodal : on relie des blocs (sujet, données, éléments de langage métiers, corrélations…), un moteur produit une réflexion, puis un short animé, puis des générations vidéo via fal.ai.
