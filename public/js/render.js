@@ -126,6 +126,20 @@
       (o.donnees_suggerees || []).some((x) => !x.deja) ? h('div', { class: 'row wrap' }, h('button', { class: 'btn', onclick: () => opts && opts.onSpawn && opts.onSpawn('donnees-correlation') }, ico('spawn'), ' Créer les nodes Donnée à rechercher')) : null,
       sourcesList(o.sources));
   };
+  R.qbuilder = (o) => h('div', { class: 'gen' },
+    h('div', { class: 'chips' }, h('span', { class: 'chip' }, ico('cpu'), ' ' + o.moteurNom), h('span', { class: 'chip' }, ico('clock'), ` ${o.duree} s en ${o.nbPrompts} prompt(s)`), h('span', { class: 'chip' }, ico('frame'), ' ' + o.ratio)),
+    (o.avertissements || []).map((w) => h('div', { class: 'note' }, ico('alert'), ' ', w)),
+    h('div', { class: 'note' }, ico('info'), ' Dans Workflows Q-Builder : « Load prompts HTML », choisissez ', o.moteur === 'ltx25' ? 'LTX 2.5' : 'MiniMax H3 > T2V', ', vérifiez durée, format et taille, puis générez la commande. Lexinode n’envoie rien : c’est Q-Builder qui répartit les films sur les machines.'),
+    h('details', {}, h('summary', {}, 'Règles de prompting appliquées (' + o.moteurNom + ')'), h('ul', { class: 'small' }, (o.regles || []).map((r) => h('li', {}, r)))),
+    h('div', { class: 'row wrap' },
+      o.lots.map((lot) => h('button', { class: 'btn primary', onclick: () => U.download(`qbuilder_${o.prefixe}_${o.moteur}${o.lots.length > 1 ? '_p' + lot.n : ''}.html`, LX.qbuilder.page(o, lot), 'text/html') }, ico('download'), ` Télécharger la page HTML${o.lots.length > 1 ? ' ' + lot.n + '/' + o.lots.length : ''} (${lot.items.length})`)),
+      copyBtn('Copier tous les prompts', () => o.items.map((x) => `### ${x.name} (${x.seconds} s)\n${x.positive}`).join('\n\n')),
+      h('a', { class: 'btn', href: 'http://127.0.0.1:8765/', target: '_blank', rel: 'noopener', title: 'Adresse habituelle de Q-Builder sur ce PC' }, ico('link'), ' Ouvrir Q-Builder')),
+    o.items.map((x) => h('div', { class: 'seg-card' },
+      h('div', { class: 'seg-h' }, h('span', { class: 'num' }, x.n), h('b', {}, x.name), h('span', { class: 'muted' }, ` · ${x.seconds} s${x.frames ? ' · ' + x.frames + ' images' : ''} · ${x.chars} car.`)),
+      h('div', { class: 'small muted' }, x.plans.map((p) => `${p.titre} (${p.duree} s)`).join(' → ')),
+      h('div', { class: 'row wrap' }, copyBtn('Copier le prompt', x.positive)),
+      h('details', {}, h('summary', {}, 'Prompt'), h('pre', { class: 'prompt' }, x.positive)))));
   const JOB = { submitting: ['', 'envoi…'], queued: ['est', 'en file d’attente'], running: ['est', 'génération en cours'], done: ['ok', 'vidéo prête'], error: ['err', 'échec'] };
   R.generateur = (o, opts, node) => {
     const jobs = (node && node.jobs) || {};
@@ -149,6 +163,28 @@
             h('button', { class: 'btn sm' + (j ? '' : ' primary'), disabled: j && ['queued', 'running', 'submitting'].includes(j.state), onclick: () => opts && opts.onGenerate && opts.onGenerate(s.key) }, ico(j ? 'refresh' : 'sparkle'), j ? ' Relancer' : ' Générer ce segment'),
             copyBtn('Copier le prompt', s.prompt)),
           h('details', {}, h('summary', {}, 'Prompt envoyé'), h('pre', { class: 'prompt' }, s.prompt)));
+      }));
+  };
+  R.voice = (o, opts, node) => {
+    const jobs = (node && node.jobs) || {};
+    const todo = o.items.filter((x) => !(jobs[x.key] && jobs[x.key].state === 'done'));
+    const todoChars = todo.reduce((s, x) => s + x.chars, 0);
+    return h('div', { class: 'gen' },
+      h('div', { class: 'chips' }, h('span', { class: 'chip' }, ico('mic'), ' ElevenLabs · ' + o.modele), h('span', { class: 'chip' }, ico('clock'), ` ${o.items.length} scène(s) · ${o.chars} caractères`), h('span', { class: 'chip' }, ico('globe'), o.langue === 'en' ? ' anglais' : ' français'), o.voiceId ? h('span', { class: 'chip', title: o.voiceId }, ico('check'), ' voix ' + o.voiceId.slice(0, 6) + '…') : h('span', { class: 'chip' }, ico('alert'), ' voix à choisir')),
+      (o.avertissements || []).map((w) => h('div', { class: 'note' }, ico('alert'), ' ', w)),
+      h('div', { class: 'note' }, ico('info'), ' La clé ElevenLabs se colle dans Réglages. Les crédits ne sont dépensés que sur « Générer » ; une voix déjà générée avec les mêmes réglages n’est jamais refacturée. Branchez ce node sur l’entrée « voix » d’une sortie vidéo pour l’utiliser.'),
+      h('div', { class: 'row wrap' },
+        h('button', { class: 'btn', onclick: () => opts && opts.onPickVoice && opts.onPickVoice() }, ico('mic'), ' Mes voix (ElevenLabs)'),
+        h('button', { class: 'btn primary', disabled: !todo.length || !o.voiceId, onclick: () => opts && opts.onGenerateVoice && opts.onGenerateVoice(null) }, ico('sparkle'), todo.length ? ` Générer la voix off (${todo.length} scène(s), ${todoChars} caractères)` : ' Voix off prête')),
+      o.items.map((x) => {
+        const j = jobs[x.key];
+        const st = j ? JOB[j.state] || ['', j.state] : null;
+        return h('div', { class: 'seg-card' },
+          h('div', { class: 'seg-h' }, h('span', { class: 'num' }, x.n), h('b', {}, x.titre), h('span', { class: 'muted' }, ` · ${x.duree} s de scène · ${x.chars} car.`), st ? h('span', { class: 'badge dot ' + st[0] }, st[1]) : null),
+          h('div', { class: 'small muted' }, x.texte),
+          j && j.state === 'done' && j.url ? h('div', { class: 'seg-video' }, h('audio', { src: j.url, controls: true, preload: 'none' }), h('a', { href: j.url, download: `voix_${String(x.n).padStart(2, '0')}.mp3`, class: 'small' }, 'Télécharger le MP3' + (j.cached ? ' (déjà généré, aucun crédit dépensé)' : ''))) : null,
+          j && j.state === 'error' ? h('div', { class: 'error-box' }, ico('alert'), ' ', j.error || 'Échec') : null,
+          h('div', { class: 'row wrap' }, h('button', { class: 'btn sm' + (j && j.state === 'done' ? '' : ' primary'), disabled: !o.voiceId || (j && j.state === 'running'), onclick: () => opts && opts.onGenerateVoice && opts.onGenerateVoice(x.key) }, ico(j && j.state === 'done' ? 'refresh' : 'sparkle'), j && j.state === 'done' ? ' Régénérer' : ' Générer'), copyBtn('Copier le texte', x.texte)));
       }));
   };
   R.reflexion = (o) => {
@@ -242,6 +278,8 @@
       case 'comparaison': return s(U.cap(o.conclusion));
       case 'reflexion': return s(o.these);
       case 'short': return `${o.scenes.length} scènes · « ${s(o.titre)} »`;
+      case 'voice': return `${o.items.length} voix · ${o.chars} car.`;
+      case 'qbuilder': return `${o.nbPrompts} prompt(s) · ${o.moteurNom}`;
       case 'generateur': { const jb = node.jobs || {}; const done = o.segments.filter((x) => jb[x.key] && jb[x.key].state === 'done').length; return `${o.segments.length} segment(s) · ${done} vidéo(s) prête(s)`; }
       case 'decodeur': return `${o.scores.verdict} (${o.scores.indice}/100)`;
       case 'debat': return `${o.tours.length} prises de parole`;
@@ -279,6 +317,8 @@
         if (o.confiance) L.push('', `_Fiabilité : ${o.confiance.niveau} — ${o.confiance.note}_`);
         break;
       case 'short': L.push(o.markdown); break;
+      case 'voice': L.push(`ElevenLabs · ${o.modele} · ${o.chars} caractères`, ...o.items.map((x) => `\n### ${x.titre}\n\n${x.texte}`)); break;
+      case 'qbuilder': L.push(`${o.moteurNom} · ${o.duree} s · ${o.ratio} · ${o.nbPrompts} prompt(s)`, ...o.items.map((x) => `\n### ${x.name} (${x.seconds} s)\n\n${x.positive}`)); break;
       case 'generateur': L.push(`${o.modeleNom} · ${o.duree} s · ${o.ratio}`, ...o.segments.map((sg) => `\n### Segment ${sg.n} (${sg.debut}–${sg.fin} s)\n\n\`\`\`\n${sg.prompt}\n\`\`\``)); break;
       case 'style': L.push(o.nom, '```', o.prompt_en, '```'); break;
       case 'decodeur': L.push(`Indice langue de bois : ${o.scores.indice}/100 (${o.scores.verdict})`, '', strip(o.texte)); break;

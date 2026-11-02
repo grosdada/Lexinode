@@ -16,7 +16,7 @@
   LX.api = { server: false, status: null };
 
   // Coffre du serveur : les clés y sont chiffrées et ne reviennent jamais dans le navigateur
-  const VAULT_IDS = ['anthropic', 'openai', 'gemini', 'deepseek', 'compatible', 'tavily', 'brave', 'fal', 'minimax', 'dashscope'];
+  const VAULT_IDS = ['anthropic', 'openai', 'gemini', 'deepseek', 'compatible', 'tavily', 'brave', 'fal', 'minimax', 'dashscope', 'elevenlabs'];
   const vaultOn = () => { const v = LX.api.server && LX.api.status && LX.api.status.vault; return !!(v && v.enabled && !v.locked); };
   async function refreshStatus() {
     try { const r = await fetch('api/status'); if (r.ok) LX.api.status = await r.json(); } catch (e) { /* statut inchangé */ }
@@ -302,7 +302,7 @@
       }
       box.append(form);
     } else {
-      box.append(LX.render.output(node, { onAnimatic: openAnimatic, onDice: () => drawTopic(node.id), onSpawn: (what) => spawn(node.id, what), onGenerate: (key) => generateVideo(node.id, key) }));
+      box.append(LX.render.output(node, { onAnimatic: openAnimatic, onDice: () => drawTopic(node.id), onSpawn: (what) => spawn(node.id, what), onGenerate: (key) => generateVideo(node.id, key), onGenerateVoice: (key) => generateVoice(node.id, key), onPickVoice: () => pickVoice(node.id) }));
     }
   }
 
@@ -412,12 +412,59 @@
         payload = JSON.parse(filled);
       } catch (e) { throw new Error('Modèle de requête fal.ai invalide (Réglages → Génération vidéo) : ' + e.message); }
       if (seed && payload.seed === undefined) payload.seed = seed;
+      // voix du node Voice : H3 / H3 Max l'acceptent comme piste audio imposée ; le serveur fabrique le data URI à l'envoi
+      if (seg.voice && seg.voice.refs.length && ['h3', 'h3max'].includes(o.modele)) payload.target_audio_url = 'lexinode-voice:' + btoa(unescape(encodeURIComponent(JSON.stringify(seg.voice.refs))));
       return { provider: 'fal', endpoint, payload };
     }
     const ctx = { ratio: o.ratio, resolution: o.resolution, seed };
     if (o.modele === 'h3') return { provider: 'minimax', payload: P.directPayload(seg, seg.prompt, ctx) };
     if (o.modele === 'wan30') return { provider: 'dashscope', payload: P.directPayload(seg, seg.prompt, ctx) };
     throw new Error(`${P.nom} n’a pas d’API directe intégrée : choisissez la passerelle fal.ai.`);
+  }
+  // ------------------------------------------------------------------ voix off (ElevenLabs, via le serveur)
+  async function voiceCall(route, body) {
+    const keys = {};
+    if ((LX.settings.keys || {}).elevenlabs) keys.elevenlabs = LX.settings.keys.elevenlabs;
+    const r = await fetch('api/' + route, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(Object.assign({ keys }, body)) });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'Erreur serveur');
+    return j;
+  }
+  function generateVoice(nodeId, key) {
+    const node = ed.node(nodeId);
+    if (!node || !node.out) return;
+    if (!LX.api.server) { toast('La voix off ElevenLabs passe par le serveur : lancez Lexinode avec son serveur.', 'warn'); return; }
+    const o = node.out;
+    node.jobs = node.jobs || {};
+    const items = key ? o.items.filter((x) => x.key === key) : o.items.filter((x) => !(node.jobs[x.key] && node.jobs[x.key].state === 'done'));
+    if (!items.length) return;
+    if (!o.voiceId) { toast('Choisissez d’abord une voix.', 'warn'); return; }
+    const chars = items.reduce((s, x) => s + x.chars, 0);
+    askConfirm(`Générer ${items.length} voix off avec ElevenLabs (${chars} caractères, environ ${chars} crédits au tarif standard) ? Un texte déjà généré avec les mêmes réglages n’est pas refacturé.`, 'Générer la voix', async () => {
+      for (const x of items) {
+        node.jobs[x.key] = { state: 'running', at: Date.now() };
+        renderInspector();
+        try {
+          const r = await voiceCall('voice', { text: x.texte, voice_id: o.voiceId, model_id: o.modele, settings: o.settings });
+          node.jobs[x.key] = { state: 'done', id: r.id, url: r.url, bytes: r.bytes, cached: r.cached };
+          log({ node: node.data._label || 'Voice', role: 'Voix off', provider: 'ElevenLabs', model: o.modele, state: 'done', msg: `scène ${x.n} : ${r.cached ? 'déjà générée' : Math.round(r.bytes / 1024) + ' Ko'}` });
+        } catch (e) {
+          node.jobs[x.key] = { state: 'error', error: e.message };
+          log({ node: node.data._label || 'Voice', role: 'Voix off', provider: 'ElevenLabs', state: 'error', msg: e.message });
+        }
+        ed.refreshNode(node.id);
+        renderInspector();
+        autosave();
+      }
+    });
+  }
+  async function pickVoice(nodeId) {
+    const node = ed.node(nodeId);
+    if (!node) return;
+    if (!LX.api.server) { toast('La liste des voix passe par le serveur : lancez Lexinode avec son serveur.', 'warn'); return; }
+    let voices;
+    try { voices = await voiceCall('voice/voices', {}); } catch (e) { toast(e.message, 'warn'); return; }
+    const m = modal('Mes voix ElevenLabs', h('div', {}, voices.length ? h('div', { class: 'cards' }, voices.map((v) => h('button', { class: 'card', onclick: () => { m.close(); node.data.voice_id = v.id; ed.markStale(node.id); runNode(node.id); autosave(); } }, h('b', {}, v.name), h('span', { class: 'small muted' }, v.category || '')))) : h('p', {}, 'Aucune voix trouvée sur ce compte.')));
   }
   function generateVideo(nodeId, key) {
     const node = ed.node(nodeId);
@@ -682,7 +729,7 @@
           : 'Mode autonome (sans serveur) : les clés restent dans ce navigateur et les appels partent directement vers les fournisseurs.';
     body.append(h('h3', {}, 'Clés API'),
       h('div', { class: 'small muted' }, keyHelp),
-      h('div', { class: 'grid2' }, keyRow('anthropic', 'Anthropic (Claude)'), keyRow('openai', 'OpenAI (GPT / Codex)'), keyRow('gemini', 'Google Gemini'), keyRow('deepseek', 'DeepSeek'), keyRow('compatible', 'Serveur compatible OpenAI (si clé)'), keyRow('tavily', 'Tavily (recherche)'), keyRow('brave', 'Brave Search (recherche)')));
+      h('div', { class: 'grid2' }, keyRow('anthropic', 'Anthropic (Claude)'), keyRow('openai', 'OpenAI (GPT / Codex)'), keyRow('gemini', 'Google Gemini'), keyRow('deepseek', 'DeepSeek'), keyRow('compatible', 'Serveur compatible OpenAI (si clé)'), keyRow('tavily', 'Tavily (recherche)'), keyRow('brave', 'Brave Search (recherche)'), secretRow('elevenlabs', 'ElevenLabs (voix off)', () => !!(LX.api.status && LX.api.status.voice && LX.api.status.voice.elevenlabs))));
 
     // URL locales
     const urlRow = (k, label, ph) => {

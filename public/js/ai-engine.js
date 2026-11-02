@@ -454,11 +454,11 @@ Réponds en JSON : {"titre": "…", "logline": "…", "scenes": [{"titre": "…"
     const it = (inp.script || []).find((x) => x.out);
     const script = it.out;
     const segs = await Promise.all(local.segments.map(async (seg) => {
-      const scenes = script.scenes.filter((s) => s.debut < seg.fin && s.fin > seg.debut).map((s) => ({ titre: s.titre, duree: s.duree, voix_off: U.stripMarks(s.vo), texte_ecran: s.texte_ecran, visuel: s.description || LX.short.visualDesc(s.visuel, 'en'), camera: s.camera }));
+      const scenes = script.scenes.filter((s) => s.debut < seg.fin && s.fin > seg.debut).map((s) => ({ titre: s.titre, duree: s.duree, voix_off: U.stripMarks(local.voix === 'native_en' && s.vo_en != null ? s.vo_en : s.vo), texte_ecran: s.texte_ecran, visuel: s.description || LX.short.visualDesc(s.visuel, 'en'), camera: s.camera }));
       const prompt = `Réécris ce prompt de génération vidéo pour ${P.nom}, en respectant STRICTEMENT ces règles :
 - ${P.regles.join('\n- ')}
-Le prompt final est en anglais (sauf les répliques de voix off et les textes à l’écran, qui restent en français), et ne dépasse pas ${P.promptMax} caractères.
-Segment ${seg.n} : ${seg.debut}–${seg.fin} s, durée ${seg.duree} s, format ${local.ratio}, voix off ${local.voix === 'native' ? 'dite par le modèle' : 'ajoutée au montage (aucune voix dans la vidéo)'}.
+Le prompt final est en anglais (sauf ${local.voix === 'native_en' ? 'les textes à l’écran, qui restent en français' : 'les répliques de voix off et les textes à l’écran, qui restent en français'}), et ne dépasse pas ${P.promptMax} caractères.
+Segment ${seg.n} : ${seg.debut}–${seg.fin} s, durée ${seg.duree} s, format ${local.ratio}, voix off ${local.voix === 'native' ? 'dite par le modèle, en français' : local.voix === 'native_en' ? 'dite par le modèle, en anglais' : 'ajoutée au montage (aucune voix dans la vidéo)'}.
 Plans et durées à respecter : ${seg.plans.map((p) => p.titre + ' (' + p.duree + ' s)').join(', ')}.
 Scènes du storyboard : ${JSON.stringify(scenes)}
 Bible visuelle : ${(script.bible && script.bible.style_prompt) || ''}
@@ -476,5 +476,29 @@ Réponds en JSON : {"prompt": "…"}`;
     return Object.assign(local, { segments: segs });
   };
 
-  LX.ai = { ROLES, ROLE_OF, compute: A, call, search, parseJSON, routeFor };
+  // Voix off en anglais : traduit les répliques de voix off du script (une requête par script, scènes dans l'ordre).
+  // Les textes à l'écran ne sont pas touchés. Le résultat va dans scene.vo_en, sur des copies : le node amont reste intact.
+  async function translateVO(inputs, ctx) {
+    const items = [];
+    for (const it of inputs.script || []) {
+      const scenes = (it.out && it.out.scenes) || [];
+      const lines = scenes.map((s) => U.stripMarks(s.vo || ''));
+      let en = lines;
+      if (lines.some(Boolean)) {
+        const prompt = `Traduis en anglais parlé naturel les répliques de voix off ci-dessous (une par scène, dans l’ordre).
+Règles : le sens et les chiffres sont conservés ; ton « ${it.out.voix || 'posée'} » ; des phrases qui se disent à voix haute ; longueur voisine de l’original, car chaque réplique doit tenir dans la durée de sa scène (environ 2,4 mots par seconde) ; ni didascalie ni guillemets ; une réplique vide reste vide.
+Scènes : ${JSON.stringify(scenes.map((s, i) => ({ duree_s: s.duree, fr: lines[i] })))}
+Réponds en JSON : {"lines": ["…"]} avec exactement ${lines.length} éléments, dans le même ordre.`;
+        let res;
+        try { res = await call('redacteur', { system: 'Tu es traducteur de voix off pour de courts films : tu rends le texte fidèle, naturel et facile à dire.', prompt, maxTokens: 4000 }, ctx); } catch (e) { throw new Error('Traduction de la voix off en anglais impossible : ' + e.message); }
+        const j = parseJSON(res.text);
+        if (!j || !Array.isArray(j.lines) || j.lines.length !== lines.length) throw new Error('Traduction de la voix off en anglais : réponse inattendue du modèle (' + (res.model || '') + '). Relancez le node.');
+        en = j.lines.map((x) => String(x == null ? '' : x).trim());
+      }
+      items.push(Object.assign({}, it, { out: Object.assign({}, it.out, { scenes: scenes.map((s, i) => Object.assign({}, s, { vo_en: en[i] })) }) }));
+    }
+    return Object.assign({}, inputs, { script: items });
+  }
+
+  LX.ai = { ROLES, ROLE_OF, compute: A, call, search, parseJSON, routeFor, translateVO };
 })(window.LX = window.LX || {});

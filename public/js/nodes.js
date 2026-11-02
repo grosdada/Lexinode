@@ -16,6 +16,7 @@
     style: { label: 'Direction artistique', color: '#FFD54F' },
     script: { label: 'Script', color: '#FFFFFF' },
     video: { label: 'Vidéo', color: '#FF6B8B' },
+    voice: { label: 'Voix', color: '#26C6DA' },
   };
   const CONTENT = ['sujet', 'evenement', 'donnee', 'comparaison', 'texte', 'reflexion', 'brief'];
 
@@ -335,7 +336,7 @@
   DEFS.generateur = {
     title: 'Générateur vidéo', icon: '', ico: 'clapper', cat: 'Sortie',
     desc: 'Découpe le short en segments de 15 ou 30 s, écrit un prompt par segment selon les règles du modèle (Wan 3.0, Seedance 2.5, MiniMax H3) et lance la génération via fal.ai.',
-    inputs: [{ key: 'script', type: ['script'], label: 'script' }],
+    inputs: [{ key: 'script', type: ['script'], label: 'script' }, { key: 'voice', type: ['voice'], label: 'voix (facultatif)' }],
     outputs: [{ key: 'out', type: 'video', label: 'vidéos' }],
     fields: [
       { key: 'modele', label: 'Modèle vidéo', type: 'select', def: 'h3max', options: opt([
@@ -347,6 +348,7 @@
       { key: 'segment', label: 'Découper en segments de', type: 'select', def: '15', options: opt([{ v: '15', l: '15 secondes' }, { v: '30', l: '30 secondes' }]) },
       { key: 'voix', label: 'Voix off', type: 'select', def: 'native', options: opt([
         { v: 'native', l: 'Dite par le modèle (audio natif, en français)' },
+        { v: 'native_en', l: 'Dite par le modèle (audio natif, en anglais · traduite par l’IA)' },
         { v: 'post', l: 'Ajoutée au montage (le modèle ne fait que musique et sons)' },
       ]) },
       { key: 'passerelle', label: 'Passerelle de génération', type: 'select', def: 'fal', options: opt([
@@ -360,6 +362,48 @@
       ENGINE_FIELD,
     ],
     summary: (d, out) => (out && out.segments ? `${out.segments.length} segment(s) · ${out.modeleNom}` : (d.modele || '') + ' · ' + d.segment + ' s'),
+  };
+
+  DEFS.qbuilder = {
+    title: 'Sortie Queue Builder', icon: '', ico: 'cpu', cat: 'Sortie',
+    desc: 'Prépare la page HTML de prompts que Workflows Q-Builder charge (« Load prompts HTML ») pour envoyer les films aux machines ComfyUI locales, avec MiniMax H3 (T2V) ou LTX 2.5. Rien n’est lancé depuis Lexinode.',
+    inputs: [{ key: 'script', type: ['script'], label: 'script' }, { key: 'voice', type: ['voice'], label: 'voix (facultatif)' }],
+    outputs: [{ key: 'out', type: 'video', label: 'lot' }],
+    fields: [
+      { key: 'moteur', label: 'Modèle local', type: 'select', def: 'h3', options: opt([
+        { v: 'h3', l: 'MiniMax H3 (T2V local) · un prompt par scène, 15 s au plus' },
+        { v: 'ltx25', l: 'LTX 2.5 (local) · un prompt par plan, 9 s au plus' },
+      ]) },
+      { key: 'voix', label: 'Voix off', type: 'select', def: 'native', options: opt([
+        { v: 'native', l: 'Dite par le modèle (audio natif, en français)' },
+        { v: 'native_en', l: 'Dite par le modèle (audio natif, en anglais · traduite par l’IA)' },
+        { v: 'post', l: 'Ajoutée au montage (le modèle ne fait que musique et sons)' },
+      ]) },
+      { key: 'prefixe', label: 'Préfixe des noms de plans (vide : titre du short)', type: 'text', def: '' },
+    ],
+    summary: (d, out) => (out && out.nbPrompts ? `${out.nbPrompts} prompt(s) · ${out.moteurNom}` : (d.moteur === 'ltx25' ? 'LTX 2.5' : 'H3') + ' · local'),
+  };
+
+  DEFS.voice = {
+    title: 'Voice (ElevenLabs)', icon: '', ico: 'mic', cat: 'Sortie',
+    desc: 'Génère seulement la voix off du short avec ElevenLabs, scène par scène. Branchez-la sur l’entrée « voix » d’une sortie vidéo pour l’utiliser à la place de la voix du modèle. Les crédits ElevenLabs ne sont dépensés que sur le bouton « Générer ».',
+    inputs: [{ key: 'script', type: ['script'], label: 'script' }],
+    outputs: [{ key: 'out', type: 'voice', label: 'voix' }],
+    fields: [
+      { key: 'voice_id', label: 'Identifiant de la voix (ou bouton « Mes voix » dans le résultat)', type: 'text', def: '' },
+      { key: 'modele', label: 'Modèle ElevenLabs', type: 'select', def: 'eleven_multilingual_v2', options: opt([
+        { v: 'eleven_multilingual_v2', l: 'Eleven Multilingual v2' },
+        { v: 'eleven_v3', l: 'Eleven v3' },
+        { v: 'eleven_turbo_v2_5', l: 'Eleven Turbo v2.5' },
+        { v: 'eleven_flash_v2_5', l: 'Eleven Flash v2.5' },
+      ]) },
+      { key: 'langue', label: 'Langue de la voix off', type: 'select', def: 'fr', options: opt([{ v: 'fr', l: 'Français (texte du short)' }, { v: 'en', l: 'Anglais (traduit par l’IA)' }]) },
+      { key: 'stabilite', label: 'Stabilité (0 à 1)', type: 'text', def: '0.5', advanced: true },
+      { key: 'similarite', label: 'Similarité (0 à 1)', type: 'text', def: '0.75', advanced: true },
+      { key: 'style', label: 'Style (0 à 1)', type: 'text', def: '0', advanced: true },
+      { key: 'vitesse', label: 'Vitesse (0,7 à 1,2)', type: 'text', def: '1', advanced: true },
+    ],
+    summary: (d, out) => (out && out.items ? `${out.items.length} voix · ${out.chars} car.` : (d.voice_id ? 'voix choisie' : 'choisir une voix')),
   };
 
   const CATS = ['Entrées', 'Langage', 'Analyse', 'Sortie'];

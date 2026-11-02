@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const IDS = ['anthropic', 'openai', 'gemini', 'deepseek', 'compatible', 'tavily', 'brave', 'fal', 'minimax', 'dashscope'];
+const IDS = ['anthropic', 'openai', 'gemini', 'deepseek', 'compatible', 'tavily', 'brave', 'fal', 'minimax', 'dashscope', 'elevenlabs'];
 const CONTEXT = 'lexinode-vault-v1';
 
 function create({ file, master }) {

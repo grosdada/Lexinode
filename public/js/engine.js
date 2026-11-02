@@ -104,11 +104,15 @@
     const mode = engineFor(node);
     ed.setStatus(node.id, 'running', mode === 'ia' ? 'agent IA au travail…' : 'calcul local…');
     ed.drawLinks();
-    const inputs = gatherInputs(ed, node);
+    let inputs = gatherInputs(ed, node);
     const def = N.DEFS[node.type];
     const ctx = { nodeTitle: node.data._label || def.title, log: opts.log };
     try {
       let out;
+      // voix off en anglais : une traduction par le LLM, quel que soit le moteur du node (le reste du calcul ne change pas)
+      const voiceIn = (inputs.voice || []).some((x) => x.out);
+      const wantsEn = node.type === 'voice' ? node.data.langue === 'en' : (node.type === 'generateur' || node.type === 'qbuilder') && node.data.voix === 'native_en' && !voiceIn;
+      if (wantsEn && !window.LEXINODE_DEMO) inputs = await LX.ai.translateVO(inputs, ctx);
       if (mode === 'ia' && LX.ai.compute[node.type]) out = await LX.ai.compute[node.type](node, inputs, ctx);
       else {
         out = await LX.local[node.type](node, inputs, ctx);

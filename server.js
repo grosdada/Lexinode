@@ -14,6 +14,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { URL } = require('url');
 
 const ROOT = __dirname;
@@ -30,6 +31,7 @@ const HOST = process.env.HOST || '127.0.0.1';
 const PUBLIC = path.join(ROOT, 'public');
 const LEX_DIRS = [path.join(ROOT, 'data', 'lexicons'), HOME ? path.join(HOME, 'custom') : path.join(ROOT, 'data', 'custom')];
 const PROJECTS = HOME ? path.join(HOME, 'projects') : path.join(ROOT, 'projects');
+const VOICES = HOME ? path.join(HOME, 'voices') : path.join(ROOT, 'data', 'voices'); // fichiers audio ElevenLabs déjà générés
 const EXAMPLES = path.join(ROOT, 'data', 'examples');
 const TOPICS = path.join(ROOT, 'data', 'topics');
 // Coffre chiffré des clés saisies dans Réglages (actif seulement si LEXINODE_MASTER_KEY est défini)
@@ -51,6 +53,7 @@ const ENV_KEYS = {
   minimax: () => process.env.MINIMAX_API_KEY,
   dashscope: () => process.env.DASHSCOPE_API_KEY,
   brave: () => process.env.BRAVE_API_KEY,
+  elevenlabs: () => process.env.ELEVENLABS_API_KEY,
 };
 // Ordre de résolution côté serveur : clé envoyée par le navigateur, puis coffre, puis .env
 const keyFor = (id) => VAULT.get(id) || (ENV_KEYS[id] && ENV_KEYS[id]());
@@ -80,6 +83,80 @@ function ensureHome(dir) {
   if (fs.existsSync(env)) return;
   const key = require('crypto').randomBytes(32).toString('hex');
   fs.writeFileSync(env, `# Données de cette installation de Lexinode.\n# LEXINODE_MASTER_KEY chiffre le coffre de clés : ne la changez pas, ne la partagez pas.\nLEXINODE_MASTER_KEY=${key}\n`, { mode: 0o600 });
+}
+
+// ---------------------------------------------------------------- voix off (ElevenLabs, texte vers parole)
+// Le serveur garde la clé et les fichiers : le navigateur ne voit jamais la clé. Un fichier est identifié par l'empreinte de sa demande
+// (texte, voix, modèle, réglages) : redemander la même voix ne coûte aucun crédit.
+const VOICE_ID_RE = /^[A-Za-z0-9]{10,40}$/;
+const MODEL_RE = /^[a-z0-9_]{3,40}$/;
+const clamp = (v, lo, hi, d) => { const n = Number(v); return Number.isFinite(n) ? Math.min(hi, Math.max(lo, n)) : d; };
+const elBase = () => String(process.env.ELEVENLABS_BASE_URL || 'https://api.elevenlabs.io').replace(/\/$/, '');
+function voiceSpec(b) {
+  const text = String((b && b.text) || '').trim();
+  if (!text) throw new Error('Texte vide');
+  if (text.length > 5000) throw new Error('Texte trop long (5 000 caractères au plus par appel)');
+  const voice_id = String(b.voice_id || '').trim();
+  if (!VOICE_ID_RE.test(voice_id)) throw new Error('Identifiant de voix invalide : choisissez une voix du compte ElevenLabs');
+  const model_id = String(b.model_id || 'eleven_multilingual_v2').trim();
+  if (!MODEL_RE.test(model_id)) throw new Error('Modèle ElevenLabs invalide');
+  const s = b.settings || {};
+  const settings = { stability: clamp(s.stability, 0, 1, 0.5), similarity_boost: clamp(s.similarity_boost, 0, 1, 0.75), style: clamp(s.style, 0, 1, 0), use_speaker_boost: s.use_speaker_boost !== false, speed: clamp(s.speed, 0.7, 1.2, 1) };
+  return { text, voice_id, model_id, settings };
+}
+const voiceId = (sp) => crypto.createHash('sha256').update(JSON.stringify([sp.text, sp.voice_id, sp.model_id, sp.settings])).digest('hex').slice(0, 24);
+const voiceFile = (id) => path.join(VOICES, id + '.mp3');
+async function elError(r) {
+  let m = '';
+  try { const j = await r.json(); m = (j.detail && (j.detail.message || j.detail)) || j.message || ''; } catch (e) { /* corps non JSON */ }
+  return new Error(`ElevenLabs ${r.status} : ${typeof m === 'string' ? m : JSON.stringify(m)}`.trim());
+}
+async function synthVoice(body) {
+  const spec = voiceSpec(body);
+  const id = voiceId(spec);
+  const file = voiceFile(id);
+  if (fs.existsSync(file)) return { id, cached: true, bytes: fs.statSync(file).size };
+  const key = (body.keys || {}).elevenlabs || keyFor('elevenlabs');
+  if (!key) throw new Error('Aucune clé ElevenLabs : ajoutez-la dans Réglages (ou ELEVENLABS_API_KEY).');
+  const r = await fetch(`${elBase()}/v1/text-to-speech/${spec.voice_id}?output_format=mp3_44100_128`, {
+    method: 'POST', headers: { 'xi-api-key': key, 'content-type': 'application/json', accept: 'audio/mpeg' },
+    body: JSON.stringify({ text: spec.text, model_id: spec.model_id, voice_settings: spec.settings }), signal: AbortSignal.timeout(180000),
+  });
+  if (!r.ok) throw await elError(r);
+  const buf = Buffer.from(await r.arrayBuffer());
+  if (!buf.length) throw new Error('ElevenLabs a renvoyé un fichier vide');
+  fs.mkdirSync(VOICES, { recursive: true });
+  const tmp = `${file}.${process.pid}.tmp`;
+  fs.writeFileSync(tmp, buf);
+  fs.renameSync(tmp, file);
+  return { id, cached: false, bytes: buf.length };
+}
+async function listVoices(body) {
+  const key = ((body && body.keys) || {}).elevenlabs || keyFor('elevenlabs');
+  if (!key) throw new Error('Aucune clé ElevenLabs : ajoutez-la dans Réglages (ou ELEVENLABS_API_KEY).');
+  const r = await fetch(`${elBase()}/v1/voices`, { headers: { 'xi-api-key': key }, signal: AbortSignal.timeout(30000) });
+  if (!r.ok) throw await elError(r);
+  const j = await r.json();
+  return (j.voices || []).map((v) => ({ id: v.voice_id, name: v.name, category: v.category || '' })).sort((a, b) => String(a.name).localeCompare(String(b.name)));
+}
+// « lexinode-voice:<base64 d'un JSON> » dans un champ du corps vidéo (ex. target_audio_url) devient un data URI audio fait des fichiers de voix déjà générés
+function resolveVoiceRefs(payload) {
+  const out = Object.assign({}, payload);
+  for (const [k, v] of Object.entries(out)) {
+    if (typeof v !== 'string' || !v.startsWith('lexinode-voice:')) continue;
+    let refs;
+    try { refs = JSON.parse(Buffer.from(v.slice('lexinode-voice:'.length), 'base64').toString('utf8')); } catch (e) { throw new Error('Référence de voix illisible'); }
+    if (!Array.isArray(refs) || !refs.length || refs.length > 20) throw new Error('Référence de voix invalide');
+    const parts = refs.map((r) => {
+      const f = voiceFile(voiceId(voiceSpec(r)));
+      if (!fs.existsSync(f)) throw new Error(`Voix non générée pour « ${String(r.label || '').slice(0, 40)} » : générez-la d'abord dans le node Voice.`);
+      return fs.readFileSync(f);
+    });
+    const buf = Buffer.concat(parts);
+    if (buf.length > 14 * 1024 * 1024) throw new Error('Voix trop volumineuse (15 Mo au plus)');
+    out[k] = 'data:audio/mpeg;base64,' + buf.toString('base64');
+  }
+  return out;
 }
 
 function loadEnv(file) {
@@ -230,7 +307,7 @@ const server = http.createServer(async (req, res) => {
       const searchStatus = {
         wikipedia: true, searxng: !!ENV_BASE.searxng(), tavily: !!keyFor('tavily'), brave: !!keyFor('brave'),
       };
-      return send(res, 200, { ok: true, server: true, version: '1.1.0', providers, search: searchStatus, video, vault: VAULT.status() });
+      return send(res, 200, { ok: true, server: true, version: '1.1.0', providers, search: searchStatus, video, vault: VAULT.status(), voice: { elevenlabs: !!keyFor('elevenlabs') } });
     }
     // Coffre : écriture seulement (les valeurs ne sont jamais renvoyées). L'en-tête JSON exigé bloque les envois
     // inter-sites « simples » (un navigateur y joindrait le mot de passe déjà saisi).
@@ -256,7 +333,24 @@ const server = http.createServer(async (req, res) => {
       const own = (body.keys || {})[body.provider];
       const key = own || keyFor(body.provider);
       const fn = p.endsWith('submit') ? P.videoSubmit : P.videoStatus;
-      return send(res, 200, await fn(Object.assign({}, body, { key, baseUrl: trustedBase(own, key, body.baseUrl, undefined) })));
+      let payload = body.payload;
+      if (body.provider === 'fal' && payload) { try { payload = resolveVoiceRefs(payload); } catch (e) { return send(res, 400, { error: e.message }); } }
+      return send(res, 200, await fn(Object.assign({}, body, { key, payload, baseUrl: trustedBase(own, key, body.baseUrl, undefined) })));
+    }
+    // Voix off : ces appels dépensent des crédits ElevenLabs, donc JSON exigé (comme /api/vault) contre les envois inter-sites « simples »
+    if ((p === '/api/voice' || p === '/api/voice/voices') && req.method === 'POST') {
+      if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'Content-Type application/json requis' });
+      const body = await readBody(req, 64 * 1024);
+      try {
+        if (p === '/api/voice/voices') return send(res, 200, await listVoices(body));
+        const r = await synthVoice(body);
+        return send(res, 200, Object.assign(r, { url: `api/voice/file/${r.id}.mp3` }));
+      } catch (e) { return send(res, /^ElevenLabs /.test(e.message) ? 502 : 400, { error: e.message }); }
+    }
+    if (p.startsWith('/api/voice/file/') && req.method === 'GET') {
+      const m = p.match(/^\/api\/voice\/file\/([a-f0-9]{24})\.mp3$/);
+      if (!m || !fs.existsSync(voiceFile(m[1]))) return send(res, 404, { error: 'Voix introuvable' });
+      return send(res, 200, fs.readFileSync(voiceFile(m[1])), 'audio/mpeg');
     }
     if (p === '/api/lexicons' && req.method === 'GET') return send(res, 200, readLexicons());
     if (p === '/api/topics' && req.method === 'GET') {
@@ -324,4 +418,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { server, readLexicons, llm, search, trustedBase };
+module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs };

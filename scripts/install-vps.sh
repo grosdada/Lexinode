@@ -47,12 +47,12 @@ fi
 setenv HOST "0.0.0.0"
 
 say "3/5 Construction et lancement (Lexinode seul, sans Ollama ni SearXNG)"
-mkdir -p projects data/custom data/vault
+mkdir -p projects data/custom data/vault data/voices
 docker build -t lexinode .
 docker rm -f lexinode >/dev/null 2>&1 || true
 if [ -n "$DOMAIN" ]; then PUBLISH="127.0.0.1:5177:5177"; else PUBLISH="5177:5177"; fi
 docker run -d --name lexinode --restart unless-stopped --env-file .env \
-  -p "$PUBLISH" -v "$DIR/projects:/app/projects" -v "$DIR/data/custom:/app/data/custom" -v "$DIR/data/vault:/app/data/vault" lexinode
+  -p "$PUBLISH" -v "$DIR/projects:/app/projects" -v "$DIR/data/custom:/app/data/custom" -v "$DIR/data/vault:/app/data/vault" -v "$DIR/data/voices:/app/data/voices" lexinode
 
 say "4/5 HTTPS"
 if [ -n "$DOMAIN" ]; then
