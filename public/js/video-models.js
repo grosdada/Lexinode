@@ -168,6 +168,39 @@
     directPayload: null,
   });
 
+  // H3 en local (Workflows Q-Builder, T2V) : le modèle ne coupe que si les plans sont imposés dans le prompt sous la forme
+  // « [Shot 1] … », « [Shot 2] At 00:07.0, … » (début du plan compté depuis 0). Un seul plan : scène continue, sans label ni horodatage.
+  const clock = (t) => '00:' + String(Math.floor(t)).padStart(2, '0') + '.' + Math.round((t % 1) * 10);
+  M.h3local = Object.assign({}, M.h3, {
+    id: 'h3local', nom: 'MiniMax H3 (local, T2V)', minDuree: 4, promptMax: 6000, falId: '', prix: null, falTemplate: '', directPayload: null,
+    regles: [
+      'Plans imposés dans le prompt : « [Shot 1] … », puis « [Shot 2] At 00:07.0, … » (début du plan compté depuis 0) ; sans cela H3 local rend un plan continu.',
+      'Un seul plan : une scène continue, sans label « [Shot] » ni horodatage.',
+      'Coupes franches entre les plans, même lieu, même palette, pas de mouvement de caméra continu.',
+      '15 s au plus par rendu : au-delà la mémoire déborde.',
+      'Bloc audio en dernier : voix off entre guillemets (langue nommée), musique, bruitages.',
+    ],
+    compose(seg, ctx) {
+      const B = [];
+      B.push(`Style: ${clean(ctx.styleEn)}, an institutional animated explainer built from flat graphic elements. Palette ${ctx.palette.join(', ')}. ${clean(ctx.typo || 'Geometric sans-serif typography')}. Every shot stays in the same graphic world and palette, the only text on screen is the captions written below.`);
+      const lenses = ['35mm', '50mm', '24mm', '85mm', '35mm', '50mm', '24mm'];
+      const single = seg.shots.length === 1;
+      let t = 0;
+      seg.shots.forEach((sh, i) => {
+        const sc = sh.scene;
+        const body = `${lenses[i % lenses.length]} look, ${clean(sc.camera || 'static frame')}. ${U.cap(sceneVisual(sc))}.${ecran(sc) ? ` On-screen caption: "${q(ecran(sc))}".` : ''}`;
+        B.push(single ? body : `[Shot ${i + 1}] ${i ? 'At ' + clock(t) + ', ' : ''}${body}`);
+        t += sh.duree;
+      });
+      const voice = VOICE_EN[ctx.voix] || 'calm, measured';
+      const vo = seg.shots.map((sh) => clean(voText(sh.scene, ctx))).filter(Boolean).join(' ');
+      if (ctx.voNative && vo) B.push(`Audio, native stereo: an off-screen ${ctx.voLang} narrator, ${voice} voice, says: "${q(vo)}" Music: ${clean(ctx.musicEn)}, entering softly under the voice. Soft interface sounds on each graphic appearance, timed to the cuts.`);
+      else B.push(`Audio, native stereo: NO VOICE, no dialogue at any point. Music: ${clean(ctx.musicEn)}, entering from the first shot. Soft interface sounds on each graphic appearance, timed to the cuts.`);
+      if (seg.mention) B.push(`The last shot ends on the caption "${q(seg.mention)}".`);
+      return B.join('\n\n');
+    },
+  });
+
   // LTX 2.5 en local (Workflows Q-Builder / ComfyUI) : un prompt par plan, un seul paragraphe au présent (skill ltx25-prompt).
   // Profil réservé au node « Sortie Queue Builder » : il n'a ni identifiant fal ni tarif.
   M.ltx25 = {
@@ -325,7 +358,7 @@
   LX.local.qbuilder = (node, inp) => {
     const d = node.data;
     const eng = d.moteur === 'ltx25' ? 'ltx25' : 'h3';
-    const g = LX.local.generateur({ data: { modele: eng, segment: eng === 'h3' ? '15' : '9', voix: d.voix || 'native', resolution: 'auto', passerelle: 'fal', seed: '0' } }, inp);
+    const g = LX.local.generateur({ data: { modele: eng === 'h3' ? 'h3local' : 'ltx25', segment: eng === 'h3' ? '15' : '9', voix: d.voix || 'native', resolution: 'auto', passerelle: 'fal', seed: '0' } }, inp);
     const it = (inp.script || []).find((x) => x.out);
     const script = it.out;
     const slug = (s) => U.slug(s).replace(/-/g, '_');
@@ -344,9 +377,24 @@
     const secs = items.map((x) => x.seconds);
     if (Math.min(...secs) !== Math.max(...secs)) warnings.push(`Les durées varient de ${Math.min(...secs)} à ${Math.max(...secs)} s : vérifiez le réglage de durée dans Q-Builder.`);
     if (eng === 'ltx25' && (script.scenes || []).some((s) => s.texte_ecran)) warnings.push('LTX 2.5 déforme le texte lisible : les textes à l’écran ne sont pas écrits dans les prompts, à ajouter au montage.');
+    // lancement direct (script de Q-Builder) : un lot par durée (H3) ou par nombre d'images (LTX), 20 prompts au plus par lot
+    const QB_ASPECT = { '1:1': '1:1 (Square)', '2:3': '2:3 (Portrait Photo)', '3:2': '3:2 (Photo)', '3:4': '3:4 (Portrait Standard)', '4:3': '4:3 (Standard)', '9:16': '9:16 (Portrait Widescreen)', '16:9': '16:9 (Widescreen)', '21:9': '21:9 (Ultrawide)' };
+    const seedOf = (name) => 1000 + [...name].reduce((s, c) => (s * 31 + c.charCodeAt(0)) % 90000, 7);
+    const buckets = [];
+    for (const x of items) {
+      const key = eng === 'ltx25' ? x.frames : x.seconds;
+      let b = buckets.find((y) => y.key === key && y.rows.length < QB_SLOTS);
+      if (!b) { b = { key, rows: [] }; buckets.push(b); }
+      b.rows.push({ name: x.name, positive: x.positive, seed: seedOf(x.name) });
+    }
+    const mpIn = Number(String(d.megapixels || '').replace(',', '.'));
+    const launch = {
+      engine: eng, aspect: QB_ASPECT[g.ratio] || QB_ASPECT['16:9'], megapixels: mpIn >= 0.2 && mpIn <= 2 ? mpIn : undefined,
+      groups: buckets.map((b) => (eng === 'ltx25' ? { frames: b.key, rows: b.rows } : { seconds: b.key, rows: b.rows })),
+    };
     return {
       moteur: eng, moteurNom: eng === 'ltx25' ? 'LTX 2.5 (local)' : 'MiniMax H3 (local, T2V)', ratio: g.ratio, voix: g.voix, titre: script.titre,
-      duree: g.duree, nbPrompts: items.length, items, lots, regles: g.regles, avertissements: warnings, prefixe: prefix,
+      duree: g.duree, nbPrompts: items.length, items, lots, regles: g.regles, avertissements: warnings, prefixe: prefix, launch, copie: String(d.copie || '').trim(),
     };
   };
   const escHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

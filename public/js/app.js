@@ -302,7 +302,7 @@
       }
       box.append(form);
     } else {
-      box.append(LX.render.output(node, { onAnimatic: openAnimatic, onDice: () => drawTopic(node.id), onSpawn: (what) => spawn(node.id, what), onGenerate: (key) => generateVideo(node.id, key), onGenerateVoice: (key) => generateVoice(node.id, key), onPickVoice: () => pickVoice(node.id) }));
+      box.append(LX.render.output(node, { onAnimatic: openAnimatic, onDice: () => drawTopic(node.id), onSpawn: (what) => spawn(node.id, what), onGenerate: (key) => generateVideo(node.id, key), onGenerateVoice: (key) => generateVoice(node.id, key), onPickVoice: () => pickVoice(node.id), onRender: () => renderOnMachines(node.id) }));
     }
   }
 
@@ -421,6 +421,77 @@
     if (o.modele === 'wan30') return { provider: 'dashscope', payload: P.directPayload(seg, seg.prompt, ctx) };
     throw new Error(`${P.nom} n’a pas d’API directe intégrée : choisissez la passerelle fal.ai.`);
   }
+  // ------------------------------------------------------------------ lancement des rendus sur les machines (script de Workflows Q-Builder)
+  async function renderOnMachines(nodeId) {
+    const node = ed.node(nodeId);
+    if (!node || !node.out || !node.out.launch) return;
+    if (!LX.api.server) { toast('Le lancement passe par le serveur Lexinode de ce PC : version Windows, avec Q-Builder sur le même PC.', 'warn'); return; }
+    let st;
+    try { st = await (await fetch('api/qbuilder/status')).json(); } catch (e) { st = { ok: false, error: e.message }; }
+    if (!st.ok) { toast(st.error, 'warn'); return; }
+    const o = node.out;
+    const L = o.launch;
+    const total = L.groups.reduce((s, g) => s + g.rows.length, 0);
+    const gb = (n) => (n / 1073741824).toFixed(1).replace('.', ',');
+    const checks = {};
+    const machRows = st.nodes.filter((n) => n.auto !== false).map((n) => {
+      const busy = n.running || n.pending;
+      const low = n.online && n.vramTotal && n.vramFree < 0.85 * n.vramTotal;
+      const usable = n.online && !busy;
+      const cb = h('input', { type: 'checkbox' });
+      cb.checked = usable;
+      cb.disabled = !usable;
+      checks[n.url] = cb;
+      return h('label', { class: 'row' }, cb, h('b', {}, n.name), h('span', { class: 'small muted' }, !n.online ? 'hors ligne' : busy ? `occupée (${n.running} en calcul, ${n.pending} en attente) : exclue, on n’empile pas sur le lot d’une autre session` : low ? `VRAM ${gb(n.vramFree)} Go libres sur ${gb(n.vramTotal)} : sera vidée puis vérifiée` : `prête, ${gb(n.vramFree)} Go libres`));
+    });
+    const radio = (value, label, checked) => { const r = h('input', { type: 'radio', name: 'qbmode' }); r.value = value; r.checked = checked; return { r, el: h('label', { class: 'row' }, r, label) }; };
+    const rTest = radio('test', 'Un seul prompt d’essai d’abord (recommandé) : le premier du lot', !node.qbTest);
+    const rRest = radio('rest', 'Le reste du lot, après un essai concluant', !!node.qbTest);
+    const rAll = radio('all', `Tout le lot (${total} prompt(s)) d’un coup`, false);
+    const freeCb = h('input', { type: 'checkbox' });
+    freeCb.checked = true;
+    const dryCb = h('input', { type: 'checkbox' });
+    const copyIn = h('input', { type: 'text', placeholder: 'Dossier de copie des rendus (facultatif)' });
+    copyIn.value = o.copie || '';
+    const out = h('div', { class: 'small' });
+    const go = h('button', { class: 'btn primary' }, ico2('play'), ' Lancer');
+    const body = h('div', {},
+      h('p', {}, `${total} prompt(s) · ${o.moteurNom} · ${L.aspect} · ${L.groups.map((g) => g.rows.length + ' × ' + (g.seconds ? g.seconds + ' s' : g.frames + ' images')).join(', ')}.`),
+      h('p', { class: 'small muted' }, 'Les rendus tournent sur tes machines (aucun crédit dépensé) et occupent leurs GPU : environ 29 min par film H3 de 15 s sur une RTX 5090, d’après l’historique de tes machines. Le script est celui de Q-Builder, les jobs apparaissent aussi dans son journal.'),
+      h('h3', {}, 'Machines'), ...machRows,
+      h('h3', {}, 'Quoi lancer'), rTest.el, rRest.el, rAll.el,
+      h('h3', {}, 'Précautions'),
+      h('label', { class: 'row' }, freeCb, 'Vider la mémoire vidéo des machines libres avant de lancer (recommandé), puis vérifier ~29 Go libres'),
+      h('label', { class: 'row' }, dryCb, 'Simulation : le script prépare tout mais n’envoie rien (--dry-run)'),
+      h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Copier les rendus'), copyIn),
+      h('div', { class: 'row' }, go, h('button', { class: 'btn', onclick: () => m.close() }, 'Annuler')), out);
+    const m = modal('Lancer le rendu sur les machines', body);
+    const show = (j) => {
+      out.innerHTML = '';
+      out.append(h('div', { class: j.ok ? 'note' : 'error-box' }, ico2(j.ok ? 'check' : 'alert'), ' ', j.ok ? (j.mode === 'dry' ? 'Simulation terminée : rien n’a été envoyé.' : 'Rendus envoyés aux machines.') : (j.error || 'Échec')));
+      (j.machines || []).forEach((x) => out.append(h('div', {}, (x.used ? '✓ ' : '✗ ') + x.name + (x.freed ? ' · mémoire vidée' : '') + (x.reason ? ' : ' + x.reason : ''))));
+      (j.runs || []).forEach((r) => out.append(h('div', {}, h('b', {}, `Lot de ${r.prompts} prompt(s) (${r.seconds ? r.seconds + ' s' : r.frames + ' images'}) : ` + (r.running ? 'envoi en cours' : r.exit ? 'erreur ' + r.exit : 'ok')), h('pre', { class: 'prompt' }, r.tail || ''))));
+      if (j.ok && j.mode !== 'dry') out.append(h('p', {}, j.mode === 'test' ? 'Essai envoyé : suivez-le dans « Rendu sur les machines ». Quand il est bon, relancez pour envoyer le reste.' : 'Suivez l’avancement dans « Rendu sur les machines » (rafraîchi toutes les 10 s).'));
+    };
+    go.addEventListener('click', async () => {
+      const mode = dryCb.checked ? 'dry' : rAll.r.checked ? 'all' : rRest.r.checked ? 'rest' : 'test';
+      const machines = Object.entries(checks).filter(([, cb]) => cb.checked && !cb.disabled).map(([u]) => u);
+      if (!machines.length) { toast('Cochez au moins une machine.', 'warn'); return; }
+      go.disabled = true;
+      out.textContent = 'Préparation des machines et envoi… (jusqu’à quelques minutes si la mémoire doit être vidée)';
+      try {
+        const r = await fetch('api/qbuilder/render', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ engine: L.engine, aspect: L.aspect, megapixels: L.megapixels, groups: L.groups, mode, machines, free_memory: freeCb.checked, copy_results: copyIn.value.trim() }) });
+        const j = await r.json();
+        show(r.ok ? j : { ok: false, error: j.error, machines: j.machines, runs: [] });
+        if (r.ok && j.ok && mode === 'test') node.qbTest = true;
+        if (r.ok && j.ok && (mode === 'rest' || mode === 'all')) node.qbTest = false;
+        renderInspector();
+      } catch (e) { show({ ok: false, error: e.message, machines: [], runs: [] }); }
+      go.disabled = false;
+    });
+  }
+  const ico2 = (n) => LX.icon.el(n);
+
   // ------------------------------------------------------------------ voix off (ElevenLabs, via le serveur)
   async function voiceCall(route, body) {
     const keys = {};

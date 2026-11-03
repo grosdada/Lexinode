@@ -172,11 +172,13 @@
     const timer = setInterval(() => { if (!box.isConnected) clearInterval(timer); else refresh(); }, 10000);
     return h('div', {}, box, h('div', { class: 'row' }, h('button', { class: 'btn sm', onclick: refresh }, ico('refresh'), ' Actualiser'), h('span', { class: 'small muted' }, 'Lecture seule : Lexinode ne lance, n’annule et ne déplace aucun job.')));
   }
-  R.qbuilder = (o) => h('div', { class: 'gen' },
+  R.qbuilder = (o, opts) => h('div', { class: 'gen' },
     h('div', { class: 'chips' }, h('span', { class: 'chip' }, ico('cpu'), ' ' + o.moteurNom), h('span', { class: 'chip' }, ico('clock'), ` ${o.duree} s en ${o.nbPrompts} prompt(s)`), h('span', { class: 'chip' }, ico('frame'), ' ' + o.ratio)),
     (o.avertissements || []).map((w) => h('div', { class: 'note' }, ico('alert'), ' ', w)),
-    h('div', { class: 'note' }, ico('info'), ' Dans Workflows Q-Builder : « Load prompts HTML », choisissez ', o.moteur === 'ltx25' ? 'LTX 2.5' : 'MiniMax H3 > T2V', ', vérifiez durée, format et taille, puis générez la commande. Lexinode n’envoie rien : c’est Q-Builder qui répartit les films sur les machines.'),
+    h('div', { class: 'note' }, ico('info'), ' Dans Workflows Q-Builder : « Load prompts HTML », choisissez ', o.moteur === 'ltx25' ? 'LTX 2.5' : 'MiniMax H3 > T2V', ', vérifiez durée, format et taille, puis générez la commande. Ou lancez directement d’ici : le bouton orange exécute le script de Q-Builder, avec confirmation.'),
     h('details', {}, h('summary', {}, 'Règles de prompting appliquées (' + o.moteurNom + ')'), h('ul', { class: 'small' }, (o.regles || []).map((r) => h('li', {}, r)))),
+    h('div', { class: 'row wrap' }, h('button', { class: 'btn primary', style: { background: '#FF8A00', borderColor: '#FF8A00', color: '#111' }, onclick: () => opts && opts.onRender && opts.onRender() }, ico('play'), ' Lancer le rendu sur les machines…'),
+      h('span', { class: 'small muted' }, 'Demande une confirmation : essai d’un prompt, machines occupées exclues, VRAM vidée puis vérifiée.')),
     h('div', { class: 'row wrap' },
       o.lots.map((lot) => h('button', { class: 'btn primary', onclick: () => U.download(`qbuilder_${o.prefixe}_${o.moteur}${o.lots.length > 1 ? '_p' + lot.n : ''}.html`, LX.qbuilder.page(o, lot), 'text/html') }, ico('download'), ` Télécharger la page HTML${o.lots.length > 1 ? ' ' + lot.n + '/' + o.lots.length : ''} (${lot.items.length})`)),
       copyBtn('Copier tous les prompts', () => o.items.map((x) => `### ${x.name} (${x.seconds} s)\n${x.positive}`).join('\n\n')),

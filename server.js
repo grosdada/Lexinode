@@ -15,6 +15,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { spawn } = require('child_process');
 const { URL } = require('url');
 
 const ROOT = __dirname;
@@ -175,6 +176,149 @@ async function renderStatus() {
     return out;
   }));
   return { ok: true, qbuilder: qbUrl(), at: new Date().toISOString(), nodes };
+}
+
+// ---------------------------------------------------------------- lancement des rendus (Workflows Q-Builder : queue_ltx_multishot.py)
+// Le serveur fait ce que fait la commande PowerShell de Q-Builder : écrire le fichier de prompts puis lancer le même script, avec le même
+// interpréteur, vers les machines ComfyUI. Garde-fous (règles de David) : réseau local seulement, jamais une machine occupée par le lot
+// d'une autre session, VRAM vidée puis vérifiée avant de lancer, un prompt d'essai d'abord, un mode simulation (--dry-run, rien d'envoyé).
+// La confirmation se fait dans l'interface ; JSON exigé ici contre les envois inter-sites « simples ».
+const QB_WORKFLOWS = { h3: 'h3_t2v_api.json', ltx25: 'ltx25_t2v_api.json' };
+const QB_ASPECTS = ['1:1 (Square)', '2:3 (Portrait Photo)', '3:2 (Photo)', '3:4 (Portrait Standard)', '4:3 (Standard)', '9:16 (Portrait Widescreen)', '16:9 (Widescreen)', '21:9 (Ultrawide)'];
+const VRAM_READY = 0.85; // ~29 Go libres sur 34 : en dessous, le modèle déborde et le rendu est dix fois plus lent
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const gbText = (b) => (b / 1073741824).toFixed(1).replace('.', ',') + ' Go';
+let qbBusy = false;
+
+async function qbEnv() {
+  let env;
+  try { env = await getJson(qbUrl() + '/api/env', 6000); } catch (e) { throw new Error(`Q-Builder ne répond pas sur ${qbUrl()} (${e.message}). Le lancement demande Q-Builder sur le même PC que ce serveur Lexinode.`); }
+  const root = String(env.root || '');
+  if (!root || !path.isAbsolute(root) || !fs.existsSync(path.join(root, 'queue_ltx_multishot.py'))) throw new Error('Dossier de Q-Builder introuvable (queue_ltx_multishot.py absent).');
+  return { root, python: env.python && fs.existsSync(env.python) ? env.python : 'python' };
+}
+async function machineProbe(n) {
+  const base = String(n.url).replace(/\/$/, '');
+  const out = { name: n.name, url: n.url, online: false, running: 0, pending: 0, vramTotal: 0, vramFree: 0 };
+  try {
+    const [q, s] = await Promise.all([getJson(base + '/queue', 5000), getJson(base + '/system_stats', 5000)]);
+    const d = (s.devices || [])[0] || {};
+    Object.assign(out, { online: true, running: (q.queue_running || []).length, pending: (q.queue_pending || []).length, vramTotal: d.vram_total || 0, vramFree: d.vram_free || 0 });
+  } catch (e) { out.error = e.message; }
+  return out;
+}
+async function freeMachine(url) {
+  const r = await fetch(String(url).replace(/\/$/, '') + '/free', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ unload_models: true, free_memory: true }), signal: AbortSignal.timeout(15000) });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+}
+function qbCheck(b) {
+  const engine = b.engine === 'ltx25' ? 'ltx25' : b.engine === 'h3' ? 'h3' : '';
+  if (!engine) throw new Error('Moteur inconnu');
+  const aspect = QB_ASPECTS.find((a) => a === b.aspect);
+  if (!aspect) throw new Error('Format inconnu');
+  if (!Array.isArray(b.groups) || !b.groups.length || b.groups.length > 20) throw new Error('Aucun lot à lancer');
+  const seen = new Set();
+  let total = 0;
+  const groups = b.groups.map((g) => {
+    const rows = (Array.isArray(g.rows) ? g.rows : []).map((r) => {
+      const name = String(r.name || '');
+      if (!/^[A-Za-z0-9_.-]{1,80}$/.test(name)) throw new Error(`Nom de plan invalide : ${name.slice(0, 40)}`);
+      if (seen.has(name)) throw new Error(`Nom de plan en double : ${name}`);
+      seen.add(name);
+      const positive = String(r.positive || '').trim();
+      if (!positive || positive.length > 20000) throw new Error(`Prompt vide ou trop long pour ${name}`);
+      return { name, positive, seed: Number.isInteger(r.seed) && r.seed > 0 ? r.seed : Math.floor(Math.random() * 1e6) + 1 };
+    });
+    if (!rows.length || rows.length > 20) throw new Error('Un lot doit contenir de 1 à 20 prompts');
+    total += rows.length;
+    if (engine === 'h3') {
+      const seconds = Number(g.seconds);
+      if (!(seconds >= 1 && seconds <= 15)) throw new Error('Durée H3 : 1 à 15 s');
+      return { seconds, rows };
+    }
+    const frames = Number(g.frames);
+    if (!Number.isInteger(frames) || frames < 25 || frames > 481 || (frames - 1) % 8 !== 0) throw new Error('LTX 2.5 : nombre d’images de la forme 8n+1');
+    return { frames, rows };
+  });
+  if (total > 60) throw new Error('Trop de prompts (60 au plus)');
+  const copy = b.copy_results == null ? '' : String(b.copy_results).trim();
+  if (copy.length > 300 || /[\0\r\n]/.test(copy)) throw new Error('Dossier de copie invalide');
+  return {
+    engine, aspect, groups, copy, mode: ['dry', 'test', 'rest', 'all'].includes(b.mode) ? b.mode : 'test', mp: clamp(b.megapixels, 0.2, 2, engine === 'h3' ? 0.8 : 0.7),
+    machines: Array.isArray(b.machines) ? b.machines.map(String) : null, freeMemory: b.free_memory !== false,
+  };
+}
+function runScript(python, args, cwd, waitMs) {
+  return new Promise((resolve) => {
+    const child = spawn(python, args, { cwd, shell: false, windowsHide: true, env: Object.assign({}, process.env, { PYTHONIOENCODING: 'utf-8' }) });
+    let out = '';
+    const add = (c) => { out = (out + c).slice(-4000); };
+    child.stdout.on('data', add);
+    child.stderr.on('data', add);
+    const timer = setTimeout(() => resolve({ exit: null, running: true, tail: out }), waitMs);
+    child.on('close', (code) => { clearTimeout(timer); resolve({ exit: code, running: false, tail: out }); });
+    child.on('error', (e) => { clearTimeout(timer); resolve({ exit: -1, running: false, tail: String(e.message) }); });
+  });
+}
+async function qbRender(body) {
+  const req = qbCheck(body);
+  const env = await qbEnv();
+  const workflow = QB_WORKFLOWS[req.engine];
+  if (!fs.existsSync(path.join(env.root, workflow))) throw new Error(`Workflow introuvable dans Q-Builder : ${workflow}`);
+  const cluster = await getJson(qbUrl() + '/api/cluster-status', 6000);
+  const known = (cluster.nodes || []).filter((n) => n.online && n.auto !== false && isLanHost(new URL(n.url).hostname));
+  const picked = req.machines ? known.filter((n) => req.machines.includes(n.url)) : known;
+  if (!picked.length) throw new Error('Aucune machine utilisable : Q-Builder n’en connaît aucune en ligne parmi celles demandées.');
+  const machines = await Promise.all(picked.map(machineProbe));
+  const dry = req.mode === 'dry';
+  const poll = Number(process.env.LEXINODE_FREE_POLL_MS) || 3000;
+  for (const m of machines) {
+    m.excluded = '';
+    if (!m.online) { m.excluded = 'injoignable'; continue; }
+    if (dry) continue;
+    if (m.running || m.pending) { m.excluded = `occupée (${m.running} en calcul, ${m.pending} en attente) : on n’empile jamais un lot sur celui d’une autre session`; continue; }
+    if (m.vramTotal && m.vramFree < VRAM_READY * m.vramTotal) {
+      if (!req.freeMemory) { m.excluded = `VRAM presque pleine (${gbText(m.vramFree)} libres) et vidage non demandé`; continue; }
+      try { await freeMachine(m.url); } catch (e) { m.excluded = 'vidage de la mémoire refusé : ' + e.message; continue; }
+      m.freed = true;
+      for (let i = 0; i < 20; i++) {
+        await sleep(poll);
+        const p = await machineProbe(m);
+        Object.assign(m, { vramFree: p.vramFree, running: p.running, pending: p.pending });
+        if (m.vramFree >= VRAM_READY * m.vramTotal) break;
+      }
+      if (m.vramFree < VRAM_READY * m.vramTotal) m.excluded = `VRAM encore presque pleine après le vidage (${gbText(m.vramFree)} libres sur ${gbText(m.vramTotal)})`;
+    }
+  }
+  const view = machines.map((m) => ({ name: m.name, url: m.url, used: !m.excluded, freed: !!m.freed, reason: m.excluded, vramFree: m.vramFree, vramTotal: m.vramTotal }));
+  const eligible = machines.filter((m) => !m.excluded);
+  if (!eligible.length) { const e = new Error('Aucune machine disponible : ' + machines.map((m) => `${m.name} (${m.excluded})`).join(' ; ')); e.machines = view; e.noMachine = true; throw e; }
+
+  let groups = req.groups.map((g) => Object.assign({}, g, { rows: g.rows.slice() }));
+  if (req.mode === 'test') groups = [Object.assign({}, groups[0], { rows: groups[0].rows.slice(0, 1) })];
+  if (req.mode === 'rest') {
+    groups[0].rows.shift();
+    groups = groups.filter((g) => g.rows.length);
+    if (!groups.length) throw new Error('Il ne reste rien à lancer après le prompt d’essai.');
+  }
+  const dir = path.join(HOME ? path.join(HOME, 'qbuilder') : path.join(ROOT, 'data', 'qbuilder'), new Date().toISOString().replace(/[:.]/g, '-'));
+  fs.mkdirSync(dir, { recursive: true });
+  const urls = eligible.map((m) => m.url);
+  const runs = [];
+  for (const [i, g] of groups.entries()) {
+    const file = path.join(dir, `prompts_${String(i + 1).padStart(2, '0')}.json`);
+    fs.writeFileSync(file, JSON.stringify(g.rows.map((r) => ({ name: r.name, seed: r.seed, upscale_seed: 0, image: '', image_path: '', image_filename: '', positive: r.positive })), null, 2), 'utf8');
+    const args = ['queue_ltx_multishot.py'].concat(urls.length > 1 ? ['--servers', urls.join(',')] : ['--server', urls[0]], ['--workflow', workflow, '--prompts', file],
+      req.engine === 'h3' ? ['--duration-seconds', String(g.seconds)] : ['--frame-count', String(g.frames)], ['--aspect-ratio', req.aspect, '--megapixels', String(req.mp)]);
+    if (req.copy) args.push('--copy-results', req.copy);
+    if (dry) args.push('--dry-run');
+    const r = await runScript(env.python, args, env.root, req.copy ? 45000 : 150000);
+    runs.push({ prompts: g.rows.length, seconds: g.seconds, frames: g.frames, exit: r.exit, running: r.running, tail: r.tail.trim().split(/\r?\n/).slice(-8).join('\n') });
+    if (r.exit) break; // une erreur (code non nul) : on n'empile pas la suite
+  }
+  const ok = runs.length === groups.length && runs.every((r) => !r.exit);
+  try { fs.appendFileSync(path.join(dir, 'lancement.log'), JSON.stringify({ at: new Date().toISOString(), mode: req.mode, engine: req.engine, machines: view, runs }) + '\n'); } catch (e) { /* journal facultatif */ }
+  return { ok, mode: req.mode, engine: req.engine, dir, machines: view, runs };
 }
 
 // « lexinode-voice:<base64 d'un JSON> » dans un champ du corps vidéo (ex. target_audio_url) devient un data URI audio fait des fichiers de voix déjà générés
@@ -391,6 +535,13 @@ const server = http.createServer(async (req, res) => {
       return send(res, 200, fs.readFileSync(voiceFile(m[1])), 'audio/mpeg');
     }
     if (p === '/api/qbuilder/status' && req.method === 'GET') return send(res, 200, await renderStatus());
+    if (p === '/api/qbuilder/render' && req.method === 'POST') {
+      if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'Content-Type application/json requis' });
+      const body = await readBody(req, 4 * 1024 * 1024);
+      if (qbBusy) return send(res, 409, { error: 'Un lancement est déjà en cours : attendez sa fin.' });
+      qbBusy = true;
+      try { return send(res, 200, await qbRender(body)); } catch (e) { return send(res, e.noMachine ? 409 : 400, { error: e.message, machines: e.machines }); } finally { qbBusy = false; }
+    }
     if (p === '/api/lexicons' && req.method === 'GET') return send(res, 200, readLexicons());
     if (p === '/api/topics' && req.method === 'GET') {
       const parts = fs.existsSync(TOPICS) ? fs.readdirSync(TOPICS).filter((f) => f.endsWith('.json')).sort().map((f) => {
@@ -457,4 +608,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs, renderStatus };
+module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs, renderStatus, qbRender };

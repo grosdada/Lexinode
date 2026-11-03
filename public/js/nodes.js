@@ -366,7 +366,7 @@
 
   DEFS.qbuilder = {
     title: 'Sortie Queue Builder', icon: '', ico: 'cpu', cat: 'Sortie', color: () => '#FF8A00', // orange : se distingue du Générateur vidéo (rose)
-    desc: 'Prépare la page HTML de prompts que Workflows Q-Builder charge (« Load prompts HTML ») pour envoyer les films aux machines ComfyUI locales, avec MiniMax H3 (T2V) ou LTX 2.5. Rien n’est lancé depuis Lexinode.',
+    desc: 'Prépare la page HTML de prompts que Workflows Q-Builder charge (« Load prompts HTML ») pour envoyer les films aux machines ComfyUI locales, avec MiniMax H3 (T2V) ou LTX 2.5. Le bouton « Lancer le rendu » exécute le script de Q-Builder sur les machines, après confirmation.',
     inputs: [{ key: 'script', type: ['script'], label: 'script' }, { key: 'voice', type: ['voice'], label: 'voix (facultatif)' }],
     outputs: [{ key: 'out', type: 'video', label: 'lot' }],
     fields: [
@@ -380,6 +380,8 @@
         { v: 'post', l: 'Ajoutée au montage (le modèle ne fait que musique et sons)' },
       ]) },
       { key: 'prefixe', label: 'Préfixe des noms de plans (vide : titre du short)', type: 'text', def: '' },
+      { key: 'megapixels', label: 'Mégapixels du rendu (vide : 0,8 en H3, 0,7 en LTX)', type: 'text', def: '', advanced: true },
+      { key: 'copie', label: 'Copier les rendus dans ce dossier (facultatif : le script attend alors la fin de chaque rendu)', type: 'text', def: '', advanced: true },
     ],
     summary: (d, out) => (out && out.nbPrompts ? `${out.nbPrompts} prompt(s) · ${out.moteurNom}` : (d.moteur === 'ltx25' ? 'LTX 2.5' : 'H3') + ' · local'),
   };
