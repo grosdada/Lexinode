@@ -381,7 +381,7 @@
       ]) },
       { key: 'prefixe', label: 'Préfixe des noms de plans (vide : titre du short)', type: 'text', def: '' },
       { key: 'megapixels', label: 'Mégapixels du rendu (vide : 0,8 en H3, 0,7 en LTX)', type: 'text', def: '', advanced: true },
-      { key: 'copie', label: 'Copier les rendus dans ce dossier (facultatif : le script attend alors la fin de chaque rendu)', type: 'text', def: '', advanced: true },
+      { key: 'copie', label: 'Dossier des films (vide : le dossier Output de l’appli ; le script attend la fin de chaque rendu pour y copier le film)', type: 'text', def: '', advanced: true },
     ],
     summary: (d, out) => (out && out.nbPrompts ? `${out.nbPrompts} prompt(s) · ${out.moteurNom}` : (d.moteur === 'ltx25' ? 'LTX 2.5' : 'H3') + ' · local'),
   };

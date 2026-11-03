@@ -3,26 +3,30 @@
 //  - ouvre l'interface dans une fenêtre d'application Edge (ou Chrome) avec un profil à part
 //  - arrête le serveur quand la fenêtre se ferme
 // Les données de l'utilisateur vivent dans %APPDATA%\Lexinode (LEXINODE_HOME) ; le dossier d'installation reste en lecture seule.
-// Option : --no-window (serveur seul, pour les essais).
+// Options : --no-window (serveur seul, pour les essais) ; --bridge (serveur seul + icône près de l'horloge : c'est le « pont » qui laisse
+// le site en ligne lancer les rendus Q-Builder à travers ce PC ; prévu pour démarrer avec Windows).
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Management;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
 static class LexinodeLauncher
 {
     const int FirstPort = 5177;
-    static string appDir, home, logFile, portFile;
+    static string appDir, home, logFile, portFile, outputDir;
 
     [STAThread]
     static int Main(string[] args)
     {
-        bool noWindow = Array.IndexOf(args, "--no-window") >= 0;
+        bool bridge = Array.IndexOf(args, "--bridge") >= 0;
+        bool noWindow = bridge || Array.IndexOf(args, "--no-window") >= 0;
         appDir = AppDomain.CurrentDomain.BaseDirectory;
         home = Environment.GetEnvironmentVariable("LEXINODE_HOME");
         if (string.IsNullOrEmpty(home))
@@ -36,17 +40,26 @@ static class LexinodeLauncher
         {
             if (!first)
             {
-                // déjà lancé : on ouvre seulement une nouvelle fenêtre sur le serveur qui tourne
-                int running = ReadPort();
+                // déjà lancé : on ouvre seulement une nouvelle fenêtre sur le serveur qui tourne (il peut être en train de démarrer)
+                if (noWindow) return 0;
+                int running = 0;
+                DateTime wait = DateTime.UtcNow.AddSeconds(20);
+                while (DateTime.UtcNow < wait)
+                {
+                    running = ReadPort();
+                    if (running > 0 && IsUp(running)) break;
+                    running = 0;
+                    Thread.Sleep(300);
+                }
                 string e2, p2;
-                if (running > 0 && IsUp(running) && !noWindow) OpenWindow(running, out e2, out p2);
+                if (running > 0) OpenWindow(running, out e2, out p2);
                 return 0;
             }
-            return Run(noWindow);
+            return Run(noWindow, bridge);
         }
     }
 
-    static int Run(bool noWindow)
+    static int Run(bool noWindow, bool bridge)
     {
         string node = Path.Combine(appDir, "node", "node.exe");
         string appFolder = Path.Combine(appDir, "app");
@@ -71,6 +84,11 @@ static class LexinodeLauncher
         psi.EnvironmentVariables["LEXINODE_HOME"] = home;
         psi.EnvironmentVariables["PORT"] = port.ToString();
         psi.EnvironmentVariables["HOST"] = "127.0.0.1";
+        // dossier des films : Output à côté de l'application (sinon dans les données de l'utilisateur si ce dossier n'est pas modifiable)
+        outputDir = Path.Combine(appDir, "Output");
+        try { Directory.CreateDirectory(outputDir); string probe = Path.Combine(outputDir, ".ecriture"); File.WriteAllText(probe, ""); File.Delete(probe); }
+        catch (Exception) { outputDir = Path.Combine(home, "Output"); }
+        psi.EnvironmentVariables["LEXINODE_OUTPUT_DEFAULT"] = outputDir;
         psi.EnvironmentVariables["LEXINODE_PASSWORD"] = ""; // serveur local : pas de mot de passe
         psi.EnvironmentVariables["LEXINODE_PARENT_PID"] = Process.GetCurrentProcess().Id.ToString(); // le serveur s'arrête si on disparaît
 
@@ -114,7 +132,11 @@ static class LexinodeLauncher
 
         try
         {
-            if (noWindow)
+            if (bridge)
+            {
+                RunTray(server, port);
+            }
+            else if (noWindow)
             {
                 server.WaitForExit();
             }
@@ -140,6 +162,53 @@ static class LexinodeLauncher
             try { File.Delete(portFile); } catch (IOException) { }
         }
         return 0;
+    }
+
+    // Mode pont : pas de fenêtre, une icône près de l'horloge. Le serveur reste actif tant que l'icône est là.
+    static void RunTray(Process server, int port)
+    {
+        Application.EnableVisualStyles();
+        NotifyIcon icon = new NotifyIcon();
+        try { icon.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath); } catch (Exception) { icon.Icon = SystemIcons.Application; }
+        icon.Text = "Lexinode : pont actif (port " + port + ")";
+        EventHandler open = delegate (object s, EventArgs e) { string a, b; OpenWindow(port, out a, out b); };
+        ContextMenuStrip menu = new ContextMenuStrip();
+        menu.Items.Add("Ouvrir Lexinode", null, open);
+        menu.Items.Add("Copier la clé du pont", null, delegate (object s, EventArgs e)
+        {
+            string token = ReadBridgeToken();
+            if (token == null) { Error("Clé du pont introuvable dans " + Path.Combine(home, ".env")); return; }
+            try { Clipboard.SetText(token); icon.ShowBalloonTip(3000, "Lexinode", "Clé du pont copiée. Collez-la dans les Réglages du site.", ToolTipIcon.Info); }
+            catch (Exception) { Error("Copie impossible : le presse-papiers est occupé. Réessayez."); }
+        });
+        menu.Items.Add("Ouvrir le dossier des films", null, delegate (object s, EventArgs e)
+        {
+            try { Directory.CreateDirectory(outputDir); Process.Start("explorer.exe", "\"" + outputDir + "\""); } catch (Exception) { }
+        });
+        menu.Items.Add(new ToolStripSeparator());
+        menu.Items.Add("Quitter (arrête le pont)", null, delegate (object s, EventArgs e) { Application.Exit(); });
+        icon.ContextMenuStrip = menu;
+        icon.DoubleClick += open;
+        icon.Visible = true;
+        System.Windows.Forms.Timer watch = new System.Windows.Forms.Timer();
+        watch.Interval = 2000;
+        watch.Tick += delegate (object s, EventArgs e) { if (server.HasExited) Application.Exit(); };
+        watch.Start();
+        icon.ShowBalloonTip(4000, "Lexinode", "Le pont vers Q-Builder est actif. Clic droit sur l'icône pour le menu.", ToolTipIcon.Info);
+        Application.Run();
+        watch.Stop();
+        icon.Visible = false;
+        icon.Dispose();
+    }
+
+    static string ReadBridgeToken()
+    {
+        try
+        {
+            Match m = Regex.Match(File.ReadAllText(Path.Combine(home, ".env")), @"^LEXINODE_BRIDGE_TOKEN=([0-9a-f]+)\s*$", RegexOptions.Multiline);
+            return m.Success ? m.Groups[1].Value : null;
+        }
+        catch (Exception) { return null; }
     }
 
     static Process OpenWindow(int port, out string exeName, out string profile)

@@ -35,7 +35,7 @@ fs.copyFileSync(path.join(__dirname, 'LICENSE-node.txt'), path.join(nodeDir, 'LI
 const ico = path.join(BUILD, 'lexinode.ico');
 execFileSync(process.execPath, [path.join(__dirname, 'make-icon.js'), ico], { stdio: 'inherit' });
 execFileSync(CSC, ['/nologo', '/target:winexe', '/optimize+', '/out:' + path.join(BUILD, 'Lexinode.exe'), '/win32icon:' + ico,
-  '/reference:System.dll', '/reference:System.Windows.Forms.dll', '/reference:System.Management.dll', path.join(__dirname, 'Lexinode.cs')], { stdio: 'inherit' });
+  '/reference:System.dll', '/reference:System.Drawing.dll', '/reference:System.Windows.Forms.dll', '/reference:System.Management.dll', path.join(__dirname, 'Lexinode.cs')], { stdio: 'inherit' });
 
 // 3. installateur
 execFileSync(ISCC, ['/Q', '/DAppVersion=' + version, path.join(__dirname, 'lexinode.iss')], { stdio: 'inherit', cwd: __dirname });

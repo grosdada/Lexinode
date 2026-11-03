@@ -9,7 +9,7 @@
   // ------------------------------------------------------------------ réglages
   const DEFAULT_SETTINGS = {
     engine: 'local', provider: 'anthropic', model: '', effort: 'medium', concurrency: 3,
-    searchProvider: 'auto', keys: {}, baseUrls: {}, roles: {},
+    searchProvider: 'auto', keys: {}, baseUrls: {}, roles: {}, bridge: { url: 'http://127.0.0.1:5177', token: '' },
   };
   LX.settings = Object.assign({}, DEFAULT_SETTINGS, U.store.get('settings', {}));
   const saveSettings = () => U.store.set('settings', LX.settings);
@@ -421,13 +421,44 @@
     if (o.modele === 'wan30') return { provider: 'dashscope', payload: P.directPayload(seg, seg.prompt, ctx) };
     throw new Error(`${P.nom} n’a pas d’API directe intégrée : choisissez la passerelle fal.ai.`);
   }
+  // ------------------------------------------------------------------ pont vers Q-Builder
+  // Fenêtre Lexinode sur le PC : le serveur local parle à Q-Builder. Site en ligne : il ne voit pas ce PC ; le navigateur, lui, y est,
+  // donc il passe par le « pont » (le Lexinode Windows qui tourne en arrière-plan) avec la clé du pont.
+  const onLocalApp = () => ['127.0.0.1', 'localhost'].includes(location.hostname);
+  const bridgeCfg = () => { const b = LX.settings.bridge || {}; return b.token ? { url: String(b.url || 'http://127.0.0.1:5177').replace(/\/$/, ''), token: b.token } : null; };
+  LX.qbNeedsBridge = () => !onLocalApp() && !bridgeCfg();
+  LX.qbFetch = async (route, init) => {
+    const b = bridgeCfg();
+    if (onLocalApp() || !b) return fetch(route, init);
+    try { return await fetch(b.url + '/' + route, Object.assign({}, init, { headers: Object.assign({}, (init && init.headers) || {}, { authorization: 'Bearer ' + b.token }) })); } catch (e) {
+      throw new Error(`Le pont n’est pas joignable (${b.url}). Lexinode pour Windows doit tourner sur votre PC (icône près de l’horloge), et le navigateur doit avoir autorisé l’accès au réseau local pour ce site.`);
+    }
+  };
+  LX.qbFreeMachines = (list, done) => {
+    if (!list.length) { toast('Aucune machine libre à vider.', 'warn'); return; }
+    askConfirm(`Vider la mémoire vidéo de ${list.map((n) => n.name).join(', ')} ? Les modèles sont déchargés du GPU : rien n’est perdu, ils se rechargent au prochain rendu. Une machine qui calcule n’est jamais vidée.`, 'Vider la VRAM', async () => {
+      const gb = (x) => (x / 1073741824).toFixed(1).replace('.', ',');
+      for (const n of list) {
+        toast('Vidage de ' + n.name + '…');
+        try {
+          const r = await LX.qbFetch('api/qbuilder/free', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ url: n.url }) });
+          const j = await r.json();
+          if (!r.ok) throw new Error(j.error || 'Erreur');
+          toast(`${n.name} : ${gb(j.vramFree)} Go libres sur ${gb(j.vramTotal)}` + (j.ready ? ' ✓' : ' : encore presque pleine'), j.ready ? '' : 'warn');
+        } catch (e) { toast(`${n.name} : ${e.message}`, 'warn'); }
+      }
+      if (done) done();
+    });
+  };
+
   // ------------------------------------------------------------------ lancement des rendus sur les machines (script de Workflows Q-Builder)
   async function renderOnMachines(nodeId) {
     const node = ed.node(nodeId);
     if (!node || !node.out || !node.out.launch) return;
     if (!LX.api.server) { toast('Le lancement passe par le serveur Lexinode de ce PC : version Windows, avec Q-Builder sur le même PC.', 'warn'); return; }
+    if (LX.qbNeedsBridge()) { toast('Pour lancer depuis le site en ligne, configurez le pont : Réglages → « Pont vers Q-Builder ».', 'warn'); return; }
     let st;
-    try { st = await (await fetch('api/qbuilder/status')).json(); } catch (e) { st = { ok: false, error: e.message }; }
+    try { st = await (await LX.qbFetch('api/qbuilder/status')).json(); } catch (e) { st = { ok: false, error: e.message }; }
     if (!st.ok) { toast(st.error, 'warn'); return; }
     const o = node.out;
     const L = o.launch;
@@ -451,8 +482,8 @@
     const freeCb = h('input', { type: 'checkbox' });
     freeCb.checked = true;
     const dryCb = h('input', { type: 'checkbox' });
-    const copyIn = h('input', { type: 'text', placeholder: 'Dossier de copie des rendus (facultatif)' });
-    copyIn.value = o.copie || '';
+    const copyIn = h('input', { type: 'text', placeholder: 'Dossier où arrivent les films' });
+    copyIn.value = o.copie || (st.films && st.films.dir) || '';
     const out = h('div', { class: 'small' });
     const go = h('button', { class: 'btn primary' }, ico2('play'), ' Lancer');
     const body = h('div', {},
@@ -463,7 +494,7 @@
       h('h3', {}, 'Précautions'),
       h('label', { class: 'row' }, freeCb, 'Vider la mémoire vidéo des machines libres avant de lancer (recommandé), puis vérifier ~29 Go libres'),
       h('label', { class: 'row' }, dryCb, 'Simulation : le script prépare tout mais n’envoie rien (--dry-run)'),
-      h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Copier les rendus'), copyIn),
+      h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Dossier des films'), copyIn),
       h('div', { class: 'row' }, go, h('button', { class: 'btn', onclick: () => m.close() }, 'Annuler')), out);
     const m = modal('Lancer le rendu sur les machines', body);
     const show = (j) => {
@@ -471,6 +502,7 @@
       out.append(h('div', { class: j.ok ? 'note' : 'error-box' }, ico2(j.ok ? 'check' : 'alert'), ' ', j.ok ? (j.mode === 'dry' ? 'Simulation terminée : rien n’a été envoyé.' : 'Rendus envoyés aux machines.') : (j.error || 'Échec')));
       (j.machines || []).forEach((x) => out.append(h('div', {}, (x.used ? '✓ ' : '✗ ') + x.name + (x.freed ? ' · mémoire vidée' : '') + (x.reason ? ' : ' + x.reason : ''))));
       (j.runs || []).forEach((r) => out.append(h('div', {}, h('b', {}, `Lot de ${r.prompts} prompt(s) (${r.seconds ? r.seconds + ' s' : r.frames + ' images'}) : ` + (r.running ? 'envoi en cours' : r.exit ? 'erreur ' + r.exit : 'ok')), h('pre', { class: 'prompt' }, r.tail || ''))));
+      if (j.ok && j.mode !== 'dry' && j.output) out.append(h('div', { class: 'note' }, ico2('check'), ' Les films arriveront dans : ' + j.output + ' (bouton « Ouvrir le dossier » dans « Rendu sur les machines »).'));
       if (j.ok && j.mode !== 'dry') out.append(h('p', {}, j.mode === 'test' ? 'Essai envoyé : suivez-le dans « Rendu sur les machines ». Quand il est bon, relancez pour envoyer le reste.' : 'Suivez l’avancement dans « Rendu sur les machines » (rafraîchi toutes les 10 s).'));
     };
     go.addEventListener('click', async () => {
@@ -480,7 +512,7 @@
       go.disabled = true;
       out.textContent = 'Préparation des machines et envoi… (jusqu’à quelques minutes si la mémoire doit être vidée)';
       try {
-        const r = await fetch('api/qbuilder/render', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ engine: L.engine, aspect: L.aspect, megapixels: L.megapixels, groups: L.groups, mode, machines, free_memory: freeCb.checked, copy_results: copyIn.value.trim() }) });
+        const r = await LX.qbFetch('api/qbuilder/render', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ engine: L.engine, aspect: L.aspect, megapixels: L.megapixels, groups: L.groups, mode, machines, free_memory: freeCb.checked, copy_results: copyIn.value.trim() }) });
         const j = await r.json();
         show(r.ok ? j : { ok: false, error: j.error, machines: j.machines, runs: [] });
         if (r.ok && j.ok && mode === 'test') node.qbTest = true;
@@ -871,6 +903,39 @@
       h('div', { class: 'small muted' }, 'Avec une clé fal.ai, rien d’autre à régler : les identifiants des trois modèles sont préremplis (laissez les champs vides). Ne les modifiez que si fal change de version.'),
       h('div', { class: 'grid2' }, vidKey('fal', 'Clé fal.ai (FAL_KEY)'), vidKey('minimax', 'Clé MiniMax (H3, direct)'), vidKey('dashscope', 'Clé DashScope (Wan 3.0, direct)')),
       vidBox);
+    // pont vers Q-Builder : le site en ligne pilote les machines à travers le PC
+    const bridgeBox = h('div', {});
+    if (onLocalApp()) {
+      const keyIn = h('input', { type: 'text' });
+      keyIn.readOnly = true;
+      keyIn.value = '…';
+      const cp = h('button', { class: 'btn sm', type: 'button' }, 'Copier');
+      cp.addEventListener('click', async () => { const ok = await U.copy(keyIn.value); cp.textContent = ok ? '✓ copiée' : 'copie impossible'; setTimeout(() => { cp.textContent = 'Copier'; }, 1500); });
+      fetch('api/bridge/info').then((r) => r.json()).then((j) => { keyIn.value = j.token || ''; }).catch(() => { keyIn.value = 'indisponible'; });
+      bridgeBox.append(h('div', { class: 'small muted' }, 'Cette fenêtre tourne sur votre PC. Le pont permet au site en ligne de lancer et suivre les rendus de Q-Builder à travers ce PC (Lexinode doit alors rester actif en arrière-plan). Collez cette clé dans les Réglages du site, section « Pont vers Q-Builder ». Ne la partagez pas.'),
+        h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Clé du pont'), h('span', { class: 'key-row' }, keyIn, cp)));
+    } else {
+      const b = s.bridge = s.bridge || { url: 'http://127.0.0.1:5177', token: '' };
+      const urlIn = h('input', { type: 'text', value: b.url || '', placeholder: 'http://127.0.0.1:5177' });
+      urlIn.addEventListener('input', () => { b.url = urlIn.value.trim(); saveSettings(); });
+      const tokIn = h('input', { type: 'password', value: b.token || '', autocomplete: 'off', placeholder: 'clé affichée dans Lexinode sur votre PC' });
+      tokIn.addEventListener('input', () => { b.token = tokIn.value.trim(); saveSettings(); });
+      const res = h('span', { class: 'small' });
+      const test = h('button', { class: 'btn sm', type: 'button' }, 'Tester le pont');
+      test.addEventListener('click', async () => {
+        res.textContent = 'Test…';
+        try {
+          const r = await LX.qbFetch('api/bridge/ping');
+          const j = await r.json();
+          if (!r.ok) throw new Error(j.error || 'Erreur ' + r.status);
+          res.textContent = j.qbuilder && j.qbuilder.ok ? `✓ Pont joint · Q-Builder : ${j.qbuilder.online}/${j.qbuilder.machines} machine(s) en ligne` : '✓ Pont joint, mais Q-Builder ne répond pas : ' + ((j.qbuilder || {}).error || '');
+        } catch (e) { res.textContent = '✕ ' + e.message; }
+      });
+      bridgeBox.append(h('div', { class: 'small muted' }, 'Pour lancer les rendus Q-Builder depuis ce site, installez Lexinode pour Windows sur le PC où tourne Q-Builder (avec « démarrer avec Windows »), puis collez ici la clé du pont affichée dans ses Réglages. Au premier essai, le navigateur peut demander d’autoriser l’accès au réseau local : acceptez.'),
+        h('div', { class: 'grid2' }, h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Adresse du pont'), urlIn), h('label', { class: 'field' }, h('span', { class: 'fl' }, 'Clé du pont'), tokIn)),
+        h('div', { class: 'row' }, test, res));
+    }
+    body.append(h('h3', {}, 'Pont vers Q-Builder (rendus sur vos machines)'), bridgeBox);
     // apparence
     const monoCb = h('input', { type: 'checkbox', id: 'set-mono' });
     monoCb.checked = !!s.monoIcons;

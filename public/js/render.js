@@ -133,9 +133,26 @@
     const gb = (n) => (n / 1073741824).toFixed(1).replace('.', ',');
     const since = (key) => { const s = Math.round((Date.now() - (qbSeen[key] = qbSeen[key] || Date.now())) / 1000); return s < 90 ? s + ' s' : s < 5400 ? Math.round(s / 60) + ' min' : (s / 3600).toFixed(1).replace('.', ',') + ' h'; };
     const mine = (name) => !!name && names.some((n) => name.includes(n));
+    // les films déjà rendus : dossier, derniers fichiers, ouverture du dossier ou lecture avec le lecteur du PC
+    const filmsBlock = (f) => {
+      if (!f || !f.dir) return;
+      const when = (t) => new Date(t).toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+      const mo = (n) => (n / 1048576).toFixed(1).replace('.', ',') + ' Mo';
+      const open = async (file) => {
+        try {
+          const r = await LX.qbFetch('api/qbuilder/open-output', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(file ? { file } : {}) });
+          const jj = await r.json();
+          if (!r.ok) throw new Error(jj.error || 'Erreur');
+        } catch (e) { LX.toast(e.message, 'warn'); }
+      };
+      box.append(h('div', { class: 'seg-card' },
+        h('div', { class: 'seg-h' }, h('b', {}, 'Films'), h('span', { class: 'muted' }, ` · ${f.count} film(s)`), h('button', { class: 'btn sm', title: f.dir, onclick: () => open() }, 'Ouvrir le dossier')),
+        h('div', { class: 'small muted' }, f.dir),
+        f.count ? f.latest.map((x) => h('div', { class: 'small' }, h('b', {}, x.name), ` · ${mo(x.size)} · ${when(x.at)} `, h('button', { class: 'btn sm', onclick: () => open(x.name) }, ico('play'), ' Lire'))) : h('div', { class: 'small muted' }, 'Aucun film pour l’instant : chaque film arrive ici dès que son rendu est terminé.')));
+    };
     const paint = (j) => {
       box.innerHTML = '';
-      if (!j.ok) { box.append(h('div', { class: 'note' }, ico('alert'), ' ', j.error)); return; }
+      if (!j.ok) { box.append(h('div', { class: 'note' }, ico('alert'), ' ', j.error)); filmsBlock(j.films); return; }
       const on = j.nodes.filter((n) => n.online);
       const working = on.filter((n) => n.running);
       const waiting = on.reduce((s, n) => s + n.pending, 0);
@@ -143,12 +160,14 @@
       const idle = on.filter((n) => !n.running && !n.pending);
       const loaded = on.filter((n) => n.pending > 0);
       if (idle.length && loaded.length) box.append(h('div', { class: 'note' }, ico('alert'), ` ${idle.map((n) => n.name).join(', ')} ${idle.length > 1 ? 'sont libres' : 'est libre'} pendant que ${loaded.map((n) => n.name + ' (' + n.pending + ' en attente)').join(', ')} ${loaded.length > 1 ? 'ont' : 'a'} une file : à rééquilibrer dans Q-Builder.`));
+      const freeOnes = on.filter((n) => !n.running && !n.pending);
+      if (freeOnes.length) box.append(h('div', { class: 'row' }, h('button', { class: 'btn sm', title: 'Décharge les modèles de la mémoire des GPU des machines libres', onclick: () => LX.qbFreeMachines(freeOnes, refresh) }, ico('refresh'), ' Vider la VRAM des machines libres')));
       for (const n of j.nodes) {
         const used = n.vramTotal ? Math.round(((n.vramTotal - n.vramFree) / n.vramTotal) * 100) : 0;
         const low = n.online && n.vramFree < 10 * 1073741824;
         const st = !n.online ? ['err', 'hors ligne'] : n.running ? ['est', 'en calcul'] : n.pending ? ['est', 'file en attente'] : ['ok', 'libre'];
         box.append(h('div', { class: 'seg-card' },
-          h('div', { class: 'seg-h' }, h('b', {}, n.name), h('span', { class: 'muted' }, n.gpu ? ' · ' + n.gpu : ''), h('span', { class: 'badge dot ' + st[0] }, st[1])),
+          h('div', { class: 'seg-h' }, h('b', {}, n.name), h('span', { class: 'muted' }, n.gpu ? ' · ' + n.gpu : ''), h('span', { class: 'badge dot ' + st[0] }, st[1]), n.online && !n.running && !n.pending ? h('button', { class: 'btn sm', title: 'Décharge les modèles de la mémoire de cette machine', onclick: () => LX.qbFreeMachines([n], refresh) }, 'Vider la VRAM') : null),
           n.online ? h('div', {}, h('div', { class: 'vram' + (low ? ' low' : ''), title: `${used} % utilisés` }, h('i', { style: { width: used + '%' } })), h('div', { class: 'small muted' }, `VRAM : ${gb(n.vramFree)} Go libres sur ${gb(n.vramTotal)}`, low ? ' · ⚠ presque pleine : videz la mémoire avant de lancer un lot' : '')) : null,
           (n.jobs || []).map((jb) => {
             const key = n.name + ':' + jb.id;
@@ -156,6 +175,7 @@
           }),
           n.online && (n.running || n.pending) && !(n.jobs || []).length ? h('div', { class: 'small muted' }, `${n.running} en calcul, ${n.pending} en attente` + (n.jobsError ? ' (détail illisible : ' + n.jobsError + ')' : '')) : null));
       }
+      filmsBlock(j.films);
     };
     let busy = false;
     const refresh = async () => {
@@ -163,7 +183,8 @@
       busy = true;
       try {
         if (!LX.api.server) throw new Error('Le suivi passe par le serveur Lexinode : il fonctionne dans la version Windows, installée sur le même PC que Q-Builder.');
-        const r = await fetch('api/qbuilder/status');
+        if (LX.qbNeedsBridge && LX.qbNeedsBridge()) throw new Error('Pour suivre les rendus depuis le site en ligne, configurez le pont : Réglages → « Pont vers Q-Builder ».');
+        const r = await (LX.qbFetch || fetch)('api/qbuilder/status');
         paint(await r.json());
       } catch (e) { paint({ ok: false, error: e.message }); }
       busy = false;

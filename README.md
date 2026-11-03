@@ -158,6 +158,19 @@ node build.js     # → desktop/dist/Lexinode-Setup-<version>.exe
 - Pas de mot de passe : le serveur n'écoute que sur ce PC.
 - L'exécutable n'est pas signé : SmartScreen affiche un avertissement (« Informations complémentaires », puis « Exécuter quand même »).
 - Tests : `node scripts/test-home.js` (mode `LEXINODE_HOME`).
+- `Lexinode.exe --bridge` démarre le serveur sans fenêtre, avec une icône près de l'horloge (ouvrir Lexinode, copier la clé du pont, quitter). C'est ce que lance la tâche « Démarrer Lexinode en arrière-plan avec Windows » de l'installateur (raccourci dans le dossier Démarrage).
+
+### Le pont : lancer les rendus Q-Builder depuis le site en ligne
+
+Le site hébergé sur un VPS ne voit ni votre réseau local ni Q-Builder. Le navigateur, lui, est sur votre PC : il parle à Lexinode pour Windows, qui parle à Q-Builder et à vos machines ComfyUI. C'est le « pont ».
+
+1. Installez Lexinode pour Windows en cochant « Démarrer Lexinode en arrière-plan avec Windows » (ou lancez `Lexinode.exe --bridge`). Clic droit sur l'icône près de l'horloge → « Copier la clé du pont ».
+2. Sur le site : Réglages → « Pont vers Q-Builder » → collez la clé, puis « Tester le pont ». Le navigateur peut demander d'autoriser l'accès au réseau local : acceptez.
+3. Le node Sortie Queue Builder du site propose alors « Lancer le rendu sur les machines… », le suivi des machines et les boutons « Vider la VRAM » (une machine qui calcule n'est jamais vidée).
+
+Les films rendus arrivent par défaut dans le dossier **Output**, à côté de l'application (raccourci « Lexinode - films » dans le menu Démarrer, ou icône de l'horloge → « Ouvrir le dossier des films »). Le panneau « Rendu sur les machines » liste les derniers films, avec « Ouvrir le dossier » et « Lire ». Pour un autre emplacement : champ « Dossier des films » dans la fenêtre de lancement, ou `LEXINODE_OUTPUT` dans `%APPDATA%\Lexinode\.env`.
+
+Sécurité : le pont n'est joignable que depuis ce PC (127.0.0.1, hôte vérifié contre le « DNS rebinding »). Il n'accepte que les origines de `LEXINODE_BRIDGE_ORIGINS` (par défaut `https://lexinode.placenta.cloud` ; à changer dans `%APPDATA%\Lexinode\.env` pour un autre domaine), exige la clé `LEXINODE_BRIDGE_TOKEN` (créée seule dans ce même `.env`) et ne donne accès qu'aux routes Q-Builder : état, rendu, vidage de la VRAM. Ni projets, ni coffre de clés, ni la clé du pont elle-même ne sont lisibles depuis le site. Test : `node scripts/test-bridge.js`.
 
 ## Une seule clé : fal.ai
 

@@ -34,6 +34,7 @@ const LEX_DIRS = [path.join(ROOT, 'data', 'lexicons'), HOME ? path.join(HOME, 'c
 const PROJECTS = HOME ? path.join(HOME, 'projects') : path.join(ROOT, 'projects');
 const VOICES = HOME ? path.join(HOME, 'voices') : path.join(ROOT, 'data', 'voices'); // fichiers audio ElevenLabs déjà générés
 const EXAMPLES = path.join(ROOT, 'data', 'examples');
+const VERSION = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version; } catch (e) { return ''; } })();
 const TOPICS = path.join(ROOT, 'data', 'topics');
 // Coffre chiffré des clés saisies dans Réglages (actif seulement si LEXINODE_MASTER_KEY est défini)
 const VAULT = require('./vault.js').create({
@@ -81,9 +82,14 @@ const ENV_MODEL = {
 function ensureHome(dir) {
   fs.mkdirSync(dir, { recursive: true });
   const env = path.join(dir, '.env');
-  if (fs.existsSync(env)) return;
-  const key = require('crypto').randomBytes(32).toString('hex');
-  fs.writeFileSync(env, `# Données de cette installation de Lexinode.\n# LEXINODE_MASTER_KEY chiffre le coffre de clés : ne la changez pas, ne la partagez pas.\nLEXINODE_MASTER_KEY=${key}\n`, { mode: 0o600 });
+  const key = () => crypto.randomBytes(32).toString('hex');
+  const bridge = `# Pont vers le site en ligne : à coller dans Réglages du site (Pont vers Q-Builder). Ne la partagez pas.\nLEXINODE_BRIDGE_TOKEN=${key()}\n`;
+  if (!fs.existsSync(env)) {
+    fs.writeFileSync(env, `# Données de cette installation de Lexinode.\n# LEXINODE_MASTER_KEY chiffre le coffre de clés : ne la changez pas, ne la partagez pas.\nLEXINODE_MASTER_KEY=${key()}\n${bridge}`, { mode: 0o600 });
+    return;
+  }
+  const cur = fs.readFileSync(env, 'utf8');
+  if (!/^LEXINODE_BRIDGE_TOKEN=/m.test(cur)) fs.appendFileSync(env, (cur.endsWith('\n') ? '' : '\n') + bridge);
 }
 
 // ---------------------------------------------------------------- voix off (ElevenLabs, texte vers parole)
@@ -156,9 +162,10 @@ const jobName = (item) => {
   return '';
 };
 async function renderStatus() {
+  const films = listFilms(outputDir());
   let cluster;
   try { cluster = await getJson(qbUrl() + '/api/cluster-status', 6000); } catch (e) {
-    return { ok: false, qbuilder: qbUrl(), error: `Q-Builder ne répond pas sur ${qbUrl()} (${e.message}). Lancez-le avec le raccourci « Lancer Q-Builder », sur le même PC que ce serveur Lexinode.` };
+    return { ok: false, qbuilder: qbUrl(), films, error: `Q-Builder ne répond pas sur ${qbUrl()} (${e.message}). Lancez-le avec le raccourci « Lancer Q-Builder », sur le même PC que ce serveur Lexinode.` };
   }
   const nodes = await Promise.all((cluster.nodes || []).map(async (n) => {
     const out = {
@@ -175,7 +182,7 @@ async function renderStatus() {
     }
     return out;
   }));
-  return { ok: true, qbuilder: qbUrl(), at: new Date().toISOString(), nodes };
+  return { ok: true, qbuilder: qbUrl(), at: new Date().toISOString(), nodes, films };
 }
 
 // ---------------------------------------------------------------- lancement des rendus (Workflows Q-Builder : queue_ltx_multishot.py)
@@ -188,6 +195,32 @@ const QB_ASPECTS = ['1:1 (Square)', '2:3 (Portrait Photo)', '3:2 (Photo)', '3:4 
 const VRAM_READY = 0.85; // ~29 Go libres sur 34 : en dessous, le modèle déborde et le rendu est dix fois plus lent
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const gbText = (b) => (b / 1073741824).toFixed(1).replace('.', ',') + ' Go';
+
+// Dossier des films : là où arrivent les rendus lancés d'ici. Par défaut « Output » à côté de l'application (le lanceur Windows le donne
+// dans LEXINODE_OUTPUT_DEFAULT), sinon « Output » dans le dossier de données ; LEXINODE_OUTPUT le remplace. Vide hors version Windows.
+const outputDir = () => String(process.env.LEXINODE_OUTPUT || process.env.LEXINODE_OUTPUT_DEFAULT || (HOME ? path.join(HOME, 'Output') : '')).trim();
+const FILM_EXT = /\.(mp4|webm|mov|mkv)$/i;
+function listFilms(dir) {
+  const out = { dir, exists: false, count: 0, latest: [] };
+  if (!dir) return out;
+  const all = [];
+  const walk = (d, depth) => {
+    let entries;
+    try { entries = fs.readdirSync(d, { withFileTypes: true }); } catch (e) { return; }
+    for (const e of entries) {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) { if (depth < 3) walk(p, depth + 1); } else if (FILM_EXT.test(e.name)) {
+        try { const s = fs.statSync(p); all.push({ name: path.relative(dir, p), size: s.size, at: s.mtimeMs }); } catch (x) { /* disparu entre-temps */ }
+      }
+    }
+  };
+  out.exists = fs.existsSync(dir);
+  if (out.exists) walk(dir, 0);
+  all.sort((a, b) => b.at - a.at);
+  out.count = all.length;
+  out.latest = all.slice(0, 8);
+  return out;
+}
 let qbBusy = false;
 
 async function qbEnv() {
@@ -244,7 +277,7 @@ function qbCheck(b) {
   const copy = b.copy_results == null ? '' : String(b.copy_results).trim();
   if (copy.length > 300 || /[\0\r\n]/.test(copy)) throw new Error('Dossier de copie invalide');
   return {
-    engine, aspect, groups, copy, mode: ['dry', 'test', 'rest', 'all'].includes(b.mode) ? b.mode : 'test', mp: clamp(b.megapixels, 0.2, 2, engine === 'h3' ? 0.8 : 0.7),
+    engine, aspect, groups, copy: copy || outputDir(), mode: ['dry', 'test', 'rest', 'all'].includes(b.mode) ? b.mode : 'test', mp: clamp(b.megapixels, 0.2, 2, engine === 'h3' ? 0.8 : 0.7),
     machines: Array.isArray(b.machines) ? b.machines.map(String) : null, freeMemory: b.free_memory !== false,
   };
 }
@@ -305,20 +338,93 @@ async function qbRender(body) {
   fs.mkdirSync(dir, { recursive: true });
   const urls = eligible.map((m) => m.url);
   const runs = [];
+  if (req.copy && !dry) { try { fs.mkdirSync(req.copy, { recursive: true }); } catch (e) { /* le script réessaiera */ } }
   for (const [i, g] of groups.entries()) {
     const file = path.join(dir, `prompts_${String(i + 1).padStart(2, '0')}.json`);
     fs.writeFileSync(file, JSON.stringify(g.rows.map((r) => ({ name: r.name, seed: r.seed, upscale_seed: 0, image: '', image_path: '', image_filename: '', positive: r.positive })), null, 2), 'utf8');
     const args = ['queue_ltx_multishot.py'].concat(urls.length > 1 ? ['--servers', urls.join(',')] : ['--server', urls[0]], ['--workflow', workflow, '--prompts', file],
       req.engine === 'h3' ? ['--duration-seconds', String(g.seconds)] : ['--frame-count', String(g.frames)], ['--aspect-ratio', req.aspect, '--megapixels', String(req.mp)]);
-    if (req.copy) args.push('--copy-results', req.copy);
+    if (req.copy && !dry) args.push('--copy-results', req.copy);
     if (dry) args.push('--dry-run');
-    const r = await runScript(env.python, args, env.root, req.copy ? 45000 : 150000);
+    const r = await runScript(env.python, args, env.root, req.copy && !dry ? 45000 : 150000);
     runs.push({ prompts: g.rows.length, seconds: g.seconds, frames: g.frames, exit: r.exit, running: r.running, tail: r.tail.trim().split(/\r?\n/).slice(-8).join('\n') });
     if (r.exit) break; // une erreur (code non nul) : on n'empile pas la suite
   }
   const ok = runs.length === groups.length && runs.every((r) => !r.exit);
   try { fs.appendFileSync(path.join(dir, 'lancement.log'), JSON.stringify({ at: new Date().toISOString(), mode: req.mode, engine: req.engine, machines: view, runs }) + '\n'); } catch (e) { /* journal facultatif */ }
-  return { ok, mode: req.mode, engine: req.engine, dir, machines: view, runs };
+  return { ok, mode: req.mode, engine: req.engine, dir, output: dry ? '' : req.copy, machines: view, runs };
+}
+
+async function qbFree(body) {
+  const url = String((body && body.url) || '');
+  const cluster = await getJson(qbUrl() + '/api/cluster-status', 6000);
+  const node = (cluster.nodes || []).find((n) => n.url === url && n.online && isLanHost(new URL(n.url).hostname));
+  if (!node) throw new Error('Machine inconnue de Q-Builder, ou hors ligne.');
+  const m = await machineProbe(node);
+  if (!m.online) throw new Error(`${node.name} ne répond pas.`);
+  if (m.running || m.pending) throw new Error(`${node.name} calcule (${m.running} en calcul, ${m.pending} en attente) : on ne vide pas la mémoire d'une machine occupée.`);
+  await freeMachine(node.url);
+  const poll = Number(process.env.LEXINODE_FREE_POLL_MS) || 3000;
+  let p = m;
+  for (let i = 0; i < 20; i++) {
+    await sleep(poll);
+    p = await machineProbe(node);
+    if (p.vramFree >= VRAM_READY * p.vramTotal) break;
+  }
+  return { ok: true, name: node.name, vramFree: p.vramFree, vramTotal: p.vramTotal, ready: p.vramFree >= VRAM_READY * p.vramTotal };
+}
+
+// Ouvre le dossier des films (ou un film, avec le lecteur par défaut) dans l'Explorateur de ce PC. Le film doit être dans ce dossier.
+function openOutput(body) {
+  const dir = outputDir();
+  if (!dir) throw new Error('Pas de dossier de films ici : cette fonction existe dans la version Windows.');
+  fs.mkdirSync(dir, { recursive: true });
+  let target = dir;
+  const file = body && body.file ? String(body.file) : '';
+  if (file) {
+    const full = path.resolve(dir, file);
+    if (!full.startsWith(path.resolve(dir) + path.sep) || !FILM_EXT.test(full) || !fs.existsSync(full)) throw new Error('Film introuvable dans le dossier des films.');
+    target = full;
+  }
+  if (process.env.LEXINODE_NO_OPEN === '1') return { ok: true, dir, opened: target, simulated: true };
+  if (process.platform !== 'win32') throw new Error('Ouverture automatique : Windows seulement.');
+  spawn('explorer.exe', [target], { detached: true, stdio: 'ignore' }).unref();
+  return { ok: true, dir, opened: target };
+}
+
+// ---------------------------------------------------------------- pont vers le site en ligne (version Windows seulement)
+// Le site en ligne tourne chez Hostinger et ne voit pas ce PC. Son navigateur, lui, est sur ce PC : il peut parler à ce serveur local, à
+// trois conditions. 1) l'origine est dans la liste autorisée (LEXINODE_BRIDGE_ORIGINS, par défaut le site) ; 2) la requête porte la clé du
+// pont (LEXINODE_BRIDGE_TOKEN, créée à l'installation) ; 3) la route est une route Q-Builder. Rien d'autre n'est joignable de l'extérieur
+// (ni projets, ni coffre, ni clé du pont). L'hôte est vérifié contre le « DNS rebinding ».
+const bridgeOrigins = () => String(process.env.LEXINODE_BRIDGE_ORIGINS || 'https://lexinode.placenta.cloud').split(',').map((x) => x.trim()).filter(Boolean);
+const BRIDGE_PATHS = /^\/api\/(qbuilder\/(status|render|free|open-output)|bridge\/ping)$/;
+function sameSecret(a, b) { const x = Buffer.from(String(a)); const y = Buffer.from(String(b)); return x.length === y.length && crypto.timingSafeEqual(x, y); }
+function bridgeGuard(req, res) {
+  if (!HOME) return false;
+  const hostHeader = String(req.headers.host || '');
+  const host = hostHeader.replace(/:\d+$/, '').replace(/^\[|\]$/g, '');
+  if (!['127.0.0.1', 'localhost', '::1'].includes(host)) { send(res, 403, { error: 'Hôte refusé' }); return true; }
+  const origin = req.headers.origin;
+  if (!origin || origin === `http://${hostHeader}`) return false; // même origine (fenêtre Lexinode) ou outil local sans navigateur
+  const p = new URL(req.url, 'http://localhost').pathname;
+  const allowed = bridgeOrigins().includes(origin);
+  if (allowed) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Private-Network', 'true');
+    res.setHeader('Vary', 'Origin');
+  }
+  if (req.method === 'OPTIONS') {
+    if (!allowed || !BRIDGE_PATHS.test(p)) { send(res, 403, { error: 'Origine refusée' }); return true; }
+    res.writeHead(204, { 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Max-Age': '600' });
+    res.end();
+    return true;
+  }
+  if (!allowed || !BRIDGE_PATHS.test(p)) { send(res, 403, { error: 'Origine ou route refusée' }); return true; }
+  const m = String(req.headers.authorization || '').match(/^Bearer (.+)$/);
+  const token = process.env.LEXINODE_BRIDGE_TOKEN;
+  if (!token || !m || !sameSecret(m[1], token)) { send(res, 401, { error: 'Clé du pont absente ou fausse : recopiez-la depuis Lexinode sur votre PC (icône près de l’horloge → « Copier la clé du pont »), dans Réglages → Pont vers Q-Builder.' }); return true; }
+  return false;
 }
 
 // « lexinode-voice:<base64 d'un JSON> » dans un champ du corps vidéo (ex. target_audio_url) devient un data URI audio fait des fichiers de voix déjà générés
@@ -468,6 +574,7 @@ function authorized(req) {
 }
 
 const server = http.createServer(async (req, res) => {
+  if (bridgeGuard(req, res)) return;
   if (!authorized(req)) {
     res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="Lexinode", charset="UTF-8"', 'Content-Type': 'text/plain; charset=utf-8' });
     return res.end('Authentification requise');
@@ -489,7 +596,7 @@ const server = http.createServer(async (req, res) => {
       const searchStatus = {
         wikipedia: true, searxng: !!ENV_BASE.searxng(), tavily: !!keyFor('tavily'), brave: !!keyFor('brave'),
       };
-      return send(res, 200, { ok: true, server: true, version: '1.1.0', providers, search: searchStatus, video, vault: VAULT.status(), voice: { elevenlabs: !!keyFor('elevenlabs') } });
+      return send(res, 200, { ok: true, server: true, version: VERSION, providers, search: searchStatus, video, vault: VAULT.status(), voice: { elevenlabs: !!keyFor('elevenlabs') } });
     }
     // Coffre : écriture seulement (les valeurs ne sont jamais renvoyées). L'en-tête JSON exigé bloque les envois
     // inter-sites « simples » (un navigateur y joindrait le mot de passe déjà saisi).
@@ -535,6 +642,24 @@ const server = http.createServer(async (req, res) => {
       return send(res, 200, fs.readFileSync(voiceFile(m[1])), 'audio/mpeg');
     }
     if (p === '/api/qbuilder/status' && req.method === 'GET') return send(res, 200, await renderStatus());
+    if (p === '/api/bridge/ping' && req.method === 'GET') {
+      const st = await renderStatus();
+      return send(res, 200, { ok: true, bridge: !!HOME, qbuilder: st.ok ? { ok: true, machines: st.nodes.length, online: st.nodes.filter((n) => n.online).length } : { ok: false, error: st.error } });
+    }
+    if (p === '/api/bridge/info' && req.method === 'GET') {
+      if (!HOME) return send(res, 404, { error: 'Le pont n’existe que dans la version Windows.' });
+      return send(res, 200, { token: process.env.LEXINODE_BRIDGE_TOKEN || '', origins: bridgeOrigins(), port: PORT });
+    }
+    if (p === '/api/qbuilder/free' && req.method === 'POST') {
+      if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'Content-Type application/json requis' });
+      const body = await readBody(req, 64 * 1024);
+      try { return send(res, 200, await qbFree(body)); } catch (e) { return send(res, 400, { error: e.message }); }
+    }
+    if (p === '/api/qbuilder/open-output' && req.method === 'POST') {
+      if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'Content-Type application/json requis' });
+      const body = await readBody(req, 64 * 1024);
+      try { return send(res, 200, openOutput(body)); } catch (e) { return send(res, 400, { error: e.message }); }
+    }
     if (p === '/api/qbuilder/render' && req.method === 'POST') {
       if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'Content-Type application/json requis' });
       const body = await readBody(req, 4 * 1024 * 1024);
@@ -608,4 +733,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs, renderStatus, qbRender };
+module.exports = { server, readLexicons, llm, search, trustedBase, voiceSpec, voiceId, resolveVoiceRefs, renderStatus, qbRender, qbFree, openOutput, listFilms, outputDir };

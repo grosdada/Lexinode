@@ -56,6 +56,14 @@
     const done = new Set(), failed = new Set(), running = new Set();
     const limit = Math.max(1, Number(LX.settings.concurrency) || 3);
     const stats = { computed: 0, cached: 0, errors: 0, t0: performance.now() };
+    // un node en aval d'une panne cite le node d'origine, pas seulement son voisin
+    const cause = {};
+    const titleOf = (id) => { const n = ed.node(id); return n ? (n.data && n.data._label) || (N.DEFS[n.type] || {}).title || id : id; };
+    const failFrom = (id, bad) => {
+      failed.add(id);
+      cause[id] = cause[bad] || bad;
+      ed.setStatus(id, 'error', 'Un node en amont est en erreur : « ' + titleOf(cause[id]) + ' »');
+    };
 
     return new Promise((resolve) => {
       const pump = () => {
@@ -66,8 +74,7 @@
         for (const id of ids) {
           if (done.has(id) || failed.has(id) || running.has(id)) continue;
           if (deps[id].some((d) => failed.has(d))) {
-            failed.add(id);
-            ed.setStatus(id, 'error', 'Un node en amont est en erreur');
+            failFrom(id, deps[id].find((d) => failed.has(d)));
             continue;
           }
           if (!deps[id].every((d) => done.has(d))) continue;
@@ -83,6 +90,17 @@
             pump();
           });
         }
+        // une panne se propage : un node examiné avant son amont en erreur doit dire « amont en erreur », pas « Bloqué »
+        let changed = false;
+        for (let again = true; again;) {
+          again = false;
+          for (const id of ids) {
+            if (done.has(id) || failed.has(id) || running.has(id)) continue;
+            const bad = deps[id].find((d) => failed.has(d));
+            if (bad) { failFrom(id, bad); again = true; changed = true; }
+          }
+        }
+        if (changed) { pump(); return; }
         if (!running.size && done.size + failed.size < ids.length) {
           // sécurité : rien ne peut plus avancer
           for (const id of ids) if (!done.has(id) && !failed.has(id)) { failed.add(id); ed.setStatus(id, 'error', 'Bloqué'); }

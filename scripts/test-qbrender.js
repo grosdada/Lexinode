@@ -78,6 +78,7 @@ else rows.forEach((r) => console.log('QUEUED ' + r.name));
     let r = await post(Object.assign({}, base, { mode: 'dry' }));
     let c = readCalls();
     ok(r.status === 200 && r.j.ok && c.length === 2 && c.every((x) => x.args.includes('--dry-run')) && frees.length === 0, 'simulation : --dry-run, aucune mémoire vidée');
+    ok(!c.some((x) => x.args.includes('--copy-results')) && r.j.output === '', 'simulation : aucun dossier de copie transmis')
     ok(/DRY RUN: 01 a_01/.test(r.j.runs[0].tail) && c[0].args.includes('--servers') && c[0].args[c[0].args.indexOf('--servers') + 1].split(',').length === 4, 'simulation : toutes les machines en ligne passées au script');
 
     // lancement réel (faux) de tout le lot
@@ -95,6 +96,8 @@ else rows.forEach((r) => console.log('QUEUED ' + r.name));
     ok(c[0].args.includes('h3_t2v_api.json') && c[0].args[c[0].args.indexOf('--aspect-ratio') + 1] === '16:9 (Widescreen)' && c[0].args[c[0].args.indexOf('--megapixels') + 1] === '0.8', 'workflow H3, format et mégapixels par défaut');
     ok(c[0].rows.length === 2 && c[0].rows[0].name === 'a_01' && c[0].rows[0].positive === 'Prompt a_01' && c[1].rows.length === 1, 'fichiers de prompts fidèles, par lot');
     ok(fs.existsSync(path.join(r.j.dir, 'lancement.log')), 'journal du lancement écrit');
+    const outDir = path.join(tmp, 'home', 'Output');
+    ok(c.every((x) => x.args[x.args.indexOf('--copy-results') + 1] === outDir) && r.j.output === outDir && fs.existsSync(outDir), 'sans dossier choisi : les films vont dans Output (créé), pour chaque lot');
 
     // essai puis reste
     fs.writeFileSync(calls, '');
